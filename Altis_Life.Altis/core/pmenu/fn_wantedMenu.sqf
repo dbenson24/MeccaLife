@@ -25,7 +25,7 @@ lbClear _players;
     _players lbSetdata [(lbSize _players)-1,str(_x)];
 } foreach playableUnits;
 
-_list2 = Control(2400,2407);
+_list2 = CONTROL(2400,2407);
 lbClear _list2; //Purge the list
 
 _crimes = [["Driving w/o lights","350","1"],["Driving w/o license","1500","2"],["Excessive Speed","2500","3"],["Reckless Driving","3500","4"],["Driving illegal vehicle","10000","5"],["Hit and Run","5000","6"],["Attempted Murder","10000","7"],["Rape","5000","261"]];
