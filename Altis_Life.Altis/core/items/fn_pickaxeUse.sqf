@@ -8,7 +8,7 @@
 */
 closeDialog 0;
 private["_mine","_itemWeight","_diff","_itemName"];
-_mine = "";
+_mine = [];
 
 switch (true) do {
 	case (player distance (getMarkerPos "lead_1") < 30): {_mine = ["copper_unrefined",2];};
@@ -19,10 +19,10 @@ switch (true) do {
 	case (player distance (getMarkerPos "oil_1") < 40) : {_mine = ["oil_unprocessed",1];};
 	case (player distance (getMarkerPos "oil_2") < 40) : {_mine = ["oil_unprocessed",1];};
 	case (player distance (getMarkerPos "rock_1") < 50): {_mine = ["rock",2];};
-	default {""};
+	default {["", 0]};
 };
 //Mine check
-if(EQUAL(_mine,"")) exitWith {hint localize "STR_ISTR_Pick_NotNear"};
+if(EQUAL(SEL(_mine, 0),"")) exitWith {hint localize "STR_ISTR_Pick_NotNear"};
 if(vehicle player != player) exitWith {hint localize "STR_ISTR_Pick_MineVeh";};
 
 _diff = [SEL(_mine,0),SEL(_mine,1),life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
