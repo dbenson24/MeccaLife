@@ -6,5 +6,6 @@ life_versionInfo = "Altis Life RPG v4.0";
 [] execVM "KRON_Strings.sqf";
 [] execVM "\scripts\intro.sqf"; //IntroScreen
 [] execVM "scripts\zlt_fastrope.sqf"; //FastRope Script
+[] execVM "scripts\nosidechat.sqf"; //NoSideChat Script
 
 StartProgress = true;
