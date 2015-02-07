@@ -1,3 +1,4 @@
+#include "\life_server\script_macros.hpp"
 /*
 	File: fn_wantedFetch.sqf
 	Author: Bryan "Tonic" Boardwine"
@@ -40,10 +41,14 @@ forEach _queryResult;
 
 if(count _list == 0) exitWith {[[_list],"life_fnc_wantedList",_ret,false] spawn life_fnc_MP;};
 
-diag_log "------------- Client Query Request -------------";
-diag_log format["QUERY: %1",_result];
-diag_log format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)];
-diag_log format["Result: %1",_list];
-diag_log "------------------------------------------------";
+if((EQUAL(EXTDB_SETTINGS("MySQL_Query"),1))) then {
+	["diag_log",[
+		"------------- Wanted Query Request -------------",
+		format["QUERY: %1",_result],
+		format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)],
+		format["Result: %1",_queryResult],
+		"------------------------------------------------"
+	]] call TON_fnc_logIt;
+};
 
 [[_list],"life_fnc_wantedList",_ret,false] spawn life_fnc_MP;

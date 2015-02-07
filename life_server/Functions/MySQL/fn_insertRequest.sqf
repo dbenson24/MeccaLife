@@ -25,7 +25,7 @@ _tickTime = diag_tickTime;
 _queryResult = [_query,2] call DB_fnc_asyncCall;
 
 if((EQUAL(EXTDB_SETTINGS("MySQL_Query"),1))) then {
-	["query_log",[
+	["diag_log",[
 		"------------- Insert Query Request -------------",
 		format["QUERY: %1",_query],
 		format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)],
