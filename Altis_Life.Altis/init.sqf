@@ -6,5 +6,6 @@ life_versionInfo = "Altis Life RPG v4.0";
 [] execVM "KRON_Strings.sqf";
 [] execVM "scripts\nosidechat.sqf"; //Nosidechat Script
 [] execVM "scripts\D41_Wetter.sqf"; //Custom Weather Script
+[] execVM "scripts\intro.sqf"; //Intro Message Script
 
 StartProgress = true;
