@@ -26,7 +26,7 @@
 */
 class Life_Settings {
 	/* Persistent Settings */
-	save_civ_weapons = false; //Allow civilians to save weapons on them?
+	save_civ_weapons = true; //Allow civilians to save weapons on them?
 	save_virtualItems = true; //Save Virtual items (all sides)?
 
 	/* Revive system settings */
@@ -58,14 +58,14 @@ class Life_Settings {
 	delivery_points[] = { "dp_1", "dp_2", "dp_3", "dp_4", "dp_5", "dp_6", "dp_7", "dp_8", "dp_9", "dp_10", "dp_11", "dp_12", "dp_13", "dp_14", "dp_15", "dp_15", "dp_16", "dp_17", "dp_18", "dp_19", "dp_20", "dp_21", "dp_22", "dp_23", "dp_24", "dp_25" };
 
 	sellArray[] = {
-		{"arifle_sdar_F", 7500},
-		{"hgun_P07_snds_F", 650},
-		{"hgun_P07_F", 1500},
+		{"arifle_sdar_F", 750},
+		{"hgun_P07_snds_F", 60},
+		{"hgun_P07_F", 100},
 		{"ItemGPS", 45},
 		{"ToolKit", 75},
 		{"FirstAidKit", 65},
-		{"Medikit", 450},
-		{"NVGoggles", 980},
+		{"Medikit", 40},
+		{"NVGoggles", 90},
 		{"16Rnd_9x21_Mag", 15},
 		{"20Rnd_556x45_UW_mag", 35},
 		{"ItemMap", 35},
@@ -75,34 +75,30 @@ class Life_Settings {
 		{"Chemlight_green", 50},
 		{"Chemlight_red", 50},
 		{"hgun_Rook40_F", 500},
-		{"arifle_Katiba_F", 5000},
+		{"arifle_Katiba_F", 50},
 		{"30Rnd_556x45_Stanag", 65},
 		{"20Rnd_762x51_Mag", 85},
 		{"30Rnd_65x39_caseless_green", 50},
-		{"DemoCharge_Remote_Mag", 7500},
-		{"SLAMDirectionalMine_Wire_Mag", 2575},
-		{"optic_ACO_grn", 250},
-		{"acc_flashlight", 100},
-		{"srifle_EBR_F", 15000},
-		{"arifle_TRG21_F", 3500},
-		{"optic_MRCO", 5000},
+		{"DemoCharge_Remote_Mag", 750},
+		{"SLAMDirectionalMine_Wire_Mag", 255},
+		{"optic_ACO_grn", 25},
+		{"acc_flashlight", 10},
+		{"srifle_EBR_F", 1500},
+		{"arifle_TRG21_F", 350},
+		{"optic_MRCO", 500},
 		{"optic_Aco", 850},
 		{"arifle_MX_F", 7500},
-		{"arifle_MXC_F", 5000},
-		{"arifle_MXM_F", 8500},
-		{"MineDetector", 500},
+		{"arifle_MXC_F", 500},
+		{"arifle_MXM_F", 850},
+		{"MineDetector", 50},
 		{"optic_Holosight", 275},
 		{"acc_pointer_IR", 175},
-		{"arifle_TRG20_F", 2500},
-		{"SMG_01_F", 1500},
-		{"arifle_Mk20C_F", 4500},
+		{"arifle_TRG20_F", 500},
+		{"SMG_01_F", 500},
+		{"arifle_Mk20C_F", 500},
 		{"30Rnd_45ACP_Mag_SMG_01", 60},
 		{"30Rnd_9x21_Mag", 30},
-		{"Rangefinder", 5000},
-		{"srifle_GM6_F", 5000000},
-		{"srifle_LRR_F", 8000000},
-		{"5Rnd_127x108_Mag", 250000},
-		{"7Rnd_408_Mag", 250000},
+		
 		
 		
 		

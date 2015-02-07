@@ -34,7 +34,6 @@ switch(_shop) do {
 						["ToolKit",nil,250],
 						["muzzle_snds_L",nil,650],
 						["FirstAidKit",nil,150],
-						["Medikit",nil,1000],
 						["NVGoggles",nil,2000],
 						["16Rnd_9x21_Mag",nil,50],
 						["20Rnd_556x45_UW_mag","Taser Rifle Magazine",125]
@@ -136,7 +135,13 @@ switch(_shop) do {
 						["20Rnd_556x45_UW_mag",nil,125],
 						["30Rnd_556x45_Stanag",nil,300],
 						["10Rnd_762x51_Mag",nil,500],
-						["30Rnd_65x39_caseless_green",nil,275]
+						["10Rnd_762x51_Mag",nil,500],
+						["30Rnd_65x39_caseless_green",nil,275],
+						["srifle_GM6_F",nil,5000000],
+						["5Rnd_127x108_Mag",nil,250000],
+						["srifle_LRR_F",nil,9000000],
+						["7Rnd_408_Mag",nil,350000],
+						["HandGrenade",nil,500000]
 					]
 				];
 			};
@@ -187,7 +192,17 @@ switch(_shop) do {
 						["16Rnd_9x21_Mag",nil,25],
 						["9Rnd_45ACP_Mag",nil,45],
 						["6Rnd_45ACP_Cylinder",nil,50],
-						["30Rnd_9x21_Mag",nil,75]
+						["30Rnd_9x21_Mag",nil,75],
+						["arifle_TRG20_F",nil,25000],
+						["arifle_Katiba_F",nil,50000],
+						["srifle_DMR_01_F",nil,70000],
+						["arifle_SDAR_F",nil,30000],
+						["30Rnd_9x21_Mag",nil,200],
+						["20Rnd_556x45_UW_mag",nil,125],
+						["30Rnd_556x45_Stanag",nil,300],
+						["10Rnd_762x51_Mag",nil,500],
+						["10Rnd_762x51_Mag",nil,500],
+						["HandGrenade",nil,750000]
 					]
 				];
 			};
@@ -199,14 +214,14 @@ switch(_shop) do {
 		["Altis General Store",
 			[
 				["Binocular",nil,150],
-				["ItemGPS",nil,100],
-				["ToolKit",nil,250],
-				["FirstAidKit",nil,150],
-				["NVGoggles",nil,2000],
+				["ItemGPS",nil,500],
+				["ToolKit",nil,350],
+				["FirstAidKit",nil,250],
+				["NVGoggles",nil,900],
 				["Chemlight_red",nil,300],
-				["Chemlight_yellow",nil,300],
-				["Chemlight_green",nil,300],
-				["Chemlight_blue",nil,300]
+				["Chemlight_yellow",nil,3000],
+				["Chemlight_green",nil,3000],
+				["Chemlight_blue",nil,3000]
 			]
 		];
 	};
