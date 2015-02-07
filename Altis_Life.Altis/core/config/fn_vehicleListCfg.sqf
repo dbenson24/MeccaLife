@@ -71,15 +71,18 @@ switch (_shop) do
 		_return =
 		[
 			["B_Quadbike_01_F",2500],
-			["B_G_Offroad_01_F",15000],
-			["O_MRAP_02_F",150000],
-			["B_Heli_Light_01_F",325000]
+		
 		];
 		
 		if(license_civ_rebel) then
 		{
 			_return pushBack
-			["B_G_Offroad_01_armed_F",750000];
+			["B_G_Offroad_01_armed_F",1750000],
+			["B_G_Offroad_01_F",15000],
+			["O_MRAP_02_F",950000],
+			["B_Heli_Light_01_F",325000],
+			["B_Heli_Light_01_armed_F",30505000],
+			["B_Heli_Transport_01_camo_F",65505000];
 		};
 	};
 	

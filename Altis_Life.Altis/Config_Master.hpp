@@ -39,11 +39,11 @@ class Life_Settings {
 	/* Gang related settings */
 	gang_price = 75000; //Price for creating a gang, remember they are persistent so keep it reasonable to avoid millions of gangs.
 	gang_upgradeBase = 10000; //The base cost for upgrading slots in a gang
-	gang_upgradeMultiplier = 2.5; //Not sure if in use?
+	gang_upgradeMultiplier = 2; //Not sure if in use?
 
 	/* Player-related systems */
 	enable_fatigue = true; //Set to false to disable the ARMA 3 false system.
-	total_maxWeight = 24; //Static variable for the maximum weight allowed without having a backpack
+	total_maxWeight = 32; //Static variable for the maximum weight allowed without having a backpack
 	paycheck_period = 5; //Scaled in minutes
 	
 	/* Impound Variables */
