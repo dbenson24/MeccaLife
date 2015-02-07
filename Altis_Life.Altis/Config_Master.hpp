@@ -30,8 +30,8 @@ class Life_Settings {
 	save_virtualItems = true; //Save Virtual items (all sides)?
 
 	/* Revive system settings */
-	revive_cops = true; //true to enable cops the ability to revive everyone or false for only medics/ems.
-	revive_fee = 1500; //Revive fee that players have to pay and medics / EMS are rewarded
+	revive_cops = false; //true to enable cops the ability to revive everyone or false for only medics/ems.
+	revive_fee = 2500; //Revive fee that players have to pay and medics / EMS are rewarded
 	
 	/* House related settings */
 	house_limit = 5; //Maximum amount of houses a player can own.
@@ -97,7 +97,17 @@ class Life_Settings {
 		{"SMG_01_F", 1500},
 		{"arifle_Mk20C_F", 4500},
 		{"30Rnd_45ACP_Mag_SMG_01", 60},
-		{"30Rnd_9x21_Mag", 30}
+		{"30Rnd_9x21_Mag", 30},
+		{"Rangefinder", 5000},
+		{"srifle_GM6_F", 5000000},
+		{"srifle_LRR_F", 8000000},
+		{"5Rnd_127x108_Mag", 250000},
+		{"7Rnd_408_Mag", 250000},
+		
+		
+		
+		
+		
 	};
 };
 
@@ -195,7 +205,7 @@ class Licenses {
 	LICENSEMACRO(heroin,"STR_License_Heroin","heroin",25000,true,"civ")
 	LICENSEMACRO(marijuana,"STR_License_Marijuana","marijuana",19500,true,"civ")
 	LICENSEMACRO(medmarijuana,"STR_License_Medmarijuana","medmarijuana",15000,false,"civ")
-	LICENSEMACRO(rebel,"STR_License_Rebel","rebel",75000,true,"civ")
+	LICENSEMACRO(rebel,"STR_License_Rebel","rebel",100000,true,"civ")
 	LICENSEMACRO(trucking,"STR_License_Truck","trucking",20000,false,"civ")
 	LICENSEMACRO(diamond,"STR_License_Diamond","diamond",35000,false,"civ")
 	LICENSEMACRO(salt,"STR_License_Salt","salt",12000,false,"civ")
