@@ -228,13 +228,12 @@ switch (_code) do {
 		};
 	};
 	
-//surrender... shift + g
-	case 34:
+	
+	// TAB key
+	case 15:
 	{
-		if(_shift) then {_handled = true;};
-
-		if (_shift) then
-		{
+		if(!_alt && !_ctrlKey) then {
+			
 			if (vehicle player == player && !(player getVariable ["restrained", false]) && (animationState player) != "Incapacitated" && !life_istazed) then
 			{
 				if (player getVariable ["surrender", false]) then
@@ -246,7 +245,8 @@ switch (_code) do {
 				};
 			};
 		};
-	};	
+	};
+
 	
 	
 };
