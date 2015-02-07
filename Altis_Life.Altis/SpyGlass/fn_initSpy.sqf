@@ -1,6 +1,7 @@
 #define GVAR_UINS uiNamespace getVariable
 #define CONST(var1,var2) var1 = compileFinal (if(typeName var2 == "STRING") then {var2} else {str(var2)})
 #define steamid getPlayerUID player
+#define SPY "spy_log"
 /*
 	File: fn_initSpy.sqf
 	
@@ -137,6 +138,7 @@ for "_i" from 0 to count (_binConfigPatches)-1 do {
 		if(!((configName _patchEntry) in _patchList)) exitWith {
 			[[profileName,steamid,(configName _patchEntry)],"SPY_fnc_cookieJar",false,false] spawn life_fnc_MP;
 			[[profileName,format["Unknown Addon Patch: %1",(configName _patchEntry)]],"SPY_fnc_notifyAdmins",true,false] spawn life_fnc_MP;
+			[[SPY,[(format["Unknown Addon Patch: %1",(configName _patchEntry)])],profileName,steamid],"TON_fnc_logIt",false,false] call life_fnc_MP;
 			sleep 0.5;
 			failMission "SpyGlass";
 		};
@@ -156,6 +158,7 @@ _allowedChildren = [
 	if(!((configName _x) in _allowedChildren)) exitWith {
 		[[profileName,steamid,"Modified_MPInterrupt"],"SPY_fnc_cookieJar",false,false] spawn life_fnc_MP;
 		[[profileName,"Devcon like executor detected"],"SPY_fnc_notifyAdmins",true,false] spawn life_fnc_MP;
+		[[SPY,["Devcon like executor detected"],profileName,steamid],"TON_fnc_logIt",false,false] call life_fnc_MP;
 		sleep 0.5;
 		failMission "SpyGlass";
 	};
@@ -173,6 +176,7 @@ _allowedChildren = [
 	if(_onLoad != (_x select 1) OR _onUnload != (_x select 2)) exitWith {
 		[[profileName,steamid,format["Modified_Method_%1",_x select 0]],"SPY_fnc_cookieJar",false,false] call life_fnc_MP;
 		[[profileName,format["Modified Display Method %1 (Memory Edit)",_x select 0]],"SPY_fnc_notifyAdmins",true,false] call life_fnc_MP;
+		[[SPY,[(format["Modified Display Method %1 (Memory Edit)",_x select 0])],profileName,steamid],"TON_fnc_logIt",false,false] call life_fnc_MP;
 		sleep 0.5;
 		vehicle player setVelocity[1e10,1e14,1e18]; //It's a surprise.
 		sleep 3;
@@ -211,6 +215,7 @@ foreach [
 if(getText(configFile >> "CfgFunctions" >> "init") != "A3\functions_f\initFunctions.sqf") then {
 	[[profileName,steamid,"Modified_Functions_Init"],"SPY_fnc_cookieJar",false,false] call life_fnc_MP;
 	[[profileName,"Modified_Functions_Init"],"SPY_fnc_notifyAdmins",true,false] call life_fnc_MP;
+	[[SPY,["Modified_Functions_Init"],profileName,steamid],"TON_fnc_logIt",false,false] call life_fnc_MP;
 	sleep 0.5;
 	vehicle player setVelocity[1e10,1e14,1e18]; //It's a surprise.
 	sleep 3;
