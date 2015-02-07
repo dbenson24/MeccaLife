@@ -60,6 +60,7 @@ class Life_Client_Core
 	class Actions
 	{
 		file = "core\actions";
+		class surrender {}; //Surrender action
 		class buyLicense {};
 		class healHospital {};
 		class pushVehicle {};

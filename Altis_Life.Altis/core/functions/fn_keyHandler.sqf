@@ -227,6 +227,28 @@ switch (_code) do {
 			};
 		};
 	};
+	
+//surrender... shift + g
+	case 34:
+	{
+		if(_shift) then {_handled = true;};
+
+		if (_shift) then
+		{
+			if (vehicle player == player && !(player getVariable ["restrained", false]) && (animationState player) != "Incapacitated" && !life_istazed) then
+			{
+				if (player getVariable ["surrender", false]) then
+				{
+					player setVariable ["surrender", false, true];
+				} else
+				{
+					[] spawn life_fnc_surrender;
+				};
+			};
+		};
+	};	
+	
+	
 };
 
 _handled;
