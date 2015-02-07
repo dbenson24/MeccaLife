@@ -345,10 +345,4 @@ class Life_Client_Core
 		class gangDeposit {};
 		class wireTransfer {};
 	};
-	
-	class Cam
-	{
-	   file ="core";
-	   class IntroCam {};
-	};
 };
