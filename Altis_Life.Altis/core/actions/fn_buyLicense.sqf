@@ -19,5 +19,19 @@ _varName = LICENSE_VARNAME(_varName,_sideFlag);
 if(CASH < _price) exitWith {hint format[localize "STR_NOTF_NE_1",[_price] call life_fnc_numberText,localize _displayName];};
 SUB(CASH,_price);
 
+if(_type == "vigilante") then {
+	if(license_civ_rebel) then {
+		license_civ_rebel = false;
+		hint "Your Rebel license has been revoked."; 
+	};
+};
+
+if(_type == "rebel") then {
+	if(license_civ_vigilante) then {
+		license_civ_vigilante = false;
+		hint "Your Vigilante license has been revoked."; 
+	};
+};
+
 titleText[format[localize "STR_NOTF_B_1", localize _displayName,[_price] call life_fnc_numberText],"PLAIN"];
 SVAR_MNS [_varName,true];

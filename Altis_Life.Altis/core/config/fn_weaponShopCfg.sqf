@@ -208,6 +208,28 @@ switch(_shop) do {
 		};
 	};
 	
+	case "vigilante":
+	{
+		switch(true) do
+		{
+			case (playerSide != civilian): {"You are not a civilian!"};
+			case (!license_civ_vigilante): {"You don't have a Vigilante license!"};
+			case (!license_civ_gun): {"You don't have a Firearms license!"};
+			default
+			{
+				["Vigilante Shop",
+					[
+						["SMG_02_F","Sting 9mm",45000],
+						["30Rnd_9x21_Mag","9mm 30Rnd Mag",1000],	
+						["acc_flashlight","Flashlight",500],							
+						["optic_ACO_grn","ACO (Green)",5000],
+						["optic_Aco","ACO (Red)",5000]					
+					]
+				];
+			};
+		};
+	};
+	
 	case "genstore":
 	{
 		["Altis General Store",
