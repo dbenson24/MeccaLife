@@ -135,7 +135,7 @@ life_market_resources = [
 		[ 
 			["marijuana",1], 
 			["cocainep",1],
-			["turtle",1],
+			["turtle",1]
 			["frogp",1]
 		] 
 	]
