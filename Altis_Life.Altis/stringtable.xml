@@ -3225,6 +3225,9 @@
 			<Italian>Striscia Chiodata</Italian>
 			<Portuguese>Spike Strip</Portuguese>
 		</Key>
+		<Key ID="STR_Item_Ziptie">
+			<Original>Ziptie</Original>
+		</Key>
 	</Package>
 	<Package name="Life_License">
 		<Key ID="STR_License_Driver">

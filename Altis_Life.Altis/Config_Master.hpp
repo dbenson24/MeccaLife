@@ -180,6 +180,10 @@ class VirtualItems {
 	VITEMMACRO(sheep_grilled, "STR_Item_SheepGrilled", "sheepGrilled", 2, 155, 115, false, 100, "icons\ico_cookedMeat.paa")
 	VITEMMACRO(goat_raw, "STR_Item_GoatRaw", "goatRaw", 2, -1, 75, false, -1, "icons\food.paa")
 	VITEMMACRO(goat_grilled, "STR_Item_GoatGrilled", "goatGrilled", 2, 175, 135, false, 100, "icons\ico_cookedMeat.paa")
+
+	//Vigilante
+	VITEMMACRO(ziptie, "STR_Item_Ziptie", "ziptie", 1, 500, 250, false, -1, "")
+	
 };
 
 

@@ -61,6 +61,7 @@ switch (_var) do
 	case "life_inv_defusekit": {(localize "STR_Item_DefuseKit")};
 	case "life_inv_storagesmall": {(localize "STR_Item_StorageBS")};
 	case "life_inv_storagebig": {(localize "STR_Item_StorageBL")};
+	case "life_inv_ziptie": {(localize "STR_Item_Ziptie")};
 	
 	//License Block
 	case "license_civ_driver": {(localize "STR_License_Driver")};
