@@ -227,12 +227,12 @@ class VirtualShops {
 
 	class rebel {
 		name = "STR_Shops_Rebel";
-		items[] = { "waterBottle", "rabbit_grilled", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "fuelFull", "peach", "boltcutter", "blastingcharge" };
+		items[] = { "waterBottle", "rabbit_grilled", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "fuelFull", "peach", "boltcutter", "blastingcharge", "ziptie" };
 	};
 
 	class gang {
 		name = "STR_Shops_Gang";
-		items[] = { "waterBottle", "rabbit_grilled", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "fuelFull", "peach", "boltcutter", "blastingcharge" };
+		items[] = { "waterBottle", "rabbit_grilled", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "fuelFull", "peach", "boltcutter", "blastingcharge", "ziptie" };
 	};
 
 	class wongs {
@@ -297,7 +297,7 @@ class VirtualShops {
 	
 	class vigilante {
 		name = "STR_Shops_Vigilante";
-		items[] = { "waterBottle", "apple", "peach", "redgull", "tbacon" };
+		items[] = { "waterBottle", "apple", "peach", "redgull", "tbacon", "ziptie" };
 	};
 };
 
