@@ -3985,7 +3985,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="reb_1_1_1";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false;  this addAction[""Vigilante Market"",life_fnc_virt_menu,""vigilante""];this addAction[""Vigilante Weapon Shop"",life_fnc_weaponShopMenu,""vigilante"",0,false,false,"""",' license_civ_vigilante && playerSide == civilian'];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""vigilante"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""vigilante"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""vigilante"",0,false,false,"""",' !license_civ_vigilante && playerSide == civilian '];  this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false;  this addAction[""Vigilante Market"",life_fnc_virt_menu,""vigilante""]; this addAction[""Vigilante Weapon Shop"",life_fnc_weaponShopMenu,""vigilante"",0,false,false,"""",' license_civ_vigilante && playerSide == civilian'];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""vigilante"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""vigilante"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""vigilante"",0,false,false,"""",' !license_civ_vigilante && playerSide == civilian '];  this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
 				};
 			};
 		};
