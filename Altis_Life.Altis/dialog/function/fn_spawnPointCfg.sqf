@@ -27,12 +27,27 @@ switch (_side) do
 	
 	case civilian:
 	{
-		_return = [
-			["civ_spawn_1","Kavala","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
-		];
+		//if have reb license, only spawn here
+		if(license_civ_rebel && playerSide == civilian) then {
+		_ret = [
+					["reb_spawn_1","Zaros Bay Outpost","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+					["reb_spawn_2","Krya Nera Outpost","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+					["reb_spawn_3","Selakano Outpost","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+					["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+					["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+				];
+		};
+		//if no rebel license, than can spawn normal location
+		
+		if(!license_civ_rebel && playerSide == civilian) then {
+		_ret = [
+					["civ_spawn_1","Kavala","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+					["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+					["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+					["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+					["civ_spawn_5","Zaros","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+				];
+		};
 		
 		if(count life_houses > 0) then {
 			{
