@@ -291,7 +291,6 @@ class VirtualShops {
 		items[] = { "goldbar" };
 	};
 	
-	
 	class vigilante {
 		name = "Vigilante Shop";
 		items [] = { "water", "apple", "peach", "redgull", "tbacon" };
