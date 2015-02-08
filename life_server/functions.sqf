@@ -216,6 +216,7 @@ compileFinal "
 	_msg = _this select 0;
 	_from = _this select 1;
 	_type = _this select 2;
+	_req = _this select 3;
 	if(_from == """") exitWith {};
 	switch (_type) do
 	{
@@ -235,6 +236,18 @@ compileFinal "
 			private[""_message""];
 			_message = format[""---911 DISPATCH FROM %1: %2"",_from,_msg];
 			hint parseText format [""<t color='#316dff'><t size='2'><t align='center'>New Dispatch<br/><br/><t color='#33CC33'><t align='left'><t size='1'>To: <t color='#ffffff'>All Officers<br/><t color='#33CC33'>From: <t color='#ffffff'>%1<br/><br/><t color='#33CC33'>Message:<br/><t color='#ffffff'>%2"",_from,_msg];
+			
+			
+			_marker = createMarkerLocal [format[""%1_marker"",_req],visiblePosition _req];
+			_marker setMarkerColorLocal ""ColorBlue"";
+			_marker setMarkerTypeLocal ""Mil_dot"";
+			_marker setMarkerTextLocal format[""%1 Requesting 911 Emergency"", _req getVariable[""realname"",name _req]];
+			
+			[format[""%1_marker"",_req]] spawn {
+				_marName = [_this,0,"""",[""""]] call BIS_fnc_param;
+				sleep 300;
+				deleteMarkerLocal _marName;
+			};
 			
 			[""PoliceDispatch"",[format[""A New Police Report From: %1"",_from]]] call bis_fnc_showNotification;
 			systemChat _message;
