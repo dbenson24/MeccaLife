@@ -98,6 +98,8 @@ life_market_resources = [
 			["marijuana",1], 
 			["cocainep",1],
 			["heroinp",1],
+			["moonshine",1],
+			["mashu",1],
 			["frogp",1]
 		] 
 	],
