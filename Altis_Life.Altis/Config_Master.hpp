@@ -292,7 +292,7 @@ class VirtualShops {
 	};
 	
 	class vigilante {
-		name = "Vigilante Shop";
+		name = "Vigilante_Shop";
 		items [] = { "water", "apple", "peach", "redgull", "tbacon" };
 	};
 };
