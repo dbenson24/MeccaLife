@@ -25,7 +25,7 @@ _ownerID = owner _ownerID;
 */
 _query = switch(_side) do {
 	case west: {_returnCount = 10; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, cop_licenses, coplevel, cop_gear, blacklist FROM players WHERE playerid='%1'",_uid];};
-	case civilian: {_returnCount = 9; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='%1'",_uid];};
+	case civilian: {_returnCount = 11; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear, civPosition, alive FROM players WHERE playerid='%1'",_uid];};
 	case independent: {_returnCount = 9; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, med_licenses, mediclevel, med_gear FROM players WHERE playerid='%1'",_uid];};
 };
 
@@ -90,6 +90,14 @@ switch (_side) do {
 		_gangData = _uid spawn TON_fnc_queryPlayerGang;
 		waitUntil{scriptDone _gangData};
 		_queryResult pushBack (missionNamespace getVariable[format["gang_%1",_uid],[]]);
+		
+		//PlayerPosition
+        _new = [(_queryResult select 9)] call DB_fnc_mresToArray;
+        if(typeName _new == "STRING") then {_new = call compile format["%1", _new];};
+        _queryResult set[9,_new];
+
+        //alive
+        _queryResult set[10,([_queryResult select 10,1] call DB_fnc_bool)];
 	};
 };
 

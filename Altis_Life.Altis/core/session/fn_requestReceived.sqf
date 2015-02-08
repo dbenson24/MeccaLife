@@ -53,6 +53,11 @@ switch(playerSide) do {
 	};
 	
 	case civilian: {
+	
+		//PlayerPosition
+        civ_position = SEL(_this,9);
+        life_is_alive = SEL(_this,10);
+		
 		life_is_arrested = SEL(_this,7);
 		CONST(life_coplevel, 0);
 		CONST(life_medicLevel, 0);
