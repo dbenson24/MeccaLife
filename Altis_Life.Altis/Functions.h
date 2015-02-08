@@ -191,6 +191,7 @@ class Life_Client_Core
 		class stripDownPlayer {};
 		class nearATM {};
 		class earplugs {};
+		class handleDowned {};
 	};
 	
 	class Network
