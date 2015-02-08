@@ -220,6 +220,7 @@ class Life_Client_Core
 		class removeLicenses {};
 		class demoChargeTimer {};
 		class civLoadout {};
+		class civInteractionMenu {}; //civ interaction menu
 	};
 	
 	class Vehicle
