@@ -67,7 +67,7 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 	if((_curTarget GVAR ["restrained",false]) && !dialog && playerSide == west) then {
 		[_curTarget] call life_fnc_copInteractionMenu;
 	};
-	if((_curTarget GVAR ["restrained",false]) && !dialog && playerSide == civilian) then {
+	if((!dialog && playerSide == civilian && (player distance _curTarget < 4) && !(player getVariable["restrained",false]))) then {
 		[_curTarget] call life_fnc_civInteractionMenu;
 	};
 } else {
