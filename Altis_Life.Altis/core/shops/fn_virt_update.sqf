@@ -24,9 +24,10 @@ _shopItems = M_CONFIG(getArray,"VirtualShops",life_shop_type,"items");
 {
 	_displayName = M_CONFIG(getText,"VirtualItems",_x,"displayName");
 	_price = M_CONFIG(getNumber,"VirtualItems",_x,"buyPrice");
+	_marketprice = [_x] call life_fnc_marketGetBuyPrice;
+	if(_marketprice != -1) then {_price = _marketprice};	
 	if(!(EQUAL(_price,-1))) then {
-		_marketprice = [_x] call life_fnc_marketGetBuyPrice;
-		if(_marketprice != -1) then {_price = _marketprice};
+
 		_item_list lbAdd format["%1  ($%2)",(localize _displayName),[_price] call life_fnc_numberText];
 		_item_list lbSetData [(lbSize _item_list)-1,_x];
 		_item_list lbSetValue [(lbSize _item_list)-1,_price];
