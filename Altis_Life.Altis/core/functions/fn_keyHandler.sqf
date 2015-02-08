@@ -116,6 +116,13 @@ switch (_code) do {
         _handled = true;
 		};
 	};
+	 // O, police gate opener
+        case 24:
+	{
+		if (!_shift && !_alt && !_ctrlKey && (playerSide == west) && (vehicle player != player)) then {
+			[] call life_fnc_copOpener;
+		};
+	};
 	//T Key (Trunk)
 	case 20: {
 		if(!_alt && !_ctrlKey) then {
