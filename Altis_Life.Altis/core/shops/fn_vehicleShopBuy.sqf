@@ -6,7 +6,7 @@
 	Description:
 	Does something with vehicle purchasing.
 */
-private["_mode","_spawnPoints","_className","_basePrice","_colorIndex","_spawnPoint","_vehicle","_shopSide","_license"];
+private["_mode","_spawnPoints","_className","_basePrice","_colorIndex","_spawnPoint","_vehicle","_shopSide","_license","_sp","_vh","_box","_offset"];
 _mode = SEL(_this,0);
 if((lbCurSel 2302) == -1) exitWith {hint localize "STR_Shop_Veh_DidntPick"};
 _className = lbData[2302,(lbCurSel 2302)];
@@ -106,3 +106,22 @@ if(_mode) then {
 [0] call SOCK_fnc_updatePartial;
 closeDialog 0; //Exit the menu.
 true;
+
+//Vehicle Marker Arrow
+
+_box = boundingBox _vehicle;  
+_offset = _box select 1;  //Gets an array with the maximum bounding values
+_offset = _offset select 2; //Gets the Maxmimum Z height
+_offset = _offset + 0.8; //Just a few inches more...
+
+_sp = visiblePosition _vehicle;
+_sp = _sp vectorAdd [0,0,_offset]; 
+_vh = createVehicle ["Sign_Arrow_Large_F", _sp ,[],0,"NONE"];
+_vh setPos _sp; 
+
+[0] call SOCK_fnc_updatePartial;
+closeDialog 0; //Exit the menu.
+true;
+
+sleep 10;
+deleteVehicle _vh;
