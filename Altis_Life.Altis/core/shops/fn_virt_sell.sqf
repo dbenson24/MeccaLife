@@ -6,15 +6,11 @@
 	Description:
 	Sell a virtual item to the store / shop
 */
-private["_type","_index","_price","_amount","_name","_marketprice"];
+private["_type","_index","_price","_amount","_name"];
 if(EQUAL(lbCurSel 2402,-1)) exitWith {};
 _type = lbData[2402,(lbCurSel 2402)];
 _price = M_CONFIG(getNumber,"VirtualItems",_type,"sellPrice");
 if(EQUAL(_price,-1)) exitWith {};
-
-_marketprice = [_type] call life_fnc_marketGetSellPrice;
-if(_marketprice != -1) then{ _price = _marketprice; };
-
 
 _amount = ctrlText 2405;
 if(!([_amount] call TON_fnc_isnumber)) exitWith {hint localize "STR_Shop_Virt_NoNum";};
@@ -26,15 +22,6 @@ _name = M_CONFIG(getText,"VirtualItems",_type,"displayName");
 if(([false,_type,_amount] call life_fnc_handleInv)) then {
 	hint format[localize "STR_Shop_Virt_SellItem",_amount,(localize _name),[_price] call life_fnc_numberText];
 	ADD(CASH,_price);
-	if(_marketprice != -1) then 
-	{ 
-		[_type, _amount] spawn
-		{
-			sleep 120;
-			[_this select 0,_this select 1] call life_fnc_marketSell;
-		};
-	};
-	
 	[] call life_fnc_virt_update;	
 };
 
