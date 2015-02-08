@@ -290,6 +290,12 @@ class VirtualShops {
 		name = "STR_Shops_Gold";
 		items[] = { "goldbar" };
 	};
+	
+	
+	class vigilante {
+		name = "Vigilante Shop";
+		items [] = { "water", "apple", "peach", "redgull", "tbacon" };
+	};
 };
 
 #include "Config_Vehicles.hpp"
