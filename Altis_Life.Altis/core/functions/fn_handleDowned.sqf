@@ -6,8 +6,8 @@ private["_obj","_inVehicle","_time","_downed","_hndlBlur","_hndlBlack","_eff1","
 player setDamage 0;
 if (!life_isdowned) then {
 	_source = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
-	//[[format["%1 has been downed by %2.",name player, name _source]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
-	[[0,format["%1 has been downed by %2.",name player, name _source]],"life_fnc_broadcast",true,false] spawn life_fnc_MP; //testing
+	//[[format["%1 has been downed by %2.",name player, name _source]],"life_fnc_broadcast",true,false] call life_fnc_MP;
+	[[0,format["%1 has been downed by %2.",name player, name _source]],"life_fnc_broadcast",true,false] call life_fnc_MP; //testing
 	life_isdowned = true;
 	player setVariable["downed",true,true];
 	player setVariable["receiveFirstAid",false,false];
@@ -17,7 +17,7 @@ if (!life_isdowned) then {
 		_obj = "Land_ClutterCutter_small_F" createVehicle (getPosATL player);
 		_obj setPosATL (getPosATL player);
 		player attachTo [_obj,[0,0,0]];
-		[[player,"AinjPfalMstpSnonWnonDf_carried_fallwc"],"life_fnc_animSync",true,false] spawn BIS_fnc_MP;
+		[[player,"AinjPfalMstpSnonWnonDf_carried_fallwc"],"life_fnc_animSync",true,false] call life_fnc_MP;
 		_inVehicle = false;
 	} else {
 		_inVehicle = true;
@@ -40,13 +40,13 @@ if (!life_isdowned) then {
 	_dead = false;
 	disableUserInput true;
 	while {_downed} do {
-		if (player getVariable["receiveFirstAid",false]) exitWith {_downed = false;player setVariable["receiveFirstAid",nil,true];[[player,"amovppnemstpsraswrfldnon"],"life_fnc_animSync",true,false] spawn BIS_fnc_MP;};
+		if (player getVariable["receiveFirstAid",false]) exitWith {_downed = false;player setVariable["receiveFirstAid",nil,true];[[player,"amovppnemstpsraswrfldnon"],"life_fnc_animSync",true,false] call life_fnc_MP;};
 		if (alive player) then {
 			if (!(player getVariable ["restrained",false])) then{
 				if (!(_inVehicle)) then{
-					if (_time == 8) then {[[player,"AinjPpneMstpSnonWrflDnon"],"life_fnc_animSync",true,false] spawn BIS_fnc_MP;};
+					if (_time == 8) then {[[player,"AinjPpneMstpSnonWrflDnon"],"life_fnc_animSync",true,false] call life_fnc_MP;};
 					if (_time == 30) then {  //testing
-						[[player,"amovppnemstpsraswrfldnon"],"life_fnc_animSync",true,false] spawn BIS_fnc_MP;
+						[[player,"amovppnemstpsraswrfldnon"],"life_fnc_animSync",true,false] call life_fnc_MP;
 						_downed = false;
 					};
 				} else {
@@ -54,7 +54,7 @@ if (!life_isdowned) then {
 						_obj = "Land_ClutterCutter_small_F" createVehicle (getPosATL player);
 						_obj setPosATL (getPosATL player);
 						player attachTo [_obj,[0,0,0]];
-						[[player,"AinjPfalMstpSnonWnonDf_carried_fallwc"],"life_fnc_animSync",true,false] spawn BIS_fnc_MP;
+						[[player,"AinjPfalMstpSnonWnonDf_carried_fallwc"],"life_fnc_animSync",true,false] call life_fnc_MP;
 						_time = 0;
 						_inVehicle = false;
 					};
