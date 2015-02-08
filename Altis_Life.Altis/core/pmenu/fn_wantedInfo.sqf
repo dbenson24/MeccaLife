@@ -26,8 +26,8 @@ _bounty = _data select 1;
 	if(!(_crime in _mylist)) then
 	{
 		_mylist pushBack _crime;
-		_list lbAdd format["%1 count(s) of %2",{_x == _crime} count _crimes,_crime];
+		_list lbAdd format[localize "STR_Wanted_Count",{_x == _crime} count _crimes,localize _crime];
 	};
 } foreach _crimes;
 
-ctrlSetText[2403,format["Current Bounty Price: $%1",[_bounty] call life_fnc_numberText]]; 
+ctrlSetText[2403,format[localize "STR_Wanted_Bounty",[_bounty] call life_fnc_numberText]]; 

@@ -57,6 +57,16 @@ class Life_Settings {
 	/* Job-related stuff */
 	delivery_points[] = { "dp_1", "dp_2", "dp_3", "dp_4", "dp_5", "dp_6", "dp_7", "dp_8", "dp_9", "dp_10", "dp_11", "dp_12", "dp_13", "dp_14", "dp_15", "dp_15", "dp_16", "dp_17", "dp_18", "dp_19", "dp_20", "dp_21", "dp_22", "dp_23", "dp_24", "dp_25" };
 
+	crimes[] = { 
+		{"STR_Crime_1","350","1"}, 
+		{"STR_Crime_2","1500","2"}, 
+		{"STR_Crime_3","2500","3"}, 
+		{"STR_Crime_4","3500","4"}, 
+		{"STR_Crime_5","10000","5"}, 
+		{"STR_Crime_6","5000","6"}, 
+		{"STR_Crime_7","10000","7"} 
+	};
+		
 	sellArray[] = {
 		{"arifle_sdar_F", 750},
 		{"hgun_P07_snds_F", 60},

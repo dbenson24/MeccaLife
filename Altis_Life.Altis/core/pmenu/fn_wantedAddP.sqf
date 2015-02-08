@@ -10,6 +10,6 @@ if(isNil "_unit") exitWith {};
 //if(_unit == player) exitWith {hint "You can't make yourself wanted, dipshit";};
 if(isNull _unit) exitWith {};
 
-[[1,format["%1 has been added to the wanted list.",_unit getVariable["realname",name _unit],_amount,getPlayerUID _unit]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+[[1,"STR_Wanted_AddP", true, [_unit getVariable["realname",name _unit],_amount,getPlayerUID _unit]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 
 [[getPlayerUID _unit,_unit getVariable["realname",name _unit],_amount],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
