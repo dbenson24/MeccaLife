@@ -9,4 +9,17 @@ life_versionInfo = "Altis Life RPG v4.0";
 [] execVM "scripts\intro.sqf"; //Intro Message Script
 [] execVM "scripts\zlt_fastrope.sqf"; //FastRope Script
 
+if(isDedicated && isNil("life_market_prices")) then
+{
+	[] call life_fnc_marketconfiguration;
+	diag_log "Market prices generated!";
+	
+	"life_market_prices" addPublicVariableEventHandler
+	{
+		diag_log format["Market prices updated! %1", _this select 1];
+	};
+
+};
+
+
 StartProgress = true;
