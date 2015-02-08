@@ -237,7 +237,7 @@ class CfgVehicles {
     };
 
 	class O_Truck_03_transport_F {
-        vItemSpace = 285;
+        vItemSpace = 385;
         storageFee[] = { 1000, 0, 0, 0 };
         insurance = 2500;
         chopShop = 5000;
@@ -245,7 +245,7 @@ class CfgVehicles {
     };
 
 	class O_Truck_03_device_F {
-        vItemSpace = 350;
+        vItemSpace = 500;
         storageFee[] = { 95000, 0, 0, 0 };
 		garageSell[] = { 185000, 0, 0, 0 };
         insurance = 25000;
@@ -266,7 +266,7 @@ class CfgVehicles {
     };
 
 	class B_G_Offroad_01_F {
-        vItemSpace = 65;
+        vItemSpace = 115;
         storageFee[] = { 1000, 0, 0, 0 };
 		garageSell[] = { 3500, 0, 0, 0 };
         insurance = 2500;
@@ -346,7 +346,7 @@ class CfgVehicles {
     };
 
 	class C_Offroad_01_F {
-        vItemSpace = 65;
+        vItemSpace = 115;
         storageFee[] = { 1000, 500, 650, 1000 };
 		garageSell[] = { 6500, 2500, 0, 0 };
         insurance = 2500;
@@ -402,7 +402,7 @@ class CfgVehicles {
 	class C_Kart_01_Vrana_F : C_Kart_01_Blu_F {}; //Inherits everything from the above class
 
 	class C_Hatchback_01_sport_F {
-        vItemSpace = 45;
+        vItemSpace = 65;
         storageFee[] = { 2500, 1000, 0, 0 };
 		garageSell[] = { 15000, 7500, 0, 0 };
         insurance = 5500;
@@ -433,7 +433,7 @@ class CfgVehicles {
     };
 
 	class B_Quadbike_01_F {
-        vItemSpace = 25;
+        vItemSpace = 45;
         storageFee[] = { 1000, 0, 0, 0 };
 		garageSell[] = { 950, 0, 0, 0 };
         insurance = 2500;
@@ -470,7 +470,7 @@ class CfgVehicles {
     };
 
 	class I_Truck_02_covered_F {
-        vItemSpace = 250;
+        vItemSpace = 350;
         storageFee[] = { 14500, 0, 0, 0 };
 		garageSell[] = { 62000, 0, 0, 0 };
         insurance = 6500;
@@ -493,7 +493,7 @@ class CfgVehicles {
     };
 
 	class O_Truck_03_covered_F {
-		vItemSpace = 300;
+		vItemSpace = 350;
 		storageFee[] = { 25000, 0, 0, 0 };
 		garageSell[] = { 65000, 0, 0, 0 };
 		insurance = 2500;
@@ -502,7 +502,7 @@ class CfgVehicles {
 	};
 
 	class C_Hatchback_01_F {
-        vItemSpace = 40;
+        vItemSpace = 65;
         storageFee[] = { 1000, 0, 0, 0 };
 		garageSell[] = { 4500, 3500, 0, 0 };
         insurance = 2500;
@@ -536,7 +536,7 @@ class CfgVehicles {
     };
 
 	class C_SUV_01_F {
-        vItemSpace = 50;
+        vItemSpace = 115;
         storageFee[] = { 1000, 0, 0, 0 };
 		garageSell[] = { 15000, 7500, 0, 0 };
         insurance = 2500;
@@ -577,7 +577,7 @@ class CfgVehicles {
     };
 
 	class C_Van_01_box_F {
-        vItemSpace = 150;
+        vItemSpace = 450;
         storageFee[] = { 1000, 0, 0, 0 };
 		garageSell[] = { 35000, 0, 0, 0 };
         insurance = 2500;
