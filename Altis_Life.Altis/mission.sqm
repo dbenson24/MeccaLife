@@ -2657,7 +2657,7 @@ class Mission
 				};
 				class Item46
 				{
-					position[]={3427.5671,2.5648546,12733.93};
+					position[]={3445.2671,3.6744158,12732.674};
 					azimut=-102.054;
 					special="NONE";
 					id=143;
@@ -3933,7 +3933,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3658.5813,10.548692,13228.739};
+					position[]={3741.4509,10.681993,13352.383};
 					azimut=-60.0494;
 					special="NONE";
 					id=242;
@@ -3949,7 +3949,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=605;
+		items=606;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -9382,7 +9382,7 @@ class Mission
 		};
 		class Item526
 		{
-			position[]={3638.3914,10.133566,13113.06};
+			position[]={3638.3914,10.133566,13113.759};
 			azimut=270;
 			id=769;
 			side="EMPTY";
@@ -10161,7 +10161,7 @@ class Mission
 		};
 		class Item603
 		{
-			position[]={3633.2263,10.107208,13116.634};
+			position[]={3637.1187,10.127968,13113.922};
 			azimut=-34.797798;
 			id=846;
 			side="EMPTY";
@@ -10178,6 +10178,14 @@ class Mission
 			vehicle="Land_Sacks_heap_F";
 			skill=0.60000002;
 			init="this enableSimulation false; this allowDamage false;";
+		};
+		class Item605
+		{
+			position[]={3636.7783,10.126152,13111.936};
+			id=848;
+			side="EMPTY";
+			vehicle="Land_CratesPlastic_F";
+			skill=0.60000002;
 		};
 	};
 	class Markers
@@ -12343,19 +12351,19 @@ class Mission
 		};
 		class Item275
 		{
-			position[]={3655.0803,10.489517,13229.022};
+			position[]={3737.95,10.609337,13352.666};
 			name="jail_marker_1";
 			type="Empty";
 		};
 		class Item276
 		{
-			position[]={3656.79,10.519225,13231.284};
+			position[]={3739.6597,10.633349,13354.928};
 			name="jail_marker_1_1";
 			type="Empty";
 		};
 		class Item277
 		{
-			position[]={3660.2861,10.576788,13232.534};
+			position[]={3743.1558,10.67247,13356.178};
 			name="Vigshop_1";
 			text="Vigilante";
 			type="KIA";
