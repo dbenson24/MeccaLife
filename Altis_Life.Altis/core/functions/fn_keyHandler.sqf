@@ -108,7 +108,14 @@ switch (_code) do {
 			};
 		};
 	};
-
+	//Shift+P = Faded Sound
+	case 25: {
+		if(_shift) then
+		{
+        [] call life_fnc_earplugs;
+        _handled = true;
+		};
+	};
 	//T Key (Trunk)
 	case 20: {
 		if(!_alt && !_ctrlKey) then {
