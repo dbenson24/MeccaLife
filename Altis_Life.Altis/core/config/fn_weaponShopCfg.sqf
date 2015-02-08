@@ -136,10 +136,10 @@ switch(_shop) do {
 						["10Rnd_762x51_Mag",nil,500],
 						["10Rnd_762x51_Mag",nil,500],
 						["30Rnd_65x39_caseless_green",nil,275],
-						["srifle_GM6_F",nil,5000000],
-						["5Rnd_127x108_Mag",nil,250000],
-						["srifle_LRR_F",nil,9000000],
-						["7Rnd_408_Mag",nil,350000],
+						["srifle_GM6_F",nil,999999],
+						["5Rnd_127x108_Mag",nil,600000],
+						["srifle_LRR_F",nil,999999],
+						["7Rnd_408_Mag",nil,750000],
 						["HandGrenade",nil,500000]
 					]
 				];
