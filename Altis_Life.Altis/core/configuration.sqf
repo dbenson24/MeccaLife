@@ -64,17 +64,17 @@ life_vehicles = [];
 switch (playerSide) do {
 	case west: {
 		BANK = 7000; //Starting Bank Money
-		life_paycheck = 500; //Paycheck Amount
+		life_paycheck = 1200; //Paycheck Amount
 	};
 	
 	case civilian: {
 		BANK = 3000; //Starting Bank Money
-		life_paycheck = 350; //Paycheck Amount
+		life_paycheck = 1200; //Paycheck Amount
 	};
 	
 	case independent: {
 		BANK = 6500;
-		life_paycheck = 450;
+		life_paycheck = 1200;
 	};
 };
 
