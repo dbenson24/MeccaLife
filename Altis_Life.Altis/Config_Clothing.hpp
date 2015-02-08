@@ -25,8 +25,8 @@ class Clothing {
 			{ "U_C_Poor_2", "Rag tagged clothes", 250, { "", "", -1 } },
 			{ "U_IG_Guerilla2_2", "Green stripped shirt & Pants", 650, { "", "", -1 } },
 			{ "U_IG_Guerilla3_1", "Brown Jacket & Pants", 735, { "", "", -1 } },
-			{ "U_IG_Guerilla2_3", "The Outback Rangler", 1200, { "", "", -1 } },
-			{ "U_C_HunterBody_grn", "The Hunters Look", 1500, { "", "", -1 } },
+			{ "U_IG_Guerilla2_3", "The Outback Rangler", 700, { "", "", -1 } },
+			{ "U_C_HunterBody_grn", "The Hunters Look", 700, { "", "", -1 } },
 			{ "U_OrestesBody", "Surfing On Land", 1100, { "", "", -1 } },
 			{ "U_NikosAgedBody", "Casual Wears", 5000, { "", "", -1 } }
 		};
@@ -66,10 +66,10 @@ class Clothing {
 			{ "G_Sport_BlackWhite", "", 200, { "", "", -1 } },
 			{ "G_Squares", "", 100, { "", "", -1 } },
 			{ "G_Aviator", "", 1000, { "", "", -1 } },
-			{ "G_Lady_Mirror", "", 1500, { "", "", -1 } },
-			{ "G_Lady_Dark", "", 1500, { "", "", -1 } },
-			{ "G_Lady_Blue", "", 1500, { "", "", -1 } },
-			{ "G_Lowprofile", "", 3000, { "", "", -1 } },
+			{ "G_Lady_Mirror", "", 500, { "", "", -1 } },
+			{ "G_Lady_Dark", "", 500, { "", "", -1 } },
+			{ "G_Lady_Blue", "", 500, { "", "", -1 } },
+			{ "G_Lowprofile", "", 300, { "", "", -1 } },
 			{ "G_Combat", "", 5500, { "", "", -1 } }
 		};
 
