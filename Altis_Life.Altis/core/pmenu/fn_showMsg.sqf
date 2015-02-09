@@ -29,16 +29,3 @@ _status = "[OFFLINE]";
 
 _cMessageHeader ctrlSetText format["%1 %2 schrieb:",_data select 3,_status];
 _cMessageShow ctrlSetText format["%1",_data select 2];
-Now we head to the life_server part.
- 
-Open your config.cpp and search for the "TON_system" class. Underneath this class you add another class:
-	class GHBSystem
-	{
-		tag = "GHB";
-		class Smartphone
-		{
-			file = "\life_server\Functions\Smartphone";
-			class handleMessages {};
-			class msgRequest {};
-		};	
-	};
