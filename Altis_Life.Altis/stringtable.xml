@@ -1041,7 +1041,7 @@
 			<Portuguese>Lista de Foragidos</Portuguese>
 		</Key>
 		<Key ID="STR_PM_CellPhone">
-			<Original>Cell Phone</Original>
+			<Original>SmartPhone</Original>
 			<German>Telefon</German>
 			<French>Téléphone</French>
 			<Italian>Cellulare</Italian>
@@ -4904,6 +4904,41 @@
 			<French>Attempted Murder</French>
 			<Italian>Attempted Murder</Italian>		
 			<Portuguese>Attempted Murder</Portuguese>
+		</Key>
+	</Package>
+	<Package name="Smartphone">
+		<Key ID="STR_PM_Smartphone">
+			<Original>Smartphone</Original>
+		</Key>
+		<Key ID="STR_SMARTPHONE_TITLE">
+			<Original>Smartphone Menu</Original>
+		</Key>
+		<Key ID="STR_SMARTPHONE_PLAYERLISTTITLE">
+			<Original>Player List</Original>
+		</Key>
+		<Key ID="STR_SMARTPHONE_MESSAGETITLE">
+			<Original>Emergency Calls!</Original>
+		</Key>
+		<Key ID="STR_SMARTPHONE_RANDOMTITLE">
+			<Original>Select a Message</Original>
+		</Key>
+		<Key ID="STR_Global_Close">
+			<Original>Close</Original>
+		</Key>
+		<Key ID="STR_SMARTPHONE_SCHREIBEN">
+			<Original>Compose</Original>
+		</Key>
+		<Key ID="STR_SMARTPHONE_NOTRUF">
+			<Original>Emergency</Original>
+		</Key>
+		<Key ID="STR_SMARTPHONE_Absenden">
+			<Original>Send</Original>
+		</Key>
+		<Key ID="STR_SMARTPHONE_NACHRICHTTITLE">
+			<Original>Message:</Original>
+		</Key>
+		<Key ID="STR_SMARTPHONE_Notruftitle">
+			<Original>Emergency Calls!</Original>
 		</Key>
 	</Package>
 </Project>

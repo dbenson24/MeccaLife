@@ -37,6 +37,7 @@ life_earplugs = false;
 life_is_alive = false;
 life_isDowned = false;
 life_action_sit = false;
+life_smartphoneTarget = ObjNull;
 
 //Uniform price (0),Hat Price (1),Glasses Price (2),Vest Price (3),Backpack Price (4)
 life_clothing_purchase = [-1,-1,-1,-1,-1];

@@ -145,6 +145,9 @@ class Life_Client_Core
 		class settingsMenu {};
 		class s_onChar {};
 		class s_onCheckedChange {};
+		class smartphone {};
+		class newMsg {};
+		class showMsg {};
 	};
 	
 	class Functions
