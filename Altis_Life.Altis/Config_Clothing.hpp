@@ -98,10 +98,11 @@ class Clothing {
 
 		uniforms[] = {
 			{ "NONE", "Remove Uniform", 0, { "", "", -1 } },
-			{ "U_Rangemaster", "Cop Uniform", 25, { "", "", -1 } },
-			{ "U_B_CombatUniform_mcam_tshirt", "", 350, { "life_coplevel", "SCALAR", 1 } },
-			{ "U_B_survival_uniform", "", 1250, { "life_coplevel", "SCALAR", 1 } },
-			{ "U_B_CombatUniform_mcam_worn", "", 550, { "life_coplevel", "SCALAR", 2 } }
+			{ "U_Competitor", "Recruit", 25, { "", "", -1 } },
+			{ "U_Rangemaster", "Cadet", 25, { "", "", -1 } },
+			{ "C_Marshal_F", "Patrol Officer", 350, { "life_coplevel", "SCALAR", 2 } },
+			{ "U_B_survival_uniform", "", 1250, { "life_coplevel", "SCALAR", 3 } },
+			{ "U_B_CombatUniform_mcam_worn", "", 550, { "life_coplevel", "SCALAR", 3 } }
 		};
 
 		headgear[] = {

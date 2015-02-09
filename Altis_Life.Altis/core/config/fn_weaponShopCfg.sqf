@@ -25,17 +25,15 @@ switch(_shop) do {
 			default {
 				["Altis Cop Shop",
 					[
-						["arifle_sdar_F","Taser Rifle",20000], //Will be changed to Mx with Tracer Rounds
+						["hgun_Rook40_F",nil,6500],
 						["hgun_P07_snds_F","Stun Pistol",2000],
 						["hgun_P07_F",nil,7500],
-						["HandGrenade_Stone","Flashbang",1700],
 						["Binocular",nil,150],
 						["ItemGPS",nil,100],
 						["ToolKit",nil,250],
 						["FirstAidKit",nil,150],
 						["NVGoggles",nil,2000],
 						["16Rnd_9x21_Mag",nil,50],
-						["20Rnd_556x45_UW_mag","Taser Rifle Magazine",125] //also needs to be changed for Mx with tracer rounds
 					]
 				];
 			};
@@ -69,18 +67,20 @@ switch(_shop) do {
 			case (FETCH_CONST(life_coplevel) < 2): {"You are not at a patrol officer rank!"};
 			default
 			{
-				["Altis Patrol Officer Shop",
+				["Altis Officer Heavy Shop",
 					[
-						["arifle_MX_F",nil,35000],
+						["arifle_MX_F",nil,65000],
+						["arifle_MXC_F",nil,35000],
+						["arifle_MXM_F",nil,65000],
+						["30Rnd_65x39_caseless_mag_tracer",nil,130],
 						["SMG_02_ACO_F",nil,30000],
-						["HandGrenade_Stone","Flashbang",1700],
+						["30Rnd_9x21_Mag",nil,250],
 						["MineDetector",nil,1000],
 						["acc_flashlight",nil,750],
 						["optic_Holosight",nil,1200],
 						["optic_Arco",nil,2500],
-						["muzzle_snds_H",nil,2750],
-						["30Rnd_65x39_caseless_mag",nil,130],
-						["30Rnd_9x21_Mag",nil,250]
+						["HandGrenade_Stone","Flashbang",1700],
+						["muzzle_snds_H",nil,8750]
 					]
 				];
 			};
@@ -92,20 +92,25 @@ switch(_shop) do {
 		switch(true) do
 		{
 			case (playerSide != west): {"You are not a cop!"};
-			case (FETCH_CONST(life_coplevel) < 3): {"You are not at a sergeant rank!"};
+			case (FETCH_CONST(life_coplevel) < 4): {"You are not at a sergeant rank!"};
 			default
 			{
-				["Altis Sergeant Officer Shop",
+				["Altis Leathal Force Shop",
 					[
-						["SMG_02_ACO_F",nil,15000],
+						["arifle_MX_SW_Black_F",nil,107500],
+						["100Rnd_65x39_caseless_mag",nil,107500],
+						["SMG_01_F",nil,100500],
+						["30Rnd_45ACP_Mag_SMG_01",nil,100500],						
 						["hgun_ACPC2_F",nil,17500],
-						["HandGrenade_Stone","Flashbang",1700],
+						["9Rnd_45ACP_Mag",nil,200],
 						["arifle_MXC_F",nil,30000],
 						["optic_Arco",nil,2500],
-						["muzzle_snds_H",nil,2750],
+						["muzzle_snds_H",nil,8750],
 						["30Rnd_65x39_caseless_mag",nil,100],
-						["30Rnd_9x21_Mag",nil,60],
-						["9Rnd_45ACP_Mag",nil,200]
+						["srifle_GM6_LRPS_F",nil,600000],
+						["5Rnd_127x108_Mag",nil,60000],					
+						["HandGrenade_Stone","Flashbang",1700]
+						
 					]
 				];
 			};
@@ -123,19 +128,20 @@ switch(_shop) do {
 				["Mohammed's Jihadi Shop",
 					[
 						["arifle_TRG20_F",nil,25000],
+						["30Rnd_556x45_Stanag",nil,300],
 						["arifle_Katiba_F",nil,30000],
+						["30Rnd_65x39_caseless_green",nil,275],
 						["srifle_DMR_01_F",nil,50000],
+						["10Rnd_762x51_Mag",nil,500],
 						["arifle_SDAR_F",nil,20000],
+						["20Rnd_556x45_UW_mag",nil,125],
 						["optic_ACO_grn",nil,3500],
 						["optic_Holosight",nil,3600],
 						["acc_flashlight",nil,1000],
 						["optic_Hamr",nil,7500],
 						["30Rnd_9x21_Mag",nil,200],
-						["20Rnd_556x45_UW_mag",nil,125],
-						["30Rnd_556x45_Stanag",nil,300],
-						["10Rnd_762x51_Mag",nil,500],
-						["10Rnd_762x51_Mag",nil,500],
-						["30Rnd_65x39_caseless_green",nil,275],
+						["srifle_EBR_DMS_F",nil,12000],
+						["20Rnd_762x51_Mag",nil,500],
 						["srifle_GM6_F",nil,999999],
 						["5Rnd_127x108_Mag",nil,600000],
 						["srifle_LRR_F",nil,999999],
