@@ -75,7 +75,7 @@ class Clothing {
 
 		vests[] = {
 			{ "NONE", "Remove Vest", 0, { "", "", -1 } },
-			{ "V_TacVest_khk", "", 60500, { "", "", -1 } }
+			{ "V_TacVestIR_blk", "", 60500, { "", "", -1 } }
 		};
 
 		backpacks[] = {
