@@ -4,7 +4,7 @@
 	Description:
 	Teleport to chosen position.
 */
-if(__GETC__(life_adminlevel) == 0) exitWith {closeDialog 0;};
+if(FETCH_CONST(life_adminlevel) == 0) exitWith {closeDialog 0;};
 
 [] spawn {
   while {dialog} do {

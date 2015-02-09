@@ -4,7 +4,7 @@
 	Description: Enables God mode for Admin
 */
 
-if(__GETC__(life_adminlevel) < 3) exitWith {closeDialog 0; hint localize "STR_ANOTF_ErrorLevel";};
+if(FETCH_CONST(life_adminlevel) < 3) exitWith {closeDialog 0; hint localize "STR_ANOTF_ErrorLevel";};
 
 [] spawn {
   while {dialog} do {

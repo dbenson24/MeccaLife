@@ -3,7 +3,7 @@
 	File: fn_adminFreeze.sqf
 	Description: Freezes selected player
 */
-if(__GETC__(life_adminlevel) < 3) exitWith {closeDialog 0; hint localize "STR_ANOTF_ErrorLevel";};
+if(FETCH_CONST(life_adminlevel) < 3) exitWith {closeDialog 0; hint localize "STR_ANOTF_ErrorLevel";};
 
 private["_unit"];
 _unit = lbData[2902,lbCurSel (2902)];
