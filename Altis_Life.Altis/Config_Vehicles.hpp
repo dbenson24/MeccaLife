@@ -9,11 +9,10 @@ class CarShops {
 		side = "civ";
 		vehicles[] = {
 			{ "B_Quadbike_01_F", 2500, "" }, 
-			{ "C_Hatchback_01_F", 9500, "driver" }, 
-			{ "C_Offroad_01_F", 12500, "driver" },
+			{ "C_Hatchback_01_F", 22500, "driver" }, 
+			{ "C_Offroad_01_F", 35500, "driver" },
 			{ "C_SUV_01_F", 30000, "driver" },
-			{ "C_Hatchback_01_sport_F", 40000, "driver" },
-			{ "C_Van_01_transport_F", 45000, "driver" }
+			{ "C_Hatchback_01_sport_F", 45000, "driver" },
 		};
 	};
 
@@ -75,7 +74,8 @@ class CarShops {
 		vehicles[] = {
 			{ "C_Offroad_01_F", 5000, ""},
 			{ "C_SUV_01_F", 20000, "" },
-			{ "B_MRAP_01_F", 30000, "", { "life_coplevel", 3 } }
+			{ "B_MRAP_01_F", 30000, "", { "life_coplevel", 5 } }
+			{ "C_Hatchback_01_sport_F", 45000, "" { "life_coplevel", 2 } },
 		};
 	};
 
@@ -90,7 +90,7 @@ class CarShops {
 	class cop_air {
 		side = "cop";
 		vehicles[] = {
-			{ "B_Heli_Light_01_F", 75000, "cAir" },
+			{ "B_Heli_Light_01_F", 75000, "cAir" { "life_coplevel", 2 } },
 			{ "B_Heli_Transport_01_F", 200000, "cAir", { "life_coplevel", 3 } }
 		};
 	};
@@ -320,7 +320,7 @@ class CfgVehicles {
     };
 
 	class B_Truck_01_transport_F {
-        vItemSpace = 325;
+        vItemSpace = 600;
         storageFee[] = { 650, 0, 0, 0 };
 		garageSell[] = { 135000, 0, 0, 0 };
         insurance = 2500;
