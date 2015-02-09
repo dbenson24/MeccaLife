@@ -65,7 +65,7 @@ switch (true) do {
 	
 	case (_item in ["apple","rabbit","salema","ornate","mackerel","tuna","mullet","catshark","turtle","turtlesoup","donuts","tbacon","peach"]): {
 		if(!(EQUAL(M_CONFIG(getNumber,"VirtualItems",_item,"edible"),-1))) then {
-			if([false,_item,1] call life_fnc_handleInv) then {
+			if([false,_food,1] call life_fnc_handleInv) then {
 				_val = M_CONFIG(getNumber,"VirtualItems",_item,"edible");
 				_sum = life_hunger + _val;
 				switch (true) do {
