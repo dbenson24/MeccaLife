@@ -10,3 +10,12 @@ life_versionInfo = "Altis Life RPG v4.0";
 [] execVM "scripts\zlt_fastrope.sqf"; //FastRope Script
 
 StartProgress = true;
+
+MAC_fnc_switchMove = {
+    private["_object","_anim"];
+    _object = _this select 0;
+    _anim = _this select 1;
+
+    _object switchMove _anim;
+    
+};
