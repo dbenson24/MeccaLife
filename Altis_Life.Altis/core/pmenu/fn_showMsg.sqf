@@ -1,6 +1,9 @@
 #include <macro.h>
 /*
+
     file: fn_showMsg.sqf
+    Author: Silex
+
 */
 private["_index","_data","_status"];
 _index = [_this,0,0] call BIS_fnc_param;
@@ -24,5 +27,18 @@ _status = "[OFFLINE]";
     };
 }forEach playableUnits;
 
-_cMessageHeader ctrlSetText format["%1 %2 wrote:",_data select 3,_status];
+_cMessageHeader ctrlSetText format["%1 %2 schrieb:",_data select 3,_status];
 _cMessageShow ctrlSetText format["%1",_data select 2];
+Now we head to the life_server part.
+ 
+Open your config.cpp and search for the "TON_system" class. Underneath this class you add another class:
+	class GHBSystem
+	{
+		tag = "GHB";
+		class Smartphone
+		{
+			file = "\life_server\Functions\Smartphone";
+			class handleMessages {};
+			class msgRequest {};
+		};	
+	};

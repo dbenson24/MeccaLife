@@ -1,5 +1,9 @@
 /*
+
 	file: fn_msgRequest.sqf
+	Author: Silex
+	
+	Fills the Messagelist
 */
 private["_query","_queryResult","_uid","_player"];
 _uid = [_this,0,"",[""]] call BIS_fnc_param;
