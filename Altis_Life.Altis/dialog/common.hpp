@@ -149,6 +149,10 @@ class Life_RscListNBox
 	autoScrollSpeed = -1;
 	autoScrollDelay = 5;
 	autoScrollRewind = 0;
+	rowHeight = 0.04;
+	drawSideArrows = 0;
+	idcLeft = -1;
+	idcRight = -1;
 	class ListScrollBar: Life_RscScrollBar{};
 	class ScrollBar: Life_RscScrollBar{};
 };
