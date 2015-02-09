@@ -97,11 +97,11 @@ class Life_Settings {
 		{"SLAMDirectionalMine_Wire_Mag", 255},
 		{"optic_ACO_grn", 25},
 		{"acc_flashlight", 10},
-		{"srifle_EBR_F", 1500},
+		{"srifle_EBR_F", 100},
 		{"arifle_TRG21_F", 350},
 		{"optic_MRCO", 500},
 		{"optic_Aco", 850},
-		{"arifle_MX_F", 7500},
+		{"arifle_MX_F", 700},
 		{"arifle_MXC_F", 500},
 		{"arifle_MXM_F", 850},
 		{"MineDetector", 50},
@@ -236,7 +236,7 @@ class Licenses {
 class VirtualShops {
 	class market {
 		name = "STR_Shops_Market";
-		items[] = { "waterBottle", "rabbit_grilled", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "fuelFull", "peach", "boltcutter", "storagesmall", "storagebig" };
+		items[] = { "waterBottle", "rabbit_grilled", "apple", "redgull", "tbacon", "pickaxe", "fuelFull", "peach", "boltcutter", "storagesmall", "storagebig" };
 	};
 
 	class rebel {
