@@ -174,6 +174,7 @@ class CfgFunctions
 			};    
 		};
 	};
+};
 
 class CfgVehicles
 {
