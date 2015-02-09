@@ -63,7 +63,7 @@ life_is_processing = true;
 
 if(_hasLicense) then {
 	while{true} do {
-		sleep  0.8;
+		sleep  2;
 		_cP = _cP + 0.01;
 		_progress progressSetPosition _cP;
 		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
@@ -81,7 +81,7 @@ if(_hasLicense) then {
 	if(CASH < _cost) exitWith {hint format[localize "STR_Process_License",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 	
 	while{true} do {
-		sleep  0.9;
+		sleep  2;
 		_cP = _cP + 0.01;
 		_progress progressSetPosition _cP;
 		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
