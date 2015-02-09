@@ -33,7 +33,7 @@ switch(_shop) do {
 						["ToolKit",nil,250],
 						["FirstAidKit",nil,150],
 						["NVGoggles",nil,2000],
-						["16Rnd_9x21_Mag",nil,50],
+						["16Rnd_9x21_Mag",nil,50]
 					]
 				];
 			};
