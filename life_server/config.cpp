@@ -110,6 +110,8 @@ class CfgFunctions
 	
 	class TON_System
 	{
+		
+		
 		tag = "TON";
 		class Systems
 		{
@@ -160,14 +162,18 @@ class CfgFunctions
 			file = "\life_server\Functions\Actions";
 			class pickupAction {};
 		};
-		class Smartphone
+		
+		class GHBSystem
 		{
-			file = "\life_server\Functions\Smartphone";
-			class handleMessages {};
-			class msgRequest {};
+        tag = "GHB";
+		class Smartphone
+			{
+				file = "\life_server\Functions\Smartphone";
+				class handleMessages {};
+				class msgRequest {};
+			};    
 		};
 	};
-};
 
 class CfgVehicles
 {
