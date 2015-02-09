@@ -50,12 +50,12 @@ class CarShops {
 		vehicles[] = {
 			{ "C_Van_01_box_F", 60000, "trucking" },
 			{ "I_Truck_02_transport_F", 75000, "trucking" },
-			{ "I_Truck_02_covered_F", 100000, "trucking" },
+			{ "I_Truck_02_covered_F", 200000, "trucking" },
 			{ "B_Truck_01_transport_F", 275000, "trucking" },
 			{ "O_Truck_03_transport_F", 200000, "trucking" },
 			{ "O_Truck_03_covered_F", 250000, "trucking" },
-			{ "B_Truck_01_box_F", 350000, "trucking" },
-			{ "O_Truck_03_device_F", 450000, "trucking" }
+			{ "B_Truck_01_box_F", 600000, "trucking" },
+			{ "O_Truck_03_device_F", 800000, "trucking" }
 		};
 	};
 
@@ -63,10 +63,10 @@ class CarShops {
 		side = "civ";
 		vehicles[] = {
 			{ "B_Quadbike_01_F", 2500, "" },
-			{ "B_G_Offroad_01_F", 15000, "" },
-			{ "O_MRAP_02_F", 150000, "" },
+			{ "B_G_Offroad_01_F", 35000, "" },
+			{ "O_MRAP_02_F", 950000, "" },
 			{ "B_Heli_Light_01_F", 325000, "" },
-			{ "B_G_Offroad_01_armed_F", 750000, "rebel" }
+			{ "B_G_Offroad_01_armed_F", 950000, "rebel" }
 		};
 	};
 
@@ -221,7 +221,7 @@ class CfgVehicles {
 
 	class B_G_Boat_Transport_01_F {
         vItemSpace = 45;
-        storageFee[] = { 1000, 0, 0, 0 };
+        storageFee[] = { 100, 0, 0, 0 };
         insurance = 2500;
         chopShop = 5000;
         textures[] = { };
@@ -238,7 +238,7 @@ class CfgVehicles {
 
 	class O_Truck_03_transport_F {
         vItemSpace = 385;
-        storageFee[] = { 1000, 0, 0, 0 };
+        storageFee[] = { 100, 0, 0, 0 };
         insurance = 2500;
         chopShop = 5000;
         textures[] = { };
@@ -246,7 +246,7 @@ class CfgVehicles {
 
 	class O_Truck_03_device_F {
         vItemSpace = 500;
-        storageFee[] = { 95000, 0, 0, 0 };
+        storageFee[] = { 950, 0, 0, 0 };
 		garageSell[] = { 185000, 0, 0, 0 };
         insurance = 25000;
         chopShop = 125000;
@@ -311,8 +311,8 @@ class CfgVehicles {
     };
 
 	class B_Truck_01_box_F {
-        vItemSpace = 450;
-        storageFee[] = { 35000, 0, 0, 0 };
+        vItemSpace = 1000;
+        storageFee[] = { 500, 0, 0, 0 };
 		garageSell[] = { 150000, 0, 0, 0 };
         insurance = 2500;
         chopShop = 5000;
@@ -321,7 +321,7 @@ class CfgVehicles {
 
 	class B_Truck_01_transport_F {
         vItemSpace = 325;
-        storageFee[] = { 25650, 0, 0, 0 };
+        storageFee[] = { 650, 0, 0, 0 };
 		garageSell[] = { 135000, 0, 0, 0 };
         insurance = 2500;
         chopShop = 5000;
@@ -329,8 +329,8 @@ class CfgVehicles {
     };
 
 	class O_MRAP_02_F {
-        vItemSpace = 60;
-        storageFee[] = { 45000, 0, 0, 0 };
+        vItemSpace = 80;
+        storageFee[] = { 450, 0, 0, 0 };
 		garageSell[] = { 65000, 0, 0, 0 };
         insurance = 2500;
         chopShop = 5000;
