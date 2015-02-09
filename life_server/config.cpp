@@ -163,16 +163,12 @@ class CfgFunctions
 			class pickupAction {};
 		};
 		
-		class GHBSystem
-		{
-        tag = "GHB";
 		class Smartphone
-			{
-				file = "\life_server\Functions\Smartphone";
-				class handleMessages {};
-				class msgRequest {};
-			};    
-		};
+		{
+			file = "\life_server\Functions\Smartphone";
+			class handleMessages {};
+			class msgRequest {};
+		};    
 	};
 };
 

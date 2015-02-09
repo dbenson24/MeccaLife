@@ -1,6 +1,9 @@
 #include <macro.h>
 /*
+
 	file: fn_smartphone.sqf
+	Author: Silex
+	
 */
 private["_display","_units","_type","_data","_rowData","_msg"];
 _type = [_this,0,0] call BIS_fnc_param;
@@ -13,7 +16,7 @@ _display = findDisplay 88888;
 _cPlayerList = _display displayCtrl 88881;
 _cMessageList = _display displayCtrl 88882;
 _cMessageHeader = _display displayCtrl 88886;
-_cMessageHeader ctrlSetText format["From:                 Message:"];
+_cMessageHeader ctrlSetText format["From:                 Messages:"];
 ctrlEnable[887892,false];
 switch(_type) do
 {
@@ -34,7 +37,7 @@ switch(_type) do
 			};
 		} forEach playableUnits;
 		
-		[[getPlayerUID player, player],"GHB_fnc_msgRequest",false] spawn life_fnc_MP;
+		[[getPlayerUID player, player],"TON_fnc_msgRequest",false] spawn life_fnc_MP;
 		ctrlEnable[887892,false];
 	};
 	case 1:
@@ -61,3 +64,4 @@ switch(_type) do
 		};
 	};
 };
+
