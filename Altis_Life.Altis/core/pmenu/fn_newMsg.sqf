@@ -83,7 +83,7 @@ switch(_type) do
 	//emergencyloading
 	case 6:
 	{
-		if((__GETC__(life_adminlevel) < 1)) then
+		if((FETCH_CONST(life_adminlevel) < 1)) then
 		{
 			ctrlShow[888898,false];
 			ctrlShow[888896,true];
