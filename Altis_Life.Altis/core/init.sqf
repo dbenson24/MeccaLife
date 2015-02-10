@@ -105,6 +105,16 @@ life_fnc_moveIn = compileFinal
 
 [] spawn life_fnc_survival;
 
+switch(FETCH_CONST(life_donator)) do
+{
+	case 0: {life_donDis = 1};
+	case 1: {life_donDis = 0.95};
+	case 2: {life_donDis = 0.90};
+	case 3: {life_donDis = 0.85};
+	case 4: {life_donDis = 0.80};
+	case 5: {life_donDis = 0.75};
+};
+
 CONSTVAR(life_paycheck); //Make the paycheck static.
 if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),0)) then {player enableFatigue false;};
 [[getPlayerUID player,player getVariable["realname",name player]],"life_fnc_wantedProfUpdate",false,false] spawn life_fnc_MP;
