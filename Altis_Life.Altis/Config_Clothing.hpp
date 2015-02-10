@@ -326,7 +326,7 @@ class Clothing {
 
 		uniforms[] = {
 			{ "NONE", "Remove Uniform", 0, { "", "", -1 } },
-			{ "U_C_NikosAgedBody", "", 1500, { "", "", -1 } }
+			{ "U_NikosAgedBody", "", 1500, { "", "", -1 } }
 		};
 
 		headgear[] = {
