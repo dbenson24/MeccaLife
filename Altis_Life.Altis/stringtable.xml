@@ -109,6 +109,9 @@
 		<Key ID="STR_Shops_Vigilante">
 			<Original>Vigilante Shop</Original>
 		</Key>
+		<Key ID="STR_Shops_News">
+			<Original>News Shop</Original>
+		</Key>
 	</Package>
 	<Package name="Global">
 		<Key ID="STR_Global_Close">

@@ -41,6 +41,7 @@ switch (_mode) do
 			case "mair": {_var = "license_med_air"};
 			case "home": {_var = "license_civ_home"};
 			case "vigilante": {_var = "license_civ_vigilante"};
+			case "news": {_var = "license_civ_news"};
 			default {_var = ""};
 		};
 	};
@@ -74,6 +75,7 @@ switch (_mode) do
 			case "license_med_air": {_var = "mair"};
 			case "license_civ_home": {_var = "home"};
 			case "license_civ_vigilante": {_var = "vigilante"};
+			case "license_civ_news": {_var = "news"};
 			default {_var = ""};
 		};
 	};

@@ -319,4 +319,34 @@ class Clothing {
 			{ "NONE", "Remove Backpack", 0, { "", "", -1 } }
 		};
 	};
+	class news {
+		title = "STR_Shops_News";
+		license = "News";
+		side = "civ";
+
+		uniforms[] = {
+			{ "NONE", "Remove Uniform", 0, { "", "", -1 } },
+			{ "U_C_NikosAgedBody", "", 1500, { "", "", -1 } }
+		};
+
+		headgear[] = {
+			{ "NONE", "Remove Hat", 0, { "", "", -1 } },
+			{ "H_Cap_press", "", 1000, { "", "", -1 } }
+		};
+
+		goggles[] = {
+			{ "NONE", "Remove Glasses", 0, { "", "", -1 } }
+			
+		};
+
+		vests[] = {
+			{ "NONE", "Remove Vest", 0, { "", "", -1 } }'
+			{ "V_Press_F", "", 1000, { "", "", -1 } }
+		};
+
+		backpacks[] = {
+			{ "NONE", "Remove Backpack", 0, { "", "", -1 } },
+			{ "B_Kitbag_cbr", "", 3000, { "", "", -1 } }
+		};
+	};
 };
