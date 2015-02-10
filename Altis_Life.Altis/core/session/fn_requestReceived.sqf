@@ -86,7 +86,7 @@ if(count (SEL(_this,12)) > 0) then {
 };
 
 
-switch(__GETC__(life_donator)) do
+switch(FETCH_CONST(life_donator)) do
 {
 	case 1: {life_paycheck = life_paycheck + 800;};
 	case 2: {life_paycheck = life_paycheck + 1600;};
