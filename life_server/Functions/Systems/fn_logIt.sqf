@@ -4,7 +4,7 @@
 	File: fn_logIt.sqf
 	Description: Log handler
 */
-private["_mode","_message"];
+private["_mode","_message", "_name", "_uid"];
 _mode = [_this,0,"",[""]] call BIS_fnc_param;
 _message = [_this,1,[],[[]]] call BIS_fnc_param;
 //These are for Spyglass, they are optional
