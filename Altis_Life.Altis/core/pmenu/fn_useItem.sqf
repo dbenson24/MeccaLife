@@ -44,8 +44,12 @@ switch (true) do {
 	};
 	
 	case (_item in ["storagesmall","storagebig"]): {
-		[_item] call life_fnc_storageBox;
-	};
+		if(__GETC__(life_donator) > 0) then
+		{
+			[_item] call life_fnc_storageBox;
+		} else {
+			hint "You must be a donator to use storage crates.";
+		};
 	
 	case (EQUAL(_item,"spikeStrip")): {
 		if(!isNull life_spikestrip) exitWith {hint localize "STR_ISTR_SpikesDeployment"};
