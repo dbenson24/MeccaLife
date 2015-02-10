@@ -37,8 +37,8 @@ switch(_shop) do
 						["MineDetector","Mine Detector",10000 * life_donDis],
 						["Binocular","Binocular",1000 * life_donDis],
 						["NVGoggles_OPFOR","Police Night Vision Goggles",1000 * life_donDis],
-						["hgun_P07_F","P07 9mm",20000 * life_donDis],
-						["hgun_P07_snds_F","P07 9mm Silencer",25000 * life_donDis],
+						["hgun_P07_F","P07 9mm",2000 * life_donDis],
+						["hgun_P07_snds_F","P07 9mm Silencer",2500 * life_donDis],
 						["30Rnd_9x21_Mag","9mm 30Rnd Mag",500 * life_donDis],
 						["SmokeShell",nil,1000 * life_donDis]
 					]
@@ -55,8 +55,8 @@ switch(_shop) do
 						["ItemMap","Map",50 * life_donDis], 	
 						["ItemCompass","Compass",50 * life_donDis],						
 						["MineDetector","Mine Detector",1000 * life_donDis],
-						["Binocular","Binocular",1000 * life_donDis],
-						["NVGoggles_OPFOR","Police Night Vision Goggles",1000 * life_donDis],
+						["Binocular","Binocular",100 * life_donDis],
+						["NVGoggles_OPFOR","Police Night Vision Goggles",100 * life_donDis],
 						["hgun_P07_F","P07 9mm",2000 * life_donDis],
 						["hgun_P07_snds_F","P07 9mm Silencer",2500 * life_donDis],
 						["30Rnd_9x21_Mag","9mm 30Rnd Mag",500 * life_donDis],
