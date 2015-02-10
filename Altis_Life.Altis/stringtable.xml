@@ -4131,6 +4131,9 @@
 			<Italian>Metti nel Veicolo</Italian>
 			<Portuguese>Colocar no Veículo</Portuguese>
 		</Key>
+		<Key ID="STR_pInAct_SeizeWeapon">
+			<Original>Seize Weapons</Original>
+		</Key>
 		<Key ID="STR_pInAct_Unrestrain">
 			<Original>Un-Restrain</Original>
 			<German>Freilassen</German>

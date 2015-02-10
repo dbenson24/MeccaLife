@@ -279,6 +279,8 @@ class Life_Client_Core
 		class ticketPaid {};
 		class wantedGrab {};
 		class copOpener {};
+		class seizeAction {};
+		class seizePlayerWeaponAction {};
 		
 	};
 	
