@@ -21,19 +21,182 @@ if(_shop == "") exitWith {closeDialog 0}; //Bad shop type passed.
 switch(_shop) do {
 	case "cop_basic": {
 		switch(true) do {
-			case (playerSide != west): {"You are not a cop!"};
-			default {
-				["Altis Cop Shop",
+			case (playerSide != west): {"You not a cop!"};
+			case (FETCH_CONST(life_coplevel) == 1):
+			{
+				["Recruit Equipment Shop",
 					[
-						["hgun_Rook40_F",nil,6500],
-						["hgun_P07_snds_F","Stun Pistol",2000],
-						["hgun_P07_F",nil,7500],
-						["Binocular",nil,150],
-						["ItemGPS",nil,100],
-						["ToolKit",nil,250],
-						["FirstAidKit",nil,150],
-						["NVGoggles",nil,2000],
-						["16Rnd_9x21_Mag",nil,50]
+						["FirstAidKit","First Aid Kit",500 * life_donDis],
+						["ToolKit","Tool Kit",500 * life_donDis],
+						["ItemGPS","GPS",50 * life_donDis],
+						["ItemMap","Map",50 * life_donDis], 	
+						["ItemCompass","Compass",50 * life_donDis],						
+						["MineDetector","Mine Detector",10000 * life_donDis],
+						["Binocular","Binocular",1000 * life_donDis],
+						["NVGoggles_OPFOR","Police Night Vision Goggles",1000 * life_donDis],
+						["hgun_P07_F","P07 9mm",20000 * life_donDis],
+						["hgun_P07_snds_F","P07 9mm Silencer",25000 * life_donDis],
+						["30Rnd_9x21_Mag","9mm 30Rnd Mag",500 * life_donDis],
+						["SmokeShell",nil,1000 * life_donDis]
+					]
+				];
+			};
+
+			case (FETCH_CONST(life_coplevel) == 2):
+			{
+				["Patrol Officer Equipment Shop",
+					[
+						["FirstAidKit","First Aid Kit",500 * life_donDis],
+						["ToolKit","Tool Kit",500 * life_donDis],
+						["ItemGPS","GPS",50 * life_donDis],
+						["ItemMap","Map",50 * life_donDis], 	
+						["ItemCompass","Compass",50 * life_donDis],						
+						["MineDetector","Mine Detector",10000 * life_donDis],
+						["Binocular","Binocular",1000 * life_donDis],
+						["NVGoggles_OPFOR","Police Night Vision Goggles",1000 * life_donDis],
+						["hgun_P07_F","P07 9mm",20000 * life_donDis],
+						["hgun_P07_snds_F","P07 9mm Silencer",25000 * life_donDis],
+						["30Rnd_9x21_Mag","9mm 30Rnd Mag",500 * life_donDis],
+						["arifle_sdar_F","SDAR 5.56 mm",25000 * life_donDis],
+						["20Rnd_556x45_UW_mag","5.56mm 20Rnd Dual Purpose Mag",500 * life_donDis],
+						["arifle_MXC_Black_F","MXC 6.5mm",170000 * life_donDis],
+						["30Rnd_65x39_caseless_mag_Tracer","6.5mm 30Rnd Tracer Mag",500 * life_donDis],
+						["optic_Hamr","RCO Scope",40000 * life_donDis],
+						["optic_Arco","ARCO Scope",20000 * life_donDis],
+						["optic_MRCO","MRCO Scope",20000 * life_donDis],
+						["acc_flashlight","Flashlight",500 * life_donDis],
+						["acc_pointer_IR","IR Laser Pointer",500 * life_donDis],
+						["HandGrenade_Stone","Flashbang",1700 * life_donDis],
+						["SmokeShell",nil,1000 * life_donDis]
+					]
+				];
+			};
+
+			case (FETCH_CONST(life_coplevel) == 3):
+			{
+				["Sergeant Equipment Shop",
+					[
+						["FirstAidKit","First Aid Kit",500 * life_donDis],
+						["ToolKit","Tool Kit",500 * life_donDis],
+						["ItemGPS","GPS",50 * life_donDis],
+						["ItemMap","Map",50 * life_donDis], 	
+						["ItemCompass","Compass",50 * life_donDis],						
+						["MineDetector","Mine Detector",10000 * life_donDis],
+						["Binocular","Binocular",1000 * life_donDis],
+						["NVGoggles_OPFOR","Police Night Vision Goggles",1000 * life_donDis],
+						["hgun_P07_F","P07 9mm",20000 * life_donDis],
+						["hgun_P07_snds_F","P07 9mm Silencer",25000 * life_donDis],
+						["30Rnd_9x21_Mag","9mm 30Rnd Mag",500 * life_donDis],
+						["arifle_sdar_F","SDAR 5.56 mm",25000 * life_donDis],
+						["20Rnd_556x45_UW_mag","5.56mm 20Rnd Dual Purpose Mag",500 * life_donDis],
+						["arifle_MXC_Black_F","MXC 6.5mm",170000 * life_donDis],
+						["arifle_MX_Black_F","MX 6.5 mm",200000 * life_donDis],
+						["30Rnd_65x39_caseless_mag_Tracer","6.5mm 30Rnd Tracer Mag",500 * life_donDis],
+						["30Rnd_65x39_caseless_mag","6.5mm 30Rnd STANAG Mag",500 * life_donDis],
+						["optic_Hamr","RCO Scope",40000 * life_donDis],
+						["optic_Arco","ARCO Scope",20000 * life_donDis],
+						["optic_MRCO","MRCO Scope",20000 * life_donDis],
+						["acc_flashlight","Flashlight",500 * life_donDis],
+						["acc_pointer_IR","IR Laser Pointer",500 * life_donDis],
+						["HandGrenade_Stone","Flashbang",1700 * life_donDis],
+						["SmokeShell",nil,1000 * life_donDis]						
+					]
+				];
+			};
+			case (FETCH_CONST(life_coplevel) == 4):
+			{
+				["Lieutenant Equipment Shop",
+					[
+						["FirstAidKit","First Aid Kit",500 * life_donDis],
+						["ToolKit","Tool Kit",500 * life_donDis],
+						["ItemGPS","GPS",50 * life_donDis],
+						["ItemMap","Map",50 * life_donDis], 	
+						["ItemCompass","Compass",50 * life_donDis],						
+						["MineDetector","Mine Detector",10000 * life_donDis],
+						["Binocular","Binocular",1000 * life_donDis],
+						["NVGoggles_OPFOR","Police Night Vision Goggles",1000 * life_donDis],
+						["hgun_P07_F","P07 9mm",20000 * life_donDis],
+						["hgun_P07_snds_F","P07 9mm Silencer",25000 * life_donDis],
+						["30Rnd_9x21_Mag","9mm 30Rnd Mag",500 * life_donDis],
+						["arifle_sdar_F","SDAR 5.56 mm",25000 * life_donDis],
+						["20Rnd_556x45_UW_mag","5.56mm 20Rnd Dual Purpose Mag",500 * life_donDis],
+						["arifle_MXC_Black_F","MXC 6.5mm",170000 * life_donDis],
+						["arifle_MX_Black_F","MX 6.5 mm",200000 * life_donDis],
+						["arifle_MXM_Black_F","MXM 6.5mm",300000 * life_donDis],
+						["30Rnd_65x39_caseless_mag_Tracer","6.5mm 30Rnd Tracer Mag",500 * life_donDis],
+						["30Rnd_65x39_caseless_mag","6.5mm 30Rnd STANAG Mag",500 * life_donDis],	
+						["optic_Hamr","RCO Scope",40000 * life_donDis],
+						["optic_Arco","ARCO Scope",20000 * life_donDis],
+						["optic_MRCO","MRCO Scope",20000 * life_donDis],
+						["acc_flashlight","Flashlight",500 * life_donDis],
+						["acc_pointer_IR","IR Laser Pointer",500 * life_donDis],
+						["HandGrenade_Stone","Flashbang",1700 * life_donDis],
+						["SmokeShell",nil,1000 * life_donDis]
+					]
+				];
+			};
+			case (FETCH_CONST(life_coplevel) == 5):
+			{
+				["Captain Equipment Shop",
+					[
+						["FirstAidKit","First Aid Kit",500 * life_donDis],
+						["ToolKit","Tool Kit",500 * life_donDis],
+						["ItemGPS","GPS",50 * life_donDis],
+						["ItemMap","Map",50 * life_donDis], 	
+						["ItemCompass","Compass",50 * life_donDis],						
+						["MineDetector","Mine Detector",10000 * life_donDis],
+						["Binocular","Binocular",1000 * life_donDis],
+						["NVGoggles_OPFOR","Police Night Vision Goggles",1000 * life_donDis],
+						["hgun_P07_F","P07 9mm",20000 * life_donDis],
+						["hgun_P07_snds_F","P07 9mm Silencer",25000 * life_donDis],
+						["30Rnd_9x21_Mag","9mm 30Rnd Mag",500 * life_donDis],
+						["arifle_sdar_F","SDAR 5.56 mm",25000 * life_donDis],
+						["20Rnd_556x45_UW_mag","5.56mm 20Rnd Dual Purpose Mag",500 * life_donDis],
+						["arifle_MXC_Black_F","MXC 6.5mm",170000 * life_donDis],
+						["arifle_MX_Black_F","MX 6.5 mm",200000 * life_donDis],
+						["arifle_MXM_Black_F","MXM 6.5mm",300000 * life_donDis],
+						["30Rnd_65x39_caseless_mag_Tracer","6.5mm 30Rnd Tracer Mag",500 * life_donDis],
+						["30Rnd_65x39_caseless_mag","6.5mm 30Rnd STANAG Mag",500 * life_donDis],	
+						["optic_Hamr","RCO Scope",40000 * life_donDis],
+						["optic_Arco","ARCO Scope",20000 * life_donDis],
+						["optic_MRCO","MRCO Scope",20000 * life_donDis],
+						["acc_flashlight","Flashlight",500 * life_donDis],
+						["acc_pointer_IR","IR Laser Pointer",500 * life_donDis],						
+						["HandGrenade_Stone","Flashbang",1700 * life_donDis],
+						["SmokeShell",nil,1000 * life_donDis]
+					]
+				];
+			};
+			case (FETCH_CONST(life_coplevel) == 6):
+			{
+				["Swat Equipment Shop",
+					[
+						["FirstAidKit","First Aid Kit",500 * life_donDis],
+						["ToolKit","Tool Kit",500 * life_donDis],
+						["ItemGPS","GPS",50 * life_donDis],
+						["ItemMap","Map",50 * life_donDis], 	
+						["ItemCompass","Compass",50 * life_donDis],						
+						["MineDetector","Mine Detector",10000 * life_donDis],
+						["Binocular","Binocular",1000 * life_donDis],
+						["NVGoggles_OPFOR","Police Night Vision Goggles",1000 * life_donDis],
+						["hgun_P07_F","P07 9mm",20000 * life_donDis],
+						["hgun_P07_snds_F","P07 9mm Silencer",25000 * life_donDis],
+						["30Rnd_9x21_Mag","9mm 30Rnd Mag",500 * life_donDis],
+						["arifle_sdar_F","SDAR 5.56 mm",25000 * life_donDis],
+						["20Rnd_556x45_UW_mag","5.56mm 20Rnd Dual Purpose Mag",500 * life_donDis],
+						["arifle_MXC_Black_F","MXC 6.5mm",170000 * life_donDis],
+						["arifle_MX_Black_F","MX 6.5 mm",200000 * life_donDis],
+						["arifle_MXM_Black_F","MXM 6.5mm",300000 * life_donDis],
+						["30Rnd_65x39_caseless_mag_Tracer","6.5mm 30Rnd Tracer Mag",500 * life_donDis],
+						["30Rnd_65x39_caseless_mag","6.5mm 30Rnd STANAG Mag",500 * life_donDis],	
+						["optic_Hamr","RCO Scope",40000 * life_donDis],
+						["optic_Arco","ARCO Scope",20000 * life_donDis],
+						["optic_MRCO","MRCO Scope",20000 * life_donDis],	
+						["acc_flashlight","Flashlight",500 * life_donDis],
+						["acc_pointer_IR","IR Laser Pointer",500 * life_donDis],	
+						["muzzle_snds_H","6.5mm Suppressor",40000 * life_donDis],
+						["HandGrenade_Stone","Flashbang",1700 * life_donDis],
+						["SmokeShell",nil,1000 * life_donDis]						
 					]
 				];
 			};
