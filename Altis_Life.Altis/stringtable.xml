@@ -3561,6 +3561,9 @@
 		<Key ID="STR_License_Vigilante">
 			<Original>Vigilante License</Original>
 		</Key>
+		<Key ID="STR_License_News">
+			<Original>News License</Original>
+		</Key>
 	</Package>
 	<Package name="More_Item_Strings">
 		<Key ID="STR_ISTR_Blast_VaultOnly">
