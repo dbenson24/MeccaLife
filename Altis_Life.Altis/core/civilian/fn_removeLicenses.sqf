@@ -39,10 +39,12 @@ switch (_state) do {
 	};
 	
 	//Killing someone while owning a gun license
+	/*
 	case 3: {
 		if(GVAR_MNS LICENSE_VARNAME("gun","civ")) then {
 			SVAR_MNS [LICENSE_VARNAME("gun","civ"),false];
 			hint localize "STR_Civ_LicenseRemove_2";
 		};
 	};
+	*/
 };
