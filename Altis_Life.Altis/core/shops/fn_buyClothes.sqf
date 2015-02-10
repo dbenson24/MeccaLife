@@ -12,12 +12,12 @@ if(EQUAL((lbCurSel 3101),-1)) exitWith {titleText[localize "STR_Shop_NoClothes",
 _price = 0;
 {
 	if(!(EQUAL(_x,-1))) then {
-		_price = _price + _x;
+		(_price * life_donDis) = (_price * life_donDis) + _x;
 	};
 } foreach life_clothing_purchase;
 
-if(_price > CASH) exitWith {titleText[localize "STR_Shop_NotEnoughClothes","PLAIN"];};
-CASH = CASH - _price;
+if((_price * life_donDis) > CASH exitWith {titleText[localize "STR_Shop_NotEnoughClothes","PLAIN"];};
+CASH = CASH - (_price * life_donDis));
 
 life_clothesPurchased = true;
 closeDialog 0;
