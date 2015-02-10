@@ -139,7 +139,7 @@ switch(_shop) do
 						["5Rnd_127x108_Mag","12.7mm",500 * life_donDis],
 						
 						["srifle_LRR_LRPS_F","M320",35000 * life_donDis],
-						["7Rnd_408_Mag",408 rounds",500 * life_donDis],
+						["7Rnd_408_Mag","408 rounds",500 * life_donDis],
 						
 						["HandGrenade_Stone","Flashbang",1700 * life_donDis],
 						["SmokeShell",nil,1000 * life_donDis]
@@ -178,7 +178,7 @@ switch(_shop) do
 						["5Rnd_127x108_Mag","12.7mm",500 * life_donDis],
 						
 						["srifle_LRR_LRPS_F","M320",35000 * life_donDis],
-						["7Rnd_408_Mag",408 rounds",500 * life_donDis],	
+						["7Rnd_408_Mag","408 rounds",500 * life_donDis],	
 						
 						["HandGrenade_Stone","Flashbang",1700 * life_donDis],
 						["SmokeShell",nil,1000 * life_donDis]
@@ -298,7 +298,7 @@ switch(_shop) do
 						["5Rnd_127x108_Mag","12.7mm",250000 * life_donDis],
 						
 						["srifle_LRR_LRPS_F","M320",920000 * life_donDis],
-						["7Rnd_408_Mag",408 rounds",250000 * life_donDis],
+						["7Rnd_408_Mag","408 rounds",250000 * life_donDis],
 						
 	
 						["acc_flashlight","Flashlight",500 * life_donDis],						
