@@ -100,6 +100,7 @@ class Life_Client_Core
 		class captureHideout {};
 		class gather {};
 		class gutAnimal {};
+		class copPullOutAction {};
 	};
 	
 	class Housing

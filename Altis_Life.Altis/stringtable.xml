@@ -4353,6 +4353,9 @@
 			<Italian>Sequestra Veicolo</Italian>
 			<Portuguese>Apreender Veículo</Portuguese>
 		</Key>
+		<Key ID="STR_vInAct_Seize">
+			<Original>Seize Vehicle</Original>
+		</Key>
 		<Key ID="STR_vInAct_DeviceMine">
 			<Original>Mine from device</Original>
 			<German>Vom Gerät abbauen</German>
