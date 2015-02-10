@@ -44,7 +44,7 @@ switch (true) do {
 	};
 	
 	case (_item in ["storagesmall","storagebig"]): {
-		if(__GETC__(life_donator) > 0) then
+		if(FETCH_CONST(life_donator) > 0) then
 		{
 			[_item] call life_fnc_storageBox;
 		} else {
