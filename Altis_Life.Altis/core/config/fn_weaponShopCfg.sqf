@@ -92,7 +92,7 @@ switch(_shop) do {
 						["30Rnd_65x39_caseless_mag_Tracer","6.5mm 30Rnd Tracer Mag",500 * life_donDis],
 						["30Rnd_65x39_caseless_mag","6.5mm 30Rnd STANAG Mag",500 * life_donDis],
 						["arifle_MX_SW_F","Heavy Suppression",200000 * life_donDis],
-						["100Rnd_65x39_caseless_mag_Tracer",200 * life_donDis],
+						["100Rnd_65x39_caseless_mag_Tracer",nil,200 * life_donDis],
 						["optic_Hamr","RCO Scope",40000 * life_donDis],
 						["optic_Arco","ARCO Scope",20000 * life_donDis],
 						["optic_MRCO","MRCO Scope",20000 * life_donDis],
@@ -122,9 +122,6 @@ switch(_shop) do {
 						["20Rnd_556x45_UW_mag","5.56mm 20Rnd Dual Purpose Mag",500 * life_donDis],
 						["arifle_MXC_Black_F","MXC 6.5mm",170000 * life_donDis],
 						["arifle_MX_Black_F","MX 6.5 mm",200000 * life_donDis],
-						["arifle_MX_SW_F","100Rnd_65x39_caseless_mag_Tracer",200000 * life_donDis],
-						["100Rnd_65x39_caseless_mag_Tracer",200 * life_donDis],
-						["100Rnd_65x39_caseless_mag",2000 * life_donDis],
 						["arifle_MXM_Black_F","MXM 6.5mm",300000 * life_donDis],
 						["30Rnd_65x39_caseless_mag_Tracer","6.5mm 30Rnd Tracer Mag",500 * life_donDis],
 						["30Rnd_65x39_caseless_mag","6.5mm 30Rnd STANAG Mag",500 * life_donDis],	
@@ -203,8 +200,6 @@ switch(_shop) do {
 						["optic_MRCO","MRCO Scope",20000 * life_donDis],	
 						["acc_flashlight","Flashlight",500 * life_donDis],
 						["acc_pointer_IR","IR Laser Pointer",500 * life_donDis],
-						["SMG_01_Holo_pointer_snds_F","Equalizer",50000 * life_donDis],
-						["30Rnd_45ACP_Mag_SMG_01_tracer_green","Fire Darts * life_donDis],
 						["HandGrenade_Stone","Flashbang",1700 * life_donDis],
 						["SmokeShell",nil,1000 * life_donDis]						
 					]
