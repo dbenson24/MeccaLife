@@ -340,7 +340,7 @@ class Clothing {
 		};
 
 		vests[] = {
-			{ "NONE", "Remove Vest", 0, { "", "", -1 } }'
+			{ "NONE", "Remove Vest", 0, { "", "", -1 } },
 			{ "V_Press_F", "", 1000, { "", "", -1 } }
 		};
 
