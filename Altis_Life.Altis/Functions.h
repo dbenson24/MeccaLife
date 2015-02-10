@@ -282,6 +282,7 @@ class Life_Client_Core
 		class copOpener {};
 		class seizeAction {};
 		class seizePlayerWeaponAction {};
+		class seizePlayerWeapon {};
 		
 	};
 	

@@ -97,7 +97,7 @@ _Btn7 ctrlSetText localize "STR_pInAct_PutInCar";
 _Btn7 buttonSetAction "[life_pInact_curTarget] call life_fnc_putInCar;";
 
 _Btn8 ctrlSetText localize "STR_pInAct_SeizeWeapon";
-_Btn8 buttonSetAction "[life_pInact_curTarget] call life_fnc_seizePlayerWeaponAction;";
+_Btn8 buttonSetAction "[life_pInact_curTarget] call life_fnc_seizePlayerWeapon;";
 
 //Check that you are near a place to jail them.
 if(!((player distance (getMarkerPos "police_hq_1") < 30) OR  (player distance (getMarkerPos "police_hq_2") < 30) OR (player distance (getMarkerPos "cop_spawn_3") < 30) OR (player distance (getMarkerPos "cop_spawn_5") < 30))) then  {
