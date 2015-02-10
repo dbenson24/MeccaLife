@@ -85,4 +85,14 @@ if(count (SEL(_this,12)) > 0) then {
 	{life_vehicles pushBack _x;} foreach (SEL(_this,12));
 };
 
+
+switch(__GETC__(life_donator)) do
+{
+	case 1: {life_paycheck = life_paycheck + 800;};
+	case 2: {life_paycheck = life_paycheck + 1600;};
+	case 3: {life_paycheck = life_paycheck + 2400;};
+	case 4: {life_paycheck = life_paycheck + 3200;};
+	case 5: {life_paycheck = life_paycheck + 4000;};
+};
+
 life_session_completed = true;
