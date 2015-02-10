@@ -204,7 +204,7 @@ switch(_shop) do {
 						["acc_flashlight","Flashlight",500 * life_donDis],
 						["acc_pointer_IR","IR Laser Pointer",500 * life_donDis],
 						["SMG_01_Holo_pointer_snds_F","Equalizer",50000 * life_donDis],
-						["30Rnd_45ACP_Mag_SMG_01_tracer_green","Fire Darts * life_donDis],
+						["30Rnd_45ACP_Mag_SMG_01_tracer_green","Fire Darts",500 * life_donDis],
 						["HandGrenade_Stone","Flashbang",1700 * life_donDis],
 						["SmokeShell",nil,1000 * life_donDis]						
 					]
