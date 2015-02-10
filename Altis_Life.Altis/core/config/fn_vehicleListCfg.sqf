@@ -112,7 +112,7 @@ switch (_shop) do
 	{
 		_return pushBack
 		["B_Heli_Light_01_F",75000];
-		if(__GETC__(life_coplevel) > 2) then
+		if(FETCH_CONST(life_coplevel) > 2) then
 		{
 			_return pushBack
 			["B_Heli_Transport_01_F",200000];
@@ -123,7 +123,7 @@ switch (_shop) do
 	{
 		_return pushBack
 		["B_Heli_Light_01_F",75000];
-		if(__GETC__(life_coplevel) > 2) then
+		if(FETCH_CONST(life_coplevel) > 2) then
 		{
 			_return pushBack
 			["B_Heli_Transport_01_F",200000];
