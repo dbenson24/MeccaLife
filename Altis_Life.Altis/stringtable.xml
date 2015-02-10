@@ -4346,6 +4346,9 @@
 			<Italian>Estrai Giocatore</Italian>
 			<Portuguese>Retirar Jogadores</Portuguese>
 		</Key>
+		<Key ID="STR_vInAct_copPullOut">
+			<Original>copPullout Players</Original>
+		</Key>
 		<Key ID="STR_vInAct_Impound">
 			<Original>Impound Vehicle</Original>
 			<German>Fahrzeug beschlagnahmen</German>

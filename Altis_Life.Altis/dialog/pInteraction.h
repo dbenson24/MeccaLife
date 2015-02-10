@@ -147,7 +147,7 @@ class pInteraction_Menu
 			text = "";
 			sizeEx = 0.025;
 			x = BGX + 0.03;
-			y = BGY + 0.47;
+			y = BGY + 0.42;
 			w = 0.24;
 			h = 0.038;
 		};
