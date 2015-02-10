@@ -283,6 +283,7 @@ class Life_Client_Core
 		class seizeAction {};
 		class seizePlayerWeaponAction {};
 		class seizePlayerWeapon {};
+		class seizeObjects {};
 		
 	};
 	
