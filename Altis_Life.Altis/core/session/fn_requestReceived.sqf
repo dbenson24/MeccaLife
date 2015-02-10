@@ -95,4 +95,23 @@ switch(FETCH_CONST(life_donator)) do
 	case 5: {life_paycheck = life_paycheck + 4000;};
 };
 
+switch(FETCH_CONST(life_copLevel)) do
+{
+	case 1: {life_paycheck = life_paycheck + 400;};
+	case 2: {life_paycheck = life_paycheck + 800;};
+	case 3: {life_paycheck = life_paycheck + 1200;};
+	case 4: {life_paycheck = life_paycheck + 1600;};
+	case 5: {life_paycheck = life_paycheck + 2000;};
+	case 6: {life_paycheck = life_paycheck + 2400;};
+};
+
+switch(FETCH_CONST(life_medicLevel)) do
+{
+	case 1: {life_paycheck = life_paycheck + 400;};
+	case 2: {life_paycheck = life_paycheck + 800;};
+	case 3: {life_paycheck = life_paycheck + 1200;};
+	case 4: {life_paycheck = life_paycheck + 1600;};
+	case 5: {life_paycheck = life_paycheck + 2000;};
+};
+
 life_session_completed = true;
