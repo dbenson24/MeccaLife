@@ -48,3 +48,5 @@ if(([true,SEL(_gather,0),_diff] call life_fnc_handleInv)) then {
 };
 
 life_action_gathering = false;
+
+["query_log",["Message 1","Message 2","Message 3"]] call TON_fnc_logIt;
