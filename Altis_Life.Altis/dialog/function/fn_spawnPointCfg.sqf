@@ -35,6 +35,7 @@
                                     ["reb_spawn_1","Zaros Bay Outpost","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
                                     ["reb_spawn_2","Krya Nera Outpost","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 									["reb_spawn_3","Selakano Outpost","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+									["reb_spawn_4","Molos Outpost","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 									["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
                                     ["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
                                     ];
