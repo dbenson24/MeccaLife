@@ -28,7 +28,6 @@ class Clothing {
 			{ "U_IG_Guerilla2_3", "The Outback Rangler", 700, { "", "", -1 } },
 			{ "U_C_HunterBody_grn", "The Hunters Look", 700, { "", "", -1 } },
 			{ "U_OrestesBody", "Surfing On Land", 1100, { "", "", -1 } },
-			{ "U_NikosAgedBody", "Casual Wears", 5000, { "", "", -1 } }
 		};
 
 		headgear[] = {
@@ -100,7 +99,7 @@ class Clothing {
 			{ "NONE", "Remove Uniform", 0, { "", "", -1 } },
 			{ "U_Competitor", "Recruit", 25, { "", "", -1 } },
 			{ "U_Rangemaster", "Cadet", 25, { "", "", -1 } },
-			{ "C_Marshal_F", "Patrol Officer", 350, { "life_coplevel", "SCALAR", 2 } },
+			{ "U_Marshal", "Patrol Officer", 350, { "life_coplevel", "SCALAR", 2 } },
 			{ "U_B_survival_uniform", "", 1250, { "life_coplevel", "SCALAR", 3 } },
 			{ "U_B_CombatUniform_mcam_worn", "", 550, { "life_coplevel", "SCALAR", 3 } }
 		};
@@ -109,7 +108,8 @@ class Clothing {
 			{ "NONE", "Remove Hat", 0, { "", "", -1 } },
 			{ "H_HelmetB_plain_mcamo", "", 75, { "life_coplevel", "SCALAR", 1 } },
 			{ "H_Booniehat_mcamo", "", 120, { "life_coplevel", "SCALAR", 1 } },
-			{ "H_MilCap_mcamo", "", 100, { "life_coplevel", "SCALAR", 2 } }
+			{ "H_MilCap_mcamo", "", 100, { "life_coplevel", "SCALAR", 2 } },
+			{ "Headgear_H_Beret_blk_POLICE", "Officers Only Beret", 100, { "life_coplevel", "SCALAR", 3 } }
 		};
 
 		goggles[] = {
@@ -201,10 +201,10 @@ class Clothing {
 			{ "H_ShemagOpen_tan", "", 850, { "", "", -1 } },
 			{ "H_Shemag_olive", "", 850, { "", "", -1 } },
 			{ "H_ShemagOpen_khk", "", 800, { "", "", -1 } },
-			{ "H_HelmetO_ocamo", "", 2500, { "", "", -1 } },
+			{ "H_HelmetO_ocamo", "", 15000, { "", "", -1 } },
 			{ "H_MilCap_oucamo", "", 1200, { "", "", -1 } },
 			{ "H_Bandanna_camo", "", 650, { "", "", -1 } },
-			{ "H_HelmetB_plain_mcamo", "", 75, { "", "", -1 } },
+			{ "H_HelmetB_plain_mcamo", "", 17000, { "", "", -1 } },
 			{ "H_Booniehat_mcamo", "", 120, { "", "", -1 } },
 			{ "H_MilCap_mcamo", "", 100, { "", "", -1 } },
 			{ "H_Bandanna_camo", "Camo Bandanna", 120, { "", "", -1 } },
@@ -228,7 +228,7 @@ class Clothing {
 			{ "H_Cap_oli", "", 150, { "", "", -1 } },
 			{ "H_Cap_red", "", 150, { "", "", -1 } },
 			{ "H_Cap_tan", "", 150, { "", "", -1 } },
-			{ "H_HelmetCrew_B", "", 150, { "", "", -1 } },
+			{ "H_HelmetCrew_B", "", 25000, { "", "", -1 } },
 		};
 
 		goggles[] = {
