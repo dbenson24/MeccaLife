@@ -10,11 +10,9 @@ _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
 player addUniform "U_Rangemaster";
-player addBackpack "B_Carryall_cbr"
-player addItem "Medikit";
+player addBackpack "B_FieldPack_oucamo";
 player addItem "FirstAidKit";
 player addItem "FirstAidKit";
-player addItem "ToolKit";
 player addItem "ItemMap";
 player assignItem "ItemMap";
 player addItem "ItemCompass";

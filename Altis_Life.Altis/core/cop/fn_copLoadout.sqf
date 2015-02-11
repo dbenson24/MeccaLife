@@ -31,10 +31,10 @@ player addItem "ItemWatch";
 player assignItem "ItemWatch";
 player addItem "ItemGPS";
 player assignItem "ItemGPS";
-player assignItem "FirstAidKit";
-player assignItem "FirstAidKit";
-player assignItem "FirstAidKit";
-player assignItem "ToolKit";
+player addItem "FirstAidKit";
+player addItem "FirstAidKit";
+player addItem "FirstAidKit";
+player addItem "ToolKit";
 
 
 [] call life_fnc_saveGear;
