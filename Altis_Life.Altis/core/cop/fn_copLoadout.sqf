@@ -14,7 +14,7 @@ waitUntil {scriptDone _handle};
 player addUniform "U_Rangemaster";
 player addVest "V_TacVest_blk_POLICE";
 player addBackpack "B_FieldPack_oucamo";
-player addWeapon "hgun_P07_snds_F";
+player addWeapon "hgun_P07_F";
 player addMagazine "16Rnd_9x21_Mag";
 player addMagazine "16Rnd_9x21_Mag";
 player addMagazine "16Rnd_9x21_Mag";

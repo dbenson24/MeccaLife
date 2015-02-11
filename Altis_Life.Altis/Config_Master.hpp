@@ -31,13 +31,13 @@ class Life_Settings {
 
 	/* Revive system settings */
 	revive_cops = false; //true to enable cops the ability to revive everyone or false for only medics/ems.
-	revive_fee = 2500; //Revive fee that players have to pay and medics / EMS are rewarded
+	revive_fee = 25000; //Revive fee that players have to pay and medics / EMS are rewarded
 	
 	/* House related settings */
 	house_limit = 5; //Maximum amount of houses a player can own.
 
 	/* Gang related settings */
-	gang_price = 75000; //Price for creating a gang, remember they are persistent so keep it reasonable to avoid millions of gangs.
+	gang_price = 1; //Price for creating a gang, remember they are persistent so keep it reasonable to avoid millions of gangs.
 	gang_upgradeBase = 10000; //The base cost for upgrading slots in a gang
 	gang_upgradeMultiplier = 2; //Not sure if in use?
 
@@ -83,45 +83,6 @@ class Life_Settings {
 		
 	sellArray[] = {
 		{"arifle_sdar_F", 750},
-		{"hgun_P07_snds_F", 60},
-		{"hgun_P07_F", 100},
-		{"ItemGPS", 45},
-		{"ToolKit", 75},
-		{"FirstAidKit", 65},
-		{"Medikit", 40},
-		{"NVGoggles", 90},
-		{"16Rnd_9x21_Mag", 15},
-		{"20Rnd_556x45_UW_mag", 35},
-		{"ItemMap", 35},
-		{"ItemCompass", 25},
-		{"Chemlight_blue", 50},
-		{"Chemlight_yellow", 50},
-		{"Chemlight_green", 50},
-		{"Chemlight_red", 50},
-		{"hgun_Rook40_F", 500},
-		{"arifle_Katiba_F", 50},
-		{"30Rnd_556x45_Stanag", 65},
-		{"20Rnd_762x51_Mag", 85},
-		{"30Rnd_65x39_caseless_green", 50},
-		{"DemoCharge_Remote_Mag", 750},
-		{"SLAMDirectionalMine_Wire_Mag", 255},
-		{"optic_ACO_grn", 25},
-		{"acc_flashlight", 10},
-		{"srifle_EBR_F", 100},
-		{"arifle_TRG21_F", 350},
-		{"optic_MRCO", 500},
-		{"optic_Aco", 850},
-		{"arifle_MX_F", 700},
-		{"arifle_MXC_F", 500},
-		{"arifle_MXM_F", 850},
-		{"MineDetector", 50},
-		{"optic_Holosight", 275},
-		{"acc_pointer_IR", 175},
-		{"arifle_TRG20_F", 500},
-		{"SMG_01_F", 500},
-		{"arifle_Mk20C_F", 500},
-		{"30Rnd_45ACP_Mag_SMG_01", 60},
-		{"30Rnd_9x21_Mag", 30},
 		
 		
 		
@@ -163,14 +124,14 @@ class VirtualItems {
 	VITEMMACRO(cement, "STR_Item_CementBag", "cement", 5, -1, 1950, false, -1, "")
 
 	//Drugs
-	VITEMMACRO(heroin_unprocessed, "STR_Item_HeroinU", "heroinUnprocessed", 2, -1, -1, true, -1, "")
+	VITEMMACRO(heroin_unprocessed, "STR_Item_HeroinU", "heroinUnprocessed", 2, -1, 3000, true, -1, "")
 	VITEMMACRO(heroin_processed, "STR_Item_HeroinP", "heroinProcessed", 1, -1, 4000, true, -1, "")
-	VITEMMACRO(cannabis, "STR_Item_Cannabis", "cannabis", 2, -1, -1, true, -1, "")
+	VITEMMACRO(cannabis, "STR_Item_Cannabis", "cannabis", 2, -1, 1000, true, -1, "")
 	VITEMMACRO(marijuana, "STR_Item_Marijuana", "marijuana", 1, 2500, 2350, true, -1, "icons\ico_marijuana.paa")
 	VITEMMACRO(cocaine_unprocessed, "STR_Item_CocaineU", "cocaineUnprocessed", 3, -1, 1000, true, -1, "")
 	VITEMMACRO(cocaine_processed, "STR_Item_CocaineP", "cocaineProcessed", 2, -1, 5000, true, -1, "")
 
-	//Drink
+	//DrinkC
 	VITEMMACRO(redgull, "STR_Item_RedGull", "redgull", 1, 1500, 200, false, 100, "icons\ico_redgull.paa")
 	VITEMMACRO(coffee, "STR_Item_Coffee", "coffee", 1, 10, 5, false, 100, "")
 	VITEMMACRO(waterBottle, "STR_Item_WaterBottle", "waterBottle", 1, 10, 5, false, 100, "icons\ico_waterBottle.paa")
@@ -206,7 +167,7 @@ class VirtualItems {
 	VITEMMACRO(goat_grilled, "STR_Item_GoatGrilled", "goatGrilled", 2, 175, 135, false, 100, "icons\ico_cookedMeat.paa")
 
 	//Vigilante
-	VITEMMACRO(ziptie, "STR_Item_Ziptie", "ziptie", 1, 500, 250, false, -1, "")
+	VITEMMACRO(ziptie, "STR_Item_Ziptie", "ziptie", 1, 500, 250, true, -1, "")
 	
 };
 

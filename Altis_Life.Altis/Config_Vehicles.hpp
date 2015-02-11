@@ -30,9 +30,9 @@ class CarShops {
 		side = "med";
 		vehicles[] = {
 			{ "C_Offroad_01_F", 10000, "" },
-			{ "I_Truck_02_medical_F", 25000, "" },
-			{ "O_Truck_03_medical_F", 45000, "" },
-			{ "B_Truck_01_medical_F", 60000, "" }
+			{ "C_Offroad_01_repair_F", 10000, "" },
+			{ "I_Truck_02_medical_F", 75000, "" }
+			
 		};
 	};
 
