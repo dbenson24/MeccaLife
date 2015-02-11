@@ -167,7 +167,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_1";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="Public Slot - Cop 1";
+					description="WhiteListed - Cop 1";
 				};
 				class Item1
 				{
@@ -180,7 +180,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_2";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="Public Slot - Cop 2";
+					description="WhiteListed - Cop 2";
 				};
 				class Item2
 				{
@@ -193,7 +193,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_3";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="Public Slot - Cop 3";
+					description="WhiteListed - Cop 3";
 				};
 				class Item3
 				{
@@ -206,7 +206,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_4";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="Public Slot - Cop 4";
+					description="WhiteListed - Cop 4";
 				};
 				class Item4
 				{
