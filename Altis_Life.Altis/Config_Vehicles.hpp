@@ -47,7 +47,7 @@ class CarShops {
 	class civ_truck {
 		side = "civ";
 		vehicles[] = {
-			{ "C_Van_01_box_F", 60000, "trucking" },
+			{ "C_Van_01_box_F", 200000, "trucking" },
 			{ "I_Truck_02_transport_F", 75000, "trucking" },
 			{ "I_Truck_02_covered_F", 200000, "trucking" },
 			{ "B_Truck_01_transport_F", 275000, "trucking" },
