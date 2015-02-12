@@ -168,12 +168,7 @@ class CfgFunctions
 			file = "\life_server\Functions\Smartphone";
 			class handleMessages {};
 			class msgRequest {};
-		};  
-		class Custom
-		{
-			file = "\life_server\Functions\Custom";
-			class spawnIllegalArea {};
-		};
+		};    
 	};
 };
 
