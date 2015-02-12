@@ -10631,7 +10631,7 @@ class Mission
 		class Item287
 		{
 			position[]={4738.6143,278.04749,21396.721};
-			name="mrkcocainered";
+			name="mrkcocaineRed";
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorRed";
@@ -10642,7 +10642,7 @@ class Mission
 		class Item288
 		{
 			position[]={10070.722,215.0587,19333.66};
-			name="mrkcocainered_1";
+			name="mrkcocaineRed_1";
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorRed";
@@ -10653,7 +10653,7 @@ class Mission
 		class Item289
 		{
 			position[]={8752.2822,163.19885,18528.736};
-			name="mrkcocainered_2";
+			name="mrkcocaineRed_2";
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorRed";
@@ -10664,7 +10664,7 @@ class Mission
 		class Item290
 		{
 			position[]={5410.916,119.40857,18244.852};
-			name="mrkcocainered_3";
+			name="mrkcocaineRed_3";
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorRed";
@@ -10675,7 +10675,7 @@ class Mission
 		class Item291
 		{
 			position[]={11121.868,58.713737,21895.523};
-			name="mrkcocainered_4";
+			name="mrkcocaineRed_4";
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorRed";
@@ -10697,14 +10697,14 @@ class Mission
 		};
 		class Item293
 		{
-			position[]={23735.322,3.1900001,18116.021};
+			position[]={23807.201,3.1900001,18646.119};
 			name="mrkheroinRed";
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorRed";
 			fillName="DiagGrid";
-			a=1200;
-			b=1500;
+			a=1300;
+			b=1600;
 			angle=45;
 		};
 		class Item294
