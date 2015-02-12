@@ -574,7 +574,7 @@ class CfgVehicles {
     };
 
 	class C_Van_01_box_F {
-        vItemSpace = 450;
+        vItemSpace = 250;
         storageFee[] = { 1000, 0, 0, 0 };
 		garageSell[] = { 35000, 0, 0, 0 };
         insurance = 2500;
