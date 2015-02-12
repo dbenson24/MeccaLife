@@ -84,6 +84,11 @@ class CfgFunctions
 	class Life_System
 	{
 		tag = "life";
+		class Custom
+		{
+			file = "\life_server\Functions\Custom";
+			class spawnIllegalArea {};
+		}
 		class Wanted_Sys
 		{
 			file = "\life_server\Functions\WantedSystem";
