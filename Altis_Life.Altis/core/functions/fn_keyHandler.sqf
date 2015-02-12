@@ -125,7 +125,7 @@ switch (_code) do {
 	};
 	//T Key (Trunk)
 	case 20: {
-		if(!_alt && !_ctrlKey) then {
+		if(!_alt && !_ctrlKey && !life_is_processing) then {
 			if(vehicle player != player && alive vehicle player) then {
 				if((vehicle player) in life_vehicles) then {
 					[vehicle player] call life_fnc_openInventory;
@@ -134,7 +134,7 @@ switch (_code) do {
 				private "_list";
 				_list = ["landVehicle","Air","Ship","House_F"];
 				if(KINDOF_ARRAY(cursorTarget,_list) && {player distance cursorTarget < 7} && {vehicle player == player} && {alive cursorTarget}) then {
-					if(cursorTarget in life_vehicles OR {!(cursorTarget GVAR ["locked",true])}) then {
+					if(cursorTarget in life_vehicles OR {!(cursorTarget GVAR ["locked",true])} && !life_is_processing) then {
 						[cursorTarget] call life_fnc_openInventory;
 					};
 				};
@@ -162,7 +162,7 @@ switch (_code) do {
 	
 	//Y Player Menu
 	case 21: {
-		if(!_alt && !_ctrlKey && !dialog) then {
+		if(!_alt && !_ctrlKey && !dialog && !life_is_processing) then {
 			[] call life_fnc_p_openMenu;
 		};
 	};
