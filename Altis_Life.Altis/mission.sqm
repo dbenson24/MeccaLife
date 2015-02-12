@@ -10624,9 +10624,10 @@ class Mission
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorGreen";
-			fillName="DiagGrid";
+			fillName="Border";
 			a=4300;
 			b=2200;
+			drawBorder=1;
 		};
 		class Item287
 		{
@@ -10635,9 +10636,10 @@ class Mission
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorRed";
-			fillName="DiagGrid";
+			fillName="Border";
 			a=500;
 			b=500;
+			drawBorder=1;
 		};
 		class Item288
 		{
@@ -10646,9 +10648,10 @@ class Mission
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorRed";
-			fillName="DiagGrid";
+			fillName="Border";
 			a=500;
 			b=500;
+			drawBorder=1;
 		};
 		class Item289
 		{
@@ -10657,9 +10660,10 @@ class Mission
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorRed";
-			fillName="DiagGrid";
+			fillName="Border";
 			a=500;
 			b=500;
+			drawBorder=1;
 		};
 		class Item290
 		{
@@ -10668,9 +10672,10 @@ class Mission
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorRed";
-			fillName="DiagGrid";
+			fillName="Border";
 			a=500;
 			b=500;
+			drawBorder=1;
 		};
 		class Item291
 		{
@@ -10679,9 +10684,10 @@ class Mission
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorRed";
-			fillName="DiagGrid";
+			fillName="Border";
 			a=2500;
 			b=500;
+			drawBorder=1;
 		};
 		class Item292
 		{
@@ -10690,10 +10696,11 @@ class Mission
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorGreen";
-			fillName="DiagGrid";
+			fillName="Border";
 			a=4300;
 			b=2000;
 			angle=320;
+			drawBorder=1;
 		};
 		class Item293
 		{
@@ -10702,10 +10709,11 @@ class Mission
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorRed";
-			fillName="DiagGrid";
+			fillName="Border";
 			a=1300;
 			b=1600;
 			angle=45;
+			drawBorder=1;
 		};
 		class Item294
 		{
@@ -10714,10 +10722,11 @@ class Mission
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorRed";
-			fillName="DiagGrid";
+			fillName="Border";
 			a=650;
 			b=650;
 			angle=45;
+			drawBorder=1;
 		};
 		class Item295
 		{
@@ -10726,10 +10735,11 @@ class Mission
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorRed";
-			fillName="DiagGrid";
+			fillName="Border";
 			a=1200;
 			b=1500;
 			angle=45;
+			drawBorder=1;
 		};
 		class Item296
 		{
@@ -10750,10 +10760,11 @@ class Mission
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorRed";
-			fillName="DiagGrid";
+			fillName="Border";
 			a=1200;
 			b=400;
 			angle=320;
+			drawBorder=1;
 		};
 	};
 	class Sensors
