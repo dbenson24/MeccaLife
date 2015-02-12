@@ -4,7 +4,7 @@ spawnIllegalArea.sqf
  
 private["_heli"];
 
-/*
+
 //Create cocaine area
 _heli = "Land_ClutterCutter_small_F" createVehicle (["mrkcocaineGreen",0,["mrkcocaineRed","mrkcocaineRed_1","mrkcocaineRed_2","mrkcocaineRed_3","mrkcocaineRed_4"]] call SHK_pos);
 _heli setPosASLW [(position _heli) select 0, (position _heli) select 1, -5.5];
@@ -26,7 +26,7 @@ _Pos = position _heli;
 "heroin_1" setMarkerColor "ColorRed";
 "heroin_1" setMarkerText "Heroin Field";
 "heroin_1" setMarkerType "mil_dot";
- */
+
  
 //Create cannabis area
 _heli = "Land_ClutterCutter_small_F" createVehicle (["mrkweedGreen",0,["mrkweedRed","mrkweedRed_1","mrkweedRed_2","mrkweedRed_3","mrkweedRed_4"]] call SHK_pos);
