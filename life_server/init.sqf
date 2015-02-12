@@ -156,6 +156,8 @@ addMissionEventHandler ["HandleDisconnect",{_this call TON_fnc_clientDisconnect;
 life_wanted_list = [];
 [] execFSM "\life_server\FSM\cleanup.fsm";
 
+[] execVM "\life_server\Functions\Custom\fn_spawnIllegalArea.sqf"; //Revolving Drug Fields
+
 [] spawn
 {
 	private["_logic","_queue"];
