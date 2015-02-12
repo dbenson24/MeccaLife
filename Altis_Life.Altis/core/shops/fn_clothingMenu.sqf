@@ -7,7 +7,7 @@
 	Opens and initializes the clothing store menu.
 	Started clean, finished messy.
 */
-private["_list","_clothes","_pic","_filter","_pos","_oldPos","_oldDir","_flag","_shopTitle","_license","_shopSide","_exit"];
+private["_list","_clothes","_pic","_filter","_pos","_oldPos","_oldDir","_flag","_shopTitle","_license","_shopSide","_exit", "_light"];
 _exit = false;
 
 /* License check & config validation */
@@ -58,6 +58,10 @@ _ut5 attachTo [_testLogic,[0,0,0]];
 _ut5 setObjectTexture [0,"a3\map_data\gdt_concrete_co.paa"];
 detach _ut5;
 _ut5 setVectorDirAndUp [[0,0,-.33],[0,.33,0]];
+_light = "#lightpoint" createVehicleLocal [1000,1000,10000];   
+_light setLightBrightness 1;  
+_light setLightAmbient [1.0, 1.0, 1.0];
+_light lightAttachObject [_ut1, [0,0,10]];
 
 {if(_x != player) then {_x hideObject true;};} foreach playableUnits;
 
@@ -106,7 +110,7 @@ _filter lbAdd localize "STR_Shop_UI_Backpack";
 _filter lbSetCurSel 0;
 
 life_oldClothes = uniform player;
-life_olduniformItems = uniformItems player;
+life_oldUniformItems = uniformItems player;
 life_oldBackpack = backpack player;
 life_oldVest = vest player;
 life_oldVestItems = vestItems player;
@@ -119,7 +123,7 @@ waitUntil {isNull (findDisplay 3100)};
 detach player;
 player setPosASL _oldPos;
 player setDir _oldDir;
-{deleteVehicle _x;} foreach [_testLogic,_ut1,_ut2,_ut3,_ut4,_ut5];
+{deleteVehicle _x;} foreach [_testLogic,_ut1,_ut2,_ut3,_ut4,_ut5,_light];
 life_shop_cam cameraEffect ["TERMINATE","BACK"];
 camDestroy life_shop_cam;
 life_clothing_filter = 0;
