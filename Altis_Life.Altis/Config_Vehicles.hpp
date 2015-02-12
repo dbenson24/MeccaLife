@@ -29,7 +29,6 @@ class CarShops {
 	class med_shop {
 		side = "med";
 		vehicles[] = {
-			{ "C_Offroad_01_F", 10000, "" },
 			{ "C_Offroad_01_repair_F", 10000, "" },
 			{ "I_Truck_02_medical_F", 75000, "" }
 			
