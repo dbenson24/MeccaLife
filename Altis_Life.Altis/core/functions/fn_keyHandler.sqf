@@ -145,7 +145,7 @@ switch (_code) do {
 	case 38: {
 		//If cop run checks for turning lights on.
 		if(_shift && playerSide in [west,independent]) then {
-			if(vehicle player != player && (typeOf vehicle player) in ["C_Offroad_01_F","B_MRAP_01_F","C_SUV_01_F"]) then {
+			if(vehicle player != player && (typeOf vehicle player) in ["C_Offroad_01_F","C_Offroad_01_repair_F","B_MRAP_01_F","I_Truck_02_medical_F","C_SUV_01_F"]) then {
 				if(!isNil {vehicle player GVAR "lights"}) then {
 					if(playerSide == west) then {
 						[vehicle player] call life_fnc_sirenLights;
@@ -188,7 +188,7 @@ switch (_code) do {
 					[[_veh],"life_fnc_copSiren",nil,true] call life_fnc_MP;
 				} else {
 					//I do not have a custom sound for this and I really don't want to go digging for one, when you have a sound uncomment this and change medicSiren.sqf in the medical folder.
-					//[[_veh],"life_fnc_medicSiren",nil,true] call life_fnc_MP;
+					[[_veh],"life_fnc_medicSiren",nil,true] call life_fnc_MP;
 				};
 			};
 		};
