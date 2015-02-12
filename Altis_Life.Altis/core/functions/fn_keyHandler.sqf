@@ -150,7 +150,7 @@ switch (_code) do {
 					if(playerSide == west) then {
 						[vehicle player] call life_fnc_sirenLights;
 					} else {
-						[vehicle player] call life_fnc_medicLights;
+						[vehicle player] call life_fnc_medicSirenLights;
 					};
 					_handled = true;
 				};

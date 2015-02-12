@@ -59,7 +59,7 @@ switch (typeOf _vehicle) do
 	};
 	case "C_Offroad_01_repair_F":
 	{
-		_lightright lightAttachObject [_vehicle, [0.37, 0.0, 0.56]];
+		_lightright lightAttachObject [_vehicle, [-0.37, 0.0, 0.56]];
 	};
 };
   
