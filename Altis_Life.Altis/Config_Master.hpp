@@ -71,16 +71,8 @@ class Life_Settings {
 		{"STR_Crime_207A","55000","10"},
 		{"STR_Crime_667","55000","11"},
 		{"STR_Crime_668","5000","12"},
-		{"STR_Crime_8","10000","13"}
-		
-		
-
-		
-		
-		
-		
-		
-	};
+		{"STR_Crime_8","10000","13"},
+		};
 		
 	sellArray[] = {
 		{"arifle_sdar_F", 750},
