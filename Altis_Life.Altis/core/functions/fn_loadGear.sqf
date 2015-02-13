@@ -91,3 +91,38 @@ if(!(EQUAL(_seco,""))) then {_handle = [_seco,true,false,false,false] spawn life
 if(playerSide == independent && {EQUAL(uniform player,"U_Rangemaster")}) then {
 	[[player,0,"textures\medic_uniform.jpg"],"life_fnc_setTexture",true,false] call life_fnc_MP;
 };
+
+
+
+if(playerSide == west && {EQUAL(uniform player,"U_BG_Guerilla2_2")}) then {
+	switch (FETCH_CONST(life_coplevel)) do {
+			case 1:
+		{
+			[[player,0,"textures\cadetTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+		};
+	
+		case 2:
+		{
+			[[player,0,"textures\stateTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+		};
+	
+		case 3:
+		{
+			[[player,0,"textures\stateTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+		};
+	
+		case 4:
+		{
+			[[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+		};
+	
+		case 5:
+		{
+			[[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+		};
+		case 6:
+		{
+			[[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+		};
+	};
+};
