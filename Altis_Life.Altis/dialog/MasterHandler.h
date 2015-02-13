@@ -27,3 +27,4 @@
 #include "smartphone.hpp"
 #include "compensate.hpp"
 #include "channel.hpp"
+#include "revoke_license.h"

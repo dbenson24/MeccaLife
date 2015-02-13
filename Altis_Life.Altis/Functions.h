@@ -158,6 +158,7 @@ class Life_Client_Core
 		class newMsg {};
 		class showMsg {};
 		class AAN {};
+		class revokeLicense {};
 	};
 	
 	class Functions

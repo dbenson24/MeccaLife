@@ -2162,6 +2162,33 @@
 		</Key>
 	</Package>
 	<Package name="Civ_Strings">
+		<Key ID="STR_pInAct_RevokeLicense">
+			<Orignal>Revoke Licenses</Orignal>
+		</Key>
+		<Key ID="STR_Civ_RevokeLicense_Driver">
+			<Original>Your Drivers License has been REVOKED by the Police!</Original>
+		</Key>
+		<Key ID="STR_Civ_RevokeLicense_Truck">
+			<Original>Your Truck License has been REVOKED by the Police!</Original>
+		</Key>
+		<Key ID="STR_Civ_RevokeLicense_Pilot">
+			<Original>Your Pilot License has been REVOKED by the Police!</Original>
+		</Key>
+		<Key ID="STR_Civ_RevokeLicense_Boating">
+			<Original>Your Boating License has been REVOKED by the Police!</Original>
+		</Key>
+		<Key ID="STR_Civ_RevokeLicense_Diving">
+			<Original>Your Diving License has been REVOKED by the Police!</Original>
+		</Key>
+		<Key ID="STR_Civ_RevokeLicense_Taxi">
+			<Original>Your Taxi License has been REVOKED by the Police!</Original>
+		</Key>
+		<Key ID="STR_Civ_RevokeLicense_AllMotor">
+			<Original>Your Motor Vehicle Licenses have been REVOKED by the Police!</Original>
+		</Key>
+		<Key ID="STR_Civ_RevokeLicense_Firearm">
+			<Original>Your Firearms License has been REVOKED by the Police!</Original>
+		</Key>
 		<Key ID="STR_Civ_KnockedOut">
 			<Original>%1 has knocked you out.</Original>
 			<German>%1 hat dich niedergeschlagen.</German>
