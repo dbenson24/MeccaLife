@@ -14,6 +14,17 @@ if((FETCH_CONST(life_medicLevel)) < 1) exitWith {
 	["Notwhitelisted",FALSE,TRUE] call BIS_fnc_endMission;
 	sleep 35;
 };
+[] spawn
+{
+    while {true} do
+    {
+        waitUntil {backpack player == "B_Carryall_oucamo"};
+        (unitbackpack player) setObjectTextureGlobal [0, "NILL.JPG"]; 
+        waitUntil {backpack player != "B_Carryall_oucamo"}; 
+    };
+};
+
+player setVariable["rank",(FETCH_CONST(life_coplevel)),true];
 
 [] call life_fnc_spawnMenu;
 waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
