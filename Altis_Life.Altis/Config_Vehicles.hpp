@@ -12,12 +12,12 @@ class CarShops {
 			{ "C_Hatchback_01_F", 22500, "driver" }, 
 			{ "C_Offroad_01_F", 35500, "driver" },
 			{ "C_SUV_01_F", 30000, "driver" },
-			{ "C_Hatchback_01_sport_F", 45000, "driver" },
+			{ "C_Hatchback_01_sport_F", 45000, "driver" }
 		};
 	};
 
 	class kart_shop {
-		side = "civ";
+		side = "civ";	
 		vehicles[] = {
 			{ "C_Kart_01_Blu_F", 15000 , "driver" },
 			{ "C_Kart_01_Fuel_F", 15000, "driver" },
@@ -31,7 +31,6 @@ class CarShops {
 		vehicles[] = {
 			{ "C_Offroad_01_repair_F", 10000, "" },
 			{ "I_Truck_02_medical_F", 75000, "" }
-			
 		};
 	};
 
