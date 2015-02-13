@@ -56,6 +56,7 @@ _type = _queryResult select 0;
 		case "5": {_x = "STR_Crime_5"};
 		case "6": {_x = "STR_Crime_6"};
 		case "7": {_x = "STR_Crime_7"};
+		case "8": {_x = "STR_Crime_8"};
 	};
 	_crimesArr pushBack _x;
 }forEach _type;

@@ -5059,6 +5059,13 @@
 			<Italian>Attempted Murder</Italian>		
 			<Portuguese>Attempted Murder</Portuguese>
 		</Key>
+		<Key ID="STR_Crime_8">
+			<Original>Evading Arrest</Original>
+			<German>Evading Arrest</German>
+			<French>Evading Arrest</French>
+			<Italian>Evading Arrest</Italian>		
+			<Portuguese>Evading Arrest</Portuguese>
+		</Key>
 	</Package>
 	<Package name="Smartphone">
 		<Key ID="STR_PM_Smartphone">
