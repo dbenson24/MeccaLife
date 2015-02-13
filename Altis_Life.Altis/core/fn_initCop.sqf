@@ -26,7 +26,42 @@ if((FETCH_CONST(life_coplevel) == 0) && (FETCH_CONST(life_adminlevel) == 0)) the
 
 [] spawn
 {
-    while {true} do
+    if (playerSide == west) then {
+
+switch (FETCH_CONST(life_coplevel)) do {
+
+	case 1:
+	{
+		[[player,0,"textures\cadetTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+	};
+	
+	case 2:
+	{
+		[[player,0,"textures\stateTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+	};
+	
+	case 3:
+	{
+	    [[player,0,"textures\stateTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+	};
+	
+	case 4:
+	{
+	    [[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+	};
+	
+	case 5:
+	{
+	    [[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+	};
+	case 6:
+	{
+	    [[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+	};
+	
+};
+
+	while {true} do
     {
         waitUntil {backpack player == "B_Carryall_oucamo"};
         (unitbackpack player) setObjectTextureGlobal [0, "NILL.JPG"]; 
@@ -35,6 +70,7 @@ if((FETCH_CONST(life_coplevel) == 0) && (FETCH_CONST(life_adminlevel) == 0)) the
 };
 
 player setVariable["rank",(FETCH_CONST(life_coplevel)),true];
+
 [] call life_fnc_spawnMenu;
 waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
 waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
