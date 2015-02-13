@@ -86,13 +86,13 @@ switch (true) do {
 		[] spawn life_fnc_pickAxeUse;
 	};
 	
-	case (EQUAL(_item,"heroinProcessed")): {
+	case (EQUAL(_item,"heroin_processed")): {
 		if(([false,_item,1] call life_fnc_handleInv)) then {
 			[] spawn life_fnc_heroine;
 		};
 	};
 	
-	case (EQUAL(_item,"cocaineProcessed")): {
+	case (EQUAL(_item,"cocaine_processed")): {
 		if(([false,_item,1] call life_fnc_handleInv)) then {
 			[] spawn life_fnc_cocainep;
 		};
