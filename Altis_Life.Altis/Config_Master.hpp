@@ -75,13 +75,7 @@ class Life_Settings {
 		};
 		
 	sellArray[] = {
-		{"arifle_sdar_F", 750},
-		
-		
-		
-		
-		
-		
+		{"arifle_sdar_F", 750}
 	};
 };
 
