@@ -24,6 +24,16 @@ if((FETCH_CONST(life_coplevel) == 0) && (FETCH_CONST(life_adminlevel) == 0)) the
 
 
 
+[] spawn
+{
+    while {true} do
+    {
+        waitUntil {backpack player == "backpack_item_name_goes_here"};
+        (unitbackpack player) setObjectTextureGlobal [0, "texturedirectoryhere"]; 
+        waitUntil {backpack player != "backpack_item_name_goes_here"};
+    };
+};
+
 player setVariable["rank",(FETCH_CONST(life_coplevel)),true];
 [] call life_fnc_spawnMenu;
 waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
