@@ -86,6 +86,18 @@ switch (true) do {
 		[] spawn life_fnc_pickAxeUse;
 	};
 	
+	case (EQUAL(_item,"heroinp")): {
+		[] spawn life_fnc_heroine;
+	};
+	
+	case (EQUAL(_item,"cocainep")): {
+		[] spawn life_fnc_cocainep;
+	};
+
+	case (EQUAL(_item,"marijuana")): {
+		[] spawn life_fnc_weed;
+	};	
+	
 	default {
 		hint localize "STR_ISTR_NotUsable";
 	};

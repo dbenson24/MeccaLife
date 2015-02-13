@@ -341,6 +341,9 @@ class Life_Client_Core
 		class blastingCharge {};
 		class defuseKit {};
 		class storageBox {};
+		class heroine {};
+		class cocaine {};
+		class weed {};
 	};
 	
 	class Dialog_Controls
