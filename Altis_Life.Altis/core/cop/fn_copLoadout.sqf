@@ -11,7 +11,7 @@ _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
 //Load player with default cop gear.
-player addUniform "U_Rangemaster";
+player addUniform "U_BG_Guerilla2_2";
 player addVest "V_TacVest_blk_POLICE";
 player addBackpack "B_FieldPack_oucamo";
 player addWeapon "hgun_P07_F";
@@ -36,5 +36,5 @@ player addItem "FirstAidKit";
 player addItem "FirstAidKit";
 player addItem "ToolKit";
 
-
+[[player,0,"textures\stateTroop.jpg"],"life_fnc_setTexture",true,false] call life_fnc_MP;
 [] call life_fnc_saveGear;
