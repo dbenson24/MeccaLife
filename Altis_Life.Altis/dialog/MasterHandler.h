@@ -26,3 +26,4 @@
 #include "federalReserve.h"
 #include "smartphone.hpp"
 #include "compensate.hpp"
+#include "channel.hpp"

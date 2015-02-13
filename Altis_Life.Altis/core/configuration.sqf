@@ -38,7 +38,8 @@ life_is_alive = false;
 life_isDowned = false;
 life_god = false; 
 life_frozen = false; 
-life_markers = false; 
+life_markers = false;
+life_channel_send = true; //Channel 7
 
 
 //Uniform price (0),Hat Price (1),Glasses Price (2),Vest Price (3),Backpack Price (4)

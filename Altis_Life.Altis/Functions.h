@@ -157,6 +157,7 @@ class Life_Client_Core
 		class smartphone {};
 		class newMsg {};
 		class showMsg {};
+		class AAN {};
 	};
 	
 	class Functions
@@ -366,6 +367,9 @@ class Life_Client_Core
 		class vehicleGarage {};
 		class gangDeposit {};
 		class wireTransfer {};
+		class calldialog {};
+		class sendChannel {};		
+		
 	};
 	
 	class Cam
