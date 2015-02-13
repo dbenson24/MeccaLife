@@ -1,3 +1,5 @@
+#include <macro.h>
+
 /*
 	File: fn_copLoadout.sqf
 	Author: Bryan "Tonic" Boardwine
@@ -36,5 +38,35 @@ player addItem "FirstAidKit";
 player addItem "FirstAidKit";
 player addItem "ToolKit";
 
-[[player,0,"textures\stateTroop.jpg"],"life_fnc_setTexture",true,false] call life_fnc_MP;
+if (playerSide == west) then {
+
+switch (FETCH_CONST(life_coplevel)) do {
+
+	case 1:
+	{
+		[[player,0,"wrieturshithere"], "life_fnc_setTexture", true, false] spawn life_fnc_MP;
+	};
+	
+	case 2:
+	{
+		[[player,0,"wrieturshithere"], "life_fnc_setTexture", true, false] spawn life_fnc_MP;
+	};
+	
+	case 3:
+	{
+	    [[player,0,"wrieturshithere"], "life_fnc_setTexture", true, false] spawn life_fnc_MP;
+	};
+	
+	case 4:
+	{
+	    [[player,0,"wrieturshithere"], "life_fnc_setTexture", true, false] spawn life_fnc_MP;
+	};
+	
+	case 5:
+	{
+	    [[player,0,"wrieturshithere"], "life_fnc_setTexture", true, false] spawn life_fnc_MP;
+	};
+	
+};
+};
 [] call life_fnc_saveGear;
