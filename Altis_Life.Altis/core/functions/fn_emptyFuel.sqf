@@ -1,6 +1,5 @@
 /*
       fn_emptyFuel.sqf
-	  Author: Cal
 */
 
 private["_vehicleToFuel","_velocityOfVehicle","_fuelConsumption"];
@@ -18,8 +17,6 @@ while{true} do
 			_fuelConsumption = 0.002;
 		};
 		_vehicleToFuel setFuel ((fuel _vehicleToFuel)-_fuelConsumption);
-		
-		//hint format["Benzinverbrauch: %1L/km",_fuelConsumption*10000/2];
 
 		if(fuel _vehicleToFuel < 0.2 && fuel _vehicleToFuel > 0.18) then
 		{
