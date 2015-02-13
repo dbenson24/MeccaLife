@@ -16,7 +16,7 @@ if(isNull _cop) exitWith {};
 	private "_time";
 	while {true} do {
 		_time = time;
-		waitUntil {(time - _time) > (5 * 60)};
+		waitUntil {(time - _time) > (10 * 60)};
 		
 		if(!(player GVAR ["restrained",FALSE])) exitWith {};
 		if(!([west,getPos player,30] call life_fnc_nearUnits) && (player GVAR ["restrained",FALSE]) && vehicle player == player) exitWith {

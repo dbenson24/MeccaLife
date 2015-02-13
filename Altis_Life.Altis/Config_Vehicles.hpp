@@ -46,7 +46,7 @@ class CarShops {
 	class civ_truck {
 		side = "civ";
 		vehicles[] = {
-			{ "C_Van_01_box_F", 200000, "trucking" },
+			{ "C_Van_01_box_F", 180000, "trucking" },
 			{ "I_Truck_02_transport_F", 75000, "trucking" },
 			{ "I_Truck_02_covered_F", 200000, "trucking" },
 			{ "B_Truck_01_transport_F", 275000, "trucking" },
@@ -377,7 +377,7 @@ class CfgVehicles {
 	                "#(ai,64,64,1)Fresnel(0.3,3)"
             } },
 			{ "Police", "cop", {
-	                "#(ai,64,64,1)Fresnel(1.3,7)"
+	                "Altis_Life.Altis\textures\policeoffroad.paa"
             } },
             { "Taxi", "civ", {
 	                "#(argb,8,8,3)color(0.6,0.3,0.01,1)"
