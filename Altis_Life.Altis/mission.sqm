@@ -3733,7 +3733,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="ch7_1";
-					init="removeallWeapons this;  this enableSimulation false; this addAction[""News Anchor Shop"",life_fnc_clothingMenu,""news""];this allowDamage false;   this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""news"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""news"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""news"",0,false,false,"""",' !license_civ_news && playerSide == civilian ']; ";
+					init="removeallWeapons this;  this enableSimulation false; this addAction[""News Anchor Shop"",life_fnc_clothingMenu,""news""];this allowDamage false;   this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""news"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""news"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""news"",0,false,false,"""",' !license_civ_news && playerSide == civilian '];  this addAction[""Send Message"",life_fnc_calldialog,0];";
 				};
 			};
 		};
