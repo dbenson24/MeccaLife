@@ -377,7 +377,7 @@ class CfgVehicles {
 	                "#(ai,64,64,1)Fresnel(0.3,3)"
             } },
 			{ "Police", "cop", {
-	                "\textures\policeoffroad.paa"
+	                "\textures\policeoffroad.jpg"
             } },
             { "Taxi", "civ", {
 	                "#(argb,8,8,3)color(0.6,0.3,0.01,1)"
