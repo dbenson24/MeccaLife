@@ -10,8 +10,8 @@ Private ["_vehicle","_lightRed","_lightBlue","_lightleft","_lightright","_leftRe
 _vehicle = _this select 0;
 	
 if(isNil "_vehicle" OR isNull _vehicle OR !(_vehicle getVariable "lights")) exitWith {};
-_lightRed = [0.1, 0.1, 20];
-_lightBlue = [0.1, 0.1, 20];
+_lightRed = [20, 20, 0.1];
+//_lightBlue = [0.1, 0.1, 20];
 
 _lightleft = "#lightpoint" createVehicle getpos _vehicle;   
 sleep 0.2;
@@ -35,15 +35,15 @@ _lightleft setLightUseFlare true;
 
 _lightright = "#lightpoint" createVehicle getpos _vehicle;   
 sleep 0.2;
-_lightright setLightColor _lightBlue; 
+_lightright setLightColor _lightRed; 
 _lightright setLightBrightness 0.2;  
 _lightright setLightAmbient [0.1,0.1,1]; 
 
 switch (typeOf _vehicle) do
-{
+{	
 	case "C_Offroad_01_repair_F":
 	{
-		_lightright lightAttachObject [_vehicle, [-0.37, 0.0, 0.56]];
+		_lightright lightAttachObject [_vehicle, [0.37, 0.0, 0.56]];
 	};
 };
   
@@ -53,7 +53,6 @@ _lightright setLightFlareSize 0.38;
 _lightright setLightFlareMaxDistance 150;
 _lightright setLightUseFlare true;
 
-//ARE YOU ALL HAPPY?!?!?!?!?!?!?!?!?%#?@WGD?TGD?BN?ZDHBFD?GA
 _lightleft setLightDayLight true;
 _lightright setLightDayLight true;
 
