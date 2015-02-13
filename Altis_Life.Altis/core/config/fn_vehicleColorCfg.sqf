@@ -41,7 +41,7 @@ switch (_vehicle) do
 	{
 		_ret = 
 		[
-			["\A3\soft_F\Offroad_01\Data\offroad_01_ext_co.paa", "cop"],
+			["\textures\policeoffroad.jpg", "cop"],
 			["\A3\soft_F\Offroad_01\Data\offroad_01_ext_co.paa", "civ"],
 			["\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE01_CO.paa", "civ"],
 			["\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE02_CO.paa", "civ"],
