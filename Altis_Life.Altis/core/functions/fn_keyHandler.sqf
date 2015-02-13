@@ -260,9 +260,12 @@ switch (_code) do {
 			};
 		};
 	};
+};
 
-	
-	
+if (_code in (actionKeys "TacticalView")) then
+{
+	hint "TacticalView Mode is disabled on Mecca AltisLife" ;
+	_handled = true;
 };
 
 _handled;
