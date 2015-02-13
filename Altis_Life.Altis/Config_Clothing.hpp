@@ -228,7 +228,7 @@ class Clothing {
 			{ "H_Cap_oli", "", 150, { "", "", -1 } },
 			{ "H_Cap_red", "", 150, { "", "", -1 } },
 			{ "H_Cap_tan", "", 150, { "", "", -1 } },
-			{ "H_HelmetCrew_B", "", 25000, { "", "", -1 } },
+			{ "H_HelmetCrew_B", "", 25000, { "", "", -1 } }
 		};
 
 		goggles[] = {
@@ -335,7 +335,7 @@ class Clothing {
 
 		goggles[] = {
 			{ "NONE", "Remove Glasses", 0, { "", "", -1 } },
-			"G_Shades_Black", "", 25, { "", "", -1 } },
+			{"G_Shades_Black", "", 25, { "", "", -1 } },
 			{ "G_Shades_Blue", "", 20, { "", "", -1 } },
 			{ "G_Sport_Blackred", "", 20, { "", "", -1 } },
 			{ "G_Sport_Checkered", "", 20, { "", "", -1 } },
