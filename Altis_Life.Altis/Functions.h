@@ -205,6 +205,7 @@ class Life_Client_Core
 		class nearATM {};
 		class earplugs {};
 		class handleDowned {};
+		class emptyFuel {};
 	};
 	
 	class Network
