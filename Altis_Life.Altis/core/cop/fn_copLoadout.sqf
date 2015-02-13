@@ -1,3 +1,5 @@
+#include <macro.h>
+
 /*
 	File: fn_copLoadout.sqf
 	Author: Bryan "Tonic" Boardwine
@@ -11,7 +13,7 @@ _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
 //Load player with default cop gear.
-player addUniform "U_Rangemaster";
+player addUniform "U_BG_Guerilla2_2";
 player addVest "V_TacVest_blk_POLICE";
 player addBackpack "B_FieldPack_oucamo";
 player addWeapon "hgun_P07_F";
@@ -36,5 +38,35 @@ player addItem "FirstAidKit";
 player addItem "FirstAidKit";
 player addItem "ToolKit";
 
+if (playerSide == west) then {
 
+switch (FETCH_CONST(life_coplevel)) do {
+
+	case 1:
+	{
+		[[player,0,"wrieturshithere"], "life_fnc_setTexture", true, false] spawn life_fnc_MP;
+	};
+	
+	case 2:
+	{
+		[[player,0,"wrieturshithere"], "life_fnc_setTexture", true, false] spawn life_fnc_MP;
+	};
+	
+	case 3:
+	{
+	    [[player,0,"wrieturshithere"], "life_fnc_setTexture", true, false] spawn life_fnc_MP;
+	};
+	
+	case 4:
+	{
+	    [[player,0,"wrieturshithere"], "life_fnc_setTexture", true, false] spawn life_fnc_MP;
+	};
+	
+	case 5:
+	{
+	    [[player,0,"wrieturshithere"], "life_fnc_setTexture", true, false] spawn life_fnc_MP;
+	};
+	
+};
+};
 [] call life_fnc_saveGear;

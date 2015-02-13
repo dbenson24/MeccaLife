@@ -150,11 +150,15 @@ fed_bank setVariable ["safe",count playableUnits,true];
 addMissionEventHandler ["HandleDisconnect",{_this call TON_fnc_clientDisconnect; false;}];
 [] call compile PreProcessFileLineNumbers "\life_server\functions.sqf";
 [] call compile PreProcessFileLineNumbers "\life_server\eventhandlers.sqf";
+[] call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";
+
 
 /* Miscellaneous mission-required stuff */
 [] spawn TON_fnc_cleanup;
 life_wanted_list = [];
 [] execFSM "\life_server\FSM\cleanup.fsm";
+
+[] execVM "\life_server\Functions\Custom\fn_spawnIllegalArea.sqf"; //Revolving Drug Fields
 
 [] spawn
 {

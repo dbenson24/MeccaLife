@@ -1,5 +1,5 @@
 /*
-	File: fn_copLights.sqf
+	File: fn_medicLights.sqf
 	Author: mindstorm, modified by Adanteh
 	Link: http://forums.bistudio.com/showthread.php?157474-Offroad-Police-sirens-lights-and-underglow
 	
@@ -21,7 +21,7 @@ _lightleft setLightAmbient [0.1,0.1,1];
 
 switch (typeOf _vehicle) do
 {
-	case "C_Offroad_01_F":
+	case "C_Offroad_01_repair_F":
 	{
 		_lightleft lightAttachObject [_vehicle, [-0.37, 0.0, 0.56]];
 	};
@@ -41,9 +41,9 @@ _lightright setLightAmbient [0.1,0.1,1];
 
 switch (typeOf _vehicle) do
 {
-	case "C_Offroad_01_F":
+	case "C_Offroad_01_repair_F":
 	{
-		_lightright lightAttachObject [_vehicle, [0.37, 0.0, 0.56]];
+		_lightright lightAttachObject [_vehicle, [-0.37, 0.0, 0.56]];
 	};
 };
   
