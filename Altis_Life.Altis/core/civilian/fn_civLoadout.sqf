@@ -78,5 +78,3 @@ switch (FETCH_CONST(life_donator)) do {
 };
 };
 [] call life_fnc_saveGear;
-
-[] call life_fnc_saveGear;

@@ -112,6 +112,9 @@
 		<Key ID="STR_Shops_News">
 			<Original>News Shop</Original>
 		</Key>
+		<Key ID="STR_Shops_law">
+			<Original>Law School</Original>
+		</Key>
 	</Package>
 	<Package name="Global">
 		<Key ID="STR_Global_Close">

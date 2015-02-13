@@ -203,12 +203,13 @@ class Licenses {
 	LICENSEMACRO(home,"STR_License_Home","home",75000,false,"civ")
 	LICENSEMACRO(vigilante,"STR_License_Vigilante","vigilante",60000,false,"civ")
 	LICENSEMACRO(news,"STR_License_News","news",60000,false,"civ")
+	LICENSEMACRO(law,"STR_License_Law","law",60000,false,"civ")
 };
 
 class VirtualShops {
 	class market {
 		name = "STR_Shops_Market";
-		items[] = { "waterBottle", "rabbit_grilled", "apple", "redgull", "tbacon", "pickaxe", "fuelFull", "peach", "boltcutter", "storagesmall", "storagebig" };
+		items[] = { "waterBottle", "rabbit_grilled", "apple", "redgull", "tbacon", "pickaxe", "fuelFull", "peach", "storagesmall", "storagebig" };
 	};
 
 	class rebel {
@@ -223,7 +224,7 @@ class VirtualShops {
 
 	class wongs {
 		name = "STR_Shops_Wongs";
-		items[] = { "turtle_soup", "turtle_raw" };
+		items[] = { "turtle_soup"};
 	};
 
 	class coffee {

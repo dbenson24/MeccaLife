@@ -319,9 +319,9 @@ class Clothing {
 			{ "NONE", "Remove Backpack", 0, { "", "", -1 } }
 		};
 	};
-	class news {
-		title = "STR_Shops_News";
-		license = "News";
+	class law {
+		title = "STR_Shops_law";
+		license = "law";
 		side = "civ";
 
 		uniforms[] = {
@@ -330,23 +330,27 @@ class Clothing {
 		};
 
 		headgear[] = {
-			{ "NONE", "Remove Hat", 0, { "", "", -1 } },
-			{ "H_Cap_press", "", 1000, { "", "", -1 } }
+			{ "NONE", "Remove Hat", 0, { "", "", -1 } }
 		};
 
 		goggles[] = {
-			{ "NONE", "Remove Glasses", 0, { "", "", -1 } }
+			{ "NONE", "Remove Glasses", 0, { "", "", -1 } },
+			"G_Shades_Black", "", 25, { "", "", -1 } },
+			{ "G_Shades_Blue", "", 20, { "", "", -1 } },
+			{ "G_Sport_Blackred", "", 20, { "", "", -1 } },
+			{ "G_Sport_Checkered", "", 20, { "", "", -1 } },
+			{ "G_Sport_Blackyellow", "", 20, { "", "", -1 } },
+			{ "G_Sport_BlackWhite", "", 20, { "", "", -1 } },
+			{ "G_Squares", "", 10, { "", "", -1 } }
 			
 		};
 
 		vests[] = {
-			{ "NONE", "Remove Vest", 0, { "", "", -1 } },
-			{ "V_Press_F", "", 1000, { "", "", -1 } }
+			{ "NONE", "Remove Vest", 0, { "", "", -1 } }
 		};
 
 		backpacks[] = {
-			{ "NONE", "Remove Backpack", 0, { "", "", -1 } },
-			{ "B_Kitbag_cbr", "", 3000, { "", "", -1 } }
+			{ "NONE", "Remove Backpack", 0, { "", "", -1 } }
 		};
 	};
 };
