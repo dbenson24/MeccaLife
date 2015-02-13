@@ -12,7 +12,7 @@ waitUntil {scriptDone _handle};
 player addUniform "U_Rangemaster";
 player addBackpack "B_Carryall_cbr";
 player addItem "FirstAidKit";
-player addItem "FirstAidKit";
+
 player addItem "ItemMap";
 player assignItem "ItemMap";
 player addItem "ItemCompass";
@@ -21,6 +21,9 @@ player addItem "ItemWatch";
 player assignItem "ItemWatch";
 player addItem "ItemWatch";
 player addItem "Medikit";
+player addItem "ToolKit";
+player addItem "ToolKit";
+player addItem "ToolKit";
 
 [[player,0,"textures\medic_uniform.jpg"],"life_fnc_setTexture",true,false] call life_fnc_MP;
 
