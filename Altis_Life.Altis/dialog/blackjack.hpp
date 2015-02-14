@@ -1,5 +1,4 @@
 /*Created by Blacklistgaming.org Coder: PapaBear */
-#include "common.hpp"
 #define GUI_GRID_X    (0)
 #define GUI_GRID_Y    (0)
 #define GUI_GRID_W    (0.025)
