@@ -1,10 +1,10 @@
 #include <macro.h>
 /*
 	File: fn_civLoadout.sqf
-	Author: Tobias 'Xetoxyc' Sittenauer
+	Author: UnNamed
 	
 	Description:
-	Loads the civs out with the default gear, with randomized clothing.
+	Loads the civ out with the default gear and proper donor perks with randomized clothing.
 */
 private["_handle"];
 _handle = [] spawn life_fnc_stripDownPlayer;

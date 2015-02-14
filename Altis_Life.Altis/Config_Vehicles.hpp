@@ -45,12 +45,12 @@ class CarShops {
 	class civ_truck {
 		side = "civ";
 		vehicles[] = {
-			{ "C_Van_01_box_F", 180000, "trucking" },
-			{ "I_Truck_02_transport_F", 75000, "trucking" },
+			{ "C_Van_01_box_F", 250000, "trucking" },
+			{ "I_Truck_02_transport_F", 135000, "trucking" },
 			{ "I_Truck_02_covered_F", 200000, "trucking" },
-			{ "B_Truck_01_transport_F", 275000, "trucking" },
-			{ "O_Truck_03_transport_F", 200000, "trucking" },
-			{ "O_Truck_03_covered_F", 250000, "trucking" },
+			{ "B_Truck_01_transport_F", 260000, "trucking" },
+			{ "O_Truck_03_transport_F", 187000, "trucking" },
+			{ "O_Truck_03_covered_F", 251500, "trucking" },
 			{ "B_Truck_01_box_F", 600000, "trucking" },
 			{ "O_Truck_03_device_F", 800000, "trucking" }
 		};
@@ -233,7 +233,7 @@ class CfgVehicles {
     };
 
 	class O_Truck_03_transport_F {
-        vItemSpace = 385;
+        vItemSpace = 175;
         storageFee[] = { 100, 0, 0, 0 };
         insurance = 2500;
         chopShop = 5000;
@@ -466,7 +466,7 @@ class CfgVehicles {
     };
 
 	class I_Truck_02_covered_F {
-        vItemSpace = 350;
+        vItemSpace = 250;
         storageFee[] = { 14500, 0, 0, 0 };
 		garageSell[] = { 62000, 0, 0, 0 };
         insurance = 6500;
@@ -483,13 +483,13 @@ class CfgVehicles {
     };
 
 	class I_Truck_02_transport_F : I_Truck_02_covered_F {
-        vItemSpace = 200;
+        vItemSpace = 120;
         storageFee[] = { 12000, 0, 0, 0 };
 		garageSell[] = { 49800, 3500, 0, 0 };
     };
 
 	class O_Truck_03_covered_F {
-		vItemSpace = 350;
+		vItemSpace = 305;
 		storageFee[] = { 25000, 0, 0, 0 };
 		garageSell[] = { 65000, 0, 0, 0 };
 		insurance = 2500;
@@ -573,7 +573,7 @@ class CfgVehicles {
     };
 
 	class C_Van_01_box_F {
-        vItemSpace = 250;
+        vItemSpace = 325;
         storageFee[] = { 1000, 0, 0, 0 };
 		garageSell[] = { 35000, 0, 0, 0 };
         insurance = 2500;
