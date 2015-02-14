@@ -128,4 +128,13 @@ class playerHUD {
 		y = 0.896 * safezoneH + safezoneY;
 		w = 0.03; h = 0.04;
 	};
+	class wantedHIcon : life_RscPicture
+	{
+		idc = 23521;
+		text = "bounty";
+		x = safeZoneX+safeZoneW-0.115; 
+		y = safeZoneY+safeZoneH-0.442;
+		w = 0.03; h = 0.04;
+		}
+	
 };
