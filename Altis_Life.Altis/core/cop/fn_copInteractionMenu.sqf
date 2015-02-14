@@ -108,6 +108,6 @@ _Btn9 buttonSetAction "[life_pInact_curTarget] call life_fnc_seizePlayerWeapon;"
 
 //Check that you are near a place to jail them.
 if(!((player distance (getMarkerPos "police_hq_1") < 30) OR  (player distance (getMarkerPos "police_hq_2") < 30) OR (player distance (getMarkerPos "cop_spawn_3") < 30) OR (player distance (getMarkerPos "cop_spawn_5") < 30))) then  {
-	_Btn6 ctrlEnable false;
+	_Btn7 ctrlEnable false;
 };
 		
