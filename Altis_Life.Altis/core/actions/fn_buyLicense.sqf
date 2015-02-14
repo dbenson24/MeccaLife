@@ -72,7 +72,7 @@ if(_type == "news") then {
 		hint "Your Vigilante license has been revoked."; 
 	};
 	if(license_civ_law) then {
-		license_civ_news = false;
+		license_civ_law = false;
 		hint "Your News license has been revoked."; 
 	};
 };
