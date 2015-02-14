@@ -30,7 +30,7 @@ class controls {
 		class Title : Life_RscTitle {
 			colorBackground[] = {0, 0, 0, 0};
 			idc = -1;
-			text = "Channel 7 News (CH7) ";
+			text = "AAN7";
 			x = 0.1;
 			y = 0.2;
 			w = 0.6;
@@ -40,7 +40,7 @@ class controls {
 		class Channel7NewsEditText : Life_RscStructuredText
 		{
 			idc = -1;
-			text = "Message to all:";
+			text = "News Flash:";
 			x = 0.12;
             y = 0.4;
 			w = 0.2;
@@ -61,7 +61,7 @@ class controls {
 		class Channel7Description : Life_RscStructuredText
 		{
 			idc = -1;
-			text = "This message will be send to all on the server. Pay attention to what you write!";
+			text = "You are about to send a server wide news message. Zero tolerance for trolling or rude behaviour. Role-play is required.";
 			x = 0.12;
             y = 0.5;
 			w = 0.5;
