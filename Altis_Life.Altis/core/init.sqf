@@ -90,6 +90,7 @@ life_sidechat = true;
 [[player,life_sidechat,playerSide],"TON_fnc_managesc",false,false,true] call life_fnc_MP;
 0 cutText ["","BLACK IN"];
 [] call life_fnc_hudSetup;
+[] execVM "core\config\fn_initSkin.sqf"; 
 
 /* Set up frame-by-frame handlers */
 LIFE_ID_PlayerTags = ["LIFE_PlayerTags","onEachFrame","life_fnc_playerTags"] call BIS_fnc_addStackedEventHandler;
