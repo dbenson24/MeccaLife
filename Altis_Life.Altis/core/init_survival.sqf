@@ -41,22 +41,7 @@
 		[] call _fnc_food;
 	};
 };
-[] spawn
-{
-    private["_texture"];
-    while {true} do
-    {
-        waitUntil{uniform player == "U_BG_Guerilla2_2"};
-        _texture =
-        switch (FETCH_CONST(life_coplevel)) do
-        {
-            case 1: {"textures\makeurowncaseshere.jpg"};
-        };
-        
-        player setObjectTextureGlobal [0,_texture];
-        waitUntil{uniform player != "U_BG_Guerilla2_2"};
-    };
-};
+
 [] spawn
 {
 	private["_bp","_load","_cfg"];
