@@ -28,3 +28,4 @@
 #include "compensate.hpp"
 #include "channel.hpp"
 #include "revoke_license.h"
+#include "blackjack.hpp"
