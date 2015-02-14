@@ -3594,6 +3594,9 @@
 		<Key ID="STR_License_News">
 			<Original>News License</Original>
 		</Key>
+		<Key ID="STR_License_Law">
+			<Original>Law Degree</Original>
+		</Key>
 	</Package>
 	<Package name="More_Item_Strings">
 		<Key ID="STR_ISTR_Blast_VaultOnly">
