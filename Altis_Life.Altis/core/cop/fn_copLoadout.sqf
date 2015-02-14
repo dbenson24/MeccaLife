@@ -38,38 +38,36 @@ player addItem "FirstAidKit";
 player addItem "FirstAidKit";
 player addItem "ToolKit";
 
-if (playerSide == west) then {
-
-switch (FETCH_CONST(life_coplevel)) do {
-
-	case 1:
-	{
-		[[player,0,"textures\cadetTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
-	};
-	
-	case 2:
-	{
-		[[player,0,"textures\stateTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
-	};
-	
-	case 3:
-	{
-	    [[player,0,"textures\stateTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
-	};
-	
-	case 4:
-	{
-	    [[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
-	};
-	
-	case 5:
-	{
-	    [[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
-	};
-	case 6:
-	{
-	    [[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
-	};
+{
+    private["_texture"];
+    while {true} do
+    {
+        waitUntil{uniform player == "U_BG_Guerilla2_2"};
+        _texture =
+        switch (FETCH_CONST(life_coplevel)) do
+        {
+            case 1: {"textures\cadetTroop.jpg"};
+        };
+		{
+            case 2: {"textures\stateTroop.jpg"};
+        };
+		{
+            case 3: {"textures\stateTroop.jpg"};
+        };
+		{
+            case 4: {"textures\corpTroop.jpg"};
+        };
+		{
+            case 5: {"textures\corpTroop.jpg"};
+        };
+		{
+            case 6: {"textures\corpTroop.jpg"};
+        };
+        
+        player setObjectTextureGlobal [0,_texture];
+        waitUntil{uniform player != "U_BG_Guerilla2_2"};
+    };
+};
 	
 };
 };
