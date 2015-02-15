@@ -237,6 +237,7 @@ class Life_Client_Core
 		class demoChargeTimer {};
 		class civLoadout {};
 		class civInteractionMenu {}; //civ interaction menu
+		class freezePlayer {};
 	};
 	
 	class Vehicle

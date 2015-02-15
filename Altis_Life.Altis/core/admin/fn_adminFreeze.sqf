@@ -12,15 +12,4 @@ if(isNil "_unit") exitWith {};
 if(isNull _unit) exitWith {};
 if(_unit == player) exitWith {hint localize "STR_ANOTF_Error";};
 
-
-if(life_frozen) then {
-	[{hint localize "STR_NOTF_Unfrozen";},"BIS_fnc_Spawn",_unit,false] call BIS_fnc_MP;
-	[{disableUserInput false;},"BIS_fnc_Spawn",_unit,false] call BIS_fnc_MP;
-	hint format[localize "STR_ANOTF_Unfrozen",_unit getVariable["realname",_unit]];
-	life_frozen = false;
-} else {
-	[{hint localize "STR_NOTF_Frozen";},"BIS_fnc_Spawn",_unit,false] call BIS_fnc_MP;
-	[{disableUserInput true;},"BIS_fnc_Spawn",_unit,false] call BIS_fnc_MP;
-	hint format[localize "STR_ANOTF_Frozen",_unit getVariable["realname",_unit]];
-	life_frozen = true;
-};
+[[player],"life_fnc_freezePlayer",_unit,false] spawn life_fnc_MP; 
