@@ -2265,6 +2265,10 @@
 			<Italian>Nella cassaforte non ci sono %1 lingotti d'oro</Italian>
 			<Portuguese>Não existem %1 barra(s) de ouro no cofre!</Portuguese>
 		</Key>
+		<Key ID="STR_Civ_GatherGun">
+			<Original>You cannot Gather while holding a weapon!</Original>
+		</Key>
+		
 	</Package>
 	<Package name="Cop_Strings">
 		<Key ID="STR_Cop_TicketError">
@@ -2484,6 +2488,7 @@
 			<Italian>Non puoi selezionare nulla sotto l'1!</Italian>
 			<Portuguese>Não é permitido usar valor abaixo de 1!</Portuguese>
 		</Key>
+		
 		<Key ID="STR_Cop_OnlyGold">
 			<Original>You can't store anything but gold bars in the safe.</Original>
 			<German>Du kannst nur Goldbarren in den Tresor legen.</German>
