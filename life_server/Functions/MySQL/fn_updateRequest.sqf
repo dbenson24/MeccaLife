@@ -5,7 +5,7 @@
 	Description:
 	Ain't got time to describe it, READ THE FILE NAME!
 */
-private["_uid","_side","_cash","_bank","_licenses","_gear","_name","_query","_thread","_packet","_array","_flag"];
+private["_uid","_side","_cash","_bank","_licenses","_gear","_name","_query","_thread"];
 _uid = [_this,0,"",[""]] call BIS_fnc_param;
 _name = [_this,1,"",[""]] call BIS_fnc_param;
 _side = [_this,2,sideUnknown,[civilian]] call BIS_fnc_param;
@@ -14,17 +14,6 @@ _bank = [_this,4,5000,[0]] call BIS_fnc_param;
 _licenses = [_this,5,[],[[]]] call BIS_fnc_param;
 _gear = [_this,6,[],[[]]] call BIS_fnc_param;
 _civPosition = [_this,8,""] call BIS_fnc_param;
-_packet = [getPlayerUID player,(profileName),playerSide,life_cash,life_atmcash];
-_array = [];
-_flag = switch(playerSide) do {case west: {"cop"}; case civilian: {"civ"}; case independent: {"med"};};
-{
-if(_x select 1 == _flag) then
-{
-_array pushBack [_x select 0,(missionNamespace getVariable (_x select 0))];
-};
-} foreach life_licenses;
-_packet pushBack _array;
-
 
 //Get to those error checks.
 if((_uid == "") OR (_name == "")) exitWith {};
@@ -42,28 +31,6 @@ for "_i" from 0 to count(_licenses)-1 do {
 };
 
 _licenses = [_licenses] call DB_fnc_mresArray;
-
-[] call life_fnc_saveGear;
-_packet pushBack life_gear;
- 
-_profs = [];
-{
-if(_x select 1 == _flag) then
-{
-_data = missionNamespace getVariable (_x select 0);
-_profs pushBack [_x select 0,_data select 0,_data select 1];
-};
- 
-} foreach life_prof;
-_packet pushBack _profs;
- 
-switch (playerSide) do {
-case civilian: {
-_packet pushBack life_is_arrested;
-};
-};
- 
-[_packet,"DB_fnc_updateRequest",false,false] spawn life_fnc_MP;
 
 switch (_side) do {
 	case west: {_query = format["UPDATE players SET name='%1', cash='%2', bankacc='%3', cop_gear='%4', cop_licenses='%5' WHERE playerid='%6'",_name,_cash,_bank,_gear,_licenses,_uid];};
