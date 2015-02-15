@@ -29,8 +29,8 @@ if(_zone == "") exitWith {
 _item = switch(true) do {
 	case (_zone in ["apple_1","apple_2","apple_3","apple_4"]): {"apple"};
 	case (_zone in ["peaches_1","peaches_2","peaches_3","peaches_4"]): {"peach"};
-	case (_zone in ["heroin_1"]): {"heroinu"};
-	case (_zone in ["cocaine_1"]): {"cocaine"};
+	case (_zone in ["heroin_1"]): {"heroinUnprocessed"};
+	case (_zone in ["cocaine_1"]): {"cocaineUnprocessed"};
 	case (_zone in ["weed_1"]): {"cannabis"};
 	case (_zone in ["lead_1"]): {"copperore"};
 	case (_zone in ["iron_1"]): {"ironore"};

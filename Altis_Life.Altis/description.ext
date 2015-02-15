@@ -38,6 +38,7 @@ class RscTitles
 	#include "dialog\hud_nameTags.h"
 };
 
+
 class CfgFunctions
 {
 	#include "Functions.h"
@@ -179,5 +180,50 @@ class CfgNotifications
 		description = "%1";
 		duration = 10;
 		priority = 5;
+	};
+    class dog_whine
+	{
+		name = "dog_whine";
+		sound[] = {"sounds\dog_whine.ogg", 1, 1};
+		titles[] = {};
+		
+	};
+	class dog_growl
+	{
+		name = "dog_growl";
+		sound[] = {"sounds\dog_growl.ogg", 1, 1};
+		titles[] = {};
+		
+	};
+	class dog_ruff
+	{
+		name = "dog_ruff";
+		sound[] = {"sounds\dog_ruff.ogg", 1, 1};
+		titles[] = {};
+		
+	};
+	
+	class whistle
+	{
+		name = "whistle";
+		sound[] = {"sounds\whistle.ogg", 1, 1};
+		titles[] = {};
+		
+	};
+
+	class dog_close
+	{
+		name = "dog_close";
+		sound[] = {"sounds\dog_close.ogg", 1, 1};
+		titles[] = {};
+		
+	};
+	
+	class dog_one
+	{
+		name = "dog_one";
+		sound[] = {"sounds\dog_one.ogg", 1, 1};
+		titles[] = {};
+		
 	};
 };
