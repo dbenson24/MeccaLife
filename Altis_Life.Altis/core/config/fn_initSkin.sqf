@@ -47,7 +47,7 @@ while {true} do
 	if(playerSide == independent) then
 	{
 		if (uniform player == "U_Rangemaster") then {
-			player setObjectTextureGlobal[0,"closkins\med\notartzt.paa"];
+			player setObjectTextureGlobal[0,"texture\medic_uniform"];
 			};
 		};
 	};
