@@ -30,15 +30,31 @@ _diff = [SEL(_mine,0),SEL(_mine,1),life_carryWeight,life_maxWeight] call life_fn
 if(EQUAL(_diff,0)) exitWith {hint localize "STR_NOTF_InvFull"};
 
 life_action_inUse = true;
-for "_i" from 0 to 2 do {
-	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
-	waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
-	sleep 2.5;
+ 
+_time = 0;
+_profName = [_gather] call life_fnc_profType;
+if( _profName != "" ) then 
+{
+_data = missionNamespace getVariable (_profName);
+_time = ( 3 - (0.25 * (_data select 0)));
 };
-
-if(([true,SEL(_mine,0),_diff] call life_fnc_handleInv)) then {
-	_itemName = M_CONFIG(getText,"VirtualItems",SEL(_mine,0),"displayName");
-	titleText[format[localize "STR_ISTR_Pick_Success",(localize _itemName),_diff],"PLAIN"];
+ 
+for "_i" from 0 to 2 do
+{
+player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
+waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
+sleep _time;
 };
-
+ 
+ 
+if(([true,_mine,_diff] call life_fnc_handleInv)) then
+{
+_itemName = [([_mine,0] call life_fnc_varHandle)] call life_fnc_varToStr;
+titleText[format[localize "STR_ISTR_Pick_Success",_itemName,_diff],"PLAIN"];
+if( _profName != "" ) then 
+{
+[_profName,25] call life_fnc_addExp;
+};
+};
+ 
 life_action_inUse = false;

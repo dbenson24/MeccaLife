@@ -61,40 +61,94 @@ _cP = 0.01;
 
 life_is_processing = true;
 
-if(_hasLicense) then {
-	while{true} do {
-		sleep  1;
-		_cP = _cP + 0.01;
-		_progress progressSetPosition _cP;
-		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
-		if(_cP >= 1) exitWith {};
-		if(player distance _vendor > 10) exitWith {};
-	};
-	
-	if(player distance _vendor > 10) exitWith {hint localize "STR_Process_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
-	if(!([false,_oldItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
-	if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_oldVal] call life_fnc_handleInv; life_is_processing = false;};
-	5 cutText ["","PLAIN"];
-	titleText[format[localize "STR_Process_Processed",_oldVal,localize _itemName],"PLAIN"];
-	life_is_processing = false;
-} else {
-	if(CASH < _cost) exitWith {hint format[localize "STR_Process_License",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
-	
-	while{true} do {
-		sleep  1;
-		_cP = _cP + 0.01;
-		_progress progressSetPosition _cP;
-		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
-		if(_cP >= 1) exitWith {};
-		if(player distance _vendor > 10) exitWith {};
-	};
-	
-	if(player distance _vendor > 10) exitWith {hint localize "STR_Process_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
-	if(CASH < _cost) exitWith {hint format[localize "STR_Process_License",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
-	if(!([false,_oldItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
-	if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_oldVal] call life_fnc_handleInv; life_is_processing = false;};
-	5 cutText ["","PLAIN"];
-	titleText[format[localize "STR_Process_Processed2",_oldVal,localize _itemName,[_cost] call life_fnc_numberText],"PLAIN"];
-	SUB(CASH,_cost);
-	life_is_processing = false;
-};	
+if(_hasLicense) then
+{
+_time = 0.3;
+_cpUp = 0.01;
+_profName = [_type] call life_fnc_profType;
+_data  = missionNamespace getVariable "_profName";
+if( _profName != "" ) then 
+{
+switch ( _data select 0 ) do
+{
+case 1: { _time = 0.4; _cpUp = 0.01; };
+case 2: { _time = 0.35; _cpUp = 0.01; };
+case 3: { _time = 0.3; _cpUp = 0.01; };
+case 4: { _time = 0.25; _cpUp = 0.01; };
+case 5: { _time = 0.2; _cpUp = 0.01; };
+case 6: { _time = 0.2; _cpUp = 0.02; };
+case 7: { _time = 0.2; _cpUp = 0.03; };
+case 8: { _time = 0.2; _cpUp = 0.04; };
+case 9: { _time = 0.15; _cpUp = 0.05; };
+case 10: { _time = 0.1; _cpUp = 0.07; };
+};
+};
+while{true} do
+{
+sleep _time;
+_cP = _cP + _cpUp;
+_progress progressSetPosition _cP;
+_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
+if(_cP >= 1) exitWith {};
+if(player distance _vendor > 10) exitWith {};
+};
+ 
+if(player distance _vendor > 10) exitWith {hint localize "STR_Process_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+if(!([false,_oldItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
+if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_oldVal] call life_fnc_handleInv; life_is_processing = false;};
+5 cutText ["","PLAIN"];
+titleText[format[localize "STR_Process_Processed",_oldVal,_itemName],"PLAIN"];
+if( _profName != "" ) then 
+{ 
+[_profName,40] call life_fnc_addExp;
+};
+life_is_processing = false;
+}
+else
+{
+if(life_cash < _cost) exitWith {hint format[localize "STR_Process_License",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+ 
+_time = 0.9;
+_cpUp = 0.01;
+ 
+_profName = [_type] call life_fnc_profType;
+_data  = missionNamespace getVariable "_profName";
+if( _profName != "" ) then 
+{
+switch ( _data select 0) do
+{
+case 1: { _time = 0.9; _cpUp = 0.01; };
+case 2: { _time = 0.8; _cpUp = 0.01; };
+case 3: { _time = 0.7; _cpUp = 0.01; };
+case 4: { _time = 0.6; _cpUp = 0.01; };
+case 5: { _time = 0.5; _cpUp = 0.01; };
+case 6: { _time = 0.4; _cpUp = 0.01; };
+case 7: { _time = 0.3; _cpUp = 0.01; };
+case 8: { _time = 0.2; _cpUp = 0.01; };
+case 9: { _time = 0.2; _cpUp = 0.02; };
+case 10: { _time = 0.2; _cpUp = 0.03; };
+};
+};
+while{true} do
+{
+sleep _time;
+_cP = _cP + _cpUp;
+_progress progressSetPosition _cP;
+_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
+if(_cP >= 1) exitWith {};
+if(player distance _vendor > 10) exitWith {};
+};
+ 
+if(player distance _vendor > 10) exitWith {hint localize "STR_Process_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+if(life_cash < _cost) exitWith {hint format[localize "STR_Process_License",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+if(!([false,_oldItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
+if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_oldVal] call life_fnc_handleInv; life_is_processing = false;};
+5 cutText ["","PLAIN"];
+titleText[format[localize "STR_Process_Processed2",_oldVal,_itemName,[_cost] call life_fnc_numberText],"PLAIN"];
+life_cash = life_cash - _cost;
+if( _profName != "" ) then 
+{
+[_profName,40] call life_fnc_addExp;
+};
+life_is_processing = false;
+}; 

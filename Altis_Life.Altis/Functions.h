@@ -129,6 +129,7 @@ class Life_Client_Core
 		class vehicleAnimate {};
 		class weaponShopCfg {};
 		class vehicleWeightCfg {};
+		class profType {};
 	};
 
 	class Player_Menu
@@ -207,6 +208,8 @@ class Life_Client_Core
 		class earplugs {};
 		class handleDowned {};
 		class emptyFuel {};
+		class profSetUp {};
+		class addExp {};
 	};
 	
 	class Network
