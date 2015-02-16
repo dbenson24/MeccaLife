@@ -14,7 +14,6 @@ waitUntil {scriptDone _handle};
 
 //Load player with default cop gear.
 player addUniform "U_BG_Guerilla2_2";
-player addVest "V_TacVest_blk_POLICE";
 player addBackpack "B_Carryall_oucamo";
 
 /* ITEMS */
@@ -31,6 +30,9 @@ player addItem "FirstAidKit";
 player addItem "FirstAidKit";
 player addItem "ToolKit";
 player addItem "ToolKit";
+player addItem "ToolKit";
+player addItem "NVGoggles";
+
 
 if (playerSide == west) then {
 
@@ -43,6 +45,8 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "16Rnd_9x21_Mag";
 		player addMagazine "16Rnd_9x21_Mag";
 		player addMagazine "16Rnd_9x21_Mag";
+		player addVest "V_TacVest_blk_POLICE";
+		If(BANK > 0) then {BANK = BANK - 6000;};
 	};
 	
 	case 2:
@@ -52,6 +56,8 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addVest "V_TacVest_blk_POLICE";
+		If(BANK > 0) then {BANK = BANK - 15000;};
 		
 	};
 	
@@ -62,6 +68,8 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addVest "V_TacVest_blk_POLICE";
+		If(BANK > 0) then {BANK = BANK - 15000;};
 	};
 	
 	case 4:
@@ -71,6 +79,8 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addVest "V_PlateCarrierIAGL_dgtl";
+		If(BANK > 0) then {BANK = BANK - 25000;};
 	};
 	
 	case 5:
@@ -80,6 +90,8 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addVest "V_PlateCarrierIAGL_dgtl";
+		If(BANK > 0) then {BANK = BANK - 25000;};
 	};
 	case 6:
 	{
@@ -88,6 +100,8 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
+		player addVest "V_PlateCarrierIAGL_dgtl";
+		If(BANK > 0) then {BANK = BANK - 25000;};
 	};
 	case 7:
 	{
@@ -96,6 +110,8 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addVest "V_PlateCarrierIAGL_dgtl";
+		If(BANK > 0) then {BANK = BANK - 35000;};
 	};
 	
 };
