@@ -38,9 +38,6 @@ _crimes = LIFE_SETTINGS(getArray,"crimes");
 
 ctrlSetText[2404,"Establishing connection..."];
 
-if (playerSide !== west)
-
-
 if(FETCH_CONST(life_coplevel) < 2 && FETCH_CONST(life_adminlevel) == 0) then
 {
 	ctrlShow[2405,false]; //pardon button
