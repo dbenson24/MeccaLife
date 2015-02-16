@@ -45,6 +45,65 @@ if(!(EQUAL(count (actionKeys "User10"),0)) && {(inputAction "User10" > 0)}) exit
 };
 
 switch (_code) do {
+
+	//Open Wanted
+	case 2:
+	{
+		if(dialog) exitWith {};
+		[] call life_fnc_wantedMenu;
+	};
+	
+
+	//2 Cellphone
+	case 3:
+	{
+		createDialog "life_my_smartphone";
+	};
+	
+	//Takwondo(Traditional Martial arts in korea)(Shift + 2)
+	case 4:
+	{
+		if(_shift) then {_handled = true;};
+			if ((_shift) && (vehicle player == player)) then
+			{
+				cutText [format["Takwondo!!!"], "PLAIN DOWN"];
+				player playMove "AmovPercMstpSnonWnonDnon_exerciseKata";
+			};
+	};
+
+	//Kneebend Slow(Shift + 3)
+	case 5:
+	{
+	if(_shift) then {_handled = true;};
+		if ((_shift) && (vehicle player == player)) then
+		{
+			cutText [format["KneeBend Slow baby~"], "PLAIN DOWN"];
+			player playMove "AmovPercMstpSnonWnonDnon_exercisekneeBendA";
+		};
+	};
+
+	//Kneebend Fast(Shift + 4)
+	case 6:
+	{
+	if(_shift) then {_handled = true;};
+		if ((_shift) && (vehicle player == player)) then
+		{
+			cutText [format["KneeBend more Hard!!!Move!!Move!!"], "PLAIN DOWN"];
+			player playMove "AmovPercMstpSnonWnonDnon_exercisekneeBendB";
+		};
+	};
+
+	//Pushup(Shift + 5)
+	case 7:
+	{
+	if(_shift) then {_handled = true;};
+		if ((_shift) && (vehicle player == player)) then
+		{
+			cutText [format["Pushup!!!!!!"], "PLAIN DOWN"];
+			player playMove "AmovPercMstpSnonWnonDnon_exercisePushup";
+		};
+	};
+	
 	//Space key for Jumping
 	case 57: {
 		if(isNil "jumpActionTime") then {jumpActionTime = 0;};
