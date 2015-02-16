@@ -48,7 +48,14 @@ _type = _queryResult select 0;
 		case "668": {_x = "STR_Crime_668"};
 		case "919": {_x = "STR_Crime_919"};
 		case "919A": {_x = "STR_Crime_919A"};
-		
+		case "5447": {_x = "STR_Crime_5447"};
+		case "5489": {_x = "STR_Crime_5489"};
+		case "1412": {_x = "STR_Crime_1412"};
+		case "1337": {_x = "STR_Crime_1337"};
+		case "13371": {_x = "STR_Crime_13371"};
+		case "4389": {_x = "STR_Crime_4389"};
+		case "4532": {_x = "STR_Crime_4532"};
+		case "5217": {_x = "STR_Crime_5217"};
 		case "1": {_x = "STR_Crime_1"};
 		case "2": {_x = "STR_Crime_2"};
 		case "3": {_x = "STR_Crime_3"};

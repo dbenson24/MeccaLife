@@ -4933,11 +4933,9 @@
 		</Key>
 		<Key ID="STR_Crime_187">
 			<Original>Manslaughter</Original>
-			<German>Manslaughter</German>
-			<French>Manslaughter</French>
-			<Italian>Manslaughter</Italian>		
-			<Portuguese>Manslaughter</Portuguese>
 		</Key>
+		
+		
 		<Key ID="STR_Crime_901">
 			<Original>Escaping Jail</Original>
 			<German>Escaping Jail</German>
@@ -5007,6 +5005,36 @@
 			<French>Hit and run</French>
 			<Italian>Hit and run</Italian>		
 			<Portuguese>Hit and run</Portuguese>
+		</Key>
+		<Key ID="STR_Crime_1018">
+			<Original>Use Of Fire Arms within city limits</Original>
+		</Key>
+		<Key ID="STR_Crime_5447">
+			<Original>Impersonating an officer.</Original>
+		</Key>
+		<Key ID="STR_Crime_5489">
+			<Original>MST Equipment</Original>
+		</Key>
+		<Key ID="STR_Crime_1412">
+			<Original>Possession of an illegal Firearm</Original>
+		</Key>
+		<Key ID="STR_Crime_1337">
+			<Original>Weapon Trafficking</Original>
+		</Key>
+		<Key ID="STR_Crime_13371">
+			<Original>Heavy Weapon Trafficking</Original>
+		</Key>
+		<Key ID="STR_Crime_4389">
+			<Original>Insurance fraud</Original>
+		</Key>
+		<Key ID="STR_Crime_5894">
+		<Original>noise pollution</Original>
+		</Key>
+		<Key ID="STR_Crime_4532">
+		<Original>Hate/Harrasment/verbal threats</Original>
+		</Key>
+		<Key ID="STR_Crime_5217">
+		<Original>Disobeying a trooper.</Original>
 		</Key>
 		<Key ID="STR_Crime_481">
 			<Original>Drug Possession</Original>
@@ -5094,7 +5122,7 @@
 			<Portuguese>Driving over the Speed</Portuguese>
 		</Key>
 		<Key ID="STR_Crime_4">
-			<Original>Reckless Driving</Original>
+			<Original>Reckless Driving MinO</Original>
 			<German>Reckless Driving</German>
 			<French>Reckless Driving</French>
 			<Italian>Reckless Driving</Italian>		
