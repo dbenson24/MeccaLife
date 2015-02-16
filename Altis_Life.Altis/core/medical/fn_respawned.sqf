@@ -28,6 +28,10 @@ switch(playerSide) do
 {
 	case west: {
 		_handle = [] spawn life_fnc_copLoadout;
+		while {BANK > 0} do 
+		{
+			BANK = BANK - 20000
+		};
 	};
 	case civilian: {
 		_handle = [] spawn life_fnc_civLoadout;
