@@ -6,14 +6,23 @@
 	Description:
 	Impounds the vehicle
 */
-private["_vehicle","_type","_time","_price","_vehicleData","_upp","_ui","_progress","_pgText","_cP","_filters"];
+private["_vehicle","_type","_time","_price","_vehicleData","_upp","_ui","_progress","_pgText","_cP","_filters","_vehData","_vehOwnerSide","_sidePlayer"];
 _vehicle = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _filters = ["Car","Air","Ship"];
 if(!((KINDOF_ARRAY(_vehicle,_filters)))) exitWith {};
 if(player distance cursorTarget > 10) exitWith {};
 
 _vehicleData = _vehicle GVAR ["vehicle_info_owners",[]];
+
+_vehData = _vehicle getVariable["dbInfo",[]]; //CopsCantImpoundCopVeh
+
 if(count _vehicleData == 0) exitWith {deleteVehicle _vehicle}; //Bad vehicle.
+
+_vehOwnerSide = (_vehData select 2); //CopsCantImpoundCopVeh
+ _sidePlayer = playerSide; //CopsCantImpoundCopVeh
+ if(_sidePlayer == west && _vehOwnerSide == "cop") exitWith {hint localize "STR_NOTF_CannotImpoundCops";}; //CopsCantImpoundCopVeh
+ 
+ 
 _vehicleName = FETCH_CONFIG2(getText,CONFIG_VEHICLES,(typeOf _vehicle),"displayName");
 [[0,"STR_NOTF_BeingImpounded",true,[SEL(SEL(_vehicleData,0),1),_vehicleName]],"life_fnc_broadcast",true,false] call life_fnc_MP;
 life_action_inUse = true;
