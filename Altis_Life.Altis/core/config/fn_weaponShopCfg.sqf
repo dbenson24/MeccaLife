@@ -329,8 +329,8 @@ switch(_shop) do
 						["srifle_EBR_F","Mk18 ABR 7.62mm",120000 * life_donDis],
 						["20Rnd_762x51_Mag","7.62mm 20Rnd Mag",500 * life_donDis],
 						
-						["srifle_LRR_LRPS_F","M320",35000 * life_donDis],
-						["7Rnd_408_Mag","408 rounds",500 * life_donDis],	
+						["srifle_LRR_LRPS_F","M320",1200000 * life_donDis],
+						["7Rnd_408_Mag","408 rounds",500000 * life_donDis],	
 						
 						
 						["acc_flashlight","Flashlight",500 * life_donDis],						
