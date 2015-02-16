@@ -32,6 +32,7 @@ switch(playerSide) do
 	};
 	case civilian: {
 		_handle = [] spawn life_fnc_civLoadout;
+		BANK = BANK - 3000;
 	};
 	case independent: {
 		_handle = [] spawn life_fnc_medicLoadout;
