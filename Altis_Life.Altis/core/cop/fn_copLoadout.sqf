@@ -79,7 +79,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-		player addVest "V_PlateCarrierIAGL_dgtl";
+		player addVest "V_PlateCarrier2_rgr";
 		If(BANK > 0) then {BANK = BANK - 25000;};
 	};
 	
@@ -90,7 +90,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-		player addVest "V_PlateCarrierIAGL_dgtl";
+		player addVest "V_PlateCarrier2_rgr";
 		If(BANK > 0) then {BANK = BANK - 25000;};
 	};
 	case 6:
@@ -100,7 +100,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
-		player addVest "V_PlateCarrierIAGL_dgtl";
+		player addVest "V_PlateCarrier2_rgr";
 		If(BANK > 0) then {BANK = BANK - 25000;};
 	};
 	case 7:
@@ -110,7 +110,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-		player addVest "V_PlateCarrierIAGL_dgtl";
+		player addVest "V_PlateCarrier2_rgr";
 		If(BANK > 0) then {BANK = BANK - 35000;};
 	};
 	
