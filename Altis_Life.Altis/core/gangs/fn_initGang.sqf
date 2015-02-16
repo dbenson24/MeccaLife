@@ -21,7 +21,7 @@ _exitLoop = false;
 		_groupOwner = _x GVAR ["gang_owner",""];
 		_groupID = _x GVAR "gang_id";
 		if(EQUAL(_groupOwner,"") OR isNil "_groupID") exitWith {}; //Seriously?
-		if(EQUAL(SEL(life_gangData,0),_groupID) && {EQUAL(SEL(life_gangData,1),_groupOwner)}) exitWith {_group = _x; _exitLoop = true;};
+		if((life_gangData select 0) == _groupID && ((life_gangData select 1) == _groupOwner)) exitWith {_group = _x; _exitLoop = true;};
 	};
 } foreach allGroups;
 
