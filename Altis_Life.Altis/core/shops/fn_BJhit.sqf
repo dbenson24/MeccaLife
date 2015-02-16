@@ -316,7 +316,7 @@ if( _ACES ) then
 	if( _total == 21 ) then
 	{
 		_TOTALTXT ctrlSetText format["%1",_total];
-		_win = 4;
+		_win = 2;
 	}
 	else
 	{
@@ -339,7 +339,7 @@ if( _ACES ) then
 				//while using 5 cards, player wins 3X
 				if( _NextCard == 5 ) then 
 				{
-					_win = 4;
+					_win = 2;
 				}
 				else
 				{				
@@ -361,7 +361,7 @@ else
 	//if hit 21, win
 	if( _total == 21 ) then
 	{
-		_win = 4;
+		_win = 2;
 		_gameover = true;
 	}
 	else

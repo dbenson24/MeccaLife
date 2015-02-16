@@ -174,9 +174,6 @@ switch(_shop) do
 						["acc_flashlight","Flashlight",500 * life_donDis],
 						["acc_pointer_IR","IR Laser Pointer",500 * life_donDis],
 						
-						["srifle_GM6_LRPS_F","The Lynx",35000 * life_donDis],
-						["5Rnd_127x108_Mag","12.7mm",500 * life_donDis],
-						
 						["srifle_LRR_LRPS_F","M320",35000 * life_donDis],
 						["7Rnd_408_Mag","408 rounds",500 * life_donDis],	
 						
@@ -218,6 +215,44 @@ switch(_shop) do
 					]
 				];
 			};
+			case (FETCH_CONST(life_coplevel) == 7):
+			{
+				["Captain Equipment Shop",
+					[
+						["FirstAidKit","First Aid Kit",500 * life_donDis],
+						["ToolKit","Tool Kit",500 * life_donDis],
+						["ItemGPS","GPS",50 * life_donDis],
+						["ItemMap","Map",50 * life_donDis], 	
+						["ItemCompass","Compass",50 * life_donDis],						
+						["MineDetector","Mine Detector",10000 * life_donDis],
+						["Binocular","Binocular",100 * life_donDis],
+						["NVGoggles_OPFOR","Police Night Vision Goggles",100 * life_donDis],
+						["hgun_P07_F","P07 9mm",2000 * life_donDis],
+						["hgun_P07_snds_F","P07 9mm Silencer",2500 * life_donDis],
+						["30Rnd_9x21_Mag","9mm 30Rnd Mag",500 * life_donDis],
+						["arifle_sdar_F","SDAR 5.56 mm",2500 * life_donDis],
+						["20Rnd_556x45_UW_mag","5.56mm 20Rnd Dual Purpose Mag",500 * life_donDis],
+						["arifle_MXC_Black_F","MXC 6.5mm",17000 * life_donDis],
+						["arifle_MX_Black_F","MX 6.5 mm",20000 * life_donDis],
+						["arifle_MXM_Black_F","MXM 6.5mm",30000 * life_donDis],
+						["30Rnd_65x39_caseless_mag_Tracer","6.5mm 30Rnd Tracer Mag",500 * life_donDis],
+						["30Rnd_65x39_caseless_mag","6.5mm 30Rnd STANAG Mag",500 * life_donDis],	
+						
+						["srifle_GM6_LRPS_F","The Lynx",35000 * life_donDis],
+						["5Rnd_127x108_Mag","12.7mm",500 * life_donDis],
+						
+						["optic_Hamr","RCO Scope",4000 * life_donDis],
+						["optic_Arco","ARCO Scope",2000 * life_donDis],
+						["optic_MRCO","MRCO Scope",2000 * life_donDis],	
+						["acc_flashlight","Flashlight",500 * life_donDis],
+						["acc_pointer_IR","IR Laser Pointer",500 * life_donDis],	
+						["muzzle_snds_H","6.5mm Suppressor",4000 * life_donDis],
+						["HandGrenade_Stone","Flashbang",1700 * life_donDis],
+						["SmokeShell",nil,1000 * life_donDis]						
+					]
+				];
+			};
+			
 		};
 	};
 	
@@ -294,13 +329,10 @@ switch(_shop) do
 						["srifle_EBR_F","Mk18 ABR 7.62mm",120000 * life_donDis],
 						["20Rnd_762x51_Mag","7.62mm 20Rnd Mag",500 * life_donDis],
 						
-						["srifle_GM6_LRPS_F","The Lynx",920000 * life_donDis],
-						["5Rnd_127x108_Mag","12.7mm",250000 * life_donDis],
+						["srifle_LRR_LRPS_F","M320",35000 * life_donDis],
+						["7Rnd_408_Mag","408 rounds",500 * life_donDis],	
 						
-						["srifle_LRR_LRPS_F","M320",920000 * life_donDis],
-						["7Rnd_408_Mag","408 rounds",250000 * life_donDis],
 						
-	
 						["acc_flashlight","Flashlight",500 * life_donDis],						
 						["optic_ACO_grn","ACO (Green)",10000 * life_donDis],
 						["optic_Aco","ACO (Red)",10000 * life_donDis],

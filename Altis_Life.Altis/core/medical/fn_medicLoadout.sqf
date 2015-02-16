@@ -19,11 +19,16 @@ player addItem "ItemCompass";
 player assignItem "ItemCompass";
 player addItem "ItemWatch";
 player assignItem "ItemWatch";
-player addItem "ItemWatch";
 player addItem "Medikit";
 player addItem "ToolKit";
 player addItem "ToolKit";
 player addItem "ToolKit";
+player addItem	"Chemlight_green";
+player addItem	"Chemlight_red";
+player addItem	"Chemlight_red";
+player addItem	"Chemlight_red";
+player addItem	"Chemlight_yellow";
+player addItem	"Chemlight_blue";
 
 [[player,0,"textures\medic_uniform.jpg"],"life_fnc_setTexture",true,false] call life_fnc_MP;
 
