@@ -33,7 +33,7 @@ class Houses {
 
 	class Land_i_House_Small_03_V1_F {
 		price = 1250000;
-		maxStorage = 3;
+		maxStorage = 2;
 		alarm = true;
 	};
 

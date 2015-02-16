@@ -71,17 +71,17 @@ life_smartphoneTarget = ObjNull;
 
 switch (playerSide) do {
 	case west: {
-		BANK = 7000; //Starting Bank Money
+		BANK = 35000; //Starting Bank Money
 		life_paycheck = 1200; //Paycheck Amount
 	};
 	
 	case civilian: {
-		BANK = 3000; //Starting Bank Money
+		BANK = 35000; //Starting Bank Money
 		life_paycheck = 1200; //Paycheck Amount
 	};
 	
 	case independent: {
-		BANK = 6500;
+		BANK = 35000;
 		life_paycheck = 1200;
 	};
 };
