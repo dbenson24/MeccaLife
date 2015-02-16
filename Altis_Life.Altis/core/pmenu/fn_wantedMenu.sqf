@@ -44,7 +44,7 @@ if(FETCH_CONST(life_coplevel) < 2 && FETCH_CONST(life_adminlevel) == 0) then
 
 };
 
-if (playerSide != west) then
+if !(playerSide = west) then
 {
 	ctrlShow[2407,false]; //add button
 	ctrlShow[2401,false]; //list button
