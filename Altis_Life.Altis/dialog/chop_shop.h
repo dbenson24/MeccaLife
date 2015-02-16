@@ -73,5 +73,17 @@ class Chop_Shop
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
+		
+		class BtnSteal : Life_RscButtonMenu
+		{
+			idc = -1;
+			text = "Make Yours";
+			colorBackground[] = {0,0.2235294117647059,0.3725490196078431,1};
+			onButtonclick = "[] spawn life_fnc_stealVehicle;";
+			x = 0.1 + (((6.25 / 40) + (1 / 250 / (safezoneW / safezoneH)))*2);
+			y = 0.8 - (1 / 25);
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
 	};
 };

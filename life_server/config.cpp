@@ -139,6 +139,7 @@ class CfgFunctions
 			class cleanupRequest {};
 			class setObjVar {};
 			class keyManagement {};
+			class vehicleisdead {};
 		};
 		
 		class Housing
