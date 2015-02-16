@@ -13,14 +13,19 @@ disableSerialization;
 switch(playerSide) do {
 	case west: {
 		ctrlShow[2011,false];
+		
+		if(FETCH_CONST(life_coplevel) == 1) then
+		{
+			ctrlShow[2012,false];
+		};	
 	};
 	
 	case civilian: {
-		//ctrlShow[2012,false]; Civs can see wanted list
+		ctrlShow[2012,false]; Civs cannot see wanted list
 	};
 	
 	case independent: {
-		//ctrlShow[2012,false]; Medics can see wanted list.
+		ctrlShow[2012,false]; Medics cannot see wanted list.
 	};
 };
 
