@@ -28,14 +28,15 @@ switch(playerSide) do
 {
 	case west: {
 		_handle = [] spawn life_fnc_copLoadout;
-		BANK = BANK - 15000;
+		 If(BANK > 0) then {BANK = BANK - 20000;};
 	};
 	case civilian: {
 		_handle = [] spawn life_fnc_civLoadout;
-		BANK = BANK - 3000;
+		 If(BANK > 0) then {BANK = BANK - 20000;};
 	};
 	case independent: {
 		_handle = [] spawn life_fnc_medicLoadout;
+		
 	};
 	waitUntil {scriptDone _handle};
 };
