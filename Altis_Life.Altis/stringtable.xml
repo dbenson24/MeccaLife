@@ -725,6 +725,13 @@
 			<Italian>Questo Covo è controllato da %1.&lt;br/&gt;&lt;br/&gt;Sicuro di voler prendere il controllo della loro area?</Italian>
 			<Portuguese>Esse esconderijo é controlado por %1.&lt;br/&gt;&lt;br/&gt;Você tem certeza que deseja tomar essa área?</Portuguese>
 		</Key>
+		<Key ID="STR_GNOTF_AlreadyControlledreb">
+			<Original>This hideout is controlled by %1.&lt;br/&gt;&lt;br/&gt;Are you sure you want to take over their Rebel Hideout?</Original>
+			<German>Das Versteck wird durch %1 kontrolliert.&lt;br/&gt;&lt;br/&gt;Bist du sicher, dass du ihr Gang Gebiet übernehmen möchtest?</German>
+			<French>Cette cachette est contrôlée par %1.&lt;br/&gt;&lt;br/&gt;Etes-vous sûr que vous voulez prendre en charge leur zone de gang?</French>
+			<Italian>Questo Covo è controllato da %1.&lt;br/&gt;&lt;br/&gt;Sicuro di voler prendere il controllo della loro area?</Italian>
+			<Portuguese>Esse esconderijo é controlado por %1.&lt;br/&gt;&lt;br/&gt;Você tem certeza que deseja tomar essa área?</Portuguese>
+		</Key>
 		<Key ID="STR_GNOTF_CurrentCapture">
 			<Original>Hideout is currently under control...</Original>
 			<German>Versteck ist derzeit unter Kontrolle...</German>
@@ -748,6 +755,13 @@
 		</Key>
 		<Key ID="STR_GNOTF_CaptureSuccess">
 			<Original>%1 and his gang: %2 - have taken control of a local hideout!</Original>
+			<German>%1 und seine Gang: 2% - haben die Kontrolle über ein lokales Versteck übernommen!</German>
+			<French>%1 et sa gang: %2 ont pris le controle de la cachette !</French>
+			<Italian>%1 e la sua Gang: % 2 - hanno preso il controllo di un Covo!</Italian>
+			<Portuguese>%1 e sua gangue: %2 - agora tem o controle de um esconderijo!</Portuguese>
+		</Key>
+		<Key ID="STR_GNOTF_CaptureSuccessreb">
+			<Original>%1 and his gang: %2 - have taken control of a Rebel hideout!</Original>
 			<German>%1 und seine Gang: 2% - haben die Kontrolle über ein lokales Versteck übernommen!</German>
 			<French>%1 et sa gang: %2 ont pris le controle de la cachette !</French>
 			<Italian>%1 e la sua Gang: % 2 - hanno preso il controllo di un Covo!</Italian>

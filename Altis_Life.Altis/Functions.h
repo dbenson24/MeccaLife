@@ -98,6 +98,7 @@ class Life_Client_Core
 		class storeVehicle {};
 		class robAction {};
 		class captureHideout {};
+		class captureRebelHideout {};
 		class gather {};
 		class gutAnimal {};
 		class copPullOutAction {};

@@ -99,7 +99,7 @@
 						player removeWeapon (handGunWeapon player);
 						removeAllWeapons player;
 						
-						endMission "LOSER";
+						endMission "Please Do Not Spam our server.";
 					};
 				};
 			};
