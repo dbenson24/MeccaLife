@@ -21,11 +21,11 @@ switch(playerSide) do {
 	};
 	
 	case civilian: {
-		ctrlShow[2012,false]; Civs cannot see wanted list
+		ctrlShow[2012,false]; 
 	};
 	
 	case independent: {
-		ctrlShow[2012,false]; Medics cannot see wanted list.
+		ctrlShow[2012,false]; 
 	};
 };
 
