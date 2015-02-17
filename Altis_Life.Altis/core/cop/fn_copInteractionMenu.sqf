@@ -71,40 +71,40 @@ life_pInact_curTarget = _curTarget;
 
 //Set Unrestrain Button
 _Btn1 ctrlSetText localize "STR_pInAct_Unrestrain";
-_Btn1 buttonSetAction "[life_pInact_curTarget] call life_fnc_unrestrain; closeDialog 0;";
+_Btn1 buttonSetAction "if(player distance life_pInact_curTarget > 4) exitWith {hint 'You are too far away.'};[life_pInact_curTarget] call life_fnc_unrestrain; closeDialog 0;";
 
 //Set Check Licenses Button
 _Btn2 ctrlSetText localize "STR_pInAct_checkLicenses";
-_Btn2 buttonSetAction "[[player],""life_fnc_licenseCheck"",life_pInact_curTarget,FALSE] call life_fnc_MP";
+_Btn2 buttonSetAction "if(player distance life_pInact_curTarget > 4) exitWith {hint 'You are too far away.'};[[player],""life_fnc_licenseCheck"",life_pInact_curTarget,FALSE] call life_fnc_MP";
 
 _Btn3 ctrlSetText localize "STR_pInAct_RevokeLicense";
-_Btn3 buttonSetAction "[life_pInact_curTarget] call life_fnc_revokeLicense;";
+_Btn3 buttonSetAction "if(player distance life_pInact_curTarget > 4) exitWith {hint 'You are too far away.'};[life_pInact_curTarget] call life_fnc_revokeLicense;";
 
 //Set Search Button
 _Btn4 ctrlSetText localize "STR_pInAct_SearchPlayer";
-_Btn4 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_searchAction; closeDialog 0;";
+_Btn4 buttonSetAction "if(player distance life_pInact_curTarget > 4) exitWith {hint 'You are too far away.'};[life_pInact_curTarget] spawn life_fnc_searchAction; closeDialog 0;";
 
 //Set Escort Button
 if((_curTarget getVariable["Escorting",false])) then {
 	_Btn5 ctrlSetText localize "STR_pInAct_StopEscort";
-	_Btn5 buttonSetAction "[life_pInact_curTarget] call life_fnc_stopEscorting; [life_pInact_curTarget] call life_fnc_copInteractionMenu;";
+	_Btn5 buttonSetAction "if(player distance life_pInact_curTarget > 4) exitWith {hint 'You are too far away.'};[life_pInact_curTarget] call life_fnc_stopEscorting; [life_pInact_curTarget] call life_fnc_copInteractionMenu;";
 } else {
 	_Btn5 ctrlSetText localize "STR_pInAct_Escort";
-	_Btn5 buttonSetAction "[life_pInact_curTarget] call life_fnc_escortAction; closeDialog 0;";
+	_Btn5 buttonSetAction "if(player distance life_pInact_curTarget > 4) exitWith {hint 'You are too far away.'};[life_pInact_curTarget] call life_fnc_escortAction; closeDialog 0;";
 };
 
 //Set Ticket Button
 _Btn6 ctrlSetText localize "STR_pInAct_TicketBtn";
-_Btn6 buttonSetAction "[life_pInact_curTarget] call life_fnc_ticketAction;";
+_Btn6 buttonSetAction "if(player distance life_pInact_curTarget > 4) exitWith {hint 'You are too far away.'};[life_pInact_curTarget] call life_fnc_ticketAction;";
 
 _Btn7 ctrlSetText localize "STR_pInAct_Arrest";
-_Btn7 buttonSetAction "[life_pInact_curTarget] call life_fnc_arrestAction;";
+_Btn7 buttonSetAction "if(player distance life_pInact_curTarget > 4) exitWith {hint 'You are too far away.'};[life_pInact_curTarget] call life_fnc_arrestAction;";
 
 _Btn8 ctrlSetText localize "STR_pInAct_PutInCar";
-_Btn8 buttonSetAction "[life_pInact_curTarget] call life_fnc_putInCar;";
+_Btn8 buttonSetAction "if(player distance life_pInact_curTarget > 4) exitWith {hint 'You are too far away.'};[life_pInact_curTarget] call life_fnc_putInCar;";
 
 _Btn9 ctrlSetText localize "STR_pInAct_SeizeWeapon";
-_Btn9 buttonSetAction "[life_pInact_curTarget] call life_fnc_seizePlayerWeapon;";
+_Btn9 buttonSetAction "if(player distance life_pInact_curTarget > 4) exitWith {hint 'You are too far away.'};[life_pInact_curTarget] call life_fnc_seizePlayerWeapon;";
 
 //Check that you are near a place to jail them.
 if(!((player distance (getMarkerPos "police_hq_1") < 30) OR  (player distance (getMarkerPos "police_hq_2") < 30) OR (player distance (getMarkerPos "cop_spawn_3") < 30) OR (player distance (getMarkerPos "cop_spawn_5") < 30))) then  {
