@@ -8863,7 +8863,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=329;
+		items=330;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -11478,6 +11478,14 @@ class Mission
 			type="hd_warning";
 			colorName="ColorRed";
 			angle=-358.09299;
+		};
+		class Item329
+		{
+			position[]={10776.254,83.85775,8238.5723};
+			name="Not Yet Functional But getting there.";
+			text="Not Yet Functional But getting there.";
+			type="mil_destroy";
+			colorName="ColorRed";
 		};
 	};
 };
