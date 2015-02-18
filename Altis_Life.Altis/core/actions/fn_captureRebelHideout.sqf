@@ -86,8 +86,6 @@ _this select 0 setFlagTexture _flagTexture;
 [[[0,1],"STR_GNOTF_CaptureSuccessreb",true,[name player,(group player) getVariable "gang_name"]],"life_fnc_broadcast",true,false] call life_fnc_MP;
 _hideout setVariable["inCapture",false,true];
 _hideout setVariable["gangOwner",grpPlayer,true];
-// CREATE MARKER AT MAP BY Pictureclass
- 
 _markername = str(getPos _hideout);
 _gangname2 = formatText["Captured by: %1",(group player) getVariable "gang_name"];
 if (getMarkerColor _markername == "") then 
