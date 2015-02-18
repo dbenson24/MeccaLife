@@ -28,6 +28,8 @@ class Clothing {
 			{ "U_IG_Guerilla2_3", "The Outback Rangler", 700, { "", "", -1 } },
 			{ "U_C_HunterBody_grn", "The Hunters Look", 700, { "", "", -1 } },
 			{ "U_OrestesBody", "Surfing On Land", 1100, { "", "", -1 } },
+			
+			
 		};
 
 		headgear[] = {
@@ -109,7 +111,7 @@ class Clothing {
 			{ "H_HelmetB_plain_mcamo", "", 75, { "life_coplevel", "SCALAR", 1 } },
 			{ "H_Booniehat_mcamo", "", 120, { "life_coplevel", "SCALAR", 1 } },
 			{ "H_MilCap_mcamo", "", 100, { "life_coplevel", "SCALAR", 2 } },
-			{ "Headgear_H_Beret_blk_POLICE", "Officers Only Beret", 100, { "life_coplevel", "SCALAR", 3 } }
+			{ "H_Beret_blk_POLICE", "Officers Only Beret", 100, { "life_coplevel", "SCALAR", 3 } }
 		};
 
 		goggles[] = {
@@ -193,7 +195,10 @@ class Clothing {
 			{ "U_IG_Guerilla2_3", "The Outback Rangler", 1200, { "", "", -1 } },
 			{ "U_C_HunterBody_grn", "The Hunters Look", 1500, { "", "", -1 } },
 			{ "U_OrestesBody", "Surfing On Land", 1100, { "", "", -1 } },
-			{ "U_NikosAgedBody", "Casual Wears", 5000, { "", "", -1 } }
+			{ "U_B_GhillieSuit", "Nato", 100000, { "life_donatorlevel", "SCALAR", 4 } }
+			
+			
+			
 		};
 
 		headgear[] = {
@@ -228,7 +233,8 @@ class Clothing {
 			{ "H_Cap_oli", "", 150, { "", "", -1 } },
 			{ "H_Cap_red", "", 150, { "", "", -1 } },
 			{ "H_Cap_tan", "", 150, { "", "", -1 } },
-			{ "H_HelmetCrew_B", "", 25000, { "", "", -1 } }
+			{ "H_HelmetCrew_B", "", 25000, { "", "", -1 } },
+			{ "H_CrewHelmetHeli_I", "Donor Helmet", 100000, { "life_donatorlevel", "SCALAR", 3 } }
 		};
 
 		goggles[] = {
@@ -257,7 +263,8 @@ class Clothing {
 			{ "V_BandollierB_cbr", "", 4500, { "", "", -1 } },
 			{ "V_HarnessO_brn", "", 70000, { "", "", -1 } },
 			{ "V_Rangemaster_belt", "", 1800, { "", "", -1 } },
-			{ "V_PlateCarrier2_rgr", "", 200000, { "", "", -1 } }
+			{ "V_PlateCarrier2_rgr", "", 200000, { "", "", -1 } },
+			{ "V_PlateCarrierIAGL_dgtl", "Carrier Rig Donor", 200000, { "life_donatorlevel", "SCALAR", 2 } }
 		};
 
 		backpacks[] = {

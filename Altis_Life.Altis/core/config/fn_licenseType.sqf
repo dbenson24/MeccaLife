@@ -43,6 +43,7 @@ switch (_mode) do
 			case "vigilante": {_var = "license_civ_vigilante"};
 			case "news": {_var = "license_civ_news"};
 			case "law": {_var = "license_civ_law"};
+			case "taxi": {_var = "license_civ_taxi"};
 			default {_var = ""};
 		};
 	};
@@ -78,6 +79,7 @@ switch (_mode) do
 			case "license_civ_vigilante": {_var = "vigilante"};
 			case "license_civ_news": {_var = "news"};
 			case "license_civ_law": {_var = "law"};
+			case "license_civ_taxi": {_var = "taxi"};
 			default {_var = ""};
 		};
 	};

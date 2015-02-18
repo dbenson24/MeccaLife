@@ -202,6 +202,8 @@ class Licenses {
 	LICENSEMACRO(vigilante,"STR_License_Vigilante","vigilante",60000,false,"civ")
 	LICENSEMACRO(news,"STR_License_News","news",250000,false,"civ")
 	LICENSEMACRO(law,"STR_License_Law","law",250000,false,"civ")
+	LICENSEMACRO(taxi,"STR_License_Taxi","taxi",250000,false,"civ")
+};
 };
 
 class VirtualShops {

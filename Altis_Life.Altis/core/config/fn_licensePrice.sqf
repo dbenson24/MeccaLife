@@ -38,4 +38,5 @@ switch (_type) do
 	case "vigilante": {60000}; //Vigilante License Price
 	case "news": {60000}; //News License Price
 	case "law": {250000}; //Law Degree Price
+	case "taxi": {250000}; //taxi Price
 };

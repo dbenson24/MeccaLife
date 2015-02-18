@@ -786,7 +786,7 @@
 			<German>Du hast nicht genug Geld auf deinem Bankkonto.\n\nDir fehlen: $%1</German>
 			<French>Vous n'avez pas assez d'argent dans votre compte bancaire.\n\nVous manquez de: $%1</French>
 			<Italian>Non hai abbastanza fondi nel tuo conto in banca.\n\nTi mancano: €%1</Italian>
-			<Portuguese>Você não tem dinheiro suficiente na sua conta bancária.\n\nFaltam: R$%1</Portuguese>
+			<Portuguese>Você não tem dinheiro suficiente na sua conta bancária.\n\nFaltam: $%1</Portuguese>
 		</Key>
 		<Key ID="STR_GNOTF_CreateSuccess">
 			<Original>You have created the gang %1 for $%2</Original>
@@ -3632,6 +3632,9 @@
 		</Key>
 		<Key ID="STR_License_Law">
 			<Original>Law Degree</Original>
+		</Key>
+		<Key ID="STR_License_Taxi">
+			<Original>Taxi licenses</Original>
 		</Key>
 	</Package>
 	<Package name="More_Item_Strings">
