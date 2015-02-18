@@ -356,6 +356,84 @@ switch(_shop) do
 			};
 		};
 	};
+	case "rebelA":
+	{
+		switch(true) do
+		{
+			case (playerSide != civilian): {"You are not a cop!"};
+			case (!license_civ_rebel): {"You don't have a Rebel training license!"};
+			default
+			{
+				["Rebel Weapon Shop",
+					[
+						["FirstAidKit","First Aid Kit",500 * life_donDis],
+						["ToolKit","Tool Kit",500 * life_donDis],
+						["ItemGPS","GPS",50 * life_donDis],
+						["ItemMap","Map",50 * life_donDis], 	
+						["ItemCompass","Compass",50 * life_donDis],						
+						["MineDetector","Mine Detector",10000 * life_donDis],
+						["Binocular","Binocular",1000 * life_donDis],
+						["NVGoggles_INDEP","Green Night Vision Goggles",1000 * life_donDis],
+						["NVGoggles","Brown Night Vision Goggles",1000 * life_donDis],
+						
+						["hgun_Rook40_F","Rook-40 9mm",5000 * life_donDis],
+						["30Rnd_9x21_Mag","9mm 30Rnd Mag",500 * life_donDis],		
+						
+						["hgun_PDW2000_F","PDW2000 9 mm",10000 * life_donDis],
+						["30Rnd_9x21_Mag","9mm 30Rnd Mag",500 * life_donDis],
+						
+						["arifle_sdar_F","SDAR 5.56 mm",25000 * life_donDis],
+						["20Rnd_556x45_UW_mag","5.56mm 20Rnd Dual Purpose Mag",500 * life_donDis],
+
+						["hgun_Pistol_heavy_02_F","Zubr .45",35000 * life_donDis],
+						["6Rnd_45ACP_Cylinder",".45 ACP 6Rnd Cylinder",500 * life_donDis],	
+						
+						["arifle_Mk20C_F","Mk20C 5.56 mm (C)",50000 * life_donDis],
+						["30Rnd_556x45_Stanag","5.56mm 30rnd STANAG Mag",500 * life_donDis],
+						
+						["arifle_TRG20_F","TRG-20 5.56mm",50000 * life_donDis],
+						["30Rnd_556x45_Stanag","5.56mm 30rnd STANAG Mag",500 * life_donDis],
+
+						["arifle_TRG21_F","TRG-21 5.56mm",50000 * life_donDis],
+						["30Rnd_556x45_Stanag","5.56mm 30rnd STANAG Mag",500 * life_donDis],
+						
+						["arifle_Katiba_F","Katiba 6.5mm",65000 * life_donDis],
+						["30Rnd_65x39_caseless_green","6.5mm 30Rnd STANAG Mag",500 * life_donDis],
+						
+						["SMG_01_F","Vermin SMG .45 ACP",70000 * life_donDis],
+						["30Rnd_45ACP_Mag_SMG_01",".45 ACP 30Rnd Vermin Mag",500 * life_donDis],
+						
+						["srifle_DMR_01_F","Rahim 7.62mm",100000 * life_donDis],
+						["10Rnd_762x51_Mag","7.62mm 10Rnd Mag",500 * life_donDis],
+						
+						["srifle_EBR_F","Mk18 ABR 7.62mm",120000 * life_donDis],
+						["20Rnd_762x51_Mag","7.62mm 20Rnd Mag",500 * life_donDis],
+						
+						["srifle_LRR_LRPS_F","M320",1200000 * life_donDis],
+						["7Rnd_408_Mag","408 rounds",500000 * life_donDis],	
+						
+						
+						["acc_flashlight","Flashlight",500 * life_donDis],						
+						["optic_ACO_grn","ACO (Green)",10000 * life_donDis],
+						["optic_Aco","ACO (Red)",10000 * life_donDis],
+						["optic_MRCO","MRCO Scope",20000 * life_donDis],
+						["optic_Holosight","MK17 Holosight",25000 * life_donDis],
+						["optic_Arco","ARCO scope",20000 * life_donDis],
+						["acc_pointer_IR","IR Laser Pointer",500 * life_donDis],
+
+						["SmokeShell",nil,1000 * life_donDis],
+						["SmokeShellRed",nil,1000 * life_donDis],
+						["SmokeShellGreen",nil,1000 * life_donDis],
+						["SmokeShellYellow",nil,1000 * life_donDis],
+						["SmokeShellPurple",nil,1000 * life_donDis],
+						["SmokeShellBlue",nil,1000 * life_donDis],
+						["SmokeShellOrange",nil,1000 * life_donDis],
+						["HandGrenade",nil,50000 * life_donDis]
+					]
+				];
+			};
+		};
+	};
 	
 	case "gun":
 	{
