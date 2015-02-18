@@ -7,34 +7,7 @@
 */
 while {true} do
 	{
-	if(playerSide == civilian) then 
-	{
-		if (uniform player == "U_C_HunterBody_grn") then {
-		switch (FETCH_CONST(life_donator)) do 
-		{
-
-			case 1:
-			{
-			};
-	
-			case 2:
-			{
-			};
-	
-			case 3:
-			{
-			};
-	
-			case 4:
-			{
-			};
-	
-			case 5:
-			{
-			[[player,0,"textures\Cloth_Hunter_Monogatari.paa"], "life_fnc_setTexture", true, false] call life_fnc_MP;
-			};
-		};
-	};
+	if(playerSide == civilian) exitWith {};
 	if(playerSide == west) then 
 	{
 		if (uniform player == "U_BG_Guerilla2_2") then {
@@ -78,5 +51,5 @@ while {true} do
 			};
 		};
 	};
-	sleep 15;//safe some cpu
+	sleep 8;//safe some cpu
 };
