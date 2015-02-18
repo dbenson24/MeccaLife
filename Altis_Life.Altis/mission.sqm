@@ -8707,35 +8707,35 @@ class Mission
 		};
 		class Item424
 		{
-			position[]={8902.7217,66.86026,7484.8569};
+			position[]={8908.5449,67.1427,7486.5396};
 			offsetY=-0.0107651;
 			id=675;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			skill=0.60000002;
-			text="gang_Rebelflag_1_1";
+			text="gang_Rebelflag_1";
 			init="this allowDamage false; this addAction [""Capture Gang Area"",life_fnc_captureRebelHideout,"""",0,false,false,"""",' playerSide == civilian && !isNil {(group player) getVariable ""gang_owner""}'];";
 		};
 		class Item425
 		{
-			position[]={11873.203,15.569087,9450.3027};
+			position[]={11873.728,15.6619,9448.0088};
 			offsetY=-0.0107651;
 			id=676;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			skill=0.60000002;
-			text="gang_Rebelflag_1_2";
+			text="gang_Rebelflag_2";
 			init="this allowDamage false; this addAction [""Capture Gang Area"",life_fnc_captureRebelHideout,"""",0,false,false,"""",' playerSide == civilian && !isNil {(group player) getVariable ""gang_owner""}'];";
 		};
 		class Item426
 		{
-			position[]={11553.77,79.620499,7067.2627};
+			position[]={11572.47,78.203331,7058.353};
 			offsetY=-0.0107651;
 			id=677;
 			side="EMPTY";
 			vehicle="FlagPole_F";
 			skill=0.60000002;
-			text="gang_rebelflag_1_3";
+			text="gang_rebelflag_3";
 			init="this allowDamage false; this addAction [""Capture Gang Area"",life_fnc_captureRebelHideout,"""",0,false,false,"""",' playerSide == civilian && !isNil {(group player) getVariable ""gang_owner""}'];";
 		};
 		class Item427
@@ -11380,7 +11380,7 @@ class Mission
 		};
 		class Item326
 		{
-			position[]={8892.5566,65.364151,7506.501};
+			position[]={8907.2881,67.029625,7480.6377};
 			name="gang_Rebelarea";
 			text="Rebel Hideout 2";
 			type="hd_warning";
@@ -11398,7 +11398,7 @@ class Mission
 		};
 		class Item328
 		{
-			position[]={11828.332,17.665384,9441.624};
+			position[]={11871.47,16.138544,9443.1768};
 			name="gang_Rebelarea_2";
 			text="Rebel Hideout 1";
 			type="hd_warning";
