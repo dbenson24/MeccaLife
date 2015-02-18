@@ -4269,7 +4269,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=432;
+		items=439;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -8740,17 +8740,16 @@ class Mission
 		};
 		class Item427
 		{
-			position[]={10408.735,67.618454,8718.2783};
-			azimut=0.026865199;
+			position[]={8922.1826,67.457199,7475.9619};
+			offsetY=-0.2;
 			id=678;
 			side="EMPTY";
-			vehicle="Land_Pallet_MilBoxes_F";
+			vehicle="Land_u_Barracks_V2_F";
 			skill=0.60000002;
-			init="this allowDamage false; this enableSimulation false; this addAction[""Rebel Armament"",life_fnc_weaponShopMenu,""rebelA"",0,false,false,"""",' _b = nearestBuilding (getPosATL player); !isNil {_b getVariable ""gangOwner""} && {(_b getVariable ""gangOwner"") == (group player)} && playerSide == civilian ']; this setVariable[""realname"",""Rebel Armament""];";
 		};
 		class Item428
 		{
-			position[]={8922.1826,67.457199,7475.9619};
+			position[]={10407.979,64.66832,8687.1367};
 			id=679;
 			side="EMPTY";
 			vehicle="Land_u_Barracks_V2_F";
@@ -8759,16 +8758,19 @@ class Mission
 		};
 		class Item429
 		{
-			position[]={10407.979,64.66832,8687.1367};
+			position[]={11878.152,16.381744,9429.8291};
+			azimut=90;
+			offsetY=-8;
 			id=680;
 			side="EMPTY";
 			vehicle="Land_u_Barracks_V2_F";
 			skill=0.60000002;
-			init="this setVectorUp [0,0,1]";
 		};
 		class Item430
 		{
-			position[]={11878.152,16.381744,9429.8291};
+			position[]={11567.11,77.11866,7046.0142};
+			azimut=25;
+			offsetY=0.27000001;
 			id=681;
 			side="EMPTY";
 			vehicle="Land_u_Barracks_V2_F";
@@ -8777,14 +8779,86 @@ class Mission
 		};
 		class Item431
 		{
-			position[]={11567.11,77.11866,7046.0142};
-			azimut=25;
-			offsetY=0.30000001;
+			position[]={11873.291,16.325871,9431.7217};
+			azimut=0.026865199;
+			offsetY=4;
 			id=682;
 			side="EMPTY";
-			vehicle="Land_u_Barracks_V2_F";
+			vehicle="Land_Pallet_MilBoxes_F";
 			skill=0.60000002;
-			init="this setVectorUp [0,0,1]";
+			init="this allowDamage false; this enableSimulation false; this addAction[""Rebel Armament"",life_fnc_weaponShopMenu,""rebelA"",0,false,false,"""",' _b = nearestBuilding (getPosATL player); !isNil {_b getVariable ""gangOwner""} && {(_b getVariable ""gangOwner"") == (group player)} && playerSide == civilian ']; this setVariable[""realname"",""Rebel Armament""];";
+		};
+		class Item432
+		{
+			position[]={8920.2393,67.344231,7475.3237};
+			azimut=0.026865199;
+			offsetY=4;
+			id=683;
+			side="EMPTY";
+			vehicle="Land_Pallet_MilBoxes_F";
+			skill=0.60000002;
+			init="this allowDamage false; this enableSimulation false; this addAction[""Rebel Armament"",life_fnc_weaponShopMenu,""rebelA"",0,false,false,"""",' _b = nearestBuilding (getPosATL player); !isNil {_b getVariable ""gangOwner""} && {(_b getVariable ""gangOwner"") == (group player)} && playerSide == civilian ']; this setVariable[""realname"",""Rebel Armament""];";
+		};
+		class Item433
+		{
+			position[]={11563.005,77.538109,7050.0063};
+			azimut=0.026865199;
+			offsetY=4;
+			id=684;
+			side="EMPTY";
+			vehicle="Land_Pallet_MilBoxes_F";
+			skill=0.60000002;
+			init="this allowDamage false; this enableSimulation false; this addAction[""Rebel Armament"",life_fnc_weaponShopMenu,""rebelA"",0,false,false,"""",' _b = nearestBuilding (getPosATL player); !isNil {_b getVariable ""gangOwner""} && {(_b getVariable ""gangOwner"") == (group player)} && playerSide == civilian ']; this setVariable[""realname"",""Rebel Armament""];";
+		};
+		class Item434
+		{
+			position[]={11887.943,16.010569,9428.8184};
+			azimut=90;
+			offsetY=-8;
+			id=685;
+			side="EMPTY";
+			vehicle="Land_BagBunker_Large_F";
+			skill=0.60000002;
+		};
+		class Item435
+		{
+			position[]={11887.802,16.332638,9419.0664};
+			azimut=90;
+			offsetY=-8;
+			id=686;
+			side="EMPTY";
+			vehicle="Land_BagBunker_Large_F";
+			skill=0.60000002;
+		};
+		class Item436
+		{
+			position[]={8938.7578,67.240517,7476.6304};
+			azimut=270;
+			offsetY=-8;
+			id=687;
+			side="EMPTY";
+			vehicle="Land_BagBunker_Small_F";
+			skill=0.60000002;
+		};
+		class Item437
+		{
+			position[]={8930.9385,67.338989,7483.0679};
+			azimut=5;
+			offsetY=-8;
+			id=688;
+			side="EMPTY";
+			vehicle="Land_BagBunker_Small_F";
+			skill=0.60000002;
+		};
+		class Item438
+		{
+			position[]={8920.4902,67.461304,7483.0596};
+			azimut=270;
+			offsetY=-8;
+			id=689;
+			side="EMPTY";
+			vehicle="Land_BagBunker_Small_F";
+			skill=0.60000002;
 		};
 	};
 	class Markers
