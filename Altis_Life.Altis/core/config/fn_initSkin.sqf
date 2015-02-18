@@ -10,7 +10,7 @@ while {true} do
 	if(playerSide == civilian) then 
 	{
 		if (uniform player == "U_C_HunterBody_grn") then {
-		switch (FETCH_CONST(life_coplevel)) do 
+		switch (FETCH_CONST(life_donatorlevel)) do 
 		{
 
 			case 1:
