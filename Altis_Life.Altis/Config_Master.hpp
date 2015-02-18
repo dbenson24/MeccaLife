@@ -204,7 +204,7 @@ class Licenses {
 	LICENSEMACRO(law,"STR_License_Law","law",250000,false,"civ")
 	LICENSEMACRO(taxi,"STR_License_Taxi","taxi",250000,false,"civ")
 };
-};
+
 
 class VirtualShops {
 	class market {
