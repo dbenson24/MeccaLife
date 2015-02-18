@@ -3,10 +3,10 @@
 /*
 	File: fn_copLoadout.sqf
 	Author: Bryan "Tonic" Boardwine
-	Edited: Itsyuka
+	Edited: UnNamed
 	
 	Description:
-	Loads the cops out with the default gear.
+	Loads the cops out with the default gear based on cop level
 */
 private["_handle"];
 _handle = [] spawn life_fnc_stripDownPlayer;
@@ -16,7 +16,7 @@ waitUntil {scriptDone _handle};
 player addUniform "U_BG_Guerilla2_2";
 player addBackpack "B_Carryall_oucamo";
 
-/* ITEMS */
+/* Basic ITEMS */
 player addItem "ItemMap";
 player assignItem "ItemMap";
 player addItem "ItemCompass";
