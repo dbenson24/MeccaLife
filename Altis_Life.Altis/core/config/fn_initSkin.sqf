@@ -7,42 +7,34 @@
 */
 while {true} do
 	{
-	if(playerSide == civilian)
-	{	
-		if (uniform player == "U_BG_Guerilla2_2") then {
+	if(playerSide == civilian) then 
+	{
+		if (uniform player == "U_C_HunterBody_grn") then {
 		switch (FETCH_CONST(life_donator)) do 
 		{
 
 			case 1:
 			{
-			[[player,0,"textures\cadetTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
 			};
 	
 			case 2:
 			{
-			[[player,0,"textures\stateTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
 			};
 	
 			case 3:
 			{
-			[[player,0,"textures\stateTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
 			};
 	
 			case 4:
 			{
-			[[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
 			};
 	
 			case 5:
 			{
-			[[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
-			};
-			case 6:
-			{
-			[[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+			[[player,0,"textures\Cloth_Hunter_Monogatari.paa"], "life_fnc_setTexture", true, false] call life_fnc_MP;
 			};
 		};
-	};]
+	};
 	if(playerSide == west) then 
 	{
 		if (uniform player == "U_BG_Guerilla2_2") then {
@@ -86,5 +78,5 @@ while {true} do
 			};
 		};
 	};
-	sleep 8;//safe some cpu
+	sleep 15;//safe some cpu
 };
