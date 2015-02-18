@@ -115,5 +115,5 @@ switch (FETCH_CONST(life_coplevel)) do {
 	};
 	
 };
-};
+
 [] call life_fnc_saveGear;

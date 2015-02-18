@@ -6,7 +6,7 @@
 	Skin changer
 */
 while {true} do
-	{
+{
 	if(playerSide == civilian) then 
 	{
 		if (uniform player == "U_C_HunterBody_grn") then {
