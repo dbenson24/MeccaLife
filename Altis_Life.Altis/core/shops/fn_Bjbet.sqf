@@ -185,7 +185,7 @@ _TOTALTXT ctrlSetText format["%1",_total];
 
 if( _total == 21 ) then 
 { 
-	_win = 4 * _betamt;
+	_win = 1.2 * _betamt;
 	life_cash = life_cash + _win;
 	_winnings ctrlSetText format["%1",_win];
 	

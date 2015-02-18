@@ -199,6 +199,8 @@ switch(_shop) do
 						["30Rnd_9x21_Mag","9mm 30Rnd Mag",500 * life_donDis],
 						["arifle_sdar_F","SDAR 5.56 mm",2500 * life_donDis],
 						["20Rnd_556x45_UW_mag","5.56mm 20Rnd Dual Purpose Mag",500 * life_donDis],
+						["SMG_01_F","Vermin SMG .45 ACP",70000 * life_donDis],
+						["30Rnd_45ACP_Mag_SMG_01",".45 ACP 30Rnd Vermin Mag",500 * life_donDis],
 						["arifle_MXC_Black_F","MXC 6.5mm",17000 * life_donDis],
 						["arifle_MX_Black_F","MX 6.5 mm",20000 * life_donDis],
 						["arifle_MXM_Black_F","MXM 6.5mm",30000 * life_donDis],

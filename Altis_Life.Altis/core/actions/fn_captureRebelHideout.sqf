@@ -9,6 +9,7 @@ private["_group","_hideout","_action","_cpRate","_cP","_progressBar","_title","_
 _hideout = (nearestObjects[getPosATL player,["Land_u_Barracks_V2_F","Land_i_Barracks_V2_F"],25]) select 0;
 _group = _hideout getVariable ["gangOwner",grpNull];
 
+
 if(isNil {grpPlayer getVariable "gang_name"}) exitWith {titleText[localize "STR_GNOTF_CreateGang","PLAIN"];};
 if(_group == grpPlayer) exitWith {titleText[localize "STR_GNOTF_Controlled","PLAIN"]};
 if((_hideout getVariable ["inCapture",FALSE])) exitWith {hint localize "STR_GNOTF_Capturedreb";};
@@ -86,11 +87,11 @@ _this select 0 setFlagTexture _flagTexture;
 [[[0,1],"STR_GNOTF_CaptureSuccessreb",true,[name player,(group player) getVariable "gang_name"]],"life_fnc_broadcast",true,false] call life_fnc_MP;
 _hideout setVariable["inCapture",false,true];
 _hideout setVariable["gangOwner",grpPlayer,true];
-_markername = str(getPos _hideout);
-_gangname2 = formatText["Captured by: %1",(group player) getVariable "gang_name"];
+
+
 if (getMarkerColor _markername == "") then 
 {
-	gang_owner_marker = createMarker [_markername, position player]; 
+	_marker = createMarker [_markername, position player]; 
 	_markername setMarkerShape "ICON"; 
 	_markername setMarkerType "hd_warning"; 
 	_markername setMarkerColor "ColorBlue"; 
