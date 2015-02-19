@@ -195,7 +195,7 @@ class Clothing {
 			{ "U_IG_Guerilla2_3", "The Outback Rangler", 1200, { "", "", -1 } },
 			{ "U_C_HunterBody_grn", "The Hunters Look", 1500, { "", "", -1 } },
 			{ "U_OrestesBody", "Surfing On Land", 1100, { "", "", -1 } },
-			{ "U_B_GhillieSuit", "Nato", 100000, { "life_donator", "SCALAR", 4 } }
+			{ "U_B_GhillieSuit", "Nato", 100000, { "life_donatorlevel", "SCALAR", 4 } }
 			
 			
 			
@@ -234,7 +234,7 @@ class Clothing {
 			{ "H_Cap_red", "", 150, { "", "", -1 } },
 			{ "H_Cap_tan", "", 150, { "", "", -1 } },
 			{ "H_HelmetCrew_B", "", 25000, { "", "", -1 } },
-			{ "H_CrewHelmetHeli_I", "Donor Helmet", 100000, { "life_donator", "SCALAR", 3 } }
+			{ "H_CrewHelmetHeli_I", "Donor Helmet", 100000, { "life_donatorlevel", "SCALAR", 3 } }
 		};
 
 		goggles[] = {
@@ -264,7 +264,7 @@ class Clothing {
 			{ "V_HarnessO_brn", "", 70000, { "", "", -1 } },
 			{ "V_Rangemaster_belt", "", 1800, { "", "", -1 } },
 			{ "V_PlateCarrier2_rgr", "", 200000, { "", "", -1 } },
-			{ "V_PlateCarrierIAGL_dgtl", "Carrier Rig Donor", 200000, { "life_donator", "SCALAR", 2 } }
+			{ "V_PlateCarrierIAGL_dgtl", "Carrier Rig Donor", 200000, { "life_donatorlevel", "SCALAR", 2 } }
 		};
 
 		backpacks[] = {
