@@ -4,6 +4,16 @@ spawnIllegalArea.sqf
  
 private["_heli"];
 
+//Create cocaine area
+_heli = "Land_ClutterCutter_small_F" createVehicle (["mrkfrogGreen",0,["mrkfrogRed","mrkfrogRed_1","mrkfrogRed_2","mrkfrogRed_3","mrkfrogRed_4"]] call SHK_pos);
+_heli setPosASLW [(position _heli) select 0, (position _heli) select 1, -5.5];
+_heli enableSimulation false;
+ 
+_Pos = position _heli;
+ _marker = createMarker ["frog_1", _Pos];
+"cocaine_1" setMarkerColor "ColorRed";
+"cocaine_1" setMarkerText "Frog Swamp";
+"cocaine_1" setMarkerType "mil_dot";
 
 //Create cocaine area
 _heli = "Land_ClutterCutter_small_F" createVehicle (["mrkcocaineGreen",0,["mrkcocaineRed","mrkcocaineRed_1","mrkcocaineRed_2","mrkcocaineRed_3","mrkcocaineRed_4"]] call SHK_pos);

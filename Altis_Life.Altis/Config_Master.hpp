@@ -127,6 +127,8 @@ class VirtualItems {
 	VITEMMACRO(marijuana, "STR_Item_Marijuana", "marijuana", 1, 2500, 2350, true, -1, "icons\ico_marijuana.paa")
 	VITEMMACRO(cocaine_unprocessed, "STR_Item_CocaineU", "cocaineUnprocessed", 3, -1, 1000, true, -1, "")
 	VITEMMACRO(cocaine_processed, "STR_Item_CocaineP", "cocaineProcessed", 2, -1, 5000, true, -1, "")
+	VITEMMACRO(froglsd, "STR_Item_Froglsd", "froglsd", 2, -1, 5000, true, -1, "")
+	VITEMMACRO(frog, "STR_Item_Frog", "frog", 2, -1, 5000, true, -1, "")
 
 	//DrinkC
 	VITEMMACRO(redgull, "STR_Item_RedGull", "redgull", 1, 1500, 200, false, 100, "icons\ico_redgull.paa")

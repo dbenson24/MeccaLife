@@ -3024,6 +3024,13 @@
 			<Italian>Mele</Italian>
 			<Portuguese>Maçãs</Portuguese>
 		</Key>
+		<Key ID="STR_Item_Frog">
+			<Original>Frogs</Original>
+		</Key>
+		<Key ID="STR_Item_Froglsd">
+			<Original>Frog Lsd</Original>
+
+		</Key>
 		<Key ID="STR_Item_Cocaine">
 			<Original>Cocaine</Original>
 			<German>Kokain</German>
@@ -3912,6 +3919,9 @@
 			<French>Taillage de diamant</French>
 			<Italian>Raffinando diamanti</Italian>
 			<Portuguese>Lapidando Diamante</Portuguese>
+		</Key>
+		<Key ID="STR_Process_Frog">
+			<Original>Processing Frog lsd</Original>
 		</Key>
 		<Key ID="STR_Process_Heroin">
 			<Original>Processing Heroin</Original>

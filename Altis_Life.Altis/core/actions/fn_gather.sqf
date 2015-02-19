@@ -8,7 +8,7 @@
 */
 if(isNil "life_action_gathering") then {life_action_gathering = false;};
 private["_gather","_itemWeight","_diff","_itemName","_resourceZones","_zone"];
-_resourceZones = ["apple_1","apple_2","apple_3","apple_4","peaches_1","peaches_2","peaches_3","peaches_4","heroin_1","cocaine_1","weed_1"];
+_resourceZones = ["apple_1","apple_2","apple_3","apple_4","peaches_1","peaches_2","peaches_3","peaches_4","heroin_1","cocaine_1","weed_1","frog_1"];
 _zone = "";
 if!(EQUAL(currentWeapon player,"")) exitWith {hint localize "STR_Civ_GatherGun"}; //prevents faster farming by spamming windows key while holding a weapon 
 if(life_action_gathering) exitWith {}; //Action is in use, exit to prevent spamming.
@@ -22,11 +22,12 @@ if(EQUAL(_zone,"")) exitWith {life_action_gathering = false;};
 
 //Get the resource that will be gathered from the zone name...
 switch(true) do {
-	case (_zone in ["apple_1","apple_2","apple_3","apple_4"]): {_gather = ["apple",3];};
-	case (_zone in ["peaches_1","peaches_2","peaches_3","peaches_4"]): {_gather = ["peach",3];};
+	case (_zone in ["apple_1","apple_2","apple_3","apple_4"]): {_gather = ["apple",5];};
+	case (_zone in ["peaches_1","peaches_2","peaches_3","peaches_4"]): {_gather = ["peach",5];};
 	case (_zone in ["heroin_1"]): {_gather = ["heroin_unprocessed",5];};
 	case (_zone in ["cocaine_1"]): {_gather = ["cocaine_unprocessed",5];};
 	case (_zone in ["weed_1"]): {_gather = ["cannabis",5];};
+	case (_zone in ["frog_1"]): {_gather = ["frog",5];};
 	default {""};
 };
 //gather check??

@@ -259,12 +259,12 @@ class Clothing {
 
 		vests[] = {
 			{ "NONE", "Remove Vest", 0, { "", "", -1 } },
-			{ "V_TacVest_khk", "", 35000, { "", "", -1 } },
+			{ "V_TacVest_khk", "", 20000, { "", "", -1 } },
 			{ "V_BandollierB_cbr", "", 4500, { "", "", -1 } },
-			{ "V_HarnessO_brn", "", 70000, { "", "", -1 } },
+			{ "V_HarnessO_brn", "", 7000, { "", "", -1 } },
 			{ "V_Rangemaster_belt", "", 1800, { "", "", -1 } },
-			{ "V_PlateCarrier2_rgr", "", 200000, { "", "", -1 } },
-			{ "V_PlateCarrierIAGL_dgtl", "Carrier Rig Donor", 200000, { "life_donator", "SCALAR", 2 } }
+			{ "V_PlateCarrier2_rgr", "", 35000, { "", "", -1 } },
+			{ "V_PlateCarrierIAGL_dgtl", "Carrier Rig Donor", 35000, { "life_donator", "SCALAR", 2 } }
 		};
 
 		backpacks[] = {
