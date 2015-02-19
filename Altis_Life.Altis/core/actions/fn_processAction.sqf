@@ -14,9 +14,22 @@ if ((vehicle player) != player) exitWith { hint "This action cannot be performed
 if (side player == west) exitWith {hint "You cannot preform this action as an officer."};
 
 //unprocessed item,processed item, cost if no license,Text to display, 0 (I.e Processing  (percent) ..."
+// 0 at the end always
+
+
 _itemInfo = switch (_type) do
 {
-	case "marijuana": {[["cannabis"],"marijuana",500,"Processing Marijuana",0]};
+	case "oil": {[["oilu"],"oilp",1200,(localize "STR_Process_Oil",0]};
+    case "diamond": {[["diamond_uncut"],"diamond_cut",1350,(localize "STR_Process_Diamond",0]};
+    case "heroin": {[["heroin_unprocessed"],"heroin_processed",2100,(localize "STR_Process_Heroin",0]};
+    case "copper": {[["copper_unrefined"],"copper_refined",750,(localize "STR_Process_Copper",0]};
+    case "iron": {[["iron_unrefined"],"iron_refined",1120,(localize "STR_Process_Iron",0]};
+    case "sand": {[["sand"],"glass",650,(localize "STR_Process_Sand",0};
+    case "salt": {[["salt_unrefined"],"salt_refined",450,(localize "STR_Process_Salt",0]};
+    case "cocaine": {[["cocaine_unprocessed"],"cocaine_processed",1500,(localize "STR_Process_Cocaine",0]};
+    case "marijuana": {[["cannabis"],"marijuana",500,(localize "STR_Process_Marijuana",0]};
+    case "cement": {[["rock"],"cement",350,(localize "STR_Process_Cement",0]};
+    case "frog": {["frog","froglsd",500,(localize "STR_Process_Frog"),0]};
 	default {[]};
 };
 
