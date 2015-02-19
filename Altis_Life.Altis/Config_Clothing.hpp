@@ -189,13 +189,13 @@ class Clothing {
 			{ "U_O_SpecopsUniform_ocamo", "", 17500, { "", "", -1 } },
 			{ "U_O_PilotCoveralls", "", 15610, { "", "", -1 } },
 			{ "U_IG_leader", "Guerilla Leader", 15340, { "", "", -1 } },
-			{ "U_O_GhillieSuit", "", 50000, { "", "", -1 } },
+			{ "U_O_GhillieSuit", "", 20000, { "", "", -1 } },
 			{ "U_IG_Guerilla2_2", "Green stripped shirt & Pants", 650, { "", "", -1 } },
 			{ "U_IG_Guerilla3_1", "Brown Jacket & Pants", 735, { "", "", -1 } },
 			{ "U_IG_Guerilla2_3", "The Outback Rangler", 1200, { "", "", -1 } },
 			{ "U_C_HunterBody_grn", "The Hunters Look", 1500, { "", "", -1 } },
 			{ "U_OrestesBody", "Surfing On Land", 1100, { "", "", -1 } },
-			{ "U_B_GhillieSuit", "Nato", 100000, { "life_donator", "SCALAR", 4 } }
+			{ "U_B_GhillieSuit", "Nato", 20000, { "life_donator", "SCALAR", 4 } }
 			
 			
 			

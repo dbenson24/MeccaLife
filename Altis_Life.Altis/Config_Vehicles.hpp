@@ -551,7 +551,7 @@ class CfgVehicles {
 	                "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa"
             } },
             { "Cop", "cop", {
-                "#(ai,64,64,1)Fresnel(1.3,7)"
+                "textures\mecca_police_suv.jpg"
             } }
 	        };
     };
@@ -595,7 +595,8 @@ class CfgVehicles {
         chopShop = 5000;
         textures[] = {
         	{ "Regular", "cop", {
-                "\A3\Soft_F\MRAP_01\Data\mrap_01_base_co.paa"
+                "Mecca_hunter_1.jpg",
+				"Mecca_hunter_2.jpg"
             } },
             { "Black", "fed", {
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
