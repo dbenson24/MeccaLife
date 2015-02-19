@@ -15,6 +15,13 @@ _Pos = position _heli;
 "frog_1" setMarkerText "Frog Swamp";
 "frog_1" setMarkerType "mil_dot";
 
+_marker = createMarker ["frog_redZone", _Pos];
+"frog_redZone" setMarkerColor "ColorRed";
+"frog_redZone" setMarkerShape "ELLIPSE";
+"frog_redZone" setMarkerSize [150, 150];
+"frog_redZone" setMarkerBrush "Grid";
+
+
 //Create cocaine area
 _heli = "Land_ClutterCutter_small_F" createVehicle (["mrkcocaineGreen",0,["mrkcocaineRed","mrkcocaineRed_1","mrkcocaineRed_2","mrkcocaineRed_3","mrkcocaineRed_4"]] call SHK_pos);
 _heli setPosASLW [(position _heli) select 0, (position _heli) select 1, -5.5];
@@ -25,6 +32,12 @@ _Pos = position _heli;
 "cocaine_1" setMarkerColor "ColorRed";
 "cocaine_1" setMarkerText "Cocaine Field";
 "cocaine_1" setMarkerType "mil_dot";
+
+_marker = createMarker ["cocaine_redZone", _Pos];
+"cocaine_redZone" setMarkerColor "ColorRed";
+"cocaine_redZone" setMarkerShape "ELLIPSE";
+"cocaine_redZone" setMarkerSize [150, 150];
+"cocaine_redZone" setMarkerBrush "Grid";
  
 //Create heroine area
 _heli = "Land_ClutterCutter_small_F" createVehicle (["mrkheroinGreen",0,["mrkheroinRed","mrkheroinRed_1","mrkcocaineRed_2","mrkcocaineRed_3","mrkcocaineRed_4"]] call SHK_pos);
@@ -37,6 +50,12 @@ _Pos = position _heli;
 "heroin_1" setMarkerText "Heroin Field";
 "heroin_1" setMarkerType "mil_dot";
 
+_marker = createMarker ["heroine_redZone", _Pos];
+"heroine_redZone" setMarkerColor "ColorRed";
+"heroine_redZone" setMarkerShape "ELLIPSE";
+"heroine_redZone" setMarkerSize [150, 150];
+"heroine_redZone" setMarkerBrush "Grid";
+
  
 //Create cannabis area
 _heli = "Land_ClutterCutter_small_F" createVehicle (["mrkweedGreen",0,["mrkweedRed","mrkweedRed_1","mrkweedRed_2","mrkweedRed_3","mrkweedRed_4"]] call SHK_pos);
@@ -48,4 +67,10 @@ _Pos = position _heli;
 "weed_1" setMarkerColor "ColorRed";
 "weed_1" setMarkerText "Weed Field";
 "weed_1" setMarkerType "mil_dot";
+
+_marker = createMarker ["cocaine_redZone", _Pos];
+"weed_redZone" setMarkerColor "ColorRed";
+"weed_redZone" setMarkerShape "ELLIPSE";
+"weed_redZone" setMarkerSize [150, 150];
+"weed_redZone" setMarkerBrush "Grid";
  
