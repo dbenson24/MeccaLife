@@ -3501,6 +3501,13 @@
 			<Italian>Licenza di Guida</Italian>
 			<Portuguese>Licença de Motorista</Portuguese>
 		</Key>
+		<Key ID="STR_License_Medmarijuana">
+			<Original>Driver License</Original>
+			<German>Führerschein</German>
+			<French>Permis de Conduire</French>
+			<Italian>Licenza di Guida</Italian>
+			<Portuguese>Licença de Motorista</Portuguese>
+		</Key>
 		<Key ID="STR_License_Pilot">
 			<Original>Pilot License</Original>
 			<German>Pilotenschein</German>
