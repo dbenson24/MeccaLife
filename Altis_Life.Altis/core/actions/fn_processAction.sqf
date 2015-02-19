@@ -1,5 +1,3 @@
-#include <macro.h>
-//fking 4.0
 /*
 	File: fn_processAction.sqf
 	Author: Bryan "Tonic" Boardwine
@@ -11,12 +9,13 @@ private["_vendor","_type","_itemInfo","_oldItem","_newItem","_cost","_upp","_has
 _vendor = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _type = [_this,3,"",[""]] call BIS_fnc_param;
 //Error check
-if(isNull _vendor OR EQUAL(_type,"") OR (player distance _vendor > 6)) exitWith {};
+if(isNull _vendor OR _type == "" OR (player distance _vendor > 6)) exitWith {};
 if ((vehicle player) != player) exitWith { hint "This action cannot be performed from within a vehicle." };
 if (side player == west) exitWith {hint "You cannot preform this action as an officer."};
 
 //unprocessed item,processed item, cost if no license,Text to display, 0 (I.e Processing  (percent) ..."
-// Matt, always have the 0 at the end.
+// 0 at the end always
+
 
 _itemInfo = switch (_type) do
 {
@@ -35,7 +34,7 @@ _itemInfo = switch (_type) do
 };
 
 //Error checking
-if(EQUAL(count _itemInfo,0)) exitWith {};
+if(count _itemInfo == 0) exitWith {hint "You don't have the items necessary"};
 
 //Setup vars
 _oldItem = [];
@@ -48,25 +47,21 @@ _oldVal = _vals select 0;
 _newItem = _itemInfo select 1;
 _cost = _itemInfo select 2;
 _upp = _itemInfo select 3;
-
-//edit this accordingly
 if(_vendor in [mari_processor,coke_processor,heroin_processor]) then {
 	_hasLicense = true;
 } else {
-	_hasLicense = LICENSE_VALUE(_type,"civ");
+	_hasLicense = missionNamespace getVariable (([_type,0] call life_fnc_licenseType) select 0);
 };
 
 
-_itemName = M_CONFIG(getText,"VirtualItems",_newItem,"displayName");
-_oldVal = ITEM_VALUE(_oldItem);
+_itemName = [([_newItem,0] call life_fnc_varHandle)] call life_fnc_varToStr;
+if(_oldVal == 0) exitWith {};
 _cost = _cost * _oldVal;
-
-if(EQUAL(_oldVal,0)) exitWith {};
 
 //Setup our progress bar.
 disableSerialization;
 5 cutRsc ["life_progress","PLAIN"];
-_ui = GVAR_UINS "life_progress";
+_ui = uiNameSpace getVariable "life_progress";
 _progress = _ui displayCtrl 38201;
 _pgText = _ui displayCtrl 38202;
 _pgText ctrlSetText format["%2 (1%1)...","%",_upp];
@@ -74,7 +69,7 @@ _progress progressSetPosition 0.01;
 _cP = 0.01;
 
 life_is_processing = true;
-if((!_hasLicense)&&(CASH < _cost)) exitWith {
+if((!_hasLicense)&&(life_cash < _cost)) exitWith {
 	hint format["You need $%1 to process without a license!",[_cost] call life_fnc_numberText];
 	5 cutText ["","PLAIN"]; life_is_processing = false;
 };
@@ -90,7 +85,7 @@ while{true} do {
 };
 	
 if(player distance _vendor > 10) exitWith {hint "You need to stay within 10m to process."; 5 cutText ["","PLAIN"]; life_is_processing = false;};
-if((!_hasLicense)&&(CASH < _cost)) exitWith {hint format["You need $%1 to process without a license!",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+if((!_hasLicense)&&(life_cash < _cost)) exitWith {hint format["You need $%1 to process without a license!",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 if(!(alive player)) exitWith {hint "You need to be alive to process."; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 //Removes the old items
 {
@@ -113,7 +108,7 @@ if (_hasLicense) then {
 } else {
 	titleText[format["You have processed your goods into %1 for $%2",_itemName,[_cost] call life_fnc_numberText],"PLAIN"];
 	
-	CASH = CASH - _cost;
+	life_cash = life_cash - _cost;
 };
 
 life_is_processing = false;
