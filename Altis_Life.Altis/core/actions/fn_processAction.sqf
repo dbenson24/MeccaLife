@@ -18,16 +18,17 @@ if (side player == west) exitWith {hint "You cannot preform this action as an of
 
 _itemInfo = switch (_type) do
 {
-	case "oil": {[["oilu"],"oilp",1200,"STR_Process_Oil",0];};
-	case "diamond": {[["diamond"],"diamondc",1350,"STR_Process_Diamond",0]};
-	case "heroin": {[["heroinu"],"heroinp",2100,"STR_Process_Heroin",0]};
-	case "copper": {[["copperore"],"copper_r",750,"STR_Process_Copper",0]};
-	case "iron": {[["ironore"],"iron_r",1120,"STR_Process_Iron",0]};
-	case "sand": {[["sand"],"glass",650,"STR_Process_Sand",0]};
-	case "salt": {[["salt"],"salt_r",450,"STR_Process_Salt",0]};
-	case "cocaine": {[["cocaine"],"cocainep",1500,"STR_Process_Cocaine",0]};
-	case "marijuana": {[["cannabis"],"marijuana",500,"STR_Process_Marijuana",0]};
-	case "cement": {[["rock"],"cement",350,"STR_Process_Cement",0]};
+	case "oil": {["oilu","oilp",1200,(localize "STR_Process_Oil")];};
+	case "diamond": {["diamond_uncut","diamond_cut",1350,(localize "STR_Process_Diamond")];};
+	case "heroin": {["heroin_unprocessed","heroin_processed",1750,(localize "STR_Process_Heroin")];};
+	case "copper": {["copper_unrefined","copper_refined",750,(localize "STR_Process_Copper")];};
+	case "iron": {["iron_unrefined","iron_refined",1120,(localize "STR_Process_Iron")];};
+	case "sand": {["sand","glass",650,(localize "STR_Process_Sand")];};
+	case "salt": {["salt_unrefined","salt_refined",450,(localize "STR_Process_Salt")];};
+	case "cocaine": {["cocaine_unprocessed","cocaine_processed",1500,(localize "STR_Process_Cocaine")];};
+	case "marijuana": {["cannabis","marijuana",500,(localize "STR_Process_Marijuana")];};
+	case "cement": {["rock","cement",500,(localize "STR_Process_Cement")];};
+	case "frog": {["frog","froglsd",500,(localize "STR_Process_Frog")];};
 	default {[]};
 };
 

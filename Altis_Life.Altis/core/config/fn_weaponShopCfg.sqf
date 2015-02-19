@@ -211,7 +211,6 @@ switch(_shop) do
 						["optic_MRCO","MRCO Scope",2000 * life_donDis],	
 						["acc_flashlight","Flashlight",500 * life_donDis],
 						["acc_pointer_IR","IR Laser Pointer",500 * life_donDis],	
-						["muzzle_snds_H","6.5mm Suppressor",4000 * life_donDis],
 						["HandGrenade_Stone","Flashbang",1700 * life_donDis],
 						["SmokeShell",nil,1000 * life_donDis]						
 					]
@@ -248,7 +247,6 @@ switch(_shop) do
 						["optic_MRCO","MRCO Scope",2000 * life_donDis],	
 						["acc_flashlight","Flashlight",500 * life_donDis],
 						["acc_pointer_IR","IR Laser Pointer",500 * life_donDis],	
-						["muzzle_snds_H","6.5mm Suppressor",4000 * life_donDis],
 						["HandGrenade_Stone","Flashbang",1700 * life_donDis],
 						["SmokeShell",nil,1000 * life_donDis]						
 					]
