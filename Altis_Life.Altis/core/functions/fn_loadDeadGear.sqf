@@ -6,8 +6,6 @@
 	Description:
 	BLAH
 */
-if(playerSide == west) exitWith {};
-
 private["_allowedItems","_loadout","_primary","_launcher","_handgun","_magazines","_uniform","_vest","_backpack","_items","_primitems","_secitems","_handgunitems","_uitems","_vitems","_bitems","_handle"];
 _loadout = [_this,0,[],[[]]] call BIS_fnc_param;
 
