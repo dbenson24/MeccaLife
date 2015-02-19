@@ -122,12 +122,12 @@ class VirtualItems {
 
 	//Drugs
 	VITEMMACRO(heroin_unprocessed, "STR_Item_HeroinU", "heroinUnprocessed", 2, -1, 3000, true, -1, "")
-	VITEMMACRO(heroin_processed, "STR_Item_HeroinP", "heroinProcessed", 1, -1, 4400, true, -1, "")
+	VITEMMACRO(heroin_processed, "STR_Item_HeroinP", "heroinProcessed", 1, -1, 3000, true, -1, "")
 	VITEMMACRO(cannabis, "STR_Item_Cannabis", "cannabis", 2, -1, 1000, true, -1, "")
 	VITEMMACRO(marijuana, "STR_Item_Marijuana", "marijuana", 1, 2500, 2350, true, -1, "icons\ico_marijuana.paa")
-	VITEMMACRO(cocaine_unprocessed, "STR_Item_CocaineU", "cocaineUnprocessed", 3, -1, 1000, true, -1, "")
-	VITEMMACRO(cocaine_processed, "STR_Item_CocaineP", "cocaineProcessed", 2, -1, 5000, true, -1, "")
-	VITEMMACRO(froglsd, "STR_Item_Froglsd", "froglsd", 2, -1, 5000, true, -1, "")
+	VITEMMACRO(cocaine_unprocessed, "STR_Item_CocaineU", "cocaineUnprocessed", 2, -1, 1000, true, -1, "")
+	VITEMMACRO(cocaine_processed, "STR_Item_CocaineP", "cocaineProcessed", 2, -1, 3000, true, -1, "")
+	VITEMMACRO(froglsd, "STR_Item_Froglsd", "froglsd", 2, -1, 25000, true, -1, "")
 	VITEMMACRO(frog, "STR_Item_Frog", "frog", 2, -1, 2500, true, -1, "")
 
 	//DrinkC
@@ -231,7 +231,7 @@ class VirtualShops {
 
 	class coffee {
 		name = "STR_Shops_Coffee";
-		items[] = { "coffee", "donuts" };
+		items[] = { "coffee", "donut" };
 	};
 	class medicalw {
 		name = "STR_Shops_MedicalW";
