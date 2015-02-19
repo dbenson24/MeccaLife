@@ -597,8 +597,8 @@ class CfgVehicles {
         chopShop = 5000;
         textures[] = {
         	{ "Regular", "cop", {
-                "texture\Mecca_hunter_1.jpg",
-				"texture\Mecca_hunter_2.jpg"
+                "texture\hunter1.jpg",
+				"texture\hunter2.jpg"
             } },
             { "Black", "fed", {
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
