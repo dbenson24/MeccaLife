@@ -53,7 +53,7 @@ _Pos = position _heli;
 _marker = createMarker ["heroine_redZone", _Pos];
 "heroine_redZone" setMarkerColor "ColorRed";
 "heroine_redZone" setMarkerShape "ELLIPSE";
-"heroine_redZone" setMarkerSize [150, 150];
+"heroine_redZone" setMarkerSize [200, 200];
 "heroine_redZone" setMarkerBrush "Grid";
 
  
@@ -68,9 +68,9 @@ _Pos = position _heli;
 "weed_1" setMarkerText "Weed Field";
 "weed_1" setMarkerType "mil_dot";
 
-_marker = createMarker ["cocaine_redZone", _Pos];
+_marker = createMarker ["weed_redZone", _Pos];
 "weed_redZone" setMarkerColor "ColorRed";
 "weed_redZone" setMarkerShape "ELLIPSE";
-"weed_redZone" setMarkerSize [150, 150];
+"weed_redZone" setMarkerSize [200, 200];
 "weed_redZone" setMarkerBrush "Grid";
  
