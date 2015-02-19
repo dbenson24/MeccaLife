@@ -3086,7 +3086,7 @@ class Mission
 				};
 				class Item80
 				{
-					position[]={23645.043,51.117146,21801.219};
+					position[]={17121.963,33.22007,9931.7783};
 					azimut=-482.448;
 					special="NONE";
 					id=178;
@@ -8863,7 +8863,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=330;
+		items=336;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -9934,7 +9934,7 @@ class Mission
 		};
 		class Item135
 		{
-			position[]={23644.953,51.044296,21802.297};
+			position[]={17121.873,33.071613,9932.8564};
 			name="heroin_p";
 			text="Heroin Processing";
 			type="mil_dot";
@@ -11486,6 +11486,84 @@ class Mission
 			text="Not Yet Functional But getting there.";
 			type="mil_destroy";
 			colorName="ColorRed";
+		};
+		class Item330
+		{
+			position[]={20966.078,0,14740.251};
+			name="mrkfrogGreen";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorGreen";
+			fillName="Border";
+			a=400;
+			b=400;
+			angle=320;
+			drawBorder=1;
+		};
+		class Item331
+		{
+			position[]={21674.033,4.4183664,14691.634};
+			name="mrkfrogRed";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="Border";
+			a=200;
+			b=200;
+			angle=320;
+			drawBorder=1;
+		};
+		class Item332
+		{
+			position[]={20924.432,17.216831,14082.753};
+			name="mrkfrogRed_1";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="Border";
+			a=200;
+			b=200;
+			angle=320;
+			drawBorder=1;
+		};
+		class Item333
+		{
+			position[]={20258.727,14.11815,14683.518};
+			name="mrkfrogRed_2";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="Border";
+			a=200;
+			b=200;
+			angle=320;
+			drawBorder=1;
+		};
+		class Item334
+		{
+			position[]={21029.975,13.292915,15384.404};
+			name="mrkfrogRed_3";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="Border";
+			a=200;
+			b=200;
+			angle=320;
+			drawBorder=1;
+		};
+		class Item335
+		{
+			position[]={21373.654,0.87677491,14339.836};
+			name="mrkfrogRed_4";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="Border";
+			a=200;
+			b=200;
+			angle=320;
+			drawBorder=1;
 		};
 	};
 };
