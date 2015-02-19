@@ -86,13 +86,6 @@ if(side _killer == west && playerSide != west) then {
 	};
 };
 
-//Killed civ...
-if(side _killer == civilian && playerSide == west) then {
-life_rebRecieve = _killer;
-life_atmcash = life_atmcash - (life_rebAmount);
-titleText[format["$%1 were removed from your account for being killed by a miserable civilian! What a shame!",(life_rebAmount)],"PLAIN"];
-};
-
 if(!isNull _killer && {_killer != _unit}) then {
 	life_removeWanted = false;
 };
