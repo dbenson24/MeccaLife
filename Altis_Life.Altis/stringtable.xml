@@ -22,6 +22,9 @@
 			<Italian>Mercato</Italian>
 			<French>Marché</French>
 		</Key>
+		<Key ID="STR_Shops_Medicalw">
+			<Original>UnNamed's Good Bud</Original>
+		</Key>
 		<Key ID="STR_Shops_Rebel">
 			<Original>Rebel Market</Original>
 			<German>Rebellen Markt</German>
