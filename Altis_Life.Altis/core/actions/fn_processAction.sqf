@@ -1,3 +1,5 @@
+#include <macro.h>
+//fking 4.0
 /*
 	File: fn_processAction.sqf
 	Author: Bryan "Tonic" Boardwine
@@ -9,7 +11,7 @@ private["_vendor","_type","_itemInfo","_oldItem","_newItem","_cost","_upp","_has
 _vendor = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _type = [_this,3,"",[""]] call BIS_fnc_param;
 //Error check
-if(isNull _vendor OR _type == "" OR (player distance _vendor > 6)) exitWith {};
+if(isNull _vendor OR EQUAL(_type,"") OR (player distance _vendor > 6)) exitWith {};
 if ((vehicle player) != player) exitWith { hint "This action cannot be performed from within a vehicle." };
 if (side player == west) exitWith {hint "You cannot preform this action as an officer."};
 
@@ -33,7 +35,7 @@ _itemInfo = switch (_type) do
 };
 
 //Error checking
-if(count _itemInfo == 0) exitWith {hint "You don't have the items necessary"};
+if(EQUAL(count _itemInfo,0)) exitWith {};
 
 //Setup vars
 _oldItem = [];
@@ -51,18 +53,20 @@ _upp = _itemInfo select 3;
 if(_vendor in [mari_processor,coke_processor,heroin_processor]) then {
 	_hasLicense = true;
 } else {
-	_hasLicense = missionNamespace getVariable (([_type,0] call life_fnc_licenseType) select 0);
+	_hasLicense = LICENSE_VALUE(_type,"civ");
 };
 
 
-_itemName = [([_newItem,0] call life_fnc_varHandle)] call life_fnc_varToStr;
-if(_oldVal == 0) exitWith {};
+_itemName = M_CONFIG(getText,"VirtualItems",_newItem,"displayName");
+_oldVal = ITEM_VALUE(_oldItem);
 _cost = _cost * _oldVal;
+
+if(EQUAL(_oldVal,0)) exitWith {};
 
 //Setup our progress bar.
 disableSerialization;
 5 cutRsc ["life_progress","PLAIN"];
-_ui = uiNameSpace getVariable "life_progress";
+_ui = GVAR_UINS "life_progress";
 _progress = _ui displayCtrl 38201;
 _pgText = _ui displayCtrl 38202;
 _pgText ctrlSetText format["%2 (1%1)...","%",_upp];
