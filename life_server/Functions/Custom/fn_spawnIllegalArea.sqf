@@ -4,7 +4,7 @@ spawnIllegalArea.sqf
  
 private["_heli"];
 
-//Create cocaine area
+//Create Frog area
 _heli = "Land_ClutterCutter_small_F" createVehicle (["mrkfrogGreen",0,["mrkfrogRed","mrkfrogRed_1","mrkfrogRed_2","mrkfrogRed_3","mrkfrogRed_4"]] call SHK_pos);
 _heli setPosASLW [(position _heli) select 0, (position _heli) select 1, -5.5];
 _heli enableSimulation false;
