@@ -116,6 +116,7 @@ class CfgFunctions
 	class TON_System
 	{
 		
+		class rebReward {};
 		
 		tag = "TON";
 		class Systems

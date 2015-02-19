@@ -63,6 +63,7 @@ life_is_arrested = false;
 life_delivery_in_progress = false;
 life_thirst = 100;
 life_hunger = 100;
+life_rebAmount = 30000 + round(random 70000);
 CASH = 0;
 
 life_istazed = false;

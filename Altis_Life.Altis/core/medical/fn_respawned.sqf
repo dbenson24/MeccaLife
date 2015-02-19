@@ -68,6 +68,12 @@ if(!isNil "life_copRecieve") then {
 	life_copRecieve = nil;
 };
 
+//Rebel reward
+if(!isNil "life_rebRecieve") then {
+[[life_rebRecieve,life_rebAmount],"TON_fnc_rebReward",false,false] spawn life_fnc_MP;
+life_rebRecieve = nil;
+};
+
 //So I guess a fellow gang member, cop or myself killed myself so get me off that Altis Most Wanted
 if(life_removeWanted) then {
 	[[getPlayerUID player],"life_fnc_wantedRemove",false,false] spawn life_fnc_MP;
