@@ -24,7 +24,7 @@ _itemInfo = switch (_type) do {
 	case "cocaine": {["cocaine_unprocessed","cocaine_processed",1500,(localize "STR_Process_Cocaine")];};
 	case "marijuana": {["cannabis","marijuana",500,(localize "STR_Process_Marijuana")];};
 	case "cement": {["rock","cement",500,(localize "STR_Process_Cement")];};
-	case "cement": {["frog","froglsd",500,(localize "STR_Process_Frog")];};
+	case "frog": {["frog","froglsd",500,(localize "STR_Process_Frog")];};
 	
 	default {[];};
 };
