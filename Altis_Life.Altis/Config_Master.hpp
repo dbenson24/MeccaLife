@@ -86,7 +86,6 @@ class Life_Settings {
 		};
 		
 	sellArray[] = {
-		{"arifle_sdar_F", 750}
 	};
 };
 
@@ -165,7 +164,7 @@ class VirtualItems {
 	VITEMMACRO(goat_grilled, "STR_Item_GoatGrilled", "goatGrilled", 2, 175, 135, false, 100, "icons\ico_cookedMeat.paa")
 
 	//Vigilante
-	VITEMMACRO(ziptie, "STR_Item_Ziptie", "ziptie", 1, 500, 250, true, -1, "")
+	VITEMMACRO(ziptie, "STR_Item_Ziptie", "ziptie", 1, 500, 500, true, -1, "")
 	
 };
 

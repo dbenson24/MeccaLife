@@ -270,7 +270,9 @@ class CfgVehicles {
         textures[] = { };
     };
 
-	class B_G_Offroad_01_armed_F : B_G_Offroad_01_F {};
+	class B_G_Offroad_01_armed_F : B_G_Offroad_01_F {
+		
+	};
 
 	class I_G_Van_01_transport_F {
         vItemSpace = 100;
@@ -595,8 +597,8 @@ class CfgVehicles {
         chopShop = 5000;
         textures[] = {
         	{ "Regular", "cop", {
-                "Mecca_hunter_1.jpg",
-				"Mecca_hunter_2.jpg"
+                "texture\Mecca_hunter_1.jpg",
+				"texture\Mecca_hunter_2.jpg"
             } },
             { "Black", "fed", {
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
