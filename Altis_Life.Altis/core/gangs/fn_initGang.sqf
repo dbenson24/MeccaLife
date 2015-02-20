@@ -33,10 +33,11 @@ if(!isNil "_group") then {
 	};
 } else {
 	_group = group player;
+	[player] join _group;
 	_group SVAR ["gang_id",SEL(life_gangData,0),true];
 	_group SVAR ["gang_owner",SEL(life_gangData,1),true];
 	_group SVAR ["gang_name",SEL(life_gangData,2),true];
+	_group SVAR ["gang_members",SEL(life_gangData,3),true];
 	_group SVAR ["gang_maxMembers",SEL(life_gangData,4),true];
 	_group SVAR ["gang_bank",SEL(life_gangData,5),true];
-	_group SVAR ["gang_members",SEL(life_gangData,3),true];
 };
