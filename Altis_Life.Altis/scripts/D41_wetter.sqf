@@ -98,8 +98,8 @@
 			sleep 1;
 			30 setFog (D41_Fog);
 			60 setRain (D41_Rain);
-			0 setOvercast (D41_Preview);
-			setWind (D41_Wind);
+			10 setOvercast (D41_Preview);
+			10 setWind (D41_Wind);
 			60 setWaves (D41_waves);
 			sleep 1200;
 		};
@@ -112,8 +112,8 @@
 		{
 			30 setFog (D41_Fog);
 			60 setRain (D41_Rain);
-			setOvercast (D41_Preview);
-			setWind (D41_Wind);
+			10 setOvercast (D41_Preview);
+			10 setWind (D41_Wind);
 			60 setWaves (D41_waves);
 			//hint format ["::::::::: WETTER SYSTEM ::::::::: D41_ChanceN = %1 ::: D41_WMod = %2",D41_ChanceN, D41_WMod];
 			uiSleep 120;
