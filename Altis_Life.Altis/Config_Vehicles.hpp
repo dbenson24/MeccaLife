@@ -1,3 +1,5 @@
+#define pquadbike 2500
+
 class CarShops {
 	/*
 		Format:
@@ -8,7 +10,7 @@ class CarShops {
 	class civ_car {
 		side = "civ";
 		vehicles[] = {
-			{ "B_Quadbike_01_F", 2500, "" }, 
+			{ "B_Quadbike_01_F", pquadbike, "" }, 
 			{ "C_Hatchback_01_F", 22500, "driver" }, 
 			{ "C_Offroad_01_F", 35500, "driver" },
 			{ "C_SUV_01_F", 30000, "driver" },
