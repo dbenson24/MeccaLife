@@ -23,12 +23,6 @@ switch (_position) do
 		player action ["getInCargo", cursorTarget];
 		cursorTarget lock true;
 	};
-	case "gunner":
-	{
-		cursorTarget lock false;
-		player action ["getIngunner", cursorTarget];
-		cursorTarget lock true;
-	};
 	case "exit":
 	{
 		_veh = vehicle player;

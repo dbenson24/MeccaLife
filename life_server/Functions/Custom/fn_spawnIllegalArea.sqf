@@ -73,4 +73,16 @@ _marker = createMarker ["weed_redZone", _Pos];
 "weed_redZone" setMarkerShape "ELLIPSE";
 "weed_redZone" setMarkerSize [200, 200];
 "weed_redZone" setMarkerBrush "Grid";
+
+_heli = "Land_ClutterCutter_small_F" createVehicle (["mrkmushroomGreen",0,["mrkmushroomRed","mrkmushroomRed_1","mrkmushroomRed_2","mrkmushroomRed_3","mrkmushroomRed_4"]] call SHK_pos);
+_heli setPosASLW [(position _heli) select 0, (position _heli) select 1, -5.5];
+_heli enableSimulation false;
+ 
+_Pos = position _heli;
+ _marker = createMarker ["mushroom_1", _Pos];
+"mushroom_1" setMarkerColor "ColorYellow";
+"mushroom_1" setMarkerText "Cow Pasture";
+"mushroom_1" setMarkerType "mil_dot";
+
+
  

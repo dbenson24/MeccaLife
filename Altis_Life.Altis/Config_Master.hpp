@@ -119,6 +119,7 @@ class VirtualItems {
 	VITEMMACRO(diamond_cut, "STR_Item_DiamondC", "diamondCut", 2, -1, 2000, false, -1, "")
 	VITEMMACRO(rock, "STR_Item_Rock", "rock", 6, -1, -1, false, -1, "")
 	VITEMMACRO(cement, "STR_Item_CementBag", "cement", 5, -1, 1950, false, -1, "")
+	VITEMMACRO(mushroom, "STR_Item_Mushroom", "mushroom", 5, -1, 1950, false, -1, "")
 
 	//Drugs
 	VITEMMACRO(heroin_unprocessed, "STR_Item_HeroinU", "heroinUnprocessed", 2, -1, 3000, true, -1, "")
@@ -129,6 +130,7 @@ class VirtualItems {
 	VITEMMACRO(cocaine_processed, "STR_Item_CocaineP", "cocaineProcessed", 2, -1, 3000, true, -1, "")
 	VITEMMACRO(froglsd, "STR_Item_Froglsd", "froglsd", 2, -1, 2500, true, -1, "")
 	VITEMMACRO(frog, "STR_Item_Frog", "frog", 2, -1, 2500, true, -1, "")
+	VITEMMACRO(Magicm, "STR_Item_Magicm", "magicm", 5, -1, 1950, false, -1, "")
 
 	//DrinkC
 	VITEMMACRO(redgull, "STR_Item_RedGull", "redgull", 1, 1500, 200, false, 100, "icons\ico_redgull.paa")
@@ -205,6 +207,7 @@ class Licenses {
 	LICENSEMACRO(law,"STR_License_Law","law",250000,false,"civ")
 	LICENSEMACRO(taxi,"STR_License_Taxi","taxi",250000,false,"civ")
 	LICENSEMACRO(frog,"STR_License_Frog","frog",30000,false,"civ")
+	LICENSEMACRO(magicm,"STR_License_Magicm","magicm",15000,false,"civ")
 };
 
 

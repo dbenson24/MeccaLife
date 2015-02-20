@@ -3034,6 +3034,12 @@
 			<Original>Frog Lsd</Original>
 
 		</Key>
+		<Key ID="STR_Item_Mushroom">
+			<Original>Edible Mushroom</Original>
+		</Key>
+		<Key ID="STR_Item_Magicm">
+			<Original>Magical Mushroom</Original>
+		</Key>
 		<Key ID="STR_Item_Cocaine">
 			<Original>Cocaine</Original>
 			<German>Kokain</German>
@@ -3609,6 +3615,9 @@
 			<Italian>Processo Sale</Italian>
 			<Portuguese>Processamento de Sal</Portuguese>
 		</Key>
+		<Key ID="STR_License_Magicm">
+			<Original>Mushroom Preparation</Original>
+		</Key>
 		<Key ID="STR_License_Cocaine">
 			<Original>Cocaine Training</Original>
 			<German>Kokainausbildung</German>
@@ -3987,6 +3996,9 @@
 			<French>Mélange de ciment</French>
 			<Italian>Processando Cemento</Italian>
 			<Portuguese>Misturando Cimento</Portuguese>
+		</Key>
+		<Key ID="STR_Process_Magicm">
+			<Original>Drying and curing mushrooms</Original>
 		</Key>
 		<Key ID="STR_Process_Stay">
 			<Original>You need to stay within 10m to process.</Original>
