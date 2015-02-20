@@ -194,42 +194,40 @@ class CfgVehicles {
 
 	class I_Truck_02_medical_F : Default {
 		vItemSpace = 150;
-		storageFee[] = { 0, 0, store*pzamakmed, 0 };
-		garageSell[] = { 0, 0, sell*pzamakmed, 0 };
-		insurance = ins*pzamakmed;
-		chopShop = 0;
-		
+		storageFee[] = { 0, 0, 1500, 0 };
+		garageSell[] = { 0, 0, 5000, 0 };
+		chopShop = 3000;
 	};
 
 	class O_Truck_03_medical_F : Default {
 		vItemSpace = 200;
 		storageFee[] = { 0, 0, 3000, 0 };
 		garageSell[] = { 0, 0, 10000, 0 };
-		chopShop = 0;
+		chopShop = 7500;
 	};
 
 	class B_Truck_01_medical_F : Default {
 		vItemSpace = 250;
 		storageFee[] = { 0, 0, 6500, 0 };
 		garageSell[] = { 0, 0, 25000, 0 };
-		chopShop = 0;
+		chopShop = 12500;
 	};
 
 	class C_Rubberboat {
         vItemSpace = 45;
-        storageFee[] = { store*prescueboat, store*prescueboat, 0, 0 };
-		garageSell[] = { sell*prescueboat, sell*prescueboat, 0, 0 };
-        insurance = ins*prescueboat;
-        chopShop = chop*prescueboat;
+        storageFee[] = { 400, 300, 0, 0 };
+		garageSell[] = { 950, 350, 0, 0 };
+        insurance = 2500;
+        chopShop = 5000;
         textures[] = { };
     };
 
 	class B_Heli_Transport_01_F {
 		vItemSpace = 200;
-		storageFee[] = { 0, store*pghosthawkcop, 0, 0 };
-		garageSell[] = { 0, sell*pghosthawkcop, 0, 0 };
-		insurance = ins*pghosthawkcop;
-		chopShop = chop*pghosthawkcop;
+		storageFee[] = { 0, 50000, 0, 0 };
+		garageSell[] = { 0, 85000, 0, 0 };
+		insurance = 16000;
+		chopShop = 45000;
 		textures[] = {};
 	};
 
@@ -273,58 +271,53 @@ class CfgVehicles {
 
 	class B_Boat_Transport_01_F {
         vItemSpace = 45;
-        storageFee[] = { 0, store*passaultboat, 0, 0 };
-		garageSell[] = { 0, sell*passaultboat, 0, 0 };
-        insurance = ins*passaultboat;
-        chopShop = chop*passaultboat;
+        storageFee[] = { 0, 450, 0, 0 };
+		garageSell[] = { 0, 850, 0, 0 };
+        insurance = 2500;
+        chopShop = 5000;
         textures[] = { };
     };
 
 	class O_Truck_03_transport_F {
         vItemSpace = 175;
-        storageFee[] = { store*ptempesttrans, 0, 0, 0 };
-        garageSell[] = { sell*ptempesttrans, 0, 0, 0 };
-        insurance = ins*ptempesttrans;
-        chopShop = chop*ptempesttrans;
+        storageFee[] = { 100, 0, 0, 0 };
+        insurance = 2500;
+        chopShop = 5000;
         textures[] = { };
     };
 
 	class O_Truck_03_device_F {
         vItemSpace = 500;
-        storageFee[] = { store*ptempestdev, 0, 0, 0 };
-		garageSell[] = { sell*ptempestdev, 0, 0, 0 };
-        insurance = ins*ptempestdev;
-        chopShop = chop*ptempestdev;
+        storageFee[] = { 950, 0, 0, 0 };
+		garageSell[] = { 185000, 0, 0, 0 };
+        insurance = 25000;
+        chopShop = 125000;
         textures[] = { };
     };
 
-	class LandcargoBox_V1_F : Default {
+	class Land_CargoBox_V1_F : Default {
         vItemSpace = 5000;
     };
 
-	class BoxiND_Grenades_F : Default {
+	class Box_IND_Grenades_F : Default {
         vItemSpace = 350;
     };
 
-	class BsupplyCrate_F {
+	class B_supplyCrate_F {
         vItemSpace = 700;
     };
 
 	class B_G_Offroad_01_F {
         vItemSpace = 115;
-        storageFee[] = { store*poffroad, store*poffroadcop, store*poffroadmed, 0 };
-		garageSell[] = { sell*poffroad, sell*poffroadcop, sell*poffroadmed, 0 };
-        insurance = ins*poffroad;
-        chopShop = chop*poffroad;
+        storageFee[] = { 1000, 0, 0, 0 };
+		garageSell[] = { 3500, 0, 0, 0 };
+        insurance = 2500;
+        chopShop = 5000;
         textures[] = { };
     };
 
-	class B_G_Offroad_01_armed_F {
-		vItemSpace = 65;
-        storageFee[] = { store*p50cal, 0, 0, 0 };
-		garageSell[] = { sell*p50cal, 0, 0, 0 };
-        insurance = ins*p50cal;
-        chopShop = chop*p50cal;
+	class B_G_Offroad_01_armed_F : B_G_Offroad_01_F {
+		
 	};
 
 	class I_G_Van_01_transport_F {
@@ -335,25 +328,25 @@ class CfgVehicles {
         textures[] = { };
     };
 
-	class C_Boatcivil_01_F {
+	class C_Boat_Civil_01_F {
         vItemSpace = 85;
-        storageFee[] = { store*pspeedboat, store*pspeedboat, 0, 0 };
-		garageSell[] = { sell*pspeedboat, sell*pspeedboat, 0, 0 };
-        insurance = ins*pspeedboat;
-        chopShop = chop*pspeedboat;
+        storageFee[] = { 4500, 2500, 0, 0 };
+		garageSell[] = { 6800, 3500, 0, 0 };
+        insurance = 2500;
+        chopShop = 5000;
         textures[] = { };
     };
 
-	class C_Boatcivil_01police_F {
+	class C_Boat_Civil_01_police_F {
         vItemSpace = 85;
-        storageFee[] = { 0, store*pspeedboat, 0, 0 };
-		garageSell[] = { 0, sell*pspeedboat, 0, 0 };
-        insurance = ins*pspeedboat;
-        chopShop = chop*pspeedboat;
+        storageFee[] = { 0, 3500, 0, 0 };
+		garageSell[] = { 0, 4950, 0, 0 };
+        insurance = 2500;
+        chopShop = 5000;
         textures[] = { };
     };
 
-	class C_Boatcivil_01_rescue_F {
+	class C_Boat_Civil_01_rescue_F {
         vItemSpace = 85;
         storageFee[] = { 1000, 0, 0, 0 };
         insurance = 2500;
@@ -363,28 +356,28 @@ class CfgVehicles {
 
 	class B_Truck_01_box_F {
         vItemSpace = 1000;
-        storageFee[] = { store*phemttbox, 0, 0, 0 };
-		garageSell[] = { sell*phemttbox, 0, 0, 0 };
-        insurance = ins*phemttbox;
-        chopShop = chop*phemttbox;
+        storageFee[] = { 500, 0, 0, 0 };
+		garageSell[] = { 150000, 0, 0, 0 };
+        insurance = 2500;
+        chopShop = 5000;
         textures[] = { };
     };
 
 	class B_Truck_01_transport_F {
         vItemSpace = 600;
-        storageFee[] = { store*phemtttrans, 0, 0, 0 };
-		garageSell[] = { sell*phemtttrans, 0, 0, 0 };
-        insurance = ins*phemtttrans;
-        chopShop = chop*phemtttrans;
+        storageFee[] = { 650, 0, 0, 0 };
+		garageSell[] = { 135000, 0, 0, 0 };
+        insurance = 2500;
+        chopShop = 5000;
         textures[] = { };
     };
 
 	class O_MRAP_02_F {
         vItemSpace = 80;
-        storageFee[] = { store*pifrit, 0, 0, 0 };
-		garageSell[] = { sell*pifrit, 0, 0, 0 };
-        insurance = ins*pifrit;
-        chopShop = chop*pifrit;
+        storageFee[] = { 450, 0, 0, 0 };
+		garageSell[] = { 65000, 0, 0, 0 };
+        insurance = 2500;
+        chopShop = 5000;
         textures[] = { };
     };
 
@@ -398,34 +391,34 @@ class CfgVehicles {
 
 	class C_Offroad_01_F {
         vItemSpace = 115;
-        storageFee[] = { store*poffroad, store*poffroadcop, store*poffroadmed, 0 };
-		garageSell[] = { sell*poffroad, sell*poffroadcop, sell*poffroadmed, 0 };
-        insurance = ins*poffroad;
-        chopShop = chop*poffroad;
+        storageFee[] = { 1000, 500, 650, 1000 };
+		garageSell[] = { 6500, 2500, 0, 0 };
+        insurance = 2500;
+        chopShop = 2500;
         textures[] = {
         	{ "Red", "civ", {
-                "\A3\soft_F\Offroad_01\Data\offroad_01_extco.paa",
-                "\A3\soft_F\Offroad_01\Data\offroad_01_extco.paa"
+                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_co.paa",
+                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_co.paa"
             } },
 			{ "Yellow", "civ", {
-	                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE01cO.paa",
-	                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE01cO.paa"
+	                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE01_CO.paa",
+	                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE01_CO.paa"
             } },
 			{ "White", "civ", {
-	                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE02cO.paa",
-	                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE02cO.paa"
+	                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE02_CO.paa",
+	                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE02_CO.paa"
             } },
 			{ "Blue", "civ", {
-	                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE03cO.paa",
-	                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE03cO.paa"
+	                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE03_CO.paa",
+	                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE03_CO.paa"
             } },
 			{ "Dark Red", "civ", {
-	                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE04cO.paa",
-	                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE04cO.paa"
+	                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE04_CO.paa",
+	                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE04_CO.paa"
             } },
 			{ "Blue / White", "civ", {
-	                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE05cO.paa",
-	                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE05cO.paa"
+	                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE05_CO.paa",
+	                "\A3\soft_F\Offroad_01\Data\offroad_01_ext_BASE05_CO.paa"
             } },
             { "Fed", "fed", {
 	                "#(ai,64,64,1)Fresnel(0.3,3)"
@@ -441,10 +434,10 @@ class CfgVehicles {
 
 	class C_Kart_01_Blu_F {
 		vItemSpace = 20;
-		storageFee[] = { store*pkart+250, store*pkart+250, store*pkart+250, store*pkart+250 };
-		garageSell[] = { sell*pkart, sell*pkart, sell*pkart, sell*pkart };
-        insurance = ins*pkart;
-        chopShop = chop*pkart;
+		storageFee[] = { 1500, 0, 0, 0 };
+		garageSell[] = { 3500, 0, 0, 0 };
+		inusrance = 1650;
+		chopShop = 3500;
 		textures[] = {};
 	};
 
@@ -452,30 +445,30 @@ class CfgVehicles {
 	class C_Kart_01_Red_F : C_Kart_01_Blu_F {}; //Inherits everything from the above class
 	class C_Kart_01_Vrana_F : C_Kart_01_Blu_F {}; //Inherits everything from the above class
 
-	class C_Hatchback_01sport_F {
+	class C_Hatchback_01_sport_F {
         vItemSpace = 65;
-        storageFee[] = { store*phatchbacksport, store*phatchbacksport, store*phatchbacksport, 0 };
-		garageSell[] = { sell*phatchbacksport, sell*phatchbacksport, sell*phatchbacksport, 0 };
-        insurance = ins*phatchbacksport;
-        chopShop = chop*phatchbacksport;
+        storageFee[] = { 2500, 1000, 0, 0 };
+		garageSell[] = { 15000, 7500, 0, 0 };
+        insurance = 5500;
+        chopShop = 4500;
         textures[] = {
         	{ "Red", "civ", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_extsport01co.paa"
+                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport01_co.paa"
             } },
 			{ "Dark Blue", "civ", {
-	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_extsport02co.paa"
+	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport02_co.paa"
             } },
 			{ "Orange", "civ", {
-	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_extsport03co.paa"
+	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport03_co.paa"
             } },
 			{ "Black / White", "civ", {
-	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_extsport04co.paa"
+	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport04_co.paa"
             } },
 			{ "Beige", "civ", {
-	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_extsport05co.paa"
+	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport05_co.paa"
             } },
 			{ "Green", "civ", {
-	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_extsport06co.paa"
+	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport06_co.paa"
             } },
             { "Police", "cop", {
                 "#(ai,64,64,1)Fresnel(1.3,7)"
@@ -485,51 +478,51 @@ class CfgVehicles {
 
 	class B_Quadbike_01_F {
         vItemSpace = 45;
-        storageFee[] = { store*pquadbike+250, 0, 0, 0 };
-		garageSell[] = { sell*pquadbike, 0, 0, 0 };
-        insurance = ins*pquadbike;
-        chopShop = chop*pquadbike;
+        storageFee[] = { 1000, 0, 0, 0 };
+		garageSell[] = { 950, 0, 0, 0 };
+        insurance = 2500;
+        chopShop = 5000;
         textures[] = {
         	{ "Brown", "cop", {
-                "\A3\Soft_F\Quadbike_01\Data\Quadbike_01co.paa"
+                "\A3\Soft_F\Quadbike_01\Data\Quadbike_01_co.paa"
             } },
 			{ "Digi Desert", "reb", {
-	                "\A3\Soft_F\Quadbike_01\Data\quadbike_01_opforco.paa"
+	                "\A3\Soft_F\Quadbike_01\Data\quadbike_01_opfor_co.paa"
 	        } },
 			{ "Black", "civ", {
-	                "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01civ_blackco.paa"
+	                "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01_civ_black_co.paa"
 	        } },
 			{ "Blue", "civ", {
-	                "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01civ_blueco.paa"
+	                "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01_civ_blue_co.paa"
 	        } },
 			{ "Red", "civ", {
-	                "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01civ_redco.paa"
+	                "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01_civ_red_co.paa"
 	        } },
 			{ "White", "civ", {
-	                "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01civ_whiteco.paa"
+	                "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01_civ_white_co.paa"
 	        } },
 			{ "Digi Green", "civ", {
-	                "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01indpco.paa"
+	                "\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01_indp_co.paa"
 	        } },
 			{ "Hunter Camo", "civ", {
-	                "\a3\soft_f_gamma\Quadbike_01\data\quadbike_01indp_hunterco.paa"
+	                "\a3\soft_f_gamma\Quadbike_01\data\quadbike_01_indp_hunter_co.paa"
 	        } },
 	        { "Rebel Camo", "reb", {
-                "\a3\soft_f_gamma\Quadbike_01\data\quadbike_01indp_hunterco.paa"
+                "\a3\soft_f_gamma\Quadbike_01\data\quadbike_01_indp_hunter_co.paa"
             } }
         };
     };
 
-	class I_Truck_02covered_F {
+	class I_Truck_02_covered_F {
         vItemSpace = 250;
-        storageFee[] = { store*pzamakcov, 0, 0, 0 };
-		garageSell[] = { sell*pzamakcov, 0, 0, 0 };
-        insurance = ins*pzamakcov;
-        chopShop = chop*pzamakcov;
+        storageFee[] = { 14500, 0, 0, 0 };
+		garageSell[] = { 62000, 0, 0, 0 };
+        insurance = 6500;
+        chopShop = 20000;
         textures[] = {
         	{ "Orange", "civ", {
-                "\A3\Soft_F_Beta\Truck_02\data\truck_02_kabco.paa",
-                "\a3\soft_f_beta\Truck_02\data\truck_02_kuzco.paa"
+                "\A3\Soft_F_Beta\Truck_02\data\truck_02_kab_co.paa",
+                "\a3\soft_f_beta\Truck_02\data\truck_02_kuz_co.paa"
             } },
             { "Black", "fed", {
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
@@ -537,78 +530,76 @@ class CfgVehicles {
         };
     };
 
-	class I_Truck_02_transport_F : I_Truck_02covered_F {
+	class I_Truck_02_transport_F : I_Truck_02_covered_F {
         vItemSpace = 120;
-        storageFee[] = { store*pzamaktrans, 0, 0, 0 };
-		garageSell[] = { sell*pzamaktrans, 0, 0, 0 };
-		insurance = ins*pzamaktrans;
-        chopShop = chop*pzamaktrans;
+        storageFee[] = { 12000, 0, 0, 0 };
+		garageSell[] = { 49800, 3500, 0, 0 };
     };
 
-	class O_Truck_03covered_F {
+	class O_Truck_03_covered_F {
 		vItemSpace = 305;
-		storageFee[] = { store*ptempestcov, 0, 0, 0 };
-		garageSell[] = { sell*ptempestcov, 0, 0, 0 };
-		insurance = ins*ptempestcov;
-		chopShop = chop*ptempestcov;
+		storageFee[] = { 25000, 0, 0, 0 };
+		garageSell[] = { 65000, 0, 0, 0 };
+		insurance = 2500;
+		chopShop = 5000;
 		textures[] = {};
 	};
 
 	class C_Hatchback_01_F {
         vItemSpace = 65;
-        storageFee[] = { store*phatchback, 0, 0, 0 };
-		garageSell[] = { sell*phatchback, 0, 0, 0 };
-        insurance = ins*phatchback;
-        chopShop = chop*phatchback;
+        storageFee[] = { 1000, 0, 0, 0 };
+		garageSell[] = { 4500, 3500, 0, 0 };
+        insurance = 2500;
+        chopShop = 5000;
         textures[] = {
         	{ "Beige", "civ", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base01co.paa"
+                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base01_co.paa"
             } },
 			{ "Green", "civ", {
-	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base02co.paa"
+	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base02_co.paa"
             } },
 			{ "Blue", "civ", {
-	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base03co.paa"
+	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base03_co.paa"
             } },
 			{ "Dark Blue", "civ", {
-	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base04co.paa"
+	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base04_co.paa"
             } },
 			{ "Yellow", "civ", {
-	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base06co.paa"
+	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base06_co.paa"
             } },
 			{ "White", "civ", {
-	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base07co.paa"
+	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base07_co.paa"
             } },
 			{ "Grey", "civ", {
-	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base08co.paa"
+	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base08_co.paa"
             } },
             { "Black", "civ", {
-                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09co.paa"
+                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa"
             } }
         };
     };
 
-	class CsUV_01_F {
+	class C_SUV_01_F {
         vItemSpace = 115;
-        storageFee[] = { store*psuv, store*psuvcop, 0, 0 };
-		garageSell[] = { sell*psuv, sell*psuvcop, 0, 0 };
-        insurance = ins*psuv;
-        chopShop = chop*psuv;
+        storageFee[] = { 1000, 0, 0, 0 };
+		garageSell[] = { 15000, 7500, 0, 0 };
+        insurance = 2500;
+        chopShop = 5000;
         textures[] = {
         	{ "Dark Red", "civ", {
-                "\a3\soft_f_gamma\SUV_01\Data\suv_01_extco.paa"
+                "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_co.paa"
             } },
 			{ "Black", "cop", {
-	                "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02co.paa"
+	                "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa"
             } },
 			{ "Silver", "civ", {
-	                "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_03co.paa"
+	                "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_03_co.paa"
             } },
 			{ "Orange", "civ", {
-	                "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04co.paa"
+	                "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa"
             } },
             { "Cop", "cop", {
-                "textures\meccapolicesuv.jpg"
+                "textures\mecca_police_suv.jpg"
             } }
 	        };
     };
@@ -621,35 +612,35 @@ class CfgVehicles {
         chopShop = 5000;
         textures[] = {
         	{ "White", "civ", {
-                "\a3\soft_f_gamma\Van_01\Data\van_01_extco.paa"
+                "\a3\soft_f_gamma\Van_01\Data\van_01_ext_co.paa"
             } },
             { "Red", "civ", {
-                "\a3\soft_f_gamma\Van_01\Data\van_01_ext_redco.paa"
+                "\a3\soft_f_gamma\Van_01\Data\van_01_ext_red_co.paa"
             } }
         };
     };
 
 	class C_Van_01_box_F {
         vItemSpace = 325;
-        storageFee[] = { store*pboxer , 0, 0, 0 };
-		garageSell[] = { sell*pboxer, 0, 0, 0 };
-        insurance = ins*pboxer;
-        chopShop = chop*pboxer;
+        storageFee[] = { 1000, 0, 0, 0 };
+		garageSell[] = { 35000, 0, 0, 0 };
+        insurance = 2500;
+        chopShop = 5000;
         textures[] = {
         	{ "White", "civ", {
-                "\a3\soft_f_gamma\Van_01\Data\van_01_extco.paa"
+                "\a3\soft_f_gamma\Van_01\Data\van_01_ext_co.paa"
             } },
             { "Red", "civ", {
-                "\a3\soft_f_gamma\Van_01\Data\van_01_ext_redco.paa"
+                "\a3\soft_f_gamma\Van_01\Data\van_01_ext_red_co.paa"
             } }
         };
     };
 	class B_MRAP_01_F {
         vItemSpace = 65;
-        storageFee[] = { 0, store*phuntercop , 0, 0 };
-		garageSell[] = { 0, sell*phuntercop, 0, 0 };
-        insurance = ins*phuntercop;
-        chopShop = chop*phuntercop;
+        storageFee[] = { 0, 7500, 0, 0 };
+		garageSell[] = { 0, 10000, 0, 0 };
+        insurance = 2500;
+        chopShop = 5000;
         textures[] = {
         	{ "Regular", "cop", {
                 "texture\hunter1.jpg",
@@ -663,52 +654,52 @@ class CfgVehicles {
 
 	class B_Heli_Light_01_F {
         vItemSpace = 90;
-		storageFee[] = { store*pmh9civ , store*pmh9cop , store*pmh9med , store*pmh9med  };
-		garageSell[] = { sell*pmh9civ, sell*pmh9cop, sell*pmh9med, sell*pmh9med };
-        insurance = ins*pmh9civ;
-        chopShop = chop*pmh9civ;
+        storageFee[] = { 45000, 19500, 0, 0 };
+		garageSell[] = { 57000, 35000, 0, 0 };
+        insurance = 2500;
+        chopShop = 5000;
         textures[] = {
         	{ "Sheriff", "cop", {
-                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_extsheriffco.paa"
+                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_sheriff_co.paa"
             } },
 			{ "Black", "fed", {
-	                "\a3\air_f\Heli_Light_01\Data\heli_light_01_extionco.paa"
+	                "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa"
             } },
 			{ "Civ Blue", "civ", {
-	                "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_blueco.paa"
+	                "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_blue_co.paa"
             } },
 			{ "Civ Red", "civ", {
-	                "\a3\air_f\Heli_Light_01\Data\heli_light_01_extco.paa"
+	                "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_co.paa"
             } },
 			{ "Digi Green", "donate", {
-	                "\a3\air_f\Heli_Light_01\Data\heli_light_01_extindpco.paa"
+	                "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_indp_co.paa"
             } },
 			{ "Blueline", "civ", {
-	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_bluelineco.paa"
+	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_blueline_co.paa"
             } },
 			{ "Elliptical", "civ", {
-	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_ellipticalco.paa"
+	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_elliptical_co.paa"
             } },
 			{ "Furious", "civ", {
-	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_furiousco.paa"
+	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_furious_co.paa"
             } },
 			{ "Jeans Blue", "civ", {
-	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_jeansco.paa"
+	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_jeans_co.paa"
             } },
 			{ "Speedy Redline", "civ", {
-	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_extspeedyco.paa"
+	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_speedy_co.paa"
             } },
 			{ "Sunset", "civ", {
-	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_extsunsetco.paa"
+	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_sunset_co.paa"
             } },
 			{ "Vrana", "civ", {
-	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_vranaco.paa"
+	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_vrana_co.paa"
             } },
 			{ "Waves Blue", "civ", {
-	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_waveco.paa"
+	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_wave_co.paa"
             } },
 			{ "Rebel Digital", "reb", {
-	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_digitalco.paa"
+	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_digital_co.paa"
             } },
             { "EMS White", "med", {
                 "#(argb,8,8,3)color(1,1,1,0.8)"
@@ -718,22 +709,22 @@ class CfgVehicles {
 
 	class O_Heli_Light_02_unarmed_F {
         vItemSpace = 210;
-        storageFee[] = { store*porcaciv , 0, store*porcamed , 0 };
-		garageSell[] = { sell*porcaciv, 0, sell*porcamed, 0 };
-        insurance = ins*porcaciv;
-        chopShop = chop*porcamed;
+        storageFee[] = { 55000, 0, 22000, 0 };
+		garageSell[] = { 72500, 0, 35000, 0 };
+        insurance = 2500;
+        chopShop = 5000;
         textures[] = {
         	{ "Black", "fed", {
-                "\a3\air_f\Heli_Light_02\Data\heli_light_02_extco.paa"
+                "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_co.paa"
             } },
 			{ "White / Blue", "civ", {
-	                "\a3\air_f\Heli_Light_02\Data\heli_light_02_extcivilianco.paa"   
+	                "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_civilian_co.paa"   
             } },
 			{ "Digi Green", "donate", {
-	                "\a3\air_f\Heli_Light_02\Data\heli_light_02_extindpco.paa"
+	                "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_indp_co.paa"
             } },
 			{ "Desert Digi", "reb", {
-	                "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_opforco.paa" 
+	                "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_opfor_co.paa" 
             } },
             { "EMS White", "med", {
                 "#(argb,8,8,3)color(1,1,1,0.8)"
@@ -749,14 +740,14 @@ class CfgVehicles {
         chopShop = 5000;
         textures[] = {
         	{ "Ion", "civ", {
-                "\a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1ionco.paa",
-                "\a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2ionco.paa",
-                "\a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3ionco.paa"
+                "\a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_ion_co.paa",
+                "\a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_ion_co.paa",
+                "\a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_ion_co.paa"
             } },
             { "Dahoman", "civ", {
-                "\a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_dahomanco.paa",
-                "\a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_dahomanco.paa",
-                "\a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_dahomanco.paa"
+                "\a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_dahoman_co.paa",
+                "\a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_dahoman_co.paa",
+                "\a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_dahoman_co.paa"
             } }
         };
     };
