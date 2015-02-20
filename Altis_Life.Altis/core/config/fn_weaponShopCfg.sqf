@@ -47,7 +47,7 @@ switch(_shop) do
 
 			case (FETCH_CONST(life_coplevel) == 2):
 			{
-				["Patrol Officer Equipment Shop",
+				["Private Equipment Shop",
 					[
 						["FirstAidKit","First Aid Kit",500 * life_donDis],
 						["ToolKit","Tool Kit",500 * life_donDis],
@@ -78,7 +78,7 @@ switch(_shop) do
 
 			case (FETCH_CONST(life_coplevel) == 3):
 			{
-				["Sergeant Equipment Shop",
+				["Corporal Equipment Shop",
 					[
 						["FirstAidKit","First Aid Kit",500 * life_donDis],
 						["ToolKit","Tool Kit",500 * life_donDis],
@@ -109,7 +109,7 @@ switch(_shop) do
 			};
 			case (FETCH_CONST(life_coplevel) == 4):
 			{
-				["Lieutenant Equipment Shop",
+				["Sergeant Equipment Shop",
 					[
 						["FirstAidKit","First Aid Kit",500 * life_donDis],
 						["ToolKit","Tool Kit",500 * life_donDis],
@@ -134,12 +134,7 @@ switch(_shop) do
 						["optic_MRCO","MRCO Scope",20000 * life_donDis],
 						["acc_flashlight","Flashlight",500 * life_donDis],
 						["acc_pointer_IR","IR Laser Pointer",500 * life_donDis],
-						
-						["srifle_GM6_LRPS_F","The Lynx",35000 * life_donDis],
-						["5Rnd_127x108_Mag","12.7mm",500 * life_donDis],
-						
-						["srifle_LRR_LRPS_F","M320",35000 * life_donDis],
-						["7Rnd_408_Mag","408 rounds",500 * life_donDis],
+
 						
 						["HandGrenade_Stone","Flashbang",1700 * life_donDis],
 						["SmokeShell",nil,1000 * life_donDis]
@@ -148,7 +143,7 @@ switch(_shop) do
 			};
 			case (FETCH_CONST(life_coplevel) == 5):
 			{
-				["Captain Equipment Shop",
+				["Lieutenant Equipment Shop",
 					[
 						["FirstAidKit","First Aid Kit",500 * life_donDis],
 						["ToolKit","Tool Kit",500 * life_donDis],
@@ -173,9 +168,6 @@ switch(_shop) do
 						["optic_MRCO","MRCO Scope",2000 * life_donDis],
 						["acc_flashlight","Flashlight",500 * life_donDis],
 						["acc_pointer_IR","IR Laser Pointer",500 * life_donDis],
-						
-						["srifle_LRR_LRPS_F","M320",35000 * life_donDis],
-						["7Rnd_408_Mag","408 rounds",500 * life_donDis],	
 						
 						["HandGrenade_Stone","Flashbang",1700 * life_donDis],
 						["SmokeShell",nil,1000 * life_donDis]
@@ -212,7 +204,10 @@ switch(_shop) do
 						["acc_flashlight","Flashlight",500 * life_donDis],
 						["acc_pointer_IR","IR Laser Pointer",500 * life_donDis],	
 						["HandGrenade_Stone","Flashbang",1700 * life_donDis],
-						["SmokeShell",nil,1000 * life_donDis]						
+						["SmokeShell",nil,1000 * life_donDis]	,
+						["srifle_LRR_LRPS_F","M320",35000 * life_donDis],
+						["7Rnd_408_Mag","408 rounds",500 * life_donDis]	
+												
 					]
 				];
 			};

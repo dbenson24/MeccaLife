@@ -102,24 +102,24 @@ class VirtualItems {
 	VITEMMACRO(boltcutter, "STR_Item_BCutter", "boltCutter", 5, 7500, -1, true, -1, "icons\ico_boltcutters.paa")
 	VITEMMACRO(defusekit, "STR_Item_DefuseKit", "defuseKit", 2, 2500, -1, false, -1, "")
 	VITEMMACRO(storagesmall, "STR_Item_StorageBS", "storageSmall", 5, 75000, -1, false, -1, "icons\ico_storageSmall.paa")
-	VITEMMACRO(storagebig, "STR_Item_StorageBL", "storageBig", 10, 150000, -1, false, -1, "icons\ico_storageBig.paa")
+	VITEMMACRO(storagebig, "STR_Item_StorageBL", "storageBig", 10, 250000, -1, false, -1, "icons\ico_storageBig.paa")
 
 	//Mined Items
-	VITEMMACRO(oil_unprocessed, "STR_Item_OilU", "oilUnprocessed", 7, -1, -1, false, -1, "")
-	VITEMMACRO(oil_processed, "STR_Item_OilP", "oilProcessed", 6, -1, 3200, false, -1, "")
+	VITEMMACRO(oil_unprocessed, "STR_Item_OilU", "oilUnprocessed", 5, -1, -1, false, -1, "")
+	VITEMMACRO(oil_processed, "STR_Item_OilP", "oilProcessed", 4, -1, 3200, false, -1, "")
 	VITEMMACRO(copper_unrefined, "STR_Item_CopperOre", "copperUnrefined", 4, -1, -1, false, -1, "")
-	VITEMMACRO(copper_refined, "STR_Item_CopperIngot", "copperRefined", 3, -1, 1500, false, -1, "")
-	VITEMMACRO(iron_unrefined, "STR_Item_IronOre", "ironUnrefined", 5, -1, -1, false, -1, "")
-	VITEMMACRO(iron_refined, "STR_Item_IronIngot", "ironRefined", 3, -1, 3200, false, -1, "")
-	VITEMMACRO(salt_unrefined, "STR_Item_Salt", "saltUnrefined", 3, -1, -1, false, -1, "")
+	VITEMMACRO(copper_refined, "STR_Item_CopperIngot", "copperRefined", 3, -1, 2500, false, -1, "")
+	VITEMMACRO(iron_unrefined, "STR_Item_IronOre", "ironUnrefined", 4, -1, -1, false, -1, "")
+	VITEMMACRO(iron_refined, "STR_Item_IronIngot", "ironRefined", 2, -1, 3200, false, -1, "")
+	VITEMMACRO(salt_unrefined, "STR_Item_Salt", "saltUnrefined", 2, -1, -1, false, -1, "")
 	VITEMMACRO(salt_refined, "STR_Item_SaltR", "saltRefined", 1, -1, 1450, false, -1, "")
 	VITEMMACRO(sand, "STR_Item_Sand", "sand", 3, -1, -1, false, -1, "")
 	VITEMMACRO(glass, "STR_Item_Glass", "glass", 1, -1, 1450, false, -1, "")
-	VITEMMACRO(diamond_uncut, "STR_Item_DiamondU", "diamondUncut", 4, -1, 750, false, -1, "")
-	VITEMMACRO(diamond_cut, "STR_Item_DiamondC", "diamondCut", 2, -1, 2000, false, -1, "")
-	VITEMMACRO(rock, "STR_Item_Rock", "rock", 6, -1, -1, false, -1, "")
-	VITEMMACRO(cement, "STR_Item_CementBag", "cement", 5, -1, 1950, false, -1, "")
-	VITEMMACRO(mushroom, "STR_Item_Mushroom", "mushroom", 5, -1, 1950, false, -1, "")
+	VITEMMACRO(diamond_uncut, "STR_Item_DiamondU", "diamondUncut", 3, -1, 750, false, -1, "")
+	VITEMMACRO(diamond_cut, "STR_Item_DiamondC", "diamondCut", 3, -1, 2000, false, -1, "")
+	VITEMMACRO(rock, "STR_Item_Rock", "rock", 5, -1, -1, false, -1, "")
+	VITEMMACRO(cement, "STR_Item_CementBag", "cement", 4, -1, 2000, false, -1, "")
+	VITEMMACRO(mushroom, "STR_Item_Mushroom", "mushroom", 2, -1, 1950, false, -1, "")
 
 	//Drugs
 	VITEMMACRO(heroin_unprocessed, "STR_Item_HeroinU", "heroinUnprocessed", 2, -1, 3000, true, -1, "")
@@ -127,10 +127,10 @@ class VirtualItems {
 	VITEMMACRO(cannabis, "STR_Item_Cannabis", "cannabis", 2, -1, 1000, true, -1, "")
 	VITEMMACRO(marijuana, "STR_Item_Marijuana", "marijuana", 1, 2500, 2350, true, -1, "icons\ico_marijuana.paa")
 	VITEMMACRO(cocaine_unprocessed, "STR_Item_CocaineU", "cocaineUnprocessed", 2, -1, 1000, true, -1, "")
-	VITEMMACRO(cocaine_processed, "STR_Item_CocaineP", "cocaineProcessed", 2, -1, 3000, true, -1, "")
+	VITEMMACRO(cocaine_processed, "STR_Item_CocaineP", "cocaineProcessed", 1, -1, 3000, true, -1, "")
 	VITEMMACRO(froglsd, "STR_Item_Froglsd", "froglsd", 2, -1, 2500, true, -1, "")
 	VITEMMACRO(frog, "STR_Item_Frog", "frog", 2, -1, 2500, true, -1, "")
-	VITEMMACRO(Magicm, "STR_Item_Magicm", "magicm", 5, -1, 1950, false, -1, "")
+	VITEMMACRO(Magicm, "STR_Item_Magicm", "magicm", 1, -1, 1200, false, -1, "")
 
 	//DrinkC
 	VITEMMACRO(redgull, "STR_Item_RedGull", "redgull", 1, 1500, 200, false, 100, "icons\ico_redgull.paa")
@@ -242,7 +242,7 @@ class VirtualShops {
 	};
 	class drugdealer {
 		name = "STR_Shops_DrugDealer";
-		items[] = { "cocaine_processed", "heroin_processed", "marijuana","froglsd" };
+		items[] = { "cocaine_processed", "heroin_processed", "marijuana","froglsd","magicm" };
 	};
 
 	class oil {
