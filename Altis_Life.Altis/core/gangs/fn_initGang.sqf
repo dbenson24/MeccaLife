@@ -32,8 +32,8 @@ if(!isNil "_group") then {
 		[[player,_group],"TON_fnc_clientGangLeader",(units _group),false] call life_fnc_MP;
 	};
 } else {
-	_group = group player;
 	[player] join _group;
+	_group = group player;
 	_group SVAR ["gang_id",SEL(life_gangData,0),true];
 	_group SVAR ["gang_owner",SEL(life_gangData,1),true];
 	_group SVAR ["gang_name",SEL(life_gangData,2),true];
