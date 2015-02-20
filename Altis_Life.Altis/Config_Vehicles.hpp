@@ -47,121 +47,117 @@ class CarShops {
 
 		{ varname, >= value} this is a "level" requirement mainly used by cops and rebels, do not fill this in if you are not utilizing it.
 	*/
-	
-	
-	
-	/* Shop Inventory Definitions */
-	class civcar {
+	class civ_car {
 		side = "civ";
 		vehicles[] = {
 			{ "B_Quadbike_01_F", pquadbike, "" }, 
 			{ "C_Hatchback_01_F", phatchback, "driver" }, 
 			{ "C_Offroad_01_F", poffroad, "driver" },
-			{ "CsUV_01_F", psuv, "driver" },
-			{ "C_Hatchback_01sport_F", phatchbacksport, "driver" }
+			{ "C_SUV_01_F", psuv, "driver" },
+			{ "C_Hatchback_01_sport_F", phatchbacksport, "driver" }
 		};
 	};
 
-	class kartshop {
+	class kart_shop {
 		side = "civ";	
 		vehicles[] = {
-			{ "C_Kart_01_Blu_F", pkart, "driver" },
-			{ "C_Kart_01_Fuel_F", pkart, "driver" },
-			{ "C_Kart_01_Red_F", pkart, "driver" },
-			{ "C_Kart_01_Vrana_F", pkart, "driver" }
+			{ "C_Kart_01_Blu_F", 15000 , "driver" },
+			{ "C_Kart_01_Fuel_F", 15000, "driver" },
+			{ "C_Kart_01_Red_F", 15000, "driver" },
+			{ "C_Kart_01_Vrana_F", 15000, "driver" }
 		};
 	};
 
-	class medshop {
+	class med_shop {
 		side = "med";
 		vehicles[] = {
-			{ "C_Offroad_01_repair_F", poffroadmed, "" },
-			{ "I_Truck_02_medical_F", pzamakmed, "" }
+			{ "C_Offroad_01_repair_F", 10000, "" },
+			{ "I_Truck_02_medical_F", 75000, "" }
 		};
 	};
 
 	class med_air_hs {
 		side = "med";
 		vehicles[] = {
-			{ "B_Heli_Light_01_F", pmh9med, "mAir" },
-			{ "O_Heli_Light_02_unarmed_F", porcamed, "mAir" }
+			{ "B_Heli_Light_01_F", 50000, "mAir" },
+			{ "O_Heli_Light_02_unarmed_F", 75000, "mAir" }
 		};
 	};
 
 	class civ_truck {
 		side = "civ";
 		vehicles[] = {
-			{ "C_Van_01_box_F", pboxer, "trucking" },
-			{ "I_Truck_02_transport_F", pzamaktrans, "trucking" },
-			{ "I_Truck_02covered_F", pzamakcov, "trucking" },
-			{ "B_Truck_01_transport_F", phemtttrans, "trucking" },
-			{ "O_Truck_03_transport_F", ptempesttrans, "trucking" },
-			{ "O_Truck_03covered_F", ptempestcov, "trucking" },
-			{ "B_Truck_01_box_F", phemttbox, "trucking" },
-			{ "O_Truck_03_device_F", ptempestdev, "trucking" }
+			{ "C_Van_01_box_F", 250000, "trucking" },
+			{ "I_Truck_02_transport_F", 135000, "trucking" },
+			{ "I_Truck_02_covered_F", 200000, "trucking" },
+			{ "B_Truck_01_transport_F", 260000, "trucking" },
+			{ "O_Truck_03_transport_F", 187000, "trucking" },
+			{ "O_Truck_03_covered_F", 251500, "trucking" },
+			{ "B_Truck_01_box_F", 600000, "trucking" },
+			{ "O_Truck_03_device_F", 800000, "trucking" }
 		};
 	};
 
-	class rebcar {
+	class reb_car {
 		side = "civ";
 		vehicles[] = {
-			{ "B_Quadbike_01_F", pquadbike, "" },
-			{ "B_G_Offroad_01_F", poffroad, "" },
-			{ "O_MRAP_02_F", pifrit, "" },
-			{ "B_Heli_Light_01_F", pmh9civ, "" },
-			{ "B_G_Offroad_01_armed_F", p50cal, "rebel" }
+			{ "B_Quadbike_01_F", 2500, "" },
+			{ "B_G_Offroad_01_F", 35000, "" },
+			{ "O_MRAP_02_F", 950000, "" },
+			{ "B_Heli_Light_01_F", 325000, "" },
+			{ "B_G_Offroad_01_armed_F", 950000, "rebel" }
 		};
 	};
 
-	class copcar {
+	class cop_car {
 		side = "cop";
 		vehicles[] = {
-			{ "C_Offroad_01_F", poffroadcop, ""},
-			{ "CsUV_01_F", psuvcop, "" },
-			{ "B_MRAP_01_F", phuntercop, "", { "lifecoplevel", 4 } },
-			{ "C_Hatchback_01sport_F", phatchbacksport, "", { "lifecoplevel", 2 } }
+			{ "C_Offroad_01_F", 5000, ""},
+			{ "C_SUV_01_F", 20000, "" },
+			{ "B_MRAP_01_F", 30000, "", { "life_coplevel", 4 } },
+			{ "C_Hatchback_01_sport_F", 45000, "", { "life_coplevel", 2 } }
 		};
 	};
 
 	class civ_air {
 		side = "civ";
 		vehicles[] = {
-			{ "B_Heli_Light_01_F", pmh9civ, "pilot" },
-			{ "O_Heli_Light_02_unarmed_F", porcaciv, "pilot" }
+			{ "B_Heli_Light_01_F", 253000, "pilot" },
+			{ "O_Heli_Light_02_unarmed_F", 750000, "pilot" }
 		};
 	};
 
 	class cop_air {
 		side = "cop";
 		vehicles[] = {
-			{ "B_Heli_Light_01_F", pmh9cop, "", { "lifecoplevel", 2 } },
-			{ "B_Heli_Transport_01_F", pghosthawkcop, "", { "lifecoplevel", 4 } }
+			{ "B_Heli_Light_01_F", 75000, "", { "life_coplevel", 2 } },
+			{ "B_Heli_Transport_01_F", 200000, "", { "life_coplevel", 4 } }
 		};
 	};
 
 	class cop_airhq {
 		side = "civ";
 		vehicles[] = {
-			{ "B_Heli_Light_01_F", pmh9cop, "" },
-			{ "B_Heli_Transport_01_F", pghosthawkcop, "", { "lifecoplevel", 3 } },
+			{ "B_Heli_Light_01_F", 75000, "" },
+			{ "B_Heli_Transport_01_F", 200000, "", { "life_coplevel", 3 } },
 		};
 	};
 
-	class copship {
+	class cop_ship {
 		side = "cop";
 		vehicles[] = {
-			{ "B_Boat_Transport_01_F", passaultboat, "" },
-			{ "C_Boatcivil_01police_F", pspeedboat, "" },
-			{ "BsDV_01_F", psdv, "" }
+			{ "B_Boat_Transport_01_F", 3000, "" },
+			{ "C_Boat_Civil_01_police_F", 20000, "" },
+			{ "B_SDV_01_F", 100000, "" }
 		};
 	};
 
-	class civship {
+	class civ_ship {
 		side = "civ";
 		vehicles[] = {
-			{ "C_Rubberboat", prescueboat, "boat" },
-			{ "C_Boatcivil_01_F", pspeedboat, "boat" },
-			{ "BsDV_01_F", psdv, "boat" }
+			{ "C_Rubberboat", 5000, "boat" },
+			{ "C_Boat_Civil_01_F", 22000, "boat" },
+			{ "B_SDV_01_F", 150000, "boat" }
 		};
 	};
 };
