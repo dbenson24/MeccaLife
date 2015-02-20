@@ -68,7 +68,9 @@ class Mission
 		"A3_Structures_F_EPB_Civ_Garbage",
 		"A3_Structures_F_Civ_Chapels",
 		"A3_Structures_F_Mil_Barracks",
-		"A3_Characters_F_EPC"
+		"A3_Characters_F_EPC",
+		"A3_Structures_F_EPC_Civ_PlayGround",
+		"A3_Structures_F_EPB_Civ_PlayGround"
 	};
 	addOnsAuto[]=
 	{
@@ -125,6 +127,8 @@ class Mission
 		"A3_Structures_F_EPB_Civ_Garbage",
 		"A3_Structures_F_Civ_Chapels",
 		"A3_Structures_F_Mil_Barracks",
+		"A3_Structures_F_EPC_Civ_PlayGround",
+		"A3_Structures_F_EPB_Civ_PlayGround",
 		"a3_map_altis"
 	};
 	randomSeed=2004553;
@@ -4276,13 +4280,14 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={21520.385,13.465167,10883.877};
+					position[]={23580.514,47.355797,21830.709};
+					azimut=175;
 					id=251;
 					side="CIV";
 					vehicle="C_Nikos_aged";
 					leader=1;
 					skill=0.60000002;
-					init="this enableSimulation false;  this allowDamage false;  this addAction[""Skin and dry frog"",life_fnc_processAction,""frog"",0,false,false,"""",' life_inv_frog > 0 && !life_is_processing'];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""frog"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""frog"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""frog"",0,false,false,"""",' !license_civ_cocaine && playerSide == civilian '];";
+					init="this enableSimulation false;  this allowDamage false;  this addAction[""Skin and dry frog"",life_fnc_processAction,""frog"",0,false,false,"""",' life_inv_frog > 0 && !life_is_processing'];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""frog"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""frog"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""frog"",0,false,false,"""",' !license_civ_frog && playerSide == civilian '];";
 				};
 			};
 		};
@@ -4322,7 +4327,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=439;
+		items=441;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -8913,10 +8918,27 @@ class Mission
 			vehicle="Land_BagBunker_Small_F";
 			skill=0.60000002;
 		};
+		class Item439
+		{
+			position[]={3634.0327,5.6358581,13687.535};
+			id=693;
+			side="EMPTY";
+			vehicle="Land_Carousel_01_F";
+			skill=0.60000002;
+		};
+		class Item440
+		{
+			position[]={3637.373,5.4160495,13675.337};
+			azimut=60;
+			id=694;
+			side="EMPTY";
+			vehicle="Land_SlideCastle_F";
+			skill=0.60000002;
+		};
 	};
 	class Markers
 	{
-		items=352;
+		items=348;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -11213,13 +11235,13 @@ class Mission
 		};
 		class Item292
 		{
-			position[]={23807.201,3.1900001,18646.119};
+			position[]={23669.35,3.1900001,19004.525};
 			name="mrkheroinRed";
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorRed";
 			fillName="Border";
-			a=1300;
+			a=1600;
 			b=1600;
 			angle=45;
 			drawBorder=1;
@@ -11264,13 +11286,13 @@ class Mission
 		};
 		class Item296
 		{
-			position[]={21313.232,40.155651,19819.336};
+			position[]={21906.016,-0.0050637852,20303.682};
 			name="mrkheroinRed_4";
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorRed";
 			fillName="Border";
-			a=1200;
+			a=2500;
 			b=400;
 			angle=320;
 			drawBorder=1;
@@ -11430,26 +11452,6 @@ class Mission
 		};
 		class Item318
 		{
-			position[]={9702.7676,2.6951733,22287.16};
-			name="y_2";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorYellow";
-			a=30;
-			b=30;
-		};
-		class Item319
-		{
-			position[]={8299.6631,76.257942,10083.342};
-			name="y_2_1";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorYellow";
-			a=30;
-			b=30;
-		};
-		class Item320
-		{
 			position[]={162.85205,-0.00087919459,14096.75};
 			name="y_2_2";
 			text="Yellow Zone No Kos But enter at own risk";
@@ -11459,7 +11461,7 @@ class Mission
 			a=30;
 			b=30;
 		};
-		class Item321
+		class Item319
 		{
 			position[]={160.84589,-0.0019510887,14098.104};
 			name="ym";
@@ -11467,27 +11469,7 @@ class Mission
 			type="mil_dot";
 			colorName="ColorYellow";
 		};
-		class Item322
-		{
-			position[]={20085.137,100.99083,6729.7705};
-			name="y_2_1_1";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorYellow";
-			a=30;
-			b=30;
-		};
-		class Item323
-		{
-			position[]={27768.205,19.185431,22223.355};
-			name="y_2_1_2";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorYellow";
-			a=30;
-			b=30;
-		};
-		class Item324
+		class Item320
 		{
 			position[]={159.3266,-185.97,13943.357};
 			name="Dfm";
@@ -11495,7 +11477,7 @@ class Mission
 			type="mil_dot";
 			colorName="ColorRed";
 		};
-		class Item325
+		class Item321
 		{
 			position[]={10419.815,67.326866,8741.748};
 			name="rebel_high_command";
@@ -11505,42 +11487,46 @@ class Mission
 			a=2;
 			b=2;
 		};
-		class Item326
+		class Item322
 		{
 			position[]={8907.2881,67.029625,7480.6377};
 			name="gang_Rebelarea";
-			text="Rebel Hideout 2";
-			type="hd_warning";
+			text="Rebel Slave Labor";
+			type="MinefieldAP";
 			colorName="ColorRed";
 			angle=-358.09299;
 		};
-		class Item327
+		class Item323
 		{
 			position[]={11507.806,84.677643,7092.9702};
 			name="gang_Rebelarea_1";
-			text="Rebel Hideout 2";
-			type="hd_warning";
+			text="Rebel Motor Pool";
+			type="MinefieldAP";
 			colorName="ColorRed";
 			angle=-358.09299;
 		};
-		class Item328
+		class Item324
 		{
 			position[]={11871.47,16.138544,9443.1768};
 			name="gang_Rebelarea_2";
-			text="Rebel Hideout 1";
-			type="hd_warning";
+			text="Rebel Weapon Cache";
+			type="MinefieldAP";
 			colorName="ColorRed";
 			angle=-358.09299;
 		};
-		class Item329
+		class Item325
 		{
-			position[]={10776.254,83.85775,8238.5723};
+			position[]={11171.418,122.80654,8036.3931};
 			name="Not Yet Functional But getting there.";
 			text="Not Yet Functional But getting there.";
+			markerType="ELLIPSE";
 			type="mil_destroy";
-			colorName="ColorRed";
+			colorName="ColorEAST";
+			fillName="FDiagonal";
+			a=3000;
+			b=3000;
 		};
-		class Item330
+		class Item326
 		{
 			position[]={20966.078,0,14740.251};
 			name="mrkfrogGreen";
@@ -11553,7 +11539,7 @@ class Mission
 			angle=320;
 			drawBorder=1;
 		};
-		class Item331
+		class Item327
 		{
 			position[]={21674.033,4.4183664,14691.634};
 			name="mrkfrogRed";
@@ -11566,7 +11552,7 @@ class Mission
 			angle=320;
 			drawBorder=1;
 		};
-		class Item332
+		class Item328
 		{
 			position[]={20924.432,17.216831,14082.753};
 			name="mrkfrogRed_1";
@@ -11579,7 +11565,7 @@ class Mission
 			angle=320;
 			drawBorder=1;
 		};
-		class Item333
+		class Item329
 		{
 			position[]={20258.727,14.11815,14683.518};
 			name="mrkfrogRed_2";
@@ -11592,7 +11578,7 @@ class Mission
 			angle=320;
 			drawBorder=1;
 		};
-		class Item334
+		class Item330
 		{
 			position[]={21029.975,13.292915,15384.404};
 			name="mrkfrogRed_3";
@@ -11605,7 +11591,7 @@ class Mission
 			angle=320;
 			drawBorder=1;
 		};
-		class Item335
+		class Item331
 		{
 			position[]={21373.654,0.87677491,14339.836};
 			name="mrkfrogRed_4";
@@ -11618,17 +11604,17 @@ class Mission
 			angle=320;
 			drawBorder=1;
 		};
-		class Item336
+		class Item332
 		{
-			position[]={21522.592,13.204538,10875.531};
+			position[]={23582.721,47.947266,21822.365};
 			name="FrogPro";
 			text="Frog Proccessing";
 			type="mil_triangle";
 			colorName="ColorRed";
 		};
-		class Item337
+		class Item333
 		{
-			position[]={21523.717,13.217998,10875.319};
+			position[]={23583.846,47.974541,21822.152};
 			name="Redzone";
 			markerType="ELLIPSE";
 			type="Empty";
@@ -11637,7 +11623,7 @@ class Mission
 			a=200;
 			b=200;
 		};
-		class Item338
+		class Item334
 		{
 			position[]={17132.178,34.089958,9929.7295};
 			name="Redzone_1";
@@ -11648,7 +11634,7 @@ class Mission
 			a=200;
 			b=200;
 		};
-		class Item339
+		class Item335
 		{
 			position[]={15814.556,3.6992116,11384.42};
 			name="Redzone_2";
@@ -11659,7 +11645,7 @@ class Mission
 			a=100;
 			b=100;
 		};
-		class Item340
+		class Item336
 		{
 			position[]={6261.8032,101.08791,16849.27};
 			name="Redzone_3";
@@ -11670,7 +11656,7 @@ class Mission
 			a=200;
 			b=200;
 		};
-		class Item341
+		class Item337
 		{
 			position[]={5249.8252,79.223694,11507.429};
 			name="Redzone_4";
@@ -11681,7 +11667,7 @@ class Mission
 			a=200;
 			b=200;
 		};
-		class Item342
+		class Item338
 		{
 			position[]={8995.0078,70.701317,15532.335};
 			name="Redzone_5";
@@ -11692,7 +11678,7 @@ class Mission
 			a=100;
 			b=100;
 		};
-		class Item343
+		class Item339
 		{
 			position[]={19037.574,24.571449,14536.033};
 			name="Redzone_6";
@@ -11703,51 +11689,7 @@ class Mission
 			a=200;
 			b=200;
 		};
-		class Item344
-		{
-			position[]={20760.83,1.367738,14861.325};
-			name="Redzone_7";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorRed";
-			fillName="DiagGrid";
-			a=400;
-			b=400;
-		};
-		class Item345
-		{
-			position[]={21282.578,1.82479,15044.397};
-			name="Redzone_8";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorRed";
-			fillName="DiagGrid";
-			a=200;
-			b=200;
-		};
-		class Item346
-		{
-			position[]={20937.791,1.6341455,14504.339};
-			name="Redzone_9";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorRed";
-			fillName="DiagGrid";
-			a=200;
-			b=200;
-		};
-		class Item347
-		{
-			position[]={21194.094,0,14720.972};
-			name="Redzone_10";
-			markerType="ELLIPSE";
-			type="Empty";
-			colorName="ColorRed";
-			fillName="DiagGrid";
-			a=200;
-			b=200;
-		};
-		class Item348
+		class Item340
 		{
 			position[]={24659.709,17.65527,23159.988};
 			name="Redzone_11";
@@ -11758,7 +11700,7 @@ class Mission
 			a=200;
 			b=200;
 		};
-		class Item349
+		class Item341
 		{
 			position[]={8444.1807,49.524773,12763.961};
 			name="Redzone_12";
@@ -11769,7 +11711,7 @@ class Mission
 			a=150;
 			b=150;
 		};
-		class Item350
+		class Item342
 		{
 			position[]={3601.0432,12.58961,13651.252};
 			name="Medical";
@@ -11777,13 +11719,57 @@ class Mission
 			type="loc_Hospital";
 			colorName="ColorGreen";
 		};
-		class Item351
+		class Item343
 		{
 			position[]={3631.8418,5.5331349,13685.985};
 			name="Coffe";
 			text="Zinger's Coffee Shop";
 			type="mil_pickup";
 			colorName="ColorBlue";
+		};
+		class Item344
+		{
+			position[]={8300.0029,76.217407,10084.371};
+			name="Rebel_Outpost";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="DiagGrid";
+			a=300;
+			b=300;
+		};
+		class Item345
+		{
+			position[]={9697.292,2.7075112,22288.678};
+			name="Rebel_Outpost_1";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="DiagGrid";
+			a=300;
+			b=300;
+		};
+		class Item346
+		{
+			position[]={27767.859,19.176758,22224.982};
+			name="Rebel_Outpost_2";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="DiagGrid";
+			a=300;
+			b=300;
+		};
+		class Item347
+		{
+			position[]={20089.371,100.74147,6725.1089};
+			name="Rebel_Outpost_3";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="DiagGrid";
+			a=300;
+			b=300;
 		};
 	};
 };
