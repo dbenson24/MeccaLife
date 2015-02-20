@@ -13,6 +13,6 @@ life_versionInfo = "Altis Life RPG v4.0";
 
 {_x setMarkerAlphaLocal 0} forEach ["mrkweedRed","mrkweedRed_1","mrkweedRed_2","mrkweedRed_3","mrkweedRed_4","mrkweedGreen"];
 {_x setMarkerAlphaLocal 0} forEach ["mrkfrogRed","mrkfrogRed_1","mrkfrogRed_2","mrkfrogRed_3","mrkfrogRed_4","mrkfrogGreen"];
-{_x setMarkerAlphaLocal 0} forEach ["mrkmushroomRed"];
+{_x setMarkerAlphaLocal 0} forEach ["mrkmushroomRed","mrkmushroomGreen"];
 
 StartProgress = true;
