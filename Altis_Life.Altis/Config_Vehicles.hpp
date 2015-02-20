@@ -1,43 +1,43 @@
 /* Price Coefficients */
-ins = 0.9;
-chop = 0.8;
-sell = 0.9;
-store = 0.05;
+#define ins 0.9
+#define chop 0.8
+#define sell 0.9
+#define store 0.05
 /* End Price Coefficients */
 
 /* Vehicle Prices */
-phatchback = 22500;
-pquadbike = 2500;
-poffroad = 35000;
-psuv = 30000;
-phatchbacksport = 45000;
-pkart = 15000;
-poffroadmed = 10000;
-pzamakmed = 75000;
-pmh9med = 50000;
-porcamed = 75000;
-pboxer = 250000;
-pzamaktrans = 135000;
-pzamakcov = 200000;
-phemtttrans = 260000;
-ptempesttrans = 187000;
-ptempestcov = 251500;
-phemttbox = 600000;
-ptempestdev = 800000;
-pifrit = 950000;
-pmh9civ = 325000;
-p50cal = 950000;
-poffroadcop = 5000;
-psuvcop = 20000;
-phuntercop = 30000;
-pm900 = 253000;
-porcaciv = 750000;
-pmh9cop = 75000;
-pghosthawkcop = 200000;
-psdv = 100000;
-prescueboat = 5000;
-pspeedboat = 20000;
-passaultboat = 3000;
+#define phatchback 22500
+#define pquadbike 2500
+#define poffroad 35000
+#define psuv 30000
+#define phatchbacksport 45000
+#define pkart 15000
+#define poffroadmed 10000
+#define pzamakmed 75000
+#define pmh9med 50000
+#define porcamed 75000
+#define pboxer 250000
+#define pzamaktrans 135000
+#define pzamakcov 200000
+#define phemtttrans 260000
+#define ptempesttrans 187000
+#define ptempestcov 251500
+#define phemttbox 600000
+#define ptempestdev 800000
+#define pifrit 950000
+#define pmh9civ 325000
+#define p50cal 950000
+#define poffroadcop 5000
+#define psuvcop 20000
+#define phuntercop 30000
+#define pm900 253000
+#define porcaciv 750000
+#define pmh9cop 75000
+#define pghosthawkcop 200000
+#define psdv 100000
+#define prescueboat 5000
+#define pspeedboat 20000
+#define passaultboat 3000
 /* End Vehicle Prices */
 
 class CarShops {
@@ -197,7 +197,7 @@ class CfgVehicles {
 		storageFee[] = { 0, 0, store*pzamakmed, 0 };
 		garageSell[] = { 0, 0, sell*pzamakmed, 0 };
 		insurance = ins*pzamakmed;
-		chopShop = chop*pzamakmed;
+		chopShop = 0;
 		
 	};
 
@@ -205,14 +205,14 @@ class CfgVehicles {
 		vItemSpace = 200;
 		storageFee[] = { 0, 0, 3000, 0 };
 		garageSell[] = { 0, 0, 10000, 0 };
-		chopShop = 7500;
+		chopShop = 0;
 	};
 
 	class B_Truck_01_medical_F : Default {
 		vItemSpace = 250;
 		storageFee[] = { 0, 0, 6500, 0 };
 		garageSell[] = { 0, 0, 25000, 0 };
-		chopShop = 12500;
+		chopShop = 0;
 	};
 
 	class C_Rubberboat {
