@@ -18,8 +18,11 @@ _gear_list = _display displayCtrl 2402;
 lbClear _item_list;
 lbClear _gear_list;
 
-_shop_data = [life_shop_type] call life_fnc_virt_shops;
-ctrlSetText[2403,format["%1", _shop_data select 0]];
+//_shop_data = [life_shop_type] call life_fnc_virt_shops;
+//ctrlSetText[2403,format["%1", _shop_data select 0]];
+if(!isClass(missionConfigFile >> "VirtualShops" >> life_shop_type)) exitWith {closeDialog 0; hint "Config does not exist?";}; //Make sure the entry exists..
+ctrlSetText[2403,localize (M_CONFIG(getText,"VirtualShops",life_shop_type,"name"))];
+//_shopItems = M_CONFIG(getArray,"VirtualShops",life_shop_type,"items");
 
 _sender = player;
 _uid = getPlayerUID _sender;
