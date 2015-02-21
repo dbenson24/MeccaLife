@@ -7,8 +7,9 @@
 */
 while {true} do
 {	
-		if (uniform player == "U_I_CombatUniform") then 
+	if(playerSide == west) then 
 	{
+		if (uniform player == "U_I_CombatUniform") then 
 		switch (FETCH_CONST(life_donatorl)) do 
 		{
 
