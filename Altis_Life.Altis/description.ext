@@ -94,6 +94,19 @@ class CfgSounds
     sound[] = {"\sounds\caralarm.ogg", 1.0, 1};
     titles[] = {};
 	};
+	class lock
+	{
+		name = "lock";
+		sound[] = {"\sounds\vehicle_lock.ogg", 1.0, 1};
+		titles[] = {};
+	};
+ 
+	class unlock
+	{
+		name = "unlock";
+		sound[] = {"\sounds\vehicle_unlock.ogg", 1.0, 1};
+		titles[] = {};
+	};
 };
 
 class CfgDebriefing

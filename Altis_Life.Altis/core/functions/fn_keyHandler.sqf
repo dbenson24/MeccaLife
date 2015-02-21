@@ -307,10 +307,12 @@ switch (_code) do {
 						_veh SVAR [format["bis_disabled_Door_%1",_door],1,true];
 						_veh animate [format["door_%1_rot",_door],0];
 						systemChat localize "STR_House_Door_Lock";
+						_veh say3D "unlock";
 					} else {
 						_veh SVAR [format["bis_disabled_Door_%1",_door],0,true];
 						_veh animate [format["door_%1_rot",_door],1];
 						systemChat localize "STR_House_Door_Unlock";
+						_veh say3D "unlock";
 					};
 				};
 			} else {
@@ -323,6 +325,7 @@ switch (_code) do {
 							[[_veh,0],"life_fnc_lockVehicle",_veh,false] call life_fnc_MP;
 						};
 						systemChat localize "STR_MISC_VehUnlock";
+						_veh say3D "unlock";
 					} else {
 						if(local _veh) then {
 							_veh lock 2;
@@ -330,6 +333,7 @@ switch (_code) do {
 							[[_veh,2],"life_fnc_lockVehicle",_veh,false] call life_fnc_MP;
 						};	
 						systemChat localize "STR_MISC_VehLock";
+						_veh say3D "lock";
 					};
 				};
 			};

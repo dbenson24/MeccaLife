@@ -12,7 +12,9 @@ _state = _house getVariable["locked",true];
 if(_state) then {
 	_house setVariable["locked",false,true];
 	titleText[localize "STR_House_StorageUnlock","PLAIN"];
+	_veh say3D "unlock";
 } else {
 	_house setVariable["locked",true,true];
 	titleText[localize "STR_House_StorageLock","PLAIN"];
+	_veh say3D "lock";
 };
