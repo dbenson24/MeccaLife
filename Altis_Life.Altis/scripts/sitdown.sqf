@@ -6,6 +6,6 @@ _chair setVariable["occupied",true,true];
 waitUntil {animationState player == "crew"};
 _unit setPos (getPosATL _chair); 
 _unit setDir ((getDir _chair) - 180); 
-life_action_standup = _unit addaction ["<t color='#0099FF'>Stand Up</t>","Chair\standup.sqf"];
+life_action_standup = _unit addaction ["<t color='#0099FF'>Stand Up</t>","scripts\standup.sqf"];
 life_sitting_chair = _chair;
 _unit setposatl [getPosATL _unit select 0, getPosATL _unit select 1,((getPosATL _unit select 2))];
