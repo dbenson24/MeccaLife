@@ -29,7 +29,8 @@ if (count _array == 0 ) exitwith {};
 
 {
 if ((_x select 2) > 1 ) then {
-	_name = [([(_x select 0),0] call life_fnc_varHandle)] call life_fnc_vartostr;
+	_name = ITEM_NAME(SEL(_x,0));
+	//_name = [([(_x select 0),0] call life_fnc_varHandle)] call life_fnc_vartostr;
 	
 		_price = _x select 2;
 		_achatliste lbAdd format["%1  ($%2)",_name,[_price] call life_fnc_numberText];
@@ -41,7 +42,8 @@ if ((_x select 2) > 1 ) then {
 
 {
 	if ((_x select 1) > 1 ) then {
-	_name = [([(_x select 0),0] call life_fnc_varHandle)] call life_fnc_vartostr;
+	_name = ITEM_NAME(SEL(_x,0));
+	//_name = [([(_x select 0),0] call life_fnc_varHandle)] call life_fnc_vartostr;
 	/*_var = [_name,0] call life_fnc_varHandle;
 	_val = missionNameSpace getVariable _var;
 	_name = [_var] call life_fnc_vartostr;*/

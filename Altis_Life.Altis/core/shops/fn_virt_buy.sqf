@@ -20,7 +20,8 @@ _amount = _diff;
 _hideout = (nearestObjects[getPosATL player,["Land_u_Barracks_V2_F","Land_i_Barracks_V2_F"],25]) select 0;
 if((_price * _amount) > life_cash && {!isNil "_hideout" && {!isNil {grpPlayer getVariable "gang_bank"}} && {(grpPlayer getVariable "gang_bank") <= _price * _amount}}) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
 
-_name = [([_type,0] call life_fnc_varHandle)] call life_fnc_varToStr;
+_name = ITEM_NAME(SEL(_x,0));
+//_name = [([_type,0] call life_fnc_varHandle)] call life_fnc_varToStr;
 
 if(([true,_type,_amount] call life_fnc_handleInv)) then
 {
