@@ -35,7 +35,7 @@ _query = format["SELECT id, side, classname, type, pid, alive, active, plate, co
 
 waitUntil{sleep (random 0.3); !DB_Async_Active};
 _tickTime = diag_tickTime;
-_queryResult = [_query,2] call DB_fnc_asyncCall;
+_queryResult = [_query,2,true] call DB_fnc_asyncCall;
 
 if((EQUAL(EXTDB_SETTINGS("MySQL_Query"),1))) then {
 	["diag_log",[
