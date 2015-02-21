@@ -6,8 +6,42 @@
 	Skin changer
 */
 while {true} do
+{	
+		if (uniform player == "U_I_CombatUniform") then 
 	{
-	if(playerSide == civilian) exitWith {};
+		switch (FETCH_CONST(life_donatorl)) do 
+		{
+
+			case 1:
+			{
+			[[player,0,"textures\mafia.paa"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+			};
+	
+			case 2:
+			{
+			[[player,0,"textures\mafia.paa"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+			};
+	
+			case 3:
+			{
+			[[player,0,"textures\mafia.paa"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+			};
+	
+			case 4:
+			{
+			[[player,0,"textures\mafia.paa"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+			};
+	
+			case 5:
+			{
+			[[player,0,"textures\mafia.paa"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+			};
+			case 6:
+			{
+			[[player,0,"textures\mafia.paa"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+			};
+		};
+	};
 	if(playerSide == west) then 
 	{
 		if (uniform player == "U_BG_Guerilla2_2") then {
