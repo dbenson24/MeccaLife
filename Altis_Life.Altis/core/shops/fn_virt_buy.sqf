@@ -48,19 +48,10 @@ if(([true,_type,_amount] call life_fnc_handleInv)) then
 			[[1,player,life_shop_type,_amount,_price,_type],"TON_fnc_Ajustprices",false,false] spawn life_fnc_MP;
 		};
 	} else {
-<<<<<<< HEAD
 		if((_price * _amount) > life_cash) exitWith {hint localize "STR_NOTF_NotEnoughMoney"; [false,_type,_amount] call life_fnc_handleInv;};
 		hint format[localize "STR_Shop_Virt_BoughtItem",_amount,_name,[(_price * _amount)] call life_fnc_numberText];
 		SUB(life_cash,(_price * _amount));
 		[[1,player,life_shop_type,_amount,_price,_type],"TON_fnc_Ajustprices",false,false] spawn life_fnc_MP;
-=======
-		if((_price * _amount) > CASH) exitWith {hint localize "STR_NOTF_NotEnoughMoney"; [false,_type,_amount] call life_fnc_handleInv;};
-		
-		player say3D "buy";
-		
-		hint format[localize "STR_Shop_Virt_BoughtItem",_amount,(localize _name),[(_price * _amount)] call life_fnc_numberText];
-		SUB(CASH,(_price * _amount));
->>>>>>> e6c4fbbd7b77e18b085657f583d7148f56b0d278
 	};
 	
 	[] call life_fnc_virt_update;

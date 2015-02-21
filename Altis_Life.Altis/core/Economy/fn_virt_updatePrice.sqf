@@ -29,7 +29,7 @@ if (count _array == 0 ) exitwith {};
 
 {
 if ((_x select 1) > 1 ) then {
-	_name = ITEM_NAME(SEL(_x,0));
+	_name = SEL(_x,0);
 	//_name = [([(_x select 0),0] call life_fnc_varHandle)] call life_fnc_vartostr;
 	
 		_price = _x select 1;
