@@ -10,8 +10,10 @@ if(isNull _building) exitWith {};
 if(!(_building isKindOf "House_F")) exitWith {hint "You are not looking at a house door."};
 if(isNil "life_boltcutter_uses") then {life_boltcutter_uses = 0;};
 if((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _building OR (nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"]) == _building) then {
+	[[_vault],"life_fnc_bankalarmsound",true,true] call life_fnc_MP;
 	[[[1,2],"STR_ISTR_Bolt_AlertFed",true,[]],"life_fnc_broadcast",true,false] call life_fnc_MP;
 } else {
+	[[_vault],"life_fnc_bankalarmsound",true,true] call life_fnc_MP;
 	[[0,"STR_ISTR_Bolt_AlertHouse",true,[profileName]],"life_fnc_broadcast",true,false] call life_fnc_MP;
 };
 
@@ -63,14 +65,14 @@ while {true} do
 	_progressBar progressSetPosition _cP;
 	_titleText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_title];
 	if(_cP >= 1 OR !alive player) exitWith {};
-	if(life_istazed) exitWith {}; //Tazed
+	if(life_isDowned) exitWith {}; //Downed
 	if(life_interrupted) exitWith {};
 };
 
 //Kill the UI display and check for various states
 5 cutText ["","PLAIN"];
 player playActionNow "stop";
-if(!alive player OR life_istazed) exitWith {life_action_inUse = false;};
+if(!alive player OR life_isDowned) exitWith {life_action_inUse = false;};
 if((player getVariable["restrained",false])) exitWith {life_action_inUse = false;};
 if(life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"]; life_action_inUse = false;};
 life_boltcutter_uses = life_boltcutter_uses + 1;

@@ -638,9 +638,9 @@ class CfgVehicles {
         insurance = 2500;
         chopShop = 5000;
         textures[] = {
-        	{ "Regular", "cop", {
-                "texture\hunter1.jpg",
-				"texture\hunter2.jpg"
+        	{ "Mecca State", "cop", {
+                "textures\hunter1.jpg",
+                "textures\hunter2.jpg"
             } },
             { "Black", "fed", {
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)"

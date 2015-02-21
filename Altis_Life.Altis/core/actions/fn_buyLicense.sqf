@@ -78,3 +78,4 @@ if(_type == "news") then {
 };
 titleText[format[localize "STR_NOTF_B_1", localize _displayName,[_price] call life_fnc_numberText],"PLAIN"];
 SVAR_MNS [_varName,true];
+player say3D "buy";

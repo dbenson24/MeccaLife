@@ -35,7 +35,9 @@ life_vdAir = viewDistance;
 tawvd_addon_disable = true;
 life_earplugs = false;
 life_is_alive = false;
-life_isDowned = false;
+life_siren2_active = false;
+life_fake_weapons = ["Binocular","Laserdesignator","Rangefinder"];
+
 life_god = false; 
 life_frozen = false; 
 life_markers = false;
@@ -49,6 +51,7 @@ life_clothing_purchase = [-1,-1,-1,-1,-1];
 ****** Weight Variables *****
 *****************************
 */
+life_maxWeight = LIFE_SETTINGS(getNumber,"total_maxWeight");
 life_maxWeightT = LIFE_SETTINGS(getNumber,"total_maxWeightT");
 life_carryWeight = 0; //Represents the players current inventory weight (MUST START AT 0).
 
@@ -65,7 +68,7 @@ life_thirst = 100;
 life_hunger = 100;
 CASH = 0;
 
-life_istazed = false;
+life_isDowned = false;
 life_vehicles = [];
 life_smartphoneTarget = ObjNull;
 
