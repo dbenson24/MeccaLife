@@ -140,6 +140,8 @@ class CfgFunctions
 			class setObjVar {};
 			class keyManagement {};
 			class vehicleisdead {};
+			class getPrices {};
+            class ajustprices {};
 		};
 		
 		class Housing
