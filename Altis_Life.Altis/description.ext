@@ -110,17 +110,25 @@ class CfgSounds
 
 	class Cuff 
 	{
-	name = "cuff";
-	sound[] = {"\sounds\cuff.ogg", 0.95, 0.95};
-	titles[] = {};
+		name = "cuff";
+		sound[] = {"\sounds\cuff.ogg", 0.95, 0.95};
+		titles[] = {};
 	};
 	
     class ticket
 	{
-	name="ticket";
-	sound[] = {"\sounds\ticket.ogg", 1.0, 1};
-	titles[] = {0, " "};
+		name="ticket";
+		sound[] = {"\sounds\ticket.ogg", 1.0, 1};
+		titles[] = {0, " "};
 	};
+
+    class trunk_open
+    {
+        name = "trunk_open";
+        sound[] = {"\sounds\trunk_open.ogg", 1.0, 1};
+        titles[] = {};
+    };
+
 };
 
 class CfgDebriefing

@@ -187,6 +187,7 @@ switch (_code) do {
 		if(!_alt && !_ctrlKey && !life_is_processing) then {
 			if(vehicle player != player && alive vehicle player) then {
 				if((vehicle player) in life_vehicles) then {
+					player say3D "trunk_open";
 					[vehicle player] call life_fnc_openInventory;
 				};
 			} else {
@@ -194,6 +195,7 @@ switch (_code) do {
 				_list = ["landVehicle","Air","Ship","House_F"];
 				if(KINDOF_ARRAY(cursorTarget,_list) && {player distance cursorTarget < 7} && {vehicle player == player} && {alive cursorTarget}) then {
 					if(cursorTarget in life_vehicles OR {!(cursorTarget GVAR ["locked",true])}) then {
+						player say3D "trunk_open";
 						[cursorTarget] call life_fnc_openInventory;
 					};
 				};
