@@ -114,6 +114,13 @@ class CfgSounds
 	sound[] = {"\sounds\cuff.ogg", 0.95, 0.95};
 	titles[] = {};
 	};
+	
+    class ticket
+	{
+	name="ticket";
+	sound[] = {"\sounds\ticket.ogg", 1.0, 1};
+	titles[] = {0, " "};
+	};
 };
 
 class CfgDebriefing
