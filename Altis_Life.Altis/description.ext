@@ -128,6 +128,20 @@ class CfgSounds
         sound[] = {"\sounds\trunk_open.ogg", 1.0, 1};
         titles[] = {};
     };
+	
+    class buy
+	{
+		name = "buy";
+		sound[] = {"\sounds\buy.ogg", 1.0, 1};
+		titles[] = {};
+	};
+
+	class bank_alarm 
+	{
+		name = "bank_alarm";
+		sound[] = {"\sounds\bank.ogg", 0.95, 0.95};
+		titles[] = {};
+	};
 
 };
 

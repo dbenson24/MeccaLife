@@ -354,6 +354,7 @@ class Life_Client_Core
 		class heroine {};
 		class cocaine {};
 		class weed {};
+		class bankalarmsound {};
 	};
 	
 	class Dialog_Controls

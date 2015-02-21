@@ -13,6 +13,9 @@ _search = nearestObjects[getPos air_sp, ["Air"],5];
 if(EQUAL(count _search,0)) exitWith {hint localize "STR_Service_Chopper_NoAir"};
 if(CASH < 1000) exitWith {hint localize "STR_Serive_Chopper_NotEnough"};
 SUB(CASH,1000);
+
+player say3D "buy";
+
 life_action_inUse = true;
 _title = localize "STR_Service_Chopper_Servicing";
 5 cutRsc ["life_progress","PLAIN"];
