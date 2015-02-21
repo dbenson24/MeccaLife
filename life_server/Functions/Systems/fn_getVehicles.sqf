@@ -31,7 +31,7 @@ if(_side == "Error") exitWith {
 	[[[]],"life_fnc_impoundMenu",(owner _unit),false] call life_fnc_MP;
 };
 
-_query = format["SELECT id, side, classname, type, pid, alive, active, plate, color FROM vehicles"];
+_query = format["SELECT id, side, classname, type, pid, alive, active, plate, color FROM vehicles WHERE pid='%1'",_pid];
 
 waitUntil{sleep (random 0.3); !DB_Async_Active};
 _tickTime = diag_tickTime;
