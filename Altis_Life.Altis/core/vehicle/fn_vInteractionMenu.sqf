@@ -1,5 +1,3 @@
-#include <macro.h>
-
 /*
 	File: fn_vInteractionMenu.sqf
 	Author: Bryan "Tonic" Boardwine
@@ -37,12 +35,11 @@ life_vInact_curTarget = _curTarget;
 //Set Repair Action
 _Btn1 ctrlSetText localize "STR_vInAct_Repair";
 _Btn1 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_repairTruck;";
-
-if("ToolKit" in (items player) && (damage _curTarget < 1)) then {_Btn1 ctrlEnable true;} else {_Btn1 ctrlEnable false;};
+if("ToolKit" in (items player)) then {_Btn1 ctrlEnable true;} else {_Btn1 ctrlEnable false;};
 
 _Btn2 ctrlSetText localize "STR_vInAct_PullOut";
 _Btn2 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_pulloutAction;";
-//if((count crew _curTarget == 0) OR (currentWeapon player == "") OR (currentWeapon player in life_fake_weapons)) then {_Btn2 ctrlEnable false;};
+if((count crew _curTarget == 0) OR (currentWeapon player == "") OR (currentWeapon player in life_fake_weapons)) then {_Btn2 ctrlEnable false;};
 
 if(playerSide == west) then {
 

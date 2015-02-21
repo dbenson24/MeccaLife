@@ -162,7 +162,7 @@ switch (_code) do {
 	case 34: {
 		if(_shift) then {_handled = true;};
 		if(_shift && playerSide == civilian && {!isNull cursorTarget} && {cursorTarget isKindOf "Man"} && {isPlayer cursorTarget} && {alive cursorTarget} && {cursorTarget distance player < 4} && {speed cursorTarget < 1}) then {
-			if(!(EQUAL(animationState cursorTarget,"Incapacitated")) && {(EQUAL(currentWeapon player,RIFLE))} OR {EQUAL(currentWeapon player,PISTOL)} && {!(EQUAL(currentWeapon player,""))} && {!life_knockout} && {!(player GVAR ["restrained",false])} && {!life_istazed}) then {
+			if(!(EQUAL(animationState cursorTarget,"Incapacitated")) && {(EQUAL(currentWeapon player,RIFLE))} OR {EQUAL(currentWeapon player,PISTOL)} && {!(EQUAL(currentWeapon player,""))} && {!life_knockout} && {!(player GVAR ["restrained",false])} && {!life_isDowned}) then {
 				[cursorTarget] spawn life_fnc_knockoutAction;
 			};
 		};
@@ -227,31 +227,66 @@ switch (_code) do {
 	};
 	
 	//F Key
-	case 33: {
-		if(playerSide in [west,independent] && {vehicle player != player} && {!life_siren_active} && {((driver vehicle player) == player)}) then {
-			[] spawn {
+	case 33:
+	{	if (!_shift) then
+		{
+		if(playerSide in [west,independent] && vehicle player != player && !life_siren_active && ((driver vehicle player) == player)) then
+		{
+			[] spawn
+			{
 				life_siren_active = true;
 				sleep 4.7;
 				life_siren_active = false;
 			};
-			
 			_veh = vehicle player;
-			if(isNil {_veh GVAR "siren"}) then {_veh SVAR ["siren",false,true];};
-			if((_veh GVAR "siren")) then {
-				titleText [localize "STR_MISC_SirensOFF","PLAIN"];
-				_veh SVAR ["siren",false,true];
-			} else {
-				titleText [localize "STR_MISC_SirensON","PLAIN"];
-				_veh SVAR ["siren",true,true];
+			if(isNil {_veh GVAR "siren"}) then {_veh setVariable["siren",false,true];};
+			if((_veh GVAR "siren")) then
+			{
+				titleText ["Sirens Off","PLAIN"];
+				_veh setVariable["siren",false,true];
+			}
+				else
+			{
+				titleText ["Sirens On","PLAIN"];
+				_veh setVariable["siren",true,true];
 				if(playerSide == west) then {
-					[[_veh],"life_fnc_copSiren",nil,true] call life_fnc_MP;
+					[[_veh],"life_fnc_copSiren",nil,true] spawn life_fnc_MP;
 				} else {
-					//I do not have a custom sound for this and I really don't want to go digging for one, when you have a sound uncomment this and change medicSiren.sqf in the medical folder.
-					[[_veh],"life_fnc_medicSiren",nil,true] call life_fnc_MP;
+					[[_veh],"life_fnc_medicSiren",nil,true] spawn life_fnc_MP;
 				};
 			};
 		};
 	};
+		if (_shift) then
+		{
+		if(playerSide in [west,independent] && vehicle player != player && !life_siren2_active && ((driver vehicle player) == player)) then
+		{
+			[] spawn
+			{
+				life_siren2_active = true;
+				sleep 4.7;
+				life_siren2_active = false;
+			};
+			_veh = vehicle player;
+			if(isNil {_veh GVAR "siren2"}) then {_veh setVariable["siren2",false,true];};
+			if((_veh GVAR "siren2")) then
+			{
+				titleText ["Yelp Off","PLAIN"];
+				_veh setVariable["siren2",false,true];
+			}
+				else
+			{
+				titleText ["Yelp On","PLAIN"];
+				_veh setVariable["siren2",true,true];
+				if(playerSide == west) then {
+					[[_veh],"life_fnc_copSiren2",nil,true] spawn life_fnc_MP;
+				} else {
+					[[_veh],"life_fnc_medicSiren",nil,true] spawn life_fnc_MP;
+				};
+			};
+		};
+	};
+};
 	
 	//U Key
 	case 22: {
@@ -272,10 +307,12 @@ switch (_code) do {
 						_veh SVAR [format["bis_disabled_Door_%1",_door],1,true];
 						_veh animate [format["door_%1_rot",_door],0];
 						systemChat localize "STR_House_Door_Lock";
+						_veh say3D "unlock";
 					} else {
 						_veh SVAR [format["bis_disabled_Door_%1",_door],0,true];
 						_veh animate [format["door_%1_rot",_door],1];
 						systemChat localize "STR_House_Door_Unlock";
+						_veh say3D "unlock";
 					};
 				};
 			} else {
@@ -288,6 +325,7 @@ switch (_code) do {
 							[[_veh,0],"life_fnc_lockVehicle",_veh,false] call life_fnc_MP;
 						};
 						systemChat localize "STR_MISC_VehUnlock";
+						_veh say3D "unlock";
 					} else {
 						if(local _veh) then {
 							_veh lock 2;
@@ -295,6 +333,7 @@ switch (_code) do {
 							[[_veh,2],"life_fnc_lockVehicle",_veh,false] call life_fnc_MP;
 						};	
 						systemChat localize "STR_MISC_VehLock";
+						_veh say3D "lock";
 					};
 				};
 			};
@@ -307,9 +346,9 @@ switch (_code) do {
 	{
 		if(!_alt && !_ctrlKey) then {
 			
-			if (vehicle player == player && !(player getVariable ["restrained", false]) && (animationState player) != "Incapacitated" && !life_istazed) then
+			if (vehicle player == player && !(player GVAR ["restrained", false]) && (animationState player) != "Incapacitated" && !life_isDowned) then
 			{
-				if (player getVariable ["surrender", false]) then
+				if (player GVAR ["surrender", false]) then
 				{
 					player setVariable ["surrender", false, true];
 				} else

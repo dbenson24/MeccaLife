@@ -208,6 +208,7 @@ class Life_Client_Core
 		class earplugs {};
 		class handleDowned {};
 		class emptyFuel {};
+		class CarAlarmSound {};
 	};
 	
 	class Network
@@ -229,7 +230,6 @@ class Life_Client_Core
 		file = "core\civilian";
 		class jailMe {};
 		class jail {};
-		class tazed {};
 		class knockedOut {};
 		class knockoutAction {};
 		class robReceive {};
@@ -290,6 +290,7 @@ class Life_Client_Core
 		class seizePlayerWeapon {};
 		class seizeObjects {};
 		class copEnter {};
+		class copSiren2 {};
 		
 	};
 	

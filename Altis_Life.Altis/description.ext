@@ -73,6 +73,47 @@ class CfgSounds
 		sound[] = {"\sounds\flashbang.ogg", 1.0, 1};
 		titles[] = {};
 	};
+	
+	class Yelp
+	{
+	name = "Yelp";
+	sound[] = {"\sounds\Yelp.ogg", 1.0, 1};
+	titles[] = {};
+	};
+	
+	class medic_siren
+	{
+    name = "medic_siren";
+    sound[] = {"\sounds\Siren_Med.ogg", 1.0, 1};
+    titles[] = {};
+	};
+	
+   	class car_alarm
+	{
+    name = "car_alarm";
+    sound[] = {"\sounds\caralarm.ogg", 1.0, 1};
+    titles[] = {};
+	};
+	class lock
+	{
+		name = "lock";
+		sound[] = {"\sounds\vehicle_lock.ogg", 1.0, 1};
+		titles[] = {};
+	};
+ 
+	class unlock
+	{
+		name = "unlock";
+		sound[] = {"\sounds\vehicle_unlock.ogg", 1.0, 1};
+		titles[] = {};
+	};
+
+	class Cuff 
+	{
+	name = "cuff";
+	sound[] = {"\sounds\cuff.ogg", 0.95, 0.95};
+	titles[] = {};
+	};
 };
 
 class CfgDebriefing
