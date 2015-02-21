@@ -208,6 +208,7 @@ class Life_Client_Core
 		class earplugs {};
 		class handleDowned {};
 		class emptyFuel {};
+		class CarAlarmSound {};
 	};
 	
 	class Network

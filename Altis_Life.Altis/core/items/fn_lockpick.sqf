@@ -21,6 +21,7 @@ if(!_isVehicle && !(_curTarget getVariable["restrained",false])) exitWith {};
 
 _title = format[localize "STR_ISTR_Lock_Process",if(!_isVehicle) then {"Handcuffs"} else {getText(configFile >> "CfgVehicles" >> (typeOf _curTarget) >> "displayName")}];
 life_action_inUse = true; //Lock out other actions
+[[_curTarget],"life_fnc_CarAlarmSound",nil,true] spawn life_fnc_MP;
 
 //Setup the progress bar
 disableSerialization;
