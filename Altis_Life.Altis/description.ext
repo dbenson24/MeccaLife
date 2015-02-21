@@ -107,6 +107,13 @@ class CfgSounds
 		sound[] = {"\sounds\vehicle_unlock.ogg", 1.0, 1};
 		titles[] = {};
 	};
+
+	class Cuff 
+	{
+	name = "cuff";
+	sound[] = {"\sounds\cuff.ogg", 0.95, 0.95};
+	titles[] = {};
+	};
 };
 
 class CfgDebriefing
