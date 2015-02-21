@@ -43,7 +43,7 @@ if ((_x select 1) > 1 ) then {
 {
 	if ((_x select 2) > 1 ) then {
 	_name = _x select 0;
-	_var = ITEM_NAME(SEL(_name,0));
+	_var = SEL(_name,0);
 	_val = missionNameSpace getVariable _var;
 	_name = [_var] call life_fnc_vartostr;
 	
