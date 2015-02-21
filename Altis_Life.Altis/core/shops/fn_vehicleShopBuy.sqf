@@ -44,6 +44,9 @@ if((SEL(life_veh_shop,0) == "med_air_hs")) then {
 
 if(EQUAL(_spawnPoint,"")) exitWith {hint localize "STR_Shop_Veh_Block";};
 SUB(CASH,_basePrice);
+
+player say3D "buy";
+
 hint format[localize "STR_Shop_Veh_Bought",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_basePrice] call life_fnc_numberText];
 
 //Spawn the vehicle and prep it.
