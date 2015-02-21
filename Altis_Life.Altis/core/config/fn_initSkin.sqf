@@ -76,6 +76,10 @@ while {true} do
 			{
 			[[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
 			};
+			case 7:
+			{
+			[[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+			};
 		};
 	};
 	if(playerSide == independent) then
