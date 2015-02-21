@@ -35,6 +35,7 @@ life_vdAir = viewDistance;
 tawvd_addon_disable = true;
 life_earplugs = false;
 life_is_alive = false;
+life_siren2_active = false;
 
 life_god = false; 
 life_frozen = false; 
