@@ -36,37 +36,37 @@ life_vInact_curTarget = _curTarget;
 
 //Set Repair Action
 _Btn1 ctrlSetText localize "STR_vInAct_Repair";
-_Btn1 buttonSetAction "if(player distance life_pInact_curTarget > 20) exitWith {hint 'You are too far away.'};[life_vInact_curTarget] spawn life_fnc_repairTruck;";
+_Btn1 buttonSetAction "if(player distance life_pInact_curTarget > 100) exitWith {hint 'You are too far away.'};[life_vInact_curTarget] spawn life_fnc_repairTruck;";
 
 if("ToolKit" in (items player) && (damage _curTarget < 1)) then {_Btn1 ctrlEnable true;} else {_Btn1 ctrlEnable false;};
 
 _Btn2 ctrlSetText localize "STR_vInAct_PullOut";
-_Btn2 buttonSetAction "if(player distance life_pInact_curTarget > 20) exitWith {hint 'You are too far away.'};[life_vInact_curTarget] spawn life_fnc_pulloutAction;";
+_Btn2 buttonSetAction "if(player distance life_pInact_curTarget > 100) exitWith {hint 'You are too far away.'};[life_vInact_curTarget] spawn life_fnc_pulloutAction;";
 //if((count crew _curTarget == 0) OR (currentWeapon player == "") OR (currentWeapon player in life_fake_weapons)) then {_Btn2 ctrlEnable false;};
 
 if(playerSide == west) then {
 
 	if(locked cursorTarget != 0) then {
 	_Btn2 ctrlSetText localize "STR_vInAct_copPullOut";
-	_Btn2 buttonSetAction "if(player distance life_pInact_curTarget > 20) exitWith {hint 'You are too far away.'};[life_vInact_curTarget] spawn life_fnc_coppulloutAction;";
+	_Btn2 buttonSetAction "if(player distance life_pInact_curTarget > 100) exitWith {hint 'You are too far away.'};[life_vInact_curTarget] spawn life_fnc_coppulloutAction;";
 	if(count crew _curTarget == 0) then {_Btn2 ctrlEnable false;};
 	} else {
 		_Btn2 ctrlSetText localize "STR_vInAct_PullOut";
-		_Btn2 buttonSetAction "if(player distance life_pInact_curTarget > 20) exitWith {hint 'You are too far away.'};[life_vInact_curTarget] spawn life_fnc_pulloutAction;";
+		_Btn2 buttonSetAction "if(player distance life_pInact_curTarget > 100) exitWith {hint 'You are too far away.'};[life_vInact_curTarget] spawn life_fnc_pulloutAction;";
 		if(count crew _curTarget == 0) then {_Btn2 ctrlEnable false;};
 	};
 
 	_Btn3 ctrlSetText localize "STR_vInAct_Registration";
-	_Btn3 buttonSetAction "if(player distance life_pInact_curTarget > 20) exitWith {hint 'You are too far away.'};[life_vInact_curTarget] spawn life_fnc_searchVehAction;";
+	_Btn3 buttonSetAction "if(player distance life_pInact_curTarget > 100) exitWith {hint 'You are too far away.'};[life_vInact_curTarget] spawn life_fnc_searchVehAction;";
 	
 	_Btn4 ctrlSetText localize "STR_vInAct_SearchVehicle";
-	_Btn4 buttonSetAction "if(player distance life_pInact_curTarget > 20) exitWith {hint 'You are too far away.'};[life_vInact_curTarget] spawn life_fnc_vehInvSearch;";
+	_Btn4 buttonSetAction "if(player distance life_pInact_curTarget > 100) exitWith {hint 'You are too far away.'};[life_vInact_curTarget] spawn life_fnc_vehInvSearch;";
 	
 	_Btn5 ctrlSetText localize "STR_vInAct_Impound";
-	_Btn5 buttonSetAction "if(player distance life_pInact_curTarget > 20) exitWith {hint 'You are too far away.'};[life_vInact_curTarget] spawn life_fnc_impoundAction;";
+	_Btn5 buttonSetAction "if(player distance life_pInact_curTarget > 100) exitWith {hint 'You are too far away.'};[life_vInact_curTarget] spawn life_fnc_impoundAction;";
 	
 	_Btn6 ctrlSetText localize "STR_vInAct_Seize";
-    _Btn6 buttonSetAction "if(player distance life_pInact_curTarget > 20) exitWith {hint 'You are too far away.'};[life_vInact_curTarget] spawn life_fnc_seizeAction;";	
+    _Btn6 buttonSetAction "if(player distance life_pInact_curTarget > 100) exitWith {hint 'You are too far away.'};[life_vInact_curTarget] spawn life_fnc_seizeAction;";	
 	
 	if(_curTarget isKindOf "Ship") then {
 		_Btn7 ctrlSetText localize "STR_vInAct_PushBoat";
@@ -79,7 +79,7 @@ if(playerSide == west) then {
 			if(count crew _curTarget == 0 && {canMove _curTarget} && {locked _curTarget == 0}) then {_Btn7 ctrlEnable true;} else {_Btn7 ctrlEnable false};
 		} else {
 			_Btn7 ctrlSetText localize "STR_vInAct_Unflip";
-			_Btn7 buttonSetAction "if(player distance life_pInact_curTarget > 20) exitWith {hint 'You are too far away.'};[life_vInact_curTarget] spawn life_fnc_flipAction; closeDialog 0;";
+			_Btn7 buttonSetAction "if(player distance life_pInact_curTarget > 100) exitWith {hint 'You are too far away.'};[life_vInact_curTarget] spawn life_fnc_flipAction; closeDialog 0;";
 			if(count crew _curTarget == 0 && {canMove _curTarget}) then { _Btn7 ctrlEnable false;} else {_Btn7 ctrlEnable true;};
 		};
 	};
@@ -104,7 +104,7 @@ if(playerSide == west) then {
 	
 	if(typeOf _curTarget == "O_Truck_03_device_F") then {
 		_Btn4 ctrlSetText localize "STR_vInAct_DeviceMine";
-		_Btn4 buttonSetAction "if(player distance life_pInact_curTarget > 20) exitWith {hint 'You are too far away.'};[life_vInact_curTarget] spawn life_fnc_deviceMine";
+		_Btn4 buttonSetAction "if(player distance life_pInact_curTarget > 100) exitWith {hint 'You are too far away.'};[life_vInact_curTarget] spawn life_fnc_deviceMine";
 		if(!isNil {(_curTarget getVariable "mining")} OR !local _curTarget && {_curTarget in life_vehicles}) then {
 			_Btn4 ctrlEnable false;
 		} else {
@@ -115,7 +115,7 @@ if(playerSide == west) then {
 	};
 	if(playerSide == independent) then { 
 		_Btn4 ctrlSetText localize "STR_vInAct_Registration";
-		_Btn4 buttonSetAction "if(player distance life_pInact_curTarget > 20) exitWith {hint 'You are too far away.'};[life_vInact_curTarget] spawn life_fnc_searchVehAction;";
+		_Btn4 buttonSetAction "if(player distance life_pInact_curTarget > 100) exitWith {hint 'You are too far away.'};[life_vInact_curTarget] spawn life_fnc_searchVehAction;";
 		_Btn4 ctrlShow true;
 	};
 	
