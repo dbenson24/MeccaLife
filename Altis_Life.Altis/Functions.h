@@ -229,7 +229,6 @@ class Life_Client_Core
 		file = "core\civilian";
 		class jailMe {};
 		class jail {};
-		class tazed {};
 		class knockedOut {};
 		class knockoutAction {};
 		class robReceive {};
