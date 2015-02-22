@@ -65,7 +65,7 @@ diag_log format["QUERY: %1",_query];
 diag_log format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)];
 diag_log format["Result: %1",_queryResult];
 diag_log "------------------------------------------------";
-//_sellingfactor =((count _queryResult)-1);
+_sellingfactor =((count _queryResult)-1);
 _query ="";
 _queryArray = [];
 _allOk = TRUE;
@@ -91,10 +91,10 @@ _allOk = TRUE;
                 };
             }; Not Changing Buy Prices */ 
             if ((_sellprice - (_varprice * _amount)) > _minprice) then {
-                _sellprice = _sellprice - (_varprice * _amount);
-            }; /*else {
-                _thisOk = FALSE;
-            };*/
+                _sellprice = _sellprice - (_varprice * _amount * _sellingfactor);
+            } else {
+                _sellprice = _minprice;
+            };
             if (_buyprice != 0) then {
                 if ((_sellprice >= _buyprice)) then {
                     _buyprice=_sellprice + 15;
@@ -127,9 +127,9 @@ _allOk = TRUE;
             }; */
             if ((_sellprice + (_varprice * _amount)) < _maxprice) then {
                 _sellprice = _sellprice + (_varprice * _amount);
-            } /*else {
-                _allOk = false;
-            };*/
+            } else {
+                _sellprice = _maxprice;
+            };
         
         } else { 
         /*Buying another item  in the same factor
@@ -155,6 +155,8 @@ _allOk = TRUE;
 
 
 if (_allOk) then { //We update the prices!
+    _time = time;
+		waitUntil {(time - _time) > (3 * 60)};
     {
         waitUntil {sleep (random 0.3); !DB_Async_Active};
         _queryResult = [_x,1] call DB_fnc_asyncCall;
@@ -163,5 +165,5 @@ if (_allOk) then { //We update the prices!
         diag_log format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)];
         diag_log format["Result: %1",_queryResult];
         diag_log "------------------------------------------------";
-    }foreach _queryArray;
+    }forEach _queryArray;
 };
