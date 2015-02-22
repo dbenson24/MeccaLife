@@ -130,22 +130,7 @@ onMapSingleClick "if(_alt) then {vehicle player setPos _pos};"; //Local debug fo
 	};
 } foreach allUnits;
 
-if((EQUAL(EXTDB_SETTINGS("RealTime"),1))) then {
-    _date = date;
-    _diff = 1;
-    
-    _response = EXTDB format["0:%1:TIME",FETCH_CONST(MISC_ID)];
-    _date = call compile _response;
-    
-    _data = _date select 1;
-    _arr = [_data select 0,_data select 1,_data select 2,(_data select 3) + _diff,_data select 4];
-    
-    ["diag_log",[format["Ingame Time now: %1",_arr]]] call TON_fnc_logIt;
-    setDate _arr;
-
-} else {
-    [8,true,12] execFSM "\life_server\FSM\timeModule.fsm";
-};
+[8,true,12] execFSM "\life_server\FSM\timeModule.fsm";
 
 life_adminLevel = 0;
 life_medicLevel = 0;
