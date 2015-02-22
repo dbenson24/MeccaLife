@@ -13,11 +13,6 @@ disableSerialization;
 switch(playerSide) do {
 	case west: {
 		ctrlShow[2011,false];
-		
-		if(FETCH_CONST(life_coplevel) == 1) then
-		{
-			ctrlShow[2012,false];
-		};	
 	};
 	
 	case civilian: {
