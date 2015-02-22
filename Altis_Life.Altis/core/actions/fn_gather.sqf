@@ -51,4 +51,4 @@ if(([true,SEL(_gather,0),_diff] call life_fnc_handleInv)) then {
 
 life_action_gathering = false;
 
-["query_log",[format["%1 has gathered %2 %3",name player,_diff,_itemName]]] call TON_fnc_logIt;
+//["query_log",[format["%1 has gathered %2 %3",name player,_diff,_itemName]]] call TON_fnc_logIt;
