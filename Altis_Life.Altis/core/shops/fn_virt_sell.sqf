@@ -10,7 +10,7 @@
 private["_type","_index","_price","_var","_amount","_name"];
 if((lbCurSel 2402) == -1) exitWith {};
 _type = lbData[2402,(lbCurSel 2402)];
-_price = lbValue[2401,(lbCurSel 2401)];
+_price = lbValue[2402,(lbCurSel 2402)];
 
 
 _amount = ctrlText 2405;
@@ -20,6 +20,7 @@ if(_amount > (ITEM_VALUE(_type))) exitWith {hint localize "STR_Shop_Virt_NotEnou
 
 _price = (_price * _amount);
 _name = M_CONFIG(getText,"VirtualItems",_type,"displayName");
+
 if(([false,_type,_amount] call life_fnc_handleInv)) then
 {
 	hint format[localize "STR_Shop_Virt_SellItem",_amount,(localize _name),[_price] call life_fnc_numberText];

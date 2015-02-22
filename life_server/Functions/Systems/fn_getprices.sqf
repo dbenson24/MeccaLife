@@ -64,6 +64,8 @@ diag_log format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)]
 diag_log format["Result: %1",_queryResult];
 diag_log "------------------------------------------------";
 
+
+
 if (_data == "economy") exitwith {[[_type,_queryResult],"life_fnc_virt_updateEconomy",_unit,false] spawn life_fnc_MP;};
 
 [[_type,_queryResult],"life_fnc_virt_updateprice",_unit,false] spawn life_fnc_MP;
