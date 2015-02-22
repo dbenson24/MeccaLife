@@ -43,7 +43,7 @@ switch (true) do {
 		[cursorTarget] spawn life_fnc_defuseKit;
 	};
 	
-	case (_item in ["storagesmall","storagebig"]): {
+	case (_item in ["storagebig"]): {
 		if(FETCH_CONST(life_donator) > 0) then
 		{
 			[_item] call life_fnc_storageBox;
