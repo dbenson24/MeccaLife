@@ -34,7 +34,8 @@ switch(_type) do
 	//message to cops
 	case 1:
 	{	
-		[[_msg,name _player,1],"TON_fnc_clientMessage",west,false] spawn life_fnc_MP;
+		//[[_msg,name _player,1],"TON_fnc_clientMessage",west,false] spawn life_fnc_MP;
+		[[_msg,name player,1,mapGridPosition player,player],"TON_fnc_clientMessage",west,false] spawn life_fnc_MP;
 	};
 	//to admins
 	case 2:
