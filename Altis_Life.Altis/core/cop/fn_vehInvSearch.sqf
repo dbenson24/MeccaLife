@@ -16,14 +16,15 @@ if(EQUAL(count _vehicleInfo,0)) exitWith {hint localize "STR_Cop_VehEmpty"};
 
 _value = 0;
 {
-	_var = configName(_x);
-	_val = ITEM_VALUE(_var);
+	_var = SEL(_x,0);
+	_val = SEL(_x,1);
 	
-	if(_val > 0) then {
-		_inv pushBack [_var,_val];
-		[false,_var,_val] call life_fnc_handleInv;
+	if(EQUAL(ITEM_ILLEGAL(_var),1)) then {
+		if(!(EQUAL(ITEM_SELLPRICE(_var),-1))) then {
+			ADD(_value,(round(_val * ITEM_SELLPRICE(_var) / 2)));
+		};
 	};
-} foreach ("getNumber(_x >> 'illegal') isEqualTo 1" configClasses (missionConfigFile >> "VirtualItems"));
+} foreach (SEL(_vehicleInfo,0));
 
 if(_value > 0) then {
 	[[0,"STR_NOTF_VehContraband",true,[[_value] call life_fnc_numberText]],"life_fnc_broadcast",true,false] call life_fnc_MP;
