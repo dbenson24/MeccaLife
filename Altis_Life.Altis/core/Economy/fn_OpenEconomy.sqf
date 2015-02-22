@@ -18,7 +18,7 @@ _achatliste = _display displayCtrl 39003;
 lbClear _venteliste;
 lbClear _achatliste;
 
-[[0,player,"economy"],"TON_fnc_getprices",false,false] spawn life_fnc_MP;
+(localize [[0,player,"economy"],"TON_fnc_getprices",false,false]) spawn life_fnc_MP;
 /*
 {
 	if(alive _x && _x != player) then
