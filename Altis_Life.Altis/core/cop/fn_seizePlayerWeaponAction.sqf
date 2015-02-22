@@ -7,7 +7,7 @@
 removeAllWeapons player;
 if (uniform player in ["U_Rangemaster","U_B_CTRG_3"]) then {removeUniform player;};
 if (vest player in ["V_TacVest_blk_POLICE","V_TacVest_blk","V_PlateCarrier1_blk","V_HarnessOGL_brn"]) then {removeVest player;};
-if (headgear player in ["H_MilCap_blue","H_MilCap_gry","H_Beret_blk_POLICE","H_Beret_Colonel","H_PilotHelmetHeli_B","H_CrewHelmetHeli_B"]) then {removeHeadgear player;};
+if (headgear player in ["H_MilCap_blue","H_MilCap_gry","H_Beret_blk_POLICE","H_Beret_Colonel","H_PilotHelmetHeli_B","H_CrewHelmetHeli_B","H_Shemag_olive","H_Shemag_khk","H_Shemag_tan","H_ShemagOpen_khk","H_ShemagOpen_tan","H_Shemag_olive_hs"]) then {removeHeadgear player;};
 if (backpack player in ["B_Bergen_blk","B_Kitbag_mcamo_Eng"]) then {removeBackpack player;};
 
 license_civ_gun = false;
