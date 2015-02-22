@@ -187,7 +187,12 @@ class CfgVehicles {
 		chopShop = 1200;
 		textures[] = {};
 	};
-
+	class C_Offroad_01_repair_F : Default {
+		vItemSpace = 150;
+		storageFee[] = { 0, 0, 1500, 0 };
+		garageSell[] = { 0, 0, 5000, 0 };
+		chopShop = 3000;
+	};
 	class I_Truck_02_medical_F : Default {
 		vItemSpace = 150;
 		storageFee[] = { 0, 0, 1500, 0 };
