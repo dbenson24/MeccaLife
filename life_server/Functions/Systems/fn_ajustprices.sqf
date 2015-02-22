@@ -29,7 +29,7 @@ _unit = owner _unit; //for hack purpose!
 //we randomize the thing to not update every single transaction
 _randomnumber = random 100;
 
-if (_randomnumber < 60) exitwith {diag_log "This transaction doesn't update the price!"};
+//if (_randomnumber < 60) exitwith {diag_log "This transaction doesn't update the price!"};
 
 
 //we check the factor of the object
@@ -81,24 +81,67 @@ _minprice = (_x select 4);
 _maxprice = (_x select 5);
 
 if (_ressource == _var) then { //C'est l'item vendu ou achete
-if (_type == 0) then {//si on vend l'item
-if (_buyprice != 0) then {if( (_buyprice - (_varprice * _amount)) > _minprice) then {_buyprice= _buyprice - (_varprice * _amount);}else {_allOk = false;};};
-if ((_sellprice - (_varprice * _amount *_sellingfactor)) > _minprice) then {_sellprice = _sellprice - (_varprice * _amount *_sellingfactor);}else {_allOk = false;};
-if (_buyprice != 0) then {if ((_sellprice >= _buyprice)) then {_buyprice=_sellprice + 15};};
-} else {//si on achete l'item
-if (_buyprice != 0) then {if( (_buyprice + (_varprice * _amount)) < (_maxprice+15)) then {_buyprice = _buyprice + (_varprice * _amount);}else {_allOk = false;};};
-if ((_sellprice + (_varprice * _amount)) < _maxprice) then {_sellprice = _sellprice + (_varprice * _amount);}else {_allOk = false;};
-};
-
+    if (_type == 0) then {//si on vend l'item
+        if (_buyprice != 0) then {
+            if( (_buyprice - (_varprice * _amount)) > _minprice) then {
+                _buyprice= _buyprice - (_varprice * _amount);
+            } else {
+                _allOk = false;
+            };
+        };
+        if ((_sellprice - (_varprice * _amount *_sellingfactor)) > _minprice) then {
+            _sellprice = _sellprice - (_varprice * _amount *_sellingfactor);
+        } else {
+            _allOk = false;
+        };
+        if (_buyprice != 0) then {
+            if ((_sellprice >= _buyprice)) then {
+                _buyprice=_sellprice + 15;
+            };
+        };
+    } else {//si on achete l'item
+        if (_buyprice != 0) then {
+            if( (_buyprice + (_varprice * _amount)) < (_maxprice+15)) then {
+                _buyprice = _buyprice + (_varprice * _amount);
+            } else {
+                _allOk = false;
+            };
+        };
+        if ((_sellprice + (_varprice * _amount)) < _maxprice) then {
+            _sellprice = _sellprice + (_varprice * _amount);
+        } else {
+            _allOk = false;
+        };
+    };
 } else {
-if (_type == 0) then {//si on a vendu un autre item on augmente le prix
-if (_buyprice != 0) then {if( (_buyprice + (_varprice * _amount)) < (_maxprice)) then {_buyprice = _buyprice + (_varprice * _amount);}else {_allOk = false;};};
-if ((_sellprice + (_varprice * _amount)) < _maxprice) then {_sellprice = _sellprice + (_varprice * _amount);} else {_allOk = false;};
-
-} else { //si on achete un autre item on baisse le prix
-if (_buyprice != 0) then {if( (_buyprice - (_varprice * _amount)) > _minprice ) then {_buyprice= _buyprice - (_varprice * _amount);} else {_allOk = false;};};
-if ((_sellprice - (_varprice * _amount)) > _minprice) then {_sellprice = _sellprice - (_varprice * _amount);}else {_allOk = false;};
-};
+    if (_type == 0) then {//si on a vendu un autre item on augmente le prix
+        if (_buyprice != 0) then {
+            if( (_buyprice + (_varprice * _amount)) < (_maxprice)) then {
+                _buyprice = _buyprice + (_varprice * _amount);
+            } else {
+                _allOk = false;
+            };
+        };
+        if ((_sellprice + (_varprice * _amount)) < _maxprice) then {
+            _sellprice = _sellprice + (_varprice * _amount);
+        } else {
+            _allOk = false;
+        };
+    
+    } else { //si on achete un autre item on baisse le prix
+        if (_buyprice != 0) then {
+            if( (_buyprice - (_varprice * _amount)) > _minprice ) then {
+                _buyprice= _buyprice - (_varprice * _amount);
+            } else {
+                _allOk = false;
+            };
+        };
+        if ((_sellprice - (_varprice * _amount)) > _minprice) then {
+            _sellprice = _sellprice - (_varprice * _amount);
+        } else {
+            _allOk = false;
+        };
+    };
 };
 _query =format["UPDATE economy SET buyprice='%1', sellprice='%2' WHERE ressource='%3'",_buyprice,_sellprice,_ressource];
 _queryArray set [count _queryArray,_query];

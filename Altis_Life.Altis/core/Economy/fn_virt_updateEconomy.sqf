@@ -1,10 +1,11 @@
 #include <macro.h>
 /*
-	File: fn_virt_update.sqf
+	File: fn_virt_updateEconomy.sqf
 	Author: Worldtrade1101
+	Edited by: Derek
 	Base on Tonic script
 	Description:
-	Update and fill the virtual shop menu.
+	Update and fill the Economy gui menu.
 */
 private["_display","_achatliste","_gear_list","_shop_data","_name","_price"];
 disableSerialization;
