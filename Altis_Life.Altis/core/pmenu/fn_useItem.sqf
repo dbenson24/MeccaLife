@@ -43,13 +43,17 @@ switch (true) do {
 		[cursorTarget] spawn life_fnc_defuseKit;
 	};
 	
-	case (_item in ["storagebig"]): {
+	case (EQUAL(_item,"storagebig")): {
 		if(FETCH_CONST(life_donator) > 0) then
 		{
 			[_item] call life_fnc_storageBox;
 		} else {
 			hint "You must be a donator to use storage crates.";
 		};	
+	};
+	
+	case (EQUAL(_item,"storagesmall")): {
+		[_item] call life_fnc_storageBox;
 	};
 	
 	case (EQUAL(_item,"spikeStrip")): {
