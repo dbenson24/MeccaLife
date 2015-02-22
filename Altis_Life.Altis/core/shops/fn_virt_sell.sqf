@@ -10,7 +10,7 @@
 private["_type","_index","_price","_var","_amount","_name"];
 if((lbCurSel 2402) == -1) exitWith {};
 _type = lbData[2402,(lbCurSel 2402)];
-_price = M_CONFIG(getNumber,"VirtualItems",_type,"sellPrice");
+_price = lbValue[2401,(lbCurSel 2401)];
 
 
 _amount = ctrlText 2405;
