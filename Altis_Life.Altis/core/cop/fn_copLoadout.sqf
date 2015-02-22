@@ -46,72 +46,72 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "16Rnd_9x21_Mag";
 		player addMagazine "16Rnd_9x21_Mag";
 		player addVest "V_TacVest_blk_POLICE";
-		If(BANK > 0) then {BANK = BANK - 6000;};
+		If(BANK > 0) then {BANK = BANK - 5000;};
 	};
 	
 	case 2:
 	{
 		[[player,0,"textures\stateTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
-		player addWeapon "arifle_MXC_F";
+		player addWeapon "arifle_MXC_Hamr_pointer_F";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addVest "V_TacVest_blk_POLICE";
-		If(BANK > 0) then {BANK = BANK - 15000;};
+		If(BANK > 0) then {BANK = BANK - 5000;};
 		
 	};
 	
 	case 3:
 	{
 	    [[player,0,"textures\stateTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
-		player addWeapon "arifle_MX_F";
+		player addWeapon "arifle_MX_Hamr_pointer_F";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addVest "V_TacVest_blk_POLICE";
-		If(BANK > 0) then {BANK = BANK - 15000;};
+		If(BANK > 0) then {BANK = BANK - 5000;};
 	};
 	
 	case 4:
 	{
 	    [[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
-		player addWeapon "arifle_MX_F";
+		player addWeapon "arifle_MX_Hamr_pointer_F";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addVest "V_PlateCarrier2_rgr";
-		If(BANK > 0) then {BANK = BANK - 25000;};
+		If(BANK > 0) then {BANK = BANK - 5000;};
 	};
 	
 	case 5:
 	{
 	    [[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
-		player addWeapon "arifle_MXM_F";
+		player addWeapon "arifle_MXM_Hamr_pointer_F";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addVest "V_PlateCarrier2_rgr";
-		If(BANK > 0) then {BANK = BANK - 25000;};
+		If(BANK > 0) then {BANK = BANK - 5000;};
 	};
 	case 6:
 	{
 	    [[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
-		player addWeapon "arifle_MXM_F";
+		player addWeapon "arifle_MX_Hamr_pointer_F";
 		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
 		player addVest "V_PlateCarrier2_rgr";
-		If(BANK > 0) then {BANK = BANK - 25000;};
+		If(BANK > 0) then {BANK = BANK - 5000;};
 	};
 	case 7:
 	{
 	    [[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
-		player addWeapon "arifle_MXM_F";
+		player addWeapon "arifle_MX_Hamr_pointer_F";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addVest "V_PlateCarrier2_rgr";
-		If(BANK > 0) then {BANK = BANK - 25000;};
+		If(BANK > 0) then {BANK = BANK - 5000;};
 	};
 	
 };
