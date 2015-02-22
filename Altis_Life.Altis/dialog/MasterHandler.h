@@ -29,4 +29,6 @@
 #include "channel.hpp"
 #include "revoke_license.h"
 #include "blackjack.hpp"
+#include "market.hpp"
 #include "jail_time.hpp"
+

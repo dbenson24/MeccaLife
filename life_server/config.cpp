@@ -148,8 +148,9 @@ class CfgFunctions
 			class setObjVar {};
 			class keyManagement {};
 			class vehicleisdead {};
-		};
-		
+            class getPrices {};
+            class ajustprices {};
+		}
 		class Housing
 		{
 			file = "\life_server\Functions\Housing";

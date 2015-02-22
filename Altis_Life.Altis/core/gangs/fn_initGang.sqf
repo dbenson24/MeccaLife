@@ -6,9 +6,9 @@
 	Main initialization for gangs?
 */
 private["_exitLoop","_group","_wait"];
-if(playerSide != civilian) exitWith {}; //What in the hell?
+if(playerSide != civilian) exitWith {};
 [player] join (createGroup civilian);
-if(EQUAL(count life_gangData,0)) exitWith {}; //Dafuq?
+if(EQUAL(count life_gangData,0)) exitWith {};
 
 _wait = round(random(8));
 sleep _wait;
@@ -32,11 +32,12 @@ if(!isNil "_group") then {
 		[[player,_group],"TON_fnc_clientGangLeader",(units _group),false] call life_fnc_MP;
 	};
 } else {
+	[player] join _group;
 	_group = group player;
 	_group SVAR ["gang_id",SEL(life_gangData,0),true];
 	_group SVAR ["gang_owner",SEL(life_gangData,1),true];
 	_group SVAR ["gang_name",SEL(life_gangData,2),true];
-	_group SVAR ["gang_maxMembers",SEL(life_gangData,3),true];
-	_group SVAR ["gang_bank",SEL(life_gangData,4),true];
-	_group SVAR ["gang_members",SEL(life_gangData,5),true];
+	_group SVAR ["gang_members",SEL(life_gangData,3),true];
+	_group SVAR ["gang_maxMembers",SEL(life_gangData,4),true];
+	_group SVAR ["gang_bank",SEL(life_gangData,5),true];
 };

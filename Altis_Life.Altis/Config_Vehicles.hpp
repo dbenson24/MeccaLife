@@ -1,3 +1,45 @@
+/* Price Coefficients */
+#define ins 0.9
+#define chop 0.8
+#define sell 0.9
+#define store 0.05
+/* End Price Coefficients */
+
+/* Vehicle Prices */
+#define phatchback 22500
+#define pquadbike 2500
+#define poffroad 35000
+#define psuv 30000
+#define phatchbacksport 45000
+#define pkart 15000
+#define poffroadmed 10000
+#define pzamakmed 75000
+#define pmh9med 50000
+#define porcamed 75000
+#define pboxer 250000
+#define pzamaktrans 135000
+#define pzamakcov 200000
+#define phemtttrans 260000
+#define ptempesttrans 187000
+#define ptempestcov 251500
+#define phemttbox 600000
+#define ptempestdev 800000
+#define pifrit 950000
+#define pmh9civ 325000
+#define p50cal 950000
+#define poffroadcop 5000
+#define psuvcop 20000
+#define phuntercop 30000
+#define pm900 253000
+#define porcaciv 750000
+#define pmh9cop 75000
+#define pghosthawkcop 200000
+#define psdv 100000
+#define prescueboat 5000
+#define pspeedboat 20000
+#define passaultboat 3000
+/* End Vehicle Prices */
+
 class CarShops {
 	/*
 		Format:
@@ -8,11 +50,11 @@ class CarShops {
 	class civ_car {
 		side = "civ";
 		vehicles[] = {
-			{ "B_Quadbike_01_F", 2500, "" }, 
-			{ "C_Hatchback_01_F", 22500, "driver" }, 
-			{ "C_Offroad_01_F", 35500, "driver" },
-			{ "C_SUV_01_F", 30000, "driver" },
-			{ "C_Hatchback_01_sport_F", 45000, "driver" }
+			{ "B_Quadbike_01_F", pquadbike, "" }, 
+			{ "C_Hatchback_01_F", phatchback, "driver" }, 
+			{ "C_Offroad_01_F", poffroad, "driver" },
+			{ "C_SUV_01_F", psuv, "driver" },
+			{ "C_Hatchback_01_sport_F", phatchbacksport, "driver" }
 		};
 	};
 
