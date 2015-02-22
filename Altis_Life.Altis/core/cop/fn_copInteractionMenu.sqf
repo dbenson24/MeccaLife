@@ -98,7 +98,7 @@ _Btn6 ctrlSetText localize "STR_pInAct_TicketBtn";
 _Btn6 buttonSetAction "if(player distance life_pInact_curTarget > 4) exitWith {hint 'You are too far away.'};[life_pInact_curTarget] call life_fnc_ticketAction;";
 
 _Btn7 ctrlSetText localize "STR_pInAct_Arrest";
-_Btn7 buttonSetAction "if(player distance life_pInact_curTarget > 4) exitWith {hint 'You are too far away.'};[life_pInact_curTarget] call life_fnc_arrestAction;";
+_Btn7 buttonSetAction "if(player distance life_pInact_curTarget > 4) exitWith {hint 'You are too far away.'}; closeDialog 0; [life_pInact_curTarget] call life_fnc_showArrestDialog;";
 
 _Btn8 ctrlSetText localize "STR_pInAct_PutInCar";
 _Btn8 buttonSetAction "if(player distance life_pInact_curTarget > 4) exitWith {hint 'You are too far away.'};[life_pInact_curTarget] call life_fnc_putInCar;";

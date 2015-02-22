@@ -64,7 +64,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 	case 3:
 	{
 	    [[player,0,"textures\stateTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
-		player addWeapon "arifle_MXC_F";
+		player addWeapon "arifle_MX_F";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
@@ -75,7 +75,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 	case 4:
 	{
 	    [[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
-		player addWeapon "arifle_MXM_F";
+		player addWeapon "arifle_MX_F";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
@@ -96,7 +96,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 	case 6:
 	{
 	    [[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
-		player addWeapon "arifle_MX_sw_F";
+		player addWeapon "arifle_MXM_F";
 		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
@@ -111,7 +111,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addVest "V_PlateCarrier2_rgr";
-		If(BANK > 0) then {BANK = BANK - 35000;};
+		If(BANK > 0) then {BANK = BANK - 25000;};
 	};
 	
 };

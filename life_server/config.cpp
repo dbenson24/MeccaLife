@@ -41,6 +41,13 @@ class CfgServerSettings
 
 class CfgFunctions
 {
+	class Jail_Sys
+	{
+	file = "\life_server\Functions\Jail";
+	class jailSys {};
+	class jailTimer {};
+	class jailPlayer {};
+	};
 	class BIS_Overwrite
 	{
 		tag = "BIS";
@@ -99,6 +106,7 @@ class CfgFunctions
 			class wantedAdd {};
 			class wantedCrimes {};
 			class wantedProfUpdate {};
+			class wantedFetchForCivilian {};
 		};
 		
 		class Jail_Sys

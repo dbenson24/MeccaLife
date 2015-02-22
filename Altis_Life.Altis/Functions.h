@@ -160,6 +160,7 @@ class Life_Client_Core
 		class showMsg {};
 		class AAN {};
 		class revokeLicense {};
+		class updateBounty {};
 	};
 	
 	class Functions
@@ -291,6 +292,8 @@ class Life_Client_Core
 		class seizeObjects {};
 		class copEnter {};
 		class copSiren2 {};
+		class showArrestDialog {}; 
+		class arrestDialog_Arrest {};
 		
 	};
 	
@@ -355,6 +358,12 @@ class Life_Client_Core
 		class cocaine {};
 		class weed {};
 		class bankalarmsound {};
+	};
+	
+	class Scripts
+	{
+		file = "scripts";
+		class vdmWatcher {};
 	};
 	
 	class Dialog_Controls

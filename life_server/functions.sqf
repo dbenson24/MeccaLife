@@ -212,11 +212,12 @@ publicVariable "TON_fnc_cell_emsrequest";
 TON_fnc_clientMessage =
 compileFinal "
 	if(isServer) exitWith {};
-	private[""_msg"",""_from"", ""_type""];
+	private[""_msg"",""_from"", ""_type"", ""_loc"", ""_unit""];
 	_msg = _this select 0;
 	_from = _this select 1;
 	_type = _this select 2;
-	_req = _this select 3;
+	_loc = _this select 3;
+	_unit = _this select 4;
 	if(_from == """") exitWith {};
 	switch (_type) do
 	{
@@ -235,22 +236,22 @@ compileFinal "
 			if(side player != west) exitWith {};
 			private[""_message""];
 			_message = format[""---911 DISPATCH FROM %1: %2"",_from,_msg];
-			hint parseText format [""<t color='#316dff'><t size='2'><t align='center'>New Dispatch<br/><br/><t color='#33CC33'><t align='left'><t size='1'>To: <t color='#ffffff'>All Officers<br/><t color='#33CC33'>From: <t color='#ffffff'>%1<br/><br/><t color='#33CC33'>Message:<br/><t color='#ffffff'>%2"",_from,_msg];
-			
-			
-			_marker = createMarkerLocal [format[""%1_marker"",_req],visiblePosition _req];
-			_marker setMarkerColorLocal ""ColorBlue"";
-			_marker setMarkerTypeLocal ""Mil_dot"";
-			_marker setMarkerTextLocal format[""%1 Requesting 911 Emergency"", _req getVariable[""realname"",name _req]];
-			
-			[format[""%1_marker"",_req]] spawn {
-				_marName = [_this,0,"""",[""""]] call BIS_fnc_param;
-				sleep 300;
-				deleteMarkerLocal _marName;
-			};
-			
-			[""PoliceDispatch"",[format[""A New Police Report From: %1"",_from]]] call bis_fnc_showNotification;
-			systemChat _message;
+			if(isNil ""_loc"") then {_loc = ""Unknown"";};
+			hint parseText format [""<t color='#316dff'><t size='2'><t align='center'>New Dispatch<br/><br/><t color='#33CC33'><t align='left'><t size='1'>To: <t color='#ffffff'>All Officers<br/><t color='#33CC33'>From: <t color='#ffffff'>%1<br/><t color='#33CC33'>Coords: <t color='#ffffff'>%3<br/><br/><t color='#33CC33'>Message:<br/><t color='#ffffff'>%2"",_from,_msg,_loc];
+
+            _marker = createMarkerLocal [format[""%1_marker"",_unit getVariable[""realname"",name _unit]],visiblePosition _unit];
+            _marker setMarkerColorLocal ""ColorBlue"";
+            _marker setMarkerTypeLocal ""hd_join"";
+            _marker setMarkerTextLocal format[""911 Emergency from %1"", _unit getVariable[""realname"",name _unit]];
+
+            [format[""%1_marker"",_unit getVariable[""realname"",name _unit]]] spawn {
+                    _marName = [_this,0,"""",[""""]] call BIS_fnc_param;
+                    sleep 300;
+                    deleteMarkerLocal _marName;
+            };
+
+	        [""PoliceDispatch"",[format[""A New Police Report From: %1"",_from]]] call bis_fnc_showNotification;
+	        systemChat _message;
 		};
 		
 		case 2 :
