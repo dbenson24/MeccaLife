@@ -27,6 +27,7 @@ if(([false,_type,_amount] call life_fnc_handleInv)) then {
 
 if(EQUAL(life_shop_type,"drugdealer")) then {
 	private["_array","_ind","_val"];
+	if (sunOrMoon == 1) exitWith {hint "What are you trying to get us arrested? Come back at night.";};
 	_array = life_shop_npc getVariable["sellers",[]];
 	_ind = [getPlayerUID player,_array] call TON_fnc_index;
 	if(!(EQUAL(_ind,-1))) then {
