@@ -65,11 +65,12 @@ diag_log format["QUERY: %1",_query];
 diag_log format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)];
 diag_log format["Result: %1",_queryResult];
 diag_log "------------------------------------------------";
-_sellingfactor =((count _queryResult)-1);
+//_sellingfactor =((count _queryResult)-1);
 _query ="";
 _queryArray = [];
-_AllOk = TRUE;
-    {
+_allOk = TRUE;
+
+{
     //diag_log format ["test : %1 (%2)", _this , typeName _this];
     //diag_log format ["var : %1 (%2)", _var , typeName _var];
     _ressource = _x select 0;
@@ -81,25 +82,26 @@ _AllOk = TRUE;
     _maxprice = (_x select 5);
     
     if (_ressource == _var) then { //C'est l'item vendu ou achete
-        if (_type == 0) then {//si on vend l'item
-            if (_buyprice != 0) then {
+        if (_type == 0) then { //si on vend l'item
+            /*if (_buyprice != 0) then {
                 if( (_buyprice - (_varprice * _amount)) > _minprice) then {
                     _buyprice= _buyprice - (_varprice * _amount);
                 } else {
                     _allOk = false;
                 };
-            };
-            if ((_sellprice - (_varprice * _amount *_sellingfactor)) > _minprice) then {
-                _sellprice = _sellprice - (_varprice * _amount *_sellingfactor);
-            } else {
-                _allOk = false;
-            };
+            }; Not Changing Buy Prices */ 
+            if ((_sellprice - (_varprice * _amount)) > _minprice) then {
+                _sellprice = _sellprice - (_varprice * _amount);
+            }; /*else {
+                _thisOk = FALSE;
+            };*/
             if (_buyprice != 0) then {
                 if ((_sellprice >= _buyprice)) then {
                     _buyprice=_sellprice + 15;
                 };
             };
-        } else {//si on achete l'item
+        } else {
+        /*Buying this item
             if (_buyprice != 0) then {
                 if( (_buyprice + (_varprice * _amount)) < (_maxprice+15)) then {
                     _buyprice = _buyprice + (_varprice * _amount);
@@ -111,24 +113,26 @@ _AllOk = TRUE;
                 _sellprice = _sellprice + (_varprice * _amount);
             } else {
                 _allOk = false;
-            };
+            }; */
+            _allOk = false;
         };
     } else {
-        if (_type == 0) then {//si on a vendu un autre item on augmente le prix
+        if (_type == 0) then {/*si on a vendu un autre item on augmente le prix
             if (_buyprice != 0) then {
                 if( (_buyprice + (_varprice * _amount)) < (_maxprice)) then {
                     _buyprice = _buyprice + (_varprice * _amount);
                 } else {
                     _allOk = false;
                 };
-            };
+            }; */
             if ((_sellprice + (_varprice * _amount)) < _maxprice) then {
                 _sellprice = _sellprice + (_varprice * _amount);
-            } else {
+            } /*else {
                 _allOk = false;
-            };
+            };*/
         
-        } else { //si on achete un autre item on baisse le prix
+        } else { 
+        /*Buying another item  in the same factor
             if (_buyprice != 0) then {
                 if( (_buyprice - (_varprice * _amount)) > _minprice ) then {
                     _buyprice= _buyprice - (_varprice * _amount);
@@ -140,14 +144,17 @@ _AllOk = TRUE;
                 _sellprice = _sellprice - (_varprice * _amount);
             } else {
                 _allOk = false;
-            };
+            };*/
+            _allOk = false;
         };
     };
     _query =format["UPDATE economy SET buyprice='%1', sellprice='%2' WHERE ressource='%3'",_buyprice,_sellprice,_ressource];
     _queryArray set [count _queryArray,_query];
     
-}foreach _queryResult;
-if (_AllOk) then { //We update the prices!
+} forEach _queryResult;
+
+
+if (_allOk) then { //We update the prices!
     {
         waitUntil {sleep (random 0.3); !DB_Async_Active};
         _queryResult = [_x,1] call DB_fnc_asyncCall;
