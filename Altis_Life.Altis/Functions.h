@@ -291,6 +291,8 @@ class Life_Client_Core
 		class seizeObjects {};
 		class copEnter {};
 		class copSiren2 {};
+		class showArrestDialog {}; 
+		class arrestDialog_Arrest {};
 		
 	};
 	

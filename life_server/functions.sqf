@@ -241,7 +241,7 @@ compileFinal "
 
             _marker = createMarkerLocal [format[""%1_marker"",_unit getVariable[""realname"",name _unit]],visiblePosition _unit];
             _marker setMarkerColorLocal ""ColorBlue"";
-            _marker setMarkerTypeLocal ""Warning"";
+            _marker setMarkerTypeLocal ""hd_join"";
             _marker setMarkerTextLocal format[""911 Emergency from %1"", _unit getVariable[""realname"",name _unit]];
 
             [format[""%1_marker"",_unit getVariable[""realname"",name _unit]]] spawn {
