@@ -43,7 +43,7 @@ class Market
 		{
 			idc = -1;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-			text = "Prix dachat";
+			text = "Your Buy Price";
 			sizeEx = 0.04;
 			
 			x = 0.11; y = 0.25;
@@ -54,7 +54,7 @@ class Market
 		{
 			idc = -1;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-			text = "Prix de ventes";
+			text = "Your Sell Price";
 			sizeEx = 0.04;
 			
 			x = 0.49; y = 0.25;

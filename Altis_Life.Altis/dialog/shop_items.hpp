@@ -137,7 +137,7 @@ class shops_menu {
 		{
 			idc = 2405;
 			
-			text = "1";
+			text = "0";
 			sizeEx = 0.030;
 			x = 0.60; y = 0.66;
 			w = 0.27; h = 0.03;
