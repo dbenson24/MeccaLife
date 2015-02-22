@@ -15,6 +15,20 @@ _projectile = SEL(_this,4);
 _curWep = "";
 _curMag = "";
 
+
+if (_damage > 0.99) then
+{
+	if(vehicle _source isKindOf "LandVehicle" && driver (vehicle _source) == _source) then
+	{
+		if(_source != _unit AND alive _unit AND isPlayer _source) then
+		{
+			[[],"life_fnc_vdmWatcher",_source,false] spawn life_fnc_MP;
+		};
+	};
+};
+
+
+
 if(isPlayer _source && _source isKindOf "Man") then {
 	_curWep = currentWeapon _source;
 	_curMag = currentMagazine _source;

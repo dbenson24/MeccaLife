@@ -37,6 +37,7 @@ life_earplugs = false;
 life_is_alive = false;
 life_siren2_active = false;
 life_fake_weapons = ["Binocular","Laserdesignator","Rangefinder"];
+mecca_vdm_watcher_count = 0;
 
 life_god = false; 
 life_frozen = false; 

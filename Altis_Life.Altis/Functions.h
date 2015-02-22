@@ -359,6 +359,12 @@ class Life_Client_Core
 		class bankalarmsound {};
 	};
 	
+	class Scripts
+	{
+		file = "scripts";
+		class vdmWatcher {};
+	};
+	
 	class Dialog_Controls
 	{
 		file = "dialog\function";
