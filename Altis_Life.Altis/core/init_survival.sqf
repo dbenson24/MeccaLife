@@ -77,14 +77,6 @@
 	};
 };
 
-[] spawn  {
-	while{true} do
-	{
-		uiSleep 300; // 5 minutes
-		[[player],"life_fnc_wantedFetchForCivilian",false,false] spawn life_fnc_MP;
-	};
-};
-
 [] spawn  
 {
 	private["_walkDis","_myLastPos","_MaxWalk","_runHunger","_runDehydrate"];

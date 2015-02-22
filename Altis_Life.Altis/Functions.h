@@ -160,7 +160,6 @@ class Life_Client_Core
 		class showMsg {};
 		class AAN {};
 		class revokeLicense {};
-		class updateBounty {};
 	};
 	
 	class Functions

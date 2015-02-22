@@ -106,7 +106,6 @@ class CfgFunctions
 			class wantedAdd {};
 			class wantedCrimes {};
 			class wantedProfUpdate {};
-			class wantedFetchForCivilian {};
 		};
 		
 		class Jail_Sys
