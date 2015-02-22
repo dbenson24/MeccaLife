@@ -14,15 +14,13 @@ _display = findDisplay 2900;
 _list = _display displayCtrl 2902;
 if(FETCH_CONST(life_adminlevel) < 1) exitWith {closeDialog 0;};
 
-/*
 switch(FETCH_CONST(life_adminlevel)) do
 {
-	case 1: {ctrlShow [2904,false];ctrlShow [2905,false];ctrlShow [2906,false];ctrlShow [2907,false];ctrlShow [2908,false];ctrlShow [2909,false];ctrlShow [2910,false];ctrlShow [2911,false];};
-	case 2: {ctrlShow [2905,false];ctrlShow [2906,false];ctrlShow [2907,false];ctrlShow [2908,false];ctrlShow [2909,false];ctrlShow [2910,false];ctrlShow [2911,false];};
-	case 3: {ctrlShow [2907,false];ctrlShow [2908,false];ctrlShow [2909,false];ctrlShow [2910,false];ctrlShow [2911,false];};
-	case 4: {[2911,false];};
+	case 1: {ctrlShow [2904,false];ctrlShow [2909,false];ctrlShow [2910,false];ctrlShow [2911,false];};
+	case 2: {ctrlShow [2911,false];};
 };
-*/
+
+//2904: Compensate, 2905: Spectate, 2906:Teleport, 2907: TpHere, 2908: GodMode, 2909: Freeze, 2910: Markers, 2911: Debug
 
 //Purge List
 lbClear _list;
