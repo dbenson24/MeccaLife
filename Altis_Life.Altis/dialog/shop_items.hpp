@@ -137,7 +137,7 @@ class shops_menu {
 		{
 			idc = 2405;
 			
-			text = "0";
+			text = "1";
 			sizeEx = 0.030;
 			x = 0.60; y = 0.66;
 			w = 0.27; h = 0.03;
@@ -153,7 +153,7 @@ class shops_menu {
 			y = 0.70;
 			w = (6.25 / 40);
 			h = (1 / 25);
-		};
+		};/* Optional for +1 -1 buttons on quantity
 		class ButtonAddSell : Life_RscButtonMenu
 		{
 			idc = -1;
@@ -177,7 +177,7 @@ class shops_menu {
 			y = 0.70;
 			w = (1.75 / 40);
 			h = (1 / 25);
-		};
+		};*/
 		
 		class ButtonClose : Life_RscButtonMenu {
 			idc = -1;

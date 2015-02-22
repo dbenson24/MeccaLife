@@ -21,7 +21,8 @@ lbClear _gear_list;
 _type= [_this,0,0,[0]] call BIS_fnc_param;
 _array= [_this,1,[],[[]]] call BIS_fnc_param;
 
-_shop_data = [life_shop_type] call life_fnc_virt_shops;
+//_shop_data = [life_shop_type] call life_fnc_virt_shops;
+_shop_data = M_CONFIG(getArray,"VirtualShops",life_shop_type,"items");
 ctrlSetText[2403,format["%1", _shop_data select 0]];
 
 if (count _array == 0 ) exitwith {};
@@ -33,7 +34,7 @@ if ((_x select 1) > 1 ) then {
 	//_name = [([(_x select 0),0] call life_fnc_varHandle)] call life_fnc_vartostr;
 	
 		_price = _x select 1;
-		_item_list lbAdd format["%1  ($%2)",_name,[_price] call life_fnc_numberText];
+		_item_list lbAdd format["%1  ($%2)",(localize _name),[_price] call life_fnc_numberText];
 		_item_list lbSetData [(lbSize _item_list)-1,_x select 0];
 		_item_list lbSetValue [(lbSize _item_list)-1,_price];
 	
@@ -51,7 +52,7 @@ if ((_x select 1) > 1 ) then {
 	if(_val > 0) then
 	{
 		_price = _x select 2;
-		_gear_list lbAdd format["%1x %2",_val,_name];
+		_gear_list lbAdd format["%1x %2",_val,(localize _name)];
 		_gear_list lbSetData [(lbSize _gear_list)-1,_x select 0];
 		_gear_list lbSetValue [(lbSize _gear_list)-1,_price];
 		};
