@@ -34,6 +34,7 @@ class CfgServerSettings
 		LOG_Settings[] = {{"HACKER","hacker.log"},{"LOG2","debug.log"}}; //First Selection = ID | Second Selection = Log File
 		/*Debug*/
 		MySQL_Query = false; //Log queries? Only set this to true if you are developing.
+		RealTime = true;
 	};
 };
 
