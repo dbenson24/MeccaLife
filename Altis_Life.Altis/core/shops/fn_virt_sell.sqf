@@ -27,7 +27,7 @@ if(([false,_type,_amount] call life_fnc_handleInv)) then {
 
 if(EQUAL(life_shop_type,"drugdealer")) then {
 	private["_array","_ind","_val"];
-	if(sunOrMoon == 1) then {hint "FKTHISSHIT"; ctrlShow[2405,false];};
+	if(sunOrMoon == 1) then {hint "FKTHISSHIT"; closeDialog 0;};
 	_array = life_shop_npc getVariable["sellers",[]];
 	_ind = [getPlayerUID player,_array] call TON_fnc_index;
 	if(!(EQUAL(_ind,-1))) then {
