@@ -212,7 +212,7 @@ publicVariable "TON_fnc_cell_emsrequest";
 TON_fnc_clientMessage =
 compileFinal "
 	if(isServer) exitWith {};
-	private[""_msg"",""_from"", ""_type"", ""_loc""];
+	private[""_msg"",""_from"", ""_type"", ""_loc"", ""_unit""];
 	_msg = _this select 0;
 	_from = _this select 1;
 	_type = _this select 2;
