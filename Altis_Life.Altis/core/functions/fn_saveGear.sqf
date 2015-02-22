@@ -138,7 +138,7 @@ if(count (PISTOL_ITEMS) > 0) then {
 		_yItems pushBack [_x,_val];
     };
 } forEach [
-	"pickaxe","fuelEmpty","fuelFull", "spikeStrip","lockpick", "defuseKit","storageSmall","storageBig","redgull","coffee","waterBottle","apple","peach","tbacon","donut","frog","marijuana","cannabis","froglsd","mushroom","magicm","heroinUnprocessed","cocaineUnprocessed","heroinProcessed","cocaineProcessed"
+	"pickaxe","fuelEmpty","fuelFull", "spikeStrip","lockpick", "defuseKit","storageSmall","storageBig","redgull","coffee","waterBottle","apple","peach","tbacon","donut","frog","marijuana","cannabis","froglsd","mushroom","magicm","heroinUnprocessed","cocaineUnprocessed","heroinProcessed","cocaineProcessed",
 	"rabbitGrilled","salemaGrilled","ornateGrilled","mackerelGrilled","tunaGrilled","mulletGrilled","catsharkGrilled","turtleSoup","henGrilled","roosterGrilled","sheepGrilled","goatGrilled"
 ];
 
