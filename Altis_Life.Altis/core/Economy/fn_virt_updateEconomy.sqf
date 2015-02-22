@@ -33,7 +33,7 @@ if ((_x select 2) > 1 ) then {
 	//_name = [([(_x select 0),0] call life_fnc_varHandle)] call life_fnc_vartostr;
 	
 		_price = _x select 2;
-		_achatliste lbAdd format["%1  ($%2)",_name,[_price] call life_fnc_numberText];
+		_achatliste lbAdd format["%1  ($%2)",(localize _name),[_price] call life_fnc_numberText];
 		_achatliste lbSetData [(lbSize _achatliste)-1,_x select 0];
 		_achatliste lbSetValue [(lbSize _achatliste)-1,_price];
 	
@@ -50,7 +50,7 @@ if ((_x select 2) > 1 ) then {
 	
 	
 		_price = _x select 1;
-		_venteliste lbAdd format["%1  ($%2)",_name,[_price] call life_fnc_numberText];
+		_venteliste lbAdd format["%1  ($%2)",(localize _name),[_price] call life_fnc_numberText];
 		_venteliste lbSetData [(lbSize _venteliste)-1,_x select 0];
 		_venteliste lbSetValue [(lbSize _venteliste)-1,_price];
 		

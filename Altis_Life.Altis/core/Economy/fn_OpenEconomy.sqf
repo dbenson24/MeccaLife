@@ -18,11 +18,8 @@ _achatliste = _display displayCtrl 39003;
 lbClear _venteliste;
 lbClear _achatliste;
 
-_economy = [[0,player,"economy"],"TON_fnc_getprices",false,false] spawn life_fnc_MP;
-    {
-        _x = localize _x;
-    }
-    forEach _economy;
+[[0,player,"economy"],"TON_fnc_getprices",false,false] spawn life_fnc_MP;
+   
 
 /*
 {
