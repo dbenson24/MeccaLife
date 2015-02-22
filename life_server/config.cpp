@@ -95,7 +95,7 @@ class CfgFunctions
 		{
 			file = "\life_server\Functions\Custom";
 			class spawnIllegalArea {};
-		}
+		};
 		class Wanted_Sys
 		{
 			file = "\life_server\Functions\WantedSystem";
@@ -149,7 +149,7 @@ class CfgFunctions
 			class vehicleisdead {};
             class getPrices {};
             class ajustprices {};
-		}
+		};
 		class Housing
 		{
 			file = "\life_server\Functions\Housing";
