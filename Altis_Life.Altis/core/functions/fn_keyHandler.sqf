@@ -57,14 +57,14 @@ switch (_code) do {
 	//2 Cellphone
 	case 3:
 	{
-		if(dialog) exitWith {};
-		[] call life_fnc_OpenEconomy;
+		createDialog "life_my_smartphone";
 	};
 	
 	//3 Market
 	case 4:
 	{
-		createDialog "Market";
+		if(dialog) exitWith {};
+		[] call life_fnc_OpenEconomy;
 	};
 	
 	//Takwondo(Traditional Martial arts in korea)(Shift + 2)
