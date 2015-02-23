@@ -38,9 +38,6 @@ class RscTitles
 	#include "dialog\progress.hpp"
 	#include "dialog\hud_nameTags.h"
 	#include "dialog\statusBar.hpp"
-	
-};
-	
 class introLife
 {
    idd = -1;
@@ -66,7 +63,6 @@ class introLife
       }; 
    }; 
 };
-
 
 class CfgFunctions
 {
