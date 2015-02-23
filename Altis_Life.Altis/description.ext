@@ -1,13 +1,13 @@
 author = "Tonic, MecccaDevTeam";
 onLoadName = "Mecca AltisLife RPG v4.0";
 onLoadMission = "An RPG game mode developed by Tonic, edited by MeccaDevTeam";
-loadScreen = "textures\loadscreen.jpg";
 joinUnassigned = 1;
 respawn = BASE;
 respawndelay = 5;
 disabledAI = true;
 disableChannels[]={0,1,2};
 enableDebugConsole = 1;
+loadScreen = "textures\loadscreen.jpg";
 respawnDialog = 0;
 
 class Header
@@ -38,6 +38,8 @@ class RscTitles
 	#include "dialog\progress.hpp"
 	#include "dialog\hud_nameTags.h"
 	#include "dialog\statusBar.hpp"
+	
+};
 	
 class introLife
 {
