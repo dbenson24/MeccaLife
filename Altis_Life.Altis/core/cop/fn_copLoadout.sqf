@@ -32,6 +32,10 @@ player addItem "ToolKit";
 player addItem "ToolKit";
 player addItem "ToolKit";
 player addItem "NVGoggles";
+player addItem "Rangefinder";
+player assignItem "Rangefinder";
+player addItem "SmokeShell"
+player addItem "SmokeShell"
 
 
 if (playerSide == west) then {
@@ -42,6 +46,13 @@ switch (FETCH_CONST(life_coplevel)) do {
 	{
 		[[player,0,"textures\cadetTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
 		player addWeapon "hgun_P07_F";
+		player addVest "V_TacVest_blk_POLICE";
+		player addMagazine "16Rnd_9x21_Mag";
+		player addMagazine "16Rnd_9x21_Mag";
+		player addMagazine "16Rnd_9x21_Mag";
+		player addMagazine "16Rnd_9x21_Mag";
+		player addMagazine "16Rnd_9x21_Mag";
+		player addMagazine "16Rnd_9x21_Mag";
 		player addMagazine "16Rnd_9x21_Mag";
 		player addMagazine "16Rnd_9x21_Mag";
 		player addMagazine "16Rnd_9x21_Mag";
@@ -53,10 +64,20 @@ switch (FETCH_CONST(life_coplevel)) do {
 	{
 		[[player,0,"textures\stateTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
 		player addWeapon "arifle_MXC_Hamr_pointer_F";
-		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addVest "V_TacVest_blk_POLICE";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addItem "HandGrenade_Stone"
+		player addItem "HandGrenade_Stone"
 		If(BANK > 0) then {BANK = BANK - 5000;};
 		
 	};
@@ -65,10 +86,20 @@ switch (FETCH_CONST(life_coplevel)) do {
 	{
 	    [[player,0,"textures\stateTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
 		player addWeapon "arifle_MX_Hamr_pointer_F";
-		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addVest "V_TacVest_blk_POLICE";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addItem "HandGrenade_Stone"
+		player addItem "HandGrenade_Stone"
 		If(BANK > 0) then {BANK = BANK - 5000;};
 	};
 	
@@ -76,10 +107,20 @@ switch (FETCH_CONST(life_coplevel)) do {
 	{
 	    [[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
 		player addWeapon "arifle_MX_Hamr_pointer_F";
-		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addVest "V_PlateCarrier2_rgr";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addItem "HandGrenade_Stone"
+		player addItem "HandGrenade_Stone"
 		If(BANK > 0) then {BANK = BANK - 5000;};
 	};
 	
@@ -87,30 +128,63 @@ switch (FETCH_CONST(life_coplevel)) do {
 	{
 	    [[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
 		player addWeapon "arifle_MXM_Hamr_pointer_F";
-		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addVest "V_PlateCarrier2_rgr";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addItem "HandGrenade_Stone"
+		player addItem "HandGrenade_Stone"
+		
 		If(BANK > 0) then {BANK = BANK - 5000;};
 	};
 	case 6:
 	{
 	    [[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
 		player addWeapon "arifle_MX_Hamr_pointer_F";
-		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
-		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
-		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
 		player addVest "V_PlateCarrier2_rgr";
+		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
+		player addItem "HandGrenade_Stone"
+		player addItem "HandGrenade_Stone"
+		
 		If(BANK > 0) then {BANK = BANK - 5000;};
 	};
 	case 7:
 	{
 	    [[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+		player addVest "V_PlateCarrier2_rgr";
 		player addWeapon "arifle_MX_Hamr_pointer_F";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-		player addVest "V_PlateCarrier2_rgr";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addItem "HandGrenade_Stone"
+		player addItem "HandGrenade_Stone"
+		
 		If(BANK > 0) then {BANK = BANK - 5000;};
 	};
 	
