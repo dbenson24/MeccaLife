@@ -89,7 +89,7 @@ class life_admin_menu {
 			text = "$STR_Admin_Compensate";
 			onButtonClick = "createDialog ""Life_Admin_Compensate"";";
 			x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.88 - (1 / 25);
+			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
@@ -98,7 +98,7 @@ class life_admin_menu {
 			text = "$STR_Admin_Spectate";
 			onButtonClick = "[] call life_fnc_adminSpectate;";
 			x = 0.42 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.88 - (1 / 25);
+			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
@@ -107,7 +107,7 @@ class life_admin_menu {
 			text = "$STR_Admin_Teleport";
 			onButtonClick = "[] call life_fnc_adminTeleport; hint 'Select where you would like to teleport';";
 			x = 0.58 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.88 - (1 / 25);
+			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
@@ -116,7 +116,7 @@ class life_admin_menu {
 			text = "$STR_Admin_TpHere";
 			onButtonClick = "[] call life_fnc_adminTpHere;";
 			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.885;
+			y = 0.8;
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
@@ -125,7 +125,7 @@ class life_admin_menu {
 			text = "$STR_Admin_God";
 			onButtonClick = "[] call life_fnc_adminGodMode;";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.885;
+			y = 0.8;
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
@@ -134,7 +134,7 @@ class life_admin_menu {
 			text = "$STR_Admin_Freeze";
 			onButtonClick = "[] call life_fnc_adminFreeze;";
 			x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.885;
+			y = 0.8;
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
@@ -143,7 +143,7 @@ class life_admin_menu {
 			text = "$STR_Admin_Markers";
 			onButtonClick = "[] spawn life_fnc_adminMarkers;";
 			x = 0.42 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.885;
+			y = 0.8;
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
@@ -152,7 +152,7 @@ class life_admin_menu {
 			text = "$STR_Admin_Debug";
 			onButtonClick = "[] call life_fnc_adminDebugCon;";
 			x = 0.58 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.885;
+			y = 0.8;
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
