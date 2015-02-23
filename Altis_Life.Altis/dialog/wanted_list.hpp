@@ -22,7 +22,7 @@ class life_wanted_menu {
 			idc = -1;
 			x = 0.21;
 			y = 0.2 + (11 / 250);
-			w = 0.6;
+			w = 0.1;
 			h = 0.6 - (22 / 250);
 		};
 	};
@@ -34,7 +34,7 @@ class life_wanted_menu {
 			colorBackground[] = {0, 0, 0, 0};
 			idc = -1;
 			text = "$STR_Wanted_Title";
-			x = 0.21;
+			x = 0.12;
 			y = 0.2;
 			w = 0.6;
 			h = (1 / 25);
