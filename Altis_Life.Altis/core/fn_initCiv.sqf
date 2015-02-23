@@ -29,5 +29,4 @@ if (!life_is_alive) then
         };     
         life_is_alive = true;
 };
-[] spawn life_fnc_initgang;
 player addRating 9999999;
