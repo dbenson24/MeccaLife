@@ -11,7 +11,7 @@ _members = [];
 
 sleep 0.5;
 if(visibleMap) then {
-	{if(side _x != west) then {_members pushBack _x;}} forEach (units grpPlayer); //Fetch gang members
+	{if(side _x != west) then {_members pushBack _x;}} forEach (units group player); //Fetch gang members
 	
 	//Create markers
 	{
