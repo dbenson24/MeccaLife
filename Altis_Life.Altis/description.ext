@@ -1,6 +1,7 @@
 author = "Tonic, MecccaDevTeam";
-onLoadName = "Altis Life RPG v4.0";
+onLoadName = "Mecca AltisLife RPG v4.0";
 onLoadMission = "An RPG game mode developed by Tonic, edited by MeccaDevTeam";
+loadScreen = "textures\loadscreen.jpg";
 joinUnassigned = 1;
 respawn = BASE;
 respawndelay = 5;
