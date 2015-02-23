@@ -255,7 +255,7 @@ class playerSettings {
 				};
 			};
 		};
-		
+		/*
 		class ButtonGangList : Life_RscButtonMenu {
 			colorBackground[] = {0, 0, 0, 0};
 			idc = 2012;
@@ -266,6 +266,7 @@ class playerSettings {
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
+		*/
 	
 		class ButtonKeys : Life_RscButtonMenu {
 			colorBackground[] = {0, 0, 0, 0};
@@ -311,5 +312,15 @@ class playerSettings {
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
+		
+		class ButtonMarket : Life_RscButtonMenu {
+			colorBackground[] = {0, 0, 0, 0};
+			idc = -1;
+			text = "Market";
+			onButtonClick = "[] call life_fnc_OpenEconomy;";
+			x = 0.42 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.801;
+			w = (6.25 / 40);
+			h = (1 / 25);
 	};
 };

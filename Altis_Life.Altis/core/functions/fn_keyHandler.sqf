@@ -60,6 +60,12 @@ switch (_code) do {
 		createDialog "life_my_smartphone";
 	};
 	
+	//3 Market
+	case 4:
+	{
+		createDialog "life_fnc_OpenEconomy";
+	};
+	
 	//Takwondo(Traditional Martial arts in korea)(Shift + 2)
 	case 4:
 	{
