@@ -53,7 +53,7 @@ class life_wanted_menu {
 			sizeEx = 0.035;
 			onLBSelChanged = "[] spawn life_fnc_wantedGrab";
 			
-			x = 0.21; y = 0.26;
+			x = 0.12; y = 0.26;
 			w = 0.2; h = 0.4;
 		};
 		
@@ -106,7 +106,7 @@ class life_wanted_menu {
 			text = "$STR_Global_Close";
 			onButtonClick = "closeDialog 0;";
 			colorBackground[] = {0, 0, 0, 0};
-			x = 0.21;
+			x = 0.12; 
 			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);
 			h = (1 / 25);
@@ -117,7 +117,7 @@ class life_wanted_menu {
 			text = "$STR_Wanted_Pardon";
 			onButtonClick = "[] call life_fnc_pardon; closeDialog 0;";
 			colorBackground[] = {0, 0, 0, 0};	
-			x = 0.37;
+			x = 0.28;
 			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);
 			h = (1 / 25);
