@@ -322,5 +322,6 @@ class playerSettings {
 			y = 0.801;
 			w = (6.25 / 40);
 			h = (1 / 25);
+		};
 	};
 };
