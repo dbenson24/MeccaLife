@@ -63,7 +63,7 @@ switch (_code) do {
 	//3 Market
 	case 4:
 	{
-		createDialog "life_fnc_OpenEconomy";
+		createDialog "Market";
 	};
 	
 	//Takwondo(Traditional Martial arts in korea)(Shift + 2)
