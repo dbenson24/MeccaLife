@@ -37,7 +37,7 @@ case "rebel" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE
 case "fishmarket" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
 case "wongs" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
 case "oil" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
-case "cop" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
+case "cop" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' OR shoptype='market'",_data];};
 case "diamond" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
 case "iron" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
 case "glass" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
@@ -46,6 +46,7 @@ case "cement" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHER
 case "gold" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
 case "gang" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='rebel' OR shoptype='market' ",_data];};
 case "economy" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE factor=2 OR factor = 3 OR factor = 4",_data];};
+case "vigilante" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' OR shoptype='market' ",_data];};
 default {"Error"};
 };
 
