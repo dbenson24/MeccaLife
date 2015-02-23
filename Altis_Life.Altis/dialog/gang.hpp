@@ -6,21 +6,19 @@ class Life_My_Gang_Diag {
 	onLoad = "";
 	
 	class controlsBackground {
-	
-	    class fondtablet: Life_RscPicture
-		{
-			idc = 9090909;
-			text = "textures\menu.paa";
-			x = 0;
-			y = -0.12;
-			w = 1;
-			h = 1.28;
+		class Life_RscTitleBackground:Life_RscText {
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
+			idc = -1;
+			x = 0.1;
+			y = 0.2;
+			w = 0.6;
+			h = (1 / 25);
 		};
 		
 		class MainBackground:Life_RscText {
-			colorBackground[] = {0, 0, 0, 0.2};
+			colorBackground[] = {0, 0, 0, 0.7};
 			idc = -1;
-			x = 0.21;
+			x = 0.1;
 			y = 0.2 + (11 / 250);
 			w = 0.6;
 			h = 0.6 - (22 / 250);
@@ -34,7 +32,7 @@ class Life_My_Gang_Diag {
 			colorBackground[] = {0, 0, 0, 0};
 			idc = 2629;
 			text = "";
-			x = 0.21;
+			x = 0.1;
 			y = 0.2;
 			w = 0.6;
 			h = (1 / 25);
@@ -46,7 +44,7 @@ class Life_My_Gang_Diag {
 			text = "";
 			sizeEx = 0.035;
 			
-			x = 0.21; y = 0.26;
+			x = 0.11; y = 0.26;
 			w = 0.350; h = 0.370;
 		};
 
@@ -54,8 +52,7 @@ class Life_My_Gang_Diag {
 			idc = -1;
 			text = "$STR_Global_Close";
 			onButtonClick = "closeDialog 0;[] call life_fnc_p_updateMenu";
-			colorBackground[] = {0, 0, 0, 0.0};			
-			x = 0.21;
+			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);
 			h = (1 / 25);
@@ -64,9 +61,9 @@ class Life_My_Gang_Diag {
 		class GangLeave : Life_RscButtonMenu {
 			idc = -1;
 			text = "$STR_Gang_Leave";
-			colorBackground[] = {0, 0, 0, 0};
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "[] call life_fnc_gangLeave";
-			x = 0.56;
+			x = 0.47;
 			y = 0.26;
 			w = (9 / 40);
 			h = (1 / 25);
@@ -76,9 +73,9 @@ class Life_My_Gang_Diag {
 		{
 			idc = 2622;
 			text = "$STR_Gang_UpgradeSlots";
-			colorBackground[] = {0, 0, 0, 0};
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "[] spawn life_fnc_gangUpgrade";
-			x = 0.56;
+			x = 0.47;
 			y = 0.31;
 			w = (9 / 40);
 			h = (1 / 25);
@@ -88,9 +85,9 @@ class Life_My_Gang_Diag {
 		{
 			idc = 2624;
 			text = "$STR_Gang_Kick";
-			colorBackground[] = {0, 0, 0, 0};
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "[] call life_fnc_gangKick";
-			x = 0.56;
+			x = 0.47;
 			y = 0.36;
 			w = (9 / 40);
 			h = (1 / 25);
@@ -100,9 +97,9 @@ class Life_My_Gang_Diag {
 		{
 			idc = 2625;
 			text = "$STR_Gang_SetLeader";
-			colorBackground[] = {0, 0, 0, 0};
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "[] spawn life_fnc_gangNewLeader";
-			x = 0.56;
+			x = 0.47;
 			y = 0.41;
 			w = (9 / 40);
 			h = (1 / 25);
@@ -112,9 +109,8 @@ class Life_My_Gang_Diag {
 		{
 			idc = 2630;
 			text = "$STR_Gang_Invite_Player";
-			colorBackground[] = {0, 0, 0, 0};
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "[] spawn life_fnc_gangInvitePlayer";
-			x = 0.56;
 			y = .51;
 		};
 		
@@ -122,21 +118,19 @@ class Life_My_Gang_Diag {
 		{
 			idc = 2631;
 			text = "$STR_Gang_Disband_Gang";
-			colorBackground[] = {0, 0, 0, 0};
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "[] spawn life_fnc_gangDisband";
-			x = 0.56;
 			y = .46;
 		};
 		
 		class ColorList : Life_RscCombo
 		{
 			idc = 2632;
-			x = 0.57; y = 0.56;
+			x = 0.47; y = 0.56;
 			w = (9 / 40); h = 0.03;
 		};
 		
 		class GangBank : Title {
-		    x = 0.21;
 			idc = 601;
 			style = 1;
 			text = "";
@@ -149,7 +143,7 @@ class Life_Create_Gang_Diag {
 	name= "life_my_gang_menu_create";
 	movingEnable = false;
 	enableSimulation = true;
-	onLoad = "[] spawn {waitUntil {!isNull (findDisplay 2520)}; ((findDisplay 2520) displayCtrl 2523) ctrlSetText format[localize ""STR_Gang_PriceTxt"",[(call life_gangPrice)] call life_fnc_numberText]};";
+	onLoad = "[] spawn {waitUntil {!isNull (findDisplay 2520)}; ((findDisplay 2520) displayCtrl 2523) ctrlSetText format[localize ""STR_Gang_PriceTxt"",[(getNumber(missionConfigFile >> 'Life_Settings' >> 'gang_price'))] call life_fnc_numberText]};";
 	
 	class controlsBackground {
 		class Life_RscTitleBackground:Life_RscText {
