@@ -20,9 +20,9 @@ class life_wanted_menu {
 		class MainBackground:Life_RscText {
 			colorBackground[] = {0, 0, 0, 0.2};
 			idc = -1;
-			x = 0.21;
+			x = 0.12;
 			y = 0.2 + (11 / 250);
-			w = 0.1;
+			w = 0.7;
 			h = 0.6 - (22 / 250);
 		};
 	};
