@@ -57,7 +57,8 @@ switch (_code) do {
 	//2 Cellphone
 	case 3:
 	{
-		createDialog "life_my_smartphone";
+		if(dialog) exitWith {};
+		[] call life_fnc_OpenEconomy;
 	};
 	
 	//3 Market
