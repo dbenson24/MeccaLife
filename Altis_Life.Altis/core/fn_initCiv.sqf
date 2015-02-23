@@ -14,9 +14,13 @@ waitUntil {!(isNull (findDisplay 46))};
  
 if (!life_is_alive) then
 {
+		[] spawn life_fnc_INFO;
+			waitUntil{!isNull (findDisplay 999999)}; //Wait for the welcome to be open.
+			waitUntil{isNull (findDisplay 999999)}; //Wait for the welcome to be done.
+			
         [] call life_fnc_spawnMenu;
-        waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
-        waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
+			waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
+			waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
         life_is_alive = true; // Just in-case the player disconnects before choosing a spawn position I guess? Otherwise debug island it is!
 } else {
         if(life_is_arrested) then
@@ -24,6 +28,9 @@ if (!life_is_alive) then
                 life_is_arrested = false;
                 [player,true] spawn life_fnc_jail;
         } else {
+				[] spawn life_fnc_INFO;
+					waitUntil{!isNull (findDisplay 999999)}; //Wait for the welcome to be open.
+					waitUntil{isNull (findDisplay 999999)}; //Wait for the welcome to be done.
                 player setPos civ_position;
                 hint format["Your character is still alive. You have been placed at your last saved position."];
         };     

@@ -209,6 +209,7 @@ class Life_Client_Core
 		class handleDowned {};
 		class emptyFuel {};
 		class CarAlarmSound {};
+		class Info {};
 	};
 	
 	class Network
