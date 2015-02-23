@@ -34,8 +34,8 @@ player addItem "ToolKit";
 player addItem "NVGoggles";
 player addItem "Rangefinder";
 player assignItem "Rangefinder";
-player addItem "SmokeShell"
-player addItem "SmokeShell"
+player addItem "SmokeShell";
+player addItem "SmokeShell";
 
 
 if (playerSide == west) then {
@@ -76,8 +76,8 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-		player addItem "HandGrenade_Stone"
-		player addItem "HandGrenade_Stone"
+		player addItem "HandGrenade_Stone";
+		player addItem "HandGrenade_Stone";
 		If(BANK > 0) then {BANK = BANK - 5000;};
 		
 	};
@@ -98,8 +98,8 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-		player addItem "HandGrenade_Stone"
-		player addItem "HandGrenade_Stone"
+		player addItem "HandGrenade_Stone";
+		player addItem "HandGrenade_Stone";
 		If(BANK > 0) then {BANK = BANK - 5000;};
 	};
 	
@@ -119,8 +119,8 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-		player addItem "HandGrenade_Stone"
-		player addItem "HandGrenade_Stone"
+		player addItem "HandGrenade_Stone";
+		player addItem "HandGrenade_Stone";
 		If(BANK > 0) then {BANK = BANK - 5000;};
 	};
 	
@@ -140,8 +140,8 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-		player addItem "HandGrenade_Stone"
-		player addItem "HandGrenade_Stone"
+		player addItem "HandGrenade_Stone";
+		player addItem "HandGrenade_Stone";
 		
 		If(BANK > 0) then {BANK = BANK - 5000;};
 	};
@@ -161,8 +161,8 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
-		player addItem "HandGrenade_Stone"
-		player addItem "HandGrenade_Stone"
+		player addItem "HandGrenade_Stone";
+		player addItem "HandGrenade_Stone";
 		
 		If(BANK > 0) then {BANK = BANK - 5000;};
 	};
@@ -182,8 +182,8 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-		player addItem "HandGrenade_Stone"
-		player addItem "HandGrenade_Stone"
+		player addItem "HandGrenade_Stone";
+		player addItem "HandGrenade_Stone";
 		
 		If(BANK > 0) then {BANK = BANK - 5000;};
 	};
