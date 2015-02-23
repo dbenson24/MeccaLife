@@ -3,10 +3,11 @@ class life_wanted_menu {
 	name= "life_wanted_menu";
 	movingEnable = false;
 	enableSimulation = true;
+	//onLoad = "[] spawn life_fnc_wantedadd2;";
 	
 	class controlsBackground {
-	
-	    class fondtablet: Life_RscPicture
+
+		class fondtablet: Life_RscPicture
 		{
 			idc = 9090909;
 			text = "textures\menu.paa";
@@ -50,10 +51,22 @@ class life_wanted_menu {
 			idc = 2401;
 			text = "";
 			sizeEx = 0.035;
-			onLBSelChanged = "[] call life_fnc_wantedInfo";
+			onLBSelChanged = "[] spawn life_fnc_wantedGrab";
 			
 			x = 0.21; y = 0.26;
 			w = 0.2; h = 0.4;
+		};
+		
+		class PlayerList : Life_RscListBox 
+		{
+			idc = 2406;
+			text = "";
+			sizeEx = 0.035;
+			//colorBackground[] = {0,0,0,0};
+			onLBSelChanged = "";
+			
+			x = 0.34; y = 0.28;
+			w = 0.2; h = 0.3;
 		};
 		
 		class WantedDetails : Life_RscListBox
@@ -79,6 +92,15 @@ class life_wanted_menu {
 			h = 0.6;
 		};
 		
+		class WantedAddL : Life_RscCombo
+		{
+			idc = 2407;
+			x = 0.542; 
+			y = 0.28;
+			w = (8 / 52); 
+			h = 0.03;
+		};
+		
 		class CloseButtonKey : Life_RscButtonMenu {
 			idc = -1;
 			text = "$STR_Global_Close";
@@ -94,11 +116,51 @@ class life_wanted_menu {
 			idc = 2405;
 			text = "$STR_Wanted_Pardon";
 			onButtonClick = "[] call life_fnc_pardon; closeDialog 0;";
-			colorBackground[] = {0, 0, 0, 0};		
+			colorBackground[] = {0, 0, 0, 0};	
 			x = 0.37;
 			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
+		
+		class ButtonWantedAdd : life_RscButtonMenu {
+			idc = 9800;
+			//shortcuts[] = {0x00050000 + 2};
+			text = "$STR_Wanted_Add";
+			onButtonClick = "[] call life_fnc_wantedAddP;";
+			colorBackground[] = {0, 0, 0, 0};	
+			x = 0.1 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.8 - (1 / 25);
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
+		
+		class wantedText: Life_RscText
+		{
+			idc = 1000;
+			text = "$STR_Wanted_People";
+			x = 0.12; 
+			y = 0.11;
+			w = 0.2; 
+			h = 0.3;
+		};
+		class citizensText: Life_RscText
+		{
+			idc = 1001;
+			text = "$STR_Wanted_Citizens";
+			x = 0.34; 
+			y = 0.11;
+			w = 0.2; 
+			h = 0.3;
+		};
+		class crimesText: Life_RscText
+		{
+			idc = 1002;
+			text = "$STR_Wanted_Crimes";
+			x = 0.542; 
+			y = 0.245;
+			w = (8 / 52); 
+			h = 0.03;
+		};
 	};
-};
+}; 

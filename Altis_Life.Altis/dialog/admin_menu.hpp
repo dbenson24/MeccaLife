@@ -88,6 +88,7 @@ class life_admin_menu {
 			idc = 2904;
 			text = "$STR_Admin_Compensate";
 			onButtonClick = "createDialog ""Life_Admin_Compensate"";";
+			colorBackground[] = {0, 0, 0, 0.0};	
 			x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);
@@ -97,6 +98,7 @@ class life_admin_menu {
 			idc = 2905;
 			text = "$STR_Admin_Spectate";
 			onButtonClick = "[] call life_fnc_adminSpectate;";
+			colorBackground[] = {0, 0, 0, 0.0};	
 			x = 0.42 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);
@@ -106,6 +108,7 @@ class life_admin_menu {
 			idc = 2906;
 			text = "$STR_Admin_Teleport";
 			onButtonClick = "[] call life_fnc_adminTeleport; hint 'Select where you would like to teleport';";
+			colorBackground[] = {0, 0, 0, 0.0};	
 			x = 0.58 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);
@@ -115,6 +118,7 @@ class life_admin_menu {
 			idc = 2907;
 			text = "$STR_Admin_TpHere";
 			onButtonClick = "[] call life_fnc_adminTpHere;";
+			colorBackground[] = {0, 0, 0, 0.0};	
 			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8;
 			w = (6.25 / 40);
@@ -124,6 +128,7 @@ class life_admin_menu {
 			idc = 2908;
 			text = "$STR_Admin_God";
 			onButtonClick = "[] call life_fnc_adminGodMode;";
+			colorBackground[] = {0, 0, 0, 0.0};	
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8;
 			w = (6.25 / 40);
@@ -133,6 +138,7 @@ class life_admin_menu {
 			idc = 2909;
 			text = "$STR_Admin_Freeze";
 			onButtonClick = "[] call life_fnc_adminFreeze;";
+			colorBackground[] = {0, 0, 0, 0.0};	
 			x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8;
 			w = (6.25 / 40);
@@ -142,6 +148,7 @@ class life_admin_menu {
 			idc = 2910;
 			text = "$STR_Admin_Markers";
 			onButtonClick = "[] spawn life_fnc_adminMarkers;";
+			colorBackground[] = {0, 0, 0, 0.0};	
 			x = 0.42 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8;
 			w = (6.25 / 40);
@@ -151,6 +158,7 @@ class life_admin_menu {
 			idc = 2911;
 			text = "$STR_Admin_Debug";
 			onButtonClick = "[] call life_fnc_adminDebugCon;";
+			colorBackground[] = {0, 0, 0, 0.0};	
 			x = 0.58 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8;
 			w = (6.25 / 40);
