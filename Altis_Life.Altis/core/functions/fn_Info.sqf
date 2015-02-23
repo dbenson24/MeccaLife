@@ -23,7 +23,7 @@ _text2 = _display displayCtrl 1102;
 _message = "";
 _message = _message + "<t align='center' size='7' shadow='0'><img image='textures\intro.paa' /></t><br /><br />";
 _message = _message + "Welcome to <a href='http://www.MeccaGaming.co' color='#5600FF'>MeccaGaming.co</a> Experience Beyond Roleplay!<br /><br />";
-_message = _message + "This is a serious roleplay server so before you spawn in please make sure you read our rules at <a href= 'http://meccagaming.co' color='#5600FF'>MeccaGaming.Rules</a> otherwise you will end up banned and we dont want that!<br /><br />";
+_message = _message + "This is a serious roleplay server so before you spawn in please make sure you read our rules at <a href= 'http://meccagaming.co' color='#5600FF'>MeccaGaming Rules</a> otherwise you will end up banned and we dont want that!<br /><br />";
 _message = _message + "MeccaGaming.co is now currently running on 4.0.0. We hope you enjoy this update and if you have any issues or concerns, please feel free to join us on Teamspeak!<br />";
 _message = _message + "Sincerely,<br />";
 _message = _message + "<t size='3' shadow='5'><img image='textures\signature.paa' /></t>";
