@@ -24,6 +24,7 @@ if (!life_is_alive) then
                 life_is_arrested = false;
                 [player,true] spawn life_fnc_jail;
         } else {
+				[] spawn life_fnc_INFO;
                 player setPos civ_position;
                 hint format["Your character is still alive. You have been placed at your last saved position."];
         };     

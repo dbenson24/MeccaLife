@@ -23,9 +23,12 @@ if((FETCH_CONST(life_medicLevel)) < 1) exitWith {
         waitUntil {backpack player != "B_Carryall_oucamo"}; 
     };
 };
+_igiload = execVM "IgiLoad\IgiLoadInit.sqf";
 
+[] spawn life_fnc_INFO;
+	waitUntil{!isNull (findDisplay 999999)}; //Wait for the welcome to be open.
+	waitUntil{isNull (findDisplay 999999)}; //Wait for the welcome to be done.
 
 [] call life_fnc_spawnMenu;
-_igiload = execVM "IgiLoad\IgiLoadInit.sqf";
-waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
-waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
+	waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
+	waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
