@@ -29,6 +29,8 @@ if (!life_is_alive) then
                 [player,true] spawn life_fnc_jail;
         } else {
 				[] spawn life_fnc_INFO;
+					waitUntil{!isNull (findDisplay 999999)}; //Wait for the welcome to be open.
+					waitUntil{isNull (findDisplay 999999)}; //Wait for the welcome to be done.
                 player setPos civ_position;
                 hint format["Your character is still alive. You have been placed at your last saved position."];
         };     
