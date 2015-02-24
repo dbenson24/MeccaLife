@@ -10,7 +10,6 @@ private["_ui","_units","_goggles"];
 #define iconID 78000
 #define scale 0.8
 
-_headgear = ["H_Shemag_olive","H_Shemag_khk","H_Shemag_tan","H_ShemagOpen_khk","H_ShemagOpen_tan","H_Shemag_olive_hs"];
 
 if(visibleMap OR {!alive player} OR {dialog}) exitWith {
 	500 cutText["","PLAIN"];
@@ -39,7 +38,6 @@ SUB(_units,[player]);
 		_distance = _pos distance player;
 		if(count _sPos > 1 && {_distance < 15}) then {
 			_text = switch (true) do {
-				case ((headgear _x) in _headgear): {format["<t color='#000000'>Masked Player</t>"];};
 				case (isPlayer _x && {(uniform _x in life_noname_clothing)}): {"";};
 				case (isPlayer _x && {(headgear _x in life_hidden_clothing) || (goggles _x in life_hidden_clothing)}): {"<t size='1.2'>[Masked Person]</t>";};
 				case (_x in (units grpPlayer) && playerSide == civilian): {format["<t color='#00FF00'>%1</t>",(_x GVAR ["realname",name _x])];};

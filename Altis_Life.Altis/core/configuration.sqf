@@ -39,6 +39,24 @@ life_siren2_active = false;
 life_fake_weapons = ["Binocular","Laserdesignator","Rangefinder"];
 mecca_vdm_watcher_count = 0;
 
+life_noname_clothing = [
+	"U_I_GhillieSuit",
+	"U_O_GhillieSuit",
+	"U_I_GhillieSuit"
+];
+
+life_hidden_clothing = [
+	"H_Shemag_khk",
+	"H_Shemag_tan",
+	"H_Shemag_olive",
+	"H_Shemag_olive_hs",
+	"H_ShemagOpen_khk",
+	"H_ShemagOpen_tan",
+	"G_Balaclava_lowprofile",
+	"G_Balaclava_combat",
+	"G_Bandanna_beast"
+];
+
 life_god = false; 
 life_frozen = false; 
 life_markers = false;
