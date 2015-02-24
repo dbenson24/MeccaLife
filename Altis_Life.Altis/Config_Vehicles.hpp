@@ -24,7 +24,7 @@
 #define ptempestcov 251500
 #define phemttbox 600000
 #define ptempestdev 800000
-#define pifrit 700000
+#define pifrit 950000
 #define pmh9civ 325000
 #define p50cal 950000
 #define poffroadcop 5000
