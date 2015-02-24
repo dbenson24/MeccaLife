@@ -111,6 +111,28 @@ switch (_code) do {
 		};
 	};
 	
+	//Pushup(Shift + 6)
+	case 8:
+	{
+	if(_shift) then {_handled = true;};
+		if ((_shift) && (vehicle player == player)) then
+		{
+			cutText [format["YOU SCARED BRUH!!!!!!"], "PLAIN DOWN"];
+			player playMove "AmovPercMstpSnonWnonDnon_Scared";
+		};
+	};
+	
+	//Pushup(Shift + 7)
+	case 9:
+	{
+	if(_shift) then {_handled = true;};
+		if ((_shift) && (vehicle player == player)) then
+		{
+			cutText [format["YOU REALLY SCARED BRUH!!!!!!"], "PLAIN DOWN"];
+			player playMove "AmovPercMstpSnonWnonDnon_Scared2";
+		};
+	};
+	
 	//Space key for Jumping
 	case 57: {
 		if(isNil "jumpActionTime") then {jumpActionTime = 0;};
