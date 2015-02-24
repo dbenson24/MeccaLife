@@ -1,7 +1,5 @@
 StartProgress = false;
 enableSaving[false,false];
-/* Initialize the Logistics system */
-execVM "R3F_LOG\init.sqf";
 
 life_versionInfo = "Altis Life RPG v4.0";
 [] execVM "briefing.sqf"; //Load Briefing
@@ -21,7 +19,6 @@ life_versionInfo = "Altis Life RPG v4.0";
 {_x setMarkerAlphaLocal 0} forEach ["mrkmushroomRed","mrkmushroomGreen"];
 
 StartProgress = true;
-
 
 [
     10*60, // seconds to delete dead bodies (0 means don't delete) 
