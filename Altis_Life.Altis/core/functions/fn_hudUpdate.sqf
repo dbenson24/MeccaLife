@@ -31,13 +31,13 @@ if(playerSide == civilian) then
 	{
 		LIFEctrl(IDC_LIFE_BAR_WANTED)ctrlSetBackgroundColor [1, 0, 0, .5];
 		LIFEctrl(IDC_LIFE_BAR_WANTED) progressSetPosition (100);
-		LIFEctrl(IDC_LIFE_WANTED_TEXT) ctrlSetText format["£%1", ([mecca_wanted_status] call life_fnc_numberText)];
+		LIFEctrl(IDC_LIFE_WANTED_TEXT) ctrlSetText format["$%1", ([mecca_wanted_status] call life_fnc_numberText)];
 	}
 	else
 	{
 		LIFEctrl(IDC_LIFE_BAR_WANTED)ctrlSetBackgroundColor [0, 1, 0, .5];
 		LIFEctrl(IDC_LIFE_BAR_WANTED) progressSetPosition (100);
-		LIFEctrl(IDC_LIFE_WANTED_TEXT) ctrlSetText format["£%1", ([mecca_wanted_status] call life_fnc_numberText)];
+		LIFEctrl(IDC_LIFE_WANTED_TEXT) ctrlSetText format["$%1", ([mecca_wanted_status] call life_fnc_numberText)];
 	};
 }
 else
