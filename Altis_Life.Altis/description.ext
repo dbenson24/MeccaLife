@@ -1,4 +1,4 @@
-author = "Tonic, MecccaDevTeam";
+author = "Tonic, MeccaDevTeam";
 onLoadName = "Mecca AltisLife RPG v4.0";
 onLoadMission = "An RPG game mode developed by Tonic, edited by MeccaDevTeam";
 joinUnassigned = 1;
