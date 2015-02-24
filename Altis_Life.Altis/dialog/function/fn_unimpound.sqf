@@ -17,7 +17,7 @@ _unit = player;
 
 if(isNil "_vehicle") exitWith {hint localize "STR_Garage_Selection_Error"};
 
-_price = M_CONFIG(getNumber,CONFIG_VEHICLES,_className,"price")
+_price = M_CONFIG(getNumber,CONFIG_VEHICLES,_className,"price");
 _price = round(_price * 0.1);
 
 if(!(EQUAL(typeName _price,typeName 0)) OR _price < 1) then {_price = 1000};
