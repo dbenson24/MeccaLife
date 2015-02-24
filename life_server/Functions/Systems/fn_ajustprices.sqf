@@ -156,7 +156,7 @@ _allOk = TRUE;
 
 if (_allOk) then { //We update the prices!
     _time = time;
-		waitUntil {(time - _time) > (3 * 60)};
+		waitUntil {(time - _time) > (4 * 60)};
     {
         waitUntil {sleep (random 0.3); !DB_Async_Active};
         _queryResult = [_x,1] call DB_fnc_asyncCall;
