@@ -75,7 +75,7 @@ SUB(_units,[player]);
 						default {"Cop In Training"};
 					}]};
 				//NHS
-				case (!isNil {(_x GVAR "life_medicLevel")}): {format["<img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1.5'></img> <t size='1.35'>%2</t><br/><t size='1.2'>[%1]</t>",switch ((_x GVAR FETCH_CONST("life_medicLevel")) do {
+				case (!isNil {(_x GVAR "life_medicLevel")}): {format["<img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1.5'></img> <t size='1.35'>%2</t><br/><t size='1.2'>[%1]</t>",switch ((_x GVAR "life_medicLevel")) do {
 					case 1: {"Responder"};
 					case 2: {"First Responder"}; 
 					case 3: {"Advancced Responder"};
