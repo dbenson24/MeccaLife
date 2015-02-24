@@ -18,7 +18,7 @@ _unit = player;
 if(isNil "_vehicle") exitWith {hint localize "STR_Garage_Selection_Error"};
 
 _price = M_CONFIG(getNumber,CONFIG_VEHICLES,_className,"price");
-_sellPrice = round(0.95 * _price)
+_sellPrice = round(0.95 * _price);
 
 /*switch(playerSide) do {
 	case civilian: {SEL(M_CONFIG(getArray,CONFIG_VEHICLES,_vehicle,"garageSell"),0)};

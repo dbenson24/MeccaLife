@@ -23,7 +23,7 @@ _vehicleInfo = [_className] call life_fnc_fetchVehInfo;
 _trunkSpace = [_className] call life_fnc_vehicleWeightCfg;
 _price = M_CONFIG(getNumber,CONFIG_VEHICLES,_className,"price");
 
-_retrievePrice = round(_price * 0.1;)
+_retrievePrice = round(_price * 0.1);
 /*switch(playerSide) do {
 	case civilian: {SEL(M_CONFIG(getArray,CONFIG_VEHICLES,_className,"storageFee"),0)};
 	case west: {SEL(M_CONFIG(getArray,CONFIG_VEHICLES,_className,"storageFee"),1)};
