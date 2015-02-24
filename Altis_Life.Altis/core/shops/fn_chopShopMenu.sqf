@@ -24,7 +24,7 @@ _control = CONTROL(39400,39402);
 		_picture = getText(configFile >> "CfgVehicles" >> _className >> "picture");
 		
 		_price = M_CONFIG(getNumber,CONFIG_VEHICLES,_className,"price");
-		_price = 0.9 * _price;
+		_price = round(0.9 * _price);
 		if(!isNil "_price" && EQUAL(count crew _x,0)) then {
 			_control lbAdd _displayName;
 			_control lbSetData [(lbSize _control)-1,str(_forEachIndex)];
