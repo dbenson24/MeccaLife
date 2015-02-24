@@ -44,8 +44,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 
 	case 1:
 	{
-		[[player,0,"textures\cadetTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
-		player addWeapon "hgun_P07_F";
+		[[player,0,"textures\cadetTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;c
 		player addVest "V_TacVest_blk_POLICE";
 		player addMagazine "16Rnd_9x21_Mag";
 		player addMagazine "16Rnd_9x21_Mag";
@@ -147,7 +146,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 	case 6:
 	{
 	    [[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
-		player addWeapon "arifle_MX_Hamr_pointer_F";
+		player addWeapon "arifle_MXM_Hamr_pointer_F";
 		player addVest "V_PlateCarrier2_rgr";
 		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
@@ -169,7 +168,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 	{
 	    [[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
 		player addVest "V_PlateCarrier2_rgr";
-		player addWeapon "arifle_MX_Hamr_pointer_F";
+		player addWeapon "arifle_MXM_Hamr_pointer_F";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
