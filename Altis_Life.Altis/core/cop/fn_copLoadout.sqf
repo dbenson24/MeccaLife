@@ -56,7 +56,6 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "16Rnd_9x21_Mag";
 		player addMagazine "16Rnd_9x21_Mag";
 		player addMagazine "16Rnd_9x21_Mag";
-		player addVest "V_TacVest_blk_POLICE";
 		If(BANK > 0) then {BANK = BANK - 5000;};
 	};
 	
