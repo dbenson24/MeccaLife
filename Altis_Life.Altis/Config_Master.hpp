@@ -117,24 +117,24 @@ class VirtualItems {
 	VITEMMACRO(glass, "STR_Item_Glass", "glass", 1, -1, 1450, false, -1, "")
 	VITEMMACRO(diamond_uncut, "STR_Item_DiamondU", "diamondUncut", 3, -1, 750, false, -1, "")
 	VITEMMACRO(diamond_cut, "STR_Item_DiamondC", "diamondCut", 3, -1, 2000, false, -1, "")
-	VITEMMACRO(rock, "STR_Item_Rock", "rock", 5, -1, -1, false, -1, "")
+	VITEMMACRO(rock, "STR_Item_Rock", "rock", 5, -1, -1, false, -1, "icons\rock.paa")
 	VITEMMACRO(cement, "STR_Item_CementBag", "cement", 4, -1, 2000, false, -1, "")
-	VITEMMACRO(mushroom, "STR_Item_Mushroom", "mushroom", 2, -1, 1950, false, -1, "")
+	VITEMMACRO(mushroom, "STR_Item_Mushroom", "mushroom", 2, -1, 1950, false, -1, "icons\mushroom.paa")
 
 	//Drugs
 	VITEMMACRO(heroin_unprocessed, "STR_Item_HeroinU", "heroinUnprocessed", 2, -1, 3000, true, -1, "")
-	VITEMMACRO(heroin_processed, "STR_Item_HeroinP", "heroinProcessed", 1, -1, 3000, true, -1, "")
+	VITEMMACRO(heroin_processed, "STR_Item_HeroinP", "heroinProcessed", 1, -1, 3000, true, -1, "icons\heroine.paa")
 	VITEMMACRO(cannabis, "STR_Item_Cannabis", "cannabis", 2, -1, 1000, true, -1, "")
 	VITEMMACRO(marijuana, "STR_Item_Marijuana", "marijuana", 1, 2500, 2350, true, -1, "icons\ico_marijuana.paa")
 	VITEMMACRO(cocaine_unprocessed, "STR_Item_CocaineU", "cocaineUnprocessed", 2, -1, 1000, true, -1, "")
-	VITEMMACRO(cocaine_processed, "STR_Item_CocaineP", "cocaineProcessed", 1, -1, 3000, true, -1, "")
+	VITEMMACRO(cocaine_processed, "STR_Item_CocaineP", "cocaineProcessed", 1, -1, 3000, true, -1, "icons\cocaine")
 	VITEMMACRO(froglsd, "STR_Item_Froglsd", "froglsd", 2, -1, 2500, true, -1, "")
-	VITEMMACRO(frog, "STR_Item_Frog", "frog", 2, -1, 2500, true, -1, "")
-	VITEMMACRO(Magicm, "STR_Item_Magicm", "magicm", 1, -1, 1200, false, -1, "")
+	VITEMMACRO(frog, "STR_Item_Frog", "frog", 2, -1, 2500, true, -1, "icons\frog.paa")
+	VITEMMACRO(Magicm, "STR_Item_Magicm", "magicm", 1, -1, 1200, false, -1, "icons\magicm.paa")
 
 	//DrinkC
 	VITEMMACRO(redgull, "STR_Item_RedGull", "redgull", 1, 1500, 200, false, 100, "icons\ico_redgull.paa")
-	VITEMMACRO(coffee, "STR_Item_Coffee", "coffee", 1, 10, 5, false, 100, "")
+	VITEMMACRO(coffee, "STR_Item_Coffee", "coffee", 1, 10, 5, false, 100, "icons\coffee.paa")
 	VITEMMACRO(waterBottle, "STR_Item_WaterBottle", "waterBottle", 1, 10, 5, false, 100, "icons\ico_waterBottle.paa")
 
 	//Food

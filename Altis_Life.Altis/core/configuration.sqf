@@ -54,7 +54,10 @@ life_hidden_clothing = [
 	"H_ShemagOpen_tan",
 	"G_Balaclava_lowprofile",
 	"G_Balaclava_combat",
-	"G_Bandanna_beast"
+	"G_Bandanna_beast",
+	"U_O_GhillieSuit",
+	"U_I_GhillieSuit"
+	
 ];
 
 life_god = false; 
