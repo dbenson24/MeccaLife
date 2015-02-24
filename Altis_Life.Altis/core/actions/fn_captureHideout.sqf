@@ -58,17 +58,17 @@ while {true} do
 	_progressBar progressSetPosition _cP;
 	_titleText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_title];
 	_hideout setVariable["inCapture",true,true];
-	if(_cP >= 1 OR !alive player) exitWith {_hideout setVariable["inCapture",false,true];};
-	if(life_isDowned) exitWith {_hideout setVariable["inCapture",false,true];}; //Downed
-	if(life_interrupted) exitWith {_hideout setVariable["inCapture",false,true];};
+	if(_cP >= 1 OR !alive player) exitWith {_hideout setVariable["inCapture",false,true];_ui = "osefStatusBar" call BIS_fnc_rscLayer;_ui cutRsc["osefStatusBar","PLAIN"];};
+	if(life_isDowned) exitWith {_hideout setVariable["inCapture",false,true];_ui = "osefStatusBar" call BIS_fnc_rscLayer;_ui cutRsc["osefStatusBar","PLAIN"];}; //Downed
+	if(life_interrupted) exitWith {_hideout setVariable["inCapture",false,true];_ui = "osefStatusBar" call BIS_fnc_rscLayer;_ui cutRsc["osefStatusBar","PLAIN"];};
 };
 
 //Kill the UI display and check for various states
 5 cutText ["","PLAIN"];
 player playActionNow "stop";
-if(!alive player OR life_isDowned) exitWith {life_action_inUse = false;_hideout setVariable["inCapture",false,true];};
-if((player getVariable["restrained",false])) exitWith {life_action_inUse = false;_hideout setVariable["inCapture",false,true];};
-if(life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_GNOTF_CaptureCancel","PLAIN"]; life_action_inUse = false;_hideout setVariable["inCapture",false,true];};
+if(!alive player OR life_isDowned) exitWith {life_action_inUse = false;_hideout setVariable["inCapture",false,true];_ui = "osefStatusBar" call BIS_fnc_rscLayer;_ui cutRsc["osefStatusBar","PLAIN"];};
+if((player getVariable["restrained",false])) exitWith {life_action_inUse = false;_hideout setVariable["inCapture",false,true];}_ui = "osefStatusBar" call BIS_fnc_rscLayer;_ui cutRsc["osefStatusBar","PLAIN"];};
+if(life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_GNOTF_CaptureCancel","PLAIN"]; life_action_inUse = false;_hideout setVariable["inCapture",false,true];_ui = "osefStatusBar" call BIS_fnc_rscLayer;_ui cutRsc["osefStatusBar","PLAIN"];};
 life_action_inUse = false;
 
 titleText["Hideout has been captured.","PLAIN"];
@@ -86,3 +86,5 @@ _this select 0 setFlagTexture _flagTexture;
 [[[0,1],"STR_GNOTF_CaptureSuccess",true,[name player,(group player) getVariable "gang_name"]],"life_fnc_broadcast",true,false] call life_fnc_MP;
 _hideout setVariable["inCapture",false,true];
 _hideout setVariable["gangOwner",grpPlayer,true];
+
+_ui = "osefStatusBar" call BIS_fnc_rscLayer;_ui cutRsc["osefStatusBar","PLAIN"];
