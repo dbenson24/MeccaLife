@@ -4,12 +4,12 @@ R3F_LOG_CFG_can_tow = R3F_LOG_CFG_can_tow +
 
 R3F_LOG_CFG_can_be_towed = R3F_LOG_CFG_can_be_towed +
 [
-	["B_Quadbike_01_F", 5],
-	["C_Hatchback_01_F", 6],
-	["C_Offroad_01_F", 30],
-	["C_SUV_01_F", 12],
-	["C_Hatchback_01_sport_F", 10],
-	["C_Offroad_01_repair_F", 4]
+	"B_Quadbike_01_F",
+	"C_Hatchback_01_F",
+	"C_Offroad_01_F",
+	"C_SUV_01_F",
+	"C_Hatchback_01_sport_F",
+	"C_Offroad_01_repair_F"
 ];
 
 R3F_LOG_CFG_can_lift = R3F_LOG_CFG_can_lift +
