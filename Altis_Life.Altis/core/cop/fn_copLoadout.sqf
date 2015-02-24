@@ -44,7 +44,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 
 	case 1:
 	{
-		[[player,0,"textures\cadetTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;c
+		[[player,0,"textures\cadetTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
 		player addVest "V_TacVest_blk_POLICE";
 		player addMagazine "16Rnd_9x21_Mag";
 		player addMagazine "16Rnd_9x21_Mag";
