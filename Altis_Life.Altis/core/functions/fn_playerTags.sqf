@@ -9,8 +9,8 @@
 private["_ui","_units","_goggles"];
 #define iconID 78000
 #define scale 0.8
-_headgear = ["H_Shemag_olive","H_Shemag_khk","H_Shemag_tan","H_ShemagOpen_khk","H_ShemagOpen_tan","H_Shemag_olive_hs"];
 
+_headgear = ["H_Shemag_olive","H_Shemag_khk","H_Shemag_tan","H_ShemagOpen_khk","H_ShemagOpen_tan","H_Shemag_olive_hs"];
 
 if(visibleMap OR {!alive player} OR {dialog}) exitWith {
 	500 cutText["","PLAIN"];
@@ -40,16 +40,56 @@ SUB(_units,[player]);
 		if(count _sPos > 1 && {_distance < 15}) then {
 			_text = switch (true) do {
 				case ((headgear _x) in _headgear): {format["<t color='#000000'>Masked Player</t>"];};
+				case (isPlayer _x && {(uniform _x in life_noname_clothing)}): {"";};
+				case (isPlayer _x && {(headgear _x in life_hidden_clothing) || (goggles _x in life_hidden_clothing)}): {"<t size='1.2'>[Masked Person]</t>";};
 				case (_x in (units grpPlayer) && playerSide == civilian): {format["<t color='#00FF00'>%1</t>",(_x GVAR ["realname",name _x])];};
-				case (!isNil {(_x GVAR "rank")}): {format["<img image='%1' size='1'></img> %2",switch ((_x GVAR "rank")) do {
-					case 2: {"\a3\ui_f\data\gui\cfg\Ranks\corporal_gs.paa"}; 
-					case 3: {"\a3\ui_f\data\gui\cfg\Ranks\sergeant_gs.paa"};
-					case 4: {"\a3\ui_f\data\gui\cfg\Ranks\lieutenant_gs.paa"};
-					case 5: {"\a3\ui_f\data\gui\cfg\Ranks\captain_gs.paa"};
-					case 6: {"\a3\ui_f\data\gui\cfg\Ranks\major_gs.paa"};
-					case 7: {"\a3\ui_f\data\gui\cfg\Ranks\colonel_gs.paa"};
-					case 8: {"\a3\ui_f\data\gui\cfg\Ranks\general_gs.paa"};
-					default {"\a3\ui_f\data\gui\cfg\Ranks\private_gs.paa"};
+				case (!isNil {(_x GVAR "rank")}): {format["<img image='%1' size='1.5'></img> <t size='1.2'>%2</t><br/><t size='1.1'>[%3]</t>",switch ((_x GVAR "rank")) do {
+					case 1: {"icons\cop\1.paa"};
+					case 2: {"icons\cop\2.paa"};
+					case 3: {"icons\cop\3.paa"};
+					case 4: {"icons\cop\4.paa"};
+					case 5: {"icons\cop\5.paa"};
+					case 6: {"icons\cop\6.paa"};
+					case 7: {"icons\cop\7.paa"};
+					case 8: {"icons\cop\8.paa"};
+					case 9: {"icons\cop\12.paa"};
+					case 10: {"icons\cop\12.paa"};
+					case 11: {"icons\cop\12.paa"};
+					case 12: {"icons\cop\12.paa"};
+					case 13: {"icons\cop\sco19.paa"};
+
+					default {"icons\cop\1.paa"};
+					},
+
+					_x GVAR ["realname",name _x],
+					
+					switch ((_x GVAR "rank")) do {
+						case 1: {"Police Community Support Officer"};
+						case 2: {"Police Constable"};
+						case 3: {"Senior Police Constable"};
+						case 4: {"Sergeant"};
+						case 5: {"Inspector"};
+						case 6: {"Chief Inspector"};
+						case 7: {"Superintendent"};
+						case 8: {"Chief Superintendent"};
+						case 9: {"Deputy Assistant Commissioner"};
+						case 10: {"Assistant Commissioner"};
+						case 11: {"Deputy Commissioner"};
+						case 12: {"Commissioner"};
+						case 13: {"SCO19"};
+
+						default {"Police Community Support Officer"};
+					}]};
+				//NHS
+				case (!isNil {(_x GVAR "nhsrank")}): {format["<img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1.5'></img> <t size='1.35'>%2</t><br/><t size='1.2'>[%1]</t>",switch ((_x GVAR "nhsrank")) do {
+					case 2: {"First Aider"}; 
+					case 3: {"Medic"};
+					case 4: {"Surgeon"};
+					case 5: {"Doctor"};
+					case 6: {"General Practitioner"};
+					case 7: {"NHS Administration"};
+					case 8: {"Chief Medical Officer"};
+					default {"Dr. In Training"};
 					},_x GVAR ["realname",name _x]]};
 				case ((!isNil {_x GVAR "name"} && playerSide == independent)): {format["<t color='#FF0000'><img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1.5'></img></t> %1",_x GVAR ["name","Unknown Player"]]};
 				default {
@@ -60,7 +100,7 @@ SUB(_units,[player]);
 					};
 				};
 			};
-			
+			if(_x GVAR ["speaking",false]) then {_text = "[SPEAKING] " + _text};
 			_idc ctrlSetStructuredText parseText _text;
 			_idc ctrlSetPosition [_sPos select 0, _sPos select 1, 0.4, 0.65];
 			_idc ctrlSetScale scale;

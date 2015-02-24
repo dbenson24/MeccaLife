@@ -211,6 +211,7 @@ class Life_Client_Core
 		class emptyFuel {};
 		class CarAlarmSound {};
 		class Info {};
+		class speaking {};
 	};
 	
 	class Network

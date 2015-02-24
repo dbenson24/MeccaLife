@@ -95,6 +95,7 @@ life_sidechat = true;
 /* Set up frame-by-frame handlers */
 LIFE_ID_PlayerTags = ["LIFE_PlayerTags","onEachFrame","life_fnc_playerTags"] call BIS_fnc_addStackedEventHandler;
 LIFE_ID_RevealObjects = ["LIFE_RevealObjects","onEachFrame","life_fnc_revealObjects"] call BIS_fnc_addStackedEventHandler;
+[] spawn life_fnc_speaking;
 
 player SVAR ["steam64ID",getPlayerUID player];
 player SVAR ["realname",profileName,true];
