@@ -12,6 +12,7 @@
 #define IDC_LIFE_BAR_WANTED 2204
 #define IDC_LIFE_PICTURE_WANTED 1203
 #define IDC_LIFE_WANTED_TEXT 1003
+#define IDC_LIFE_PICTURE_WATERMARK 9999
 /*
         Name: Dillon "Itsyuka" Modine-Thuen
         File: ui.hpp
@@ -39,8 +40,21 @@ class playerHUD {
                 LIFE_HEALTH_TEXT,
                 LIFE_BAR_WANTED,
                 LIFE_PICTURE_WANTED,
-                LIFE_WANTED_TEXT
+                LIFE_WANTED_TEXT,
+				LIFE_PICTURE_WATERMARK 
         };
+		
+		/* WaterMark */
+
+		class LIFE_PICTURE_WATERMARK: Life_RscPicture
+		{
+			idc = 9999;
+			text = "textures\watermark.paa";
+			x = 0.15 * safezoneW + safezoneX;
+			y = 0.15 * safezoneH + safezoneY;
+			w = 0.12 * safezoneW;
+			h = 0.128 * safezoneH;
+		};
  
         /* Background */
         class LIFE_UI_BACK: Life_RscBackground
