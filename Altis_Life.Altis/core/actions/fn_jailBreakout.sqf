@@ -16,13 +16,16 @@ if(time - (_unit getVariable["lastbreakout",-9000]) < 500) exitWith {hint "The j
 _unit setVariable["lastbreakout",time,true];
 _unit setVariable["inbreakout",true,true];
 
-[[1,"Somebody is attempting to break prisoners out of the jail! Go and stop them fast!"],"life_fnc_broadcast",west,false] spawn life_fnc_MP; //Give the cops a hint
-[[4,"Somebody is attempting to break prisoners out of the jail!"],"life_fnc_broadcast",true,false] spawn life_fnc_MP; //Give everyone a systemchat
+[[1,"%1 is attempting to break prisoners out of the jail! Go and stop them fast!", name player],"life_fnc_broadcast",west,false] spawn life_fnc_MP; //Give the cops a hint
+[[4,"%1 is attempting to break prisoners out of the jail!", name player],"life_fnc_broadcast",true,false] spawn life_fnc_MP; //Give everyone a systemchat
 
 hint "You are currently breaking prisoners out of the prison, you need to stay within 50 meters of your current location or you will stop the breakout. The breakout will take around four minutes to complete.";
 
 [[_unit,player],"life_fnc_breakoutTimer",true] spawn life_fnc_MP; //Show the countdown to all prisoners, cops and the player.
 
+[[_unit],"life_fnc_bankalarmsound",true,true] call life_fnc_MP;
+
+/*
 //Alarm Bell
 _unit spawn {
 	for "_i" from 0 to 20 do {
@@ -30,6 +33,8 @@ _unit spawn {
 		sleep 2.087;
 	};
 };
+
+*/
 
 _time = time + (4 * 60);
 
@@ -39,7 +44,7 @@ while {true} do {
 	if(round(_time - time) < 1) exitWith {_ok = true;};
 	if(!alive player) exitWith {_ok = false;};
 	if(player distance _unit > 50) exitWith {_ok = false;};
-	if(life_istazed) exitWith {_ok = false;};
+	if(life_isDowned) exitWith {_ok = false;};
 	if(player getVariable["restrained",false]) exitWith {_ok = false;};
 	sleep 1;
 };
