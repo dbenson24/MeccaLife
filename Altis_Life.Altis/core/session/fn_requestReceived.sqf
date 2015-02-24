@@ -29,7 +29,7 @@ if(!isServer && (!isNil "life_adminlevel" OR !isNil "life_coplevel" OR !isNil "l
 	sleep 0.9;
 	failMission "SpyGlass";
 };
-
+****
 //Parse basic player information.
 CASH = parseNumber (SEL(_this,2));
 BANK = parseNumber (SEL(_this,3));
@@ -69,9 +69,9 @@ switch(playerSide) do {
 		} foreach life_houses;
 		
 		life_gangData = SEL(_this,12);
-		if(!(EQUAL(count life_gangData,0))) then {
+		//if(!(EQUAL(count life_gangData,0))) then {
 			[] spawn life_fnc_initGang;
-		};
+		//};
 		[] spawn life_fnc_initHouses;
 	};
 	
