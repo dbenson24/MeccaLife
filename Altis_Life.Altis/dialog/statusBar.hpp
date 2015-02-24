@@ -14,20 +14,20 @@ class osefStatusBar {
 	class controls {
 		class statusBarText {
 			idc = 1000;
-			x = safezoneX + safezoneW - 1;
-			y = safezoneY + safezoneH - 0.08;
-			w = 1;
+			x = safezoneX + safezoneW - 1.20;
+			y = safezoneY + safezoneH - 0.04;
+			w = 1.2;
 			h = 0.04;
 			shadow = 2;
-			colorBackground[] = { 1, 0.3, 0, 0.0 };  // uncomment and increase 4th number to have a background
-			font = "PuristaSemibold";
-			size = 0.04;
+			colorBackground[] = { 0, 0, 0, 0.5 }; 
+			font = "puristaLight";
+			size = 0.03;
 			type = 13;
 			style = 1;
 			text="Loading server info...";
 			class Attributes {
-				align="right";
-				color = "#39a1a1";
+				align="left";
+				color = "#FF8700";
 			};
 		};
 	};

@@ -64,3 +64,5 @@ if(EQUAL(count crew _vehicle,0)) then {
 };
 
 life_action_inUse = false;
+_rscLayer = "osefStatusBar" call BIS_fnc_rscLayer;
+_rscLayer cutRsc["osefStatusBar","PLAIN"];

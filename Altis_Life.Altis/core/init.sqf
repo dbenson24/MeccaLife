@@ -106,6 +106,7 @@ life_fnc_moveIn = compileFinal
 ";
 
 [] spawn life_fnc_survival;
+[] execVM "scripts\fn_statusBar.sqf";
 
 switch(FETCH_CONST(life_donator)) do
 {
