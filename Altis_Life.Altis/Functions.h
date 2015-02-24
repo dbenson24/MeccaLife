@@ -104,6 +104,8 @@ class Life_Client_Core
 		class copPullOutAction {};
 		class robShops {};
 		class skyDiving {};
+		class jailBreakout {}; 
+		class jailBreakoutCompleted {};
 	};
 	
 	class Housing
@@ -243,6 +245,7 @@ class Life_Client_Core
 		class civLoadout {};
 		class civInteractionMenu {}; //civ interaction menu
 		class freezePlayer {};
+		class breakoutTimer {};
 	};
 	
 	class Vehicle
