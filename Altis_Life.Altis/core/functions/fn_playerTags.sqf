@@ -62,32 +62,27 @@ SUB(_units,[player]);
 					_x GVAR ["realname",name _x],
 					
 					switch ((_x GVAR "rank")) do {
-						case 1: {"Police Community Support Officer"};
-						case 2: {"Police Constable"};
-						case 3: {"Senior Police Constable"};
-						case 4: {"Sergeant"};
-						case 5: {"Inspector"};
-						case 6: {"Chief Inspector"};
-						case 7: {"Superintendent"};
-						case 8: {"Chief Superintendent"};
-						case 9: {"Deputy Assistant Commissioner"};
-						case 10: {"Assistant Commissioner"};
-						case 11: {"Deputy Commissioner"};
-						case 12: {"Commissioner"};
-						case 13: {"SCO19"};
+						case 1: {"Recruit"};
+						case 2: {"Cadet"};
+						case 3: {"Private"};
+						case 4: {"Corporal"};
+						case 5: {"Sergeant"};
+						case 6: {"2nd Lieutenant"};
+						case 7: {"1st Lieutenant"};
+						case 8: {"Captain"};
+						case 9: {"S.W.A.T"};
 
-						default {"Police Community Support Officer"};
+						default {"Cop In Training"};
 					}]};
 				//NHS
-				case (!isNil {(_x GVAR "nhsrank")}): {format["<img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1.5'></img> <t size='1.35'>%2</t><br/><t size='1.2'>[%1]</t>",switch ((_x GVAR "nhsrank")) do {
-					case 2: {"First Aider"}; 
-					case 3: {"Medic"};
-					case 4: {"Surgeon"};
-					case 5: {"Doctor"};
-					case 6: {"General Practitioner"};
-					case 7: {"NHS Administration"};
-					case 8: {"Chief Medical Officer"};
-					default {"Dr. In Training"};
+				case (!isNil {(_x GVAR "life_medicLevel")}): {format["<img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1.5'></img> <t size='1.35'>%2</t><br/><t size='1.2'>[%1]</t>",switch ((_x GVAR "life_medicLevel")) do {
+					case 1: {"Responder"};
+					case 2: {"First Responder"}; 
+					case 3: {"Advancced Responder"};
+					case 4: {"Paramedic"};
+					case 5: {"Medic Command"};
+					case 6: {"Head EMS"};
+					default {"Medic In Training"};
 					},_x GVAR ["realname",name _x]]};
 				case ((!isNil {_x GVAR "name"} && playerSide == independent)): {format["<t color='#FF0000'><img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1.5'></img></t> %1",_x GVAR ["name","Unknown Player"]]};
 				default {
