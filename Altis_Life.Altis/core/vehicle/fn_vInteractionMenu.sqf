@@ -110,11 +110,6 @@ if(playerSide == west) then {
 	} else {
 		_Btn4 ctrlShow false;
 	};
-	if(playerSide == independent) then { 
-		_Btn4 ctrlSetText localize "STR_vInAct_Registration";
-		_Btn4 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_searchVehAction;";
-		_Btn4 ctrlShow true;
-	};
 	
 	_Btn5 ctrlShow false;
 	_Btn6 ctrlShow false;
