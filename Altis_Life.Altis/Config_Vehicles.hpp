@@ -443,7 +443,8 @@ class CfgVehicles {
 	                "#(ai,64,64,1)Fresnel(0.3,3)"
             } },
 			{ "Police", "cop", {
-	                "textures\policeoffroad.jpg"
+	                "textures\policeoffroad.jpg",
+					"textures\policeoffroad.jpg"
             } },
             { "Taxi", "civ", {
 	                "#(argb,8,8,3)color(0.6,0.3,0.01,1)"
@@ -492,7 +493,7 @@ class CfgVehicles {
 	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport06_co.paa"
             } },
             { "Police", "cop", {
-                "#(ai,64,64,1)Fresnel(1.3,7)"
+                "textures\policehatch.jpg"
             } }
         };
     };
@@ -616,7 +617,7 @@ class CfgVehicles {
         	{ "Dark Red", "civ", {
                 "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_co.paa"
             } },
-			{ "Black", "cop", {
+			{ "Black", "civ", {
 	                "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa"
             } },
 			{ "Silver", "civ", {
