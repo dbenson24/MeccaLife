@@ -103,6 +103,7 @@ class Life_Client_Core
 		class gutAnimal {};
 		class copPullOutAction {};
 		class robShops {};
+		class skyDiving {};
 	};
 	
 	class Housing
