@@ -61,103 +61,103 @@ class CarShops {
 	class kart_shop {
 		side = "civ";	
 		vehicles[] = {
-			{ "C_Kart_01_Blu_F", 15000 , "driver" },
-			{ "C_Kart_01_Fuel_F", 15000, "driver" },
-			{ "C_Kart_01_Red_F", 15000, "driver" },
-			{ "C_Kart_01_Vrana_F", 15000, "driver" }
+			{ "C_Kart_01_Blu_F", pkart , "driver" },
+			{ "C_Kart_01_Fuel_F", pkart, "driver" },
+			{ "C_Kart_01_Red_F", pkart, "driver" },
+			{ "C_Kart_01_Vrana_F", pkart, "driver" }
 		};
 	};
 
 	class med_shop {
 		side = "med";
 		vehicles[] = {
-			{ "C_Offroad_01_repair_F", 10000, "" },
-			{ "I_Truck_02_medical_F", 75000, "" }
+			{ "C_Offroad_01_repair_F", poffroadmed, "" },
+			{ "I_Truck_02_medical_F", pzamakmed, "" }
 		};
 	};
 
 	class med_air_hs {
 		side = "med";
 		vehicles[] = {
-			{ "B_Heli_Light_01_F", 50000, "mAir" },
-			{ "O_Heli_Light_02_unarmed_F", 75000, "mAir" }
+			{ "B_Heli_Light_01_F", pmh9med, "mAir" },
+			{ "O_Heli_Light_02_unarmed_F", porcamed, "mAir" }
 		};
 	};
 
 	class civ_truck {
 		side = "civ";
 		vehicles[] = {
-			{ "C_Van_01_box_F", 250000, "trucking" },
-			{ "I_Truck_02_transport_F", 135000, "trucking" },
-			{ "I_Truck_02_covered_F", 200000, "trucking" },
-			{ "B_Truck_01_transport_F", 260000, "trucking" },
-			{ "O_Truck_03_transport_F", 187000, "trucking" },
-			{ "O_Truck_03_covered_F", 251500, "trucking" },
-			{ "B_Truck_01_box_F", 600000, "trucking" },
-			{ "O_Truck_03_device_F", 800000, "trucking" }
+			{ "C_Van_01_box_F", pboxer, "trucking" },
+			{ "I_Truck_02_transport_F", pzamaktrans, "trucking" },
+			{ "I_Truck_02_covered_F", pzamakcov, "trucking" },
+			{ "B_Truck_01_transport_F", phemtttrans, "trucking" },
+			{ "O_Truck_03_transport_F", ptempesttrans, "trucking" },
+			{ "O_Truck_03_covered_F", ptempestcov, "trucking" },
+			{ "B_Truck_01_box_F", phemttbox, "trucking" },
+			{ "O_Truck_03_device_F", ptempestdev, "trucking" }
 		};
 	};
 
 	class reb_car {
 		side = "civ";
 		vehicles[] = {
-			{ "B_Quadbike_01_F", 2500, "" },
-			{ "B_G_Offroad_01_F", 35000, "" },
-			{ "O_MRAP_02_F", 950000, "" },
-			{ "B_Heli_Light_01_F", 325000, "" },
-			{ "B_G_Offroad_01_armed_F", 950000, "rebel" }
+			{ "B_Quadbike_01_F", pquadbike, "" },
+			{ "B_G_Offroad_01_F", poffroad, "" },
+			{ "O_MRAP_02_F", pifrit, "" },
+			{ "B_Heli_Light_01_F", pmh9civ, "" },
+			{ "B_G_Offroad_01_armed_F", p50cal, "rebel" }
 		};
 	};
 
 	class cop_car {
 		side = "cop";
 		vehicles[] = {
-			{ "C_Offroad_01_F", 5000, ""},
-			{ "C_SUV_01_F", 20000, "" },
-			{ "B_MRAP_01_F", 30000, "", { "life_coplevel", 4 } },
-			{ "C_Hatchback_01_sport_F", 45000, "", { "life_coplevel", 2 } }
+			{ "C_Offroad_01_F", poffroadcop, ""},
+			{ "C_SUV_01_F", psuvcop, "" },
+			{ "B_MRAP_01_F", phuntercop, "", { "life_coplevel", 4 } },
+			{ "C_Hatchback_01_sport_F", phatchbacksport, "", { "life_coplevel", 2 } }
 		};
 	};
 
 	class civ_air {
 		side = "civ";
 		vehicles[] = {
-			{ "B_Heli_Light_01_F", 253000, "pilot" },
-			{ "O_Heli_Light_02_unarmed_F", 750000, "pilot" }
+			{ "B_Heli_Light_01_F", pmh9civ, "pilot" },
+			{ "O_Heli_Light_02_unarmed_F", porcaciv, "pilot" }
 		};
 	};
 
 	class cop_air {
 		side = "cop";
 		vehicles[] = {
-			{ "B_Heli_Light_01_F", 75000, "", { "life_coplevel", 2 } },
-			{ "B_Heli_Transport_01_F", 200000, "", { "life_coplevel", 4 } }
+			{ "B_Heli_Light_01_F", pmh9cop, "", { "life_coplevel", 2 } },
+			{ "B_Heli_Transport_01_F", pghosthawkcop, "", { "life_coplevel", 4 } }
 		};
 	};
 
 	class cop_airhq {
 		side = "civ";
 		vehicles[] = {
-			{ "B_Heli_Light_01_F", 75000, "" },
-			{ "B_Heli_Transport_01_F", 200000, "", { "life_coplevel", 3 } },
+			{ "B_Heli_Light_01_F", pmh9cop, "" },
+			{ "B_Heli_Transport_01_F", pghosthawkcop, "", { "life_coplevel", 3 } },
 		};
 	};
 
 	class cop_ship {
 		side = "cop";
 		vehicles[] = {
-			{ "B_Boat_Transport_01_F", 3000, "" },
-			{ "C_Boat_Civil_01_police_F", 20000, "" },
-			{ "B_SDV_01_F", 100000, "" }
+			{ "B_Boat_Transport_01_F", passaultboat, "" },
+			{ "C_Boat_Civil_01_police_F", pspeedboat, "" },
+			{ "B_SDV_01_F", psdv, "" }
 		};
 	};
 
 	class civ_ship {
 		side = "civ";
 		vehicles[] = {
-			{ "C_Rubberboat", 5000, "boat" },
-			{ "C_Boat_Civil_01_F", 22000, "boat" },
-			{ "B_SDV_01_F", 150000, "boat" }
+			{ "C_Rubberboat", prescueboat, "boat" },
+			{ "C_Boat_Civil_01_F", pspeedboat, "boat" },
+			{ "B_SDV_01_F", psdv, "boat" }
 		};
 	};
 };
@@ -181,6 +181,7 @@ class CarShops {
 class CfgVehicles {
 	class Default {
 		vItemSpace = -1;
+		price = 1000;
 		storageFee[] = { 1000, 1000, 1000, 1000 };
 		garageSell[] = { 0, 0, 0, 0 };
 		insurance = 2500;
@@ -189,12 +190,14 @@ class CfgVehicles {
 	};
 	class C_Offroad_01_repair_F : Default {
 		vItemSpace = 150;
+		price = poffroadmed;
 		storageFee[] = { 0, 0, 1500, 0 };
 		garageSell[] = { 0, 0, 5000, 0 };
 		chopShop = 3000;
 	};
 	class I_Truck_02_medical_F : Default {
 		vItemSpace = 150;
+		price = pzamakmed;
 		storageFee[] = { 0, 0, 1500, 0 };
 		garageSell[] = { 0, 0, 5000, 0 };
 		chopShop = 3000;
@@ -216,6 +219,7 @@ class CfgVehicles {
 
 	class C_Rubberboat {
         vItemSpace = 45;
+        price = prescueboat;
         storageFee[] = { 400, 300, 0, 0 };
 		garageSell[] = { 950, 350, 0, 0 };
         insurance = 2500;
@@ -225,6 +229,7 @@ class CfgVehicles {
 
 	class B_Heli_Transport_01_F {
 		vItemSpace = 200;
+		price = pghosthawkcop;
 		storageFee[] = { 0, 50000, 0, 0 };
 		garageSell[] = { 0, 85000, 0, 0 };
 		insurance = 16000;
@@ -234,6 +239,7 @@ class CfgVehicles {
 
 	class B_MRAP_01_hmg_F : Default {
 		vItemSpace = 100;
+		price = phuntercop;
 	};
 
 	class O_Boat_Armed_01_hmg_F {
@@ -272,6 +278,7 @@ class CfgVehicles {
 
 	class B_Boat_Transport_01_F {
         vItemSpace = 45;
+        price = passaultboat;
         storageFee[] = { 0, 450, 0, 0 };
 		garageSell[] = { 0, 850, 0, 0 };
         insurance = 2500;
@@ -281,6 +288,7 @@ class CfgVehicles {
 
 	class O_Truck_03_transport_F {
         vItemSpace = 175;
+        price = ptempesttrans;
         storageFee[] = { 100, 0, 0, 0 };
         insurance = 2500;
         chopShop = 5000;
@@ -289,6 +297,7 @@ class CfgVehicles {
 
 	class O_Truck_03_device_F {
         vItemSpace = 500;
+        price = ptempestdev;
         storageFee[] = { 950, 0, 0, 0 };
 		garageSell[] = { 185000, 0, 0, 0 };
         insurance = 25000;
@@ -309,7 +318,8 @@ class CfgVehicles {
     };
 
 	class B_G_Offroad_01_F {
-        vItemSpace = 115;
+        vItemSpace = 145;
+        price = poffroad;
         storageFee[] = { 1000, 0, 0, 0 };
 		garageSell[] = { 3500, 0, 0, 0 };
         insurance = 2500;
@@ -318,7 +328,7 @@ class CfgVehicles {
     };
 
 	class B_G_Offroad_01_armed_F : B_G_Offroad_01_F {
-		
+		price = p50cal;
 	};
 
 	class I_G_Van_01_transport_F {
@@ -331,6 +341,7 @@ class CfgVehicles {
 
 	class C_Boat_Civil_01_F {
         vItemSpace = 85;
+        price = pspeedboat;
         storageFee[] = { 4500, 2500, 0, 0 };
 		garageSell[] = { 6800, 3500, 0, 0 };
         insurance = 2500;
@@ -340,6 +351,7 @@ class CfgVehicles {
 
 	class C_Boat_Civil_01_police_F {
         vItemSpace = 85;
+        price = pspeedboat;
         storageFee[] = { 0, 3500, 0, 0 };
 		garageSell[] = { 0, 4950, 0, 0 };
         insurance = 2500;
@@ -349,6 +361,7 @@ class CfgVehicles {
 
 	class C_Boat_Civil_01_rescue_F {
         vItemSpace = 85;
+        price = pspeedboat;
         storageFee[] = { 1000, 0, 0, 0 };
         insurance = 2500;
         chopShop = 5000;
@@ -357,6 +370,7 @@ class CfgVehicles {
 
 	class B_Truck_01_box_F {
         vItemSpace = 1000;
+        price = phemttbox;
         storageFee[] = { 500, 0, 0, 0 };
 		garageSell[] = { 150000, 0, 0, 0 };
         insurance = 2500;
@@ -366,6 +380,7 @@ class CfgVehicles {
 
 	class B_Truck_01_transport_F {
         vItemSpace = 600;
+        price = phemtttrans;
         storageFee[] = { 650, 0, 0, 0 };
 		garageSell[] = { 135000, 0, 0, 0 };
         insurance = 2500;
@@ -375,6 +390,7 @@ class CfgVehicles {
 
 	class O_MRAP_02_F {
         vItemSpace = 80;
+        price = pifrit;
         storageFee[] = { 450, 0, 0, 0 };
 		garageSell[] = { 65000, 0, 0, 0 };
         insurance = 2500;
@@ -384,6 +400,7 @@ class CfgVehicles {
 
 	class I_MRAP_03_F {
         vItemSpace = 58;
+        price = pifrit;
         storageFee[] = { 1000, 0, 0, 0 };
         insurance = 2500;
         chopShop = 5000;
@@ -391,7 +408,8 @@ class CfgVehicles {
     };
 
 	class C_Offroad_01_F {
-        vItemSpace = 115;
+        vItemSpace = 145;
+        price = poffroad;
         storageFee[] = { 1000, 500, 650, 1000 };
 		garageSell[] = { 6500, 2500, 0, 0 };
         insurance = 2500;
@@ -435,6 +453,7 @@ class CfgVehicles {
 
 	class C_Kart_01_Blu_F {
 		vItemSpace = 20;
+		price = pkart;
 		storageFee[] = { 1500, 0, 0, 0 };
 		garageSell[] = { 3500, 0, 0, 0 };
 		inusrance = 1650;
@@ -448,6 +467,7 @@ class CfgVehicles {
 
 	class C_Hatchback_01_sport_F {
         vItemSpace = 65;
+        price = phatchbacksport;
         storageFee[] = { 2500, 1000, 0, 0 };
 		garageSell[] = { 15000, 7500, 0, 0 };
         insurance = 5500;
@@ -479,6 +499,7 @@ class CfgVehicles {
 
 	class B_Quadbike_01_F {
         vItemSpace = 45;
+        price = pquadbike;
         storageFee[] = { 1000, 0, 0, 0 };
 		garageSell[] = { 950, 0, 0, 0 };
         insurance = 2500;
@@ -516,6 +537,7 @@ class CfgVehicles {
 
 	class I_Truck_02_covered_F {
         vItemSpace = 250;
+        price = ptempestcov;
         storageFee[] = { 14500, 0, 0, 0 };
 		garageSell[] = { 62000, 0, 0, 0 };
         insurance = 6500;
@@ -533,12 +555,14 @@ class CfgVehicles {
 
 	class I_Truck_02_transport_F : I_Truck_02_covered_F {
         vItemSpace = 120;
+        price = ptempesttrans;
         storageFee[] = { 12000, 0, 0, 0 };
 		garageSell[] = { 49800, 3500, 0, 0 };
     };
 
 	class O_Truck_03_covered_F {
 		vItemSpace = 305;
+		price = pzamakcov;
 		storageFee[] = { 25000, 0, 0, 0 };
 		garageSell[] = { 65000, 0, 0, 0 };
 		insurance = 2500;
@@ -548,6 +572,7 @@ class CfgVehicles {
 
 	class C_Hatchback_01_F {
         vItemSpace = 65;
+        price = phatchback;
         storageFee[] = { 1000, 0, 0, 0 };
 		garageSell[] = { 4500, 3500, 0, 0 };
         insurance = 2500;
@@ -582,6 +607,7 @@ class CfgVehicles {
 
 	class C_SUV_01_F {
         vItemSpace = 115;
+        price = psuv;
         storageFee[] = { 1000, 0, 0, 0 };
 		garageSell[] = { 15000, 7500, 0, 0 };
         insurance = 2500;
@@ -623,6 +649,7 @@ class CfgVehicles {
 
 	class C_Van_01_box_F {
         vItemSpace = 325;
+        price = pboxer;
         storageFee[] = { 1000, 0, 0, 0 };
 		garageSell[] = { 35000, 0, 0, 0 };
         insurance = 2500;
@@ -638,6 +665,7 @@ class CfgVehicles {
     };
 	class B_MRAP_01_F {
         vItemSpace = 65;
+        price = phuntercop;
         storageFee[] = { 0, 7500, 0, 0 };
 		garageSell[] = { 0, 10000, 0, 0 };
         insurance = 2500;
@@ -655,6 +683,7 @@ class CfgVehicles {
 
 	class B_Heli_Light_01_F {
         vItemSpace = 90;
+        price = pmh9civ;
         storageFee[] = { 45000, 19500, 0, 0 };
 		garageSell[] = { 57000, 35000, 0, 0 };
         insurance = 2500;
@@ -710,6 +739,7 @@ class CfgVehicles {
 
 	class O_Heli_Light_02_unarmed_F {
         vItemSpace = 210;
+        price = porcaciv;
         storageFee[] = { 55000, 0, 22000, 0 };
 		garageSell[] = { 72500, 0, 35000, 0 };
         insurance = 2500;
