@@ -64,6 +64,8 @@ if(!_preset) then
 			};
 			_vehicle animate ["HidePolice", 0];
 			_vehicle animate ["HideBumper1", 0];
+			_vehicle animate ["HideBumper2", 0];
+			_vehicle animate ["HideConstruction", 0];
 			_vehicle setVariable["lights",false,true];
 		};
 	};
