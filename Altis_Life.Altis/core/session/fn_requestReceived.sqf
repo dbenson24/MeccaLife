@@ -29,13 +29,12 @@ if(!isServer && (!isNil "life_adminlevel" OR !isNil "life_coplevel" OR !isNil "l
 	sleep 0.9;
 	failMission "SpyGlass";
 };
-****
+
 //Parse basic player information.
 CASH = parseNumber (SEL(_this,2));
 BANK = parseNumber (SEL(_this,3));
 CONST(life_adminlevel,parseNumber (SEL(_this,4)));
-CONST(life_donator,parseNumber(SEL(_this,5)));
-
+CONST(life_donator,0);
 
 //Loop through licenses
 if(count (SEL(_this,6)) > 0) then {
@@ -54,21 +53,16 @@ switch(playerSide) do {
 	};
 	
 	case civilian: {
-	
-		//PlayerPosition
-        civ_position = SEL(_this,9);
-        life_is_alive = SEL(_this,10);
-		
 		life_is_arrested = SEL(_this,7);
 		CONST(life_coplevel, 0);
 		CONST(life_medicLevel, 0);
-		life_houses = SEL(_this,11);
+		life_houses = SEL(_this,9);
 		{
 			_house = nearestBuilding (call compile format["%1", SEL(_x,0)]);
 			life_vehicles pushBack _house;
 		} foreach life_houses;
 		
-		life_gangData = SEL(_this,12);
+		life_gangData = SEL(_this,10);
 		if(!(EQUAL(count life_gangData,0))) then {
 			[] spawn life_fnc_initGang;
 		};
@@ -83,35 +77,6 @@ switch(playerSide) do {
 
 if(count (SEL(_this,12)) > 0) then {
 	{life_vehicles pushBack _x;} foreach (SEL(_this,12));
-};
-
-
-switch(FETCH_CONST(life_donator)) do
-{
-	case 1: {life_paycheck = life_paycheck + 800;};
-	case 2: {life_paycheck = life_paycheck + 1600;};
-	case 3: {life_paycheck = life_paycheck + 2400;};
-	case 4: {life_paycheck = life_paycheck + 3200;};
-	case 5: {life_paycheck = life_paycheck + 4000;};
-};
-
-switch(FETCH_CONST(life_copLevel)) do
-{
-	case 1: {life_paycheck = life_paycheck + 400;};
-	case 2: {life_paycheck = life_paycheck + 800;};
-	case 3: {life_paycheck = life_paycheck + 1200;};
-	case 4: {life_paycheck = life_paycheck + 1600;};
-	case 5: {life_paycheck = life_paycheck + 2000;};
-	case 6: {life_paycheck = life_paycheck + 2400;};
-};
-
-switch(FETCH_CONST(life_medicLevel)) do
-{
-	case 1: {life_paycheck = life_paycheck + 400;};
-	case 2: {life_paycheck = life_paycheck + 800;};
-	case 3: {life_paycheck = life_paycheck + 1200;};
-	case 4: {life_paycheck = life_paycheck + 1600;};
-	case 5: {life_paycheck = life_paycheck + 2000;};
 };
 
 life_session_completed = true;
