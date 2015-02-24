@@ -8,8 +8,8 @@ if(!alive player) exitWith {};
 if(playerSide != civilian) exitWith {hint "Only civilians can do this!";};
 if(vehicle player != player) exitWith {hint "You need to be outside of your vehicle!";};
 if(currentWeapon player == "" || currentWeapon player == "Binocular") exitWith {hint "The guards do not feel threatened in any way, go home hobo!";};
-if(life_inv_boltcutter < 1) exitWith {hint "You need boltcutters to initiate a prison break!";};	
-//if({side _x == west} count playableUnits < 4) exitWith {hint "There needs to be four or more cops online for you to initiate a robbery!";};
+if(life_inv_blastingcharge < 1) exitWith {hint "You need a blasting charge to initiate a prison break!";};	
+//if({side _x == west} count playableUnits < 2) exitWith {hint "There needs to be two or more cops online for you to initiate a robbery!";};
 if(_unit getVariable["inbreakout",false]) exitWith {hint "Someone is already breaking out the prisoners!";};
 if(time - (_unit getVariable["lastbreakout",-9000]) < 500) exitWith {hint "The jail is currently under lockdown and you are unable to get near to the walls."};
 
