@@ -9,7 +9,7 @@
 if(life_action_inUse) exitWith {hint localize "STR_NOTF_ActionInProc"};
 disableSerialization;
 private["_nearVehicles","_control"];
-_nearVehicles = nearestObjects [getMarkerPos (_this select 3),["Car","Truck"],25];
+_nearVehicles = nearestObjects [getMarkerPos (_this select 3),["Car","Truck","Air","Ship"],25];
 
 life_chopShop = SEL(_this,3);
 //Error check
