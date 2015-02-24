@@ -17,12 +17,15 @@ _unit = player;
 
 if(isNil "_vehicle") exitWith {hint localize "STR_Garage_Selection_Error"};
 
-_sellPrice = switch(playerSide) do {
+_price = M_CONFIG(getNumber,CONFIG_VEHICLES,_className,"price");
+_sellPrice = round(0.95 * _price)
+
+/*switch(playerSide) do {
 	case civilian: {SEL(M_CONFIG(getArray,CONFIG_VEHICLES,_vehicle,"garageSell"),0)};
 	case west: {SEL(M_CONFIG(getArray,CONFIG_VEHICLES,_vehicle,"garageSell"),1)};
 	case independent: {SEL(M_CONFIG(getArray,CONFIG_VEHICLES,_vehicle,"garageSell"),2)};
 	case east: {SEL(M_CONFIG(getArray,CONFIG_VEHICLES,_vehicle,"garageSell"),4)};
-};
+};*/
 
 if(!(EQUAL(typeName _sellPrice,typeName 0)) OR _sellPrice < 1) then {_sellPrice = 1000};
 [[_vid,_pid,_sellPrice,player,life_garage_type],"TON_fnc_vehicleDelete",false,false] call life_fnc_MP;
