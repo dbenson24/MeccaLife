@@ -16,8 +16,8 @@ if(time - (_unit getVariable["lastbreakout",-9000]) < 500) exitWith {hint "The j
 _unit setVariable["lastbreakout",time,true];
 _unit setVariable["inbreakout",true,true];
 
-[[1, format["%1 is attempting to break prisoners out of the jail! Go and stop them fast!", name player]],"life_fnc_broadcast",west,false spawn life_fnc_MP; //Give the cops a hint
-[[4, format["%1 is attempting to break prisoners out of the jail!", name player]],"life_fnc_broadcast",true,false spawn life_fnc_MP; //Give everyone a systemchat
+[[1, format["%1 is attempting to break prisoners out of the jail! Go and stop them fast!", name player]],"life_fnc_broadcast",west,false] spawn life_fnc_MP; //Give the cops a hint
+[[4, format["%1 is attempting to break prisoners out of the jail!", name player]],"life_fnc_broadcast",true,false] spawn life_fnc_MP; //Give everyone a systemchat
 
 hint "You are currently breaking prisoners out of the prison, you need to stay within 50 meters of your current location or you will stop the breakout. The breakout will take around four minutes to complete.";
 
