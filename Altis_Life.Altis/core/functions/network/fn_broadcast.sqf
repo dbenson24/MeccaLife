@@ -50,7 +50,8 @@ if(typeName _type == typeName []) then
 			case 0: {systemChat _message};
 			case 1: {hint format["%1", _message]};
 			case 2: {titleText[format["%1",_message],"PLAIN"];};
-			case 3: {[_message,(player getVariable["realname",name player])] call life_fnc_AAN;};
+			case 3: {hint parseText format["%1", _message]};
+			case 4: {[_message,(player getVariable["realname",name player])] call life_fnc_AAN;};
 		};
 	};
 }
@@ -61,6 +62,7 @@ if(typeName _type == typeName []) then
 		case 0: {systemChat _message};
 		case 1: {hint format["%1", _message]};
 		case 2: {titleText[format["%1",_message],"PLAIN"];};
-		case 3: {[_message,(player getVariable["realname",name player])] call life_fnc_AAN;};
+		case 3: {hint parseText format["%1", _message]};
+		case 4: {[_message,(player getVariable["realname",name player])] call life_fnc_AAN;};
 	};
 };
