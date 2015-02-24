@@ -86,6 +86,7 @@ switch (true) do
 		serv_wanted_remove = [player];
 		player setPos (getMarkerPos "jail_release");
 		[[getPlayerUID player],"life_fnc_wantedRemove",false,false] call life_fnc_MP;
+		[[player],"life_fnc_wantedFetchForCivilian",false,false] spawn life_fnc_MP;
 		[5] call SOCK_fnc_updatePartial;
 	};
 	
@@ -95,6 +96,7 @@ switch (true) do
 		hint localize "STR_Jail_EscapeSelf";
 		[[0,format["%1 has escaped from jail!",profileName]],"life_fnc_broadcast",nil,false] call life_fnc_MP;
 		[[getPlayerUID player,profileName,"901"],"life_fnc_wantedAdd",false,false] call life_fnc_MP;
+		[[player],"life_fnc_wantedFetchForCivilian",false,false] spawn life_fnc_MP;
 		[5] call SOCK_fnc_updatePartial;
 	};
 	
@@ -103,6 +105,7 @@ switch (true) do
 		life_is_arrested = false;
 		hint localize "STR_Jail_Released";
 		[[getPlayerUID player],"life_fnc_wantedRemove",false,false] call life_fnc_MP;
+		[[player],"life_fnc_wantedFetchForCivilian",false,false] spawn life_fnc_MP;
 		player setPos (getMarkerPos "jail_release");
 		[5] call SOCK_fnc_updatePartial;
 	};
