@@ -28,13 +28,13 @@ if (count gang_list != 0) then {
  			exitWith{_ganginfo = _x;};
  		};
 	} forEach gang_list;	
-}
+};
 
 if (isNil("_ganginfo")) then {
 	exitWith{false;};
 } else {
 	_gangname = _ganginfo select 2;
-}
+};
 
 //Loop through to make sure there is not a group already created with the gang.
 _exitLoop = false;
