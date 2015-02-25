@@ -3,7 +3,7 @@
 _uid = getPlayerUID player;
 
 if (isNil("gang_list")) then {
-	[[],"TON_fnc_fetchGangs"] call life_fnc_MP;
+	gang_list = [[],"TON_fnc_fetchGangs"] call life_fnc_MP;
 };
 
 

@@ -18,3 +18,5 @@ gang_list = [];
 }forEach _queryResult
 
 publicVariable "gang_list";
+
+gang_list;
