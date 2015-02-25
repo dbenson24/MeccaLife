@@ -75,4 +75,7 @@ hideBody life_corpse;
 player SVAR ["Revive",nil,TRUE];
 player SVAR ["name",nil,TRUE];
 player SVAR ["Reviving",nil,TRUE];
+
+if(life_nlrtimer_running) then {life_nlrtimer_stop = true};
+
 [] call life_fnc_hudUpdate; //Request update of hud.
