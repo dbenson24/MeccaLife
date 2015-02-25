@@ -170,6 +170,7 @@ class CfgFunctions
 			class queryPlayerGang {};
 			class removeGang {};
 			class updateGang {};
+			class fetchGangs {};
 		};
 
 		class Actions
