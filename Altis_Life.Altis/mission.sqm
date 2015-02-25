@@ -69333,7 +69333,6 @@ class Mission
 		class Item6372
 		{
 			position[]={8181.1221,22.152905,25298.576};
-			name="gold_safe";
 			id=6643;
 			side="EMPTY";
 			vehicle="Land_Cargo20_blue_F";
