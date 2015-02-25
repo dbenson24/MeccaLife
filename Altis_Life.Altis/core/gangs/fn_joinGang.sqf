@@ -15,9 +15,7 @@ if (count gang_list != 0) then {
  		_members = _x select 5;
  		_temp = format["%1",_uid];
  		_index = _x find _temp;
- 		if (_index > -1) then {
- 			exitWith{_ganginfo = _x;};
- 		};
+ 		if (_index > -1) exitWith{_ganginfo = _x;};
 	} forEach gang_list;	
 };
 
