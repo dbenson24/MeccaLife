@@ -16,8 +16,8 @@ if(EQUAL(count _vehicleInfo,0)) exitWith {hint localize "STR_Cop_VehEmpty"};
 
 _value = 0;
 {
-	_var = configName(_x);
-	_val = ITEM_VALUE(_var);
+	_var = SEL(_x,0);
+	_val = SEL(_x,1);
 	
 	if(EQUAL(ITEM_ILLEGAL(_var),1)) then {
 		if(!(EQUAL(ITEM_SELLPRICE(_var),-1))) then {
@@ -33,3 +33,5 @@ if(_value > 0) then {
 } else {
 	hint localize "STR_Cop_NoIllegalVeh";
 };
+
+[[vehicle,_vehicleInfo],"life_fnc_copSearch",_cop,false] call life_fnc_MP;
