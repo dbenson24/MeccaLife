@@ -4682,7 +4682,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=6372;
+		items=6373;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -69330,10 +69330,19 @@ class Mission
 			skill=0.60000002;
 			init="this enableSimulation false; this allowDamage false; this setPosASL [position this select 0, position this select 1, 17.9]; this setVectorUp [0,0,1];";
 		};
+		class Item6372
+		{
+			position[]={8181.1221,22.152905,25298.576};
+			id=6643;
+			side="EMPTY";
+			vehicle="Land_Cargo20_blue_F";
+			skill=0.60000002;
+			init="this addAction[""Open Vault"",life_fnc_safeGold,"""",0,false,false,"""",' playerSide == civilian && {_target getVariable[""gold_open"",false]} ']";
+		};
 	};
 	class Markers
 	{
-		items=373;
+		items=378;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -72371,6 +72380,66 @@ class Mission
 			text="Sky Diving";
 			type="mil_arrow2";
 			colorName="ColorBlue";
+		};
+		class Item373
+		{
+			position[]={15439.761,0.31613934,15135.525};
+			name="mrkGreen";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorGreen";
+			fillName="Border";
+			a=15000;
+			b=11000;
+			drawBorder=1;
+		};
+		class Item374
+		{
+			position[]={16561.342,2.396013,15050.344};
+			name="mrkRed";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="Border";
+			a=12000;
+			b=9000;
+			drawBorder=1;
+		};
+		class Item375
+		{
+			position[]={20360.346,58.450043,6004.0625};
+			name="mrkRed_1";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="Border";
+			a=2300;
+			b=1500;
+			drawBorder=1;
+		};
+		class Item376
+		{
+			position[]={3080.6001,-0.2383368,16453.352};
+			name="mrkRed_1_1";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="Border";
+			a=1500;
+			b=7500;
+			drawBorder=1;
+		};
+		class Item377
+		{
+			position[]={25547.32,0.053669356,24921.273};
+			name="mrkRed_1_2";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="Border";
+			a=3000;
+			b=1000;
+			drawBorder=1;
 		};
 	};
 	class Sensors
