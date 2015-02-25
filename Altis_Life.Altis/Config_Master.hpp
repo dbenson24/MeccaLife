@@ -86,6 +86,13 @@ class Life_Settings {
 		
 	sellArray[] = {
 	};
+	allowedSavedVirtualItems[] = { "pickaxe", "fuelEmpty", "fuelFull", "spikeStrip", "lockpick", "defuseKit", "storageSmall", 
+									"storageBig", "redgull", "coffee", "waterBottle", "apple", "peach", "tbacon", "donut",
+									"rabbitGrilled", "salemaGrilled", "ornateGrilled", "mackerelGrilled", "tunaGrilled",
+									"mulletGrilled", "catsharkGrilled", "turtleSoup", "henGrilled", "roosterGrilled",
+									"sheepGrilled", "goatGrilled","frog","marijuana","cannabis","froglsd","mushroom","magicm",
+									"heroinUnprocessed","cocaineUnprocessed","heroinProcessed","cocaineProcessed"
+									};
 };
 
 //Virtual Items

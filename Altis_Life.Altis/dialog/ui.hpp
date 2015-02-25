@@ -50,10 +50,10 @@ class playerHUD {
 		{
 			idc = 9999;
 			text = "textures\watermark.paa";
-			x = 0.15 * safezoneW + safezoneX;
-			y = 0.15 * safezoneH + safezoneY;
-			w = 0.12 * safezoneW;
-			h = 0.128 * safezoneH;
+			x = 0.0005 * safezoneW + safezoneX;
+			y = 0.0005 * safezoneH + safezoneY;
+			w = 0.05 * safezoneW;
+			h = 0.05 * safezoneH;
 		};
  
         /* Background */
