@@ -8,7 +8,7 @@
 private["_exitLoop","_group","_wait","_gangname","_members","_uid","_index","_ganginfo"];
 if(playerSide != civilian) exitWith {}; //What in the hell?
 [player] join (createGroup civilian);
-if(EQUAL(count life_gangData,0)) exitWith {}; //Dafuq?
+//if(EQUAL(count life_gangData,0)) exitWith {}; //Dafuq?
 
 _uid = getPlayerUID player;
 
