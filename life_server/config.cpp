@@ -151,6 +151,7 @@ class CfgFunctions
             class getPrices {};
             class ajustprices {};
 		};
+		class goldUpdate {};
 		class Housing
 		{
 			file = "\life_server\Functions\Housing";

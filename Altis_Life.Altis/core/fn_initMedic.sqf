@@ -19,7 +19,7 @@ if((FETCH_CONST(life_medicLevel)) < 1) exitWith {
     while {true} do
     {
         waitUntil {backpack player == "B_Carryall_oucamo"};
-        (unitbackpack player) setObjectTextureGlobal [0, "NILL.JPG"]; 
+        (unitbackpack player) setObjectTextureGlobal [0, ""]; 
         waitUntil {backpack player != "B_Carryall_oucamo"}; 
     };
 };

@@ -157,7 +157,13 @@ addMissionEventHandler ["HandleDisconnect",{_this call TON_fnc_clientDisconnect;
 life_wanted_list = [];
 [] execFSM "\life_server\FSM\cleanup.fsm";
 
+//Custom Content
 [] execVM "\life_server\Functions\Custom\fn_spawnIllegalArea.sqf"; //Revolving Drug Fields
+[] execVM "\life_server\Functions\Custom\fn_spawnGold.sqf";
+call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";
+gold_safe setVariable["gold",round(random 50),true];
+[] spawn TON_fnc_goldUpdate;
+
 
 [] spawn
 {
