@@ -36,7 +36,7 @@ if (!life_is_alive) then
         };     
         life_is_alive = true;
 };
-if (isNull (group player)) then {
+if (count (group player) == 1) then {
     [] call life_fnc_joinGang;
 };
 player addRating 9999999;
