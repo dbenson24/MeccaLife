@@ -27,7 +27,7 @@ if((FETCH_CONST(life_coplevel) == 0) && (FETCH_CONST(life_adminlevel) == 0)) the
     while {true} do
     {
         waitUntil {backpack player == "B_Carryall_oucamo"};
-        (unitbackpack player) setObjectTextureGlobal [0, "NILL.JPG"]; 
+        (unitbackpack player) setObjectTextureGlobal [0, ""]; 
         waitUntil {backpack player != "B_Carryall_oucamo"}; 
     };
 };
