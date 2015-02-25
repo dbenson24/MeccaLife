@@ -36,4 +36,7 @@ if (!life_is_alive) then
         };     
         life_is_alive = true;
 };
+if (isNil(grpPlayer player)) then {
+    [] call life_fnc_joinGang;
+};
 player addRating 9999999;
