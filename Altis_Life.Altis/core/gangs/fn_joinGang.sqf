@@ -13,8 +13,8 @@ sleep _wait;
 if (count gang_list != 0) then {
 	{
  		_members = _x select 5;
- 		_temp = format["%1",_uid];
- 		_index = _x find _temp;
+ 		//_temp = format["%1",_uid];
+ 		_index = _x find _uid;
  		if (_index > -1) exitWith{_ganginfo = _x;};
 	} forEach gang_list;	
 };
