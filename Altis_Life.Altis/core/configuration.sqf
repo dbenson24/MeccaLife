@@ -91,6 +91,7 @@ life_thirst = 100;
 life_hunger = 100;
 CASH = 0;
 life_nlrtimer_running = false;
+life_nlrtimer_stop = false;
 
 life_isDowned = false;
 life_vehicles = [];
