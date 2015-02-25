@@ -4668,7 +4668,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3271.8547,2.1898925,12971.137};
+					position[]={16731.607,11.524322,13626.024};
 					azimut=310;
 					id=270;
 					side="WEST";
@@ -4682,7 +4682,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=6370;
+		items=6372;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -8751,7 +8751,7 @@ class Mission
 		};
 		class Item387
 		{
-			position[]={16667.883,12.455027,13617.558};
+			position[]={16668.773,12.537605,13618.371};
 			azimut=140;
 			id=658;
 			side="EMPTY";
@@ -69309,6 +69309,26 @@ class Mission
 			vehicle="Land_PCSet_01_keyboard_F";
 			skill=0.60000002;
 			init="  this enableSimulation false; this allowDamage false; this setVectorUp [0,0,0.1];";
+		};
+		class Item6370
+		{
+			position[]={16667.34,12.400614,13617.248};
+			azimut=140;
+			id=6641;
+			side="EMPTY";
+			vehicle="Land_Mil_WallBig_4m_F";
+			skill=0.60000002;
+			init="this enableSimulation false; this allowDamage false; this setPosASL [position this select 0, position this select 1, 17.9]; this setVectorUp [0,0,1];";
+		};
+		class Item6371
+		{
+			position[]={16671.973,12.876034,13616.842};
+			azimut=230.17253;
+			id=6642;
+			side="EMPTY";
+			vehicle="Land_Mil_WallBig_4m_F";
+			skill=0.60000002;
+			init="this enableSimulation false; this allowDamage false; this setPosASL [position this select 0, position this select 1, 17.9]; this setVectorUp [0,0,1];";
 		};
 	};
 	class Markers
