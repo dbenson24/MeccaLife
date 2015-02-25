@@ -19,8 +19,8 @@ if (count gang_list != 0) then {
 	} forEach gang_list;	
 };
 
-if (isNil("_ganginfo")) then {
-	exitWith{false;};
+if (isNil("_ganginfo"))	exitWith{
+	false;
 } else {
 	_gangname = _ganginfo select 2;
 };
@@ -30,9 +30,7 @@ _exitLoop = false;
 {
 	_groupName = _x GVAR "gang_name";
 	if(!isNil "_groupName") then {
-		if(EQUAL(_gangname, _groupName)) then {
-			exitWith {_group = _x; _exitLoop = true;};
-		};
+		if(EQUAL(_gangname, _groupName)) exitWith {_group = _x; _exitLoop = true;};
 	};
 } foreach allGroups;
 
