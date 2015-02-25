@@ -60,6 +60,7 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 
 R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 [
+/*
 	"targetbase",
 	"land_pierladder_f",
 	"metal_pole_f",
@@ -86,4 +87,5 @@ R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 	"land_woodentable_small_f",
 	"pole_f",
 	"roadcone_f"
+	*/
 ];
