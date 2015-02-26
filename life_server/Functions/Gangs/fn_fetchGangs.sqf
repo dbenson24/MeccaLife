@@ -11,6 +11,13 @@ _query = format["SELECT id, owner, name, maxmembers, bank, members FROM gangs WH
 waitUntil{!DB_Async_Active};
 _queryResult = [_query,2] call DB_fnc_asyncCall;
 
+["diag_log",[
+		"------------- Client Query Request -------------",
+		format["QUERY: %1",_query],
+		format["Result: %1",_queryResult],
+		"------------------------------------------------"
+	]] call TON_fnc_logIt;
+
 gang_list = [];
 
 {
