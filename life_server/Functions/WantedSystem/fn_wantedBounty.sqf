@@ -24,7 +24,7 @@ if(count _queryResult != 0) then
 	_amount = _queryResult select 3;
 	if(_half) then
 	{
-		[[_amount,_amount],"life_fnc_bountyReceive",(owner _cop),false] spawn life_fnc_MP;
+		[[(_amount/2),_amount],"life_fnc_bountyReceive",(owner _cop),false] spawn life_fnc_MP;
 	}
 		else
 	{
