@@ -3504,6 +3504,9 @@
 		<Key ID="STR_Item_Ziptie">
 			<Original>Ziptie</Original>
 		</Key>
+		<Key ID="STR_Item_Underwatercharge">
+			<Original>Ziptie</Original>
+		</Key>
 	</Package>
 	<Package name="Life_License">
 		<Key ID="STR_License_Driver">
