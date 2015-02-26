@@ -1,0 +1,4 @@
+// We need to generate a list of vehciles
+// not in the game and populate this file.
+// In the mean time, just log everything.
+1 ""
