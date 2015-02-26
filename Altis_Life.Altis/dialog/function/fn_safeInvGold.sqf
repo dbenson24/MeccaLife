@@ -1,3 +1,5 @@
+#include <macro.h>
+
 /*
 		fn_safeInventory.sqf
 */
