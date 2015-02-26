@@ -206,16 +206,16 @@ _var=floor(random 2);
 if (_var==1) then {_box addWeaponCargoGlobal ["optic_Arco", 5];};
 sleep 0.1;
 _var=floor(random 2);
-if (_var==1) then {_box addWeaponCargoGlobal ["launch_B_Titan_F", 5];};
+if (_var==1) then {_box addWeaponCargoGlobal ["launch_B_Titan_F", 1];};
 sleep 0.1;
 _var=floor(random 2);
-if (_var==1) then {_box addWeaponCargoGlobal ["Titan_AA", 5];};
+if (_var==1) then {_box addWeaponCargoGlobal ["Titan_AA", 1];};
 sleep 0.1;
 _var=floor(random 2);
-if (_var==1) then {_box addWeaponCargoGlobal ["launch_RPG32_F", 5];};
+if (_var==1) then {_box addWeaponCargoGlobal ["launch_RPG32_F", 1];};
 sleep 0.1;
 _var=floor(random 2);
-if (_var==1) then {_box addWeaponCargoGlobal ["RPG32_HE_F", 5];};
+if (_var==1) then {_box addWeaponCargoGlobal ["RPG32_HE_F", 1];};
 sleep 0.1;
 _var=floor(random 2);
 if (_var==1) then {_box addWeaponCargoGlobal ["optic_Aco", 5];};
@@ -226,7 +226,6 @@ sleep 0.1;
 _var=floor(random 2);
 if (_var==1) then {_box addWeaponCargoGlobal ["optic_Arco", 5];};
 sleep 0.1;
-
 
 
 // Fill box end
