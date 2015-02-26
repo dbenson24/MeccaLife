@@ -18,12 +18,10 @@ _queryResult = [_query,2] call DB_fnc_asyncCall;
 		"------------------------------------------------"
 	]] call TON_fnc_logIt;
 
-gang_list = [];
+missionNamespace setVariable ["gang_list",[]];
 
 {
 	gang_list pushBack _x;
 }forEach _queryResult
 
 publicVariable "gang_list";
-
-gang_list;
