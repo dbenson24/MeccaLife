@@ -25,5 +25,9 @@ if(count _queryResult != 0) then
 	if(_half) then
 	{
 		[[_amount,_amount],"life_fnc_bountyReceive",(owner _cop),false] spawn life_fnc_MP;
+	}
+		else
+	{
+		[[_amount,_amount],"life_fnc_bountyReceive",(owner _cop),false] spawn life_fnc_MP;
 	};
 };

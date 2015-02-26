@@ -15,7 +15,14 @@ _time = time + (_time * 60); //x Minutes
 
 //if(_bad) then { _time = time + 1100; } else { _time = time + (15 * 60); }; //##80 (time loaded from DB)
 
-if(count _ret > 0) then { life_bail_amount = SEL(_ret,3); } else { life_bail_amount = 20000; /*_time = time + (10 * 60); */};
+_bounty = 85000;
+if(count _ret > 0) then {
+	if(_ret select 3 >= 85000) then {
+		_bounty = _ret select 3;
+	};
+};
+
+if(count _ret > 0) then { life_bail_amount = _bounty; _time = time + (_bounty * 0.0036); } else { life_bail_amount = 1; _time = time + (_bounty * 0.0036); };/*_time = time + (10 * 60); */
  
 _esc = false;
 _bail = false;
@@ -25,7 +32,6 @@ if(_time <= 0) then { _time = time + (15 * 60); hintC "Please Report to Admin: J
 [_bad,_time] spawn
 {
 	life_canpay_bail = false;
-	life_bail_amount = life_bail_amount * 5;
 	if(_this select 0) then
 	{
 		//sleep (10 * 60);

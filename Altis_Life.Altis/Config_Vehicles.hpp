@@ -627,7 +627,7 @@ class CfgVehicles {
 	                "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa"
             } },
             { "Cop", "cop", {
-                "textures\mecca_police_suv.jpg"
+                "textures\meccapolicesuv.jpg"
             } }
 	        };
     };
