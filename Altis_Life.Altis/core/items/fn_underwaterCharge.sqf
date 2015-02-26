@@ -7,7 +7,7 @@ if(isNull _vault) exitWith {}; //Bad object
 if(typeOf _vault != "Land_Cargo20_blue_F") exitWith {hint localize "STR_ISTR_Blast_VaultOnly"};
 if(_vault getVariable["wchargeplaced",false]) exitWith {hint localize "STR_ISTR_Blast_AlreadyPlaced"};
 if(_vault getVariable["gold_open",false]) exitWith {hint localize "STR_ISTR_Blast_AlreadyOpen"};
-if(!([false,"blastingcharge",1] call life_fnc_handleInv)) exitWith {}; //Error?
+if(!([false,"underwatercharge",1] call life_fnc_handleInv)) exitWith {}; //Error?
 
 _vault setVariable["wchargeplaced",true,true];
 hint localize "STR_ISTR_Blast_KeepOff";
