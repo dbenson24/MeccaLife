@@ -77,7 +77,7 @@ if(playerSide == west) then {
 		} else {
 			_Btn7 ctrlSetText localize "STR_vInAct_Unflip";
 			_Btn7 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_flipAction; closeDialog 0;";
-			if(count crew _curTarget == 0 && {canMove _curTarget}) then { _Btn7 ctrlEnable false;} else {_Btn7 ctrlEnable true;};
+			if(count crew _curTarget == 0 && {canMove _curTarget}) then { _Btn7 ctrlEnable true;} else {_Btn7 ctrlEnable false;};
 		};
 	};
 	
