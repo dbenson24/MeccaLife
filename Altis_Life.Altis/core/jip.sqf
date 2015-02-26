@@ -21,5 +21,5 @@
 } foreach (allMissionObjects "Air");
 
 if(isNil "gang_list") then {
-	[[],"TON_fnc_fetchGangs"] spawn life_fnc_MP
+	[[],"TON_fnc_fetchGangs"] call life_fnc_MP
 }
