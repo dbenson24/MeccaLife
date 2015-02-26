@@ -56,6 +56,7 @@ switch (_var) do
 	case "life_inv_rock": {(localize "STR_Item_Rock")};
 	case "life_inv_cement": {(localize "STR_Item_CementBag")};
 	case "life_inv_goldbar": {(localize "STR_Item_GoldBar")};
+	case "life_inv_goldbarp": {(localize "STR_Item_GoldBarp")};
 	case "life_inv_blastingcharge": {(localize "STR_Item_BCharge")};
 	case "life_inv_boltcutter": {(localize "STR_Item_BCutter")};
 	case "life_inv_defusekit": {(localize "STR_Item_DefuseKit")};
