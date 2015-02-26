@@ -14,7 +14,7 @@ _safeInfo = life_goldObj getVariable["gold",0];
 if(!([_num] call fnc_isnumber)) exitWith {hint localize "STR_MISC_WrongNumFormat";};
 _num = parseNumber(_num);
 if(_num < 1) exitWith {hint localize "STR_Cop_VaultUnder1";};
-if(_ctrl != "goldBarp") exitWith {hint localize "STR_Cop_OnlyGold"};
+if(_ctrl != "goldbarp") exitWith {hint localize "STR_Cop_OnlyGold"};
 if(_num > _safeInfo) exitWith {hint format[localize "STR_Civ_IsntEnoughGold",_num];};
 
 //Secondary checks

@@ -164,6 +164,8 @@ call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";
 gold_safe setVariable["gold",round(random 50),true];
 [] spawn TON_fnc_goldUpdate;
 
+[] execVM "\life_server\Functions\airdrop\config.sqf";
+[] execVM "\life_server\Functions\airdrop\fn_generateAirdropAuto.sqf";
 
 [] spawn
 {
