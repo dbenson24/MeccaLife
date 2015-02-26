@@ -62,16 +62,13 @@ SUB(_units,[player]);
 					_x GVAR ["realname",name _x],
 					
 					switch ((_x GVAR "rank")) do {
-						case 1: {"Recruit"};
-						case 2: {"Cadet"};
-						case 3: {"Private"};
-						case 4: {"Corporal"};
-						case 5: {"Sergeant"};
-						case 6: {"2nd Lieutenant"};
-						case 7: {"1st Lieutenant"};
-						case 8: {"Captain"};
-						case 9: {"S.W.A.T"};
-
+						case 1: {"Cadet"};
+						case 2: {"Private"};
+						case 3: {"Corporal"};
+						case 4: {"Sergeant"};
+						case 5: {"Lieutenant"};
+						case 6: {"Swat"};
+						case 7: {"Captain"};
 						default {"Cop In Training"};
 					}]};
 				//NHS
