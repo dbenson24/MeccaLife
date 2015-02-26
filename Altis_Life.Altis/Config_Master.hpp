@@ -176,10 +176,6 @@ class VirtualItems {
 	//Vigilante
 	VITEMMACRO(ziptie, "STR_Item_Ziptie", "ziptie", 1, 500, 500, true, -1, "")
 	
-	//Custom shit by LIONS rawr
-	VITEMMACRO(underwatercharge, "Underwater Charge", "underwatercharge", 2, 35000, 10000, false, -1, "")
-	VITEMMACRO(goldbarp, "Underwater Gold Bars", "goldbarp", 2, -1, 25000, false, -1, "")
-	
 	
 };
 
