@@ -108,7 +108,7 @@ switch (true) do {
 		};
 	};
 	
-	case (EQUAL(_item,"blastingcharge")): {
+	case (EQUAL(_item,"underwatercharge")): {
 		player reveal gold_safe;
 		(group player) reveal gold_safe;
 		[cursorTarget] spawn life_fnc_underwaterCharge;

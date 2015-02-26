@@ -176,6 +176,7 @@ class VirtualItems {
 	//Vigilante
 	VITEMMACRO(ziptie, "STR_Item_Ziptie", "ziptie", 1, 500, 500, true, -1, "")
 	
+	
 };
 
 
