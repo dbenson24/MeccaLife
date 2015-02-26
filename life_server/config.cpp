@@ -151,6 +151,11 @@ class CfgFunctions
             class getPrices {};
             class ajustprices {};
 		};
+        class Airdrop
+		{
+			file = "\life_server\Functions\airdrop";
+			class generateAirdrop {};
+		};
 		class goldUpdate {};
 		class Housing
 		{
