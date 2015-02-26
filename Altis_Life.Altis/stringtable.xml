@@ -3445,6 +3445,9 @@
 			<Italian>Lingotto d'Oro</Italian>
 			<Portuguese>Barra de Ouro</Portuguese>
 		</Key>
+		<Key ID="STR_Item_GoldBar">
+			<Original>Treasure</Original>
+		</Key>
 		<Key ID="STR_Item_BCharge">
 			<Original>Blasting Charge</Original>
 			<German>Sprengladung</German>
