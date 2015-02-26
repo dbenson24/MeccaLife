@@ -14,7 +14,7 @@ lbClear _tInv;
 _safeInfo = _safe getVariable["gold",-1];
 if(_safeInfo < 1) exitWith {closeDialog 0; hint localize "STR_Civ_VaultEmpty";};
 
-_str = ["life_inv_goldbarp"] call life_fnc_varToStr;
-_shrt = ["life_inv_goldbarp",1] call life_fnc_varHandle;
+_str = M_CONFIG(getText,"VirtualItems","goldbarp","displayName");
+_shrt = M_CONFIG(getText,"VirtualItems","goldbarp","variable");
 _tInv lbAdd format["[%1] - %2",_safeInfo,_str];
 _tInv lbSetData [(lbSize _tInv)-1,_shrt];
