@@ -11,6 +11,7 @@ _posPlayer = [_this,0,[],[[]]] call BIS_fnc_param;
 
 if (!airdrop_enable) exitWith {};
 if (airdrop_goingon) exitWith {};
+if({side _x == civilian} count playableUnits < 10) exitWith {};
 airdrop_goingon = true;
 
 _dest = _posPlayer;

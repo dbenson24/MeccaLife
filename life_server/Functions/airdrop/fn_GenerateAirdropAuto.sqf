@@ -10,6 +10,7 @@ sleep 1;
 
 if (!airdrop_enable) exitWith {};
 if (airdrop_goingon) exitWith {};
+if({side _x == civilian} count playableUnits < 10) exitWith {};
 
 _chance = floor(random 100);
 if (_chance>airdrop_chance) exitWith {};
