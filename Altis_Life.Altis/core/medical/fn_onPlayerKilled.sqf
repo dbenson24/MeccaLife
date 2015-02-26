@@ -94,7 +94,7 @@ if(side _killer == west && playerSide != west) then {
 	};
 };
 
-if(!isNull _killer && {_killer != _unit} && side _killer == west) then {
+if(!isNull _killer && {_killer != _unit} && {side _killer == west} && {side _killer != civilian}) then {
 	life_removeWanted = true;
 };
 
