@@ -8,9 +8,9 @@
 
 airdrop_helicopter_main = "B_Heli_Transport_03_unarmed_F";
 airdrop_helicopter_scnd = "B_Heli_Attack_01_F";
-airdrop_chance = 10;
+airdrop_chance = 100;
 airdrop_positions = [[6224.38,11925.8,0.00156784],[7592,13856,0.00119019],[10018,12119.2,0.00144005],[9122.34,17830.7,0.00247192]];
-_airdrop_time_interval = [1,4]; //Time given in hours, this is the interval in which the airdrop should take place
+_airdrop_time_interval = [1,3]; //Time given in hours, this is the interval in which the airdrop should take place
 
 // Do not modify the following code
 
