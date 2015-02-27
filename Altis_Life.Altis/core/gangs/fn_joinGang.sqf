@@ -6,7 +6,7 @@ if (isNil("gang_list")) then {
 	[[],"TON_fnc_fetchGangs",false,false] call life_fnc_MP;
 };
 
-//_gang_list = missionNamespace getVariable "gang_list";
+gang_list = missionNamespace getVariable "gang_list";
 
 _wait = round(random(8));
 sleep _wait;
