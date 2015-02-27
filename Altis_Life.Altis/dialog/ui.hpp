@@ -15,6 +15,7 @@
 #define IDC_LIFE_PICTURE_WATERMARK 9999
 #define IDC_LIFE_STAMINA_TEXT 0999
 #define IDC_LIFE_BAR_STAMINA 2199
+#define IDC_LIFE_PICTURE_STAMINA 1199
 
 /*
         Name: Dillon "Itsyuka" Modine-Thuen
@@ -46,7 +47,8 @@ class playerHUD {
                 LIFE_WANTED_TEXT,
 				LIFE_PICTURE_WATERMARK,
 				LIFE_PICTURE_STAMINA,
-				LIFE_BAR_STAMINA
+				LIFE_BAR_STAMINA,
+				LIFE_STAMINA_TEXT
         };
 		
 		/* WaterMark */
@@ -164,15 +166,15 @@ class playerHUD {
             h = 0.011 *safezoneH;
         };
  
-        /* Icons */
-		class LIFE_STAMINA_TEXT: Life_RscText
+		/* Icons */
+		class LIFE_PICTURE_STAMINA: life_RscPicture
 		{
-			idc = IDC_LIFE_STAMINA_TEXT;
-			text = "";
-			x = 0.958906 * safezoneW + safezoneX;
-			y = 0.801353 * safezoneH + safezoneY;
-			w = 0.020625 * safezoneW;
-			h = 0.011 * safezoneH;
+			idc = IDC_LIFE_PICTURE_STAMINA;
+			text = "icons\stamina.paa";
+			x = 0.922813 * safezoneW + safezoneX;
+			y = 0.796953 * safezoneH + safezoneY;
+			w = 0.012375 * safezoneW;
+			h = 0.0219965 * safezoneH;
 		};
         class LIFE_PICTURE_FOOD: life_RscPicture
         {

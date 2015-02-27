@@ -9,7 +9,7 @@
 #define IDC_LIFE_HEALTH_TEXT 1002
 #define IDC_LIFE_WANTED_TEXT 1003
 #define IDC_LIFE_BAR_STAMINA 2199
-#define IDC_LIFE_BAR_STAMINA 2199
+#define IDC_LIFE_STAMINA_TEXT 0999
 
 #define LIFEdisplay (GVAR_UINS ["playerHUD",displayNull]) 
 #define LIFEctrl(ctrl) ((GVAR_UINS ["playerHUD",displayNull]) displayCtrl ctrl)
