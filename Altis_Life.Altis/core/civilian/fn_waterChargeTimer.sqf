@@ -19,4 +19,3 @@ while {true} do {
 	sleep 0.08;
 };
 6 cutText["","PLAIN"];
- No newline at end of file
