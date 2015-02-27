@@ -754,9 +754,7 @@ class CfgVehicles {
         insurance = 2500;
         chopShop = 5000;
         textures[] = {
-            { "white", "civ", {
-                "#(argb,8,8,3)color(1,1,1,0.8)"
-            } }
+            {  }
         };
     };
 	class O_Heli_Transport_04_fuel_F {
@@ -767,9 +765,8 @@ class CfgVehicles {
         insurance = 2500;
         chopShop = 5000;
         textures[] = {
-            { "white", "civ", {
-                "#(argb,8,8,3)color(1,1,1,0.8)"
-            } }
+            { 
+             }
         };
     };
 	class O_Heli_Transport_04_bench_F {
@@ -780,9 +777,8 @@ class CfgVehicles {
         insurance = 2500;
         chopShop = 5000;
         textures[] = {
-            { "white", "civ", {
-                "#(argb,8,8,3)color(1,1,1,0.8)"
-            } }
+            { 
+             }
         };
     };
 	class O_Heli_Light_02_unarmed_F {
