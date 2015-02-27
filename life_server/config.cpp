@@ -177,6 +177,7 @@ class CfgFunctions
 			class removeGang {};
 			class updateGang {};
 			class fetchGangs {};
+			class fetchMembers {};
 		};
 
 		class Actions

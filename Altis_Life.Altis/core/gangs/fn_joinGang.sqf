@@ -45,13 +45,15 @@ if(!isNil "_group") then {
 		[[player,_group],"TON_fnc_clientGangLeader",(units _group),false] call life_fnc_MP;
 	};
 } else {
+	_members = [];
+	_members = [[SEL(_ganginfo,2)],"TON_fnc_fetchMembers",false,false] call life_fnc_MP;
 	_group = group player;
 	_group SVAR ["gang_id",SEL(_ganginfo,0),true];
 	_group SVAR ["gang_owner",SEL(_ganginfo,1),true];
 	_group SVAR ["gang_name",SEL(_ganginfo,2),true];
 	_group SVAR ["gang_maxMembers",SEL(_ganginfo,3),true];
 	_group SVAR ["gang_bank",SEL(_ganginfo,4),true];
-	_group SVAR ["gang_members",SEL(_ganginfo,5),true];
+	_group SVAR ["gang_members",_members,true];
 	gang_groups pushBack _group;
 };
 
