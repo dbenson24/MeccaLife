@@ -18,13 +18,19 @@ _value = 0;
 {
 	_var = SEL(_x,0);
 	_val = SEL(_x,1);
-	
+	diag_log format["Item Status: %1", (ITEM_ILLEGAL(_var))];
+
 	if(EQUAL(ITEM_ILLEGAL(_var),1)) then {
+		diag_log format["%1", _var];
 		if(!(EQUAL(ITEM_SELLPRICE(_var),-1))) then {
 			ADD(_value,(round(_val * ITEM_SELLPRICE(_var) / 2)));
+			diag_log format["Rounded: %1", (round(_val * ITEM_SELLPRICE(_var) / 2))];
 		};
 	};
+	diag_log format ["%1, %2", _val, _var];
 } foreach (SEL(_vehicleInfo,0));
+
+diag_log format ["%1, %2, %3, %4", _vehicle, _vehicleInfo, _value,_list ];
 
 if(_value > 0) then {
 	[[0,"STR_NOTF_VehContraband",true,[[_value] call life_fnc_numberText]],"life_fnc_broadcast",true,false] call life_fnc_MP;
@@ -34,4 +40,3 @@ if(_value > 0) then {
 	hint localize "STR_Cop_NoIllegalVeh";
 };
 
-[[vehicle,_vehicleInfo],"life_fnc_copSearch",_cop,false] call life_fnc_MP;
