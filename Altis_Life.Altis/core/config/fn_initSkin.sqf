@@ -81,6 +81,43 @@ while {true} do
 			[[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
 			};
 		};
+		if (uniform player == "U_I_CombatUniform") then {
+		switch (FETCH_CONST(life_coplevel)) do 
+		{
+
+			case 1:
+			{
+			[[player,0,"textures\cadetTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+			};
+	
+			case 2:
+			{
+			[[player,0,"textures\stateTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+			};
+	
+			case 3:
+			{
+			[[player,0,"textures\stateTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+			};
+	
+			case 4:
+			{
+			[[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+			};
+	
+			case 5:
+			{
+			[[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+			};
+			case 6:
+			{
+			[[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+			};
+			case 7:
+			{
+			[[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+			};
+		};
 	};
 	if(playerSide == independent) then
 	{
