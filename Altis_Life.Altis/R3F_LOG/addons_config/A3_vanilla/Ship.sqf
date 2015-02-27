@@ -33,8 +33,10 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 
 R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 [
+/*
 	"land_camping_light_f",
 	"roadcone_l_f",
 	"roadbarrier_small_f",
 	"rubber_duck_base_f"
+	*/
 ];

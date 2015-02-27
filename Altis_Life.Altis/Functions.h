@@ -63,6 +63,7 @@ class Life_Client_Core
 		class medicSirenLights {};
 		class medicLights {};
 		class medicSiren {};
+		class newLifeRule {};
 	};
 	
 	class Actions
@@ -247,6 +248,7 @@ class Life_Client_Core
 		class civInteractionMenu {}; //civ interaction menu
 		class freezePlayer {};
 		class breakoutTimer {};
+		class waterChargeTimer {};
 	};
 	
 	class Vehicle
@@ -367,6 +369,7 @@ class Life_Client_Core
 		class cocaine {};
 		class weed {};
 		class bankalarmsound {};
+		class underwaterCharge {};
 	};
 	
 	class Scripts
@@ -401,7 +404,9 @@ class Life_Client_Core
 		class wireTransfer {};
 		class calldialog {};
 		class sendChannel {};		
-		
+		class safeInvGold {};
+		class safeGold {};
+		class goldTake {};
 	};
 	
 	class Cam

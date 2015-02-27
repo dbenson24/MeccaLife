@@ -3432,6 +3432,12 @@
 			<Italian>Sacco di Cemento</Italian>
 			<Portuguese>Saco de Cimento</Portuguese>
 		</Key>
+		<Key ID="STR_Item_UCharge">
+			<Original>Underwater Charge</Original>
+		</Key>
+		<Key ID="STR_Item_GoldScrap">
+			<Original>Gold Scrap</Original>
+		</Key>
 		<Key ID="STR_Item_GoldBar">
 			<Original>Gold Bar</Original>
 			<German>Goldbarren</German>
@@ -3497,6 +3503,9 @@
 		</Key>
 		<Key ID="STR_Item_Ziptie">
 			<Original>Ziptie</Original>
+		</Key>
+		<Key ID="STR_Item_Underwatercharge">
+			<Original>Under Water Charge</Original>
 		</Key>
 	</Package>
 	<Package name="Life_License">

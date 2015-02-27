@@ -36,7 +36,7 @@ _unit spawn {
 
 */
 
-_time = time + (4 * 60);
+_time = time + (12 * 60);
 
 
 _ok = true;

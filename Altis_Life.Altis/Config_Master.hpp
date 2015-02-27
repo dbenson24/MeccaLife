@@ -109,6 +109,7 @@ class VirtualItems {
 	VITEMMACRO(defusekit, "STR_Item_DefuseKit", "defuseKit", 2, 2500, -1, false, -1, "")
 	VITEMMACRO(storagesmall, "STR_Item_StorageBS", "storageSmall", 5, 75000, -1, false, -1, "icons\ico_storageSmall.paa")
 	VITEMMACRO(storagebig, "STR_Item_StorageBL", "storageBig", 10, 250000, -1, false, -1, "icons\ico_storageBig.paa")
+	VITEMMACRO(goldbarp, "STR_Item_GoldScrap", "goldbarp", 12, -1, 95000, false, -1, "")
 
 	//Mined Items
 	VITEMMACRO(oil_unprocessed, "STR_Item_OilU", "oilUnprocessed", 3, -1, -1, false, -1, "")
@@ -137,6 +138,7 @@ class VirtualItems {
 	VITEMMACRO(froglsd, "STR_Item_Froglsd", "froglsd", 2, -1, 2500, true, -1, "")
 	VITEMMACRO(frog, "STR_Item_Frog", "frog", 2, -1, 2500, true, -1, "icons\frog.paa")
 	VITEMMACRO(Magicm, "STR_Item_Magicm", "magicm", 1, -1, 1200, true, -1, "icons\magicm.paa")
+	VITEMMACRO(underwatercharge, "STR_Item_Underwatercharge", "underwatercharge", 2, 35000, 10000, false, -1, "")
 
 	//DrinkC
 	VITEMMACRO(redgull, "STR_Item_RedGull", "redgull", 1, 1500, 200, false, 100, "icons\ico_redgull.paa")
@@ -175,6 +177,7 @@ class VirtualItems {
 
 	//Vigilante
 	VITEMMACRO(ziptie, "STR_Item_Ziptie", "ziptie", 1, 500, 500, true, -1, "")
+	
 	
 };
 

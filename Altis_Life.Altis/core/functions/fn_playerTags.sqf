@@ -42,19 +42,13 @@ SUB(_units,[player]);
 				case (isPlayer _x && {(headgear _x in life_hidden_clothing) || (goggles _x in life_hidden_clothing)}): {"<t size='1.2'>[Masked Person]</t>";};
 				case (_x in (units grpPlayer) && playerSide == civilian): {format["<t color='#00FF00'>%1</t>",(_x GVAR ["realname",name _x])];};
 				case (!isNil {(_x GVAR "rank")}): {format["<img image='%1' size='1.5'></img> <t size='1.2'>%2</t><br/><t size='1.1'>[%3]</t>",switch ((_x GVAR "rank")) do {
-					case 1: {"icons\cop\1.paa"};
-					case 2: {"icons\cop\2.paa"};
-					case 3: {"icons\cop\3.paa"};
-					case 4: {"icons\cop\4.paa"};
-					case 5: {"icons\cop\5.paa"};
-					case 6: {"icons\cop\6.paa"};
-					case 7: {"icons\cop\7.paa"};
-					case 8: {"icons\cop\8.paa"};
-					case 9: {"icons\cop\12.paa"};
-					case 10: {"icons\cop\12.paa"};
-					case 11: {"icons\cop\12.paa"};
-					case 12: {"icons\cop\12.paa"};
-					case 13: {"icons\cop\sco19.paa"};
+					case 1: {"icons\cop\r.paa"};
+					case 2: {"icons\cop\p.paa"};
+					case 3: {"icons\cop\c.paa"};
+					case 4: {"icons\cop\s.paa"};
+					case 5: {"icons\cop\l.paa"};
+					case 6: {"icons\cop\sw.paa"};
+					case 7: {"icons\cop\ca.paa"};
 
 					default {"icons\cop\1.paa"};
 					},
@@ -62,16 +56,13 @@ SUB(_units,[player]);
 					_x GVAR ["realname",name _x],
 					
 					switch ((_x GVAR "rank")) do {
-						case 1: {"Recruit"};
-						case 2: {"Cadet"};
-						case 3: {"Private"};
-						case 4: {"Corporal"};
-						case 5: {"Sergeant"};
-						case 6: {"2nd Lieutenant"};
-						case 7: {"1st Lieutenant"};
-						case 8: {"Captain"};
-						case 9: {"S.W.A.T"};
-
+						case 1: {"Cadet"};
+						case 2: {"Private"};
+						case 3: {"Corporal"};
+						case 4: {"Sergeant"};
+						case 5: {"Lieutenant"};
+						case 6: {"Swat"};
+						case 7: {"Captain"};
 						default {"Cop In Training"};
 					}]};
 				//NHS
