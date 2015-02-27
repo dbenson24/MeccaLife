@@ -18,7 +18,8 @@ _value = 0;
 {
 	_var = SEL(_x,0);
 	_val = SEL(_x,1);
-	
+	diag_log format["Item Status: %1", (ITEM_ILLEGAL(_var))];
+
 	if(EQUAL(ITEM_ILLEGAL(_var),1)) then {
 		diag_log format["%1", _var];
 		if(!(EQUAL(ITEM_SELLPRICE(_var),-1))) then {
