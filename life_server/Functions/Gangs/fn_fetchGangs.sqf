@@ -18,7 +18,7 @@ _queryResult = [_query,2,true] call DB_fnc_asyncCall;
 		"------------------------------------------------"
 	]] call TON_fnc_logIt;
 
-//missionNamespace setVariable ["gang_list",[]];
+missionNamespace setVariable ["gang_list",[]];
 
 {
 	gang_list pushBack _x;
