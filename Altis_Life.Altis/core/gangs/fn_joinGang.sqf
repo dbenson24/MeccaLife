@@ -10,7 +10,7 @@ gang_list = missionNamespace getVariable "gang_list";
 
 _wait = round(random(8));
 sleep _wait;
-
+_ganginfo = [];
 if (count gang_list != 0) then {
 	{
 		if(EQUAL(SEL(_x,5),_uid)) exitWith{_ganginfo = _x;};
@@ -23,7 +23,7 @@ if (count gang_list != 0) then {
 if (isNil("_ganginfo"))	exitWith{
 	false;
 } else {
-	_gangname = _ganginfo select 2;
+	_gangname = format["%1",(_ganginfo select 2)];
 };
 
 //Loop through to make sure there is not a group already created with the gang.
