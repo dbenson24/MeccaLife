@@ -760,7 +760,7 @@ class CfgVehicles {
         };
     };
 	class O_Heli_Transport_04_fuel_F {
-        vItemSpace = 400;
+        vItemSpace = 500;
         price = ptarufuel;
         storageFee[] = { 55000, 0, 22000, 0 };
 		garageSell[] = { 72500, 0, 35000, 0 };
