@@ -105,7 +105,12 @@ class CarShops {
 			{ "B_G_Offroad_01_F", poffroad, "" },
 			{ "O_MRAP_02_F", pifrit, "" },
 			{ "B_Heli_Light_01_F", pmh9civ, "" },
-			{ "B_G_Offroad_01_armed_F", p50cal, "rebel" }
+			{ "B_G_Offroad_01_armed_F", p50cal, "rebel" },
+			{ "O_Heli_Transport_04_bench_F", porcaciv, "rebel" },
+			{ "O_Heli_Transport_04_box_F", porcaciv, "rebel" },
+			{ "O_Heli_Transport_04_fuel_F", porcaciv, "rebel" }
+			
+			
 		};
 	};
 
@@ -738,6 +743,45 @@ class CfgVehicles {
         };
     };
 
+	class O_Heli_Transport_04_box_F {
+        vItemSpace = 310;
+        price = porcaciv;
+        storageFee[] = { 55000, 0, 22000, 0 };
+		garageSell[] = { 72500, 0, 35000, 0 };
+        insurance = 2500;
+        chopShop = 5000;
+        textures[] = {
+            { "white", "civ", {
+                "#(argb,8,8,3)color(1,1,1,0.8)"
+            } }
+        };
+    };
+	class O_Heli_Transport_04_fuel_F {
+        vItemSpace = 110;
+        price = porcaciv;
+        storageFee[] = { 55000, 0, 22000, 0 };
+		garageSell[] = { 72500, 0, 35000, 0 };
+        insurance = 2500;
+        chopShop = 5000;
+        textures[] = {
+            { "white", "civ", {
+                "#(argb,8,8,3)color(1,1,1,0.8)"
+            } }
+        };
+    };
+	class O_Heli_Transport_04_bench_F {
+        vItemSpace = 110;
+        price = porcaciv;
+        storageFee[] = { 55000, 0, 22000, 0 };
+		garageSell[] = { 72500, 0, 35000, 0 };
+        insurance = 2500;
+        chopShop = 5000;
+        textures[] = {
+            { "white", "civ", {
+                "#(argb,8,8,3)color(1,1,1,0.8)"
+            } }
+        };
+    };
 	class O_Heli_Light_02_unarmed_F {
         vItemSpace = 210;
         price = porcaciv;
