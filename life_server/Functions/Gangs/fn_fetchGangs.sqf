@@ -22,6 +22,6 @@ missionNamespace setVariable ["gang_list",[]];
 
 {
 	gang_list pushBack _x;
-}forEach _queryResult
+}forEach _queryResult;
 
 publicVariable "gang_list";

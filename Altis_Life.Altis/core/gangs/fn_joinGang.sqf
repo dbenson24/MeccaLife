@@ -6,17 +6,17 @@ if (isNil("gang_list")) then {
 	[[],"TON_fnc_fetchGangs",false,false] call life_fnc_MP;
 };
 
-_gang_list = missionNamespace getVariable "gang_list";
+//_gang_list = missionNamespace getVariable "gang_list";
 
 _wait = round(random(8));
 sleep _wait;
 
-if (count _gang_list != 0) then {
+if (count gang_list != 0) then {
 	{
 		if(EQUAL(SEL(_x,5),_uid)) exitWith{_ganginfo = _x;};
  		_members = format["%1",(SEL(_x,5))];
  		if (_uid in _members) exitWith{_ganginfo = _x;};
-	} forEach _gang_list;	
+	} forEach gang_list;	
 };
 
 if (isNil("_ganginfo"))	exitWith{
