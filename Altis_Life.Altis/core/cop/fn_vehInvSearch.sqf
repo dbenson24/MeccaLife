@@ -22,6 +22,7 @@ _value = 0;
 	if(EQUAL(ITEM_ILLEGAL(_var),1)) then {
 		if(!(EQUAL(ITEM_SELLPRICE(_var),-1))) then {
 			ADD(_value,(round(_val * ITEM_SELLPRICE(_var) / 2)));
+			diag_log format["Rounded: %1", (round(_val * ITEM_SELLPRICE(_var) / 2))];
 		};
 	};
 	diag_log format ["%1, %2", _val, _var];
