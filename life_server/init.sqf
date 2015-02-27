@@ -200,3 +200,6 @@ PVAR_ALL("life_server_isReady");
 
 /* Initialize hunting zone(s) */
 ["hunting_zone",30] spawn TON_fnc_huntingZone;
+
+missionNamespace setVariable ["gang_groups",[]];
+publicVariable "gang_groups";

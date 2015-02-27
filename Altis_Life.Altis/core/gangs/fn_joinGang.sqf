@@ -25,13 +25,17 @@ if (isNil("_ganginfo"))	exitWith{};
 	_gangname = format["%1",(_ganginfo select 2)];
 
 //Loop through to make sure there is not a group already created with the gang.
+gang_groups = missionNamespace getVariable "gang_groups";
 
-{
-	_groupName = _x GVAR "gang_name";
-	if(!isNil "_groupName") then {
-		if(EQUAL(_gangname, _groupName)) exitWith {_group = _x;};
-	};
-} foreach allGroups;
+if(count gang_groups > 0) then {
+
+	{
+		_groupName = _x GVAR "gang_name";
+		if(!isNil "_groupName") then {
+			if(EQUAL(_gangname, _groupName)) exitWith {_group = _x;};
+		};
+	} forEach gang_groups;
+};
 
 
 if(!isNil "_group") then {
@@ -48,4 +52,7 @@ if(!isNil "_group") then {
 	_group SVAR ["gang_maxMembers",SEL(_ganginfo,3),true];
 	_group SVAR ["gang_bank",SEL(_ganginfo,4),true];
 	_group SVAR ["gang_members",SEL(_ganginfo,5),true];
+	gang_groups pushBack _group;
 };
+
+publicVariable "gang_groups";
