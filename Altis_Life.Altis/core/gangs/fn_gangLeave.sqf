@@ -6,8 +6,9 @@
 	32 hours later...
 */
 private["_grp","_grpMembers"];
+if (!isNil(grpPlayer GVAR "gang_owner")) then {
 if(EQUAL(steamid,(grpPlayer GVAR "gang_owner"))) exitWith {hint localize "STR_GNOTF_LeaderLeave"};
-
+};
 _grp = grpPlayer;
 _grpMembers = grpPlayer GVAR "gang_members";
 SUB(_grpMembers,[steamid]);
