@@ -20,11 +20,9 @@ if (count gang_list != 0) then {
 	} forEach gang_list;	
 };
 
-if (isNil("_ganginfo"))	exitWith{
-	false;
-} else {
+if (isNil("_ganginfo"))	exitWith{};
+	
 	_gangname = format["%1",(_ganginfo select 2)];
-};
 
 //Loop through to make sure there is not a group already created with the gang.
 
