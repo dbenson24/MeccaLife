@@ -2,9 +2,9 @@
 
 _uid = getPlayerUID player;
 
-if (isNil("gang_list")) then {
-	[[],"TON_fnc_fetchGangs",false,false] call life_fnc_MP;
-};
+
+[[],"TON_fnc_fetchGangs",false,false] call life_fnc_MP;
+
 
 gang_list = missionNamespace getVariable "gang_list";
 
