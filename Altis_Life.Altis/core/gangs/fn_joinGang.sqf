@@ -27,11 +27,11 @@ if (isNil("_ganginfo"))	exitWith{
 };
 
 //Loop through to make sure there is not a group already created with the gang.
-_exitLoop = false;
+
 {
 	_groupName = _x GVAR "gang_name";
 	if(!isNil "_groupName") then {
-		if(EQUAL(_gangname, _groupName)) exitWith {_group = _x; _exitLoop = true;};
+		if(EQUAL(_gangname, _groupName)) exitWith {_group = _x;};
 	};
 } foreach allGroups;
 
