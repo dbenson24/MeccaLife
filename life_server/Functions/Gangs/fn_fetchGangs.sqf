@@ -7,9 +7,9 @@
 */
 private["_query","_queryResult"];
 
-_query = format["SELECT id, owner, name, maxmembers, bank, members FROM gangs"];
+_query = format["SELECT id, owner, name, maxmembers, bank, members FROM gangs WHERE active=1"];
 waitUntil{!DB_Async_Active};
-_queryResult = [_query,2] call DB_fnc_asyncCall;
+_queryResult = [_query,2,true] call DB_fnc_asyncCall;
 
 ["diag_log",[
 		"------------- Client Query Request -------------",
@@ -18,7 +18,7 @@ _queryResult = [_query,2] call DB_fnc_asyncCall;
 		"------------------------------------------------"
 	]] call TON_fnc_logIt;
 
-missionNamespace setVariable ["gang_list",[]];
+//missionNamespace setVariable ["gang_list",[]];
 
 {
 	gang_list pushBack _x;
