@@ -14,7 +14,7 @@ sleep _wait;
 if (count gang_list != 0) then {
 	{
 		if(EQUAL(SEL(_x,5),_uid)) exitWith{_ganginfo = _x;};
- 		_members = format["%1",(SEL(_x,5))];
+ 		_members = SEL(_x,5);
  		if (_uid in _members) exitWith{_ganginfo = _x;};
 	} forEach gang_list;	
 };
