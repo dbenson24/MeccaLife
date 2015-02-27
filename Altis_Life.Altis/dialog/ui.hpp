@@ -13,6 +13,9 @@
 #define IDC_LIFE_PICTURE_WANTED 1203
 #define IDC_LIFE_WANTED_TEXT 1003
 #define IDC_LIFE_PICTURE_WATERMARK 9999
+#define IDC_LIFE_STAMINA_TEXT 0999
+#define IDC_LIFE_BAR_STAMINA 2199
+
 /*
         Name: Dillon "Itsyuka" Modine-Thuen
         File: ui.hpp
@@ -41,7 +44,9 @@ class playerHUD {
                 LIFE_BAR_WANTED,
                 LIFE_PICTURE_WANTED,
                 LIFE_WANTED_TEXT,
-				LIFE_PICTURE_WATERMARK 
+				LIFE_PICTURE_WATERMARK,
+				LIFE_PICTURE_STAMINA,
+				LIFE_BAR_STAMINA
         };
 		
 		/* WaterMark */
@@ -68,6 +73,14 @@ class playerHUD {
         };
  
         /* Progress Bars */
+		class LIFE_BAR_STAMINA: Life_RscProgress
+		{
+				idc = IDC_LIFE_BAR_STAMINA;
+				x = 0.938281 * safezoneW + safezoneX;
+				y = 0.796953 * safezoneH + safezoneY;
+				w = 0.061875 * safezoneW;
+				h = 0.022 * safezoneH;
+		};
         class LIFE_BAR_FOOD: Life_RscProgress
         {
                 idc = IDC_LIFE_BAR_FOOD;
@@ -105,6 +118,15 @@ class playerHUD {
  
         /* Text */
  
+		class LIFE_STAMINA_TEXT: Life_RscText
+		{
+				idc = IDC_LIFE_STAMINA_TEXT;
+				text = "";
+				x = 0.958906 * safezoneW + safezoneX;
+				y = 0.801353 * safezoneH + safezoneY;
+				w = 0.020625 * safezoneW;
+				h = 0.011 * safezoneH;
+		};
         class LIFE_FOOD_TEXT: Life_RscText
         {
                 idc = IDC_LIFE_FOOD_TEXT;
@@ -143,6 +165,15 @@ class playerHUD {
         };
  
         /* Icons */
+		class LIFE_STAMINA_TEXT: Life_RscText
+		{
+			idc = IDC_LIFE_STAMINA_TEXT;
+			text = "";
+			x = 0.958906 * safezoneW + safezoneX;
+			y = 0.801353 * safezoneH + safezoneY;
+			w = 0.020625 * safezoneW;
+			h = 0.011 * safezoneH;
+		};
         class LIFE_PICTURE_FOOD: life_RscPicture
         {
                 idc = IDC_LIFE_PICTURE_FOOD;
