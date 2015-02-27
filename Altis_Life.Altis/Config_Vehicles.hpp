@@ -38,6 +38,9 @@
 #define prescueboat 5000
 #define pspeedboat 20000
 #define passaultboat 3000
+#define ptarutrans 1800000
+#define ptarubench 1500000
+#define ptarufuel 1300000
 /* End Vehicle Prices */
 
 class CarShops {
@@ -105,7 +108,11 @@ class CarShops {
 			{ "B_G_Offroad_01_F", poffroad, "" },
 			{ "O_MRAP_02_F", pifrit, "" },
 			{ "B_Heli_Light_01_F", pmh9civ, "" },
-			{ "B_G_Offroad_01_armed_F", p50cal, "rebel" }
+			{ "B_G_Offroad_01_armed_F", p50cal, "rebel" },
+			{ "O_Heli_Transport_04_bench_F", ptarubench, "rebel" },
+			{ "O_Heli_Transport_04_box_F", ptarutrans, "rebel" }
+			
+			
 		};
 	};
 
@@ -123,7 +130,8 @@ class CarShops {
 		side = "civ";
 		vehicles[] = {
 			{ "B_Heli_Light_01_F", pmh9civ, "pilot" },
-			{ "O_Heli_Light_02_unarmed_F", porcaciv, "pilot" }
+			{ "O_Heli_Light_02_unarmed_F", porcaciv, "pilot" },
+			{ "O_Heli_Transport_04_fuel_F", ptarufuel, "pilot" }
 		};
 	};
 
@@ -738,6 +746,41 @@ class CfgVehicles {
         };
     };
 
+	class O_Heli_Transport_04_box_F {
+        vItemSpace = 375;
+        price = ptarutrans;
+        storageFee[] = { 55000, 0, 22000, 0 };
+		garageSell[] = { 72500, 0, 35000, 0 };
+        insurance = 2500;
+        chopShop = 5000;
+        textures[] = {
+            {  }
+        };
+    };
+	class O_Heli_Transport_04_fuel_F {
+        vItemSpace = 500;
+        price = ptarufuel;
+        storageFee[] = { 55000, 0, 22000, 0 };
+		garageSell[] = { 72500, 0, 35000, 0 };
+        insurance = 2500;
+        chopShop = 5000;
+        textures[] = {
+            { 
+             }
+        };
+    };
+	class O_Heli_Transport_04_bench_F {
+        vItemSpace = 80;
+        price = ptarubench;
+        storageFee[] = { 55000, 0, 22000, 0 };
+		garageSell[] = { 72500, 0, 35000, 0 };
+        insurance = 2500;
+        chopShop = 5000;
+        textures[] = {
+            { 
+             }
+        };
+    };
 	class O_Heli_Light_02_unarmed_F {
         vItemSpace = 210;
         price = porcaciv;

@@ -19,3 +19,7 @@
 		[_x,_index] spawn life_fnc_colorVehicle;
 	};
 } foreach (allMissionObjects "Air");
+
+if(isNil "gang_list") then {
+	[[],"TON_fnc_fetchGangs",false,false] call life_fnc_MP
+}
