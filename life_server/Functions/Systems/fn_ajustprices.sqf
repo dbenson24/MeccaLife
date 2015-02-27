@@ -91,7 +91,7 @@ _allOk = TRUE;
                 };
             }; Not Changing Buy Prices */ 
             if ((_sellprice - (_varprice * _amount * _sellingfactor * 3)) > _minprice) then {
-                _sellprice = _sellprice - (_varprice * _amount * _sellingfactor);
+                _sellprice = _sellprice - (_varprice * _amount * _sellingfactor * 3);
             } else {
                 _sellprice = _minprice;
             };
