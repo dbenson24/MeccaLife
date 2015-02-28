@@ -88321,7 +88321,7 @@ class Mission
 		};
 		class Item388
 		{
-			position[]={22922.385,10.121618,13818.861};
+			position[]={22300.826,3.8452711,13810.891};
 			name="hmrkRed_4";
 			markerType="RECTANGLE";
 			type="Empty";
@@ -88366,7 +88366,7 @@ class Mission
 		};
 		class Item393
 		{
-			position[]={33915.34,-0.30588096,16442.785};
+			position[]={33209.039,0.05170358,15904.648};
 			name="hmrkRed_9";
 			markerType="RECTANGLE";
 			type="Empty";
