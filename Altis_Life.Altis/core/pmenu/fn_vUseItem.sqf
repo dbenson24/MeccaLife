@@ -2,14 +2,12 @@
 	File: fn_vUseItem.sqf
 */
 private["_display","_curTarget","_Btn1","_Btn2"];
-if(!dialog) then {
-	createDialog "vUseItem_Menu";
-};
+createDialog "vUseItem_Menu";
 disableSerialization;
 _curTarget = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
-if(isNull _curTarget) exitWith {closeDialog 0;}; //Bad target
+if(isNull _curTarget) exitWith {hint "Wrong target!"; closeDialog 0;};
 
-_display = findDisplay 555555;
+_display = findDisplay 55555;
 _Btn1 = _display displayCtrl 55557;
 _Btn2 = _display displayCtrl 55558;
 life_pInact_curTarget = _curTarget;
