@@ -68,6 +68,7 @@ switch (_mode) do
 			case "storagebig": {"life_inv_storagebig"};
 			case "ziptie": {"life_inv_ziptie"};
 			case "lostcargo": {"life_inv_lostcargo"};
+			case "gpstracker": {"life_inv_gpstraker"};
 		};
 	};
 	
@@ -127,6 +128,7 @@ switch (_mode) do
 			case "life_inv_storagebig": {"storagebig"};
 			case "life_inv_ziptie": {"ziptie"};
 			case "life_inv_lostcargo": {"lostcargo"};
+			case "life_inv_gpstracker": {"gpstracker"};
 		};
 	};
 };

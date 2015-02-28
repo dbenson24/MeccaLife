@@ -77,7 +77,7 @@ class vUseItem_Menu
 			w = 0.24;
 			h = 0.038;
 		};
-		/*
+		
 		
 		class ButtonThree : life_RscButtonMenu
 		{
@@ -90,7 +90,7 @@ class vUseItem_Menu
 			w = 0.24;
 			h = 0.038;
 		};
-		
+		/*
 		class ButtonFour : life_RscButtonMenu
 		{
 			idc = 55560;

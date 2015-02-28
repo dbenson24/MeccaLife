@@ -100,8 +100,8 @@ class Life_Settings {
 class VirtualItems {
 	//Misc
 	VITEMMACRO(pickaxe, "STR_Item_Pickaxe", "pickaxe", 2, 750, 350, false, -1, "")
-	VITEMMACRO(fuelEmpty, "STR_Item_FuelE", "fuelEmpty", 2, -1, -1, false, -1, "icons\ico_fuelempty.paa")
-	VITEMMACRO(fuelFull, "STR_Item_FuelF", "fuelFull", 5, 850, 500, false, -1, "icons\ico_fuel.paa")
+	VITEMMACRO(fuelEmpty, "STR_Item_FuelEmpty", "fuelEmpty", 2, -1, -1, false, -1, "icons\ico_fuelempty.paa")
+	VITEMMACRO(fuelFull, "STR_Item_FuelFull", "fuelFull", 5, 850, 500, false, -1, "icons\ico_fuel.paa")
 	VITEMMACRO(spikeStrip, "STR_Item_SpikeStrip", "spikeStrip", 15, 2500, 1200, false, -1, "")
 	VITEMMACRO(lockpick, "STR_Item_Lockpick", "lockpick", 1, 150, 75, true, -1, "")
 	VITEMMACRO(goldbar, "STR_Item_GoldBar", "goldBar", 12, -1, 95000, false, -1, "")
@@ -185,6 +185,8 @@ class VirtualItems {
 	
 	VITEMMACRO(heliblastcharge, "STR_Item_heliblastcharge", "heliblastcharge", 2, 35000, 10000, false, -1, "")
 	VITEMMACRO(lostcargo, "STR_Item_lostcargo", "lostcargo", 12, -1, 95000, false, -1, "")
+	
+	VITEMMACRO(gpstracker, "STR_Item_gpstracker", "gpstracker", 2, 15000, 500, false, -1, "")
 
 };
 

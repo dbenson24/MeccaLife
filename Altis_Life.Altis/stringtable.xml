@@ -3516,6 +3516,9 @@
 		<Key ID="STR_Item_lostcargo">
 			<Original>Lost Cargo</Original>
 		</Key>
+		<Key ID="STR_Item_gpstracker">
+			<Original>Gps Tracker</Original>
+		</Key>
 	</Package>
 	<Package name="Life_License">
 		<Key ID="STR_License_Driver">
@@ -4496,6 +4499,9 @@
 		<Key ID="STR_vInAct_JerryRefuel">
 			<Original>Refuel Vehicle</Original>
 		</Key>
+		<Key ID="STR_vInAct_GpsTracker">
+			<Original>Track Vehicle</Original>
+		</Key>		
 	</Package>
 	<Package name="Session_Strings">
 		<Key ID="STR_Session_Query">

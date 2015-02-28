@@ -376,6 +376,7 @@ class Life_Client_Core
 		class bankalarmsound {};
 		class underwaterCharge {};
 		class heliblastCharge {};
+		class gpsTracker {};
 	};
 	
 	class Scripts
