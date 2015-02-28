@@ -30,9 +30,9 @@ _inv = _veh_data select 0;
 
 if(_ctrl == "goldbar" && {!(life_trunk_vehicle isKindOf "LandVehicle" OR life_trunk_vehicle isKindOf "House_F")}) exitWith {hint "You cannot store that in anything but a land vehicle!"};
 
-if(_ctrl == "oil_processed" && {!(EQUAL(life_trunk_vehicle, "O_Heli_Transport_04_fuel_F"))}) exitWith {hint "You cannot store that in anything but a Taru Fuel!"};
+if(_ctrl == "oil_processed" && {!(EQUAL("O_Heli_Transport_04_fuel_F"))}) exitWith {hint "You cannot store that in anything but a Taru Fuel!"};
 
-if(_ctrl == "oil_unprocessed" && {!(EQUAL(life_trunk_vehicle, "O_Heli_Transport_04_fuel_F"))}) exitWith {hint "You cannot store that in anything but a Taru Fuel!"};
+if(_ctrl == "oil_unprocessed" && {!(EQUAL("O_Heli_Transport_04_fuel_F"))}) exitWith {hint "You cannot store that in anything but a Taru Fuel!"};
 
 
 if(_ctrl == "money") then
