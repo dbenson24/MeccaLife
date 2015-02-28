@@ -249,7 +249,7 @@ class Life_Client_Core
 		class freezePlayer {};
 		class breakoutTimer {};
 		class waterChargeTimer {};
-		class heliblastChargeTimer {};
+		class heliChargeTimer {};
 		
 	};
 	
