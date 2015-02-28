@@ -235,7 +235,10 @@ class VirtualShops {
 		name = "STR_Shops_Market";
 		items[] = { "waterBottle", "rabbit_grilled", "apple", "redgull", "tbacon", "pickaxe", "fuelFull", "peach", "storagesmall", "storagebig" };
 	};
-
+	class burger {
+		name = "STR_Shops_burger";
+		items[] = { "waterBottle", "rburger","largesoda"};
+	};
 	class rebel {
 		name = "STR_Shops_Rebel";
 		items[] = { "waterBottle", "rabbit_grilled", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "fuelFull", "peach", "boltcutter", "blastingcharge", "ziptie" };

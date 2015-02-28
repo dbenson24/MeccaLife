@@ -16,6 +16,9 @@
 		<Key ID="STR_Shops_C_Kart">
 			<Original>Bobby's Kart-Racing Outfits</Original>
 		</Key>
+		<Key ID="STR_Shops_Burger">
+			<Original>Red Burger</Original>
+		</Key>
 		<Key ID="STR_Shops_Market">
 			<Original>Altis Market</Original>
 			<German>Altis Markt</German>
