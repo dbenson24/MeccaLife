@@ -267,6 +267,8 @@ class Life_Client_Core
 		class vehicleWeight {};
 		class deviceMine {};
 		class addVehicle2Chain {};
+		class civVinteractionMenu {};
+		class medVinteractionMenu {};
 	};
 	
 	class Cop

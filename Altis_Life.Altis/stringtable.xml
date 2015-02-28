@@ -4484,6 +4484,9 @@
 			<Italian>Piazza mine dal veicolo</Italian>
 			<Portuguese>Minerar</Portuguese>
 		</Key>
+		<Key ID="STR_vInAct_Lockpick">
+			<Original>Lockpick Vehicle</Original>
+		</Key>
 	</Package>
 	<Package name="Session_Strings">
 		<Key ID="STR_Session_Query">
