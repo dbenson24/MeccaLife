@@ -87,6 +87,7 @@ diag_log format["                End of Altis Life Client Init :: Total Executio
 diag_log "------------------------------------------------------------------------------------------------------";
 
 life_sidechat = true;
+[[player],"life_fnc_wantedFetchForCivilian",false,false] spawn life_fnc_MP;
 [[player,life_sidechat,playerSide],"TON_fnc_managesc",false,false,true] call life_fnc_MP;
 0 cutText ["","BLACK IN"];
 [] call life_fnc_hudSetup;

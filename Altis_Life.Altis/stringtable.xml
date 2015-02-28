@@ -3438,6 +3438,9 @@
 		<Key ID="STR_Item_GoldScrap">
 			<Original>Gold Scrap</Original>
 		</Key>
+		<Key ID="STR_Item_heliblastcharge">
+			<Original>Helicopter Blast Charge</Original>
+		</Key>	
 		<Key ID="STR_Item_GoldBar">
 			<Original>Gold Bar</Original>
 			<German>Goldbarren</German>
@@ -3506,6 +3509,9 @@
 		</Key>
 		<Key ID="STR_Item_Underwatercharge">
 			<Original>Under Water Charge</Original>
+		</Key>
+		<Key ID="STR_Item_lostcargo">
+			<Original>Lost Cargo</Original>
 		</Key>
 	</Package>
 	<Package name="Life_License">

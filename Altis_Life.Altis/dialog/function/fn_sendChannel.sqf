@@ -13,7 +13,7 @@ if !( life_channel_send ) exitWith { systemChat "You have to wait 10 minutes bef
 life_cash = life_cash - 10000;
 
 _message = ctrlText 9001;
-[[3,format ["%1 sends this from Channel7 to all: %2",name player,_message]],"life_fnc_broadcast",true,false] call life_fnc_MP;
+[[4,format ["%1 sends this from Channel7 to all: %2",name player,_message]],"life_fnc_broadcast",true,false] call life_fnc_MP;
 life_channel_send = false;
 
 [] spawn

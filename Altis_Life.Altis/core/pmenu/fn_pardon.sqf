@@ -19,3 +19,4 @@ if(count _data == 0) exitWith {};
 
 _uid = _data select 0;
 [[_uid],"life_fnc_wantedRemove",false,false] spawn life_fnc_MP;
+[[_uid],"life_fnc_wantedFetchForCivilian",_uid,false] spawn life_fnc_MP;
