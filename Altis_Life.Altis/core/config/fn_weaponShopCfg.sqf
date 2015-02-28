@@ -343,7 +343,8 @@ switch(_shop) do
 						["SmokeShellPurple",nil,1000 * life_donDis],
 						["SmokeShellBlue",nil,1000 * life_donDis],
 						["SmokeShellOrange",nil,1000 * life_donDis],
-						["HandGrenade",nil,50000 * life_donDis]
+						["HandGrenade",nil,50000 * life_donDis],
+						["SLAMDirectionalMine_Wire_Mag",nil,75000 * life_donDis]
 					]
 				];
 			};
