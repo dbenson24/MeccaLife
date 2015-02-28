@@ -85127,7 +85127,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=386;
+		items=399;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -85818,7 +85818,7 @@ class Mission
 		};
 		class Item87
 		{
-			position[]={14899.076,39.214531,18683.799};
+			position[]={14547.599,36.377213,18825.203};
 			name="Dealer_1_4";
 			text="Drug Dealer";
 			type="mil_dot";
@@ -88276,30 +88276,148 @@ class Mission
 		};
 		class Item383
 		{
-			position[]={14359.436,27.01437,22625.99};
+			position[]={15270.665,-0.16834699,15182.732};
 			name="hmrkGreen";
 			markerType="RECTANGLE";
 			type="Empty";
-			a=20;
-			b=20;
+			a=15000;
+			b=10000;
 		};
 		class Item384
 		{
-			position[]={14440.438,24.615889,22662.584};
+			position[]={16240.907,0.058052495,22778.26};
 			name="hmrkRed";
 			markerType="RECTANGLE";
 			type="Empty";
-			a=20;
-			b=20;
+			a=16000;
+			b=2000;
 		};
 		class Item385
 		{
-			position[]={14500.188,33.113178,22572.965};
+			position[]={14099.173,23.005716,18550.156};
 			name="hmrkRed_1";
 			markerType="RECTANGLE";
 			type="Empty";
-			a=20;
-			b=20;
+			a=900;
+			b=900;
+		};
+		class Item386
+		{
+			position[]={21903.645,15.429742,18261.586};
+			name="hmrkRed_2";
+			markerType="RECTANGLE";
+			type="Empty";
+			a=900;
+			b=900;
+		};
+		class Item387
+		{
+			position[]={3460.9595,2.1627486,13296.22};
+			name="hmrkRed_3";
+			markerType="RECTANGLE";
+			type="Empty";
+			a=900;
+			b=900;
+		};
+		class Item388
+		{
+			position[]={22922.385,10.121618,13818.861};
+			name="hmrkRed_4";
+			markerType="RECTANGLE";
+			type="Empty";
+			a=1000;
+			b=5000;
+		};
+		class Item389
+		{
+			position[]={10442.064,55.988415,8820.6631};
+			name="hmrkRed_5";
+			markerType="RECTANGLE";
+			type="Empty";
+			a=8000;
+			b=3000;
+		};
+		class Item390
+		{
+			position[]={3355.2922,-0.0041928291,15788.681};
+			name="hmrkRed_6";
+			markerType="RECTANGLE";
+			type="Empty";
+			a=900;
+			b=8000;
+		};
+		class Item391
+		{
+			position[]={14836.458,-0.013067722,13499.833};
+			name="hmrkRed_7";
+			markerType="RECTANGLE";
+			type="Empty";
+			a=2500;
+			b=2500;
+		};
+		class Item392
+		{
+			position[]={19192.67,0.0057397019,19443.461};
+			name="hmrkRed_8";
+			markerType="RECTANGLE";
+			type="Empty";
+			a=3000;
+			b=1400;
+		};
+		class Item393
+		{
+			position[]={33915.34,-0.30588096,16442.785};
+			name="hmrkRed_9";
+			markerType="RECTANGLE";
+			type="Empty";
+			a=10000;
+			b=8000;
+			angle=680;
+		};
+		class Item394
+		{
+			position[]={15407.583,0.028407808,6882.7266};
+			name="hmrkRed_10";
+			markerType="RECTANGLE";
+			type="Empty";
+			a=16000;
+			b=2000;
+		};
+		class Item395
+		{
+			position[]={1954.14,-0.033822089,15503.67};
+			name="hmrkRed_11";
+			markerType="RECTANGLE";
+			type="Empty";
+			a=2000;
+			b=16000;
+		};
+		class Item396
+		{
+			position[]={15407.578,0.090606794,23706.988};
+			name="hmrkRed_12";
+			markerType="RECTANGLE";
+			type="Empty";
+			a=16000;
+			b=2000;
+		};
+		class Item397
+		{
+			position[]={14751.318,0.047411963,4287.4927};
+			name="hmrkRed_13";
+			markerType="RECTANGLE";
+			type="Empty";
+			a=16000;
+			b=2000;
+		};
+		class Item398
+		{
+			position[]={25848.17,-0.18601188,10581.676};
+			name="hmrkRed_14";
+			markerType="RECTANGLE";
+			type="Empty";
+			a=10000;
+			b=2000;
 		};
 	};
 	class Sensors
