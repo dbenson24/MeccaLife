@@ -4490,6 +4490,9 @@
 		<Key ID="STR_vInAct_Lockpick">
 			<Original>Lockpick Vehicle</Original>
 		</Key>
+		<Key ID="STR_vInAct_JerryRefuel">
+			<Original>Refuel Vehicle</Original>
+		</Key>
 	</Package>
 	<Package name="Session_Strings">
 		<Key ID="STR_Session_Query">

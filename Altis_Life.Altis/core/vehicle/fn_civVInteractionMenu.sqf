@@ -10,6 +10,7 @@
 #define Btn3 37452
 #define Btn4 37453
 #define Btn5 37454
+#define Btn6 37455
 #define Title 37401
 private["_display","_curTarget","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6"];
 if(!dialog) then {
@@ -26,6 +27,7 @@ _Btn2 = _display displayCtrl Btn2;
 _Btn3 = _display displayCtrl Btn3;
 _Btn4 = _display displayCtrl Btn4;
 _Btn5 = _display displayCtrl Btn5;
+_Btn6 = _display displayCtrl Btn6;
 life_vInact_curTarget = _curTarget;
 
 //Button 1 - Set vehicle repair action
@@ -102,7 +104,7 @@ _Btn5 ctrlSetText localize "STR_vInAct_JerryRefuel";
 _Btn5 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_jerryRefuel; closeDialog 0;";
 
 
-if(life_inv_fuelFull > 0) then
+if(life_inv_fuelF > 0) then
 {
     _Btn5 ctrlEnable true;
 } else {
