@@ -1,8 +1,9 @@
 private["_heli","_wreck"];
 
 //Create gold vehicle wreck 
-//_heli = "Land_Cargo20_grey_F" createVehicle (["hmrkGreen",2,["hmrkRed","hmrkRed_1","hmrkRed_1_1","hmrkRed_1_3"]] call SHK_pos);
-_heli = "Land_Cargo20_grey_F" createVehicle (["hmrkGreen",2,["hmrkRed","hmrkRed_1"]] call SHK_pos);
+_heli = "Land_Cargo20_grey_F" createVehicle (["hmrkGreen",2,["hmrkRed","hmrkRed_1","hmrkRed_2","hmrkRed_3","hmrkRed_4","hmrkRed_5","hmrkRed_6","hmrkRed_7","hmrkRed_8",
+															"hmrkRed_9","hmrkRed_10","hmrkRed_11","hmrkRed_12","hmrkRed_13","hmrkRed_14"]] call SHK_pos);
+
 _heli setPosASLW [(position _heli) select 0, (position _heli) select 1, -5.5];
 _heli enableSimulation false;
 
@@ -27,6 +28,6 @@ _Pos = position _heli;
 "Marker200" setMarkerSize [2500,2500];
  _markerText = createMarker ["MarkerText200", _Pos];
 "MarkerText200" setMarkerColor "ColorBlack";
-"MarkerText200" setMarkerText "HELIWRECK";
+"MarkerText200" setMarkerText "PLANEWRECK";
 "MarkerText200" setMarkerType "mil_warning";
-[[3,"<t size='3'><t color='#00FF00'>HELIWRECK</t></t> <br/><t size='1.5'>A helicopter wreck site has been spotted, check the area for <t color='#FFFF00'> crates of lost cargo</t>. Check your map</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+[[3,"<t size='3'><t color='#00FF00'>PLANEWRECK</t></t> <br/><t size='1.5'>A plane wreck site has been spotted, check the area for <t color='#FFFF00'> crates of lost cargo</t>. Check your map</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
