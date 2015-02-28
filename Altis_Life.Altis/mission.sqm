@@ -85121,6 +85121,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Cargo20_grey_F";
 			skill=0.60000002;
+			text="heli_safe";
 			init="this addAction[""Open Vault"",life_fnc_safeCargo,"""",0,false,false,"""",' playerSide == civilian && {_target getVariable[""heli_open"",false]} ']";
 		};
 	};
