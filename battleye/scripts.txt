@@ -1,26 +1,10 @@
 1 "onMapSingleClick" !"\"onmapsingleclick\"" // log possible teleport hacks
-
-// These need to be fixed for this mission
-// 5 "addAction" !"this addAction[\"Market\",life_fnc_virt_menu" !"this addAction[\"Car Shop\",life_fnc_vehicleShopMenu" !"this addAction[\"Deliver Package\",life_fnc_dpFinish" !"this addAction[\"Rebel Market\",life_fnc_virt_menu" !"this addAction[format[\"%1 ($%2)\",[\"license_civ_driver\"]" !"this addAction[\"Process Oil\",life_fnc_processAction" !"this addAction[\"Process Iron\",life_fnc_processAction" !"this addAction[\"Drug Dealer\",life_fnc_virt_menu" !"this addAction[\"Get Delivery Mission\",life_fnc_getDPMission" !"this addAction[\"Truck Shop\",life_fnc_vehicleShopMenu" !"this addAction[\"Process Marijuana\",life_fnc_processAction" !"this addAction[\"Helicopter Shop\",life_fnc_vehicleShopMenu" !"this addAction[\"Service Helicopter\",life_fnc_serviceChopper" !"this addAction[\"Clothing Store\",life_fnc_clothingMenu" !"this addAction[\"Fish Market\",life_fnc_virt_menu" !"this addAction[\"Medical Assistance\",life_fnc_healHospital" !"this addAction[\"Boat Shop\",life_fnc_vehicleShopMenu" !"this addAction[\"General Store\",life_fnc_weaponShopMenu" !"this addAction[\"Diving Shop\",life_fnc_clothingMenu" !"this addAction[\"Vehicle Shop\",life_fnc_vehicleShopMenu" !"this addAction[\"Cop Item Shop\",life_fnc_virt_menu" !"this addAction[\"Oil Trader\",life_fnc_virt_menu" !"this addAction[\"Process Diamond\",life_fnc_processAction" !"this addAction[\"Glass Trader\",life_fnc_virt_menu" !"this addAction[\"Iron / Copper Trader\",life_fnc_virt_menu" !"this addAction[\"Process Copper\",life_fnc_processAction" !"this addAction[\"Diamond Trader\",life_fnc_virt_menu" !"this addAction[\"Salt Trader\",life_fnc_virt_menu" !"this addAction[\"Process Sand\",life_fnc_processAction" !"this addAction[\"Process Salt\",life_fnc_processAction" !"this addAction[\"Gun Store\",life_fnc_weaponShopMenu" !"this addAction[\"Process Heroin\",life_fnc_processAction" !"this addAction[\"Vehicle Garage\",  {   [[getPlayerUID player,playerSide" !"this addAction[\"Process Cocaine\",life_fnc_processAction" !"this addAction[\"Cement Trader\",life_fnc_virt_menu" !"this addAction[\"Process Rock\",life_fnc_processAction" !"this addAction[\"Wong's Food Cart\",life_fnc_virt_menu" !"this addAction[\"Chop Shop\",life_fnc_chopShopMenu" !"this addAction[format[\"%1 ($%2)\",[\"license_med_air\"]" !"this addAction[\"Pay Bail\",life_fnc_postBail" !"this addAction[\"Go-kart  Shop\",life_fnc_vehicleShopMenu" !"this addAction[\"Gold Buyer\",life_fnc_virt_menu" !"this addAction[\"Open Vault\",life_fnc_safeOpen" !"this addAction[\"<t color='#ADFF2F'>ATM</t>\",life_fnc_atmMenu" !"this addAction[\"Federal Reserve - Front Entrance\",life_fnc_fedCamDisplay" !"this addAction[\"Armament\",life_fnc_weaponShopMenu" !"this addAction [\"Capture Gang Area\",life_fnc_captureHideout" !"this addAction[\"Gang Market\",life_fnc_virt_menu" !"player addAction[localize \"STR_pAct_DropFishingNet\",life_fnc_dropFishingNet" !"player addAction[localize \"STR_pAct_RobPerson\",life_fnc_robAction"
-
-// 5 "createDialog" !="createDialog \"life_ticket_give\"" !="createDialog \"shop_menu\"" !="createDialog \"pInteraction_Menu\"" !="createDialog \"life_ticket_pay\"" !="createDialog \"Life_My_Gang_Diag\"" !="createDialog \"DeathScreen\"" !="createDialog \"playerSettings\"" !="createDialog \"SettingsMenu\"" !="createDialog \"life_wanted_menu\"" !="createDialog \"Life_atm_management\"" !="createDialog \"Chop_Shop\"" !="createDialog \"Life_Clothing\"" !="createDialog \"Life_impound_menu\"" !="createDialog \"Life_Vehicle_Shop_v2\"" !="createDialog \"shops_menu\"" !="createDialog \"TrunkMenu\"" !="createDialog \"vInteraction_Menu\"" !="createDialog \"Federal_Safe\"" !="createDialog \"life_spawn_selection\"" !"Life_Create_Gang_Diag\"" !="createDialog \"Life_key_management\"" !="createDialog \"Life_cell_phone\"" !="createDialog \"life_admin_menu\"" !="createDialog \"\"Life_Create_Gang_Diag\"\"" !="createDialog \"life_weapon_shop\""
-
-
-// This came straight off the production server
-5 "addAction" !"this addAction[\"Market\",life_fnc_virt_menu" !"this addAction[\"Car Shop\",life_fnc_vehicleShopMenu" !"this addAction[\"Deliver Package\",life_fnc_dpFinish" !"this addAction[\"Rebel Market\",life_fnc_virt_menu" !"this addAction[format[\"%1 ($%2)\",[\"license_civ_driver\"]" !"this addAction[\"Process Oil\",life_fnc_processAction" !"this addAction[\"Process Iron\",life_fnc_processAction" !"this addAction[\"Drug Dealer\",life_fnc_virt_menu" !"this addAction[\"Get Delivery Mission\",life_fnc_getDPMission" !"this addAction[\"Truck Shop\",life_fnc_vehicleShopMenu" !"this addAction[\"Process Marijuana\",life_fnc_processAction" !"this addAction[\"Helicopter Shop\",life_fnc_vehicleShopMenu" !"this addAction[\"Service Helicopter\",life_fnc_serviceChopper" !"this addAction[\"Clothing Store\",life_fnc_clothingMenu" !"this addAction[\"Fish Market\",life_fnc_virt_menu" !"this addAction[\"Medical Assistance\",life_fnc_healHospital" !"this addAction[\"Boat Shop\",life_fnc_vehicleShopMenu" !"this addAction[\"General Store\",life_fnc_weaponShopMenu" !"this addAction[\"Diving Shop\",life_fnc_clothingMenu" !"this addAction[\"Vehicle Shop\",life_fnc_vehicleShopMenu" !"this addAction[\"Cop Item Shop\",life_fnc_virt_menu" !"this addAction[\"Oil Trader\",life_fnc_virt_menu" !"this addAction[\"Process Diamond\",life_fnc_processAction" !"this addAction[\"Glass Trader\",life_fnc_virt_menu" !"this addAction[\"Iron / Copper Trader\",life_fnc_virt_menu" !"this addAction[\"Process Copper\",life_fnc_processAction" !"this addAction[\"Diamond Trader\",life_fnc_virt_menu" !"this addAction[\"Salt Trader\",life_fnc_virt_menu" !"this addAction[\"Process Sand\",life_fnc_processAction" !"this addAction[\"Process Salt\",life_fnc_processAction" !"this addAction[\"Gun Store\",life_fnc_weaponShopMenu" !"this addAction[\"Process Heroin\",life_fnc_processAction" !"this addAction[\"Vehicle Garage\",  {   [[getPlayerUID player,playerSide" !"this addAction[\"Process Cocaine\",life_fnc_processAction" !"this addAction[\"Cement Trader\",life_fnc_virt_menu" !"this addAction[\"Process Rock\",life_fnc_processAction" !"this addAction[\"Wong's Food Cart\",life_fnc_virt_menu" !"this addAction[\"Chop Shop\",life_fnc_chopShopMenu" !"this addAction[format[\"%1 ($%2)\",[\"license_med_air\"]" !"this addAction[\"Pay Bail\",life_fnc_postBail" !"this addAction[\"Go-kart  Shop\",life_fnc_vehicleShopMenu" !"this addAction[\"Gold Buyer\",life_fnc_virt_menu" !"this addAction[\"Open Vault\",life_fnc_safeOpen" !"this addAction[\"<t color='#ADFF2F'>ATM</t>\",life_fnc_atmMenu" !"this addAction[\"Federal Reserve - Front Entrance\",life_fnc_fedCamDisplay" !"this addAction[\"Armament\",life_fnc_weaponShopMenu" !"this addAction [\"Capture Gang Area\",life_fnc_captureHideout" !"this addAction[\"Gang Market\",life_fnc_virt_menu" !"player addAction[localize \"STR_pAct_DropFishingNet\",life_fnc_dropFishingNet" !"player addAction[localize \"STR_pAct_RobPerson\",life_fnc_robAction"
-5 "createDialog" !="createDialog \"life_ticket_give\"" !="createDialog \"shop_menu\"" !="createDialog \"pInteraction_Menu\"" !="createDialog \"life_ticket_pay\"" !="createDialog \"Life_My_Gang_Diag\"" !="createDialog \"DeathScreen\"" !="createDialog \"playerSettings\"" !="createDialog \"SettingsMenu\"" !="createDialog \"life_wanted_menu\"" !="createDialog \"Life_atm_management\"" !="createDialog \"Chop_Shop\"" !="createDialog \"Life_Clothing\"" !="createDialog \"Life_impound_menu\"" !="createDialog \"Life_Vehicle_Shop_v2\"" !="createDialog \"shops_menu\"" !="createDialog \"TrunkMenu\"" !="createDialog \"vInteraction_Menu\"" !="createDialog \"Federal_Safe\"" !="createDialog \"life_spawn_selection\"" !"Life_Create_Gang_Diag\"" !="createDialog \"Life_key_management\"" !="createDialog \"Life_cell_phone\"" !="createDialog \"life_admin_menu\"" !="createDialog \"\"Life_Create_Gang_Diag\"\"" !="createDialog \"life_weapon_shop\""
-
-// This will stop people from altering the GUI controls
+5 "addAction" !this allowDamage false; this enableSimulation false; this addAction[format[\"%1 ($%2)\",localize (getText(missionConfigFile" !"this addAction[\"Skydiving [$500]\",life_fnc_skydiving,\"\",0,false,false,\"\",'playerSide == civilian'];" !"this addAction[\"Market\",life_fnc_virt_menu" !"this addAction[\"Car Shop\",life_fnc_vehicleShopMenu" !"this addAction[\"Deliver Package\",life_fnc_dpFinish" !"this addAction[\"Rebel Market\",life_fnc_virt_menu" !"this addAction[format[\"%1 ($%2)\",[\"license_civ_driver\"]" !"this addAction[\"Process Oil\",life_fnc_processAction" !"this addAction[\"Process Iron\",life_fnc_processAction" !"this addAction[\"Drug Dealer\",life_fnc_virt_menu" !"this addAction[\"Get Delivery Mission\",life_fnc_getDPMission" !"this addAction[\"Truck Shop\",life_fnc_vehicleShopMenu" !"this addAction[\"Process Marijuana\",life_fnc_processAction" !"this addAction[\"Helicopter Shop\",life_fnc_vehicleShopMenu" !"this addAction[\"Service Helicopter\",life_fnc_serviceChopper" !"this addAction[\"Clothing Store\",life_fnc_clothingMenu" !"this addAction[\"Fish Market\",life_fnc_virt_menu" !"this addAction[\"Medical Assistance\",life_fnc_healHospital" !"this addAction[\"Boat Shop\",life_fnc_vehicleShopMenu" !"this addAction[\"General Store\",life_fnc_weaponShopMenu" !"this addAction[\"Diving Shop\",life_fnc_clothingMenu" !"this addAction[\"Vehicle Shop\",life_fnc_vehicleShopMenu" !"this addAction[\"Cop Item Shop\",life_fnc_virt_menu" !"this addAction[\"Oil Trader\",life_fnc_virt_menu" !"this addAction[\"Process Diamond\",life_fnc_processAction" !"this addAction[\"Glass Trader\",life_fnc_virt_menu" !"this addAction[\"Iron / Copper Trader\",life_fnc_virt_menu" !"this addAction[\"Process Copper\",life_fnc_processAction" !"this addAction[\"Diamond Trader\",life_fnc_virt_menu" !"this addAction[\"Salt Trader\",life_fnc_virt_menu" !"this addAction[\"Process Sand\",life_fnc_processAction" !"this addAction[\"Process Salt\",life_fnc_processAction" !"this addAction[\"Gun Store\",life_fnc_weaponShopMenu" !"this addAction[\"Process Heroin\",life_fnc_processAction" !"this addAction[\"Vehicle Garage\",  {   [[getPlayerUID player,playerSide" !"this addAction[\"Process Cocaine\",life_fnc_processAction" !"this addAction[\"Cement Trader\",life_fnc_virt_menu" !"this addAction[\"Process Rock\",life_fnc_processAction" !"this addAction[\"Wong's Food Cart\",life_fnc_virt_menu" !"this addAction[\"Chop Shop\",life_fnc_chopShopMenu" !"this addAction[format[\"%1 ($%2)\",[\"license_med_air\"]" !"this addAction[\"Pay Bail\",life_fnc_postBail" !"this addAction[\"Go-kart  Shop\",life_fnc_vehicleShopMenu" !"this addAction[\"Gold Buyer\",life_fnc_virt_menu" !"this addAction[\"Open Vault\",life_fnc_safeOpen" !"this addAction[\"<t color='#ADFF2F'>ATM</t>\",life_fnc_atmMenu" !"this addAction[\"Federal Reserve - Front Entrance\",life_fnc_fedCamDisplay" !"this addAction[\"Armament\",life_fnc_weaponShopMenu" !"this addAction [\"Capture Gang Area\",life_fnc_captureHideout" !"this addAction[\"Gang Market\",life_fnc_virt_menu" !"player addAction[localize \"STR_pAct_DropFishingNet\",life_fnc_dropFishingNet" !"player addAction[localize \"STR_pAct_RobPerson\",life_fnc_robAction"
+5 "createDialog" != "createDialog \"RscDisplayWelcome\";" !=createDialog \"life_ticket_give\"" !="createDialog \"shop_menu\"" !="createDialog \"pInteraction_Menu\"" !="createDialog \"life_ticket_pay\"" !="createDialog \"Life_My_Gang_Diag\"" !="createDialog \"DeathScreen\"" !="createDialog \"playerSettings\"" !="createDialog \"SettingsMenu\"" !="createDialog \"life_wanted_menu\"" !="createDialog \"Life_atm_management\"" !="createDialog \"Chop_Shop\"" !="createDialog \"Life_Clothing\"" !="createDialog \"Life_impound_menu\"" !="createDialog \"Life_Vehicle_Shop_v2\"" !="createDialog \"shops_menu\"" !="createDialog \"TrunkMenu\"" !="createDialog \"vInteraction_Menu\"" !="createDialog \"Federal_Safe\"" !="createDialog \"life_spawn_selection\"" !"Life_Create_Gang_Diag\"" !="createDialog \"Life_key_management\"" !="createDialog \"Life_cell_phone\"" !="createDialog \"life_admin_menu\"" !="createDialog \"\"Life_Create_Gang_Diag\"\"" !="createDialog \"life_weapon_shop\""
 5 "ctrlCreate"
 5 "ctrlDelete"
-
-// This stops people from playing respawn shenanigans
 5 "forceRespawn"  !="];\nplayer hideobject true;\nplayer enablesimulation false;\nforcerespawn player;\n} else {\n_isDeath = false;\n};\n};\nif (_respawnOnSt"
-
-// ThirtySix
 5 "player addAction[\"<t color='#FF0000'>Made by ThirtySix</t>\", {"
-
-// This is an exhaustive list of known hacks
 5 "AntiAntiHack$"
 5 "DurkSintax_Pro_RE"
 5 "iBeFlying"
@@ -34,12 +18,9 @@
 5 "activeITEMlistanzahl"
 5 "Detected_Remote_Execution"
 5 "g0dmode"
-5 "Pro_RE"
 5 "xyzaa"
 5 "GOLDENS_GLOBAL_SHIT_YEAH"
 5 "HaxSmokeOn"
-5 "Lysto_Lyst"
-5 "pathtoscrdir"
 5 "ewrfdfcsf"
 5 "Ug8YtyGyvguGF"
 5 "LYSTIC_MENU_LOADED"
@@ -56,25 +37,18 @@
 5 "Fury_Are_G0ds"
 5 "LY_Exec"
 5 "inf_ammo_loop_infiSTAR"
-5 "Wookie_Pro_RE"
 5 "nook3_vars"
 5 "Wookie_Init_Menu"
 5 "TTT5OptionNR"
 5 "Team_Fury_Reck_Prebs"
-5 "faze_funcs_inited"
 5 "mein1"
 5 "biggies_pro_re"
-5 "godlol"
-5 "Lystic_Init"
 5 "FAG_NEON"
 5 "Lystic_Exec"
 5 "faze_getControl"
 5 "vehicleg0dv3_BushWookie"
 5 "t0ggl3"
-5 "morphm3"
-5 "fsdddInfectLOL"
 5 "cargod"
-5 "abcdefGEH"
 5 "Wep_Spawn_Shitt"
 5 "Fury_Nuke"
 5 "faze_hax_dbclick"
@@ -84,7 +58,6 @@
 5 "battleHIGH_vehpub"
 5 "WHY_ARE_THERE_SO_MANY_FISH_IN_THE_BIG_BLUE_OCEAN"
 5 "MenuInitLol"
-5 "wierdo"
 5 "mdh_ash"
 5 "faze_initMenu"
 5 "fuckfestv2"
@@ -96,7 +69,6 @@
 5 "CharlieSheenkeybinds"
 5 "POOP_Main"
 5 "colt_lmaoooo"
-5 "W_O_O_K_I_E_Pro_RE"
 5 "toggle_keyEH"
 5 "JME_M_E_N_U_initMenu"
 5 "dawr5wdfsf23"
@@ -110,14 +82,11 @@
 5 "Root_Main4"
 5 "igodokxtt"
 5 "unlimammo"
-5 "tw4etinitMenu"
 5 "oh_nmoe_pls"
 5 "Team_OMFG_WE_ARE_SEXC"
 5 "plrshldblckls"
 5 "Jme_Is_God"
-5 "Monky_funcs_inited"
 5 "fuckmegrandma"
-5 "qopfkqpofqk"
 5 "ShadowyFaz3VehZ"
 5 "Veh_Spawn_Shitt"
 5 "wuat_fpsMonitor"
@@ -126,17 +95,12 @@
 5 "InfiniteAmmo"
 5 "PersonWhomMadeThisCorroded_Init"
 5 "nuke_vars"
-5 "debug_star_colorful"
 5 "neo_fnc_throw"
 5 "W00kieMenu_hax_toggled"
-5 "AntiAntiAntiAntiHax"
 5 "XMVJEIUI133794_mein"
-5 "aim"
 5 "GodLolPenis"
 5 "vehiclegooov3ood_BushWookie"
 5 "biggies_scroll_open"
-5 "ANTI_ANTI_HAX"
-5 "antiantiantiantih4x"
 5 "riasgremory_G0d_Mode"
 5 "BigFuckinBullets_0202020DDDEEDED"
 5 "monkytp"
@@ -159,6 +123,8 @@
 5 "THIRTYSIX_News_Banner"
 5 "Dummy_Menu"
 5 "E_x_t_a_s_y"
+5 "Extasy"
+5 ExtasyMenu_Binds
 5  "_logic setpos [1000,10,0]"
 5  _b0x1337
 5  _dummyveh 
@@ -170,8 +136,6 @@
 5  "\"You\"" 
 5  "abox1"
 5  "beeeh" 
-5  "hint '"
-5  "hint \""
 5  "hintSilent '"
 5  "hintSilent \"" !"hintSilent \"LOW FPS, PLEASE CHANGE YOUR GRAPHIC SETTINGS\"" !"hintSilent \"\";"
 5  "infiSTARBLACK" !"'infiSTARBLACK'"
