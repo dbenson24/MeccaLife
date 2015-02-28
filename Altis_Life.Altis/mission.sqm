@@ -6287,7 +6287,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=7580;
+		items=7581;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -85113,6 +85113,15 @@ class Mission
 			vehicle="Land_CncWall4_F";
 			skill=0.60000002;
 			init="this allowDamage false; this enableSimulation false;this setVectorUp [0,0,1]";
+		};
+		class Item7580
+		{
+			position[]={8337.582,56.988308,25303.699};
+			id=7929;
+			side="EMPTY";
+			vehicle="Land_Cargo20_grey_F";
+			skill=0.60000002;
+			init="this addAction[""Open Vault"",life_fnc_safeCargo,"""",0,false,false,"""",' playerSide == civilian && {_target getVariable[""heli_open"",false]} ']";
 		};
 	};
 	class Markers
