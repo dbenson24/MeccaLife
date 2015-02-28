@@ -166,6 +166,7 @@ class Life_Client_Core
 		class AAN {};
 		class revokeLicense {};
 		class updateBounty {};
+		class vUseItem {};
 	};
 	
 	class Functions

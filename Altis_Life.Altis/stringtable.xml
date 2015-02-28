@@ -4425,6 +4425,9 @@
 			<Italian>Raddrizza veicolo</Italian>
 			<Portuguese>Desvirar Veículo</Portuguese>
 		</Key>
+		<Key ID="STR_vInAct_vUseItem">
+			<Original>Use Item</Original>
+		</Key>
 		<Key ID="STR_vInAct_GetInKart">
 			<Original>Get In Kart</Original>
 			<German>Ins Kart setzen</German>

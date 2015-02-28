@@ -89,42 +89,24 @@ if(_curTarget isKindOf "Ship") then
 	};
 };
 
-//Lockpick Action
-_Btn4 ctrlSetText localize "STR_vInAct_Lockpick";
-_Btn4 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_lockpick; closeDialog 0;";
+//UseItem
+_Btn4 ctrlSetText localize "STR_vInAct_vUseItem";
+_Btn4 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_vUseItem; closeDialog 0;";
 
-
-if(life_inv_lockpick > 0) then
-{
-    _Btn4 ctrlEnable true;
-} else {
-    _Btn4 ctrlEnable false;
-};
-
-//Refuel Action
-_Btn5 ctrlSetText localize "STR_vInAct_JerryRefuel";
-_Btn5 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_jerryRefuel; closeDialog 0;";
-
-
-if(life_inv_fuelFull > 0) then
-{
-    _Btn5 ctrlEnable true;
-} else {
-    _Btn5 ctrlEnable false;
-};
 
 //DeviceMine Action
 if(typeOf _curTarget == "O_Truck_03_device_F") then 
 {
-	_Btn6 ctrlSetText localize "STR_vInAct_DeviceMine";
-	_Btn6 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_deviceMine";
+	_Btn5 ctrlSetText localize "STR_vInAct_DeviceMine";
+	_Btn5 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_deviceMine";
 	if(!isNil {(_curTarget getVariable "mining")} OR !local _curTarget && {_curTarget in life_vehicles}) then 
 	{
-		_Btn6 ctrlEnable false;
+		_Btn5 ctrlEnable false;
 	} else {
-		_Btn6 ctrlEnable true;
+		_Btn5 ctrlEnable true;
 	};
 } else {
+	_Btn5 ctrlShow false;
 	_Btn6 ctrlShow false;
 	_Btn7 ctrlShow false;
 };

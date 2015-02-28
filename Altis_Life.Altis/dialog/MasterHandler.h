@@ -33,4 +33,5 @@
 #include "jail_time.hpp"
 #include "goldSafe.h"
 #include "heliSafe.h"
+#include "v_useItem.h"
 
