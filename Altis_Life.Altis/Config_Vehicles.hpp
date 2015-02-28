@@ -747,7 +747,7 @@ class CfgVehicles {
     };
 
 	class O_Heli_Transport_04_box_F {
-        vItemSpace = 375;
+        vItemSpace = 600;
         price = ptarutrans;
         storageFee[] = { 55000, 0, 22000, 0 };
 		garageSell[] = { 72500, 0, 35000, 0 };
