@@ -2323,7 +2323,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this enableSimulation false;  this allowDamage false;  this addAction[""Process Oil"",life_fnc_processAction,""oil"",0,false,false,"""",' life_inv_oilUnprocessed > 0 && !life_is_processing'];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""driver"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""oil"",0,false,false,"""",' !license_civ_oil && playerSide == civilian '];";
+					init="this enableSimulation false;  this allowDamage false;  this addAction[""Process Oil"",life_fnc_processAction,""oil"",0,false,false,"""",' life_inv_oilUnprocessed > 0 && !life_is_processing'];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""oil"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""oil"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""oil"",0,false,false,"""",' !license_civ_oil && playerSide == civilian '];";
 				};
 				class Item9
 				{
@@ -85117,7 +85117,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=383;
+		items=386;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -88263,6 +88263,33 @@ class Mission
 			position[]={16942.117,9.8525488e-005,13446.235};
 			name="jail_boat";
 			type="Empty";
+		};
+		class Item383
+		{
+			position[]={14359.436,27.01437,22625.99};
+			name="hmrkGreen";
+			markerType="RECTANGLE";
+			type="Empty";
+			a=20;
+			b=20;
+		};
+		class Item384
+		{
+			position[]={14440.438,24.615889,22662.584};
+			name="hmrkRed";
+			markerType="RECTANGLE";
+			type="Empty";
+			a=20;
+			b=20;
+		};
+		class Item385
+		{
+			position[]={14500.188,33.113178,22572.965};
+			name="hmrkRed_1";
+			markerType="RECTANGLE";
+			type="Empty";
+			a=20;
+			b=20;
 		};
 	};
 	class Sensors

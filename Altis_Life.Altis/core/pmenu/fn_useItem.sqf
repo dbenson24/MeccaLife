@@ -114,6 +114,12 @@ switch (true) do {
 		[cursorTarget] spawn life_fnc_underwaterCharge;
 	};	
 	
+	case (EQUAL(_item,"heliblastcharge")): {
+		player reveal heli_safe;
+		(group player) reveal heli_safe;
+		[cursorTarget] spawn life_fnc_heliblastCharge;
+	};	
+	
 	default {
 		hint localize "STR_ISTR_NotUsable";
 	};

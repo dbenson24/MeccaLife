@@ -24,6 +24,8 @@ life_versionInfo = "Altis Life RPG v4.0";
 
 {_x setMarkerAlphaLocal 0} forEach ["mrkRed","mrkRed_1","mrkRed_1_1","mrkRed_1_3","mrkGreen"];
 
+{_x setMarkerAlphaLocal 0} forEach ["hmrkRed","hmrkRed_1","hmrkGreen"];  // HELI
+
 
 StartProgress = true;
 

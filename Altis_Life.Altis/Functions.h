@@ -249,6 +249,8 @@ class Life_Client_Core
 		class freezePlayer {};
 		class breakoutTimer {};
 		class waterChargeTimer {};
+		class heliblastChargeTimer {};
+		
 	};
 	
 	class Vehicle
@@ -370,6 +372,7 @@ class Life_Client_Core
 		class weed {};
 		class bankalarmsound {};
 		class underwaterCharge {};
+		class heliblastCharge {};
 	};
 	
 	class Scripts
@@ -407,6 +410,9 @@ class Life_Client_Core
 		class safeInvGold {};
 		class safeGold {};
 		class goldTake {};
+		class safeInvCargo {};
+		class safeCargo {};
+		class cargoTake {};
 	};
 	
 	class Cam
