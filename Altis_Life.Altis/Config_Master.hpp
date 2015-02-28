@@ -91,7 +91,8 @@ class Life_Settings {
 									"rabbitGrilled", "salemaGrilled", "ornateGrilled", "mackerelGrilled", "tunaGrilled",
 									"mulletGrilled", "catsharkGrilled", "turtleSoup", "henGrilled", "roosterGrilled",
 									"sheepGrilled", "goatGrilled","frog","marijuana","cannabis","froglsd","mushroom","magicm",
-									"heroinUnprocessed","cocaineUnprocessed","heroinProcessed","cocaineProcessed"
+									"heroinUnprocessed","cocaineUnprocessed","heroinProcessed","cocaineProcessed","underwatercharge",
+									"goldbarp","heliblastcharge","lostcargo"
 									};
 };
 
