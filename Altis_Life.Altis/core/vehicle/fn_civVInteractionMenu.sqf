@@ -10,7 +10,6 @@
 #define Btn3 37452
 #define Btn4 37453
 #define Btn5 37454
-#define Btn6 37455
 #define Title 37401
 private["_display","_curTarget","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6"];
 if(!dialog) then {
@@ -43,6 +42,7 @@ if("ToolKit" in (items player) && (damage _curTarget < 1)) then
 //Button 2 - Set pullout action
 _Btn2 ctrlSetText localize "STR_vInAct_PullOut";
 _Btn2 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_pulloutAction;";
+if((count crew _curTarget == 0) OR (currentWeapon player == "") OR (currentWeapon player in life_fake_weapons)) then {_Btn2 ctrlEnable false;};
 
 if(count crew _curTarget == 0) then 
 {
