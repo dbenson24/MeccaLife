@@ -90,19 +90,19 @@ class vUseItem_Menu
 			w = 0.24;
 			h = 0.038;
 		};
-		/*
+		
 		class ButtonFour : life_RscButtonMenu
 		{
 			idc = 55560;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-			text = "Boating License";
+			text = "Attach SpeedBomb";
 			sizeEx = 0.025;
 			x = BGX + 0.03;
 			y = BGY + 0.22;
 			w = 0.24;
 			h = 0.038;
 		};
-		
+		/*
 		class ButtonFive : life_RscButtonMenu
 		{
 			idc = 55561;

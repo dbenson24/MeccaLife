@@ -377,6 +377,7 @@ class Life_Client_Core
 		class underwaterCharge {};
 		class heliblastCharge {};
 		class gpsTracker {};
+		class speedbomb {};
 	};
 	
 	class Scripts

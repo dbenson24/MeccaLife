@@ -187,6 +187,7 @@ class VirtualItems {
 	VITEMMACRO(lostcargo, "STR_Item_lostcargo", "lostcargo", 12, -1, 95000, false, -1, "")
 	
 	VITEMMACRO(gpstracker, "STR_Item_gpstracker", "gpstracker", 2, 15000, 500, false, -1, "")
+	VITEMMACRO(speedbomb, "STR_Item_speedbomb", "speedbomb", 2, 15000, 500, false, -1, "")
 
 };
 

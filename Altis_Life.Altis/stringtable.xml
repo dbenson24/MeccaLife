@@ -3306,6 +3306,9 @@
 			<Italian>Ciambelle</Italian>
 			<Portuguese>Rosquinha</Portuguese>
 		</Key>
+		<Key ID="STR_Item_speedbomb">
+			<Original>SpeedBomb</Original>
+		</Key>
 		<Key ID="STR_Item_FuelEmpty">
 			<Original>Empty Fuel Can</Original>
 			<German>Leerer Benzinkanister</German>
@@ -4502,6 +4505,9 @@
 		<Key ID="STR_vInAct_GpsTracker">
 			<Original>Track Vehicle</Original>
 		</Key>		
+		<Key ID="STR_vInAct_SpeedBomb">
+			<Original>Attach SpeedBomb</Original>
+		</Key>	
 	</Package>
 	<Package name="Session_Strings">
 		<Key ID="STR_Session_Query">
