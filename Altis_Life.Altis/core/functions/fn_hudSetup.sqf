@@ -24,7 +24,7 @@ if(!life_hudStarted) then {
 		{
 			_dam = damage player;
 			_fatigue = getFatigue player;
-			waitUntil {(damage player) != _dam && (getFatigue player) != _fatigue};
+			waitUntil {((damage player) != _dam) || _fatigue != (getFatigue player)};
 			[] call life_fnc_hudUpdate;
 		};
 	};
