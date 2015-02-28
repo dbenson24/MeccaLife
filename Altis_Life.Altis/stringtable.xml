@@ -3306,14 +3306,14 @@
 			<Italian>Ciambelle</Italian>
 			<Portuguese>Rosquinha</Portuguese>
 		</Key>
-		<Key ID="STR_Item_FuelE">
+		<Key ID="STR_Item_FuelEmpty">
 			<Original>Empty Fuel Can</Original>
 			<German>Leerer Benzinkanister</German>
 			<French>Jerrican Vide</French>
 			<Italian>Tanica di carburante vuota</Italian>
 			<Portuguese>Tanque de Gasolina Vazio</Portuguese>
 		</Key>
-		<Key ID="STR_Item_FuelF">
+		<Key ID="STR_Item_FuelFull">
 			<Original>Full Fuel Can</Original>
 			<German>Benzinkanister</German>
 			<French>Jerrican de Carburant</French>
