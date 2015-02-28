@@ -166,6 +166,7 @@ class Life_Client_Core
 		class AAN {};
 		class revokeLicense {};
 		class updateBounty {};
+		class vUseItem {};
 	};
 	
 	class Functions
@@ -267,6 +268,8 @@ class Life_Client_Core
 		class vehicleWeight {};
 		class deviceMine {};
 		class addVehicle2Chain {};
+		class civVinteractionMenu {};
+		class medVinteractionMenu {};
 	};
 	
 	class Cop
@@ -373,6 +376,8 @@ class Life_Client_Core
 		class bankalarmsound {};
 		class underwaterCharge {};
 		class heliblastCharge {};
+		class gpsTracker {};
+		class speedbomb {};
 	};
 	
 	class Scripts

@@ -62,7 +62,7 @@ switch (true) do {
 			[] spawn life_fnc_spikeStrip;
 		};
 	};
-	
+/*
 	case (EQUAL(_item,"fuelFull")): {
 		if(vehicle player != player) exitWith {hint localize "STR_ISTR_RefuelInVehicle"};
 		[] spawn life_fnc_jerryRefuel;
@@ -71,7 +71,7 @@ switch (true) do {
 	case (EQUAL(_item,"lockpick")): {
 		[] spawn life_fnc_lockpick;
 	};
-	
+*/
 	case (_item in ["apple","rabbit","salema","ornate","mackerel","tuna","mullet","catshark","turtle","turtlesoup","donuts","tbacon","peach"]): {
 		if(!(EQUAL(M_CONFIG(getNumber,"VirtualItems",_item,"edible"),-1))) then {
 			if([false,_item,1] call life_fnc_handleInv) then {

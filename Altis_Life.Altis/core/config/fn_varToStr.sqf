@@ -33,8 +33,8 @@ switch (_var) do
 	case "life_inv_coffee": {(localize "STR_Item_Coffee")};
 	case "life_inv_turtlesoup": {(localize "STR_Item_TurtleSoup")};
 	case "life_inv_donuts": {(localize "STR_Item_Donuts")};
-	case "life_inv_fuelE": {(localize "STR_Item_FuelE")};
-	case "life_inv_fuelF": {(localize "STR_Item_FuelF")};
+	case "life_inv_fuelEmpty": {(localize "STR_Item_FuelEmpty")};
+	case "life_inv_fuelFull": {(localize "STR_Item_FuelFull")};
 	case "life_inv_pickaxe": {(localize "STR_Item_Pickaxe")};
 	case "life_inv_copperore": {(localize "STR_Item_CopperOre")};
 	case "life_inv_ironore": {(localize "STR_Item_IronOre")};
@@ -69,6 +69,8 @@ switch (_var) do
 	case "life_inv_magicm": {(localize "STR_Item_Magicm")};
 	case "life_inv_underwatercharge": {(localize "STR_Item_Underwatercharge")};
 	case "life_inv_lostcargo": {(localize "STR_Item_lostcargo")};
+	case "life_inv_gpstracker": {(localize "STR_Item_gpstracker")};
+	case "life_inv_speedbomb": {(localize "STR_Item_speedbomb")};
 
 	
 	//License Block

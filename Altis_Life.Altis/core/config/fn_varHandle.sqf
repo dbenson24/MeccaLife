@@ -36,8 +36,8 @@ switch (_mode) do
 			case "coffee": {"life_inv_coffee"};
 			case "turtlesoup": {"life_inv_turtlesoup"};
 			case "donuts": {"life_inv_donuts"};
-			case "fuelE": {"life_inv_fuelE"};
-			case "fuelF": {"life_inv_fuelF"};
+			case "fuelEmpty": {"life_inv_fuelEmpty"};
+			case "fuelFull": {"life_inv_fuelFull"};
 			case "money": {"life_cash"};
 			case "pickaxe": {"life_inv_pickaxe"};
 			case "copperore": {"life_inv_copperore"};
@@ -68,6 +68,8 @@ switch (_mode) do
 			case "storagebig": {"life_inv_storagebig"};
 			case "ziptie": {"life_inv_ziptie"};
 			case "lostcargo": {"life_inv_lostcargo"};
+			case "gpstracker": {"life_inv_gpstraker"};
+			case "speedbomb": {"life_inv_speedbomb"};
 		};
 	};
 	
@@ -95,8 +97,8 @@ switch (_mode) do
 			case "life_inv_coffee": {"coffee"};
 			case "life_inv_turtlesoup": {"turtlesoup"};
 			case "life_inv_donuts": {"donuts"};
-			case "life_inv_fuelE": {"fuelE"};
-			case "life_inv_fuelF": {"fuelF"};
+			case "life_inv_fuelEmpty": {"fuelEmpty"};
+			case "life_inv_fuelFull": {"fuelFull"};
 			case "life_cash": {"money"};
 			case "life_inv_pickaxe": {"pickaxe"};
 			case "life_inv_copperore": {"copperore"};
@@ -127,6 +129,8 @@ switch (_mode) do
 			case "life_inv_storagebig": {"storagebig"};
 			case "life_inv_ziptie": {"ziptie"};
 			case "life_inv_lostcargo": {"lostcargo"};
+			case "life_inv_gpstracker": {"gpstracker"};
+			case "life_inv_speedbomb": {"speedbomb"};
 		};
 	};
 };
