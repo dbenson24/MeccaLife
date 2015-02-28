@@ -28,7 +28,7 @@ titleText["You have attached an armed speed bomb to this vehicle.","PLAIN"];
 {
 	_veh = _this select 0;
 	waitUntil {(speed _veh) > 70};
-	[[_veh, "caralarm",10],"life_fnc_playSound",true,false] spawn BIS_fnc_MP;
+	[[_veh, "car_alarm",10],"life_fnc_playSound",true,false] spawn BIS_fnc_MP;
 	hint "A speed bomb you planted on a vehicle has just become active!";
 	{ [[2,"A speed bomb has been activated on this vehicle and will detonate when your speed drops below 50km/h!"],"life_fnc_broadcast",_x,false] spawn BIS_fnc_MP; } foreach (crew _veh);
 	waitUntil {(speed _veh) < 50};

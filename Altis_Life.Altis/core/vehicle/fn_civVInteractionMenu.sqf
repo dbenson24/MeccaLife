@@ -109,4 +109,6 @@ if(typeOf _curTarget == "O_Truck_03_device_F") then
 	_Btn5 ctrlShow false;
 	_Btn6 ctrlShow false;
 	_Btn7 ctrlShow false;
+	_Btn8 ctrlShow false;
+	_Btn9 ctrlShow false;
 };

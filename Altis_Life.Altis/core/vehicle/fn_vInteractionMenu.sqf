@@ -88,6 +88,10 @@ if(playerSide == west) then {
 	{
 		_Btn7 ctrlShow false;
 	};	
+	
+		_Btn8 ctrlSetText localize "STR_vInAct_vUseItem";
+		_Btn8 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_vUseItem; closeDialog 0;";
+	
 } else {
 	
 	if(_curTarget isKindOf "Ship") then {
@@ -117,10 +121,6 @@ if(playerSide == west) then {
 	} else {
 		_Btn3 ctrlShow false;
 	};
-	
-	_Btn8 ctrlSetText localize "STR_vInAct_vUseItem";
-	_Btn8 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_vUseItem; closeDialog 0;";
-	
 	
 	_Btn4 ctrlShow false;
 	_Btn5 ctrlShow false;
