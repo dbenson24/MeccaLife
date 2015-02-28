@@ -1,7 +1,7 @@
 /*
 	File: fn_vUseItem.sqf
 */
-private["_display","_curTarget","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6","_Btn7","_Btn8","_Btn9"];
+private["_display","_curTarget","_Btn1","_Btn2"];
 if(!dialog) then {
 	createDialog "vUseItem_Menu";
 };
@@ -9,8 +9,6 @@ disableSerialization;
 _curTarget = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _curTarget) exitWith {closeDialog 0;}; //Bad target
 
-		
-if(!isPlayer _curTarget && side _curTarget == civilian) exitWith {closeDialog 0;}; //Bad side check?
 _display = findDisplay 555555;
 _Btn1 = _display displayCtrl 55557;
 _Btn2 = _display displayCtrl 55558;

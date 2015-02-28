@@ -33,7 +33,7 @@ class vUseItem_Menu
 		{
 			colorBackground[] = {0,0,0,0};
 			idc = 55556;
-			text = "Dpt. of Motor Vehicles";
+			text = "Vehicle Item Menu";
 			x = BGX;
 			y = BGY;
 			w = BGW;
@@ -58,7 +58,7 @@ class vUseItem_Menu
 		{
 			idc = 55557;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-			text = "Driver License";
+			text = "Lockpick";
 			sizeEx = 0.025;
 			x = BGX + 0.03;
 			y = BGY + 0.07;
@@ -70,7 +70,7 @@ class vUseItem_Menu
 		{
 			idc = 55558;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-			text = "Truck License";
+			text = "Refuel";
 			sizeEx = 0.025;
 			x = BGX + 0.03;
 			y = BGY + 0.12;
