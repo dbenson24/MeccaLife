@@ -76,8 +76,8 @@ if(playerSide == west) then {
 			if(count crew _curTarget == 0 && {canMove _curTarget} && {locked _curTarget == 0}) then {_Btn7 ctrlEnable true;} else {_Btn7 ctrlEnable false};
 		} else {
 			_Btn7 ctrlSetText localize "STR_vInAct_Unflip";
-			_Btn7 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_flipAction; closeDialog 0;";
-			if(count crew _curTarget == 0 && {canMove _curTarget}) then { _Btn7 ctrlEnable true;} else {_Btn7 ctrlEnable false;};
+			_Btn7 buttonSetAction "life_vInact_curTarget setPos [getPos life_vInact_curTarget select 0, getPos life_vInact_curTarget select 1, (getPos life_vInact_curTarget select 2)+0.5]; closeDialog 0;";
+			if(count crew _curTarget == 0 && {canMove _curTarget}) then { _Btn7 ctrlEnable false;} else {_Btn7 ctrlEnable true;};
 		};
 	};
 	
@@ -94,7 +94,7 @@ if(playerSide == west) then {
 			if(count crew _curTarget == 0 && {canMove _curTarget} && {locked _curTarget == 0}) then {_Btn3 ctrlEnable true;} else {_Btn3 ctrlEnable false};
 		} else {
 			_Btn3 ctrlSetText localize "STR_vInAct_Unflip";
-			_Btn3 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_flipAction; closeDialog 0;";
+			_Btn3 buttonSetAction "life_vInact_curTarget setPos [getPos life_vInact_curTarget select 0, getPos life_vInact_curTarget select 1, (getPos life_vInact_curTarget select 2)+0.5]; closeDialog 0;";
 			if(count crew _curTarget == 0 && {canMove _curTarget}) then { _Btn3 ctrlEnable false;} else {_Btn3 ctrlEnable true;};
 		};
 	};
@@ -111,7 +111,10 @@ if(playerSide == west) then {
 		_Btn4 ctrlShow false;
 	};
 	
-	_Btn5 ctrlShow false;
+	//lockpick
+	_Btn5 ctrlSetText localize "STR_vInAct_Lockpick";
+	_Btn5 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_lockpick; closeDialog 0;";
+	
 	_Btn6 ctrlShow false;
 	_Btn7 ctrlShow false;
 };
