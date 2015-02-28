@@ -3418,6 +3418,9 @@
 			<Italian>Grimaldello</Italian>
 			<Portuguese>Chave Mestra</Portuguese>
 		</Key>
+		<Key ID="STR_Item_JerryRefuel">
+			<Original>Refuel</Original>
+		</Key>	
 		<Key ID="STR_Item_Rock">
 			<Original>Rock</Original>
 			<German>Stein</German>
