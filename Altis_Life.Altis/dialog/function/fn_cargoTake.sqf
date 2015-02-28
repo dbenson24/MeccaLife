@@ -29,5 +29,5 @@ if(EQUAL(_num,0)) exitWith {hint localize "STR_NOTF_InvFull"};
 
 //Take it
 if(!([true,_ctrl,_num] call life_fnc_handleInv)) exitWith {hint localize "STR_NOTF_CouldntAdd";};
-life_cargoObj SVAR ["lostcargo",_safeInfo - _num,TRUE];
+life_cargoObj SVAR ["cargo",_safeInfo - _num,TRUE];
 [life_cargoObj] call life_fnc_safeInvCargo;

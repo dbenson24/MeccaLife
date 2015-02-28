@@ -1,7 +1,7 @@
-class heli_Safe
+class Heli_Safe
 {
 	idd = 3500;
-	name = "heli_Safe";
+	name = "Heli_Safe";
 	movingEnable = false;
 	enableSimulation = true;
 	
@@ -83,7 +83,7 @@ class heli_Safe
 			idc = -1;
 			text = "$STR_Trunk_Take";
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-			onButtonClick = "[] call life_fnc_goldTake;";
+			onButtonClick = "[] call life_fnc_cargoTake;";
 			x = 0.19; y = 0.78;
 			w = (6.25 / 40);
 			h = (1 / 25);

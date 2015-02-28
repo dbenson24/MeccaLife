@@ -7,7 +7,7 @@ if(isNull life_cargoObj) exitWith {};
 if(playerSide != civilian) exitWith {};
 if((life_cargoObj getVariable["cargo",-1]) < 1) exitWith {hint localize "STR_Civ_VaultEmpty";};
 if((life_cargoObj getVariable["inUse",false])) exitWith {hint localize "STR_Civ_VaultInUse"};
-if(!createDialog "heli_Safe") exitWith {localize "STR_MISC_DialogError"};
+if(!createDialog "Heli_Safe") exitWith {localize "STR_MISC_DialogError"};
 disableSerialization;
 ctrlSetText[3501,(localize "STR_Civ_SafeInv")];
 [life_cargoObj] call life_fnc_safeInvCargo;
