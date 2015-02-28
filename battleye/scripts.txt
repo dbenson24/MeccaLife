@@ -159,3 +159,66 @@
 5 "THIRTYSIX_News_Banner"
 5 "Dummy_Menu"
 5 "E_x_t_a_s_y"
+5  "_logic setpos [1000,10,0]"
+5  _b0x1337
+5  _dummyveh 
+5  _minimap 
+5  "_box addBackpackCargoGlobal" 
+5  "_cute"
+5  "_lpajd addaction skin"
+5  "_stuff" 
+5  "\"You\"" 
+5  "abox1"
+5  "beeeh" 
+5  "hint '"
+5  "hint \""
+5  "hintSilent '"
+5  "hintSilent \"" !"hintSilent \"LOW FPS, PLEASE CHANGE YOUR GRAPHIC SETTINGS\"" !"hintSilent \"\";"
+5  "infiSTARBLACK" !"'infiSTARBLACK'"
+5  "infiSTAR_fillRE" !"'infiSTAR_fillRE'"
+5  "lol\car.sqf" 
+5  "menu_star"
+5  "player setVehicleInit \"allUnits = [];\";"
+5  "selectedItemCountLeft = lnbText" 
+5  "SP_bindmenu"
+5  "Systems Online" 
+5  "tentList = allmissionobjects \"Land_A_tent\";"
+5  @TheWarZ 
+5  101000 
+5  action_crate1 
+5  AH_OFF_LOL !"'AH_OFF_LOL'"
+5  ammo_norecoil
+5  antiAggro_zeds 
+5  ax_main_menu
+5  BigFuckinBullets 
+5  dayz-injector 
+5  F1_ALX
+5  gible
+5  Helltex
+5  igodokxtt 
+5  MedMen 
+5  Metallica 
+5  MY_KEYDOWN_FNC
+5  myvar23
+5  ProDayz 
+5  Shadowy_NONRE 
+5  Ug8YtyGyvguGF 
+5  wasteland 
+5  wuat 
+5  zeus_star 
+5  ZombieShield 
+5  LoganNZL
+5  closeDisplay !"'closeDisplay'" !"closeDisplay 0" !"closeDisplay 2" !"if (!isNil \"closeDisplay\") then {"
+5  "cutText [\"Bandit Box Spawned"
+5  "hint \"weapon has been added\""
+5  "Hint \"Map markers on\""
+5  "hint \"Systems Online, Binds in Help.txt\""
+5  "cutText [\"Survivor Spawned"
+5  gearAdd
+5  "useful\\"
+5  "mojanq"
+5  "freddies"
+5  "vscripts\\"
+5  AddTentsToMap
+5  bus1,bus2,bus3,bus4,bus5,bus6,bus7,bus8
+5  hoen
