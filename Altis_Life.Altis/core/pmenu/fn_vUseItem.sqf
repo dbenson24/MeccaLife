@@ -36,7 +36,6 @@ if(life_inv_lockpick > 0) then
 _Btn2 ctrlSetText localize "STR_vInAct_JerryRefuel";
 _Btn2 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_jerryRefuel; closeDialog 0;";
 
-if 
 if(life_inv_fuelFull > 0) then
 {
     _Btn2 ctrlEnable true;
