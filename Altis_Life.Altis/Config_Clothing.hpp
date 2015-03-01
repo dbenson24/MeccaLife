@@ -100,6 +100,9 @@ class Clothing {
 
 		uniforms[] = {
 			{ "NONE", "Remove Uniform", 0, { "", "", -1 } },
+			{ "U_BG_Guerilla2_2", "test", 25, { "", "", -1 } },
+			{ "U_BG_Guerilla3_2", "test2", 25, { "", "", -1 } },
+			{ "U_O_OfficerUniform_ocamo", "test3", 25, { "", "", -1 } },
 			{ "U_Competitor", "Recruit", 25, { "", "", -1 } },
 			{ "U_Rangemaster", "Cadet", 25, { "", "", -1 } },
 			{ "U_Marshal", "Patrol Officer", 350, { "life_coplevel", "SCALAR", 2 } },

@@ -17,7 +17,7 @@ if(side player == WEST) then {
 		player setObjectTextureGlobal [0, "textures\cadettroop.jpg"]; 
 	};
 	// Cop Level 3 & 4
-	if (uniform player == "U_I_CombatUniform" && (FETCH_CONST(life_coplevel) == 3 OR FETCH_CONST(life_coplevel) == 4)) then {
+	if (uniform player == "U_BG_Guerilla3_2" && (FETCH_CONST(life_coplevel) == 3 OR FETCH_CONST(life_coplevel) == 4)) then {
 		player setObjectTextureGlobal [0, "textures\corptroop.jpg"]; 
 	};
 	// Cop Level 5 & 6 & 7

@@ -79,7 +79,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 	
 	case 3:
 	{
-	    player ForceAddUniform "U_I_CombatUniform";
+	    player ForceAddUniform "U_BG_Guerilla3_2";
 		player addWeapon "arifle_MX_Black_F";
 		player addPrimaryWeaponItem "optic_MRCO";
 		player addVest "V_TacVest_blk_POLICE";
@@ -97,7 +97,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 	
 	case 4:
 	{
-	    player ForceAddUniform "U_I_CombatUniform";
+	    player ForceAddUniform "U_BG_Guerilla3_2";
 		player addWeapon "arifle_MXM_Black_F";
 		player addPrimaryWeaponItem "optic_MRCO";
 		player addVest "V_PlateCarrier1_blk";
