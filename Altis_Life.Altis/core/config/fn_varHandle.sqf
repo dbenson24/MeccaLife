@@ -70,6 +70,7 @@ switch (_mode) do
 			case "lostcargo": {"life_inv_lostcargo"};
 			case "gpstracker": {"life_inv_gpstraker"};
 			case "speedbomb": {"life_inv_speedbomb"};
+			case "blindfold": {"life_inv_blindfold"};
 		};
 	};
 	
@@ -131,6 +132,7 @@ switch (_mode) do
 			case "life_inv_lostcargo": {"lostcargo"};
 			case "life_inv_gpstracker": {"gpstracker"};
 			case "life_inv_speedbomb": {"speedbomb"};
+			case "life_inv_blindfold": {"blindfold"};
 		};
 	};
 };

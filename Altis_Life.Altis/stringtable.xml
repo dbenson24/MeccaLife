@@ -3013,6 +3013,9 @@
 			<Italian>Cannabis</Italian>
 			<Portuguese>Maconha não Processada</Portuguese>
 		</Key>
+		<Key ID="STR_Item_blindfold">
+			<Original>BlindFold</Original>
+		</Key>
 		<Key ID="STR_Item_Apple">
 			<Original>Apple</Original>
 			<German>Apfel</German>

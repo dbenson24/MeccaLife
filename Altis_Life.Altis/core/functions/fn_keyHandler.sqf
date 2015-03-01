@@ -193,9 +193,9 @@ switch (_code) do {
 	//Map Key
 	case _mapKey: {
 		switch (playerSide) do {
-			case west: {if(!visibleMap) then {[] spawn life_fnc_copMarkers;}};
+			case west: {(if(!visibleMap) && !(player GVAR ["blindfolded", false])) then {[] spawn life_fnc_copMarkers;}};
 			case independent: {if(!visibleMap) then {[] spawn life_fnc_medicMarkers;}};
-			case civilian: {if(!visibleMap) then {[] spawn life_fnc_gangMarkers;}};
+			case civilian: {(if(!visibleMap) && !(player GVAR ["blindfolded", false])) then {[] spawn life_fnc_gangMarkers;}};
 		};
 	};
 	
@@ -439,6 +439,12 @@ switch (_code) do {
 if (_code in (actionKeys "TacticalView")) then
 {
 	hint "TacticalView Mode is disabled on Mecca AltisLife" ;
+	_handled = true;
+};
+
+if ((player getVariable["blindfolded",false]) && (_code in (actionKeys "ShowMap") || _code in (actionKeys "MiniMap") || _code in (actionKeys "MiniMapToggle"))) then
+{
+	systemChat "You can't view maps while blindfolded!" ;
 	_handled = true;
 };
 
