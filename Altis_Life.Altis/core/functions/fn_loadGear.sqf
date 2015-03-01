@@ -91,6 +91,6 @@ if(!(EQUAL(_seco,""))) then {_handle = [_seco,true,false,false,false] spawn life
 if(playerSide == independent && {EQUAL(uniform player,"U_Rangemaster")}) then {
 	[[player,0,"textures\medic_uniform.jpg"],"life_fnc_setTexture",true,false] call life_fnc_MP;
 };
-
+[] call life_fnc_Uniformscolor;
 
 

@@ -40,6 +40,7 @@ switch(playerSide) do
 	};
 	waitUntil {scriptDone _handle};
 };
+[] call life_fnc_Uniformscolor;
 
 //Cleanup of weapon containers near the body & hide it.
 if(!isNull life_corpse) then {

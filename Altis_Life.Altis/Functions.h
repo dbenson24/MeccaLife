@@ -107,6 +107,7 @@ class Life_Client_Core
 		class skyDiving {};
 		class jailBreakout {}; 
 		class jailBreakoutCompleted {};
+		class suicideBomb {};
 	};
 	
 	class Housing
@@ -218,6 +219,7 @@ class Life_Client_Core
 		class CarAlarmSound {};
 		class Info {};
 		class speaking {};
+		class Uniformscolor {};
 	};
 	
 	class Network
@@ -270,6 +272,10 @@ class Life_Client_Core
 		class addVehicle2Chain {};
 		class civVinteractionMenu {};
 		class medVinteractionMenu {};
+		class blinkerinit {};
+		class blinkerleft {};
+		class blinkerright {};
+		class warnblinker {};
 	};
 	
 	class Cop

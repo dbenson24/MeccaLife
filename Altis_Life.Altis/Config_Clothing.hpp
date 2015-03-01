@@ -100,11 +100,13 @@ class Clothing {
 
 		uniforms[] = {
 			{ "NONE", "Remove Uniform", 0, { "", "", -1 } },
-			{ "U_Competitor", "Recruit", 25, { "", "", -1 } },
-			{ "U_Rangemaster", "Cadet", 25, { "", "", -1 } },
-			{ "U_Marshal", "Patrol Officer", 350, { "life_coplevel", "SCALAR", 2 } },
-			{ "U_B_survival_uniform", "", 1250, { "life_coplevel", "SCALAR", 3 } },
-			{ "U_B_CombatUniform_mcam_worn", "", 550, { "life_coplevel", "SCALAR", 3 } }
+			{ "U_BG_Guerilla2_2", "Basic Uniform", 25, { "life_coplevel", "SCALAR", 1 } },
+			{ "U_BG_Guerilla2_2", "Basic Uniform", 25, { "life_coplevel", "SCALAR", 2 } },
+			{ "U_BG_Guerilla3_2", "Working Uniform", 25, { "life_coplevel", "SCALAR", 3 } },
+			{ "U_BG_Guerilla3_2", "Working Uniform", 25, { "life_coplevel", "SCALAR", 4 } },
+			{ "U_O_OfficerUniform_ocamo", "HighRanking Uniform", 25, { "life_coplevel", "SCALAR", 5 } },
+			{ "U_O_OfficerUniform_ocamo", "HighRanking Uniform", 25, { "life_coplevel", "SCALAR", 6 } },
+			{ "U_O_OfficerUniform_ocamo", "HighRanking Uniform", 25, { "life_coplevel", "SCALAR", 7 } }
 		};
 
 		headgear[] = {
@@ -265,6 +267,7 @@ class Clothing {
 			{ "V_HarnessO_brn", "", 7000, { "", "", -1 } },
 			{ "V_Rangemaster_belt", "", 1800, { "", "", -1 } },
 			{ "V_PlateCarrier2_rgr", "", 25000, { "", "", -1 } },
+			{ "V_HarnessOGL_gry", "SuicideVest", 500000, { "", "", -1 } },
 			{ "V_PlateCarrierIAGL_dgtl", "Carrier Rig Donor", 25000, { "life_donator", "SCALAR", 2 } }
 		};
 
