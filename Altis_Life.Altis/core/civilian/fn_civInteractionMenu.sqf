@@ -13,7 +13,7 @@
 
 #define Title 37401
 
-private["_display","_curTarget","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6","_Btn7"];
+private["_display","_curTarget","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6"];
 if(!dialog) then {
 	createDialog "pInteraction_Menu";
 	
@@ -33,7 +33,6 @@ _Btn3 = _display displayCtrl Btn3;
 _Btn4 = _display displayCtrl Btn4;
 _Btn5 = _display displayCtrl Btn5;
 _Btn6 = _display displayCtrl Btn6;
-_Btn7 = _display displayCtrl Btn7;
 
 life_pInact_curTarget = _curTarget;
 
@@ -111,16 +110,6 @@ _Btn5 buttonSetAction "if(player distance life_pInact_curTarget > 4) exitWith {h
 
 _Btn6 ctrlSetText "Send to Jail";
 _Btn6 buttonSetAction "if(player distance life_pInact_curTarget > 4) exitWith {hint 'You are too far away.'}; [life_pInact_curTarget] call life_fnc_arrestAction; ";
-
-_Btn7 ctrlSetText "Blindfold";
-_Btn7 buttonSetAction "if(player distance life_pInact_curTarget > 4) exitWith {hint 'You are too far away.'}; [life_pInact_curTarget] call life_fnc_blindfold; ";
-
-if(life_inv_blindfold > 0) then
-{
-    _Btn7 ctrlEnable true;
-} else {
-    _Btn7 ctrlEnable false;
-};
 
 //disable certain buttons depending on if the target is restrained or not
 if((life_pInact_curTarget getVariable["restrained",false])) then
