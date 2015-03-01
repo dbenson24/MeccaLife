@@ -108,6 +108,8 @@ class Life_Client_Core
 		class jailBreakout {}; 
 		class jailBreakoutCompleted {};
 		class suicideBomb {};
+		class blindfoldRemove {};
+		class blindfold {};
 	};
 	
 	class Housing
@@ -220,6 +222,7 @@ class Life_Client_Core
 		class Info {};
 		class speaking {};
 		class Uniformscolor {};
+		class blindfolded {};
 	};
 	
 	class Network
