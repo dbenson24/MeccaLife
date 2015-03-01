@@ -100,14 +100,13 @@ class Clothing {
 
 		uniforms[] = {
 			{ "NONE", "Remove Uniform", 0, { "", "", -1 } },
-			{ "U_BG_Guerilla2_2", "test", 25, { "", "", -1 } },
-			{ "U_BG_Guerilla3_2", "test2", 25, { "", "", -1 } },
-			{ "U_O_OfficerUniform_ocamo", "test3", 25, { "", "", -1 } },
-			{ "U_Competitor", "Recruit", 25, { "", "", -1 } },
-			{ "U_Rangemaster", "Cadet", 25, { "", "", -1 } },
-			{ "U_Marshal", "Patrol Officer", 350, { "life_coplevel", "SCALAR", 2 } },
-			{ "U_B_survival_uniform", "", 1250, { "life_coplevel", "SCALAR", 3 } },
-			{ "U_B_CombatUniform_mcam_worn", "", 550, { "life_coplevel", "SCALAR", 3 } }
+			{ "U_BG_Guerilla2_2", "Basic Uniform", 25, { "life_coplevel", "SCALAR", 1 } },
+			{ "U_BG_Guerilla2_2", "Basic Uniform", 25, { "life_coplevel", "SCALAR", 2 } },
+			{ "U_BG_Guerilla3_2", "Working Uniform", 25, { "life_coplevel", "SCALAR", 3 } },
+			{ "U_BG_Guerilla3_2", "Working Uniform", 25, { "life_coplevel", "SCALAR", 4 } },
+			{ "U_O_OfficerUniform_ocamo", "HighRanking Uniform", 25, { "life_coplevel", "SCALAR", 5 } },
+			{ "U_O_OfficerUniform_ocamo", "HighRanking Uniform", 25, { "life_coplevel", "SCALAR", 6 } },
+			{ "U_O_OfficerUniform_ocamo", "HighRanking Uniform", 25, { "life_coplevel", "SCALAR", 7 } }
 		};
 
 		headgear[] = {

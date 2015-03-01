@@ -47,6 +47,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 	case 1:
 	{
 		player ForceAddUniform "U_BG_Guerilla2_2";
+		player setObjectTextureGlobal [0, "textures\cadettroop.jpg"]; 
 		player addVest "V_TacVest_blk_POLICE";
 		player addMagazine "16Rnd_9x21_Mag";
 		player addMagazine "16Rnd_9x21_Mag";
@@ -61,6 +62,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 	case 2:
 	{
 		player ForceAddUniform "U_BG_Guerilla2_2";
+		player setObjectTextureGlobal [0, "textures\cadettroop.jpg"]; 
 		player addWeapon "arifle_MXC_Black_F";
 		player addPrimaryWeaponItem "optic_Arco";
 		player addVest "V_TacVest_blk_POLICE";
@@ -80,6 +82,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 	case 3:
 	{
 	    player ForceAddUniform "U_BG_Guerilla3_2";
+		player setObjectTextureGlobal [0, "textures\corptroop.jpg"];
 		player addWeapon "arifle_MX_Black_F";
 		player addPrimaryWeaponItem "optic_MRCO";
 		player addVest "V_TacVest_blk_POLICE";
@@ -98,6 +101,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 	case 4:
 	{
 	    player ForceAddUniform "U_BG_Guerilla3_2";
+		player setObjectTextureGlobal [0, "textures\corptroop.jpg"];
 		player addWeapon "arifle_MXM_Black_F";
 		player addPrimaryWeaponItem "optic_MRCO";
 		player addVest "V_PlateCarrier1_blk";
@@ -116,6 +120,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 	case 5:
 	{
 	    player ForceAddUniform "U_O_OfficerUniform_ocamo";
+		player setObjectTextureGlobal [0, "textures\corptroop.jpg"];
 		player addVest "V_PlateCarrier1_blk";
 		player addWeapon "arifle_MXM_Black_F";
 		player addPrimaryWeaponItem "optic_MRCO";
@@ -133,6 +138,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 	case 6:
 	{
 	    player ForceAddUniform "U_O_OfficerUniform_ocamo";
+		player setObjectTextureGlobal [0, "textures\corptroop.jpg"];
 		player addWeapon "arifle_MXM_F";
 		player addVest "V_PlateCarrier1_blk";
 		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
@@ -149,6 +155,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 	case 7:
 	{
 	    player ForceAddUniform "U_O_OfficerUniform_ocamo";
+		player setObjectTextureGlobal [0, "textures\corptroop.jpg"];
 		player addVest "V_PlateCarrier1_blk";
 		player addWeapon "arifle_MXM_F";
 		player addPrimaryWeaponItem "optic_Arco";
