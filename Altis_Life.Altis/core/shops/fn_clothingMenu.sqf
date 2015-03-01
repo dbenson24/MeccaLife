@@ -167,6 +167,7 @@ life_clothesPurchased = nil;
 //Check uniform purchase.
 if((life_clothing_purchase select 0) == -1) then {
 	if(life_oldClothes != uniform player) then {player addUniform life_oldClothes;};
+	[] call life_fnc_Uniformscolor;
 };
 //Check hat
 if((life_clothing_purchase select 1) == -1) then {
@@ -205,3 +206,4 @@ if((life_clothing_purchase select 4) == -1) then {
 
 life_clothing_purchase = [-1,-1,-1,-1,-1];
 [] call life_fnc_saveGear;
+[] call life_fnc_Uniformscolor;
