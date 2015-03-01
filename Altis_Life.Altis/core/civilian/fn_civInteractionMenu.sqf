@@ -17,7 +17,6 @@ private["_display","_curTarget","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6",
 if(!dialog) then {
 	createDialog "pInteraction_Menu";
 	
-	ctrlShow[37456,false];
 	ctrlShow[37457,false];
 	
 	
