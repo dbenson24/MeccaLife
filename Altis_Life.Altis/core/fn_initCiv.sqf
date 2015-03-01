@@ -39,4 +39,4 @@ if (!life_is_alive) then
 if (count units player <= 1) then {
     [] call life_fnc_joinGang;
 };
-player addRating 9999999;
+player addRating 9999999; [] call life_fnc_Uniformscolor;

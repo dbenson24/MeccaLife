@@ -218,6 +218,7 @@ class Life_Client_Core
 		class CarAlarmSound {};
 		class Info {};
 		class speaking {};
+		class Uniformscolor {};
 	};
 	
 	class Network
