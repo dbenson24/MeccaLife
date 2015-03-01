@@ -33,6 +33,7 @@ titleText[format[localize "STR_Cop_Retrained",_cop GVAR ["realname",name _cop]],
 player say3D "cuff";
 				
 while {player GVAR  "restrained"} do {
+	life_action_inUse = true;
 	if(vehicle player == player) then {
 		player playMove "AmovPercMstpSnonWnonDnon_Ease";
 	};
@@ -58,6 +59,7 @@ while {player GVAR  "restrained"} do {
 	};
 };
 
+life_action_inUse = false;
 //disableUserInput false;
 		
 if(alive player) then {
