@@ -88275,12 +88275,13 @@ class Mission
 		};
 		class Item383
 		{
-			position[]={15270.665,-0.16834699,15182.732};
+			position[]={13862.744,15.946973,16707.979};
 			name="hmrkGreen";
 			markerType="RECTANGLE";
 			type="Empty";
-			a=15000;
-			b=10000;
+			a=11000;
+			b=6000;
+			angle=180.521;
 		};
 		class Item384
 		{
