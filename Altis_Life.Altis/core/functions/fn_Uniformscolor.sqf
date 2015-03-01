@@ -22,7 +22,7 @@ if(side player == WEST) then {
 	};
 	// Cop Level 5 & 6 & 7
 	if (uniform player == "U_O_OfficerUniform_ocamo" && (FETCH_CONST(life_coplevel) == 5 OR FETCH_CONST(life_coplevel) == 6 OR FETCH_CONST(life_coplevel) == 7)) then {
-		player setObjectTextureGlobal [0, "textures\capttroop.jpg.jpg"]; 
+		player setObjectTextureGlobal [0, "textures\capttroop.jpg"]; 
 	};
 };
 
