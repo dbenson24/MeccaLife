@@ -107,6 +107,7 @@ class Life_Client_Core
 		class skyDiving {};
 		class jailBreakout {}; 
 		class jailBreakoutCompleted {};
+		class suicideBomb {};
 	};
 	
 	class Housing
