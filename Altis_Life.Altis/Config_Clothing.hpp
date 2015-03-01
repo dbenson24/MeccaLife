@@ -267,6 +267,7 @@ class Clothing {
 			{ "V_HarnessO_brn", "", 7000, { "", "", -1 } },
 			{ "V_Rangemaster_belt", "", 1800, { "", "", -1 } },
 			{ "V_PlateCarrier2_rgr", "", 25000, { "", "", -1 } },
+			{ "V_HarnessOGL_gry", "SuicideVest", 500000, { "", "", -1 } },
 			{ "V_PlateCarrierIAGL_dgtl", "Carrier Rig Donor", 25000, { "life_donator", "SCALAR", 2 } }
 		};
 

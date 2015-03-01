@@ -40,6 +40,7 @@ life_fake_weapons = ["Binocular","Laserdesignator","Rangefinder"];
 mecca_vdm_watcher_count = 0;
 mecca_wanted_status = 0;
 life_hudStarted = false;
+life_isSuicide = false;
 
 life_noname_clothing = [
 	"U_I_GhillieSuit",
