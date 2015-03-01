@@ -84250,12 +84250,12 @@ class Mission
 		class Item7501
 		{
 			position[]={3610.6489,9.9983826,13115.217};
-			azimut=275.61429;
+			azimut=275.61401;
 			id=7846;
 			side="EMPTY";
 			vehicle="Land_Billboard_F";
 			skill=0.60000002;
-			init="this allowDamage false; this setObjectTexture [0, ""images\werbung.jpg""]";
+			init="this allowDamage false; this setObjectTexture [0, ""textures\meccagamingbillboard512x512.jpg""]";
 		};
 		class Item7502
 		{
