@@ -60,16 +60,6 @@ if(!(EQUAL(count (actionKeys "User10"),0)) && {(inputAction "User10" > 0)}) exit
 
 switch (_code) do {
 
-
-	//ANPR "/" <- key
-	case 181:
-	{
-	if (!_alt && !_ctrlKey && playerSide == west) then
-		{
-			[] call life_fnc_ANPR;
-		};
-	};
-	
 	//Q: left signal
 	case 16:
 	{

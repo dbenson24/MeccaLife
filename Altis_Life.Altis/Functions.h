@@ -314,7 +314,6 @@ class Life_Client_Core
 		class copSiren2 {};
 		class showArrestDialog {}; 
 		class arrestDialog_Arrest {};
-		class ANPR {};
 		
 	};
 	
