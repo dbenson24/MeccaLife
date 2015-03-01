@@ -13,7 +13,7 @@ if(side player == independent) then {
 
 if(side player == WEST) then {
 	// Cop Level 1 & 2
-	if (uniform player == "U_BG_Guerilla2_2" && FETCH_CONST(life_coplevel) == 1) OR FETCH_CONST(life_coplevel) == 2)) then {
+	if (uniform player == "U_BG_Guerilla2_2" && (FETCH_CONST(life_coplevel) == 1 OR FETCH_CONST(life_coplevel) == 2)) then {
 		player setObjectTextureGlobal [0, "textures\cadettroop.jpg"]; 
 	};
 	// Cop Level 3 & 4
@@ -29,7 +29,7 @@ if(side player == WEST) then {
 
 if(side player == civilian) then {
 	// Prisoner 
-	if(side player == civilian && uniform player == "U_I_CombatUniform" && FETCH_CONST(life_donator) == 1 && FETCH_CONST(life_donator) == 2 && FETCH_CONST(life_donator) == 3 && FETCH_CONST(life_donator) == 4 && FETCH_CONST(life_donator) == 5 && FETCH_CONST(life_donator) == 6)) then {
+	if(side player == civilian && uniform player == "U_I_CombatUniform" && (FETCH_CONST(life_donator) == 1 && FETCH_CONST(life_donator) == 2 && FETCH_CONST(life_donator) == 3 && FETCH_CONST(life_donator) == 4 && FETCH_CONST(life_donator) == 5 && FETCH_CONST(life_donator) == 6)) then {
 	player setObjectTextureGlobal [0, "textures\mafia.paa"];
 	};
 };
