@@ -72,6 +72,7 @@ player createDiarySubject ["controls","Controls"];
 				Shift + R: Restrains mouse cursor target<br/>
 				Shift + L: Turns on Cop Lights<br/>
 				F: Cop Siren toggle<br/>
+				Shift + F: Cop Yelp<br/>
 				"
 		]
 	];
