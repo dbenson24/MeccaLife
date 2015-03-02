@@ -114,7 +114,9 @@ class Clothing {
 			{ "H_HelmetB_plain_mcamo", "", 75, { "life_coplevel", "SCALAR", 1 } },
 			{ "H_Booniehat_mcamo", "", 120, { "life_coplevel", "SCALAR", 1 } },
 			{ "H_MilCap_mcamo", "", 100, { "life_coplevel", "SCALAR", 2 } },
-			{ "H_Beret_blk_POLICE", "Officers Only Beret", 100, { "life_coplevel", "SCALAR", 3 } }
+			{ "H_Beret_blk_POLICE", "Officers Only Beret", 100, { "life_coplevel", "SCALAR", 3 } },
+			{ "H_Beret_02", "test1", 100, { "life_coplevel", "SCALAR", 1 } },
+			{ "H_Beret_Colonel", "test2", 100, { "life_coplevel", "SCALAR", 1 } }
 		};
 
 		goggles[] = {
