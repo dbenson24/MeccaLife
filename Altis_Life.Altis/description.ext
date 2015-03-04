@@ -176,6 +176,14 @@ class CfgSounds
 		sound[] = {"\sounds\bank.ogg", 0.95, 0.95};
 		titles[] = {};
 	};
+	
+	class blinker
+	{
+    name = "blinker";
+    sound[] = {"\sounds\blinker.ogg", 1.0, 1};
+    titles[] = {};
+	};
+
 
 };
 

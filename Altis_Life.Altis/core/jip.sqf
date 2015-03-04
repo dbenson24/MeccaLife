@@ -20,6 +20,15 @@
 	};
 } foreach (allMissionObjects "Air");
 
+{
+	if (_x != player) then {
+		if (side _x == west) then {
+			[_x] call life_fnc_Uniformscolor;
+		};
+	};
+} forEach playableUnits;
+
+
 if(isNil "gang_list") then {
 	[[],"TON_fnc_fetchGangs",false,false] call life_fnc_MP
 }

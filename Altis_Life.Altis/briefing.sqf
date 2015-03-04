@@ -57,8 +57,9 @@ player createDiarySubject ["controls","Controls"];
 				F: Cop Siren (if cop)<br/>
 				T: Vehicle Trunk<br/>
 				Left Windows: Main Interaction key which is used for picking up items/money, gathering, interacting with cars (repair,etc) and for cops to interact with civilians. Can be rebound to a single key like H by pressing ESC->Configure->Controls->Custom->Use Action 10<br/>
-				Left Shift + H: Holster's your pistol<br/>
+				H: Holster/Unholster your weapon<br/>
 				Left Shift + P: Ear Plugs (Reduce Sound by 80%)<br/>
+				Q/E: Vehicle Signals<br/>
 				"
 		]
 	];
@@ -71,6 +72,7 @@ player createDiarySubject ["controls","Controls"];
 				Shift + R: Restrains mouse cursor target<br/>
 				Shift + L: Turns on Cop Lights<br/>
 				F: Cop Siren toggle<br/>
+				Shift + F: Cop Yelp<br/>
 				"
 		]
 	];

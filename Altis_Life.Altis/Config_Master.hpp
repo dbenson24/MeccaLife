@@ -91,7 +91,8 @@ class Life_Settings {
 									"rabbitGrilled", "salemaGrilled", "ornateGrilled", "mackerelGrilled", "tunaGrilled",
 									"mulletGrilled", "catsharkGrilled", "turtleSoup", "henGrilled", "roosterGrilled",
 									"sheepGrilled", "goatGrilled","frog","marijuana","cannabis","froglsd","mushroom","magicm",
-									"heroinUnprocessed","cocaineUnprocessed","heroinProcessed","cocaineProcessed"
+									"heroinUnprocessed","cocaineUnprocessed","heroinProcessed","cocaineProcessed","underwatercharge",
+									"goldbarp","heliblastcharge","lostcargo"
 									};
 };
 
@@ -99,8 +100,8 @@ class Life_Settings {
 class VirtualItems {
 	//Misc
 	VITEMMACRO(pickaxe, "STR_Item_Pickaxe", "pickaxe", 2, 750, 350, false, -1, "")
-	VITEMMACRO(fuelEmpty, "STR_Item_FuelE", "fuelEmpty", 2, -1, -1, false, -1, "icons\ico_fuelempty.paa")
-	VITEMMACRO(fuelFull, "STR_Item_FuelF", "fuelFull", 5, 850, 500, false, -1, "icons\ico_fuel.paa")
+	VITEMMACRO(fuelEmpty, "STR_Item_FuelEmpty", "fuelEmpty", 2, -1, -1, false, -1, "icons\ico_fuelempty.paa")
+	VITEMMACRO(fuelFull, "STR_Item_FuelFull", "fuelFull", 5, 850, 500, false, -1, "icons\ico_fuel.paa")
 	VITEMMACRO(spikeStrip, "STR_Item_SpikeStrip", "spikeStrip", 15, 2500, 1200, false, -1, "")
 	VITEMMACRO(lockpick, "STR_Item_Lockpick", "lockpick", 1, 150, 75, true, -1, "")
 	VITEMMACRO(goldbar, "STR_Item_GoldBar", "goldBar", 12, -1, 95000, false, -1, "")
@@ -109,7 +110,7 @@ class VirtualItems {
 	VITEMMACRO(defusekit, "STR_Item_DefuseKit", "defuseKit", 2, 2500, -1, false, -1, "")
 	VITEMMACRO(storagesmall, "STR_Item_StorageBS", "storageSmall", 5, 75000, -1, false, -1, "icons\ico_storageSmall.paa")
 	VITEMMACRO(storagebig, "STR_Item_StorageBL", "storageBig", 10, 250000, -1, false, -1, "icons\ico_storageBig.paa")
-	VITEMMACRO(goldbarp, "STR_Item_GoldScrap", "goldbarp", 12, -1, 95000, false, -1, "")
+
 
 	//Mined Items
 	VITEMMACRO(oil_unprocessed, "STR_Item_OilU", "oilUnprocessed", 3, -1, -1, false, -1, "")
@@ -135,15 +136,17 @@ class VirtualItems {
 	VITEMMACRO(marijuana, "STR_Item_Marijuana", "marijuana", 1, 2500, 2350, true, -1, "icons\ico_marijuana.paa")
 	VITEMMACRO(cocaine_unprocessed, "STR_Item_CocaineU", "cocaineUnprocessed", 2, -1, 1000, true, -1, "")
 	VITEMMACRO(cocaine_processed, "STR_Item_CocaineP", "cocaineProcessed", 1, -1, 3000, true, -1, "icons\cocaine.paa")
-	VITEMMACRO(froglsd, "STR_Item_Froglsd", "froglsd", 2, -1, 2500, true, -1, "")
+	VITEMMACRO(froglsd, "STR_Item_Froglsd", "froglsd", 1, -1, 2500, true, -1, "")
 	VITEMMACRO(frog, "STR_Item_Frog", "frog", 2, -1, 2500, true, -1, "icons\frog.paa")
 	VITEMMACRO(Magicm, "STR_Item_Magicm", "magicm", 1, -1, 1200, true, -1, "icons\magicm.paa")
-	VITEMMACRO(underwatercharge, "STR_Item_Underwatercharge", "underwatercharge", 2, 35000, 10000, false, -1, "")
+
 
 	//DrinkC
 	VITEMMACRO(redgull, "STR_Item_RedGull", "redgull", 1, 1500, 200, false, 100, "icons\ico_redgull.paa")
 	VITEMMACRO(coffee, "STR_Item_Coffee", "coffee", 1, 10, 5, false, 100, "icons\coffee.paa")
 	VITEMMACRO(waterBottle, "STR_Item_WaterBottle", "waterBottle", 1, 10, 5, false, 100, "icons\ico_waterBottle.paa")
+	VITEMMACRO(largesoda, "STR_Item_largesoda", "largesoda", 1, 10, 5, false, 100, "icons\lsoda.paa")
+
 
 	//Food
 	VITEMMACRO(apple, "STR_Item_Apple", "apple", 1, 65, 50, false, 10, "icons\food.paa")
@@ -178,7 +181,16 @@ class VirtualItems {
 	//Vigilante
 	VITEMMACRO(ziptie, "STR_Item_Ziptie", "ziptie", 1, 500, 500, true, -1, "")
 	
+	//Custom Shit by LIONS rawr
+	VITEMMACRO(underwatercharge, "STR_Item_Underwatercharge", "underwatercharge", 2, 35000, 10000, false, -1, "")
+	VITEMMACRO(goldbarp, "STR_Item_GoldScrap", "goldbarp", 12, -1, 95000, false, -1, "")
 	
+	VITEMMACRO(heliblastcharge, "STR_Item_heliblastcharge", "heliblastcharge", 2, 35000, 10000, false, -1, "")
+	VITEMMACRO(lostcargo, "STR_Item_lostcargo", "lostcargo", 12, -1, 95000, false, -1, "")
+	
+	VITEMMACRO(gpstracker, "STR_Item_gpstracker", "gpstracker", 2, 15000, 500, false, -1, "")
+	VITEMMACRO(speedbomb, "STR_Item_speedbomb", "speedbomb", 2, 15000, 500, false, -1, "")
+
 };
 
 
@@ -225,7 +237,10 @@ class VirtualShops {
 		name = "STR_Shops_Market";
 		items[] = { "waterBottle", "rabbit_grilled", "apple", "redgull", "tbacon", "pickaxe", "fuelFull", "peach", "storagesmall", "storagebig" };
 	};
-
+	class burger {
+		name = "STR_Shops_burger";
+		items[] = { "waterBottle", "rburger","largesoda"};
+	};
 	class rebel {
 		name = "STR_Shops_Rebel";
 		items[] = { "waterBottle", "rabbit_grilled", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "fuelFull", "peach", "boltcutter", "blastingcharge", "ziptie" };

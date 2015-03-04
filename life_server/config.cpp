@@ -156,6 +156,7 @@ class CfgFunctions
 			file = "\life_server\Functions\airdrop";
 			class generateAirdrop {};
 		};
+		class cargoUpdate {};
 		class goldUpdate {};
 		class Housing
 		{

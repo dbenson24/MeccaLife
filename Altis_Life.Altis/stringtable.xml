@@ -16,6 +16,9 @@
 		<Key ID="STR_Shops_C_Kart">
 			<Original>Bobby's Kart-Racing Outfits</Original>
 		</Key>
+		<Key ID="STR_Shops_Burger">
+			<Original>Red Burger</Original>
+		</Key>
 		<Key ID="STR_Shops_Market">
 			<Original>Altis Market</Original>
 			<German>Altis Markt</German>
@@ -3306,14 +3309,17 @@
 			<Italian>Ciambelle</Italian>
 			<Portuguese>Rosquinha</Portuguese>
 		</Key>
-		<Key ID="STR_Item_FuelE">
+		<Key ID="STR_Item_speedbomb">
+			<Original>SpeedBomb</Original>
+		</Key>
+		<Key ID="STR_Item_FuelEmpty">
 			<Original>Empty Fuel Can</Original>
 			<German>Leerer Benzinkanister</German>
 			<French>Jerrican Vide</French>
 			<Italian>Tanica di carburante vuota</Italian>
 			<Portuguese>Tanque de Gasolina Vazio</Portuguese>
 		</Key>
-		<Key ID="STR_Item_FuelF">
+		<Key ID="STR_Item_FuelFull">
 			<Original>Full Fuel Can</Original>
 			<German>Benzinkanister</German>
 			<French>Jerrican de Carburant</French>
@@ -3418,6 +3424,9 @@
 			<Italian>Grimaldello</Italian>
 			<Portuguese>Chave Mestra</Portuguese>
 		</Key>
+		<Key ID="STR_Item_JerryRefuel">
+			<Original>Refuel</Original>
+		</Key>	
 		<Key ID="STR_Item_Rock">
 			<Original>Rock</Original>
 			<German>Stein</German>
@@ -3438,6 +3447,9 @@
 		<Key ID="STR_Item_GoldScrap">
 			<Original>Gold Scrap</Original>
 		</Key>
+		<Key ID="STR_Item_heliblastcharge">
+			<Original>Helicopter Blast Charge</Original>
+		</Key>	
 		<Key ID="STR_Item_GoldBar">
 			<Original>Gold Bar</Original>
 			<German>Goldbarren</German>
@@ -3506,6 +3518,12 @@
 		</Key>
 		<Key ID="STR_Item_Underwatercharge">
 			<Original>Under Water Charge</Original>
+		</Key>
+		<Key ID="STR_Item_lostcargo">
+			<Original>Lost Cargo</Original>
+		</Key>
+		<Key ID="STR_Item_gpstracker">
+			<Original>Gps Tracker</Original>
 		</Key>
 	</Package>
 	<Package name="Life_License">
@@ -4244,7 +4262,7 @@
 			<Portuguese>Colocar no Veículo</Portuguese>
 		</Key>
 		<Key ID="STR_pInAct_SeizeWeapon">
-			<Original>Seize Weapons</Original>
+			<Original>Seize Illegal Personnel</Original>
 		</Key>
 		<Key ID="STR_pInAct_Unrestrain">
 			<Original>Un-Restrain</Original>
@@ -4416,6 +4434,9 @@
 			<Italian>Raddrizza veicolo</Italian>
 			<Portuguese>Desvirar Veículo</Portuguese>
 		</Key>
+		<Key ID="STR_vInAct_vUseItem">
+			<Original>Use Item</Original>
+		</Key>
 		<Key ID="STR_vInAct_GetInKart">
 			<Original>Get In Kart</Original>
 			<German>Ins Kart setzen</German>
@@ -4478,6 +4499,18 @@
 			<Italian>Piazza mine dal veicolo</Italian>
 			<Portuguese>Minerar</Portuguese>
 		</Key>
+		<Key ID="STR_vInAct_Lockpick">
+			<Original>Lockpick Vehicle</Original>
+		</Key>
+		<Key ID="STR_vInAct_JerryRefuel">
+			<Original>Refuel Vehicle</Original>
+		</Key>
+		<Key ID="STR_vInAct_GpsTracker">
+			<Original>Track Vehicle</Original>
+		</Key>		
+		<Key ID="STR_vInAct_SpeedBomb">
+			<Original>Attach SpeedBomb</Original>
+		</Key>	
 	</Package>
 	<Package name="Session_Strings">
 		<Key ID="STR_Session_Query">

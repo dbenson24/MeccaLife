@@ -3,6 +3,10 @@
 // In the mean time, just log everything.
 1 ""
 
+5 "Box_NATO_Ammo_F"
+5 "_GMG_"
+5 "_HMG_"
+
 // This existed on the server already...
 5 "O_Soldier_F"
 5 "B_Mortar_01_F"

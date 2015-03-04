@@ -15,13 +15,17 @@ _version = CONTROL(46,1000);
 _version ctrlSetText format["BETA: 0.%1.%2",(productVersion select 2),(productVersion select 3)];
 [] call life_fnc_hudUpdate;
 
-[] spawn
-{
-	private["_dam"];
-	while {true} do
+if(!life_hudStarted) then {
+	life_hudStarted = true;
+	[] spawn
 	{
-		_dam = damage player;
-		waitUntil {(damage player) != _dam};
-		[] call life_fnc_hudUpdate;
+		private["_dam","_fatigue"];
+		while {true} do
+		{
+			_dam = damage player;
+			_fatigue = getFatigue player;
+			waitUntil {((damage player) != _dam) || _fatigue != (getFatigue player)};
+			[] call life_fnc_hudUpdate;
+		};
 	};
 };

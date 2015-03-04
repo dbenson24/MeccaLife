@@ -162,6 +162,8 @@ life_wanted_list = [];
 [] execVM "\life_server\Functions\Custom\fn_spawnGold.sqf";
 call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";
 gold_safe setVariable["gold",round(random 50),true];
+[] execVM "\life_server\Functions\Custom\fn_spawnCargo.sqf";
+heli_safe setVariable["cargo",round(random 50),true];
 [] spawn TON_fnc_goldUpdate;
 
 [] execVM "\life_server\Functions\airdrop\config.sqf";
