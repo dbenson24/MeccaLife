@@ -1,7 +1,7 @@
 /*
 	Author GamerDF
 */
-class WillkommenN
+class welcomesettings
 {
 	idd = 6900;
 	name = "Welcome";
