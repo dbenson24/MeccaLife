@@ -174,7 +174,6 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "30Rnd_65x39_caseless_mag";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
-		player addItem "H_PilotHelmetFighter_B";
 	};
 	
 };
