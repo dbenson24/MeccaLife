@@ -38,7 +38,7 @@ class SettingsMenu
 			y = 0.3;
 			w = 0.2375;
 			h = 0.04;
-			colorBackground[] = {0,0.1,0.66,0.8};
+			colorBackground[] = {0,0,0,0.3};
 		};		
 		
 		class TerrainHeader: Life_RscButtonMenu
@@ -51,7 +51,7 @@ class SettingsMenu
 			y = 0.36;
 			w = 0.2375;
 			h = 0.04;
-			colorBackground[] = {0,0.1,0.66,0.8};
+			colorBackground[] = {0,0,0,0.3};
 		};
 		class ViewHeader: Life_RscButtonMenu
 		{
@@ -63,7 +63,7 @@ class SettingsMenu
 			y = 0.42;
 			w = 0.2375;
 			h = 0.04;
-			colorBackground[] = {0,0.1,0.66,0.8};
+			colorBackground[] = {0,0,0,0.3};
 		};
 		class ObjViewHeader: Life_RscButtonMenu
 		{
@@ -75,7 +75,7 @@ class SettingsMenu
 			y = 0.48;
 			w = 0.2375;
 			h = 0.04;
-			colorBackground[] = {0,0.1,0.66,0.8};
+			colorBackground[] = {0,0,0,0.3};
 		};
 		class ObjNahHeader: Life_RscButtonMenu
 		{
@@ -87,7 +87,7 @@ class SettingsMenu
 			y = 0.54;
 			w = 0.2375;
 			h = 0.04;
-			colorBackground[] = {0,0.1,0.66,0.8};
+			colorBackground[] = {0,0,0,0.3};
 		};
 		class ButtonClose: Life_RscButtonMenu
 		{
@@ -100,7 +100,7 @@ class SettingsMenu
 			w = 0.7;
 			h = 0.04;
 			colorText[] = {1,1,1,1};
-			colorBackground[] = {0,0.1,0.66,0.8};
+			colorBackground[] = {0,0,0,0.3};
 		};
 		
 		//Player Tag Display

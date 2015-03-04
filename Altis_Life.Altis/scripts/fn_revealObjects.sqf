@@ -1,10 +1,6 @@
-/*/////////////////////////////////////////|//////////
-//_______________________////////////////__|__////////
-/|Made for ZoXXen.com    |/////////////____|____//////
-/|Author:GamerDF         |///////////______|______////
-/|Description: too lazy  |/////////////____|____//////
-/|_______________________|///////////////  |  ////////
-*////////////////////////////////////////~~|~~////////
+/*
+	file: fn_revealObjects.sqf
+*/
 
 private["_objects"];
 _objects = nearestObjects[visiblePositionASL player, ["Land_CargoBox_V1_F","Land_BottlePlastic_V1_F","Land_TacticalBacon_F","Land_Can_V3_F","Land_CanisterFuel_F","Land_Money_F","Land_Suitcase_F","Man"], 15];

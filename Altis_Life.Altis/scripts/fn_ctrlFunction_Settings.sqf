@@ -1,10 +1,6 @@
-/*/////////////////////////////////////////|//////////
-//_______________________////////////////__|__////////
-/|Made for ZoXXen.com    |/////////////____|____//////
-/|Author:GamerDF         |///////////______|______////
-/|Description: too lazy  |/////////////____|____//////
-/|_______________________|///////////////  |  ////////
-*////////////////////////////////////////~~|~~////////
+/*
+	file: fn_ctrlFunction_Settings.sqf
+*/
 
 private["_display","_type"];
 _type = [_this,0,0] call BIS_fnc_param;
@@ -19,14 +15,14 @@ switch(_type) do
 	{
 		//PlayerTags
 		ctrlShow[6812,true]; 
-		//Auto.Optimierung
+		//Auto Optimize
 		ctrlShow[6813,false]; 
 		//Grass
 		ctrlShow[6814,false]; 
 		ctrlShow[6815,false]; 
 		ctrlShow[6816,false]; 
 		ctrlShow[6817,false];
-		//Sichtweite
+		//Visibility
 		ctrlShow[6818,false]; 
 		ctrlShow[68181,false]; 
 		ctrlShow[6819,false]; 
@@ -34,30 +30,30 @@ switch(_type) do
 		ctrlShow[6820,false];  
 		ctrlShow[68201,false]; 
 		ctrlShow[6821,false];
-		//Objekt Sichtweite
+		//Object Visibility
 		ctrlShow[6822,false]; 
 		ctrlShow[6823,false]; 
 		ctrlShow[6824,false]; 
 		ctrlShow[6825,false]; 
-		//Nahe Objekte
+		//Close Objects
 		ctrlShow[6826,false]; 
 		ctrlShow[6827,false]; 
 		//Information
-		_info ctrlSetText "Here you can view the names players or not display.";
+		_info ctrlSetText "Here you can view the player names.";
 	};
 	
 	case 1: //Grass
 	{
 		//PlayerTags
 		ctrlShow[6812,false]; 
-		//Auto.Optimierung
+		//Auto Optimize
 		ctrlShow[6813,false]; 
 		//Grass
 		ctrlShow[6814,true]; 
 		ctrlShow[6815,true]; 
 		ctrlShow[6816,true]; 
 		ctrlShow[6817,true];
-		//Sichtweite
+		//Visibility
 		ctrlShow[6818,false]; 
 		ctrlShow[68181,false]; 
 		ctrlShow[6819,false]; 
@@ -65,30 +61,30 @@ switch(_type) do
 		ctrlShow[6820,false];  
 		ctrlShow[68201,false]; 
 		ctrlShow[6821,false];
-		//Objekt Sichtweite
+		//Object Visibility
 		ctrlShow[6822,false]; 
 		ctrlShow[6823,false]; 
 		ctrlShow[6824,false]; 
 		ctrlShow[6825,false]; 
-		//Nahe Objekte
+		//Close Objects
 		ctrlShow[6826,false]; 
 		ctrlShow[6827,false]; 
 		//Information
-		_info ctrlSetText "Here you can adjust the Grass filtering. This custom performance much ! Recommendation: off";
+		_info ctrlSetText "Here you can adjust the Grass filtering. Recommendation: off";
 	};
 	
-	case 2: //Sichtweite
+	case 2: //Visibility
 	{
 		//PlayerTags
 		ctrlShow[6812,false]; 
-		//Auto.Optimierung
+		//Auto Optimize
 		ctrlShow[6813,false]; 
 		//Grass
 		ctrlShow[6814,false]; 
 		ctrlShow[6815,false]; 
 		ctrlShow[6816,false]; 
 		ctrlShow[6817,false];
-		//Sichtweite
+		//Visibility
 		ctrlShow[6818,true]; 
 		ctrlShow[68181,true]; 
 		ctrlShow[6819,true]; 
@@ -96,30 +92,30 @@ switch(_type) do
 		ctrlShow[6820,true]; 
 		ctrlShow[68201,true]; 
 		ctrlShow[6821,true];
-		//Objekt Sichtweite
+		//Object Visibility
 		ctrlShow[6822,false]; 
 		ctrlShow[6823,false]; 
 		ctrlShow[6824,false]; 
 		ctrlShow[6825,false]; 
-		//Nahe Objekte
+		//Close Objects
 		ctrlShow[6826,false]; 
 		ctrlShow[6827,false]; 
 		//Information
 		_info ctrlSetText "Here you can customize your sight. This custom performance much ! Recommendation: 100";
 	};
 	
-	case 3: //Objekt Sichtweite
+	case 3: //Object Visibility
 	{
 		//PlayerTags
 		ctrlShow[6812,false]; 
-		//Auto.Optimierung
+		//Auto Optimize
 		ctrlShow[6813,false]; 
 		//Grass
 		ctrlShow[6814,false]; 
 		ctrlShow[6815,false]; 
 		ctrlShow[6816,false]; 
 		ctrlShow[6817,false];
-		//Sichtweite
+		//Visibility
 		ctrlShow[6818,false]; 
 		ctrlShow[68181,false]; 
 		ctrlShow[6819,false]; 
@@ -127,30 +123,30 @@ switch(_type) do
 		ctrlShow[6820,false];  
 		ctrlShow[68201,false]; 
 		ctrlShow[6821,false];
-		//Objekt Sichtweite
+		//Object Visibility
 		ctrlShow[6822,true]; 
 		ctrlShow[6823,true]; 
 		ctrlShow[6824,true]; 
 		ctrlShow[6825,true]; 
-		//Nahe Objekte
+		//Close Objects
 		ctrlShow[6826,false]; 
 		ctrlShow[6827,false]; 
 		//Information
-		_info ctrlSetText "You can adjust the visibility of objects. This takes a lot of performance! Depends on the sight. Recommendation : 500";
+		_info ctrlSetText "You can adjust the visibility of objects. Recommendation : 500";
 	};
 	
-	case 4: //Nahe Objekt
+	case 4: //Near Object
 	{
 		//PlayerTags
 		ctrlShow[6812,false]; 
-		//Auto.Optimierung
+		//Auto Optimize
 		ctrlShow[6813,false]; 
 		//Grass
 		ctrlShow[6814,false]; 
 		ctrlShow[6815,false]; 
 		ctrlShow[6816,false]; 
 		ctrlShow[6817,false];
-		//Sichtweite
+		//Visibility
 		ctrlShow[6818,false]; 
 		ctrlShow[68181,false]; 
 		ctrlShow[6819,false]; 
@@ -158,30 +154,30 @@ switch(_type) do
 		ctrlShow[6820,false];  
 		ctrlShow[68201,false]; 
 		ctrlShow[6821,false];
-		//Objekt Sichtweite
+		//Object Visibility
 		ctrlShow[6822,false]; 
 		ctrlShow[6823,false]; 
 		ctrlShow[6824,false]; 
 		ctrlShow[6825,false]; 
-		//Nahe Objekte
+		//Near Objects
 		ctrlShow[6826,true]; 
 		ctrlShow[6827,true]; 
 		//Information
-		_info ctrlSetText "You can adjust the visibility for Dropped items such as money / Boxes / Cases . This hot little performance! Recommendation : Switch";
+		_info ctrlSetText "You can adjust the visibility for Dropped items such as money / Boxes / Cases . Recommendation : Switch";
 	};
 	
 	case 5: //StartMenu
 	{
 		//PlayerTags
 		ctrlShow[6812,false]; 
-		//Auto.Optimierung
+		//Auto Optimize
 		ctrlShow[6813,true]; 
 		//Grass
 		ctrlShow[6814,false]; 
 		ctrlShow[6815,false]; 
 		ctrlShow[6816,false]; 
 		ctrlShow[6817,false];
-		//Sichtweite
+		//Visibility
 		ctrlShow[6818,false]; 
 		ctrlShow[68181,false]; 
 		ctrlShow[6819,false]; 
@@ -189,12 +185,12 @@ switch(_type) do
 		ctrlShow[6820,false];  
 		ctrlShow[68201,false]; 
 		ctrlShow[6821,false];
-		//Objekt Sichtweite
+		//Object Visibility
 		ctrlShow[6822,false]; 
 		ctrlShow[6823,false]; 
 		ctrlShow[6824,false]; 
 		ctrlShow[6825,false]; 
-		//Nahe Objekte
+		//Close Objects
 		ctrlShow[6826,false]; 
 		ctrlShow[6827,false]; 
 		//Information
