@@ -1,9 +1,10 @@
 class SettingsMenu
 {
-	idd = 2900;
+	idd = 6800;
 	name = "SettingsMenu";
 	movingEnabled = 1;
 	enableSimulation = 1;
+	onLoad = "[5] spawn life_fnc_ctrlFunction_Settings;";
 	
 	class controlsBackground {
 	
@@ -27,182 +28,290 @@ class SettingsMenu
 			h = 0.43 - (22 / 250);
 		};
 		
-		class PlayerTagsHeader : Life_RscText
+		class PlayerTagsHeader: Life_RscButtonMenu
 		{
-			idc = -1;
+			idc = 6806;
+
 			text = "$STR_SM_PlayerTags";
-			colorBackground[] = {0,0,0,0.8};
-			
-			x = 0.26;
-			y = 0.43;
-			w = 0.35;
-			h = (1 / 25);
-		};
+			onButtonClick = "[0] spawn life_fnc_ctrlFunction_Settings;";
+			x = 0.1625;
+			y = 0.3;
+			w = 0.2375;
+			h = 0.04;
+			colorBackground[] = {0,0.1,0.66,0.8};
+		};		
 		
-		class SideChatHeader : PlayerTagsHeader
+		class TerrainHeader: Life_RscButtonMenu
 		{
-			idc = -1;
-			text = "$STR_SM_SC";
-			shadow = 0;
-			colorBackground[] = {0,0,0,0.8};
-			x = 0.26;
+			idc = 6807;
+
+			text = "Grass";
+			onButtonClick = "[1] spawn life_fnc_ctrlFunction_Settings;";
+			x = 0.1625;
+			y = 0.36;
+			w = 0.2375;
+			h = 0.04;
+			colorBackground[] = {0,0.1,0.66,0.8};
+		};
+		class ViewHeader: Life_RscButtonMenu
+		{
+			idc = 6808;
+
+			text = "Visibility";
+			onButtonClick = "[2] spawn life_fnc_ctrlFunction_Settings;";
+			x = 0.1625;
+			y = 0.42;
+			w = 0.2375;
+			h = 0.04;
+			colorBackground[] = {0,0.1,0.66,0.8};
+		};
+		class ObjViewHeader: Life_RscButtonMenu
+		{
+			idc = 6809;
+
+			text = "Object Visibility";
+			onButtonClick = "[3] spawn life_fnc_ctrlFunction_Settings;";
+			x = 0.1625;
 			y = 0.48;
+			w = 0.2375;
+			h = 0.04;
+			colorBackground[] = {0,0.1,0.66,0.8};
 		};
-		
-		class RevealNearestHeader : PlayerTagsHeader
+		class ObjNahHeader: Life_RscButtonMenu
 		{
-			idc = -1;
-			colorBackground[] = {0,0,0,0.8};
-			text = "Reveal Nearest Objects";
-			x = 0.26;
-			y = 0.53;
+			idc = 6810;
+
+			text = "Close Objects";
+			onButtonClick = "[4] spawn life_fnc_ctrlFunction_Settings;";
+			x = 0.1625;
+			y = 0.54;
+			w = 0.2375;
+			h = 0.04;
+			colorBackground[] = {0,0.1,0.66,0.8};
 		};
-		
-		class Title : life_RscTitle
+		class ButtonClose: Life_RscButtonMenu
 		{
-			idc = -1;
-			colorBackground[] = {0,0,0,0};
-			text = "$STR_SM_Title";
-			x = 0.1;
-			y = 0.2;
-			w = 0.5;
-			h = (1 / 25);
-		};
-	};
-	
-	class controls
-	{
-		class VDonFoot : life_RscText
-		{
-			idc = -1;
-			text = "$STR_SM_onFoot";
+			idc = 6811;
 			
-			x = 0.26; y = 0.258;
-			w = 0.275; h = 0.04;
-		};
-		
-		class VDinCar : life_RscText
-		{
-			idc = -1;
-			text = "$STR_SM_inCar";
-			
-			x = 0.26; y = 0.305;
-			w = 0.275; h = 0.04;
-		};
-		
-		class VDinAir : life_RscText
-		{
-			idc = -1;
-			text = "$STR_SM_inAir";
-			
-			x = 0.26; y = 0.355;
-			w = 0.275; h = 0.04;
-		};
-		
-		class VD_onfoot_slider : life_RscXSliderH 
-		{
-			idc = 2901;
-			text = "";
-			onSliderPosChanged = "[0,_this select 1] call life_fnc_s_onSliderChange;";
-			tooltip = "$STR_SM_ToolTip1";
-			x = 0.39;
-			y = 0.30 - (1 / 25);
-			
-			w = "9 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
-			h = "1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-		};
-		
-		class VD_onfoot_value : life_RscText
-		{
-			idc = 2902;
-			text = "";
-			
-			x = 0.67; y = 0.258;
-			w = 0.275; h = 0.04;
-		};
-		
-		class VD_car_slider : life_RscXSliderH 
-		{
-			idc = 2911;
-			text = "";
-			onSliderPosChanged = "[1,_this select 1] call life_fnc_s_onSliderChange;";
-			tooltip = "$STR_SM_ToolTip2";
-			x = 0.39;
-			y = 0.35 - (1 / 25);
-			
-			w = "9 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
-			h = "1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-		};
-		
-		class VD_car_value : life_RscText
-		{
-			idc = 2912;
-			text = "";
-			
-			x = 0.67; y = 0.31;
-			w = 0.275; h = 0.04;
-		};
-		
-		class VD_air_slider : life_RscXSliderH 
-		{
-			idc = 2921;
-			text = "";
-			onSliderPosChanged = "[2,_this select 1] call life_fnc_s_onSliderChange;";
-			tooltip = "$STR_SM_ToolTip3";
-			x = 0.39;
-			y = 0.40 - (1 / 25);
-			
-			w = "9 * 			(			((safezoneW / safezoneH) min 1.2) / 40)";
-			h = "1 * 			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-		};
-		
-		class VD_air_value : life_RscText
-		{
-			idc = 2922;
-			text = "";
-			
-			x = 0.67; y = 0.36;
-			w = 0.275; h = 0.04;
-		};
-		
-		class PlayerTagsONOFF : Life_RscActiveText
-		{
-			text = "ON";
-			tooltip = "$STR_GUI_PlayTags";
-			idc = 2970;
-			sizeEx = 0.04;
-			x = 0.65;
-			y = 0.43;
-			w = 0.275;
-		};
-		
-		class SideChatONOFF : PlayerTagsONOFF
-		{
-			idc = 2971;
-			tooltip = "";
-			action = "[] call life_fnc_sidechat;";
-			x = 0.65;
-			y = 0.48;
-		};
-		
-		class RevealONOFF : PlayerTagsONOFF
-		{
-			tooltip = "$STR_GUI_PlayerReveal";
-			idc = 2972;
-			x = 0.65;
-			y = 0.53;
-		};
-		
-		class ButtonClose : life_RscButtonMenu {
-			idc = -1;
-			//shortcuts[] = {0x00050000 + 2};
-			colorBackground[] = {0, 0, 0, 0.4};	
-			text = "$STR_Global_Close";
+			text = "Close";
 			onButtonClick = "closeDialog 0;";
-			x = 0.1 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.63 - (1 / 25);
-			w = (6.25 / 40);
-			h = (1 / 25);
+			x = 0.15;
+			y = 0.8;
+			w = 0.7;
+			h = 0.04;
+			colorText[] = {1,1,1,1};
+			colorBackground[] = {0,0.1,0.66,0.8};
+		};
+		
+		//Player Tag Display
+		
+		class Button1_0: Life_RscButtonMenu
+		{
+			idc = 6812;
+
+			text = "Player Tag On/Off";
+			x = 0.575;
+			y = 0.3;
+			w = 0.25;
+			h = 0.04;
+		};
+		
+		//Auto Optimize
+		
+		class Button2_0: Life_RscButtonMenu
+		{
+			idc = 6813;
+
+			text = "Auto Optimize";
+			onButtonClick = "[7] spawn life_fnc_ctrlFunction_Settings;";
+			x = 0.575;
+			y = 0.3;
+			w = 0.25;
+			h = 0.04;
+		};
+		
+		//Grass Filters
+		
+		class Button1_1: Life_RscButtonMenu
+		{
+			idc = 6814;
+
+			text = "None";
+			action = "['nichts'] call life_fnc_onTerrainChange;";
+			x = 0.575;
+			y = 0.3;
+			w = 0.25;
+			h = 0.04;
+		};
+		class Button2_1: Life_RscButtonMenu
+		{
+			idc = 6815;
+
+			text = "Low";
+			action = "['wenig'] call life_fnc_onTerrainChange;";
+			x = 0.575;
+			y = 0.36;
+			w = 0.25;
+			h = 0.04;
+		};
+		class Button3_1: Life_RscButtonMenu
+		{
+			idc = 6816;
+
+			text = "Normal";
+			action = "['normal'] call life_fnc_onTerrainChange;";
+			x = 0.575;
+			y = 0.42;
+			w = 0.25;
+			h = 0.04;
+		};
+		class Button4_1: Life_RscButtonMenu
+		{
+			idc = 6817;
+
+			text = "High";
+			action = "['viel'] call life_fnc_onTerrainChange;";
+			x = 0.575;
+			y = 0.48;
+			w = 0.25;
+			h = 0.04;
+		};
+		
+		//Visibility Filters
+		class Button1_2: life_RscXSliderH
+		{
+			idc = 6818;
+			onSliderPosChanged = "[0,_this select 1] call life_fnc_s_onSliderChange;";
+
+			x = 0.4375;
+			y = 0.3;
+			w = 0.27;
+			h = 0.04;
+			tooltip = "Visibility on Land";
+		};
+		class Button1_2_1: Life_RscText
+		{
+			idc = 68181;
+
+			x = 0.725;
+			y = 0.3;
+			w = 0.275;
+			h = 0.04;
+		};
+		/////////////////////////////////////////////////////////////
+		/////////////////////////////////////////////////////////////
+		class Button2_2: life_RscXSliderH
+		{
+			idc = 6819;
+			onSliderPosChanged = "[1,_this select 1] call life_fnc_s_onSliderChange;";
+
+			x = 0.4375;
+			y = 0.36;
+			w = 0.27;
+			h = 0.04;
+			tooltip = "Visibility When Driving";
+		};
+		class Button2_2_1: Life_RscText
+		{
+			idc = 68191;
+
+			x = 0.725;
+			y = 0.36;
+			w = 0.275;
+			h = 0.04;
+		};
+		/////////////////////////////////////////////////////////////
+		/////////////////////////////////////////////////////////////
+		class Button3_2: life_RscXSliderH
+		{
+			idc = 6820;
+			onSliderPosChanged = "[2,_this select 1] call life_fnc_s_onSliderChange;";
+
+			x = 0.4375;
+			y = 0.42;
+			w = 0.27;
+			h = 0.04;
+			tooltip = "Visibility When Flying";
+		};
+		class Button3_2_1: Life_RscText
+		{
+			idc = 68201;
+
+			x = 0.725;
+			y = 0.42;
+			w = 0.275;
+			h = 0.04;
+		};
+		/////////////////////////////////////////////////////////////
+		/////////////////////////////////////////////////////////////
+		class Button4_2: Life_RscButtonMenu
+		{
+			idc = 6821;
+
+			text = "Optimize";
+			onButtonClick = "[6] spawn life_fnc_ctrlFunction_Settings;";
+			x = 0.575;
+			y = 0.48;
+			w = 0.25;
+			h = 0.04;
+		};
+		
+		//Object Visibility Filter
+		class Button1_3: Life_RscButtonMenu
+		{
+			idc = 6822;
+
+			text = "500";
+			action = "setObjectViewDistance [500,100];";
+			x = 0.575;
+			y = 0.3;
+			w = 0.25;
+			h = 0.04;
+		};
+		class Button2_3: Life_RscButtonMenu
+		{
+			idc = 6823;
+
+			text = "1000";
+			action = "setObjectViewDistance [1000,500];";
+			x = 0.575;
+			y = 0.36;
+			w = 0.25;
+			h = 0.04;
+		};
+		class Button3_3: Life_RscButtonMenu
+		{
+			idc = 6824;
+
+			text = "1200";
+			action = "setObjectViewDistance [1200,800];";
+			x = 0.575;
+			y = 0.42;
+			w = 0.25;
+			h = 0.04;
+		};
+		class Button4_3: Life_RscButtonMenu
+		{
+			idc = 6825;
+
+			text = "1600";
+			action = "setObjectViewDistance [1600,1200];";
+			x = 0.575;
+			y = 0.48;
+			w = 0.25;
+			h = 0.04;
+		};
+		
+		//Near Objects
+		class Button1_4: Life_RscButtonMenu
+		{
+			idc = 6826;
+
+			text = "NearObjects";
+			x = 0.575;
+			y = 0.3;
+			w = 0.25;
+			h = 0.04;
 		};
 	};
 };
