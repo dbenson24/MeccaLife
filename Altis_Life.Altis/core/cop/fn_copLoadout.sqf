@@ -76,6 +76,8 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
+		player addItem "HandGrenade_Stone";
+		player addItem "HandGrenade_Stone";
 		
 	};
 	
@@ -95,6 +97,8 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag";
+		player addItem "HandGrenade_Stone";
+		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 	};
@@ -118,6 +122,8 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "30Rnd_65x39_caseless_mag";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
+		player addItem "HandGrenade_Stone";
+		player addItem "HandGrenade_Stone";
 	};
 	
 	case 5:
@@ -138,6 +144,8 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "30Rnd_65x39_caseless_mag";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
+		player addItem "HandGrenade_Stone";
+		player addItem "HandGrenade_Stone";
 	};
 	case 6:
 	{
@@ -154,6 +162,8 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag";
 		player addMagazine "30Rnd_65x39_caseless_mag";
+		player addItem "HandGrenade_Stone";
+		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 	};
@@ -174,6 +184,8 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag";
 		player addMagazine "30Rnd_65x39_caseless_mag";
+		player addItem "HandGrenade_Stone";
+		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 	};
