@@ -318,7 +318,7 @@ switch(_shop) do
 						["SMG_01_F","Vermin SMG .45 ACP",50000 * life_donDis],
 						["30Rnd_45ACP_Mag_SMG_01",".45 ACP 30Rnd Vermin Mag",500 * life_donDis],
 						
-						["srifle_DMR_01_F","Rahim 7.62mm",800000 * life_donDis],
+						["srifle_DMR_01_F","Rahim 7.62mm",80000 * life_donDis],
 						["10Rnd_762x51_Mag","7.62mm 10Rnd Mag",500 * life_donDis],
 						
 						["srifle_EBR_F","Mk18 ABR 7.62mm",100000 * life_donDis],
