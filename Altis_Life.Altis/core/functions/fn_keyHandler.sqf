@@ -60,7 +60,7 @@ if(!(EQUAL(count (actionKeys "User10"),0)) && {(inputAction "User10" > 0)}) exit
 
 switch (_code) do {
 
-	//Q: left signal + Auto Pickaxe
+	//Q: left signal
 	case 16:
 	{
 		_veh = vehicle player;
@@ -72,22 +72,7 @@ switch (_code) do {
 			life_blinker_active=false;
 			};
 			[_veh,"left"] call life_fnc_BlinkerInit;
-		}else{
-			if((!life_action_inUse) && (vehicle player == player) ) then
-			{	
-				{
-				_str = [_x] call life_fnc_varToStr;
-				_val = missionNameSpace GVAR _x;
-				if(_val > 0 ) then
-				{
-					if( _str == "Pickaxe" || _str == "pickaxe" ) then
-					{
-						[] call life_fnc_pickAxeUse;
-					};
-				};
-			} foreach life_inv_items;
-		}
-	};
+		};
 	};
 	
 	//E: right signal
@@ -267,7 +252,7 @@ switch (_code) do {
 	 // O, police gate opener
         case 24:
 	{
-		if (!_shift && !_alt && !_ctrlKey && (playerSide == west) && (playerSide == independent) && (vehicle player != player)) then {
+		if (!_shift && !_alt && !_ctrlKey && (playerSide == west) && (vehicle player != player)) then {
 			[] call life_fnc_copOpener;
 		};
 	};
