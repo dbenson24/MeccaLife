@@ -22,7 +22,7 @@ _targetveh = (_validtargets select 1);
 
 _speed = round speed (_targetveh);
 
-_owner =[];
+_owner = [_vehicle getVariable "vehicle_info_owners"] call life_fnc_vehicleOwners;
 
 if(isNil {_owner}) then {_info = _info + format ["<br/><t color='#FFD700'><t size='1.5'><t align='center'>Owner:<br/><t color='#33CC33'><t align='center'><t size='1.8'> NOT FOUND!"];
 }else{_info = _info + format ["<br/><t color='#5A80EB'><t size='1.5'><t align='center'>Owner:<br/><t color='#33CC33'><t align='center'><t size='1'> %1", _owner];};
