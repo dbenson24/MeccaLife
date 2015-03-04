@@ -12,6 +12,7 @@ _player = player;
 if(isNull _cop) exitWith {};
 
 //Monitor excessive restrainment
+/*
 [] spawn {
 	private "_time";
 	while {true} do {
@@ -28,6 +29,7 @@ if(isNull _cop) exitWith {};
 		};
 	};
 };
+*/
 
 titleText[format[localize "STR_Cop_Retrained",_cop GVAR ["realname",name _cop]],"PLAIN"];
 player say3D "cuff";
