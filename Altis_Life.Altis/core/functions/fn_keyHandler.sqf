@@ -291,8 +291,15 @@ switch (_code) do {
 				};
 			};
 		};
-		
-		if(!_alt && !_ctrlKey) then { [] call life_fnc_radar; };
+	};
+	
+	//Advanced Radar "/" button
+	case 181: 
+	{
+	if (!_alt && !_ctrlKey && playerSide == west) then
+		{
+			[] call life_fnc_radar;
+		};
 	};
 	
 	//Y Player Menu
