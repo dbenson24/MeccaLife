@@ -76,7 +76,7 @@ switch (_code) do {
 					};
 				};
 			} foreach life_inv_items;
-		}
+		};
 	};
 
 
