@@ -102,6 +102,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 	{
 	    player ForceAddUniform "U_BG_Guerilla3_2";
 		player setObjectTextureGlobal [0, "textures\corptroop.jpg"];
+		player addHeadgear "H_Beret_02";
 		player addWeapon "arifle_MXM_Black_F";
 		player addPrimaryWeaponItem "optic_MRCO";
 		player addVest "V_PlateCarrier1_blk";
@@ -121,6 +122,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 	{
 	    player ForceAddUniform "U_O_OfficerUniform_ocamo";
 		player setObjectTextureGlobal [0, "textures\corptroop.jpg"];
+		player addHeadgear "H_Beret_02";
 		player addVest "V_PlateCarrier1_blk";
 		player addWeapon "arifle_MXM_Black_F";
 		player addPrimaryWeaponItem "optic_MRCO";
@@ -139,6 +141,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 	{
 	    player ForceAddUniform "U_O_OfficerUniform_ocamo";
 		player setObjectTextureGlobal [0, "textures\corptroop.jpg"];
+		player addHeadgear "H_Beret_02";
 		player addWeapon "arifle_MXM_F";
 		player addVest "V_PlateCarrier1_blk";
 		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
@@ -156,7 +159,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 	{
 	    player ForceAddUniform "U_O_OfficerUniform_ocamo";
 		player setObjectTextureGlobal [0, "textures\corptroop.jpg"];
-		player addHeadgear "H_Beret_02";
+		player addHeadgear "H_Beret_Colonel";
 		player addItemToBackpack "H_PilotHelmetFighter_B";
 		player addVest "V_PlateCarrier1_blk";
 		player addWeapon "arifle_MXM_F";
@@ -171,6 +174,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "30Rnd_65x39_caseless_mag";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
+		player addItem "H_PilotHelmetFighter_B";
 	};
 	
 };
