@@ -63,20 +63,13 @@ switch (_code) do {
 	//Pickaxe - KEY B
 	case 48:
 	{
-		if((!life_action_inUse) && (vehicle player == player) ) then
-		{
-			{
-				_str = [_x] call life_fnc_varToStr;
-				_val = missionNameSpace GVAR _x;
-				if(_val > 0 ) then
-				{
-					if( _str == "Pickaxe" || _str == "pickaxe" ) then
-					{
-						[] call life_fnc_pickAxeUse;
-					};
-				};
-			} foreach life_inv_items;
-		};
+		if((!life_action_gathering) && (vehicle player == player)) then
+        {
+                     if(life_inv_pickaxe > 0) then
+                     {
+                       [] spawn life_fnc_pickAxeUse;
+					 };
+        };
 	};
 
 
@@ -115,15 +108,29 @@ switch (_code) do {
 	//Open Wanted
 	case 2:
 	{
-		if(dialog) exitWith {};
-		[] call life_fnc_wantedMenu;
+		if (player getVariable["restrained",false]) then
+		{
+			hint "You cannot open your cell phone when you're restrained!";
+		}
+		else
+		{
+			if(dialog) exitWith {};
+			[] call life_fnc_wantedMenu;
+		};
 	};
 	
 
 	//2 Cellphone
 	case 3:
 	{
-		createDialog "life_my_smartphone";
+		if (player getVariable["restrained",false]) then
+		{
+			hint "You cannot open your cell phone when you're restrained!";
+		}
+		else
+		{
+			createDialog "life_my_smartphone";
+		};
 	};
 	
 	//3 Market
@@ -459,6 +466,37 @@ switch (_code) do {
 					[] spawn life_fnc_surrender;
 				};
 			};
+		};
+	};
+};
+
+
+if ((player getVariable["restrained",false] || player getVariable ["downed", false]) && _code in (actionKeys "Throw")) then
+{
+	systemChat "You can't throw something with your hands bound!";
+	_handled = true;
+};
+
+if (_code in (actionKeys "User2")) then {
+	if(!_alt && !_ctrlKey) then {
+		if(player getVariable ["restrained", false]) then {
+			hint "You cannot pick up items while you're restrained!";
+		} else {
+			closeDialog 0;
+			createDialog "life_pickup_items";
+			_handled = true;
+		};
+	};
+};
+
+if (_code in (actionKeys "User3")) then {
+	if(!_alt && !_ctrlKey) then {
+		if(player getVariable ["restrained", false]) then {
+			hint "You cannot access your inventory while you're restrained!";
+		} else {
+			closeDialog 0;
+			createDialog "life_inventory_menu";
+			_handled = true;
 		};
 	};
 };
