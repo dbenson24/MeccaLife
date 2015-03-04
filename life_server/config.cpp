@@ -156,6 +156,7 @@ class CfgFunctions
 			file = "\life_server\Functions\airdrop";
 			class generateAirdrop {};
 		};
+		class cargoUpdate {};
 		class goldUpdate {};
 		class Housing
 		{
@@ -176,6 +177,7 @@ class CfgFunctions
 			class queryPlayerGang {};
 			class removeGang {};
 			class updateGang {};
+			class fetchGangs {};
 		};
 
 		class Actions

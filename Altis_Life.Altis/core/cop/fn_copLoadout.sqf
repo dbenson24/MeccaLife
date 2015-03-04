@@ -13,7 +13,6 @@ _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
 //Load player with default cop gear.
-player addUniform "U_BG_Guerilla2_2";
 player addBackpack "B_Carryall_oucamo";
 
 /* ITEMS */
@@ -28,7 +27,11 @@ player assignItem "ItemGPS";
 player addItem "FirstAidKit";
 player addItem "FirstAidKit";
 player addItem "FirstAidKit";
-player addItem "ToolKit";
+player addItem "FirstAidKit";
+player addItem "FirstAidKit";
+player addItem "FirstAidKit";
+player addItem "FirstAidKit";
+player addItem "FirstAidKit";
 player addItem "ToolKit";
 player addItem "NVGoggles";
 player assignItem "NVGoggles";
@@ -36,7 +39,12 @@ player addItem "Rangefinder";
 player assignItem "Rangefinder";
 player addItem "SmokeShell";
 player addItem "SmokeShell";
+player addItem "SmokeShell";
+player addItem "SmokeShell";
 player addWeapon "hgun_P07_F";
+player addMagazine "16Rnd_9x21_Mag";
+player addMagazine "16Rnd_9x21_Mag";
+player addMagazine "16Rnd_9x21_Mag";
 player addMagazine "16Rnd_9x21_Mag";
 
 If(BANK > 0) then {BANK = BANK - 5000;};
@@ -47,7 +55,8 @@ switch (FETCH_CONST(life_coplevel)) do {
 
 	case 1:
 	{
-		[[player,0,"textures\cadetTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+		player ForceAddUniform "U_BG_Guerilla2_2";
+		player setObjectTextureGlobal [0, "textures\cadettroop.jpg"]; 
 		player addVest "V_TacVest_blk_POLICE";
 		player addMagazine "16Rnd_9x21_Mag";
 		player addMagazine "16Rnd_9x21_Mag";
@@ -61,7 +70,8 @@ switch (FETCH_CONST(life_coplevel)) do {
 	
 	case 2:
 	{
-		[[player,0,"textures\stateTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+		player ForceAddUniform "U_BG_Guerilla2_2";
+		player setObjectTextureGlobal [0, "textures\cadettroop.jpg"]; 
 		player addWeapon "arifle_MXC_Black_F";
 		player addPrimaryWeaponItem "optic_Arco";
 		player addVest "V_TacVest_blk_POLICE";
@@ -75,12 +85,15 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
+		player addItem "HandGrenade_Stone";
+		player addItem "HandGrenade_Stone";
 		
 	};
 	
 	case 3:
 	{
-	    [[player,0,"textures\stateTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+	    player ForceAddUniform "U_BG_Guerilla3_2";
+		player setObjectTextureGlobal [0, "textures\corptroop.jpg"];
 		player addWeapon "arifle_MX_Black_F";
 		player addPrimaryWeaponItem "optic_MRCO";
 		player addVest "V_TacVest_blk_POLICE";
@@ -92,16 +105,21 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag";
+		player addItem "HandGrenade_Stone";
+		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 	};
 	
 	case 4:
 	{
-	    [[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+	    player ForceAddUniform "U_BG_Guerilla3_2";
+		player setObjectTextureGlobal [0, "textures\corptroop.jpg"];
+		player addHeadgear "H_Beret_02";
 		player addWeapon "arifle_MXM_Black_F";
 		player addPrimaryWeaponItem "optic_MRCO";
-		player addVest "V_PlateCarrier2_rgr";
+		player addVest "V_PlateCarrier1_blk";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
@@ -110,14 +128,19 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag";
+		player addItem "HandGrenade_Stone";
+		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 	};
 	
 	case 5:
 	{
-	    [[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
-		player addVest "V_PlateCarrier2_rgr";
+	    player ForceAddUniform "U_O_OfficerUniform_ocamo";
+		player setObjectTextureGlobal [0, "textures\corptroop.jpg"];
+		player addHeadgear "H_Beret_02";
+		player addVest "V_PlateCarrier1_blk";
 		player addWeapon "arifle_MXM_Black_F";
 		player addPrimaryWeaponItem "optic_MRCO";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
@@ -130,12 +153,16 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "30Rnd_65x39_caseless_mag";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
+		player addItem "HandGrenade_Stone";
+		player addItem "HandGrenade_Stone";
 	};
 	case 6:
 	{
-	    [[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+	    player ForceAddUniform "U_O_OfficerUniform_ocamo";
+		player setObjectTextureGlobal [0, "textures\corptroop.jpg"];
+		player addHeadgear "H_Beret_02";
 		player addWeapon "arifle_MXM_F";
-		player addVest "V_PlateCarrier2_rgr";
+		player addVest "V_PlateCarrier1_blk";
 		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
@@ -144,13 +171,18 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag";
 		player addMagazine "30Rnd_65x39_caseless_mag";
+		player addItem "HandGrenade_Stone";
+		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 	};
 	case 7:
 	{
-	    [[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
-		player addVest "V_PlateCarrier2_rgr";
+	    player ForceAddUniform "U_O_OfficerUniform_ocamo";
+		player setObjectTextureGlobal [0, "textures\corptroop.jpg"];
+		player addHeadgear "H_Beret_Colonel";
+		player addItemToBackpack "H_PilotHelmetFighter_B";
+		player addVest "V_PlateCarrier1_blk";
 		player addWeapon "arifle_MXM_F";
 		player addPrimaryWeaponItem "optic_Arco";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
@@ -163,8 +195,14 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "30Rnd_65x39_caseless_mag";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
+		player addItem "HandGrenade_Stone";
+		player addItem "HandGrenade_Stone";
+		player addItemToBackpack "Chemlight_blue";
+		player addItemToBackpack "Chemlight_blue";
+		player addGoggles "G_Squares_Tinted";
 	};
 	
 };
 };
 [] call life_fnc_saveGear;
+[] call life_fnc_Uniformscolor;

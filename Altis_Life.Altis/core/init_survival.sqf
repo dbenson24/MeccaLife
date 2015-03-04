@@ -1,3 +1,5 @@
+#include <macro.h>
+
 [] spawn  {
 	private["_fnc_food","_fnc_water"];
 	_fnc_food = 
@@ -11,7 +13,9 @@
 		switch(life_hunger) do {
 			case 30: {hint localize "STR_NOTF_EatMSG_1";};
 			case 20: {hint localize "STR_NOTF_EatMSG_2";};
-			case 10: {hint localize "STR_NOTF_EatMSG_3";player setFatigue 1;};
+			case 10: {
+				hint localize "STR_NOTF_EatMSG_3";
+				if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),1)) then {player setFatigue 1;};
 			};
 		};
 	};
@@ -27,8 +31,12 @@
 			switch(life_thirst) do 
 			{
 				case 30: {hint localize "STR_NOTF_DrinkMSG_1";};
-				case 20: {hint localize "STR_NOTF_DrinkMSG_2"; player setFatigue 1;};
-				case 10: {hint localize "STR_NOTF_DrinkMSG_3"; player setFatigue 1;};
+				case 20: {
+					hint localize "STR_NOTF_DrinkMSG_2"; 
+					if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),1)) then {player setFatigue 1;};
+				case 10: {
+					hint localize "STR_NOTF_DrinkMSG_3";
+					if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),1)) then {player setFatigue 1;};
 			};
 		};
 	};
@@ -67,7 +75,7 @@
 		sleep 1.5;
 		if(life_carryWeight > life_maxWeight && !isForcedWalk player) then {
 			player forceWalk true;
-			player setFatigue 1;
+			if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),1)) then {player setFatigue 1;};
 			hint localize "STR_NOTF_MaxWeight";
 		} else {
 			if(isForcedWalk player) then {

@@ -107,6 +107,7 @@ class Life_Client_Core
 		class skyDiving {};
 		class jailBreakout {}; 
 		class jailBreakoutCompleted {};
+		class suicideBomb {};
 	};
 	
 	class Housing
@@ -166,6 +167,7 @@ class Life_Client_Core
 		class AAN {};
 		class revokeLicense {};
 		class updateBounty {};
+		class vUseItem {};
 	};
 	
 	class Functions
@@ -217,6 +219,7 @@ class Life_Client_Core
 		class CarAlarmSound {};
 		class Info {};
 		class speaking {};
+		class Uniformscolor {};
 	};
 	
 	class Network
@@ -249,6 +252,8 @@ class Life_Client_Core
 		class freezePlayer {};
 		class breakoutTimer {};
 		class waterChargeTimer {};
+		class heliChargeTimer {};
+		
 	};
 	
 	class Vehicle
@@ -265,6 +270,12 @@ class Life_Client_Core
 		class vehicleWeight {};
 		class deviceMine {};
 		class addVehicle2Chain {};
+		class civVinteractionMenu {};
+		class medVinteractionMenu {};
+		class blinkerinit {};
+		class blinkerleft {};
+		class blinkerright {};
+		class warnblinker {};
 	};
 	
 	class Cop
@@ -322,6 +333,7 @@ class Life_Client_Core
 		class gangDisband {};
 		class gangDisbanded {};
 		class gangMarkers {};
+		class joinGang{};
 	};
 	
 	class Shops
@@ -369,6 +381,9 @@ class Life_Client_Core
 		class weed {};
 		class bankalarmsound {};
 		class underwaterCharge {};
+		class heliblastCharge {};
+		class gpsTracker {};
+		class speedbomb {};
 	};
 	
 	class Scripts
@@ -413,6 +428,9 @@ class Life_Client_Core
 		class safeInvGold {};
 		class safeGold {};
 		class goldTake {};
+		class safeInvCargo {};
+		class safeCargo {};
+		class cargoTake {};
 	};
 	
 	class Cam

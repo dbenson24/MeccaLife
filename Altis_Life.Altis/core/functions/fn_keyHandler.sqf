@@ -25,6 +25,20 @@ if((_code in (actionKeys "GetOver") || _code in (actionKeys "salute")) && {(play
 	true;
 };
 
+if(isNil "life_blinker_active") then {
+life_blinker_active = false;
+};
+
+
+
+
+
+
+if(life_action_inUse) exitWith {
+	if(!life_interrupted && _code in _interruptionKeys) then {life_interrupted = true;};
+	_handled;
+};
+
 if(life_action_inUse) exitWith {
 	if(!life_interrupted && _code in _interruptionKeys) then {life_interrupted = true;};
 	_handled;
@@ -45,6 +59,38 @@ if(!(EQUAL(count (actionKeys "User10"),0)) && {(inputAction "User10" > 0)}) exit
 };
 
 switch (_code) do {
+
+	//Q: left signal
+	case 16:
+	{
+		_veh = vehicle player;
+		if(!life_blinker_active && alive _veh && _veh != player && ((driver _veh) == player) ) then {		
+			[] spawn
+			{
+			life_blinker_active=true;
+			sleep 2;
+			life_blinker_active=false;
+			};
+			[_veh,"left"] call life_fnc_BlinkerInit;
+		};
+	};
+	
+	//E: right signal
+	case 18:
+	{
+		_veh = vehicle player;
+		
+		if(alive _veh && !life_blinker_active && _veh != player && ((driver _veh) == player) ) then{
+			[] spawn
+			{
+				life_blinker_active=true;
+				sleep 1;
+				life_blinker_active=false;
+			};
+			[_veh,"right"] call life_fnc_BlinkerInit;
+		};
+	};
+
 
 	//Open Wanted
 	case 2:

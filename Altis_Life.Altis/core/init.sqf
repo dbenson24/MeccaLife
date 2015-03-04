@@ -87,10 +87,10 @@ diag_log format["                End of Altis Life Client Init :: Total Executio
 diag_log "------------------------------------------------------------------------------------------------------";
 
 life_sidechat = true;
+[[player],"life_fnc_wantedFetchForCivilian",false,false] spawn life_fnc_MP;
 [[player,life_sidechat,playerSide],"TON_fnc_managesc",false,false,true] call life_fnc_MP;
 0 cutText ["","BLACK IN"];
 [] call life_fnc_hudSetup;
-[] execVM "core\config\fn_initSkin.sqf"; 
 
 /* Set up frame-by-frame handlers */
 LIFE_ID_PlayerTags = ["LIFE_PlayerTags","onEachFrame","life_fnc_playerTags"] call BIS_fnc_addStackedEventHandler;
@@ -121,3 +121,5 @@ switch(FETCH_CONST(life_donator)) do
 CONSTVAR(life_paycheck); //Make the paycheck static.
 if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),0)) then {player enableFatigue false;};
 [[getPlayerUID player,player getVariable["realname",name player]],"life_fnc_wantedProfUpdate",false,false] spawn life_fnc_MP;
+
+[] call life_fnc_Uniformscolor;

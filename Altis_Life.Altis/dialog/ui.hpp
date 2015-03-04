@@ -13,6 +13,10 @@
 #define IDC_LIFE_PICTURE_WANTED 1203
 #define IDC_LIFE_WANTED_TEXT 1003
 #define IDC_LIFE_PICTURE_WATERMARK 9999
+#define IDC_LIFE_STAMINA_TEXT 0999
+#define IDC_LIFE_BAR_STAMINA 2199
+#define IDC_LIFE_PICTURE_STAMINA 1199
+
 /*
         Name: Dillon "Itsyuka" Modine-Thuen
         File: ui.hpp
@@ -41,7 +45,10 @@ class playerHUD {
                 LIFE_BAR_WANTED,
                 LIFE_PICTURE_WANTED,
                 LIFE_WANTED_TEXT,
-				LIFE_PICTURE_WATERMARK 
+				LIFE_PICTURE_WATERMARK,
+				LIFE_PICTURE_STAMINA,
+				LIFE_BAR_STAMINA,
+				LIFE_STAMINA_TEXT
         };
 		
 		/* WaterMark */
@@ -62,12 +69,20 @@ class playerHUD {
                 idc = IDD_LIFE_MAIN_DISP;
                 colorBackground[] = {0,0,0,0.5};
                 x = 0.917656 * safezoneW + safezoneX;
-                y = 0.819 * safezoneH + safezoneY;
+                y = 0.785954 * safezoneH + safezoneY;
                 w = 0.0825 * safezoneW;
-                h = 0.14 * safezoneH;
+                h = 0.178721 * safezoneH;
         };
  
         /* Progress Bars */
+		class LIFE_BAR_STAMINA: Life_RscProgress
+		{
+				idc = IDC_LIFE_BAR_STAMINA;
+				x = 0.938281 * safezoneW + safezoneX;
+				y = 0.796953 * safezoneH + safezoneY;
+				w = 0.061875 * safezoneW;
+				h = 0.022 * safezoneH;
+		};
         class LIFE_BAR_FOOD: Life_RscProgress
         {
                 idc = IDC_LIFE_BAR_FOOD;
@@ -105,6 +120,15 @@ class playerHUD {
  
         /* Text */
  
+		class LIFE_STAMINA_TEXT: Life_RscText
+		{
+				idc = IDC_LIFE_STAMINA_TEXT;
+				text = "";
+				x = 0.958906 * safezoneW + safezoneX;
+				y = 0.801353 * safezoneH + safezoneY;
+				w = 0.020625 * safezoneW;
+				h = 0.011 * safezoneH;
+		};
         class LIFE_FOOD_TEXT: Life_RscText
         {
                 idc = IDC_LIFE_FOOD_TEXT;
@@ -142,7 +166,16 @@ class playerHUD {
             h = 0.011 *safezoneH;
         };
  
-        /* Icons */
+		/* Icons */
+		class LIFE_PICTURE_STAMINA: life_RscPicture
+		{
+			idc = IDC_LIFE_PICTURE_STAMINA;
+			text = "icons\stamina.paa";
+			x = 0.922813 * safezoneW + safezoneX;
+			y = 0.796953 * safezoneH + safezoneY;
+			w = 0.012375 * safezoneW;
+			h = 0.0219965 * safezoneH;
+		};
         class LIFE_PICTURE_FOOD: life_RscPicture
         {
                 idc = IDC_LIFE_PICTURE_FOOD;
