@@ -272,20 +272,27 @@ switch (_code) do {
 		};
 	};
 	//T Key (Trunk)
-	case 20: {
-		if(!_alt && !_ctrlKey && !life_is_processing) then {
-			if(vehicle player != player && alive vehicle player) then {
-				if((vehicle player) in life_vehicles) then {
-					player say3D "trunk_open";
-					[vehicle player] call life_fnc_openInventory;
+	case 20:
+	{
+		if(!_alt && !_ctrlKey) then
+		{
+			if(vehicle player != player && alive vehicle player) then
+			{
+				if((vehicle player) in life_vehicles) then
+				{
+					[vehicle player] spawn life_fnc_openInventory;
 				};
-			} else {
-				private "_list";
-				_list = ["landVehicle","Air","Ship","House_F"];
-				if(KINDOF_ARRAY(cursorTarget,_list) && {player distance cursorTarget < 7} && {vehicle player == player} && {alive cursorTarget}) then {
-					if(cursorTarget in life_vehicles OR {!(cursorTarget GVAR ["locked",true])}) then {
-						player say3D "trunk_open";
-						[cursorTarget] call life_fnc_openInventory;
+			}
+				else
+			{
+				if((cursorTarget isKindOf "Land_Wreck_Traw_F" OR cursorTarget isKindOf "Land_Wreck_Traw2_F" OR cursorTarget isKindOf "Car" OR cursorTarget isKindOf "Air" OR cursorTarget isKindOf "Ship" OR cursorTarget isKindOf "House_F") && player distance cursorTarget < 10 && vehicle player == player && alive cursorTarget) then
+				{
+					if(cursorTarget in life_vehicles OR {!(cursorTarget getVariable ["locked",true])}) then
+					{
+						[cursorTarget] spawn life_fnc_openInventory;
+					};
+					if (cursorTarget isKindOf "Land_Wreck_Traw_F" OR cursorTarget isKindOf "Land_Wreck_Traw2_F") then {
+						[cursorTarget] spawn life_fnc_openInventory;
 					};
 				};
 			};

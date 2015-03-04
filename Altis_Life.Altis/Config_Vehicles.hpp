@@ -460,6 +460,14 @@ class CfgVehicles {
 	    };
     };
 
+	class Land_Wreck_Traw_F {
+		vItemSpace = 10000000;
+	}
+	
+	class Land_Wreck_Traw2_F {
+		vItemSpace = 10000000;
+	}
+	
 	class C_Kart_01_Blu_F {
 		vItemSpace = 20;
 		price = pkart;

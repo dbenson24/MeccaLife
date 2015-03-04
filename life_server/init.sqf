@@ -168,7 +168,7 @@ heli_safe setVariable["cargo",round(random 50),true];
 
 [] execVM "\life_server\Functions\airdrop\config.sqf";
 [] execVM "\life_server\Functions\airdrop\fn_generateAirdropAuto.sqf";
-
+[] execVM "\life_server\Functions\Schiffswrack\fn_generateschiffwrackAuto.sqf";
 [] spawn
 {
 	private["_logic","_queue"];
