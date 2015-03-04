@@ -197,6 +197,9 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
+		player addItemToBackpack "Chemlight_blue";
+		player addItemToBackpack "Chemlight_blue";
+		player addGoggles "G_Squares_Tinted";
 	};
 	
 };
