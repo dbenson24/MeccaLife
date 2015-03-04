@@ -34,4 +34,5 @@
 #include "goldSafe.h"
 #include "heliSafe.h"
 #include "v_useItem.h"
+#include "welcomesettings.hpp"
 
