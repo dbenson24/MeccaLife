@@ -102,6 +102,29 @@ class WeaponShops {
 			{ "20Rnd_556x45_UW_mag", "Taser Rifle Magazine", 125 }
         };
     };
+	    class cop_Private {
+        name = "Private Rank Shop";
+        side = "cop";
+        license = "";
+        level = 2;
+        msg = "";
+        items[] = {
+        	{ "arifle_sdar_F", "Taser Rifle", 20000 },
+			{ "hgun_P07_snds_F", "Stun Pistol", 2000 },
+			{ "hgun_P07_F", "", 7500 },
+			{ "HandGrenade_Stone", "Flashbang", 1700 },
+			{ "Binocular", "", 150 },
+			{ "ItemGPS", "", 100 },
+			{ "ToolKit", "", 250 },
+			{ "muzzle_snds_L", "", 650 },
+			{ "FirstAidKit", "", 150 },
+			{ "Medikit", "", 1000 },
+			{ "NVGoggles", "", 2000 },
+			{ "16Rnd_9x21_Mag", "", 50 },
+			{ "20Rnd_556x45_UW_mag", "Taser Rifle Magazine", 125 }
+        };
+    };
+ 
  
     //Medic Shops
     class med_basic {
