@@ -62,7 +62,7 @@ class WeaponShops {
     };
     //Basic Shops
     class genstore {
-        name = "Altis General Store";
+        name = "Mecca General Store";
         side = "civ";
         license = "";
         level = -1;
@@ -81,7 +81,7 @@ class WeaponShops {
     };
     //Cop Shops
     class cop_basic {
-        name = "Altis Cop Shop";
+        name = "Mecca Cop Shop";
         side = "cop";
         license = "";
         level = -1;
@@ -102,43 +102,7 @@ class WeaponShops {
 			{ "20Rnd_556x45_UW_mag", "Taser Rifle Magazine", 125 }
         };
     };
-    class cop_patrol {
-        name = "Altis Patrol Officer Shop";
-        side = "cop";
-        license = "";
-        level = 2;
-        msg = "You must be a Patrol Officer Rank!";
-        items[] = {
-        	{ "arifle_MX_F", "", 35000 },
-			{ "SMG_02_ACO_F", "", 30000 },
-			{ "HandGrenade_Stone", "Flashbang", 1700 },
-			{ "MineDetector", "", 1000 },
-			{ "acc_flashlight", "", 750 },
-			{ "optic_Holosight", "", 1200 },
-			{ "optic_Arco", "", 2500 },
-			{ "muzzle_snds_H", "", 2750 },
-			{ "30Rnd_65x39_caseless_mag", "", 130 },
-			{ "30Rnd_9x21_Mag", "", 250 }
-        };
-    };
-    class cop_sergeant {
-        name = "Altis Sergeant Officer Shop";
-        side = "cop";
-        license = "";
-        level = 3;
-        msg = "You must be a Sergeant Rank!";
-        items[] = {
-            { "SMG_02_ACO_F", "", 15000 },
-			{ "hgun_ACPC2_F", "", 17500 },
-			{ "HandGrenade_Stone", "Flashbang", 1700 },
-			{ "arifle_MXC_F", "", 30000 },
-			{ "optic_Arco", "", 2500 },
-			{ "muzzle_snds_H", "", 2750 },
-			{ "30Rnd_65x39_caseless_mag", "", 100 },
-			{ "30Rnd_9x21_Mag", "", 60 },
-			{ "9Rnd_45ACP_Mag", "", 200 }
-        };
-    };
+ 
     //Medic Shops
     class med_basic {
         name = "store";
