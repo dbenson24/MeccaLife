@@ -28,7 +28,7 @@ if(side player == WEST) then {
 
 
 if(side player == civilian) then {
-	if(side player == civilian && uniform player == "U_I_CombatUniform" && (FETCH_CONST(life_donator) == 1 OR FETCH_CONST(life_donator) == 2 OR FETCH_CONST(life_donator) == 3 OR FETCH_CONST(life_donator) == 4 OR FETCH_CONST(life_donator) == 5 OR FETCH_CONST(life_donator) == 6)) then {
+	if(side player == civilian && uniform player == "U_I_CombatUniform" && ( FETCH_CONST(life_donator) == 5)) then {
 	player setObjectTextureGlobal [0, "textures\mafia.paa"];
 	};
 };
