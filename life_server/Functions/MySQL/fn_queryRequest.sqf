@@ -2,11 +2,11 @@
 /*
 	File: fn_queryRequest.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Handles the incoming request and sends an asynchronous query
 	request to the database.
-	
+
 	Return:
 	ARRAY - If array has 0 elements it should be handled as an error in client-side files.
 	STRING - The request had invalid handles or an unknown error and is logged to the RPT.
@@ -73,7 +73,7 @@ switch (_side) do {
 	case west: {
 		_queryResult set[9,([_queryResult select 9,1] call DB_fnc_bool)];
 	};
-	
+
 	case civilian: {
 		_queryResult set[7,([_queryResult select 7,1] call DB_fnc_bool)];
 		_houseData = _uid spawn TON_fnc_fetchPlayerHouses;
@@ -82,14 +82,6 @@ switch (_side) do {
 		_gangData = _uid spawn TON_fnc_queryPlayerGang;
 		waitUntil{scriptDone _gangData};
 		_queryResult pushBack (missionNamespace getVariable[format["gang_%1",_uid],[]]);
-		
-		//PlayerPosition
-        _new = [(_queryResult select 9)] call DB_fnc_mresToArray;
-        if(typeName _new == "STRING") then {_new = call compile format["%1", _new];};
-        _queryResult set[9,_new];
-
-        //alive
-        _queryResult set[10,([_queryResult select 10,1] call DB_fnc_bool)];
 	};
 };
 
