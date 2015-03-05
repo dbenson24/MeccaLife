@@ -636,6 +636,9 @@ class CfgVehicles {
             } },
             { "Cop", "cop", {
                 "textures\meccapolicesuv.jpg"
+            } },
+            { "Donut", "civ", {
+                "textures\donut_suv_textures.jpg"
             } }
 	        };
     };
