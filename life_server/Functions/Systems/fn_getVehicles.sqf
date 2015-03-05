@@ -2,7 +2,7 @@
 /*
 	File: fn_getVehicles.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Sends a request to query the database information and returns vehicles.
 */
@@ -31,7 +31,7 @@ if(_side == "Error") exitWith {
 	[[[]],"life_fnc_impoundMenu",(owner _unit),false] call life_fnc_MP;
 };
 
-_query = format["SELECT id, side, classname, type, pid, alive, active, plate, color FROM vehicles WHERE pid='%1' AND side='%2' AND type='%3' AND alive=1 AND active=0",_pid,_side,_type];
+_query = format["vehiclesInfo:%1:%2:%3",_pid,_side,_type];
 
 waitUntil{sleep (random 0.3); !DB_Async_Active};
 _tickTime = diag_tickTime;

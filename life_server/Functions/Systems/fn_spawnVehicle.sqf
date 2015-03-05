@@ -2,7 +2,7 @@
 /*
 	File: fn_spawnVehicle.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Sends the query request to the database, if an array is returned then it creates
 	the vehicle if it's not in use or dead.
@@ -24,7 +24,7 @@ if(_vid in serv_sv_use) exitWith {};
 serv_sv_use pushBack _vid;
 _servIndex = serv_sv_use find _vid;
 
-_query = format["SELECT id, side, classname, type, pid, alive, active, plate, color FROM vehicles WHERE id='%1' AND pid='%2'",_vid,_pid];
+_query = format["vehicleInfo:%1:%2",_vid,_pid];
 
 waitUntil{sleep (random 0.3); !DB_Async_Active};
 _tickTime = diag_tickTime;
@@ -68,7 +68,7 @@ if(count _nearVehicles > 0) exitWith {
 	[[1,(localize "STR_Garage_SpawnPointError")],"life_fnc_broadcast",_unit,false,true] call life_fnc_MP;
 };
 
-_query = format["UPDATE vehicles SET active='1' WHERE pid='%1' AND id='%2'",_pid,_vid];
+_query = format["vehicleUpdateActive:1:%1:%2",_pid,_vid];
 
 waitUntil {!DB_Async_Active};
 [_query,false] spawn DB_fnc_asyncCall;
@@ -92,7 +92,7 @@ _vehicle allowDamage true;
 [[_vehicle],"life_fnc_addVehicle2Chain",_unit,false] call life_fnc_MP;
 [_pid,_side,_vehicle,1] call TON_fnc_keyManagement;
 _vehicle lock 2;
-//Reskin the vehicle 
+//Reskin the vehicle
 [[_vehicle,_vInfo select 8],"life_fnc_colorVehicle",nil,false] call life_fnc_MP;
 _vehicle setVariable["vehicle_info_owners",[[_pid,_name]],true];
 _vehicle setVariable["dbInfo",[(_vInfo select 4),_vInfo select 7]];
