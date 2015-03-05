@@ -60,6 +60,10 @@ player createDiarySubject ["controls","Controls"];
 				H: Holster/Unholster your weapon<br/>
 				Left Shift + P: Ear Plugs (Reduce Sound by 80%)<br/>
 				Q/E: Vehicle Signals<br/>
+				B: Pickaxe<br/>
+				O: Gate Opener/Spikestrip for Cops<br/>
+				O: Gate Opener/Spikestrip for Cops<br/>
+				User11: Redgull<br/>
 				"
 		]
 	];
