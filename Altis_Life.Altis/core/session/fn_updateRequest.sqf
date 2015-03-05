@@ -3,10 +3,14 @@
 	File: fn_updateRequest.sqf
 	Author: Tonic
 */
-private["_packet","_array","_flag"];
+private["_packet","_array","_flag","_civPosition"];
 _packet = [getPlayerUID player,(profileName),playerSide,CASH,BANK];
 _array = [];
 _flag = switch(playerSide) do {case west: {"cop"}; case civilian: {"civ"}; case independent: {"med"};};
+
+//Player Position Saving
+_civPosition = getPos player;
+diag_log format ["%1",_civPosition];
 
 {
 	_varName = LICENSE_VARNAME(configName _x,_flag);
@@ -20,6 +24,7 @@ _packet pushBack life_gear;
 switch (playerSide) do {
 	case civilian: {
 		_packet pushBack life_is_arrested;
+		_packet pushBack _civPosition;
 		_packet pushBack life_is_alive;
 	};
 };
