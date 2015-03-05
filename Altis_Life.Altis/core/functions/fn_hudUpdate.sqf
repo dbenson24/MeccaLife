@@ -10,7 +10,6 @@
 #define IDC_LIFE_BAR_STAMINA 2199
 #define IDC_LIFE_STAMINA_TEXT 0999
 
-#define LIFEdisplay (GVAR_UINS ["playerHUD",displayNull])
 #define LIFEctrl(ctrl) ((GVAR_UINS ["playerHUD",displayNull]) displayCtrl ctrl)
 /*
 	File: fn_hudUpdate.sqf
