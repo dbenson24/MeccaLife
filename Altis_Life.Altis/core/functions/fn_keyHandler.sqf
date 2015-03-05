@@ -280,10 +280,19 @@ switch (_code) do {
 		};
 	};
 	 // O, police gate opener
-        case 24:
+	case 24:
 	{
-		if (!_shift && !_alt && !_ctrlKey && (playerSide == west) && (vehicle player != player)) then {
+		if (!_shift && !_alt && !_ctrlKey && (playerSide == west) && (playerSide == independent) && (vehicle player != player)) then {
 			[] call life_fnc_copOpener;
+		} else {
+			if (playerSide == west) then 
+			{
+				if(life_inv_spikeStrip > 0) then 
+				{ 
+					[false,"spikeStrip",1] call life_fnc_handleInv;
+					[] spawn life_fnc_spikeStrip;
+				};
+			};
 		};
 	};
 	//T Key (Trunk)
@@ -502,6 +511,12 @@ if (_code in (actionKeys "User3")) then {
 			_handled = true;
 		};
 	};
+};
+
+if ((player getVariable["restrained",false]) && (_code in (actionKeys "ShowMap") || _code in (actionKeys "MiniMap") || _code in (actionKeys "MiniMapToggle"))) then
+{
+	systemChat "You can't view maps while restrained!" ;
+	_handled = true;
 };
 
 if (_code in (actionKeys "TacticalView")) then
