@@ -112,8 +112,9 @@ if(_bool) then {
 							if(_override) then {
 								player addItem _item;
 							} else {
+								if(!(EQUAL(headGear player,_item))) then{
 									if(!(EQUAL(headGear player,""))) then {removeHeadGear player;};
-								player addHeadGear _item;
+                                    player addHeadGear _item;
 								};
 							};
 						};
