@@ -1,6 +1,6 @@
 /*
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	WHAT THE HELL DO YOU THINK IT DOES?!?!!??!?!!?!??!
 */
@@ -13,7 +13,6 @@ for [{_x=0},{_x<=_count},{_x=_x+10}] do {
 	_query = format["housingInit:%1",_x];
 	_queryResult = [_query,2,true] call DB_fnc_asyncCall;
 	if(count _queryResult == 0) exitWith {};
-	
 	{
 		_pos = call compile format["%1",_x select 2];
 		_house = nearestBuilding _pos;
