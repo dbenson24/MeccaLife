@@ -167,6 +167,7 @@ class Life_Client_Core
 		class revokeLicense {};
 		class updateBounty {};
 		class vUseItem {};
+		class p_prisionbreak {};
 	};
 	
 	class Functions
@@ -219,6 +220,8 @@ class Life_Client_Core
 		class Info {};
 		class speaking {};
 		class Uniformscolor {};
+		class prisionbreak {};
+		class progressBaren {};
 	};
 	
 	class Network

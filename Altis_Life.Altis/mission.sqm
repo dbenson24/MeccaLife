@@ -112,7 +112,8 @@ class Mission
 		"A3_Structures_F_Households_House_Shop01",
 		"A3_Soft_F_Car",
 		"A3_Structures_F_EPC_Civ_PlayGround",
-		"A3_Structures_F_EPB_Civ_PlayGround"
+		"A3_Structures_F_EPB_Civ_PlayGround",
+		"A3_Data_F_Curator_Intel"
 	};
 	addOnsAuto[]=
 	{
@@ -222,6 +223,7 @@ class Mission
 		"A3_Soft_F_Car",
 		"A3_Structures_F_EPC_Civ_PlayGround",
 		"A3_Structures_F_EPB_Civ_PlayGround",
+		"A3_Data_F_Curator_Intel",
 		"a3_map_altis"
 	};
 	randomSeed=2004553;
@@ -6353,7 +6355,6 @@ class Mission
 					id=351;
 					side="CIV";
 					vehicle="C_man_p_fugitive_F_asia";
-					player="PLAYER COMMANDER";
 					skill=0.60000002;
 				};
 			};
@@ -6403,7 +6404,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=8854;
+		items=8855;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -98677,10 +98678,19 @@ class Mission
 			skill=0.60000002;
 			init="this enableSimulation false; this allowDamage false;";
 		};
+		class Item8854
+		{
+			position[]={16727.697,11.641628,13634.742};
+			id=9208;
+			side="EMPTY";
+			vehicle="Intel_File1_F";
+			skill=0.60000002;
+			init="this enableSimulation false; this allowDamage false; this addAction[""Break out prisoner"",life_fnc_p_prisionbreak,""computer""];";
+		};
 	};
 	class Markers
 	{
-		items=406;
+		items=407;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -102035,6 +102045,13 @@ class Mission
 			type="c_unknown";
 			colorName="ColorGreen";
 			angle=127.88971;
+		};
+		class Item406
+		{
+			position[]={16727.977,12.015625,13627.254};
+			name="jail_breakout";
+			type="Empty";
+			angle=121.566;
 		};
 	};
 	class Sensors
