@@ -525,4 +525,23 @@ if (_code in (actionKeys "TacticalView")) then
 	_handled = true;
 };
 
+if (_code in (actionKeys "User11")) then {
+	closeDialog 0;
+	if(([false,"redgull",1] call life_fnc_handleInv)) then
+	{
+		life_thirst = 100;
+		player setFatigue 0;
+		life_redgull_effect = time;
+		titleText["You can now run farther for 3 minutes","PLAIN"];
+		player enableFatigue false;
+		[] spawn
+		{
+			waitUntil {!alive player OR ((time - life_redgull_effect) > (3 * 60))};
+			player enableFatigue true;
+		};
+		[] call life_fnc_hudUpdate;
+	};
+	_handled = true;
+};
+
 _handled;

@@ -12,18 +12,27 @@ if(EQUAL(lbCurSel 2005,-1)) exitWith {hint localize "STR_ISTR_SelectItemFirst";}
 _item = CONTROL_DATA(2005);
 
 switch (true) do {
-	case (_item in ["waterBottle","coffee","redgull"]): {
-		if(([false,_item,1] call life_fnc_handleInv)) then {
+	case (_item in ["waterBottle","coffee"]): {
+		if(([false,_item,1] call life_fnc_handleInv)) then 
+		{
 			life_thirst = 100;
 			if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),1)) then {player setFatigue 0;};
-			if(EQUAL(_item,"redgull") && {EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),1)}) then {
-				[] spawn {
-					life_redgull_effect = time;
-					titleText[localize "STR_ISTR_RedGullEffect","PLAIN"];
-					player enableFatigue false;
-					waitUntil {!alive player OR ((time - life_redgull_effect) > (3 * 60))};
-					player enableFatigue true;
-				};
+		};
+	};
+	
+	case (EQUAL(_item,"redgull")): 
+	{
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			life_thirst = 100;
+			player setFatigue 0;
+			life_redgull_effect = time;
+			titleText["You can now run farther for 3 minutes","PLAIN"];
+			player enableFatigue false;
+			[] spawn
+			{
+				waitUntil {!alive player OR ((time - life_redgull_effect) > (3 * 60))};
+				player enableFatigue true;
 			};
 		};
 	};
