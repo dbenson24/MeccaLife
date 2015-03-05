@@ -1,7 +1,7 @@
 /*
 	File: fn_vehicleStore.sqf
 	Author: Bryan "Tonic" Boardwine
-
+	
 	Description:
 	Stores the vehicle in the 'Garage'
 */
@@ -26,7 +26,7 @@ if(_impound) then {
 			deleteVehicle _vehicle;
 		};
 	} else {
-		_query = format["vehicleUpdateActivePlate:0:%1:%2",_uid,_plate];
+		_query = format["UPDATE vehicles SET active='0' WHERE pid='%1' AND plate='%2'",_uid,_plate];
 		waitUntil {!DB_Async_Active};
 		_thread = [_query,1] call DB_fnc_asyncCall;
 		//waitUntil {scriptDone _thread};
@@ -42,14 +42,14 @@ if(_impound) then {
 		life_garage_store = false;
 		(owner _unit) publicVariableClient "life_garage_store";
 	};
-
+	
 	if(_uid != getPlayerUID _unit) exitWith {
 		[[1,(localize "STR_Garage_Store_NoOwnership")],"life_fnc_broadcast",(owner _unit),false] call life_fnc_MP;
 		life_garage_store = false;
 		(owner _unit) publicVariableClient "life_garage_store";
 	};
-
-	_query = format["vehicleUpdateActivePlate:0:%1:%2",_uid,_plate];
+	
+	_query = format["UPDATE vehicles SET active='0' WHERE pid='%1' AND plate='%2'",_uid,_plate];
 	waitUntil {!DB_Async_Active};
 	_thread = [_query,1] call DB_fnc_asyncCall;
 	//waitUntil {scriptDone _thread};

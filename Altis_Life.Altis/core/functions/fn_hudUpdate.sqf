@@ -1,4 +1,5 @@
 #include <macro.h>
+#define IDD_LIFE_MAIN_DISP 2203
 #define IDC_LIFE_BAR_FOOD 2200
 #define IDC_LIFE_BAR_WATER 2201
 #define IDC_LIFE_BAR_HEALTH 2202
@@ -10,6 +11,7 @@
 #define IDC_LIFE_BAR_STAMINA 2199
 #define IDC_LIFE_STAMINA_TEXT 0999
 
+#define LIFEdisplay (GVAR_UINS ["playerHUD",displayNull]) 
 #define LIFEctrl(ctrl) ((GVAR_UINS ["playerHUD",displayNull]) displayCtrl ctrl)
 /*
 	File: fn_hudUpdate.sqf

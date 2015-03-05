@@ -30,7 +30,7 @@ _tickTime = diag_tickTime;
 	};
 } forEach _units;
 
-_result = format["wantedFetchID:%1",_inStatement];
+_result = format["SELECT wantedID, wantedName FROM wanted WHERE active='1' AND wantedID in ('%1')",_inStatement];
 waitUntil{!DB_Async_Active};
 _queryResult = [_result,2,true] call DB_fnc_asyncCall;
 
