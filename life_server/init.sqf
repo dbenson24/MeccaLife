@@ -32,13 +32,13 @@ if(isNil {GVAR_UINS "life_sql_id"}) then {
 	//Initialize connection to Database
 	_result = EXTDB format["9:DATABASE:%1",DATABASE_SELECTION];
 	if(!(EQUAL(_result,"[1]"))) exitWith {EXTDB_FAILED("extDB: Error with Database Connection")};
-	_result = EXTDB format["9:ADD:DB_RAW_V3:%1:ADD_QUOTES",FETCH_CONST(life_sql_id)];
+	_result = EXTDB format["9:ADD:DB_CUSTOM_v5:%1:altis-life-rpg-4",FETCH_CONST(life_sql_id)];
 	if(!(EQUAL(_result,"[1]"))) exitWith {EXTDB_FAILED("extDB: Error with Database Connection")};
 	//Initialize Logging options from extDB
 	if((EQUAL(EXTDB_SETTINGS("LOG"),1))) then {
 		{
 			EXTDB format["9:ADD:LOG:%1:%2",SEL(_x,0),SEL(_x,1)];
-			["diag_log",[format["%1 is successfully added",SEL(_x,0)]]] call TON_fnc_logIt;
+			["diag_log",[format["extDB: %1 is successfully added",SEL(_x,0)]]] call TON_fnc_logIt;
 		} forEach EXTDB_LOGAR;
 	};
 	//Initialize RCON options from extDB
@@ -49,7 +49,7 @@ if(isNil {GVAR_UINS "life_sql_id"}) then {
 
 		EXTDB format["9:START_RCON:%1",RCON_SELECTION];
 		EXTDB format["9:ADD:RCON:%1",FETCH_CONST(RCON_ID)];
-		["diag_log",["RCON is enabled"]] call TON_fnc_logIt;
+		["diag_log",["extDB: RCON is enabled"]] call TON_fnc_logIt;
 	};
 	//Initialize VAC options from extDB
 	if((EQUAL(EXTDB_SETTINGS("VAC"),1))) then {
@@ -59,7 +59,7 @@ if(isNil {GVAR_UINS "life_sql_id"}) then {
 
 		EXTDB "9:START_VAC";
 		EXTDB format["9:ADD:VAC:%1",FETCH_CONST(VAC_ID)];
-		["diag_log",["VAC is enabled"]] call TON_fnc_logIt;
+		["diag_log",["extDB: VAC is enabled"]] call TON_fnc_logIt;
 	};
 	//Initialize MISC options from extDB
 	if((EQUAL(EXTDB_SETTINGS("MISC"),1))) then {
@@ -68,38 +68,38 @@ if(isNil {GVAR_UINS "life_sql_id"}) then {
 		SVAR_UINS ["MISC_ID",MISC_ID];
 
 		EXTDB format["9:ADD:MISC:%1",FETCH_CONST(MISC_ID)];
-		["diag_log",["MISC is enabled"]] call TON_fnc_logIt;
+		["diag_log",["extDB: MISC is enabled"]] call TON_fnc_logIt;
 	};
 	EXTDB "9:LOCK";
-	["diag_log",["Connected to the Database"]] call TON_fnc_logIt;
+	["diag_log",["extDB: Connected to the Database"]] call TON_fnc_logIt;
 } else {
 	life_sql_id = GVAR_UINS "life_sql_id";
 	CONSTVAR(life_sql_id);
-	["diag_log",["Still Connected to the Database"]] call TON_fnc_logIt;
+	["diag_log",["extDB: Still Connected to the Database"]] call TON_fnc_logIt;
 	if((EQUAL(EXTDB_SETTINGS("RCON"),1))) then {
 		RCON_ID = GVAR_UINS "RCON_ID";
 		CONSTVAR(RCON_ID);
-		["diag_log",["RCON still enabled"]] call TON_fnc_logIt;
+		["diag_log",["extDB: RCON still enabled"]] call TON_fnc_logIt;
 	};
 	if((EQUAL(EXTDB_SETTINGS("VAC"),1))) then {
 		VAC_ID = GVAR_UINS "VAC_ID";
 		CONSTVAR(VAC_ID);
-		["diag_log",["VAC still enabled"]] call TON_fnc_logIt;
+		["diag_log",["extDB: VAC still enabled"]] call TON_fnc_logIt;
 	};
 	if((EQUAL(EXTDB_SETTINGS("MISC"),1))) then {
 		MISC_ID = GVAR_UINS "MISC_ID";
 		CONSTVAR(MISC_ID);
-		["diag_log",["MISC still enabled"]] call TON_fnc_logIt;
+		["diag_log",["extDB: MISC still enabled"]] call TON_fnc_logIt;
 	};
 };
 
 if(!(EQUAL(life_server_extDB_notLoaded,""))) exitWith {}; //extDB did not fully initialize so terminate the rest of the initialization process.
 
 /* Run stored procedures for SQL side cleanup */
-["CALL resetLifeVehicles",1] spawn DB_fnc_asyncCall;
-["CALL deleteDeadVehicles",1] spawn DB_fnc_asyncCall;
-["CALL deleteOldHouses",1] spawn DB_fnc_asyncCall;
-["CALL deleteOldGangs",1] spawn DB_fnc_asyncCall;
+["resetLifeVehicles",1] spawn DB_fnc_asyncCall;
+["deleteDeadVehicles",1] spawn DB_fnc_asyncCall;
+["deleteOldHouses",1] spawn DB_fnc_asyncCall;
+["deleteOldGangs",1] spawn DB_fnc_asyncCall;
 
 
 /* Map-based server side initialization. */
@@ -114,7 +114,7 @@ onMapSingleClick "if(_alt) then {vehicle player setPos _pos};"; //Local debug fo
 	_var attachTo [_hs, [4.69775,32.6045,-0.1125]];
 	detach _var;
 	_var = createVehicle ["Land_Hospital_side2_F", [0,0,0], [], 0, "NONE"];
-	_var attachTo [_hs, [-28.0336,-10.0317,0.0889387]]; 
+	_var attachTo [_hs, [-28.0336,-10.0317,0.0889387]];
 	detach _var;
 } foreach ["hospital_2","hospital_3"];
 

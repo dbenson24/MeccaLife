@@ -4,7 +4,7 @@
 	Author: Bryan "Tonic" Boardwine
 	
 	Description:
-	Handles the incoming request and sends an asynchronous query 
+	Handles the incoming request and sends an asynchronous query
 	request to the database.
 	
 	Return:
@@ -24,9 +24,9 @@ _ownerID = owner _ownerID;
 	The other part is well the SQL statement.
 */
 _query = switch(_side) do {
-	case west: {_returnCount = 10; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, cop_licenses, coplevel, cop_gear, blacklist FROM players WHERE playerid='%1'",_uid];};
-	case civilian: {_returnCount = 11; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear, civPosition, alive FROM players WHERE playerid='%1'",_uid];};
-	case independent: {_returnCount = 9; format["SELECT playerid, name, cash, bankacc, adminlevel, donatorlvl, med_licenses, mediclevel, med_gear FROM players WHERE playerid='%1'",_uid];};
+	case west: {_returnCount = 10; format["playerWestInfo:%1",_uid];};
+	case civilian: {_returnCount = 9; format["playerCivInfo:%1",_uid];};
+	case independent: {_returnCount = 9; format["playerIndependentInfo:%1",_uid];};
 };
 
 waitUntil{sleep (random 0.3); !DB_Async_Active};
@@ -58,11 +58,6 @@ _queryResult set[2,[_tmp] call DB_fnc_numberSafe];
 _tmp = _queryResult select 3;
 _queryResult set[3,[_tmp] call DB_fnc_numberSafe];
 
-//Parse licenses (Always index 6)
-_new = [(_queryResult select 6)] call DB_fnc_mresToArray;
-if(typeName _new == "STRING") then {_new = call compile format["%1", _new];};
-_queryResult set[6,_new];
-
 //Convert tinyint to boolean
 _old = _queryResult select 6;
 for "_i" from 0 to (count _old)-1 do
@@ -73,9 +68,6 @@ for "_i" from 0 to (count _old)-1 do
 
 _queryResult set[6,_old];
 
-_new = [(_queryResult select 8)] call DB_fnc_mresToArray;
-if(typeName _new == "STRING") then {_new = call compile format["%1", _new];};
-_queryResult set[8,_new];
 //Parse data for specific side.
 switch (_side) do {
 	case west: {

@@ -18,7 +18,7 @@ _returnToSender = [_this,4,ObjNull,[ObjNull]] call BIS_fnc_param;
 if((_uid == "") OR (_name == "")) exitWith {systemChat "Bad UID or name";}; //Let the client be 'lost' in 'transaction'
 if(isNull _returnToSender) exitWith {systemChat "ReturnToSender is Null!";}; //No one to send this to!
 
-_query = format["SELECT playerid, name FROM players WHERE playerid='%1'",_uid];
+_query = format["playerInfo:%1",_uid];
 
 waitUntil{sleep (random 0.3); !DB_Async_Active};
 _tickTime = diag_tickTime;
@@ -39,19 +39,24 @@ if(typeName _queryResult == "STRING") exitWith {[[],"SOCK_fnc_dataQuery",(owner 
 if(count _queryResult != 0) exitWith {[[],"SOCK_fnc_dataQuery",(owner _returnToSender),false] call life_fnc_MP;};
 
 //Clense and prepare some information.
-_name = [_name] call DB_fnc_mresString; //Clense the name of bad chars.
-_alias = [[_name]] call DB_fnc_mresArray;
+_alias = [[_name]];
 _money = [_money] call DB_fnc_numberSafe;
 _bank = [_bank] call DB_fnc_numberSafe;
 
 //Prepare the query statement..
-_query = format["INSERT INTO players (playerid, name, cash, bankacc, aliases, cop_licenses, med_licenses, civ_licenses, civ_gear, cop_gear, med_gear, civPosition) VALUES('%1', '%2', '%3', '%4', '%5','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""','""[]""')",
+_query = format["playerInfoInsert:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11",
         _uid,
         _name,
         _money,
         _bank,
-        _alias
-];
+		_alias,
+		[],	// Cop Licenses
+		[], // Med Licenses
+		[], // Civ Licenses
+		[], // Civ Gear
+		[], // Cop Gear
+		[]  // Med Gear
+	];
 
 waitUntil {!DB_Async_Active};
 [_query,1] call DB_fnc_asyncCall;
