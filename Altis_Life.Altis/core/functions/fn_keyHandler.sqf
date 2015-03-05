@@ -30,10 +30,6 @@ life_blinker_active = false;
 };
 
 
-
-
-
-
 if(life_action_inUse) exitWith {
 	if(!life_interrupted && _code in _interruptionKeys) then {life_interrupted = true;};
 	_handled;
@@ -136,10 +132,17 @@ switch (_code) do {
 	//3 Market
 	case 4:
 	{
-		if(dialog) exitWith {};
-		[] call life_fnc_OpenEconomy;
+		if (player getVariable["restrained",false]) then
+		{
+			hint "You cannot open the market when you're restrained!";
+		}
+		else
+		{
+			if(dialog) exitWith {};
+			[] call life_fnc_OpenEconomy;
+		};
 	};
-	
+
 	//Takwondo(Traditional Martial arts in korea)(Shift + 2)
 	case 4:
 	{
