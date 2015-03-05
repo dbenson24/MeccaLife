@@ -6404,7 +6404,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=8855;
+		items=8856;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -98686,6 +98686,17 @@ class Mission
 			vehicle="Intel_File1_F";
 			skill=0.60000002;
 			init="this enableSimulation false; this allowDamage false; this addAction[""Break out prisoner"",life_fnc_p_prisionbreak,""computer""];";
+		};
+		class Item8855
+		{
+			position[]={16736.662,10.968798,13616.486};
+			azimut=229;
+			id=9209;
+			side="EMPTY";
+			vehicle="Land_CncBarrier_F";
+			skill=0.60000002;
+			text="test";
+			init="this addAction[""Interact With Wall"",""scripts\fn_interactFedWall.sqf""];";
 		};
 	};
 	class Markers
