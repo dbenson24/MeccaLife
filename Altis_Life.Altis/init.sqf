@@ -13,6 +13,8 @@ life_versionInfo = "Altis Life RPG v4.0";
 [] execVM "scripts\antiHack2.sqf";
 [] execVM "scripts\fn_statusBar.sqf";
 [] execVM "scripts\welcome.sqf"; 
+[] execVM "scripts\teargas.sqf"; 
+
 
 
 //LIONS.. hiding custom markerse... rawr..? fk em
