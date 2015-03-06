@@ -6401,7 +6401,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_9999";
-					init="this addAction[""Admin Camera"",BIS_fnc_cameraOld,"""",0,false,false,"""",' !isNil ""life_adminlevel"" && (call life_adminlevel) < 4 && playerSide == civilian']; this allowDamage false;";
+					init="this addAction[""Admin Camera"",BIS_fnc_cameraOld,"""",0,false,false,"""",' !isNil ""life_adminlevel"" && (call life_adminlevel) == 3 && playerSide == civilian']; this allowDamage false;";
 					description="Channel 7 News #1";
 				};
 				class Item1
@@ -6415,7 +6415,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="civ_99999";
-					init="this addAction[""Admin Camera"",BIS_fnc_cameraOld,"""",0,false,false,"""",' !isNil ""life_adminlevel"" && (call life_adminlevel) < 4 && playerSide == civilian']; this allowDamage false;";
+					init="this addAction[""Admin Camera"",BIS_fnc_cameraOld,"""",0,false,false,"""",' !isNil ""life_adminlevel"" && (call life_adminlevel) == 3 && playerSide == civilian']; this allowDamage false;";
 					description="Channel 7 News #2";
 				};
 			};
