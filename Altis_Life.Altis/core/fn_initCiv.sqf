@@ -24,3 +24,10 @@ if(life_is_arrested) then
 	waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
 };
 player addRating 9999999;
+
+if((str(player) in ["civ_9999","civ_99999"])) then {
+	if(__GETC__(life_adminlevel) < 4) then {
+				["NotWhitelisted",false,true] call BIS_fnc_endMission;
+		sleep 35;
+	};
+};
