@@ -169,6 +169,12 @@ heli_safe setVariable["cargo",round(random 50),true];
 [] execVM "\life_server\Functions\airdrop\config.sqf";
 [] execVM "\life_server\Functions\airdrop\fn_generateAirdropAuto.sqf";
 
+pb_spieler = [];
+pb_spielstatus = 0;
+pb_maxspieler = 10;
+execVM "\life_server\Functions\paintball\arena_paintball.sqf";
+
+
 [] spawn
 {
 	private["_logic","_queue"];

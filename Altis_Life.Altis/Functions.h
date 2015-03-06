@@ -110,6 +110,12 @@ class Life_Client_Core
 		class suicideBomb {};
 	};
 	
+	class Paintball
+	{
+		file = "core\paintball";
+		class pb_response {};
+	};
+	
 	class Housing
 	{
 		file = "core\housing";
@@ -222,6 +228,7 @@ class Life_Client_Core
 		class Uniformscolor {};
 		class prisionbreak {};
 		class progressBaren {};
+		class ryn_message {};
 	};
 	
 	class Network

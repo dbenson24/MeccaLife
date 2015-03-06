@@ -149,6 +149,12 @@ class CfgFunctions
             class getPrices {};
             class ajustprices {};
 		};
+		class Paintball
+		{
+			file = "\life_server\Functions\paintball";
+			class paintball {};
+			class game {};
+		};
         class Airdrop
 		{
 			file = "\life_server\Functions\airdrop";
