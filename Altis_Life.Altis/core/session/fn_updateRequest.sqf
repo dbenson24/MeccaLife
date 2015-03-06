@@ -4,6 +4,8 @@
 	Author: Tonic
 */
 private["_packet","_array","_flag"];
+last_known_position = getPos player;
+diag_log format ["last known position recorded as %1",last_known_position];
 _packet = [getPlayerUID player,(profileName),playerSide,CASH,BANK];
 _array = [];
 _flag = switch(playerSide) do {case west: {"cop"}; case civilian: {"civ"}; case independent: {"med"};};
@@ -22,5 +24,9 @@ switch (playerSide) do {
 		_packet pushBack life_is_arrested;
 	};
 };
+
+/* Save position and life status */
+_packet pushBack last_known_position;
+_packet pushBack life_is_alive;
 
 [_packet,"DB_fnc_updateRequest",false,false] call life_fnc_MP;

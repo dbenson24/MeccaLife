@@ -43,6 +43,8 @@ life_hudStarted = false;
 life_isSuicide = false;
 life_redgull_effect = time;
 life_TankLaster = 1; //able to load anything?
+last_known_position = [];
+diag_log format ["configuration.sqf: last_known_position currently unknown"];
 
 life_noname_clothing = [
 	"U_I_GhillieSuit",
