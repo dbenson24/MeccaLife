@@ -28,9 +28,11 @@ class Clothing {
 			{ "U_IG_Guerilla2_3", "The Outback Rangler", 700, { "", "", -1 } },
 			{ "U_C_HunterBody_grn", "The Hunters Look", 700, { "", "", -1 } },
 			{ "U_OrestesBody", "Surfing On Land", 1100, { "", "", -1 } },
-			{ "U_I_CombatUniform", "Mafia suit", 5187, { "life_donator", "SCALAR", 5 } }
-			
-			
+			{ "U_I_CombatUniform", "Mafia suit", 5187, { "life_donator", "SCALAR", 5 } },
+			{ "U_B_Protagonist_VR", "VR Suit Blue", 5187, { "life_donator", "SCALAR", 3 } },
+			{ "U_B_Protagonist_VR", "VR Suit Red", 5187, { "life_donator", "SCALAR", 3 } },
+			{ "U_B_Protagonist_VR", "VR Suit Green", 5187, { "life_donator", "SCALAR", 3 } }
+
 		};
 
 		headgear[] = {
