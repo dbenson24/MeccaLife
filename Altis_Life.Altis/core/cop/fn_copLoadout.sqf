@@ -47,6 +47,7 @@ player addMagazine "16Rnd_9x21_Mag";
 player addMagazine "16Rnd_9x21_Mag";
 player addMagazine "16Rnd_9x21_Mag";
 
+
 If(BANK > 0) then {BANK = BANK - 5000;};
 
 if (playerSide == west) then {
@@ -55,6 +56,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 
 	case 1:
 	{
+		player addHeadgear "H_MilCap_blue";
 		player ForceAddUniform "U_BG_Guerilla2_2";
 		player setObjectTextureGlobal [0, "textures\cadettroop.jpg"]; 
 		player addVest "V_TacVest_blk_POLICE";
@@ -66,11 +68,13 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "16Rnd_9x21_Mag";
 		player addMagazine "16Rnd_9x21_Mag";
 		player addMagazine "16Rnd_9x21_Mag";
+		player addItemToBackpack "H_CrewHelmetHeli_B";
 		[true,"redgull",3] call life_fnc_handleInv;
 	};
 	
 	case 2:
 	{
+		player addHeadgear "H_MilCap_blue";
 		player ForceAddUniform "U_BG_Guerilla2_2";
 		player setObjectTextureGlobal [0, "textures\cadettroop.jpg"]; 
 		player addWeapon "arifle_MXC_Black_F";
@@ -88,6 +92,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
+		player addItemToBackpack "H_CrewHelmetHeli_B";
 		[true,"redgull",3] call life_fnc_handleInv;
 		[true,"tbacon",3] call life_fnc_handleInv;
 		[true,"coffee",3] call life_fnc_handleInv;
@@ -96,6 +101,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 	
 	case 3:
 	{
+		player addHeadgear "H_MilCap_gry";
 	    player ForceAddUniform "U_BG_Guerilla3_2";
 		player setObjectTextureGlobal [0, "textures\corptroop.jpg"];
 		player addWeapon "arifle_MX_Black_F";
@@ -114,6 +120,9 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
+		player addItemToBackpack "H_CrewHelmetHeli_B";
+		player addItem "SmokeShellBlue";
+		player addItem "SmokeShellBlue";
 		[true,"redgull",3] call life_fnc_handleInv;
 		[true,"tbacon",3] call life_fnc_handleInv;
 		[true,"coffee",3] call life_fnc_handleInv;
@@ -141,6 +150,9 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
+		player addItemToBackpack "H_CrewHelmetHeli_B";
+		player addItem "SmokeShellBlue";
+		player addItem "SmokeShellBlue";
 		[true,"redgull",3] call life_fnc_handleInv;
 		[true,"tbacon",3] call life_fnc_handleInv;
 		[true,"coffee",3] call life_fnc_handleInv;
@@ -167,6 +179,9 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
+		player addItemToBackpack "H_CrewHelmetHeli_B";
+		player addItem "SmokeShellBlue";
+		player addItem "SmokeShellBlue";
 		[true,"redgull",3] call life_fnc_handleInv;
 		[true,"tbacon",3] call life_fnc_handleInv;
 		[true,"coffee",3] call life_fnc_handleInv;
@@ -191,6 +206,9 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
+		player addItemToBackpack "H_CrewHelmetHeli_B";
+		player addItem "SmokeShellBlue";
+		player addItem "SmokeShellBlue";
 		[true,"redgull",3] call life_fnc_handleInv;
 		[true,"tbacon",3] call life_fnc_handleInv;
 		[true,"coffee",3] call life_fnc_handleInv;
@@ -220,6 +238,9 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addItemToBackpack "Chemlight_blue";
 		player addItemToBackpack "Chemlight_blue";
 		player addGoggles "G_Squares_Tinted";
+		player addItemToBackpack "H_CrewHelmetHeli_B";
+		player addItem "SmokeShellBlue";
+		player addItem "SmokeShellBlue";
 		[true,"redgull",3] call life_fnc_handleInv;
 		[true,"tbacon",3] call life_fnc_handleInv;
 		[true,"coffee",3] call life_fnc_handleInv;
