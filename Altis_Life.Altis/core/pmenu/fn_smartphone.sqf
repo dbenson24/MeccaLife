@@ -12,7 +12,7 @@ _data = [_this,1,0,["",[],0]] call BIS_fnc_param;
 
 disableSerialization;
 
-if(!("ItemRadio" in (assignedItems  player))) exitWith {hint "You don't have a Smartphone"; closeDialog 0;};
+if(!("ItemRadio" in (assignedItems  player))) exitWith {hint "You don't have a radio"; closeDialog 0;};
 
 waitUntil {!isNull findDisplay 88888};
 _display = findDisplay 88888;
