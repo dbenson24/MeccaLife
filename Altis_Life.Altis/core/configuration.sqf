@@ -42,6 +42,7 @@ mecca_wanted_status = 0;
 life_hudStarted = false;
 life_isSuicide = false;
 life_redgull_effect = time;
+life_TankLaster = 1; //able to load anything?
 
 life_noname_clothing = [
 	"U_I_GhillieSuit",
