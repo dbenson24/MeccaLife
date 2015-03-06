@@ -7,17 +7,14 @@ class WeaponShops {
         level = -1;
         msg = "";
         items[] = {
+			{ "ItemMap", "", 100 },
 			{ "ItemRadio", "", 100 },
-            { "hgun_Rook40_F", "", 6500 },
-            { "hgun_Pistol_heavy_02_F", "", 9850 },
-            { "hgun_ACPC2_F", "", 11500 },
+            { "hgun_Rook40_F", "", 5000 },
+            { "30Rnd_9x21_Mag", "", 500 },
             { "hgun_PDW2000_F", "", 20000 },
-            { "optic_ACO_grn_smg", "", 2500 },
-            { "V_Rangemaster_belt", "", 4900 },
-            { "16Rnd_9x21_Mag", "", 25 },
-            { "9Rnd_45ACP_Mag", "", 45 },
-            { "6Rnd_45ACP_Cylinder", "", 50 },
-            { "30Rnd_9x21_Mag", "", 75 }
+            { "30Rnd_9x21_Mag", "", 1000 },
+            { "optic_ACO_grn", "", 2500 },
+            { "optic_Aco", "", 2500 }
         };
     };
     class rebel {
@@ -27,22 +24,144 @@ class WeaponShops {
         level = -1;
         msg = "";
         items[] = {
-			{ "ItemRadio", "", 100 },
-            { "arifle_TRG20_F", "", 25000 },
-            { "arifle_Katiba_F", "", 30000 },
-            { "srifle_DMR_01_F", "", 50000 },
-            { "arifle_SDAR_F", "", 20000 },
-            { "optic_ACO_grn", "", 3500 },
-            { "optic_Holosight", "", 3600 },
-            { "acc_flashlight", "", 1000 },
-            { "optic_Hamr", "", 7500 },
-            { "30Rnd_9x21_Mag", "", 200 },
-            { "20Rnd_556x45_UW_mag", "", 125 },
-            { "30Rnd_556x45_Stanag", "", 300 },
+			{ "FirstAidKit", "", 500 },
+			{ "ToolKit", "", 500 },
+			{ "ItemGPS", "", 50 },
+			{ "ItemMap", "", 50 },
+			{ "ItemRadio", "", 50 },
+			{ "ItemCompass", "", 50 },
+			{ "MineDetector", "", 10000 },
+            { "Binocular", "", 1000 },
+            { "NVGoggles_INDEP", "", 1000 },
+            { "NVGoggles", "", 1000 },
+			
+            { "hgun_Rook40_F", "", 500 },
+            { "30Rnd_9x21_Mag", "", 500 },
+			
+            { "hgun_PDW2000_F", "", 10000 },
+            { "30Rnd_9x21_Mag", "", 500 },
+			
+            { "arifle_sdar_F", "", 25000 },
+            { "20Rnd_556x45_UW_mag", "", 25000 },
+			
+            { "hgun_Pistol_heavy_02_F", "", 25000 },
+            { "6Rnd_45ACP_Cylinder", "", 500 },
+			
+            { "arifle_Mk20C_F", "", 30000 },
+            { "30Rnd_556x45_Stanag", "", 500 },
+			
+            { "arifle_TRG20_F", "", 20000 },
+            { "30Rnd_556x45_Stanag", "", 500 },
+			
+            { "arifle_TRG21_F", "", 20000 },
+            { "30Rnd_556x45_Stanag", "", 500 },
+			
+            { "arifle_Katiba_F", "", 35000 },
+            { "30Rnd_65x39_caseless_green", "", 500 },
+			
+            { "SMG_01_F", "", 50000 },
+            { "30Rnd_45ACP_Mag_SMG_01", "", 500 },
+			
+            { "srifle_DMR_01_F", "", 80000 },
             { "10Rnd_762x51_Mag", "", 500 },
-            { "30Rnd_65x39_caseless_green", "", 275 }
+			
+            { "srifle_EBR_F", "", 100000 },
+            { "20Rnd_762x51_Mag", "", 500 },
+			
+            { "srifle_LRR_LRPS_F", "", 1200000 },
+            { "7Rnd_408_Mag", "", 500000 },
+			
+			
+            { "acc_flashlight", "", 500 },
+            { "optic_ACO_grn", "", 10000 },	
+            { "optic_ACO_grn", "", 10000 },
+            { "optic_MRCO", "", 20000 },		
+            { "optic_Holosight", "", 25000 },
+            { "optic_Arco", "", 20000 },		
+            { "acc_pointer_IR", "", 500 },
+            { "SmokeShell", "", 1000 },		
+            { "SmokeShellRed", "", 1000 },
+            { "SmokeShellGreen", "", 1000 },		
+            { "SmokeShellYellow", "", 1000 },
+            { "SmokeShellPurple", "", 1000 },		
+            { "SmokeShellOrange", "", 1000 },
+            { "HandGrenade", "", 50000 },		
+            { "SLAMDirectionalMine_Wire_Mag", "", 75000 }										
         };
     };
+	
+    class rebelA {
+        name = "Mohammed's Jihadi Shop";
+        side = "civ";
+        license = "rebel";
+        level = -1;
+        msg = "";
+        items[] = {
+			{ "FirstAidKit", "", 500 },
+			{ "ToolKit", "", 500 },
+			{ "ItemGPS", "", 50 },
+			{ "ItemMap", "", 50 },
+			{ "ItemRadio", "", 50 },
+			{ "ItemCompass", "", 50 },
+			{ "MineDetector", "", 10000 },
+            { "Binocular", "", 1000 },
+            { "NVGoggles_INDEP", "", 1000 },
+            { "NVGoggles", "", 1000 },
+			
+            { "hgun_Rook40_F", "", 500 },
+            { "30Rnd_9x21_Mag", "", 500 },
+			
+            { "hgun_PDW2000_F", "", 10000 },
+            { "30Rnd_9x21_Mag", "", 500 },
+			
+            { "arifle_sdar_F", "", 25000 },
+            { "20Rnd_556x45_UW_mag", "", 25000 },
+			
+            { "hgun_Pistol_heavy_02_F", "", 25000 },
+            { "6Rnd_45ACP_Cylinder", "", 500 },
+			
+            { "arifle_Mk20C_F", "", 30000 },
+            { "30Rnd_556x45_Stanag", "", 500 },
+			
+            { "arifle_TRG20_F", "", 20000 },
+            { "30Rnd_556x45_Stanag", "", 500 },
+			
+            { "arifle_TRG21_F", "", 20000 },
+            { "30Rnd_556x45_Stanag", "", 500 },
+			
+            { "arifle_Katiba_F", "", 35000 },
+            { "30Rnd_65x39_caseless_green", "", 500 },
+			
+            { "SMG_01_F", "", 50000 },
+            { "30Rnd_45ACP_Mag_SMG_01", "", 500 },
+			
+            { "srifle_DMR_01_F", "", 80000 },
+            { "10Rnd_762x51_Mag", "", 500 },
+			
+            { "srifle_EBR_F", "", 100000 },
+            { "20Rnd_762x51_Mag", "", 500 },
+			
+            { "srifle_LRR_LRPS_F", "", 1200000 },
+            { "7Rnd_408_Mag", "", 500000 },
+			
+			
+            { "acc_flashlight", "", 500 },
+            { "optic_ACO_grn", "", 10000 },	
+            { "optic_ACO_grn", "", 10000 },
+            { "optic_MRCO", "", 20000 },		
+            { "optic_Holosight", "", 25000 },
+            { "optic_Arco", "", 20000 },		
+            { "acc_pointer_IR", "", 500 },
+            { "SmokeShell", "", 1000 },		
+            { "SmokeShellRed", "", 1000 },
+            { "SmokeShellGreen", "", 1000 },		
+            { "SmokeShellYellow", "", 1000 },
+            { "SmokeShellPurple", "", 1000 },		
+            { "SmokeShellOrange", "", 1000 },
+            { "HandGrenade", "", 50000 }											
+        };
+    };
+	
     class gang {
         name = "Hideout Armament";
         side = "civ";
@@ -50,17 +169,68 @@ class WeaponShops {
         level = -1;
         msg = "";
         items[] = {
-			{ "ItemRadio", "", 100 },
-            { "hgun_Rook40_F", "", 1500 },
-            { "hgun_Pistol_heavy_02_F", "", 2500 },
-            { "hgun_ACPC2_F", "", 4500 },
-            { "hgun_PDW2000_F", "", 9500 },
-            { "optic_ACO_grn_smg", "", 950 },
-            { "V_Rangemaster_belt", "", 1900 },
-            { "16Rnd_9x21_Mag", "", 25 },
-            { "9Rnd_45ACP_Mag", "", 45 },
-            { "6Rnd_45ACP_Cylinder", "", 50 },
-            { "30Rnd_9x21_Mag", "", 75 }
+			{ "FirstAidKit", "", 500 },
+			{ "ToolKit", "", 500 },
+			{ "ItemGPS", "", 50 },
+			{ "ItemMap", "", 50 },
+			{ "ItemRadio", "", 50 },
+			{ "ItemCompass", "", 50 },
+			{ "MineDetector", "", 10000 },
+            { "Binocular", "", 1000 },
+            { "NVGoggles_INDEP", "", 1000 },
+            { "NVGoggles", "", 1000 },
+			
+            { "hgun_Rook40_F", "", 500 },
+            { "30Rnd_9x21_Mag", "", 500 },
+			
+            { "hgun_PDW2000_F", "", 10000 },
+            { "30Rnd_9x21_Mag", "", 500 },
+			
+            { "arifle_sdar_F", "", 25000 },
+            { "20Rnd_556x45_UW_mag", "", 25000 },
+			
+            { "hgun_Pistol_heavy_02_F", "", 25000 },
+            { "6Rnd_45ACP_Cylinder", "", 500 },
+			
+            { "arifle_Mk20C_F", "", 30000 },
+            { "30Rnd_556x45_Stanag", "", 500 },
+			
+            { "arifle_TRG20_F", "", 20000 },
+            { "30Rnd_556x45_Stanag", "", 500 },
+			
+            { "arifle_TRG21_F", "", 20000 },
+            { "30Rnd_556x45_Stanag", "", 500 },
+			
+            { "arifle_Katiba_F", "", 35000 },
+            { "30Rnd_65x39_caseless_green", "", 500 },
+			
+            { "SMG_01_F", "", 50000 },
+            { "30Rnd_45ACP_Mag_SMG_01", "", 500 },
+			
+            { "srifle_DMR_01_F", "", 80000 },
+            { "10Rnd_762x51_Mag", "", 500 },
+			
+            { "srifle_EBR_F", "", 100000 },
+            { "20Rnd_762x51_Mag", "", 500 },
+			
+            { "srifle_LRR_LRPS_F", "", 1200000 },
+            { "7Rnd_408_Mag", "", 500000 },
+			
+			
+            { "acc_flashlight", "", 500 },
+            { "optic_ACO_grn", "", 10000 },	
+            { "optic_ACO_grn", "", 10000 },
+            { "optic_MRCO", "", 20000 },		
+            { "optic_Holosight", "", 25000 },
+            { "optic_Arco", "", 20000 },		
+            { "acc_pointer_IR", "", 500 },
+            { "SmokeShell", "", 1000 },		
+            { "SmokeShellRed", "", 1000 },
+            { "SmokeShellGreen", "", 1000 },		
+            { "SmokeShellYellow", "", 1000 },
+            { "SmokeShellPurple", "", 1000 },		
+            { "SmokeShellOrange", "", 1000 },
+            { "HandGrenade", "", 50000 }	
         };
     };
     //Basic Shops
@@ -71,12 +241,16 @@ class WeaponShops {
         level = -1;
         msg = "";
         items[] = {
-        	{ "Binocular", "", 150 },
-			{ "ItemGPS", "", 100 },
-			{ "ItemRadio", "", 100 },
-			{ "ToolKit", "", 250 },
-			{ "FirstAidKit", "", 150 },
-			{ "NVGoggles", "", 2000 },
+			{ "FirstAidKit", "", 500 },
+			{ "ToolKit", "", 500 },
+			{ "ItemGPS", "", 50 },
+			{ "ItemMap", "", 50 },
+			{ "ItemRadio", "", 50 },
+			{ "ItemCompass", "", 50 },
+			{ "MineDetector", "", 10000 },
+            { "Binocular", "", 1000 },
+            { "NVGoggles_INDEP", "", 1000 },
+            { "NVGoggles", "", 1000 },
 			{ "Chemlight_red", "", 300 },
 			{ "Chemlight_yellow", "", 300 },
 			{ "Chemlight_green", "", 300 },
@@ -91,42 +265,33 @@ class WeaponShops {
         level = -1;
         msg = "";
         items[] = {
-			{ "ItemRadio", "", 100 },
-        	{ "arifle_sdar_F", "Taser Rifle", 20000 },
-			{ "hgun_P07_snds_F", "Stun Pistol", 2000 },
-			{ "hgun_P07_F", "", 7500 },
-			{ "HandGrenade_Stone", "Flashbang", 1700 },
-			{ "Binocular", "", 150 },
-			{ "ItemGPS", "", 100 },
-			{ "ToolKit", "", 250 },
-			{ "muzzle_snds_L", "", 650 },
-			{ "FirstAidKit", "", 150 },
-			{ "Medikit", "", 1000 },
-			{ "NVGoggles", "", 2000 },
-			{ "16Rnd_9x21_Mag", "", 50 },
-			{ "20Rnd_556x45_UW_mag", "Taser Rifle Magazine", 125 }
-        };
-    };
-	    class cop_Private {
-        name = "Private Rank Shop";
-        side = "cop";
-        license = "";
-        level = 2;
-        msg = "";
-        items[] = {
-        	{ "arifle_sdar_F", "Taser Rifle", 20000 },
-			{ "hgun_P07_snds_F", "Stun Pistol", 2000 },
-			{ "hgun_P07_F", "", 7500 },
-			{ "HandGrenade_Stone", "Flashbang", 1700 },
-			{ "Binocular", "", 150 },
-			{ "ItemGPS", "", 100 },
-			{ "ToolKit", "", 250 },
-			{ "muzzle_snds_L", "", 650 },
-			{ "FirstAidKit", "", 150 },
-			{ "Medikit", "", 1000 },
-			{ "NVGoggles", "", 2000 },
-			{ "16Rnd_9x21_Mag", "", 50 },
-			{ "20Rnd_556x45_UW_mag", "Taser Rifle Magazine", 125 }
+			{ "FirstAidKit", "", 500 },
+			{ "ToolKit", "", 500 },
+			{ "ItemGPS", "", 50 },
+			{ "ItemMap", "", 50 },
+			{ "ItemRadio", "", 50 },
+			{ "ItemCompass", "", 50 },
+			{ "MineDetector", "", 10000 },
+            { "Binocular", "", 1000 },
+            { "NVGoggles_INDEP", "", 1000 },
+            { "NVGoggles", "", 1000 },
+			{ "SmokeShell", "", 1000 },		
+            { "SmokeShellRed", "", 1000 },
+            { "SmokeShellGreen", "", 1000 },		
+            { "SmokeShellYellow", "", 1000 },
+            { "SmokeShellPurple", "", 1000 },		
+            { "SmokeShellOrange", "", 1000 },
+			{ "SmokeShellBlue", "TearGasShell", 1000 },
+            { "30Rnd_9x21_Mag", "", 500 },
+			{ "20Rnd_556x45_UW_mag", "TearGasShell", 500 },
+            { "30Rnd_65x39_caseless_mag_Tracer", "", 500 },
+			{ "30Rnd_65x39_caseless_mag", "TearGasShell", 500 },
+            { "5Rnd_127x108_Mag", "", 500 },
+			{ "optic_Hamr", "TearGasShell", 4000 },
+            { "optic_Arco", "", 4000 },
+			{ "optic_MRCO", "TearGasShell", 4000 },
+            { "acc_flashlight", "", 1000 },
+			{ "acc_pointer_IR", "TearGasShell", 1000 }
         };
     };
  
@@ -138,14 +303,18 @@ class WeaponShops {
         license = "";
         level = -1;
         items[] = {
-			{ "ItemRadio", "", 100 },
-            { "ItemGPS", "", 100 },
-			{ "Binocular", "", 150 },
-			{ "ToolKit", "", 250 },
-			{ "FirstAidKit", "", 150 },
-			{ "Medikit", "", 500 },
-			{ "NVGoggles", "", 1200 },
-			{ "B_FieldPack_ocamo", "", 3000 }
+			{ "FirstAidKit", "", 500 },
+			{ "ToolKit", "", 500 },
+			{ "ItemGPS", "", 50 },
+			{ "ItemMap", "", 50 },
+			{ "ItemRadio", "", 50 },
+			{ "ItemCompass", "", 50 },
+			{ "MineDetector", "", 10000 },
+            { "Binocular", "", 1000 },
+            { "NVGoggles_INDEP", "", 1000 },
+            { "NVGoggles", "", 1000 },
+			{ "SmokeShell", "", 1000 },		
+            { "B_AssaultPack_blk", "", 3000 }
         };
     };
 };
