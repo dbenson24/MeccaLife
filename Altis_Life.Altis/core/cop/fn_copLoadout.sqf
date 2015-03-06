@@ -16,6 +16,8 @@ waitUntil {scriptDone _handle};
 player addBackpack "B_Carryall_oucamo";
 
 /* ITEMS */
+player addItem "ItemRadio";
+player assignItem "ItemRadio";
 player addItem "ItemMap";
 player assignItem "ItemMap";
 player addItem "ItemCompass";

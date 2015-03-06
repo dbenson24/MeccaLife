@@ -7,6 +7,7 @@ class WeaponShops {
         level = -1;
         msg = "";
         items[] = {
+			{ "ItemRadio", "", 100 },
             { "hgun_Rook40_F", "", 6500 },
             { "hgun_Pistol_heavy_02_F", "", 9850 },
             { "hgun_ACPC2_F", "", 11500 },
@@ -26,6 +27,7 @@ class WeaponShops {
         level = -1;
         msg = "";
         items[] = {
+			{ "ItemRadio", "", 100 },
             { "arifle_TRG20_F", "", 25000 },
             { "arifle_Katiba_F", "", 30000 },
             { "srifle_DMR_01_F", "", 50000 },
@@ -48,6 +50,7 @@ class WeaponShops {
         level = -1;
         msg = "";
         items[] = {
+			{ "ItemRadio", "", 100 },
             { "hgun_Rook40_F", "", 1500 },
             { "hgun_Pistol_heavy_02_F", "", 2500 },
             { "hgun_ACPC2_F", "", 4500 },
@@ -70,6 +73,7 @@ class WeaponShops {
         items[] = {
         	{ "Binocular", "", 150 },
 			{ "ItemGPS", "", 100 },
+			{ "ItemRadio", "", 100 },
 			{ "ToolKit", "", 250 },
 			{ "FirstAidKit", "", 150 },
 			{ "NVGoggles", "", 2000 },
@@ -87,6 +91,7 @@ class WeaponShops {
         level = -1;
         msg = "";
         items[] = {
+			{ "ItemRadio", "", 100 },
         	{ "arifle_sdar_F", "Taser Rifle", 20000 },
 			{ "hgun_P07_snds_F", "Stun Pistol", 2000 },
 			{ "hgun_P07_F", "", 7500 },
@@ -133,6 +138,7 @@ class WeaponShops {
         license = "";
         level = -1;
         items[] = {
+			{ "ItemRadio", "", 100 },
             { "ItemGPS", "", 100 },
 			{ "Binocular", "", 150 },
 			{ "ToolKit", "", 250 },
