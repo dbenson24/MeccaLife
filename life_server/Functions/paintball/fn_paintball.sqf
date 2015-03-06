@@ -9,9 +9,9 @@ if (count pb_spieler==0&&pb_spielstatus==0) then {
 if (pb_spielstatus==1) then {
     _uidarr = [_uid];
     pb_spieler = pb_spieler + _uidarr;
-    [[1,"Du wurdest erfolgreich für das kommende Spiel angemeldet!"],"life_fnc_pb_response",_uid,false] spawn life_fnc_MP;
+    [[1,"You have been successfully signed up for the upcoming game!"],"life_fnc_pb_response",_uid,false] spawn life_fnc_MP;
 };
 
 if ((pb_spielstatus==2&&count pb_spieler>=2)||(count pb_spieler==pb_maxspieler) then {
-    [[1,"Leider hat das Spiel bereits begonnen oder die Lobby ist bereits voll, versuche es später noch einmal!"],"life_fnc_pb_response",_uid,false] spawn life_fnc_MP;
+    [[1,"Unfortunately, the game has already started or the lobby is already full, please try again later!"],"life_fnc_pb_response",_uid,false] spawn life_fnc_MP;
 };

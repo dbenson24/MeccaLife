@@ -1,5 +1,5 @@
 pb_spielstatus=1;
-[["Paintballarena","Ein Spieler hat soeben eine Lobby in der Paintballarena eröffnet! Die Lobby schließt sich in 60 Sekunden!"],"life_fnc_ryn_message",true,false] spawn life_fnc_MP;
+[["Paintball Arena "," A player has just opened a lobby in the paintball arena! The lobby closes in 60 seconds!"],"life_fnc_ryn_message",true,false] spawn life_fnc_MP;
 sleep 60;
 
 if (count pb_spieler>=2) then {
@@ -9,22 +9,22 @@ if (count pb_spieler>=2) then {
         [[2],"life_fnc_pb_response",_x,false] spawn life_fnc_MP;
     } forEach pb_spieler;
     sleep 60;
-    _msg = "Das Spiel läuft noch 4 Minuten";
+    _msg = "4 minutes till the end of the game";
     {
         [[1,_msg],"life_fnc_pb_response",_x,false] spawn life_fnc_MP;
     } forEach pb_spieler;
     sleep 60;
-    _msg = "Das Spiel läuft noch 3 Minuten";
+    _msg = "3 minutes till the end of the game";
     {
         [[1,_msg],"life_fnc_pb_response",_x,false] spawn life_fnc_MP;
     } forEach pb_spieler;
     sleep 60;
-    _msg = "Das Spiel läuft noch 2 Minuten";
+    _msg = "1 minutes till the end of the game";
     {
         [[1,_msg],"life_fnc_pb_response",_x,false] spawn life_fnc_MP;
     } forEach pb_spieler;
     sleep 60;
-    _msg = "Das Spiel läuft noch eine Minute!";
+    _msg = "Last minute!";
     {
         [[1,_msg],"life_fnc_pb_response",_x,false] spawn life_fnc_MP;
     } forEach pb_spieler;
@@ -39,7 +39,7 @@ if (count pb_spieler>=2) then {
 
 } else {
 
-    _msg = "Da zu wenig Spieler sich in der Lobby befanden wurde das Spiel abgebrochen!";
+    _msg = "Because there were not enough players in the lobby, the game was cancelled!";
     {
         [[1,_msg],"life_fnc_pb_response",_x,false] spawn life_fnc_MP;
     } forEach pb_spieler;

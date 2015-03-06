@@ -8,7 +8,7 @@ if (_respondmode==1) then {
 };
 
 if (_respondmode==2) then {
-    hint "Willkommen in der Paintballarena! Das kommende Spiel wird 5 Minuten gehen, viel Spaß!";
+    hint "Welcome to the paintball arena! The next game is in 5 minutes!";
     meinePos = getPos player;
     [] call life_fnc_saveGear;
     meingear = life_gear;
@@ -46,5 +46,5 @@ if (_respondmode==3) then {
     player setPos meinePos;
     player allowDamage true;
     player removeAllEventHandlers "Hit";
-    hint "Das Spiel wurde nun beendet! Vielen Dank für das Spielen in der Paintballarena!";
+    hint "The game has now finished! Thank you for playing in the paintball arena";
 };
