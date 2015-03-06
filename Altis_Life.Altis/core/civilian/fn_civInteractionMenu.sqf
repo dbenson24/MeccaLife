@@ -13,7 +13,7 @@
 
 #define Title 37401
 
-private["_display","_curTarget","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6"];
+private["_display","_curTarget","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6","_Btn7"];
 if(!dialog) then {
 	createDialog "pInteraction_Menu";
 	
@@ -33,6 +33,7 @@ _Btn3 = _display displayCtrl Btn3;
 _Btn4 = _display displayCtrl Btn4;
 _Btn5 = _display displayCtrl Btn5;
 _Btn6 = _display displayCtrl Btn6;
+_Btn7 = _display displayCtrl Btn7;
 
 life_pInact_curTarget = _curTarget;
 
@@ -110,6 +111,9 @@ _Btn5 buttonSetAction "if(player distance life_pInact_curTarget > 4) exitWith {h
 
 _Btn6 ctrlSetText "Send to Jail";
 _Btn6 buttonSetAction "if(player distance life_pInact_curTarget > 4) exitWith {hint 'You are too far away.'}; [life_pInact_curTarget] call life_fnc_arrestAction; ";
+
+_Btn7 ctrlSetText "Custom Interaction";
+_Btn7 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_custominteraction; closeDialog 0;";
 
 //disable certain buttons depending on if the target is restrained or not
 if((life_pInact_curTarget getVariable["restrained",false])) then

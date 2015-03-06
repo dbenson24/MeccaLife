@@ -168,6 +168,7 @@ class Life_Client_Core
 		class updateBounty {};
 		class vUseItem {};
 		class p_prisionbreak {};
+		class custominteraction {};
 	};
 	
 	class Functions
@@ -255,7 +256,8 @@ class Life_Client_Core
 		class breakoutTimer {};
 		class waterChargeTimer {};
 		class heliChargeTimer {};
-		
+		class seizeRadio {};
+		class seizeRadioAction {};	
 	};
 	
 	class Vehicle

@@ -36,4 +36,5 @@
 #include "v_useItem.h"
 #include "welcomesettings.hpp"
 #include "prision_list.hpp"
+#include "custominteraction.h"
 
