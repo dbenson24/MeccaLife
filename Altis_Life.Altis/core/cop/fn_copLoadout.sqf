@@ -108,7 +108,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player setObjectTextureGlobal [0, "textures\corptroop.jpg"];
 		player addWeapon "arifle_MX_Black_F";
 		player addPrimaryWeaponItem "optic_MRCO";
-		player addVest "V_TacVest_blk_POLICE";
+		player addVest "V_PlateCarrier1_blk";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
