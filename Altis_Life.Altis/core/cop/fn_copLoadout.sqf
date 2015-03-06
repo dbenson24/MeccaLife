@@ -66,6 +66,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "16Rnd_9x21_Mag";
 		player addMagazine "16Rnd_9x21_Mag";
 		player addMagazine "16Rnd_9x21_Mag";
+		[true,"redgull",3] call life_fnc_handleInv;
 	};
 	
 	case 2:
@@ -87,7 +88,10 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
-		
+		[true,"redgull",3] call life_fnc_handleInv;
+		[true,"tbacon",3] call life_fnc_handleInv;
+		[true,"coffee",3] call life_fnc_handleInv;
+		[true,"spikestrip",1] call life_fnc_handleInv;
 	};
 	
 	case 3:
@@ -110,6 +114,10 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
+		[true,"redgull",3] call life_fnc_handleInv;
+		[true,"tbacon",3] call life_fnc_handleInv;
+		[true,"coffee",3] call life_fnc_handleInv;
+		[true,"spikestrip",1] call life_fnc_handleInv;
 	};
 	
 	case 4:
@@ -133,6 +141,10 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
+		[true,"redgull",3] call life_fnc_handleInv;
+		[true,"tbacon",3] call life_fnc_handleInv;
+		[true,"coffee",3] call life_fnc_handleInv;
+		[true,"spikestrip",1] call life_fnc_handleInv;
 	};
 	
 	case 5:
@@ -155,6 +167,10 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
+		[true,"redgull",3] call life_fnc_handleInv;
+		[true,"tbacon",3] call life_fnc_handleInv;
+		[true,"coffee",3] call life_fnc_handleInv;
+		[true,"spikestrip",1] call life_fnc_handleInv;
 	};
 	case 6:
 	{
@@ -175,6 +191,10 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
+		[true,"redgull",3] call life_fnc_handleInv;
+		[true,"tbacon",3] call life_fnc_handleInv;
+		[true,"coffee",3] call life_fnc_handleInv;
+		[true,"spikestrip",1] call life_fnc_handleInv;
 	};
 	case 7:
 	{
@@ -200,6 +220,10 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addItemToBackpack "Chemlight_blue";
 		player addItemToBackpack "Chemlight_blue";
 		player addGoggles "G_Squares_Tinted";
+		[true,"redgull",3] call life_fnc_handleInv;
+		[true,"tbacon",3] call life_fnc_handleInv;
+		[true,"coffee",3] call life_fnc_handleInv;
+		[true,"spikestrip",1] call life_fnc_handleInv;
 	};
 	
 };

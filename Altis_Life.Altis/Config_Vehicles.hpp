@@ -41,6 +41,7 @@
 #define ptarutrans 1800000
 #define ptarubench 1500000
 #define ptarufuel 1300000
+#define ftruck 50000
 /* End Vehicle Prices */
 
 class CarShops {
@@ -765,6 +766,19 @@ class CfgVehicles {
         price = ptarufuel;
         storageFee[] = { 55000, 0, 22000, 0 };
 		garageSell[] = { 72500, 0, 35000, 0 };
+        insurance = 2500;
+        chopShop = 5000;
+        textures[] = {
+            { 
+             }
+        };
+    };
+	
+	class C_Van_01_fuel_F {
+        vItemSpace = 800;
+        price = ftruck;
+        storageFee[] = { 5000, 0, 0, 0 };
+		garageSell[] = { 0, 0, 0, 0 };
         insurance = 2500;
         chopShop = 5000;
         textures[] = {

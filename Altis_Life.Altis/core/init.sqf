@@ -124,3 +124,11 @@ if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),0)) then {player enableFatigu
 [[getPlayerUID player,player getVariable["realname",name player]],"life_fnc_wantedProfUpdate",false,false] spawn life_fnc_MP;
 
 [] call life_fnc_Uniformscolor;
+
+[] spawn {
+    while {true} do {
+        sleep 600;
+        [] call SOCK_fnc_updateRequest;
+        hint "Game Autosaved.";
+    };
+};
