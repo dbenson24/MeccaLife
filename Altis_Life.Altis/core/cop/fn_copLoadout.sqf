@@ -155,7 +155,8 @@ switch (FETCH_CONST(life_coplevel)) do {
 	    player ForceAddUniform "U_O_OfficerUniform_ocamo";
 		player setObjectTextureGlobal [0, "textures\corptroop.jpg"];
 		player addHeadgear "H_Beret_02";
-		player addWeapon "arifle_MXM_F";
+		player addWeapon "arifle_MXM_Black_F";
+		player addPrimaryWeaponItem "optic_Arco";
 		player addVest "V_PlateCarrier1_blk";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
