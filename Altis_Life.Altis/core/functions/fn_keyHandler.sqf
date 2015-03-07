@@ -266,7 +266,7 @@ switch (_code) do {
 		//Knocking Dipshits Out.
 		if(_shift && !isNull cursorTarget && cursorTarget isKindOf "Man" && isPlayer cursorTarget && alive cursorTarget && cursorTarget distance player < 4 && speed cursorTarget < 1) then
 		{
-			if((currentWeapon player == RIFLE OR currentWeapon player == PISTOL) && currentWeapon player != "" && !life_knockout && !(player GVAR["restrained",false]) && !life_isDowned && !(player GVAR["surrender",false])) then
+			if((currentWeapon player == RIFLE OR currentWeapon player == PISTOL) && currentWeapon player != "" && !life_knockout && (cursorTarget GVAR "restrained") && !life_isDowned && !(player GVAR["surrender",false])) then
 			{
 				[cursorTarget] spawn life_fnc_knockoutAction;
 			};
