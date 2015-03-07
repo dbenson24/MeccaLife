@@ -70,8 +70,14 @@ class WeaponShops {
 			
             { "srifle_LRR_LRPS_F", "", 1200000 },
             { "7Rnd_408_Mag", "", 500000 },
-			
-			
+				
+			{ "LMG_Mk200_F", "", 150000 },
+            { "200Rnd_65x39_cased_Box", "", 50000 },
+			{ "200Rnd_65x39_cased_Box_Tracer", "", 50000 },
+				
+			{ "launch_Titan_F", "", 500000 },
+            { "Titan_AA", "", 200000 },
+		
             { "acc_flashlight", "", 500 },
             { "optic_ACO_grn", "", 10000 },	
             { "optic_ACO_grn", "", 10000 },
@@ -144,6 +150,12 @@ class WeaponShops {
             { "srifle_LRR_LRPS_F", "", 1200000 },
             { "7Rnd_408_Mag", "", 500000 },
 			
+			{ "LMG_Mk200_F", "", 150000 },
+            { "200Rnd_65x39_cased_Box", "", 50000 },
+			{ "200Rnd_65x39_cased_Box_Tracer", "", 50000 },
+				
+			{ "launch_Titan_F", "", 500000 },
+            { "Titan_AA", "", 200000 },
 			
             { "acc_flashlight", "", 500 },
             { "optic_ACO_grn", "", 10000 },	
