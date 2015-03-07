@@ -253,16 +253,7 @@ switch (_code) do {
 			};
 		};
 	};
-	
-	//Restraining (Shift + R)
-	case 19: {
-		if(_shift) then {_handled = true;};
-		if(_shift && playerSide == west && {!isNull cursorTarget} && {cursorTarget isKindOf "Man"} && {(isPlayer cursorTarget)} && {(side cursorTarget in [civilian,independent])} && {alive cursorTarget} && {cursorTarget distance player < 3.5} && {!(cursorTarget GVAR "Escorting")} && {!(cursorTarget GVAR "restrained")} && {speed cursorTarget < 1}) then {
-			[] call life_fnc_restrainAction;
-		};
-	};
-	
-	
+		
 	//Restraining or robbing (Shift + R)
 	case 19:
 	{
@@ -273,7 +264,7 @@ switch (_code) do {
 		};
 		
 		//Knocking Dipshits Out.
-		if(_shift && playerSide == civilian && !isNull cursorTarget && cursorTarget isKindOf "Man" && isPlayer cursorTarget && alive cursorTarget && cursorTarget distance player < 4 && speed cursorTarget < 1) then
+		if(_shift && !isNull cursorTarget && cursorTarget isKindOf "Man" && isPlayer cursorTarget && alive cursorTarget && cursorTarget distance player < 4 && speed cursorTarget < 1) then
 		{
 			if((currentWeapon player == RIFLE OR currentWeapon player == PISTOL) && currentWeapon player != "" && !life_knockout && !(player GVAR["restrained",false]) && !life_isDowned && !(player GVAR["surrender",false])) then
 			{
