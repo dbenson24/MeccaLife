@@ -46,7 +46,7 @@ if (life_drink > 0.22) then {
 			titleText[localize "STR_MISC_DrunkBlackOut1","PLAIN"];
 			player playMoveNow "amovppnemstpsraswrfldnon";
 			[[0,format[localize "STR_MISC_StPubIntox",profileName]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
-			//[[getPlayerUID player,profileName,"390"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+			[[getPlayerUID player,profileName,"390"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 			
 };
 //Stop effects
