@@ -132,9 +132,9 @@ switch (_code) do {
 	//3 Market
 	case 4:
 	{
-		if (player getVariable["restrained",false]) then
+		if (playerSide == civilian && player getVariable["restrained",false]) then
 		{
-			hint "You cannot open the market when you're restrained!";
+			hint "You cannot open the market when you're restrained! [ONLY FOR CIVILIAN USE]";
 		}
 		else
 		{
