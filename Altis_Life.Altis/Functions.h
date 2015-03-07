@@ -108,6 +108,8 @@ class Life_Client_Core
 		class jailBreakout {}; 
 		class jailBreakoutCompleted {};
 		class suicideBomb {};
+		class douevenlift {};
+		class douevenliftjail {};
 	};
 	
 	class Paintball
