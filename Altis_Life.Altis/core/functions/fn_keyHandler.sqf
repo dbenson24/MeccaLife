@@ -262,15 +262,27 @@ switch (_code) do {
 		};
 	};
 	
-	//Knock out, this is experimental and yeah...
-	case 34: {
+	
+	//Restraining or robbing (Shift + R)
+	case 19:
+	{
 		if(_shift) then {_handled = true;};
-		if(_shift && playerSide == civilian && {!isNull cursorTarget} && {cursorTarget isKindOf "Man"} && {isPlayer cursorTarget} && {alive cursorTarget} && {cursorTarget distance player < 4} && {speed cursorTarget < 1}) then {
-			if(!(EQUAL(animationState cursorTarget,"Incapacitated")) && {(EQUAL(currentWeapon player,RIFLE))} OR {EQUAL(currentWeapon player,PISTOL)} && {!(EQUAL(currentWeapon player,""))} && {!life_knockout} && {!(player GVAR ["restrained",false])} && {!life_isDowned}) then {
+		if(_shift && playerSide == west && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget == civilian) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget GVAR "Escorting") && !(cursorTarget GVAR "restrained") && speed cursorTarget < 1) then
+		{
+			[] call life_fnc_restrainAction;
+		};
+		
+		//Knocking Dipshits Out.
+		if(_shift && playerSide == civilian && !isNull cursorTarget && cursorTarget isKindOf "Man" && isPlayer cursorTarget && alive cursorTarget && cursorTarget distance player < 4 && speed cursorTarget < 1) then
+		{
+			if((currentWeapon player == RIFLE OR currentWeapon player == PISTOL) && currentWeapon player != "" && !life_knockout && !(player GVAR["restrained",false]) && !life_isDowned && !(player GVAR["surrender",false])) then
+			{
 				[cursorTarget] spawn life_fnc_knockoutAction;
 			};
+			_handled = true;
 		};
-	};
+	};	
+	
 	//Shift+P = Faded Sound
 	case 25: {
 		if(_shift) then
