@@ -2182,6 +2182,9 @@
 		</Key>
 	</Package>
 	<Package name="Civ_Strings">
+		<Key ID="STR_pInAct_Breathalyzer">
+			<Orignal>Breathalyze Player</Orignal>
+		</Key>
 		<Key ID="STR_pInAct_RevokeLicense">
 			<Orignal>Revoke Licenses</Orignal>
 		</Key>
