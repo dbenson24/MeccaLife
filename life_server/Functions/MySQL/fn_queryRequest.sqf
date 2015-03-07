@@ -88,6 +88,7 @@ switch (_side) do {
 /* I'm not really sure what this does right now but it skips a position in the array. */
 _keyArr = missionNamespace getVariable [format["%1_KEYS_%2",_uid,_side],[]];
 _queryResult set[12,_keyArr];
+diag_log format["GARAGE INFORMATION %1", _queryResult select 12];
 
 /*
  * We want to run a new query just to get the player position and living status
