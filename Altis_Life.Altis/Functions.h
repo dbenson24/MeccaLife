@@ -29,6 +29,22 @@ class Life_Client_Core
 		class survival {};
 	};
 	
+	class tempGangs
+	{
+		file = "core\tempGangs";
+		class createGroup {};
+		class gangBrowser {};
+		class gangManagement {};
+		class groupMenu {};
+		class joinGang {};
+		class kickGang {};
+		class leaveGang {};
+		class setGangLeader {};
+		class lockGang {};
+		class unlockGang {};
+	};	
+	
+	
 	class Admin
 	{
 		file = "core\admin";
