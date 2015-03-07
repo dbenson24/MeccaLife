@@ -41,11 +41,7 @@ player addItem "Rangefinder";
 player assignItem "Rangefinder";
 player addItem "SmokeShell";
 player addItem "SmokeShell";
-player addItem "SmokeShell";
-player addItem "SmokeShell";
 player addWeapon "hgun_P07_F";
-player addMagazine "16Rnd_9x21_Mag";
-player addMagazine "16Rnd_9x21_Mag";
 player addMagazine "16Rnd_9x21_Mag";
 player addMagazine "16Rnd_9x21_Mag";
 
@@ -117,7 +113,6 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-		player addMagazine "30Rnd_65x39_caseless_mag";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
@@ -196,12 +191,12 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addHeadgear "H_Beret_02";
 		player addWeapon "arifle_MXM_F";
 		player addVest "V_PlateCarrier1_blk";
-		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
-		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
-		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
-		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
-		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
-		player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
+		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag";
 		player addMagazine "30Rnd_65x39_caseless_mag";
 		player addItem "HandGrenade_Stone";
