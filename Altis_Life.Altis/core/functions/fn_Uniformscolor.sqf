@@ -31,4 +31,8 @@ if(side player == civilian) then {
 	if(side player == civilian && uniform player == "U_I_CombatUniform" && ( FETCH_CONST(life_donator) == 5)) then {
 	player setObjectTextureGlobal [0, "textures\mafia.paa"];
 	};
+if(side player == civilian) then {
+	if(side player == civilian && uniform player == "U_C_Poloshirt_blue") then {
+	player setObjectTextureGlobal [0, "textures\frozen.jpg"];
+	};
 };

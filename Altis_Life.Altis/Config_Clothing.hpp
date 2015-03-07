@@ -16,7 +16,7 @@ class Clothing {
 
 		uniforms[] = {
 			{ "NONE", "Remove Uniform", 0, { "", "", -1 } },
-			{ "U_C_Poloshirt_blue", "Poloshirt Blue", 250, { "", "", -1 } },
+			{ "U_C_Poloshirt_blue", "ELSA FROZEN", 250, { "", "", -1 } },
 			{ "U_C_Poloshirt_burgundy", "Poloshirt Burgundy", 275, { "", "", -1 } },
 			{ "U_C_Poloshirt_redwhite", "Poloshirt Red/White", 150, { "", "", -1 } },
 			{ "U_C_Poloshirt_salmon", "Poloshirt Salmon", 175, { "", "", -1 } },
