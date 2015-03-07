@@ -14,7 +14,7 @@ if((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _building OR (near
 	[[[1,2],"STR_ISTR_Bolt_AlertFed",true,[]],"life_fnc_broadcast",true,false] call life_fnc_MP;
 } else {
 	[[_vault],"life_fnc_bankalarmsound",true,true] call life_fnc_MP;
-	[[0,"STR_ISTR_Bolt_AlertHouse",true,[]],"life_fnc_broadcast",true,false] call life_fnc_MP;
+	[[0,"STR_ISTR_Bolt_AlertHouse",true,[profileName]],"life_fnc_broadcast",true,false] call life_fnc_MP;
 };
 
 _doors = getNumber(configFile >> "CfgVehicles" >> (typeOf _building) >> "NumberOfDoors");
