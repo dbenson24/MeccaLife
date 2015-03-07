@@ -53,6 +53,12 @@ switch(_type) do
 		_target = lbData[88881,(lbCurSel 88881)];
 		life_smartphoneTarget = call compile format["%1",_target];
 	};
+
+	case 3:
+	{
+		lbClear _cMessageList;
+		[[player],"GHB_fnc_cleanupMessages",false] spawn life_fnc_MP;
+	};
 	
 	case 4:
 	{

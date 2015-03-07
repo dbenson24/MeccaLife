@@ -256,6 +256,17 @@ class Life_smartphone_schreiben
 			h = (1 / 25);
 		};
 		
+		class DeleteMessages : Life_RscButtonMenu {
+			idc = -1;
+			text = "Delete Messages";
+			onButtonClick = "[3] call life_fnc_smartphone;";
+			colorBackground[] = {0.584, 0.086, 0.086,1.0};
+			x = 0.6 - (6.25 / 40) + 0.088;
+			y = 0.25 + (1 / 25) + 0.51;
+			w = 0.2;
+			h = (1 / 25);
+		};
+		
 		class textEdit : Life_RscEdit {
 			idc = 88884;
 			text = "";
