@@ -337,7 +337,13 @@ class CfgVehicles {
     };
 
 	class B_G_Offroad_01_armed_F : B_G_Offroad_01_F {
+		vItemSpace = 200;
 		price = p50cal;
+		storageFee[] = { 1000, 0, 0, 0 };
+		garageSell[] = { 100000, 0, 0, 0 };
+        insurance = 2500;
+        chopShop = 100000;
+        textures[] = { };
 	};
 
 	class I_G_Van_01_transport_F {
