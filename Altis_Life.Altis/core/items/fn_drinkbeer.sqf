@@ -13,6 +13,8 @@ for "_i" from 0 to 59 do
 {
     if(life_drink > 0.12) then {
 
+		player setFatigue 0.5;
+		life_thirst = 50;
 		"chromAberration" ppEffectAdjust[0.16,random 0.16, true];
 		"chromAberration" ppEffectCommit 1;   
 		"radialBlur" ppEffectAdjust  [random 0.05,random 0.05,0.3,0.3];
@@ -20,6 +22,8 @@ for "_i" from 0 to 59 do
 		addcamShake[random 4, 2, random 4];
 		sleep 1;
 	} else {
+		player setFatigue 0.5;
+		life_thirst = 50;
 		"chromAberration" ppEffectAdjust [random 0.05,random 0.05,true];
 		"chromAberration" ppEffectCommit 1;   
 		"radialBlur" ppEffectAdjust  [random 0.03,random 0.03,0.4,0.4];
@@ -29,6 +33,8 @@ for "_i" from 0 to 59 do
 	};
 };
 if (life_drink > 0.22) then {
+			player setFatigue 0.8;
+			life_thirst = 20;
 			titleText [localize "STR_MISC_DrunkBlackOut","BLACK OUT"];
 			player playMoveNow "Incapacitated";
 			//titleText[localize "STR_MISC_DrunkBlackOut","BLACK IN"];
