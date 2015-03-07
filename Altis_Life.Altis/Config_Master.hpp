@@ -191,6 +191,10 @@ class VirtualItems {
 	
 	VITEMMACRO(gpstracker, "STR_Item_gpstracker", "gpstracker", 2, 15000, 500, false, -1, "")
 	VITEMMACRO(speedbomb, "STR_Item_speedbomb", "speedbomb", 2, 15000, 500, false, -1, "")
+	
+	VITEMMACRO(bottledwhiskey, "STR_Item_bottledwhiskey", "bottledwhiskey", 2, 2000, 500, false, -1, "")
+	VITEMMACRO(bottledshine, "STR_Item_bottledshine", "bottledshine", 2, 2000, 500, false, -1, "")
+	VITEMMACRO(bottledbeer, "STR_Item_bottledbeer", "bottledbeer", 2, 2000, 500, false, -1, "")
 
 };
 

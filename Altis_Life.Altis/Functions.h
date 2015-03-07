@@ -325,6 +325,7 @@ class Life_Client_Core
 		class copSiren2 {};
 		class showArrestDialog {}; 
 		class arrestDialog_Arrest {};
+		class breathalyzer {};
 		
 	};
 	
@@ -393,6 +394,9 @@ class Life_Client_Core
 		class heliblastCharge {};
 		class gpsTracker {};
 		class speedbomb {};
+		class drinkbeer {};
+		class drinkmoonshine {};
+		class drinkwhiskey {};
 	};
 	
 	class Scripts

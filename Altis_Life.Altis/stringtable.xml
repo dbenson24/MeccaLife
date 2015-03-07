@@ -2612,6 +2612,30 @@
 		</Key>
 	</Package>
 	<Package name="MISC_Strings">
+		<Key ID="STR_MISC_StPubIntox">
+			<Original>%1 has passed out drunk in public!</Original>
+			<English>%1 has passed out drunk in public!</English>
+			<German>%1 hat sich betrunken im öffentlichen bestanden!</German>
+		</Key>
+		<Key ID="STR_MISC_AlreadyDrinking">
+			<Original>You are already drinking some booze</Original>
+			<English>You are already drinking some booze</English>
+			<German>Du bist schon etwas trinken Alkohol</German>
+		</Key>
+		<Key ID="STR_MISC_WestIndNoNo">
+			<Original>No drinking on duty</Original>
+			<English>No drinking on duty</English>
+			<German>Kein Trinkwasser im Dienst</German>
+			<French>Pas boire pendant le travail</French>
+		</Key>
+		<Key ID="STR_MISC_DrunkBlackOut">
+			<Original>You have passed out</Original>
+			<English>You have passed out</English>
+		</Key>
+		<Key ID="STR_MISC_DrunkBlackOut1">
+			<Original>What the hell happened to me??</Original>
+			<English>What the hell happened to me??</English>
+		</Key>
 		<Key ID="STR_MISC_TooMuch">
 			<Original>You tried to give %1 %2 %3 but they couldn't hold that so it was returned.</Original>
 			<German>Du wolltest %1 %2 %3 geben, aber er hat keinen Platz in seinem Inventar und hat es darum zurückgegeben.</German>
@@ -3524,6 +3548,15 @@
 		</Key>
 		<Key ID="STR_Item_gpstracker">
 			<Original>Gps Tracker</Original>
+		</Key>
+		<Key ID="STR_Item_bottledwhiskey">
+			<Original>Bottled Whiskey</Original>
+		</Key>
+		<Key ID="STR_Item_bottledshine">
+			<Original>Bottled Shine</Original>
+		</Key>
+		<Key ID="STR_Item_bottledbeer">
+			<Original>Bottled Beer</Original>
 		</Key>
 	</Package>
 	<Package name="Life_License">
