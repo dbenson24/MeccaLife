@@ -268,14 +268,17 @@ switch (_code) do {
 		{
 			if((currentWeapon player == RIFLE OR currentWeapon player == PISTOL) && currentWeapon player != "" && !life_knockout && (cursorTarget GVAR "restrained") && !life_isDowned && !(player GVAR["surrender",false])) then
 			{
+				_stuff = ["ItemRadio","ItemGPS"];
 				[cursorTarget] spawn life_fnc_knockoutAction;
-				if("ItemRadio" in assignedItems cursorTarget) then {
+				if(_stuff in assignedItems cursorTarget) then {
 					cursorTarget removeweapon "ItemRadio";
-					hint "The cellphone of the person was placed on the ground.";
-					_defenceplace1 = "Item_ItemRadio" createVehicle (player modelToWorld[0,0,0]);
+					cursorTarget removeweapon "ItemGPS";
+					hint "The communication devices of the person was/were placed on the ground.";
+					_droppedstuff1 = "Item_ItemRadio" createVehicle (player modelToWorld[0,0,0]);
+					_droppedstuff2 = "Item_ItemGPS" createVehicle (player modelToWorld[0,0,0]);
 				} else 
 				{ 
-					hint "The person that you knock out have no cellphone!"
+					hint "The person that you knock out has no communication devices!"
 				};
 			};
 			_handled = true;
