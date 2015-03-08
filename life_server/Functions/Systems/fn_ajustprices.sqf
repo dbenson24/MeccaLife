@@ -43,7 +43,7 @@ if (_factor == 0) exitwith {};//the factor 0 is not a real group
         _name = format["%1price",SEL(x,0)];
         _itemArray pushBack (missionNamespace getVariable _name);
     };
-} _market;
+} forEach _market;
 
 _sellingfactor =((count _itemArray)-1);
 

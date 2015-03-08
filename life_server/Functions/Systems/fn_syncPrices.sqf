@@ -12,7 +12,7 @@ while {true} do {
 
     _market = missionNamespace getVariable "marketPrices";
     
-    if (isNil(_market)) {
+    if (isNil "_market") {
         [] call TON_fnc_loadPrices;
         _market = missionNamespace getVariable "marketPrices";
     }
