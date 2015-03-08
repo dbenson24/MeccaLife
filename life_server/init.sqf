@@ -213,4 +213,4 @@ PVAR_ALL("life_server_isReady");
 
 /* Initialize the economy */
 
-//[] spawn TON_fnc_syncPrices;git 
+[] spawn TON_fnc_syncPrices;
