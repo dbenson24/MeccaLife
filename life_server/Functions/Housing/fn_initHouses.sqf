@@ -14,7 +14,7 @@ for [{_x=0},{_x<=_count},{_x=_x+10}] do {
 	_queryResult = [_query,2,true] call DB_fnc_asyncCall;
 	
 	["diag_log",[
-		"------------- housingFetchPlayerHouse Request -------------",
+		"------------- initHouses Request -------------",
 		format["QUERY: %1",_query],
 		format["Result: %1",_houses],
 		"-------------------------------------------------"
