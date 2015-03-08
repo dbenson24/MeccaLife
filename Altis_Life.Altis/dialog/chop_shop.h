@@ -73,7 +73,7 @@ class Chop_Shop
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
-		
+		/*
 		class BtnSteal : Life_RscButtonMenu
 		{
 			idc = -1;
@@ -85,5 +85,6 @@ class Chop_Shop
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
+		*/
 	};
 };
