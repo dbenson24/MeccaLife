@@ -4,11 +4,6 @@
  - LIONS implemented temporary groups; not to be confused
 	with the former.
 
-4. Put the scripts.txt on dev desktop back into BE and make
-  exceptions
-
-
-7. Wanted UI icon; syncing that with the new database.
 
 8. Smartphone Messages not saving prob cuz to new database
 
