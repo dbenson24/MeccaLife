@@ -10,10 +10,10 @@
 4. Put the scripts.txt on dev desktop back into BE and make
   exceptions
 
-5. Fixing or getting rid of the blackjack shit
+5. Fixing or getting rid of the blackjack shit -- done
 
 6. Changing the loadout of medic npcs on map. to U_B_CTRG_3
-   instead of rangemaster
+   instead of rangemaster -- done
 
 7. Wanted UI icon; syncing that with the new database.
 
