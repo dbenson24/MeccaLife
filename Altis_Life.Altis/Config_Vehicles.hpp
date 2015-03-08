@@ -42,6 +42,8 @@
 #define ptarubench 1500000
 #define ptarufuel 1300000
 #define ftruck 50000
+#define huron 1500000
+#define mohawk 1400000
 /* End Vehicle Prices */
 
 class CarShops {
@@ -111,9 +113,8 @@ class CarShops {
 			{ "B_Heli_Light_01_F", pmh9civ, "" },
 			{ "B_G_Offroad_01_armed_F", p50cal, "rebel" },
 			{ "O_Heli_Transport_04_bench_F", ptarubench, "rebel" },
-			{ "O_Heli_Transport_04_box_F", ptarutrans, "rebel" }
-			
-			
+			{ "O_Heli_Transport_04_box_F", ptarutrans, "rebel" },
+			{ "B_Heli_Transport_03_F", huron, "rebel" }
 		};
 	};
 
@@ -132,7 +133,8 @@ class CarShops {
 		vehicles[] = {
 			{ "B_Heli_Light_01_F", pmh9civ, "pilot" },
 			{ "O_Heli_Light_02_unarmed_F", porcaciv, "pilot" },
-			{ "O_Heli_Transport_04_fuel_F", ptarufuel, "pilot" }
+			{ "O_Heli_Transport_04_fuel_F", ptarufuel, "pilot" },
+			{ "I_Heli_Transport_02_F", mohawk, "pilot" }
 		};
 	};
 
@@ -147,8 +149,8 @@ class CarShops {
 	class cop_airhq {
 		side = "civ";
 		vehicles[] = {
-			{ "B_Heli_Light_01_F", pmh9cop, "" },
-			{ "B_Heli_Transport_01_F", pghosthawkcop, "", { "life_coplevel", 3 } },
+			{ "B_Heli_Light_01_F", pmh9cop, "", { "life_coplevel", 2 } },
+			{ "B_Heli_Transport_01_F", pghosthawkcop, "", { "life_coplevel", 4 } }
 		};
 	};
 
@@ -257,6 +259,26 @@ class CfgVehicles {
 		garageSell[] = { 21000, 21000, 0, 0 };
         insurance = 2500;
         chopShop = 5000;
+        textures[] = { };
+    };
+	
+	class B_Heli_Transport_03_F {
+        vItemSpace = 250;
+		price = huron;
+        storageFee[] = { 60000, 0, 0, 0 };
+		garageSell[] = { 80000, 21000, 0, 0 };
+        insurance = 2500;
+        chopShop = 6000;
+        textures[] = { };
+    };
+	
+	class I_Heli_Transport_02_F {
+        vItemSpace = 240;
+		price = mohawk;
+        storageFee[] = { 55000, 0, 0, 0 };
+		garageSell[] = { 75000, 21000, 0, 0 };
+        insurance = 2500;
+        chopShop = 5500;
         textures[] = { };
     };
 
@@ -585,6 +607,8 @@ class CfgVehicles {
 		chopShop = 5000;
 		textures[] = {};
 	};
+	
+
 
 	class C_Hatchback_01_F {
         vItemSpace = 65;
@@ -804,11 +828,13 @@ class CfgVehicles {
              }
         };
     };
+	
+
 	class O_Heli_Light_02_unarmed_F {
         vItemSpace = 210;
         price = porcaciv;
         storageFee[] = { 55000, 0, 22000, 0 };
-		garageSell[] = { 72500, 0, 35000, 0 };
+		garageSell[] = { 22500, 0, 35000, 0 };
         insurance = 2500;
         chopShop = 5000;
         textures[] = {

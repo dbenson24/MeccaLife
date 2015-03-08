@@ -66,7 +66,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "16Rnd_9x21_Mag";
 		player addMagazine "16Rnd_9x21_Mag";
 		player addMagazine "16Rnd_9x21_Mag";
-		player addItemToBackpack "H_CrewHelmetHeli_B";
+		player addItemToBackpack "H_PilotHelmetFighter_B";
 		[true,"redgull",3] call life_fnc_handleInv;
 	};
 	
@@ -90,7 +90,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
-		player addItemToBackpack "H_CrewHelmetHeli_B";
+		player addItemToBackpack "H_PilotHelmetFighter_B";
 		[true,"redgull",3] call life_fnc_handleInv;
 		[true,"tbacon",3] call life_fnc_handleInv;
 		[true,"coffee",3] call life_fnc_handleInv;
@@ -117,7 +117,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
-		player addItemToBackpack "H_CrewHelmetHeli_B";
+		player addItemToBackpack "H_PilotHelmetFighter_B";
 		player addItem "SmokeShellBlue";
 		player addItem "SmokeShellBlue";
 		[true,"redgull",3] call life_fnc_handleInv;
@@ -147,7 +147,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
-		player addItemToBackpack "H_CrewHelmetHeli_B";
+		player addItemToBackpack "H_PilotHelmetFighter_B";
 		player addItem "SmokeShellBlue";
 		player addItem "SmokeShellBlue";
 		[true,"redgull",3] call life_fnc_handleInv;
@@ -176,7 +176,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
-		player addItemToBackpack "H_CrewHelmetHeli_B";
+		player addItemToBackpack "H_PilotHelmetFighter_B";
 		player addItem "SmokeShellBlue";
 		player addItem "SmokeShellBlue";
 		[true,"redgull",3] call life_fnc_handleInv;
@@ -189,7 +189,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 	    player ForceAddUniform "U_O_OfficerUniform_ocamo";
 		player setObjectTextureGlobal [0, "textures\corptroop.jpg"];
 		player addHeadgear "H_Beret_02";
-		player addWeapon "arifle_MXM_F";
+		player addWeapon "arifle_MXM_Black_F";
 		player addVest "V_PlateCarrier1_blk";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
@@ -203,7 +203,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
-		player addItemToBackpack "H_CrewHelmetHeli_B";
+		player addItemToBackpack "H_PilotHelmetFighter_B";
 		player addItem "SmokeShellBlue";
 		player addItem "SmokeShellBlue";
 		[true,"redgull",3] call life_fnc_handleInv;
@@ -218,7 +218,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addHeadgear "H_Beret_Colonel";
 		player addItemToBackpack "H_PilotHelmetFighter_B";
 		player addVest "V_PlateCarrier1_blk";
-		player addWeapon "arifle_MXM_F";
+		player addWeapon "arifle_MXM_Black_F";
 		player addPrimaryWeaponItem "optic_Arco";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
@@ -235,7 +235,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addItemToBackpack "Chemlight_blue";
 		player addItemToBackpack "Chemlight_blue";
 		player addGoggles "G_Squares_Tinted";
-		player addItemToBackpack "H_CrewHelmetHeli_B";
+		player addItemToBackpack "H_PilotHelmetFighter_B";
 		player addItem "SmokeShellBlue";
 		player addItem "SmokeShellBlue";
 		[true,"redgull",3] call life_fnc_handleInv;
