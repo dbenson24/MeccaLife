@@ -7,14 +7,14 @@ Description:
 Loads the SQL database into the economy variable: marketPrices and dynamically
 created variables for each good.
 */
-private["_marketprices"];
+private["_marketPrices"];
 _query = format["loadPrices"];
 
 waitUntil{sleep (random 0.3); !DB_Async_Active};
 _tickTime = diag_tickTime;
 _queryResult = [_query,2,true] call DB_fnc_asyncCall;
 
-if((EQUAL(EXTDB_SETTINGS("MySQL_Query"),1))) then {
+//if((EQUAL(EXTDB_SETTINGS("MySQL_Query"),1))) then {
 	["diag_log",[
 		"------------- Load Prices Request -------------",
 		format["QUERY: %1",_query],
@@ -22,7 +22,7 @@ if((EQUAL(EXTDB_SETTINGS("MySQL_Query"),1))) then {
 		format["Result: %1",_queryResult],
 		"-------------------------------------------------"
 	]] call TON_fnc_logIt;
-};
+//};
 _marketPrices = [];
 
 {
