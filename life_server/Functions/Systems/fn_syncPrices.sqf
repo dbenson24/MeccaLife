@@ -20,16 +20,16 @@ while {true} do {
     _goods = [];
     
     {
-        if (SEL(x,6) != 0) then {
-            _name = format["%1price",SEL(x,0)];
+        if (SEL(_x,6) != 0) then {
+            _name = format["%1price",SEL(_x,0)];
             _price = missionNamespace getVariable _name;
             _goods pushBack [SEL(_price,0),SEL(_price,2)];
         };
     } forEach _market;
     
     {
-        _name = SEL(x,0);
-        _price = SEL(x,1);
+        _name = SEL(_x,0);
+        _price = SEL(_x,1);
         _query = format["syncPrices:%1:%2",_price,_name];
         
         waitUntil{sleep (random 0.3); !DB_Async_Active};

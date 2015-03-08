@@ -40,7 +40,7 @@ if (_factor == 0) exitwith {};//the factor 0 is not a real group
 
 {
     if(SEL(_x,1) == _factor) then {
-        _name = format["%1price",SEL(x,0)];
+        _name = format["%1price",SEL(_x,0)];
         _itemArray pushBack (missionNamespace getVariable _name);
     };
 } forEach _market;
@@ -79,7 +79,7 @@ _sellingfactor =((count _itemArray)-1);
         };
     };
     _x set [2, _sellprice];
-    _name = format["%1price",SEL(x,0)];
-    missionNamespace setVariable [_name,x];
+    _name = format["%1price",SEL(_x,0)];
+    missionNamespace setVariable [_name,_x];
 } forEach _itemArray;
 

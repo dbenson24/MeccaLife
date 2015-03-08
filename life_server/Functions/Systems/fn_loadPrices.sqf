@@ -26,9 +26,9 @@ _queryResult = [_query,2,true] call DB_fnc_asyncCall;
 _marketPrices = [];
 
 {
-    _marketPrices pushBack [SEL(x,0),SEL(x,6),SEL(x,7)];
-    _name = format["%1price",SEL(x,0)];
-    missionNamespace setVariable [_name, x];
+    _marketPrices pushBack [SEL(_x,0),SEL(_x,6),SEL(_x,7)];
+    _name = format["%1price",SEL(_x,0)];
+    missionNamespace setVariable [_name, _x];
 } forEach _queryResult;
 
 missionNamespace setVariable ["marketPrices", _marketPrices];
