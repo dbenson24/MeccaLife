@@ -29,7 +29,7 @@ for [{_x=0},{_x<=_count},{_x=_x+10}] do {
 		_house setVariable["house_id",_x select 0,true];
 		_house setVariable["locked",true,true]; //Lock up all the stuff.
 		_numOfDoors = getNumber(configFile >> "CfgVehicles" >> (typeOf _house) >> "numberOfDoors");
-		for "_i" from 1 to _numOfDoors do {git
+		for "_i" from 1 to _numOfDoors do {
 			_house setVariable[format["bis_disabled_Door_%1",_i],1,true];
 		};
 	} foreach _queryResult;
