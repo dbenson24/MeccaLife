@@ -66,6 +66,7 @@ player createDiarySubject ["controls","Controls"];
 				B: Pickaxe<br/>
 				SHIFT+R: Knock players out
 				User11: Redgull<br/>
+				LeftCtrl+R: Ammo Repack Module
 				"
 		]
 	];
@@ -86,6 +87,7 @@ player createDiarySubject ["controls","Controls"];
 				Shift + F: Cop Yelp<br/>
 				User11: Redgull<br/>
 				User11: Redgull<br/>
+				LeftCtrl+R: Ammo Repack Module
 				"
 		]
 	];
