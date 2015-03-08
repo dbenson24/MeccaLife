@@ -1,3 +1,6 @@
+#define PUSH(A,B) A pushBack B;
+#define REM(A,B) A=A-[B];
+
 /*
 	File: repetitive_cleanup.sqf
 	
@@ -33,9 +36,6 @@
 */
 
 if (!isServer) exitWith {}; // isn't server         
-
-#define PUSH(A,B) A set [count (A),B];
-#define REM(A,B) A=A-[B];
 
 private ["_ttdBodies","_ttdVehiclesDead","_ttdVehiclesImmobile","_ttdWeapons","_ttdPlanted","_ttdSmokes","_addToCleanup","_unit","_objectsToCleanup","_timesWhenToCleanup","_removeFromCleanup"];
 
