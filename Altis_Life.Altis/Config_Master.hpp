@@ -93,9 +93,13 @@ class Life_Settings {
 									"mulletGrilled", "catsharkGrilled", "turtleSoup", "henGrilled", "roosterGrilled",
 									"sheepGrilled", "goatGrilled","frog","marijuana","cannabis","froglsd","mushroom","magicm",
 									"heroinUnprocessed","cocaineUnprocessed","heroinProcessed","cocaineProcessed","underwatercharge",
-									"goldbarp","heliblastcharge","lostcargo"
+									"goldbarp","heliblastcharge","lostcargo","goldBar","blastingCharge","boltCutter","oilUnprocessed",
+									"oilProcessed","copperUnrefined","copperRefined","ironUnrefined","ironRefined","saltUnrefined",
+									"saltRefined","sand","glass","diamondUncut","diamondCut","rock","cement","mushroom","largesoda",
+									"ziptie","gpstracker","speedbomb","bottledwhiskey","bottledshine","bottledbeer"
 									};
 };
+
 
 //Virtual Items
 class VirtualItems {
