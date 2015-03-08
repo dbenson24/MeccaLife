@@ -327,7 +327,7 @@ class playerSettings {
 		class ButtonMyGroup : Life_RscButtonMenu {
 			idc = 1999;
 			text = "Groups";
-			colorBackground[] = {0,0.2235294117647059,0.3725490196078431,1};
+			colorBackground[] = {0, 0, 0, 0};
 			onButtonClick = "[] call life_fnc_groupMenu";
 			x = 0.1 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.805;

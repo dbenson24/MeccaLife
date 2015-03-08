@@ -1,4 +1,4 @@
-class STS_Life_My_Group_Diag {
+class MECCA_Life_My_Group_Diag {
 	idd = 2620;
 	name= "life_my_group_menu";
 	movingEnable = false;
@@ -7,7 +7,7 @@ class STS_Life_My_Group_Diag {
 	
 	class controlsBackground {
 		class Life_RscTitleBackground:Life_RscText {
-			colorBackground[] = {0,0.3294117647058824,0.5411764705882353,1};
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 			idc = -1;
 			x = 0.1;
 			y = 0.2;
@@ -16,7 +16,7 @@ class STS_Life_My_Group_Diag {
 		};
 		
 		class MainBackground:Life_RscText {
-			colorBackground[] = {0.1058823529411765,0.1058823529411765,0.1058823529411765,0.93};
+			colorBackground[] = {0, 0, 0, 0.7};
 			idc = -1;
 			x = 0.1;
 			y = 0.2 + (11 / 250);
@@ -51,7 +51,6 @@ class STS_Life_My_Group_Diag {
 		class CloseLoadMenu : Life_RscButtonMenu {
 			idc = -1;
 			text = "$STR_Global_Close";
-			colorBackground[] = {0,0.2235294117647059,0.3725490196078431,1};
 			onButtonClick = "closeDialog 0;[] call life_fnc_p_updateMenu";
 			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8 - (1 / 25);
@@ -62,7 +61,7 @@ class STS_Life_My_Group_Diag {
 		class GangLeave : Life_RscButtonMenu {
 			idc = -1;
 			text = "$STR_Gang_Leave";
-			colorBackground[] = {0,0.2235294117647059,0.3725490196078431,1};
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "[] call life_fnc_leaveGang";
 			x = 0.50;
 			y = 0.26;
@@ -74,7 +73,7 @@ class STS_Life_My_Group_Diag {
 		{
 			idc = 2622;
 			text = "Lock";
-			colorBackground[] = {0,0.2235294117647059,0.3725490196078431,1};
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "[] call life_fnc_lockGang";
 			x = 0.50;
 			y = 0.31;
@@ -86,7 +85,7 @@ class STS_Life_My_Group_Diag {
 		{
 			idc = 2623;
 			text = "Unlock";
-			colorBackground[] = {0,0.2235294117647059,0.3725490196078431,1};
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "[] call life_fnc_unlockGang";
 			x = 0.50;
 			y = 0.31;
@@ -98,7 +97,7 @@ class STS_Life_My_Group_Diag {
 		{
 			idc = 2624;
 			text = "$STR_Gang_Kick";
-			colorBackground[] = {0,0.2235294117647059,0.3725490196078431,1};
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "[] call life_fnc_kickGang";
 			x = 0.50;
 			y = 0.36;
@@ -110,7 +109,7 @@ class STS_Life_My_Group_Diag {
 		{
 			idc = 2625;
 			text = "$STR_Gang_SetLeader";
-			colorBackground[] = {0,0.2235294117647059,0.3725490196078431,1};
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "[] call life_fnc_setGangLeader";
 			x = 0.50;
 			y = 0.41;
@@ -126,7 +125,7 @@ class STS_Life_My_Group_Diag {
 	};
 };
 
-class STS_Life_Browse_Gang_Diag {
+class MECCA_Life_Browse_Gang_Diag {
 	idd = 2520;
 	name= "life_my_gang_menu_browse";
 	movingEnable = false;
@@ -135,7 +134,7 @@ class STS_Life_Browse_Gang_Diag {
 	
 	class controlsBackground {
 		class Life_RscTitleBackground:Life_RscText {
-			colorBackground[] = {0,0.3294117647058824,0.5411764705882353,1};
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 			idc = -1;
 			x = 0.1;
 			y = 0.2;
@@ -144,7 +143,7 @@ class STS_Life_Browse_Gang_Diag {
 		};
 		
 		class MainBackground:Life_RscText {
-			colorBackground[] = {0.1058823529411765,0.1058823529411765,0.1058823529411765,0.93};
+			colorBackground[] = {0, 0, 0, 0.7};
 			idc = -1;
 			x = 0.1;
 			y = 0.2 + (11 / 250);
@@ -179,7 +178,6 @@ class STS_Life_Browse_Gang_Diag {
 		class CloseLoadMenu : Life_RscButtonMenu {
 			idc = -1;
 			text = "$STR_Global_Close";
-			colorBackground[] = {0,0.2235294117647059,0.3725490196078431,1};
 			onButtonClick = "closeDialog 0; [] call life_fnc_p_updateMenu;";
 			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8 - (1 / 25);
@@ -190,7 +188,7 @@ class STS_Life_Browse_Gang_Diag {
 		class GangJoin : Life_RscButtonMenu {
 			idc = 2522;
 			text = "$STR_Gang_Join";
-			colorBackground[] = {0,0.2235294117647059,0.3725490196078431,1};
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "[] call life_fnc_joinGang";
 			x = 0.32;
 			y = 0.65;
@@ -200,7 +198,7 @@ class STS_Life_Browse_Gang_Diag {
 	};
 };
 
-class STS_Life_Create_Group_Diag {
+class MECCA_Life_Create_Group_Diag {
 	idd = 2520;
 	name= "life_my_gang_menu_create";
 	movingEnable = false;
@@ -208,7 +206,7 @@ class STS_Life_Create_Group_Diag {
 	
 	class controlsBackground {
 		class Life_RscTitleBackground:Life_RscText {
-			colorBackground[] = {0,0.3294117647058824,0.5411764705882353,1};
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 			idc = -1;
 			x = 0.1;
 			y = 0.2;
@@ -217,7 +215,7 @@ class STS_Life_Create_Group_Diag {
 		};
 		
 		class MainBackground:Life_RscText {
-			colorBackground[] = {0.1058823529411765,0.1058823529411765,0.1058823529411765,0.93};
+			colorBackground[] = {0, 0, 0, 0.7};
 			idc = -1;
 			x = 0.1;
 			y = 0.2 + (11 / 250);
@@ -241,7 +239,7 @@ class STS_Life_Create_Group_Diag {
 		class Title : Life_RscTitle {
 			colorBackground[] = {0, 0, 0, 0};
 			idc = -1;
-			text = "$STR_Gang_Title";
+			text = "Group Menu";
 			x = 0.1;
 			y = 0.2;
 			w = 0.5;
@@ -251,7 +249,6 @@ class STS_Life_Create_Group_Diag {
 		class CloseLoadMenu : Life_RscButtonMenu {
 			idc = -1;
 			text = "$STR_Global_Close";
-			colorBackground[] = {0,0.2235294117647059,0.3725490196078431,1};
 			onButtonClick = "closeDialog 0;[] call life_fnc_p_updateMenu;";
 			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.5 - (1 / 25);
@@ -262,7 +259,7 @@ class STS_Life_Create_Group_Diag {
 		class GangCreateField : Life_RscButtonMenu {
 			idc = -1;
 			text = "$STR_Gang_Create";
-			colorBackground[] = {0,0.2235294117647059,0.3725490196078431,1};
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "[] call life_fnc_createGroup";
 			x = 0.27;
 			y = 0.40;
@@ -284,7 +281,7 @@ class STS_Life_Create_Group_Diag {
 	};
 };
 
-class STS_Life_Gang_Prompt
+class MECCA_Life_Gang_Prompt
 {
 	idd = 2550;
 	name = "Gang_Prompt";
@@ -293,7 +290,7 @@ class STS_Life_Gang_Prompt
 	
 	class controlsBackground {
 		class Life_RscTitleBackground:Life_RscText {
-			colorBackground[] = {0,0.3294117647058824,0.5411764705882353,1};
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 			idc = -1;
 			x = 0.3;
 			y = 0.2;
@@ -302,7 +299,7 @@ class STS_Life_Gang_Prompt
 		};
 		
 		class MainBackground:Life_RscText {
-			colorBackground[] = {0.1058823529411765,0.1058823529411765,0.1058823529411765,0.93};
+			colorBackground[] = {0, 0, 0, 0.7};
 			idc = -1;
 			x = 0.3;
 			y = 0.2 + (11 / 250);
@@ -317,7 +314,7 @@ class STS_Life_Gang_Prompt
 		{
 			idc = -1;
 			sizeEx = 0.020;
-			text = "$STR_Gang_MainMenu";
+			text = "Choose a group from the browser!";
 			x = 0.287;
 			y = 0.2 + (11 / 250);
 			w = 0.5; h = 0.12;
@@ -326,8 +323,8 @@ class STS_Life_Gang_Prompt
 		class life_gang_browse : Life_RscButtonMenu {
 			idc = -1;
 			text = "$STR_Gang_Browse";
-			colorBackground[] = {0,0.2235294117647059,0.3725490196078431,1};
-			onButtonClick = "closeDialog 0; createDialog ""STS_Life_Browse_Gang_Diag""";
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
+			onButtonClick = "closeDialog 0; createDialog ""MECCA_Life_Browse_Gang_Diag""";
 			x = 0.2 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.42 - (1 / 25);
 			w = (6.25 / 40);
@@ -337,8 +334,8 @@ class STS_Life_Gang_Prompt
 		class life_gang_create_button : Life_RscButtonMenu {
 			idc = -1;
 			text = "$STR_Gang_Create";
-			colorBackground[] = {0,0.2235294117647059,0.3725490196078431,1};
-			onButtonClick = "closeDialog 0; createDialog ""STS_Life_Create_Group_Diag""; ctrlShow[2522,true]";
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
+			onButtonClick = "closeDialog 0; createDialog ""MECCA_Life_Create_Group_Diag""; ctrlShow[2522,true]";
 			x = 0.4 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.42 - (1 / 25);
 			w = (6.25 / 40);
