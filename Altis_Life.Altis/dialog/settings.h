@@ -17,7 +17,7 @@ class SettingsMenu
 			w = 1;
 			h = 1.28;
 		};
-		/*
+		
 		class RscMainBackground : life_RscText
 		{
 			colorBackground[] = {0,0,0,0.2};
@@ -27,7 +27,6 @@ class SettingsMenu
 			w = 0.5;
 			h = 0.43 - (22 / 250);
 		};
-		*/
 		
 		class PlayerTagsHeader: Life_RscButtonMenu
 		{
@@ -129,9 +128,6 @@ class SettingsMenu
 			y = 0.3;
 			w = 0.25;
 			h = 0.04;
-			colorText[] = {1,1,1,1};
-			colorBackground[] = {1,0,0,0.5};
-			sizeEx = 0.05;
 		};
 		
 		//Grass Filters

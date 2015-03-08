@@ -74,7 +74,7 @@ class welcomesettings
 			w = 0.7;
 			h = 0.04;
 			colorText[] = {1,1,1,1};
-			colorBackground[] = {1,0,0,0.5};
+			colorBackground[] = {0,0,0,0.3};
 			sizeEx = 0.05;
 		};
 		class ButtonClose: Life_RscButtonMenu
