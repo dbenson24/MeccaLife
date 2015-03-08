@@ -29,7 +29,7 @@ _units = [];
 	};
 } forEach _units;
 ctrlSetText[8104,"Connected to system..."];
-[[4, format["%1 has successfully hacked into the Mecca Central Criminal Database!", name player]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+[[4, format["%1 is hacking into Mecca Central Criminal Database [M.C.C.D] to break prisoners out of the jail!",true,false] spawn life_fnc_MP;
 
 if(((lbSize _list)-1) == -1) then
 {
