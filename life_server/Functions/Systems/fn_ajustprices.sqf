@@ -78,7 +78,7 @@ _sellingfactor =((count _itemArray)-1);
         
         };
     };
-    _x set (2, _sellprice);
+    _x set [2, _sellprice];
     _name = format["%1price",SEL(x,0)];
     missionNamespace setVariable (_name,x);
 } forEach _itemArray;

@@ -12,19 +12,19 @@ while {true} do {
 
     _market = missionNamespace getVariable "marketPrices";
     
-    if (isNil "_market") {
+    if (isNil "_market") then {
         [] call TON_fnc_loadPrices;
         _market = missionNamespace getVariable "marketPrices";
-    }
+    };
     
     _goods = [];
     
     {
-        if (SEL(x,6) != 0) {
+        if (SEL(x,6) != 0) then {
             _name = format["%1price",SEL(x,0)];
             _price = missionNamespace getVariable _name;
             _goods pushBack [SEL(_price,0),SEL(_price,2)];
-        }
+        };
     } forEach _market;
     
     {

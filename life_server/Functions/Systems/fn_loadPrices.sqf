@@ -24,6 +24,7 @@ if((EQUAL(EXTDB_SETTINGS("MySQL_Query"),1))) then {
 	]] call TON_fnc_logIt;
 };
 _marketPrices = [];
+
 {
     _marketPrices pushBack [SEL(x,0),SEL(x,6),SEL(x,7)];
     _name = format["%1price",SEL(x,0)];
