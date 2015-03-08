@@ -12,10 +12,12 @@
 #define psuv 30000
 #define phatchbacksport 45000
 #define pkart 15000
+
 #define poffroadmed 10000
 #define pzamakmed 75000
-#define pmh9med 50000
-#define porcamed 75000
+#define pmh9med 250000
+#define porcamed 500000
+
 #define pboxer 250000
 #define pzamaktrans 135000
 #define pzamakcov 200000
@@ -24,24 +26,30 @@
 #define ptempestcov 251500
 #define phemttbox 600000
 #define ptempestdev 800000
+#define ftruck 50000
+
+
 #define pifrit 700000
-#define pmh9civ 325000
 #define p50cal 950000
-#define poffroadcop 5000
-#define psuvcop 20000
-#define phuntercop 30000
+
+#define poffroadcop 35000
+#define psuvcop 30000
+#define phuntercop 250000
+#define pmh9cop 250000
+#define pghosthawkcop 500000
+
+#define pmh9civ 325000
 #define pm900 253000
 #define porcaciv 750000
-#define pmh9cop 75000
-#define pghosthawkcop 200000
+#define ptarutrans 1800000
+#define ptarubench 1500000
+#define ptarufuel 1300000
+
 #define psdv 100000
 #define prescueboat 5000
 #define pspeedboat 20000
 #define passaultboat 3000
-#define ptarutrans 1800000
-#define ptarubench 1500000
-#define ptarufuel 1300000
-#define ftruck 50000
+
 #define huron 1500000
 #define mohawk 1400000
 /* End Vehicle Prices */
@@ -853,6 +861,7 @@ class CfgVehicles {
 		garageSell[] = { 75000, 0, 0, 0 };
         insurance = 2500;
         chopShop = 5500;
+        price = mohawk;
         textures[] = {
         	{ "Ion", "civ", {
                 "\a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_ion_co.paa",

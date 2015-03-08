@@ -9,7 +9,7 @@ Sends a request to update and adjust the price of stuff in the DB.
 
 
 //[[0,player,life_shop_type,_amount,_price,_var],"TON_fnc_Adjustprices",false,false] spawn life_fnc_MP;
-private["_type","_side","_data","_unit","_ret","_tickTime","_queryResult","_var","_price","_amount","_market","_factor","_good","_itemArray", "_priceChanges"];
+private["_type","_side","_data","_unit","_ret","_tickTime","_queryResult","_var","_price","_amount","_market","_factor","_good","_itemArray","_priceChanges","_delay"];
 _type = [_this,0,0,[0]] call BIS_fnc_param;
 _unit = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
 _data = [_this,2,"",[""]] call BIS_fnc_param;
@@ -38,7 +38,9 @@ _factor = SEL(_good, 6);
 
 if (_factor == 0) exitwith {};//the factor 0 is not a real group
 
-sleep (3*60);
+/* Randomizes when changes hit the market */
+_delay = 2.9*60 + rand(12);
+sleep _delay;
 
 {
     if(SEL(_x,1) == _factor) then {
