@@ -210,3 +210,7 @@ PVAR_ALL("life_server_isReady");
 
 /* Initialize hunting zone(s) */
 ["hunting_zone",30] spawn TON_fnc_huntingZone;
+
+/* Initialize the economy */
+
+[] spawn TON_fnc_syncPrices.sqf;
