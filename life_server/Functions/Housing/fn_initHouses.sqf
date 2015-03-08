@@ -16,7 +16,7 @@ for [{_x=0},{_x<=_count},{_x=_x+10}] do {
 	["diag_log",[
 		"------------- initHouses Request -------------",
 		format["QUERY: %1",_query],
-		format["Result: %1",_houses],
+		format["Result: %1",_queryResult],
 		"-------------------------------------------------"
 	]] call TON_fnc_logIt;
 	
