@@ -35,7 +35,7 @@ class welcomesettings
 		class Information: Life_rscStructuredText
 		{
 			idc = 6903;
-			text = "Welcome to the Mecca AltisLife. Please read the rules on our forums at MeccaGaming.co.<br/><br/>Our TeamSpeak 3 address : meccagaming.myteamspeak.net<br/><br/>What is Auto-Optimize? Auto-Optimize adjusts the game settings so that your game runs at maximum potential. You can also define the settings yourself.<br/><br/>Thanks for playing on Mecca, and have fun RPing!";
+			text = "Welcome to the Mecca AltisLife. Please read the rules on our forums at MeccaGaming.co . Our teamSpeak 3 address : | meccagaming.myteamspeak.net | . What is Auto-Optimize ? Auto.Optimize adjusts the game settings so that your game runs better. You can also define the settings yourself.";
 			x = 0.15;
 			y = 0.28;
 			w = 0.7;
