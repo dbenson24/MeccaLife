@@ -271,11 +271,11 @@ switch (_code) do {
 				[cursorTarget] spawn life_fnc_knockoutAction;
 				if("ItemRadio" in assignedItems cursorTarget) then {
 					cursorTarget removeweapon "ItemRadio";
-					hint "The cellphone of the person was placed on the ground.";
+					hint "The smartphone of the person that you just knocked out was placed on the ground.";
 					_defenceplace1 = "Item_ItemRadio" createVehicle (player modelToWorld[0,0,0]);
 				} else 
 				{ 
-					hint "The person that you knock out have no cellphone!"
+					hint "The person that you knocked out has no smartphone!"
 				};
 			};
 			_handled = true;
