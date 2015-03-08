@@ -314,7 +314,7 @@ class MECCA_Life_Gang_Prompt
 		{
 			idc = -1;
 			sizeEx = 0.020;
-			text = "Create a group or choose one from the browser!";
+			text = "$STR_Gang_PriceTxt";
 			x = 0.287;
 			y = 0.2 + (11 / 250);
 			w = 0.5; h = 0.12;
