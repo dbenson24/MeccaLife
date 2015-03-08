@@ -68,7 +68,6 @@ _result = format["wantedGetCrimes:%1",_uid];
 waitUntil{!DB_Async_Active};
 _queryResult = [_result,2] call DB_fnc_asyncCall;
 
-_name = [_name] call DB_fnc_mresString;
 _val = [(_type select 1)] call DB_fnc_numberSafe;
 
 if(count _queryResult != 0) then
