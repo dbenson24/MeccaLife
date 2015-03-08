@@ -80,10 +80,8 @@ class CfgFunctions
 			class asyncCall{};
 			class insertRequest{};
 			class updateRequest{};
-			class mresToArray {};
 			class insertVehicle {};
 			class bool{};
-			class mresString {};
 			class updatePartial {};
 		};
 	};
@@ -150,6 +148,14 @@ class CfgFunctions
 			class vehicleisdead {};
             class getPrices {};
             class ajustprices {};
+            class loadPrices {};
+            class syncPrices {};
+		};
+		class Paintball
+		{
+			file = "\life_server\Functions\paintball";
+			class paintball {};
+			class game {};
 		};
         class Airdrop
 		{
@@ -168,6 +174,7 @@ class CfgFunctions
 			class updateHouseContainers {};
 			class updateHouseTrunk {};
 			class houseCleanup {};
+			class preCheckHouse {};
 		};
 		
 		class Gangs
@@ -177,7 +184,6 @@ class CfgFunctions
 			class queryPlayerGang {};
 			class removeGang {};
 			class updateGang {};
-			class fetchGangs {};
 		};
 
 		class Actions
@@ -191,6 +197,7 @@ class CfgFunctions
 			file = "\life_server\Functions\Smartphone";
 			class handleMessages {};
 			class msgRequest {};
+			class cleanupMessages {};
 		};    
 	};
 };

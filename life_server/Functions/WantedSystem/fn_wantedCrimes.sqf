@@ -1,3 +1,4 @@
+#include "\life_server\script_macros.hpp"
 /*
 	File: fn_wantedCrimes.sqf
 	Author: ColinM
@@ -12,7 +13,7 @@ disableSerialization;
 _ret = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _criminal = [_this,1,[],[]] call BIS_fnc_param;
 
-_result = format["SELECT wantedCrimes, wantedBounty FROM wanted WHERE active='1' AND wantedID='%1'",(_criminal select 0)];
+_result = format["wantedFetchCrimes:%1",_criminal select 0];
 waitUntil{!DB_Async_Active};
 _tickTime = diag_tickTime;
 _queryResult = [_result,2] call DB_fnc_asyncCall;
@@ -20,9 +21,6 @@ _queryResult = [_result,2] call DB_fnc_asyncCall;
 _ret = owner _ret;
 _crimesArr = [];
 
-_crimesDB = [(_queryResult select 0)] call DB_fnc_mresToArray;
-if(typeName _crimesDb == "STRING") then {_crimesDb = call compile _crimesDb;};
-_queryResult set[0,_crimesDb];
 _type = _queryResult select 0;
 {
 	switch(_x) do
@@ -73,10 +71,13 @@ _type = _queryResult select 0;
 }forEach _type;
 _queryResult set[0,_crimesArr];
 
-diag_log "------------- Client Query Request -------------";
-diag_log format["QUERY: %1",_result];
-diag_log format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)];
-diag_log format["Result: %1",_queryResult];
-diag_log "------------------------------------------------";
-
+if((EQUAL(EXTDB_SETTINGS("MySQL_Query"),1))) then {
+	["diag_log",[
+		"------------- Wanted Query Request -------------",
+		format["QUERY: %1",_result],
+		format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)],
+		format["Result: %1",_queryResult],
+		"------------------------------------------------"
+	]] call TON_fnc_logIt;
+};
 [[_queryResult],"life_fnc_wantedInfo",_ret,false] spawn life_fnc_MP;

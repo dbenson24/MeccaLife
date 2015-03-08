@@ -26,7 +26,7 @@ if(_impound) then {
 			deleteVehicle _vehicle;
 		};
 	} else {
-		_query = format["UPDATE vehicles SET active='0' WHERE pid='%1' AND plate='%2'",_uid,_plate];
+		_query = format["vehicleUpdateActivePlate:0:%1:%2",_uid,_plate];
 		waitUntil {!DB_Async_Active};
 		_thread = [_query,1] call DB_fnc_asyncCall;
 		//waitUntil {scriptDone _thread};
@@ -49,7 +49,7 @@ if(_impound) then {
 		(owner _unit) publicVariableClient "life_garage_store";
 	};
 	
-	_query = format["UPDATE vehicles SET active='0' WHERE pid='%1' AND plate='%2'",_uid,_plate];
+	_query = format["vehicleUpdateActivePlate:0:%1:%2",_uid,_plate];
 	waitUntil {!DB_Async_Active};
 	_thread = [_query,1] call DB_fnc_asyncCall;
 	//waitUntil {scriptDone _thread};

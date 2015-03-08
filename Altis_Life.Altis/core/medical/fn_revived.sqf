@@ -26,6 +26,9 @@ if(BANK > (LIFE_SETTINGS(getNumber,"revive_fee"))) then {
 	BANK = 0;
 };
 
+/* Life tracking */
+life_is_alive = true;
+
 //Retexturing of units clothing, vanilla files only retexture the EMS unit.
 switch(playerSide) do {
 	case independent: {[[player,0,"textures\medic_uniform.jpg"],"life_fnc_setTexture",true,false] call life_fnc_MP;};

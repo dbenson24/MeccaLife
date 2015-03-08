@@ -25,10 +25,11 @@ if(_exit) exitWith {};
 _flag = switch(playerSide) do {case west: {"cop"}; case independent: {"med"}; default {"civ"};};
 if(!(EQUAL(_flag,_shopSide))) exitWith {};
 
-ctrlSetText [3103,localize _shopTitle];
+
 /* Open up the menu */
 createDialog "Life_Clothing";
 disableSerialization;
+ctrlSetText [3103,localize _shopTitle];
 
 //Cop / Civ Pre Check
 if((SEL(_this,3) in ["bruce","dive","reb","kart"] && playerSide != civilian)) exitWith {hint localize "STR_Shop_NotaCiv"; closeDialog 0;};

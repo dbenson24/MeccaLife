@@ -5,7 +5,7 @@
 #define FETCH_CONST(var) (call var)
 
 if(side player == independent) then {
-	if ((uniform player) == "U_Rangemaster") then {
+	if ((uniform player) == "U_B_CTRG_3") then {
 		player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"];
 	};
 };
@@ -26,10 +26,11 @@ if(side player == WEST) then {
 	};
 };
 
-
 if(side player == civilian) then {
-	// Prisoner 
-	if(side player == civilian && uniform player == "U_I_CombatUniform" && (FETCH_CONST(life_donator) == 1 && FETCH_CONST(life_donator) == 2 && FETCH_CONST(life_donator) == 3 && FETCH_CONST(life_donator) == 4 && FETCH_CONST(life_donator) == 5 && FETCH_CONST(life_donator) == 6)) then {
+	if(side player == civilian && uniform player == "U_I_CombatUniform" && ( FETCH_CONST(life_donator) == 5)) then {
 	player setObjectTextureGlobal [0, "textures\mafia.paa"];
+	};
+	if(side player == civilian && uniform player == "U_C_Poloshirt_blue") then {
+	player setObjectTextureGlobal [0, "textures\frozen.jpg"];
 	};
 };

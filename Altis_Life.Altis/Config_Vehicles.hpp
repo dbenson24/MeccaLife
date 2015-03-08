@@ -41,6 +41,9 @@
 #define ptarutrans 1800000
 #define ptarubench 1500000
 #define ptarufuel 1300000
+#define ftruck 50000
+#define huron 1500000
+#define mohawk 1400000
 /* End Vehicle Prices */
 
 class CarShops {
@@ -90,14 +93,14 @@ class CarShops {
 	class civ_truck {
 		side = "civ";
 		vehicles[] = {
-			{ "C_Van_01_box_F", pboxer, "trucking" },
-			{ "I_Truck_02_transport_F", pzamaktrans, "trucking" },
-			{ "I_Truck_02_covered_F", pzamakcov, "trucking" },
-			{ "B_Truck_01_transport_F", phemtttrans, "trucking" },
-			{ "O_Truck_03_transport_F", ptempesttrans, "trucking" },
-			{ "O_Truck_03_covered_F", ptempestcov, "trucking" },
-			{ "B_Truck_01_box_F", phemttbox, "trucking" },
-			{ "O_Truck_03_device_F", ptempestdev, "trucking" }
+			{ "C_Van_01_box_F", pboxer, "truck" },
+			{ "I_Truck_02_transport_F", pzamaktrans, "truck" },
+			{ "I_Truck_02_covered_F", pzamakcov, "truck" },
+			{ "B_Truck_01_transport_F", phemtttrans, "truck" },
+			{ "O_Truck_03_transport_F", ptempesttrans, "truck" },
+			{ "O_Truck_03_covered_F", ptempestcov, "truck" },
+			{ "B_Truck_01_box_F", phemttbox, "truck" },
+			{ "O_Truck_03_device_F", ptempestdev, "truck" }
 		};
 	};
 
@@ -110,9 +113,8 @@ class CarShops {
 			{ "B_Heli_Light_01_F", pmh9civ, "" },
 			{ "B_G_Offroad_01_armed_F", p50cal, "rebel" },
 			{ "O_Heli_Transport_04_bench_F", ptarubench, "rebel" },
-			{ "O_Heli_Transport_04_box_F", ptarutrans, "rebel" }
-			
-			
+			{ "O_Heli_Transport_04_box_F", ptarutrans, "rebel" },
+			{ "B_Heli_Transport_03_F", huron, "rebel" }
 		};
 	};
 
@@ -131,7 +133,8 @@ class CarShops {
 		vehicles[] = {
 			{ "B_Heli_Light_01_F", pmh9civ, "pilot" },
 			{ "O_Heli_Light_02_unarmed_F", porcaciv, "pilot" },
-			{ "O_Heli_Transport_04_fuel_F", ptarufuel, "pilot" }
+			{ "O_Heli_Transport_04_fuel_F", ptarufuel, "pilot" },
+			{ "I_Heli_Transport_02_F", mohawk, "pilot" }
 		};
 	};
 
@@ -146,8 +149,8 @@ class CarShops {
 	class cop_airhq {
 		side = "civ";
 		vehicles[] = {
-			{ "B_Heli_Light_01_F", pmh9cop, "" },
-			{ "B_Heli_Transport_01_F", pghosthawkcop, "", { "life_coplevel", 3 } },
+			{ "B_Heli_Light_01_F", pmh9cop, "", { "life_coplevel", 2 } },
+			{ "B_Heli_Transport_01_F", pghosthawkcop, "", { "life_coplevel", 4 } }
 		};
 	};
 
@@ -258,6 +261,17 @@ class CfgVehicles {
         chopShop = 5000;
         textures[] = { };
     };
+	
+	class B_Heli_Transport_03_F {
+        vItemSpace = 250;
+		price = huron;
+        storageFee[] = { 60000, 0, 0, 0 };
+		garageSell[] = { 80000, 21000, 0, 0 };
+        insurance = 2500;
+        chopShop = 6000;
+        textures[] = { };
+    };
+
 
 	class B_Boat_Armed_01_minigun_F {
         vItemSpace = 175;
@@ -336,7 +350,13 @@ class CfgVehicles {
     };
 
 	class B_G_Offroad_01_armed_F : B_G_Offroad_01_F {
+		vItemSpace = 200;
 		price = p50cal;
+		storageFee[] = { 1000, 0, 0, 0 };
+		garageSell[] = { 100000, 0, 0, 0 };
+        insurance = 2500;
+        chopShop = 100000;
+        textures[] = { };
 	};
 
 	class I_G_Van_01_transport_F {
@@ -578,6 +598,8 @@ class CfgVehicles {
 		chopShop = 5000;
 		textures[] = {};
 	};
+	
+
 
 	class C_Hatchback_01_F {
         vItemSpace = 65;
@@ -636,6 +658,9 @@ class CfgVehicles {
             } },
             { "Cop", "cop", {
                 "textures\meccapolicesuv.jpg"
+            } },
+            { "Donut", "civ", {
+                "textures\donut_suv_textures.jpg"
             } }
 	        };
     };
@@ -769,6 +794,19 @@ class CfgVehicles {
              }
         };
     };
+	
+	class C_Van_01_fuel_F {
+        vItemSpace = 800;
+        price = ftruck;
+        storageFee[] = { 5000, 0, 0, 0 };
+		garageSell[] = { 0, 0, 0, 0 };
+        insurance = 2500;
+        chopShop = 5000;
+        textures[] = {
+            { 
+             }
+        };
+    };
 	class O_Heli_Transport_04_bench_F {
         vItemSpace = 80;
         price = ptarubench;
@@ -781,11 +819,13 @@ class CfgVehicles {
              }
         };
     };
+	
+
 	class O_Heli_Light_02_unarmed_F {
         vItemSpace = 210;
         price = porcaciv;
         storageFee[] = { 55000, 0, 22000, 0 };
-		garageSell[] = { 72500, 0, 35000, 0 };
+		garageSell[] = { 22500, 0, 35000, 0 };
         insurance = 2500;
         chopShop = 5000;
         textures[] = {
@@ -806,13 +846,13 @@ class CfgVehicles {
             } }
         };
     };
-
+	
 	class I_Heli_Transport_02_F {
         vItemSpace = 375;
-        storageFee[] = { 75000, 0, 0, 0 };
-		garageSell[] = { 125000, 0, 0, 0 };
+        storageFee[] = { 55000, 0, 0, 0 };
+		garageSell[] = { 75000, 0, 0, 0 };
         insurance = 2500;
-        chopShop = 5000;
+        chopShop = 5500;
         textures[] = {
         	{ "Ion", "civ", {
                 "\a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_ion_co.paa",

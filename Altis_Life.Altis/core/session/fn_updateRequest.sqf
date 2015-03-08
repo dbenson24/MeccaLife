@@ -3,14 +3,12 @@
 	File: fn_updateRequest.sqf
 	Author: Tonic
 */
-private["_packet","_array","_flag","_civPosition"];
+private["_packet","_array","_flag"];
+last_known_position = getPos player;
+diag_log format ["last known position recorded as %1",last_known_position];
 _packet = [getPlayerUID player,(profileName),playerSide,CASH,BANK];
 _array = [];
 _flag = switch(playerSide) do {case west: {"cop"}; case civilian: {"civ"}; case independent: {"med"};};
-
-//Player Position Saving
-_civPosition = getPos player;
-diag_log format ["%1",_civPosition];
 
 {
 	_varName = LICENSE_VARNAME(configName _x,_flag);
@@ -24,9 +22,11 @@ _packet pushBack life_gear;
 switch (playerSide) do {
 	case civilian: {
 		_packet pushBack life_is_arrested;
-		_packet pushBack _civPosition;
-		_packet pushBack life_is_alive;
 	};
 };
+
+/* Save position and life status */
+_packet pushBack last_known_position;
+_packet pushBack life_is_alive;
 
 [_packet,"DB_fnc_updateRequest",false,false] call life_fnc_MP;

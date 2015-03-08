@@ -61,7 +61,7 @@ SUB(_units,[player]);
 						case 3: {"Corporal"};
 						case 4: {"Sergeant"};
 						case 5: {"Lieutenant"};
-						case 6: {"Swat"};
+						case 6: {"S.W.A.T"};
 						case 7: {"Captain"};
 						default {"Cop In Training"};
 					}]};

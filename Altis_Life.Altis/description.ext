@@ -1,5 +1,5 @@
 author = "Tonic, MeccaDevTeam";
-onLoadName = "Mecca AltisLife RPG v4.0";
+onLoadName = "Mecca AltisLife v2.0";
 onLoadMission = "An RPG game mode developed by Tonic, edited by MeccaDevTeam";
 joinUnassigned = 1;
 respawn = BASE;
@@ -33,6 +33,7 @@ SPY_Enable = true;
 #include "Config_Spyglass.hpp"
 
 #include "dialog\MasterHandler.h"
+#include "scripts\outlw_magRepack\MagRepack_config.hpp"
 #include "Config_Master.hpp"
 
 class RscTitles

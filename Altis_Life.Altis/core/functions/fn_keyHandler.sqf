@@ -30,10 +30,6 @@ life_blinker_active = false;
 };
 
 
-
-
-
-
 if(life_action_inUse) exitWith {
 	if(!life_interrupted && _code in _interruptionKeys) then {life_interrupted = true;};
 	_handled;
@@ -59,6 +55,19 @@ if(!(EQUAL(count (actionKeys "User10"),0)) && {(inputAction "User10" > 0)}) exit
 };
 
 switch (_code) do {
+
+	//Pickaxe - KEY B
+	case 48:
+	{
+		if((!life_action_gathering) && (vehicle player == player)) then
+        {
+                     if(life_inv_pickaxe > 0) then
+                     {
+                       [] spawn life_fnc_pickAxeUse;
+					 };
+        };
+	};
+
 
 	//Q: left signal
 	case 16:
@@ -95,24 +104,45 @@ switch (_code) do {
 	//Open Wanted
 	case 2:
 	{
-		if(dialog) exitWith {};
-		[] call life_fnc_wantedMenu;
+		if (player getVariable["restrained",false]) then
+		{
+			hint "You cannot open your cell phone when you're restrained!";
+		}
+		else
+		{
+			if(dialog) exitWith {};
+			[] call life_fnc_wantedMenu;
+		};
 	};
 	
 
 	//2 Cellphone
 	case 3:
 	{
-		createDialog "life_my_smartphone";
+		if (player getVariable["restrained",false]) then
+		{
+			hint "You cannot open your cell phone when you're restrained!";
+		}
+		else
+		{
+			createDialog "life_my_smartphone";
+		};
 	};
 	
 	//3 Market
 	case 4:
 	{
-		if(dialog) exitWith {};
-		[] call life_fnc_OpenEconomy;
+		if (playerSide == civilian && player getVariable["restrained",false]) then
+		{
+			hint "You cannot open the market when you're restrained! [ONLY FOR CIVILIAN USE]";
+		}
+		else
+		{
+			if(dialog) exitWith {};
+			[] call life_fnc_OpenEconomy;
+		};
 	};
-	
+
 	//Takwondo(Traditional Martial arts in korea)(Shift + 2)
 	case 4:
 	{
@@ -223,24 +253,35 @@ switch (_code) do {
 			};
 		};
 	};
-	
-	//Restraining (Shift + R)
-	case 19: {
+		
+	//Restraining or robbing (Shift + R)
+	case 19:
+	{
 		if(_shift) then {_handled = true;};
-		if(_shift && playerSide == west && {!isNull cursorTarget} && {cursorTarget isKindOf "Man"} && {(isPlayer cursorTarget)} && {(side cursorTarget in [civilian,independent])} && {alive cursorTarget} && {cursorTarget distance player < 3.5} && {!(cursorTarget GVAR "Escorting")} && {!(cursorTarget GVAR "restrained")} && {speed cursorTarget < 1}) then {
+		if(_shift && playerSide == west && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget == civilian) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget GVAR "Escorting") && !(cursorTarget GVAR "restrained") && speed cursorTarget < 1) then
+		{
 			[] call life_fnc_restrainAction;
 		};
-	};
-	
-	//Knock out, this is experimental and yeah...
-	case 34: {
-		if(_shift) then {_handled = true;};
-		if(_shift && playerSide == civilian && {!isNull cursorTarget} && {cursorTarget isKindOf "Man"} && {isPlayer cursorTarget} && {alive cursorTarget} && {cursorTarget distance player < 4} && {speed cursorTarget < 1}) then {
-			if(!(EQUAL(animationState cursorTarget,"Incapacitated")) && {(EQUAL(currentWeapon player,RIFLE))} OR {EQUAL(currentWeapon player,PISTOL)} && {!(EQUAL(currentWeapon player,""))} && {!life_knockout} && {!(player GVAR ["restrained",false])} && {!life_isDowned}) then {
+		
+		//Knocking Dipshits Out.
+		if(_shift && !isNull cursorTarget && cursorTarget isKindOf "Man" && isPlayer cursorTarget && alive cursorTarget && cursorTarget distance player < 4 && speed cursorTarget < 1) then
+		{
+			if((currentWeapon player == RIFLE OR currentWeapon player == PISTOL) && currentWeapon player != "" && !life_knockout && (cursorTarget GVAR "restrained") && !life_isDowned && !(player GVAR["surrender",false])) then
+			{
 				[cursorTarget] spawn life_fnc_knockoutAction;
+				if("ItemRadio" in assignedItems cursorTarget) then {
+					cursorTarget removeweapon "ItemRadio";
+					hint "The smartphone of the person that you just knocked out was placed on the ground.";
+					_defenceplace1 = "Item_ItemRadio" createVehicle (player modelToWorld[0,0,0]);
+				} else 
+				{ 
+					hint "The person that you knocked out has no smartphone!"
+				};
 			};
+			_handled = true;
 		};
-	};
+	};	
+	
 	//Shift+P = Faded Sound
 	case 25: {
 		if(_shift) then
@@ -250,10 +291,19 @@ switch (_code) do {
 		};
 	};
 	 // O, police gate opener
-        case 24:
+	case 24:
 	{
-		if (!_shift && !_alt && !_ctrlKey && (playerSide == west) && (vehicle player != player)) then {
+		if (!_shift && !_alt && !_ctrlKey && ((playerSide == west) OR (playerSide == independent)) && (vehicle player != player)) then {
 			[] call life_fnc_copOpener;
+		} else {
+			if (playerSide == west) then 
+			{
+				if(life_inv_spikeStrip > 0) then 
+				{ 
+					[false,"spikeStrip",1] call life_fnc_handleInv;
+					[] spawn life_fnc_spikeStrip;
+				};
+			};
 		};
 	};
 	//T Key (Trunk)
@@ -291,8 +341,15 @@ switch (_code) do {
 				};
 			};
 		};
-		
-		if(!_alt && !_ctrlKey) then { [] call life_fnc_radar; };
+	};
+	
+	//Advanced Radar "/" button
+	case 181: 
+	{
+	if (!_alt && !_ctrlKey && playerSide == west) then
+		{
+			[] call life_fnc_radar;
+		};
 	};
 	
 	//Y Player Menu
@@ -436,9 +493,65 @@ switch (_code) do {
 	};
 };
 
+
+if ((player getVariable["restrained",false] || player getVariable ["downed", false]) && _code in (actionKeys "Throw")) then
+{
+	systemChat "You can't throw something with your hands bound!";
+	_handled = true;
+};
+
+if (_code in (actionKeys "User2")) then {
+	if(!_alt && !_ctrlKey) then {
+		if(player getVariable ["restrained", false]) then {
+			hint "You cannot pick up items while you're restrained!";
+		} else {
+			closeDialog 0;
+			createDialog "life_pickup_items";
+			_handled = true;
+		};
+	};
+};
+
+if (_code in (actionKeys "User3")) then {
+	if(!_alt && !_ctrlKey) then {
+		if(player getVariable ["restrained", false]) then {
+			hint "You cannot access your inventory while you're restrained!";
+		} else {
+			closeDialog 0;
+			createDialog "life_inventory_menu";
+			_handled = true;
+		};
+	};
+};
+
+if ((player getVariable["restrained",false]) && (_code in (actionKeys "ShowMap") || _code in (actionKeys "MiniMap") || _code in (actionKeys "MiniMapToggle"))) then
+{
+	systemChat "You can't view maps while restrained!" ;
+	_handled = true;
+};
+
 if (_code in (actionKeys "TacticalView")) then
 {
 	hint "TacticalView Mode is disabled on Mecca AltisLife" ;
+	_handled = true;
+};
+
+if (_code in (actionKeys "User11")) then {
+	closeDialog 0;
+	if(([false,"redgull",1] call life_fnc_handleInv)) then
+	{
+		life_thirst = 100;
+		player setFatigue 0;
+		life_redgull_effect = time;
+		titleText["You can now run farther for 3 minutes","PLAIN"];
+		player enableFatigue false;
+		[] spawn
+		{
+			waitUntil {!alive player OR ((time - life_redgull_effect) > (3 * 60))};
+			player enableFatigue true;
+		};
+		[] call life_fnc_hudUpdate;
+	};
 	_handled = true;
 };
 

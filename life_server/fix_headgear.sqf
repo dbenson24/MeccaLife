@@ -23,7 +23,8 @@ _headgear = ["H_Cap_tan", "H_Cap_blk", "H_Cap_blk_CMMG", "H_Cap_brn_SPECOPS",  "
 
 _headCount = count _headgear;
 
-_clothes = ["U_C_Poloshirt_blue","U_C_Poloshirt_burgundy","U_C_Poloshirt_redwhite","U_C_Poloshirt_salmon","U_C_Poloshirt_stripped","U_C_Poloshirt_tricolour","U_C_HunterBody_grn"];
+//_clothes = ["U_C_Poloshirt_blue","U_C_Poloshirt_burgundy","U_C_Poloshirt_redwhite","U_C_Poloshirt_salmon","U_C_Poloshirt_stripped","U_C_Poloshirt_tricolour","U_C_HunterBody_grn"];
+_clothes = ["U_C_Poloshirt_blue"];
 
 if (isServer) then 
 {
@@ -52,3 +53,5 @@ _randomSeed2 = _this getVariable "BIS_randomSeed2";
 if (_randomSeed1 < 2) then {
 	_this addHeadgear (_headgear select _randomSeed2); //HEY BIS, THIS IS CARRYING A GLOBAL EFFECT, Y U DO THAT?
 };
+
+[] call life_fnc_Uniformscolor;

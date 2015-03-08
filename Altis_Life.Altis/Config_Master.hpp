@@ -20,6 +20,7 @@
 #define true 1
 #define false 0
 #include "Config_Clothing.hpp"
+#include "Config_Shops.hpp"
 
 /*
 	Master settings for various features and functionality	
@@ -53,7 +54,7 @@ class Life_Settings {
 	impound_air = 850; //Price for impounding helicopters / planes
 
 	/* Car-shop Settings */
-	vehicleShop_rentalOnly[] = { "B_MRAP_01_hmg_F", "B_G_Offroad_01_armed_F" };
+	vehicleShop_rentalOnly[] = { "B_MRAP_01_hmg_F"};
 
 	/* Job-related stuff */
 	delivery_points[] = { "dp_1", "dp_2", "dp_3", "dp_4", "dp_5", "dp_6", "dp_7", "dp_8", "dp_9", "dp_10", "dp_11", "dp_12", "dp_13", "dp_14", "dp_15", "dp_15", "dp_16", "dp_17", "dp_18", "dp_19", "dp_20", "dp_21", "dp_22", "dp_23", "dp_24", "dp_25" };
@@ -92,9 +93,13 @@ class Life_Settings {
 									"mulletGrilled", "catsharkGrilled", "turtleSoup", "henGrilled", "roosterGrilled",
 									"sheepGrilled", "goatGrilled","frog","marijuana","cannabis","froglsd","mushroom","magicm",
 									"heroinUnprocessed","cocaineUnprocessed","heroinProcessed","cocaineProcessed","underwatercharge",
-									"goldbarp","heliblastcharge","lostcargo"
+									"goldbarp","heliblastcharge","lostcargo","goldBar","blastingCharge","boltCutter","oilUnprocessed",
+									"oilProcessed","copperUnrefined","copperRefined","ironUnrefined","ironRefined","saltUnrefined",
+									"saltRefined","sand","glass","diamondUncut","diamondCut","rock","cement","mushroom","largesoda",
+									"ziptie","gpstracker","speedbomb","bottledwhiskey","bottledshine","bottledbeer"
 									};
 };
+
 
 //Virtual Items
 class VirtualItems {
@@ -190,6 +195,10 @@ class VirtualItems {
 	
 	VITEMMACRO(gpstracker, "STR_Item_gpstracker", "gpstracker", 2, 15000, 500, false, -1, "")
 	VITEMMACRO(speedbomb, "STR_Item_speedbomb", "speedbomb", 2, 15000, 500, false, -1, "")
+	
+	VITEMMACRO(bottledwhiskey, "STR_Item_bottledwhiskey", "bottledwhiskey", 2, 2000, 500, false, -1, "")
+	VITEMMACRO(bottledshine, "STR_Item_bottledshine", "bottledshine", 2, 2000, 500, false, -1, "")
+	VITEMMACRO(bottledbeer, "STR_Item_bottledbeer", "bottledbeer", 2, 2000, 500, false, -1, "")
 
 };
 

@@ -15,7 +15,7 @@ _cop = [_this,2,Objnull,[Objnull]] call BIS_fnc_param;
 _half = [_this,3,false,[false]] call BIS_fnc_param;
 if(isNull _civ OR isNull _cop) exitWith {};
 
-_result = format["SELECT wantedID, wantedName, wantedCrimes, wantedBounty FROM wanted WHERE active='1' AND wantedID='%1'",_uid];
+_result = format["wantedFetchBounty:%1",_uid];
 waitUntil{!DB_Async_Active};
 _queryResult = [_result,2] call DB_fnc_asyncCall;
 

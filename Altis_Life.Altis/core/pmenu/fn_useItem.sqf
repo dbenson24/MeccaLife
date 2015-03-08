@@ -12,18 +12,27 @@ if(EQUAL(lbCurSel 2005,-1)) exitWith {hint localize "STR_ISTR_SelectItemFirst";}
 _item = CONTROL_DATA(2005);
 
 switch (true) do {
-	case (_item in ["waterBottle","coffee","redgull"]): {
-		if(([false,_item,1] call life_fnc_handleInv)) then {
+	case (_item in ["waterBottle","coffee"]): {
+		if(([false,_item,1] call life_fnc_handleInv)) then 
+		{
 			life_thirst = 100;
 			if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),1)) then {player setFatigue 0;};
-			if(EQUAL(_item,"redgull") && {EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),1)}) then {
-				[] spawn {
-					life_redgull_effect = time;
-					titleText[localize "STR_ISTR_RedGullEffect","PLAIN"];
-					player enableFatigue false;
-					waitUntil {!alive player OR ((time - life_redgull_effect) > (3 * 60))};
-					player enableFatigue true;
-				};
+		};
+	};
+	
+	case (EQUAL(_item,"redgull")): 
+	{
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			life_thirst = 100;
+			player setFatigue 0;
+			life_redgull_effect = time;
+			titleText["You can now run farther for 3 minutes","PLAIN"];
+			player enableFatigue false;
+			[] spawn
+			{
+				waitUntil {!alive player OR ((time - life_redgull_effect) > (3 * 60))};
+				player enableFatigue true;
 			};
 		};
 	};
@@ -119,6 +128,50 @@ switch (true) do {
 		(group player) reveal heli_safe;
 		[cursorTarget] spawn life_fnc_heliblastCharge;
 	};	
+	
+	case (_item =="bottledwhiskey"):
+	{
+		if(playerSide in [west,independent]) exitWith {hint localize "STR_MISC_WestIndNoNo";};
+		if((player getVariable ["inDrink",FALSE])) exitWith {hint localize "STR_MISC_AlreadyDrinking";};
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			if(isNil "life_drink") then {life_drink = 0;};
+			life_drink = life_drink + 0.06;
+			if (life_drink < 0.07) exitWith {};
+			[] spawn life_fnc_drinkwhiskey;
+		};
+	};
+	
+	case (_item =="bottledshine"):
+	{
+		if(playerSide in [west,independent]) exitWith {hint localize "STR_MISC_WestIndNoNo";};
+		if((player getVariable ["inDrink",FALSE])) exitWith {hint localize "STR_MISC_AlreadyDrinking";};
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			if(isNil "life_drink") then {life_drink = 0;};
+			life_drink = life_drink + 0.08;
+			if (life_drink < 0.09) exitWith {};
+			[] spawn life_fnc_drinkmoonshine;
+		};
+	};
+	
+	case (_item =="bottledbeer"):
+	{
+		
+		if(playerSide in [west,independent]) exitWith {hint localize "STR_MISC_WestIndNoNo";};
+		if((player getVariable ["inDrink",FALSE])) exitWith {hint localize "STR_MISC_AlreadyDrinking";};
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			if(isNil "life_drink") then {life_drink = 0;};
+			life_drink = life_drink + 0.02;
+			if (life_drink < 0.06) exitWith {};
+			[] spawn life_fnc_drinkbeer;
+		};
+	};	
+	
+	
+	
+	
 	
 	default {
 		hint localize "STR_ISTR_NotUsable";
