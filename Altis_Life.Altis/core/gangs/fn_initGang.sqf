@@ -7,7 +7,7 @@
 */
 private["_exitLoop","_group","_wait"];
 if(playerSide != civilian) exitWith {}; //What in the hell?
-//[player] join (createGroup civilian);
+[player] join (createGroup civilian);
 if(EQUAL(count life_gangData,0)) exitWith {}; //Dafuq?
 
 _wait = round(random(8));
@@ -26,17 +26,17 @@ _exitLoop = false;
 } foreach allGroups;
 
 if(!isNil "_group") then {
-	//[player] join _group;
+	[player] join _group;
 	if(EQUAL(SEL(life_gangData,1),steamid)) then {
 		_group selectLeader player;
 		[[player,_group],"TON_fnc_clientGangLeader",(units _group),false] call life_fnc_MP;
 	};
-} else {/*
+} else {
 	_group = group player;
 	_group SVAR ["gang_id",SEL(life_gangData,0),true];
 	_group SVAR ["gang_owner",SEL(life_gangData,1),true];
 	_group SVAR ["gang_name",SEL(life_gangData,2),true];
 	_group SVAR ["gang_maxMembers",SEL(life_gangData,3),true];
 	_group SVAR ["gang_bank",SEL(life_gangData,4),true];
-	_group SVAR ["gang_members",SEL(life_gangData,5),true];*/
+	_group SVAR ["gang_members",SEL(life_gangData,5),true];
 };

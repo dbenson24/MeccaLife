@@ -7,7 +7,7 @@
 private["_query","_houses"];
 if(_this == "") exitWith {};
 
-_query = format["SELECT pid, pos, inventory, containers FROM houses WHERE pid='%1' AND owned='1'",_this];
+_query = format["housingFetchPlayerHouse:%1",_this];
 waitUntil{!DB_Async_Active};
 _houses = [_query,2,true] call DB_fnc_asyncCall;
 
@@ -22,10 +22,8 @@ _return = [];
 		{if(!isNull _x) then {deleteVehicle _x;};} foreach (_house getVariable "containers");
 	};
 	
-	_trunk = [_x select 2] call DB_fnc_mresToArray;
-	if(typeName _trunk == "STRING") then {_trunk = call compile format["%1", _trunk];};
-	_containerData = [_x select 3] call DB_fnc_mresToArray;
-	if(typeName _containerData == "STRING") then {_containerData = call compile format["%1", _containerData];};
+	_trunk = _x select 2;
+	_containerData = _x select 3;
 	_house setVariable["Trunk",_trunk,true];
 	{
 		if(count _x == 0) exitWith {}; //No containers / items.

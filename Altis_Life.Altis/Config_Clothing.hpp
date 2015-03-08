@@ -16,7 +16,7 @@ class Clothing {
 
 		uniforms[] = {
 			{ "NONE", "Remove Uniform", 0, { "", "", -1 } },
-			{ "U_C_Poloshirt_blue", "Poloshirt Blue", 250, { "", "", -1 } },
+			{ "U_C_Poloshirt_blue", "ELSA FROZEN", 250, { "", "", -1 } },
 			{ "U_C_Poloshirt_burgundy", "Poloshirt Burgundy", 275, { "", "", -1 } },
 			{ "U_C_Poloshirt_redwhite", "Poloshirt Red/White", 150, { "", "", -1 } },
 			{ "U_C_Poloshirt_salmon", "Poloshirt Salmon", 175, { "", "", -1 } },
@@ -28,9 +28,11 @@ class Clothing {
 			{ "U_IG_Guerilla2_3", "The Outback Rangler", 700, { "", "", -1 } },
 			{ "U_C_HunterBody_grn", "The Hunters Look", 700, { "", "", -1 } },
 			{ "U_OrestesBody", "Surfing On Land", 1100, { "", "", -1 } },
-			{ "U_I_CombatUniform", "Mafia suit", 5187, { "life_donator", "SCALAR", 5 } }
-			
-			
+			{ "U_I_CombatUniform", "Mafia suit", 5187, { "life_donator", "SCALAR", 5 } },
+			{ "U_B_Protagonist_VR", "VR Suit Blue", 5187, { "life_donator", "SCALAR", 3 } },
+			{ "U_B_Protagonist_VR", "VR Suit Red", 5187, { "life_donator", "SCALAR", 3 } },
+			{ "U_B_Protagonist_VR", "VR Suit Green", 5187, { "life_donator", "SCALAR", 3 } }
+
 		};
 
 		headgear[] = {
@@ -111,12 +113,7 @@ class Clothing {
 
 		headgear[] = {
 			{ "NONE", "Remove Hat", 0, { "", "", -1 } },
-			{ "H_HelmetB_plain_mcamo", "", 75, { "life_coplevel", "SCALAR", 1 } },
-			{ "H_Booniehat_mcamo", "", 120, { "life_coplevel", "SCALAR", 1 } },
-			{ "H_MilCap_mcamo", "", 100, { "life_coplevel", "SCALAR", 2 } },
-			{ "H_Beret_blk_POLICE", "Officers Only Beret", 100, { "life_coplevel", "SCALAR", 3 } },
-			{ "H_Beret_02", "test1", 100, { "life_coplevel", "SCALAR", 1 } },
-			{ "H_Beret_Colonel", "test2", 100, { "life_coplevel", "SCALAR", 1 } }
+			{ "H_PilotHelmetFighter_B", "Teargas Helmet", 100, { "life_coplevel", "SCALAR", 1 } }
 		};
 
 		goggles[] = {

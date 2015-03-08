@@ -16,6 +16,8 @@ waitUntil {scriptDone _handle};
 player addBackpack "B_Carryall_oucamo";
 
 /* ITEMS */
+player addItem "ItemRadio";
+player assignItem "ItemRadio";
 player addItem "ItemMap";
 player assignItem "ItemMap";
 player addItem "ItemCompass";
@@ -51,6 +53,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 
 	case 1:
 	{
+		player addHeadgear "H_MilCap_blue";
 		player ForceAddUniform "U_BG_Guerilla2_2";
 		player setObjectTextureGlobal [0, "textures\cadettroop.jpg"]; 
 		player addVest "V_TacVest_blk_POLICE";
@@ -62,10 +65,13 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addMagazine "16Rnd_9x21_Mag";
 		player addMagazine "16Rnd_9x21_Mag";
 		player addMagazine "16Rnd_9x21_Mag";
+		player addItemToBackpack "H_PilotHelmetFighter_B";
+		[true,"redgull",3] call life_fnc_handleInv;
 	};
 	
 	case 2:
 	{
+		player addHeadgear "H_MilCap_blue";
 		player ForceAddUniform "U_BG_Guerilla2_2";
 		player setObjectTextureGlobal [0, "textures\cadettroop.jpg"]; 
 		player addWeapon "arifle_MXC_Black_F";
@@ -83,16 +89,21 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
-		
+		player addItemToBackpack "H_PilotHelmetFighter_B";
+		[true,"redgull",3] call life_fnc_handleInv;
+		[true,"tbacon",3] call life_fnc_handleInv;
+		[true,"coffee",3] call life_fnc_handleInv;
+		[true,"spikestrip",1] call life_fnc_handleInv;
 	};
 	
 	case 3:
 	{
+		player addHeadgear "H_MilCap_gry";
 	    player ForceAddUniform "U_BG_Guerilla3_2";
 		player setObjectTextureGlobal [0, "textures\corptroop.jpg"];
 		player addWeapon "arifle_MX_Black_F";
 		player addPrimaryWeaponItem "optic_MRCO";
-		player addVest "V_TacVest_blk_POLICE";
+		player addVest "V_PlateCarrier1_blk";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
@@ -105,6 +116,13 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
+		player addItemToBackpack "H_PilotHelmetFighter_B";
+		player addItem "SmokeShellBlue";
+		player addItem "SmokeShellBlue";
+		[true,"redgull",3] call life_fnc_handleInv;
+		[true,"tbacon",3] call life_fnc_handleInv;
+		[true,"coffee",3] call life_fnc_handleInv;
+		[true,"spikestrip",1] call life_fnc_handleInv;
 	};
 	
 	case 4:
@@ -127,6 +145,13 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
+		player addItemToBackpack "H_PilotHelmetFighter_B";
+		player addItem "SmokeShellBlue";
+		player addItem "SmokeShellBlue";
+		[true,"redgull",3] call life_fnc_handleInv;
+		[true,"tbacon",3] call life_fnc_handleInv;
+		[true,"coffee",3] call life_fnc_handleInv;
+		[true,"spikestrip",1] call life_fnc_handleInv;
 	};
 	
 	case 5:
@@ -149,6 +174,13 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
+		player addItemToBackpack "H_PilotHelmetFighter_B";
+		player addItem "SmokeShellBlue";
+		player addItem "SmokeShellBlue";
+		[true,"redgull",3] call life_fnc_handleInv;
+		[true,"tbacon",3] call life_fnc_handleInv;
+		[true,"coffee",3] call life_fnc_handleInv;
+		[true,"spikestrip",1] call life_fnc_handleInv;
 	};
 	case 6:
 	{
@@ -170,6 +202,13 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
 		player addItem "HandGrenade_Stone";
+		player addItemToBackpack "H_PilotHelmetFighter_B";
+		player addItem "SmokeShellBlue";
+		player addItem "SmokeShellBlue";
+		[true,"redgull",3] call life_fnc_handleInv;
+		[true,"tbacon",3] call life_fnc_handleInv;
+		[true,"coffee",3] call life_fnc_handleInv;
+		[true,"spikestrip",1] call life_fnc_handleInv;
 	};
 	case 7:
 	{
@@ -178,7 +217,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addHeadgear "H_Beret_Colonel";
 		player addItemToBackpack "H_PilotHelmetFighter_B";
 		player addVest "V_PlateCarrier1_blk";
-		player addWeapon "arifle_MXM_F";
+		player addWeapon "arifle_MXM_Black_F";
 		player addPrimaryWeaponItem "optic_Arco";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
@@ -195,6 +234,13 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addItemToBackpack "Chemlight_blue";
 		player addItemToBackpack "Chemlight_blue";
 		player addGoggles "G_Squares_Tinted";
+		player addItemToBackpack "H_PilotHelmetFighter_B";
+		player addItem "SmokeShellBlue";
+		player addItem "SmokeShellBlue";
+		[true,"redgull",3] call life_fnc_handleInv;
+		[true,"tbacon",3] call life_fnc_handleInv;
+		[true,"coffee",3] call life_fnc_handleInv;
+		[true,"spikestrip",1] call life_fnc_handleInv;
 	};
 	
 };

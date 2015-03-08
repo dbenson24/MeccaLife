@@ -30,4 +30,4 @@ _Pos = position _heli;
 "MarkerText200" setMarkerColor "ColorBlack";
 "MarkerText200" setMarkerText "PLANEWRECK";
 "MarkerText200" setMarkerType "mil_warning";
-[[3,"<t size='3'><t color='#00FF00'>PLANEWRECK</t></t> <br/><t size='1.5'>A plane wreck site has been spotted, check the area for <t color='#FFFF00'> crates of lost cargo</t>. Check your map</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+[[3,"<t size='2'><t color='#00FF00'>PLANEWRECK</t></t> <br/><t size='1.5'>A plane wreck site has been spotted, check the area for <t color='#FFFF00'> crates of lost cargo</t>. Check your map</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;

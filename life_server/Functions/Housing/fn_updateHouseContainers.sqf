@@ -23,8 +23,7 @@ _arr = [];
 	_arr pushBack [_className,[_weapons,_magazines,_items,_backpacks]];
 } foreach _containers;
 
-_arr = [_arr] call DB_fnc_mresArray;
-_query = format["UPDATE houses SET containers='%1' WHERE id='%2'",_arr,_houseID];
+_query = format["houseUpdateContainer:%1:%2",_arr,_houseID];
 waitUntil{!DB_Async_Active};
 [_query,1] call DB_fnc_asyncCall;
 //systemChat "Query ran?";

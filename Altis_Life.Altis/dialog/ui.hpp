@@ -2,7 +2,6 @@
 #define IDC_LIFE_BAR_FOOD 2200
 #define IDC_LIFE_BAR_WATER 2201
 #define IDC_LIFE_BAR_HEALTH 2202
-#define IDC_LIFE_MAIN_DISP 2203
 #define IDC_LIFE_PICTURE_FOOD 1200
 #define IDC_LIFE_PICTURE_WATER 1201
 #define IDC_LIFE_PICTURE_HEALTH 1202
@@ -66,7 +65,6 @@ class playerHUD {
         /* Background */
         class LIFE_UI_BACK: Life_RscBackground
         {
-                idc = IDD_LIFE_MAIN_DISP;
                 colorBackground[] = {0,0,0,0.5};
                 x = 0.917656 * safezoneW + safezoneX;
                 y = 0.785954 * safezoneH + safezoneY;

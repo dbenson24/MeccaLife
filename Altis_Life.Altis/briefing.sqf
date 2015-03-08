@@ -52,14 +52,21 @@ player createDiarySubject ["controls","Controls"];
 		[
 			"General Controls",
 				"
+				1: Wanted List
+				2: Smartphone
+				3: Market
 				Y: Open Player Menu<br/>
 				U: Lock and unlock cars<br/>
 				F: Cop Siren (if cop)<br/>
 				T: Vehicle Trunk<br/>
-				Left Windows: Main Interaction key which is used for picking up items/money, gathering, interacting with cars (repair,etc) and for cops to interact with civilians. Can be rebound to a single key like H by pressing ESC->Configure->Controls->Custom->Use Action 10<br/>
+				Left Windows: Interaction Menu
 				H: Holster/Unholster your weapon<br/>
 				Left Shift + P: Ear Plugs (Reduce Sound by 80%)<br/>
 				Q/E: Vehicle Signals<br/>
+				B: Pickaxe<br/>
+				SHIFT+R: Knock players out
+				User11: Redgull<br/>
+				LeftCtrl+R: Ammo Repack Module
 				"
 		]
 	];
@@ -68,11 +75,19 @@ player createDiarySubject ["controls","Controls"];
 		[
 			"Cop Controls",
 				"
-				O: Opens gates without having to get out of vehicle<br/>
+				1: Wanted List
+				2: Smartphone
+				3: Market
+				U: Lock and unlock cars<br/>
+				Left Windows: Interaction Menu
+				O: Gate Opener/Spikestrip for Cops<br/>
 				Shift + R: Restrains mouse cursor target<br/>
 				Shift + L: Turns on Cop Lights<br/>
 				F: Cop Siren toggle<br/>
 				Shift + F: Cop Yelp<br/>
+				User11: Redgull<br/>
+				User11: Redgull<br/>
+				LeftCtrl+R: Ammo Repack Module
 				"
 		]
 	];

@@ -29,6 +29,22 @@ class Life_Client_Core
 		class survival {};
 	};
 	
+	class tempGangs
+	{
+		file = "core\tempGangs";
+		class createGroup {};
+		class gangBrowser {};
+		class gangManagement {};
+		class groupMenu {};
+		class joinGang {};
+		class kickGang {};
+		class leaveGang {};
+		class setGangLeader {};
+		class lockGang {};
+		class unlockGang {};
+	};	
+	
+	
 	class Admin
 	{
 		file = "core\admin";
@@ -108,6 +124,14 @@ class Life_Client_Core
 		class jailBreakout {}; 
 		class jailBreakoutCompleted {};
 		class suicideBomb {};
+		class douevenlift {};
+		class douevenliftjail {};
+	};
+	
+	class Paintball
+	{
+		file = "core\paintball";
+		class pb_response {};
 	};
 	
 	class Housing
@@ -134,7 +158,6 @@ class Life_Client_Core
 		class itemWeight {};
 		class taxRate {};
 		class vehicleAnimate {};
-		class weaponShopCfg {};
 		class vehicleWeightCfg {};
 	};
 
@@ -168,6 +191,7 @@ class Life_Client_Core
 		class revokeLicense {};
 		class updateBounty {};
 		class vUseItem {};
+		class p_prisionbreak {};
 	};
 	
 	class Functions
@@ -220,6 +244,9 @@ class Life_Client_Core
 		class Info {};
 		class speaking {};
 		class Uniformscolor {};
+		class prisionbreak {};
+		class progressBaren {};
+		class ryn_message {};
 	};
 	
 	class Network
@@ -314,6 +341,7 @@ class Life_Client_Core
 		class copSiren2 {};
 		class showArrestDialog {}; 
 		class arrestDialog_Arrest {};
+		class breathalyzer {};
 		
 	};
 	
@@ -332,8 +360,6 @@ class Life_Client_Core
 		class gangInvite {};
 		class gangDisband {};
 		class gangDisbanded {};
-		class gangMarkers {};
-		class joinGang{};
 	};
 	
 	class Shops
@@ -384,12 +410,22 @@ class Life_Client_Core
 		class heliblastCharge {};
 		class gpsTracker {};
 		class speedbomb {};
+		class drinkbeer {};
+		class drinkmoonshine {};
+		class drinkwhiskey {};
 	};
 	
 	class Scripts
 	{
 		file = "scripts";
 		class vdmWatcher {};
+		class onTerrainChange {};
+		class ctrlFunction_Settings {};
+		class revealObjects {};
+		class s_onSliderChange {};
+		class updateViewDistance {};
+		class settingsMenu {};
+		class settingsInit {};
 	};
 	
 	class Dialog_Controls
