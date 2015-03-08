@@ -295,15 +295,15 @@ class WeaponShops {
             { "SmokeShellOrange", "", 1000 },
 			{ "SmokeShellBlue", "TearGasShell", 1000 },
             { "30Rnd_9x21_Mag", "", 500 },
-			{ "20Rnd_556x45_UW_mag", "TearGasShell", 500 },
+			{ "20Rnd_556x45_UW_mag", "", 500 },
             { "30Rnd_65x39_caseless_mag_Tracer", "", 500 },
-			{ "30Rnd_65x39_caseless_mag", "TearGasShell", 500 },
+			{ "30Rnd_65x39_caseless_mag", "", 500 },
             { "5Rnd_127x108_Mag", "", 500 },
-			{ "optic_Hamr", "TearGasShell", 4000 },
+			{ "optic_Hamr", "", 4000 },
             { "optic_Arco", "", 4000 },
-			{ "optic_MRCO", "TearGasShell", 4000 },
+			{ "optic_MRCO", "", 4000 },
             { "acc_flashlight", "", 1000 },
-			{ "acc_pointer_IR", "TearGasShell", 1000 }
+			{ "acc_pointer_IR", "", 1000 }
         };
     };
  
