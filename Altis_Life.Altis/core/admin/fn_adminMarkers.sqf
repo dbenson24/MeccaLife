@@ -3,7 +3,7 @@
 	File: fn_adminMarkers.sqf
 
 */
-if(FETCH_CONST(life_adminlevel) < 3) exitWith {closeDialog 0; hint localize "STR_ANOTF_ErrorLevel";};
+if(FETCH_CONST(life_adminlevel) < 2) exitWith {closeDialog 0; hint localize "STR_ANOTF_ErrorLevel";};
 life_markers = !life_markers;
 if(life_markers) then {
 	PlayerMarkers = [];
