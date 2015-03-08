@@ -27,7 +27,7 @@ _marketPrices = [];
 {
     _marketPrices pushBack [SEL(x,0),SEL(x,6),SEL(x,7)];
     _name = format["%1price",SEL(x,0)];
-    missionNamespace setVariable (_name, x);
+    missionNamespace setVariable [_name, x];
 } forEach _queryResult;
 
-missionNamespace setVariable ("marketPrices", _marketPrices);
+missionNamespace setVariable ["marketPrices", _marketPrices];
