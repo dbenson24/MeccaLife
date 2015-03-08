@@ -19,9 +19,6 @@ if(isNull _vehicle) exitWith {};
 hint localize "STR_Shop_ChopShopSelling";
 life_action_inUse = true;
 
-_delay = 2 + rand 8;
-sleep _delay;
-
 _price2 = CASH + _price;
 [[player,_vehicle,_price,_price2],"TON_fnc_chopShopSell",false,false] call life_fnc_MP;
 closeDialog 0;

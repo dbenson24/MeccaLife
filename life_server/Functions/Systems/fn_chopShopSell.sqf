@@ -12,6 +12,9 @@ _vehicle = [_this,1,objNull,[objNull]] call BIS_fnc_param;
 _price = [_this,2,500,[0]] call BIS_fnc_param;
 _cash = [_this,3,0,[0]] call BIS_fnc_param;
 
+_delay = 2 + rand 8;
+sleep _delay;
+
 //Error checks
 if(isNull _vehicle OR isNull _unit) exitWith  {
 	life_action_inUse = false;

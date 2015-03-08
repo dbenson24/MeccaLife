@@ -56,7 +56,7 @@ class Chop_Shop
 		{
 			idc = -1;
 			text = "$STR_Global_Sell";
-			onButtonclick = "[] spawn life_fnc_chopShopSell;";
+			onButtonclick = "[] call life_fnc_chopShopSell;";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);
