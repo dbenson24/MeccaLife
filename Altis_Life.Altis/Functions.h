@@ -419,13 +419,6 @@ class Life_Client_Core
 	{
 		file = "scripts";
 		class vdmWatcher {};
-		class onTerrainChange {};
-		class ctrlFunction_Settings {};
-		class revealObjects {};
-		class s_onSliderChange {};
-		class updateViewDistance {};
-		class settingsMenu {};
-		class settingsInit {};
 	};
 	
 	class Dialog_Controls
