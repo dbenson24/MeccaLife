@@ -31,7 +31,7 @@ class MECCA_Life_My_Group_Diag {
 		class Title : Life_RscTitle {
 			colorBackground[] = {0, 0, 0, 0};
 			idc = -1;
-			text = "$STR_Gang_Title";
+			text = "Group Management";
 			x = 0.1;
 			y = 0.2;
 			w = 0.6;
@@ -158,7 +158,7 @@ class MECCA_Life_Browse_Gang_Diag {
 		class Title : Life_RscTitle {
 			colorBackground[] = {0, 0, 0, 0};
 			idc = -1;
-			text = "$STR_Gang_Title2";
+			text = "Group Management - Current Groups";
 			x = 0.1;
 			y = 0.2;
 			w = 0.6;
