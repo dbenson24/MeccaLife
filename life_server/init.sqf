@@ -154,6 +154,8 @@ addMissionEventHandler ["HandleDisconnect",{_this call TON_fnc_clientDisconnect;
 
 /* Miscellaneous mission-required stuff */
 [] spawn TON_fnc_cleanup;
+life_gang_list = [];
+publicVariable "life_gang_list";
 life_wanted_list = [];
 [] execFSM "\life_server\FSM\cleanup.fsm";
 
