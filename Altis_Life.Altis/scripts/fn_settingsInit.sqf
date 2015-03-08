@@ -1,11 +1,15 @@
-/*
-	file: fn_settingsInit.sqf
-*/
+/*/////////////////////////////////////////|//////////
+//_______________________////////////////__|__////////
+/|Made for ZoXXen.com    |/////////////____|____//////
+/|Author:GamerDF         |///////////______|______////
+/|Description: too lazy  |/////////////____|____//////
+/|_______________________|///////////////  |  ////////
+*////////////////////////////////////////~~|~~////////
 
-mecca_foot = viewDistance;
-mecca_car = viewDistance;
-mecca_air = viewDistance;
-mecca_addon_disable = true;
+zoXXen_foot = viewDistance;
+zoXXen_car = viewDistance;
+zoXXen_air = viewDistance;
+zoXXen_addon_disable = true;
 
 [] spawn
 {

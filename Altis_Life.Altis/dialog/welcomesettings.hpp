@@ -19,7 +19,7 @@ class welcomesettings
 			y = 0.16;
 			w = 0.7;
 			h = 0.12;
-			colorBackground[] = {0,0,0,0.3};
+			colorBackground[] = {0,0.1,0.66,0.8};
 			colorText[] = {1,1,1,1};
 			sizeEx = 0.07;
 		};
@@ -60,7 +60,7 @@ class welcomesettings
 			w = 0.7;
 			h = 0.04;
 			colorText[] = {1,1,1,1};
-			colorBackground[] = {0,0,0,0.3};
+			colorBackground[] = {0,0.1,0.66,0.8};
 			sizeEx = 0.05;
 		};
 		class ButtonOptimierung: Life_RscButtonMenu
@@ -74,7 +74,7 @@ class welcomesettings
 			w = 0.7;
 			h = 0.04;
 			colorText[] = {1,1,1,1};
-			colorBackground[] = {0,0,0,0.3};
+			colorBackground[] = {0,0.1,0.66,0.8};
 			sizeEx = 0.05;
 		};
 		class ButtonClose: Life_RscButtonMenu
@@ -88,7 +88,7 @@ class welcomesettings
 			w = 0.7;
 			h = 0.04;
 			colorText[] = {1,1,1,1};
-			colorBackground[] = {0,0,0,0.3};
+			colorBackground[] = {0,0.1,0.66,0.8};
 			sizeEx = 0.05;
 		};
 	};
