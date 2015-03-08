@@ -12,7 +12,6 @@ _list = _display displayCtrl 8101;
 lbClear _list;
 ctrlSetText[8104,"Hacking system..."];
 [[_shop],"life_fnc_bankalarmsound",true,true] call life_fnc_MP;
-[[4, format["%1 is hacking into Mecca Central Criminal Database [M.C.C.D] to break prisoners out of the jail!", name player]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 _list = _display displayctrl 8101;
 _units = [];
 {
@@ -29,7 +28,7 @@ _units = [];
 	};
 } forEach _units;
 ctrlSetText[8104,"Connected to system..."];
-[[4, format["%1 is hacking into Mecca Central Criminal Database [M.C.C.D] to break prisoners out of the jail!",true,false] spawn life_fnc_MP;
+[[4, format["%1 is hacking into Mecca Central Criminal Database [M.C.C.D] to break prisoners out of the jail!", name player]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 
 if(((lbSize _list)-1) == -1) then
 {

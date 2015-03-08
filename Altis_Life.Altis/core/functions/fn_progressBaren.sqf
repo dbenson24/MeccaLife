@@ -51,3 +51,5 @@ if(life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR
 life_action_inUse = false;
 
 _object setPos (getMarkerPos "jail_breakout");
+
+[[4, format["%1 has successfully hacked into the Mecca Central Criminal Database!", name player]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
