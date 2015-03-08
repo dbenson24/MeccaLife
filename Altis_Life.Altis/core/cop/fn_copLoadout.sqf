@@ -45,7 +45,6 @@ player addWeapon "hgun_P07_F";
 player addMagazine "16Rnd_9x21_Mag";
 player addMagazine "16Rnd_9x21_Mag";
 
-
 If(BANK > 0) then {BANK = BANK - 5000;};
 
 if (playerSide == west) then {
@@ -190,7 +189,6 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addHeadgear "H_Beret_02";
 		player addWeapon "arifle_MXM_Black_F";
 		player addPrimaryWeaponItem "optic_Arco";
-
 		player addVest "V_PlateCarrier1_blk";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
