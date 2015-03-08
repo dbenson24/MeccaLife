@@ -1,0 +1,12 @@
+UPDATE players SET cop_licenses = REPLACE(cop_licenses,'"','');
+UPDATE players SET cop_gear = REPLACE(cop_gear,'"','');
+UPDATE players SET med_licenses = REPLACE(med_licenses,'"','');
+UPDATE players SET med_gear = REPLACE(med_gear,'"','');
+UPDATE players SET civ_licenses = REPLACE(civ_licenses,'"','');
+UPDATE players SET civ_gear = REPLACE(civ_gear,'"','');
+UPDATE players SET aliases = REPLACE(aliases,'"','');
+UPDATE vehicles SET inventory = REPLACE(inventory,'"','');
+UPDATE houses SET inventory = REPLACE(inventory,'"','');
+UPDATE houses SET containers = REPLACE(containers,'"','');
+UPDATE gangs SET members = REPLACE(members,'"','');
+UPDATE wanted SET wantedCrimes = REPLACE(wantedCrimes,'"','');
