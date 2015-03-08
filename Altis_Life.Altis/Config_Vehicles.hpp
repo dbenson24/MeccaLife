@@ -148,7 +148,7 @@ class CarShops {
 		side = "civ";
 		vehicles[] = {
 			{ "B_Heli_Light_01_F", pmh9cop, "" },
-			{ "B_Heli_Transport_01_F", pghosthawkcop, "", { "life_coplevel", 3 } },
+			{ "B_Heli_Transport_01_F", pghosthawkcop, "", { "life_coplevel", 4 } },
 		};
 	};
 
