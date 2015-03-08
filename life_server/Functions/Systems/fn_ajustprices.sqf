@@ -39,7 +39,7 @@ _factor = SEL(_good, 6);
 if (_factor == 0) exitwith {};//the factor 0 is not a real group
 
 /* Randomizes when changes hit the market */
-_delay = 2.9*60 + rand(12);
+_delay = 2.9*60 + random(12);
 sleep _delay;
 
 {

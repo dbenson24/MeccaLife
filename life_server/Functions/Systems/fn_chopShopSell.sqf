@@ -12,7 +12,7 @@ _vehicle = [_this,1,objNull,[objNull]] call BIS_fnc_param;
 _price = [_this,2,500,[0]] call BIS_fnc_param;
 _cash = [_this,3,0,[0]] call BIS_fnc_param;
 
-_delay = 2 + rand 8;
+_delay = 2 + random 8;
 sleep _delay;
 
 //Error checks
