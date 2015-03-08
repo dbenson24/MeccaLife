@@ -223,7 +223,7 @@ switch(_type) do
 		['nichts'] call life_fnc_onTerrainChange;
 		hint "Optimize... \n\n Visibility: DONE: \n\n Terrain :DONE:";
 		sleep 0.5;
-		setObjectViewDistance [500,100];
+		setObjectViewDistance [5000,100];
 		hint "Optimize.... \n\n Visibility: DONE: \n\n Terrain :DONE: \n\n Object Visibility: DONE:";
 		sleep 0.5;
 		hint "Optimize..... \n\n Visibility: DONE: \n\n Terrain :DONE: \n\n Object Visibility: DONE: \n\n :ALL DONE:";
