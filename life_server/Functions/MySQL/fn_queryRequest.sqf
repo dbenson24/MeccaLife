@@ -119,6 +119,12 @@ _queryResult set[13,_playerPos];
 /* Position 14 becomes the player's living status */
 _queryResult set[14,([_deadstatus select 0,1] call DB_fnc_bool)];
 
+["diag_log",[
+		"------------- Client Query Request -------------",
+		"Info returned to client upon request",
+		format["Result: %1",_queryResult],
+		"-------------------------------------------------"
+	]] call TON_fnc_logIt;
 
 /* Finally, return the data to the client */
 [_queryResult,"SOCK_fnc_requestReceived",_ownerID,false] call life_fnc_MP;
