@@ -20,7 +20,7 @@ while {true} do {
     _goods = [];
     
     {
-        if (SEL(_x,6) != 0) then {
+        if (SEL(_x,1) != 0) then {
             _name = format["%1price",SEL(_x,0)];
             _price = missionNamespace getVariable _name;
             _goods pushBack [SEL(_price,0),SEL(_price,2)];
