@@ -7,7 +7,7 @@ Description:
 Loads the SQL database into the economy variable: marketPrices and dynamically
 created variables for each good.
 */
-private["_marketPrices"];
+//private["_marketPrices"];
 _query = format["loadPrices"];
 
 waitUntil{sleep (random 0.3); !DB_Async_Active};
