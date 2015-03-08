@@ -834,7 +834,7 @@ class CfgVehicles {
         vItemSpace = 210;
         price = porcaciv;
         storageFee[] = { 55000, 0, 22000, 0 };
-		garageSell[] = { 72500, 0, 35000, 0 };
+		garageSell[] = { 22500, 0, 35000, 0 };
         insurance = 2500;
         chopShop = 5000;
         textures[] = {
