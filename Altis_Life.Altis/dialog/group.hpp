@@ -314,7 +314,7 @@ class MECCA_Life_Gang_Prompt
 		{
 			idc = -1;
 			sizeEx = 0.020;
-			text = "Choose a group from the browser!";
+			text = "Create a group or choose one from the browser!";
 			x = 0.287;
 			y = 0.2 + (11 / 250);
 			w = 0.5; h = 0.12;

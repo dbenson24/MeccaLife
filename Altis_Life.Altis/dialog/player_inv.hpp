@@ -330,7 +330,7 @@ class playerSettings {
 			colorBackground[] = {0, 0, 0, 0};
 			onButtonClick = "[] call life_fnc_groupMenu";
 			x = 0.1 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.805;
+			y = 0.801;
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
