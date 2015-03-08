@@ -148,6 +148,8 @@ class CfgFunctions
 			class vehicleisdead {};
             class getPrices {};
             class ajustprices {};
+            class loadPrices {};
+            class syncPrices {};
 		};
 		class Paintball
 		{
