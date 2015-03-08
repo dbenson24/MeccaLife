@@ -119,10 +119,6 @@ switch(FETCH_CONST(life_donator)) do
 	case 5: {life_donDis = 0.75};
 };
 
-[0,800] call life_fnc_s_onSliderChange;
-[1,800] call life_fnc_s_onSliderChange;
-[2,800] call life_fnc_s_onSliderChange;
-
 CONSTVAR(life_paycheck); //Make the paycheck static.
 if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),0)) then {player enableFatigue false;};
 [[getPlayerUID player,player getVariable["realname",name player]],"life_fnc_wantedProfUpdate",false,false] spawn life_fnc_MP;
