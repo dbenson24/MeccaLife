@@ -39,5 +39,5 @@ while {true} do {
     } forEach _goods;
     
     [] spawn TON_fnc_loadPrices;
-    sleep (60*5);
+    sleep (60);
 };
