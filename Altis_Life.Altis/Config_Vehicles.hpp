@@ -271,16 +271,7 @@ class CfgVehicles {
         chopShop = 6000;
         textures[] = { };
     };
-	
-	class I_Heli_Transport_02_F {
-        vItemSpace = 240;
-		price = mohawk;
-        storageFee[] = { 55000, 0, 0, 0 };
-		garageSell[] = { 75000, 21000, 0, 0 };
-        insurance = 2500;
-        chopShop = 5500;
-        textures[] = { };
-    };
+
 
 	class B_Boat_Armed_01_minigun_F {
         vItemSpace = 175;
@@ -855,13 +846,13 @@ class CfgVehicles {
             } }
         };
     };
-
+	
 	class I_Heli_Transport_02_F {
         vItemSpace = 375;
-        storageFee[] = { 75000, 0, 0, 0 };
-		garageSell[] = { 125000, 0, 0, 0 };
+        storageFee[] = { 55000, 0, 0, 0 };
+		garageSell[] = { 75000, 0, 0, 0 };
         insurance = 2500;
-        chopShop = 5000;
+        chopShop = 5500;
         textures[] = {
         	{ "Ion", "civ", {
                 "\a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_ion_co.paa",
