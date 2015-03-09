@@ -1,7 +1,7 @@
 StartProgress = false;
 enableSaving[false,false];
 /* Initialize the Logistics system */
-execVM "R3F_LOG\init.sqf";
+//execVM "R3F_LOG\init.sqf";
 
 life_versionInfo = "Altis Life RPG v4.0";
 [] execVM "briefing.sqf"; //Load Briefing
