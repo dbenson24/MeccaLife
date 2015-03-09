@@ -240,6 +240,12 @@ switch (_code) do {
 				player selectWeapon life_curWep_h;
 			};
 		};
+		if(playerSide == west && vehicle player != player && ((driver vehicle player) == player)) then		
+		{				
+			[[vehicle player],"life_fnc_copHorn",nil,true] spawn life_fnc_MP;			
+			[] spawn { sleep 1; 
+			};		
+		};	
 	};
 	
 	//Interaction key (default is Left Windows, can be mapped via Controls -> Custom -> User Action 10)

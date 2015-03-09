@@ -342,6 +342,7 @@ class Life_Client_Core
 		class showArrestDialog {}; 
 		class arrestDialog_Arrest {};
 		class breathalyzer {};
+		class copHorn {};
 		
 	};
 	
