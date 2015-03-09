@@ -252,7 +252,7 @@ switch (_code) do {
 			};
 		};
 	};
-	/*
+	
 	//Cop Horn
 	case 36:
 	{
@@ -264,7 +264,6 @@ switch (_code) do {
 			_handled = true;
 		};
 	};
-	*/
 	
 		
 	//Restraining or robbing (Shift + R)
