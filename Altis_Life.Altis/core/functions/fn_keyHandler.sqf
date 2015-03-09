@@ -252,6 +252,7 @@ switch (_code) do {
 			};
 		};
 	};
+	
 		
 	//Restraining or robbing (Shift + R)
 	case 19:
@@ -260,15 +261,13 @@ switch (_code) do {
 		if(_shift && playerSide == west && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget == civilian) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget GVAR "Escorting") && !(cursorTarget GVAR "restrained") && speed cursorTarget < 1) then
 		{
 			[] call life_fnc_restrainAction;
-		};
+		}
 		if(playerSide == west && vehicle player != player && ((driver vehicle player) == player)) then		
 		{				
 			[[vehicle player],"life_fnc_copHorn",nil,true] spawn life_fnc_MP;			
 			[] spawn { sleep 1; 
 			};		
-		};	
-	};
-		
+		}		
 		//Knocking Dipshits Out.
 		if(_shift && !isNull cursorTarget && cursorTarget isKindOf "Man" && isPlayer cursorTarget && alive cursorTarget && cursorTarget distance player < 4 && speed cursorTarget < 1) then
 		{
