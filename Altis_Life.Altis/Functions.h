@@ -280,6 +280,7 @@ class Life_Client_Core
 		class breakoutTimer {};
 		class waterChargeTimer {};
 		class heliChargeTimer {};
+		class groupMarkers{};
 		
 	};
 	
