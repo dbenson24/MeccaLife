@@ -7,7 +7,7 @@ _player = [_this,0,ObjNull,[objNull]] call BIS_fnc_param;
 
 if(isNull _player) exitWith {};
 
-_query = format["DELETE FROM messages WHERE toID='%1'",getPlayerUID _player];
+_query = format["cleanupMessages:%1",getPlayerUID _player];
 
 waitUntil{!DB_Async_Active};
 [_query,1] call DB_fnc_asyncCall;
