@@ -23,10 +23,10 @@ switch(_type) do
 		private["_query","_pid","_toID"];
 		_pid = getPlayerUID _player;
 		_toID = getPlayerUID _target;
-		_msg = [_msg] call DB_fnc_mresString;
+		//_msg = [_msg] call DB_fnc_mresString;
 		_fromName = name _player;
 		_toName = name _target;
-		_query = format['handleMessages:%1,%2,"%3",%4,%5',_pid,_toID,_msg,_fromName,_toName];
+		_query = format["handleMessages:%1,%2,%3,%4,%5",_pid,_toID,_msg,_fromName,_toName];
 		diag_log format["Query: %1",_query];
 		waitUntil{!DB_Async_Active};
 		[_query,1] call DB_fnc_asyncCall;
