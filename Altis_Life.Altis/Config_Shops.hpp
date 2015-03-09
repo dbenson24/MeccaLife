@@ -1,5 +1,34 @@
 class WeaponShops {
-    //Armory Shops
+	//Vigi
+    class vigilante {
+        name = "Vigilante Shop";
+        side = "civ";
+        license = "vigilante";
+        level = -1;
+        msg = "";
+        items[] = {
+			{ "FirstAidKit", "", 500 },
+			{ "ToolKit", "", 500 },
+			{ "ItemGPS", "", 50 },
+			{ "ItemMap", "", 50 },
+			{ "ItemRadio", "", 50 },
+			{ "ItemCompass", "", 50 },
+			{ "MineDetector", "", 10000 },
+            { "Binocular", "", 1000 },
+            { "NVGoggles_INDEP", "", 1000 },
+            { "NVGoggles", "", 1000 },
+			
+			{ "SMG_02_F", "", 45000 },
+			{ "30Rnd_9x21_Mag", "", 1000 },
+			
+			{ "acc_flashlight", "", 500 },
+			{ "optic_ACO_grn", "", 500 },
+			{ "optic_Aco", "", 5000 }	
+        };
+    };    
+	
+	
+	//Armory Shops
     class gun {
         name = "Billy Joe's Firearms";
         side = "civ";
