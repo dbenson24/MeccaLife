@@ -56,6 +56,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 
 	case 1:
 	{
+		player addHeadgear "H_Cap_police";
 		player ForceAddUniform "U_BG_Guerilla2_2";
 		player setObjectTextureGlobal [0, "textures\cadettroop.jpg"]; 
 		player addVest "V_TacVest_blk_POLICE";
