@@ -301,7 +301,7 @@ switch (_code) do {
 		if (!_shift && !_alt && !_ctrlKey && ((playerSide == west) OR (playerSide == independent)) && (vehicle player != player)) then {
 			[] call life_fnc_copOpener;
 		} else {
-			if (playerSide == west) then 
+			if ((playerSide == west) && (vehicle player == player)) then 
 			{
 				if(life_inv_spikeStrip > 0) then 
 				{ 
