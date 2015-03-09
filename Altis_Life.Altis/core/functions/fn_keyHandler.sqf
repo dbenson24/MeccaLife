@@ -226,15 +226,6 @@ switch (_code) do {
 			case west: {if(!visibleMap) then {[] spawn life_fnc_copMarkers;}};
 			case independent: {if(!visibleMap) then {[] spawn life_fnc_medicMarkers;}};
 			case civilian: {if(!visibleMap) then {[] spawn life_fnc_gangMarkers;}};
-			default {
-				if(!visibleMap) then {						
-						_index = [life_my_gang,life_gang_list] call fnc_index;
-						if(_index != -1) then {
-							[] spawn life_fnc_groupMarkers;
-						};
-					
-				};
-			};
 		};
 	};
 	
