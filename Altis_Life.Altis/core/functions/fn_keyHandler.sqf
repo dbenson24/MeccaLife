@@ -240,14 +240,7 @@ switch (_code) do {
 				player selectWeapon life_curWep_h;
 			};
 		};
-		if(playerSide == west && vehicle player != player && ((driver vehicle player) == player)) then		
-		{				
-			[[vehicle player],"life_fnc_copHorn",nil,true] spawn life_fnc_MP;			
-			[] spawn { sleep 1; 
-			};		
-		};	
 	};
-	
 	//Interaction key (default is Left Windows, can be mapped via Controls -> Custom -> User Action 10)
 	case _interactionKey: {
 		if(!life_action_inUse) then {
@@ -268,6 +261,13 @@ switch (_code) do {
 		{
 			[] call life_fnc_restrainAction;
 		};
+		if(playerSide == west && vehicle player != player && ((driver vehicle player) == player)) then		
+		{				
+			[[vehicle player],"life_fnc_copHorn",nil,true] spawn life_fnc_MP;			
+			[] spawn { sleep 1; 
+			};		
+		};	
+	};
 		
 		//Knocking Dipshits Out.
 		if(_shift && !isNull cursorTarget && cursorTarget isKindOf "Man" && isPlayer cursorTarget && alive cursorTarget && cursorTarget distance player < 4 && speed cursorTarget < 1) then
