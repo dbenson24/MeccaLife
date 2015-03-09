@@ -45,7 +45,10 @@ case "rebel" :{
 //case "wongs" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
 //case "oil" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
 case "cop" :{ 
-    _shoptype pushBack "market";};
+    _shoptype pushBack "market";
+    _shoptype pushBack "coffee";
+};
+
 //    format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' OR shoptype='market'",_data];};
 //case "diamond" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
 //case "iron" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};

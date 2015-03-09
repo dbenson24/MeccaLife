@@ -23,7 +23,7 @@ _array= [_this,1,[],[[]]] call BIS_fnc_param;
 
 //_shop_data = [life_shop_type] call life_fnc_virt_shops;
 _shop_data = M_CONFIG(getArray,"VirtualShops",life_shop_type,"items");
-ctrlSetText[2403,format["%1", _shop_data select 0]];
+//ctrlSetText[2403,format["%1", _shop_data select 0]];
 
 if (count _array == 0 ) exitwith {};
 
