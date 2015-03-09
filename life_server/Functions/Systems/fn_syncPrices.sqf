@@ -38,6 +38,6 @@ while {true} do {
         
     } forEach _goods;
     
-    [] spawn TON_fnc_loadPrices;
+    //[] spawn TON_fnc_loadPrices;
     sleep (60);
 };
