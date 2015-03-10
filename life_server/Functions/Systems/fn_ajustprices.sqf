@@ -17,7 +17,7 @@ _amount = [_this,3,0,[0]] call BIS_fnc_param;
 _price = [_this,4,0,[0]] call BIS_fnc_param;
 _var = [_this,5,"",[""]] call BIS_fnc_param;
 
-_delay = 1*60 + random(12);
+_delay = 2*60 + random(12);
 sleep _delay;
 //Error checks
 
