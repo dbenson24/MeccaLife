@@ -1,3 +1,4 @@
+#include "\life_server\script_macros.hpp"
 /*
 	BLAH BLAH
 	I LOVE NOTEPAD++ GET OVER IT
@@ -5,9 +6,9 @@
 */
 private["_house","_houseID","_containers","_query"];
 _house = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
-if(isNull _house) exitWith {systemChat "House null";};
+if(isNull _house) exitWith {};
 _houseID = _house getVariable["house_id",-1];
-if(_houseID == -1) exitWith {systemChat "HouseID invalid";};
+if(EQUAL(_houseID,-1)) exitWith {};
 
 _containers = _house getVariable ["containers",[]];
 
