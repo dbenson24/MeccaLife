@@ -35,7 +35,9 @@ ctrlSetText [3103,localize _shopTitle];
 if((SEL(_this,3) in ["bruce","dive","reb","kart"] && playerSide != civilian)) exitWith {hint localize "STR_Shop_NotaCiv"; closeDialog 0;};
 if((SEL(_this,3) == "reb" && !license_civ_rebel)) exitWith {hint localize "STR_Shop_NotaReb"; closeDialog 0;};
 if((SEL(_this,3) in ["cop"] && playerSide != west)) exitWith {hint localize "STR_Shop_NotaCop"; closeDialog 0;};
+if((SEL(_this,3) in ["med"] && playerSide != independent)) exitWith {hint "GO SAVE SOMEBODY INSTEAD"; closeDialog 0;};
 if((SEL(_this,3) in ["dive"] && !license_civ_dive)) exitWith { hint localize "STR_Shop_NotaDive"; closeDialog 0;};
+
 
 _pos = [1000,1000,10000];
 _oldDir = getDir player;
