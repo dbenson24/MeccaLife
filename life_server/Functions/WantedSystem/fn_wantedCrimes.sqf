@@ -18,6 +18,15 @@ waitUntil{!DB_Async_Active};
 _tickTime = diag_tickTime;
 _queryResult = [_result,2] call DB_fnc_asyncCall;
 
+["diag_log",[
+		"------------- Load Prices Request -------------",
+		format["QUERY: %1",_result],
+		format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)],
+		format["Result: %1",_queryResult],
+		"-------------------------------------------------"
+	]] call TON_fnc_logIt;
+
+
 _ret = owner _ret;
 _crimesArr = [];
 
