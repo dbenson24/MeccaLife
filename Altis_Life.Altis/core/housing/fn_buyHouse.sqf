@@ -9,6 +9,7 @@ private["_house","_uid","_action","_houseCfg"];
 _house = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _uid = getPlayerUID player;
 
+if(playerSide != independent) exitWith {hint "GO SAVE SOMEONE INSTEAD!";};
 if(isNull _house) exitWith {};
 if(!(_house isKindOf "House_F")) exitWith {};
 if((_house GVAR ["house_owned",false])) exitWith {hint "This house is already owned even though you shouldn't be seeing this hint..."};
