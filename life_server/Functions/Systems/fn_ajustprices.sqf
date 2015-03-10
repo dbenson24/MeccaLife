@@ -2,9 +2,9 @@
 /*
 File: fn_Ajustprices.sqf
 Author: worldtrade1101
-
+Edited by: Derek Benson
 Description:
-Sends a request to update and adjust the price of stuff in the DB.
+Updates the variables serverside.
 */
 
 
