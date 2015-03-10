@@ -241,7 +241,6 @@ switch (_code) do {
 			};
 		};
 	};
-	
 	//Interaction key (default is Left Windows, can be mapped via Controls -> Custom -> User Action 10)
 	case _interactionKey: {
 		if(!life_action_inUse) then {
@@ -253,6 +252,20 @@ switch (_code) do {
 			};
 		};
 	};
+	/*
+	//Cop Horn
+	case 36:
+	{
+		if(playerSide == west && vehicle player != player && ((driver vehicle player) == player)) then		
+		{				
+			[[vehicle player],"life_fnc_copHorn",nil,true] spawn life_fnc_MP;			
+			[] spawn { sleep 1; 
+			};		
+			_handled = true;
+		};
+	};
+	*/
+	
 		
 	//Restraining or robbing (Shift + R)
 	case 19:
@@ -261,24 +274,6 @@ switch (_code) do {
 		if(_shift && playerSide == west && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget == civilian) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget GVAR "Escorting") && !(cursorTarget GVAR "restrained") && speed cursorTarget < 1) then
 		{
 			[] call life_fnc_restrainAction;
-		};
-		
-		//Knocking Dipshits Out.
-		if(_shift && !isNull cursorTarget && cursorTarget isKindOf "Man" && isPlayer cursorTarget && alive cursorTarget && cursorTarget distance player < 4 && speed cursorTarget < 1) then
-		{
-			if((currentWeapon player == RIFLE OR currentWeapon player == PISTOL) && currentWeapon player != "" && !life_knockout && (cursorTarget GVAR "restrained") && !life_isDowned && !(player GVAR["surrender",false])) then
-			{
-				[cursorTarget] spawn life_fnc_knockoutAction;
-				if("ItemRadio" in assignedItems cursorTarget) then {
-					cursorTarget removeweapon "ItemRadio";
-					hint "The smartphone of the person that you just knocked out was placed on the ground.";
-					_defenceplace1 = "Item_ItemRadio" createVehicle (player modelToWorld[0,0,0]);
-				} else 
-				{ 
-					hint "The person that you knocked out has no smartphone!"
-				};
-			};
-			_handled = true;
 		};
 	};	
 	
@@ -296,7 +291,7 @@ switch (_code) do {
 		if (!_shift && !_alt && !_ctrlKey && ((playerSide == west) OR (playerSide == independent)) && (vehicle player != player)) then {
 			[] call life_fnc_copOpener;
 		} else {
-			if (playerSide == west) then 
+			if ((playerSide == west) && (vehicle player == player)) then 
 			{
 				if(life_inv_spikeStrip > 0) then 
 				{ 
@@ -454,16 +449,60 @@ switch (_code) do {
 					if(EQUAL(_locked,2)) then {
 						if(local _veh) then {
 							_veh lock 0;
+							_veh animateDoor ["door_back_R",1];
+							_veh animateDoor ["door_back_L",1];
+							_veh animateDoor ['door_R',1];
+							_veh animateDoor ['door_L',1];
+							_veh animateDoor ['Door_rear',1];
+							_veh animateDoor ['Door_LM',1];
+							_veh animateDoor ['Door_RM',1];
+							_veh animateDoor ['Door_LF',1];
+							_veh animateDoor ['Door_RF',1];
+							_veh animateDoor ['Door_LB',1];
+							_veh animateDoor ['Door_RB',1];
 						} else {
 							[[_veh,0],"life_fnc_lockVehicle",_veh,false] call life_fnc_MP;
+							_veh animateDoor ["door_back_R",1];
+							_veh animateDoor ["door_back_L",1];
+							_veh animateDoor ['door_R',1];
+							_veh animateDoor ['door_L',1];
+							_veh animateDoor ['Door_rear',1];
+							_veh animateDoor ['Door_LM',1];
+							_veh animateDoor ['Door_RM',1];
+							_veh animateDoor ['Door_LF',1];
+							_veh animateDoor ['Door_RF',1];
+							_veh animateDoor ['Door_LB',1];
+							_veh animateDoor ['Door_RB',1];
 						};
 						systemChat localize "STR_MISC_VehUnlock";
 						_veh say3D "unlock";
 					} else {
 						if(local _veh) then {
 							_veh lock 2;
+							_veh animateDoor ["door_back_R",0];
+							_veh animateDoor ["door_back_L",0];
+							_veh animateDoor ['door_R',0];
+							_veh animateDoor ['door_L',0];
+							_veh animateDoor ['Door_rear',0];
+							_veh animateDoor ['Door_LM',0];
+							_veh animateDoor ['Door_RM',0];
+							_veh animateDoor ['Door_LF',0];
+							_veh animateDoor ['Door_RF',0];
+							_veh animateDoor ['Door_LB',0];
+							_veh animateDoor ['Door_RB',0];
 						} else {
 							[[_veh,2],"life_fnc_lockVehicle",_veh,false] call life_fnc_MP;
+							_veh animateDoor ["door_back_R",0];
+							_veh animateDoor ["door_back_L",0];
+							_veh animateDoor ['door_R',0];
+							_veh animateDoor ['door_L',0];
+							_veh animateDoor ['Door_rear',0];
+							_veh animateDoor ['Door_LM',0];
+							_veh animateDoor ['Door_RM',0];
+							_veh animateDoor ['Door_LF',0];
+							_veh animateDoor ['Door_RF',0];
+							_veh animateDoor ['Door_LB',0];
+							_veh animateDoor ['Door_RB',0];
 						};	
 						systemChat localize "STR_MISC_VehLock";
 						_veh say3D "lock";

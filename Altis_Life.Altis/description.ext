@@ -25,7 +25,7 @@ corpseRemovalMinTime = 999;
 corpseRemovalMaxTime = 9999;
 
 /* R3F Logistics */
-#include "R3F_LOG\desc_include.h"
+//#include "R3F_LOG\desc_include.h"
 
 //SpyGlass configuration
 SPY_Enable = true;
@@ -86,6 +86,12 @@ class CfgSounds
 	{
 		name = "SirenLong";
 		sound[] = {"\sounds\Siren_Long.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	class police_horn
+	{
+		name = "police_horn";
+		sound[] = {"\sounds\police_horn.ogg", 1.0, 1};
 		titles[] = {};
 	};
 	class ambsiren
