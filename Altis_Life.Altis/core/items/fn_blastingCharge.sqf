@@ -25,6 +25,6 @@ if(!(fed_bank getVariable["chargeplaced",false])) exitWith {hint localize "STR_I
 
 _bomb = "Bo_GBU12_LGB_MI10" createVehicle [getPosATL fed_bank select 0, getPosATL fed_bank select 1, (getPosATL fed_bank select 2)+0.5];
 fed_bank setVariable["chargeplaced",false,true];
-fed_bank setVariable["safe_open",true,true];
+fed_bank setVariable["safe_open",true];
 
 hint localize "STR_ISTR_Blast_Opened";
