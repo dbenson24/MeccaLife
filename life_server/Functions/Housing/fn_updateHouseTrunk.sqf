@@ -4,7 +4,7 @@
 	Description:
 	Updates the storage for a house blah blah
 */
-private["_house"];
+private["_house","_houseID","_trunkData","_query"];
 _house = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _house) exitWith {};
 

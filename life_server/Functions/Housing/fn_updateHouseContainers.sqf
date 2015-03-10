@@ -1,7 +1,7 @@
 /*
 	BLAH BLAH
 	I LOVE NOTEPAD++ GET OVER IT
-	BLAH!
+	BLAH!*
 */
 private["_house","_houseID","_containers","_query"];
 _house = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
