@@ -39,16 +39,18 @@ _queryResult = [_result,2,true] call DB_fnc_asyncCall;
 }
 forEach _queryResult;
 
-if(count _list == 0) exitWith {[[_list],"life_fnc_wantedList",_ret,false] spawn life_fnc_MP;};
-
-if((EQUAL(EXTDB_SETTINGS("MySQL_Query"),1))) then {
-	["diag_log",[
+["diag_log",[
 		"------------- Wanted Query Request -------------",
 		format["QUERY: %1",_result],
 		format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)],
 		format["Result: %1",_queryResult],
 		"------------------------------------------------"
 	]] call TON_fnc_logIt;
-};
+
+if(count _list == 0) exitWith {[[_list],"life_fnc_wantedList",_ret,false] spawn life_fnc_MP;};
+
+//if((EQUAL(EXTDB_SETTINGS("MySQL_Query"),1))) then {
+	
+//};
 
 [[_list],"life_fnc_wantedList",_ret,false] spawn life_fnc_MP;

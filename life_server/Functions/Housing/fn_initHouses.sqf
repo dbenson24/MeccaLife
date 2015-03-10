@@ -13,13 +13,14 @@ for [{_x=0},{_x<=_count},{_x=_x+10}] do {
 	_query = format["housingInit:%1",_x];
 	_queryResult = [_query,2,true] call DB_fnc_asyncCall;
 	
-	["diag_log",[
-		"------------- initHouses Request -------------",
-		format["QUERY: %1",_query],
-		format["Result: %1",_queryResult],
-		"-------------------------------------------------"
-	]] call TON_fnc_logIt;
-	
+	if((EQUAL(EXTDB_SETTINGS("MySQL_Query"),1))) then {
+		["diag_log",[
+			"------------- initHouses Request -------------",
+			format["QUERY: %1",_query],
+			format["Result: %1",_queryResult],
+			"-------------------------------------------------"
+		]] call TON_fnc_logIt;
+	};
 	
 	if(count _queryResult == 0) exitWith {};
 	{
