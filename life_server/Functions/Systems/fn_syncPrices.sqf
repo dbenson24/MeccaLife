@@ -1,5 +1,5 @@
 #include "\life_server\script_macros.hpp"
-private["_market"];
+private["_market", "_query", "_price", "_name", "_goods"];
 /*
 File: fn_syncPrices.sqf
 Author: Derek Benson
