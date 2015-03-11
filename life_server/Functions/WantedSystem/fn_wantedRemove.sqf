@@ -15,3 +15,5 @@ if(_uid == "") exitWith {}; //Bad data
 _query = format["wantedRemoveCrimes:%1",_uid];
 waitUntil{!DB_Async_Active};
 [_query,2] call DB_fnc_asyncCall;
+
+[] spawn life_fnc_wantedSyncList;
