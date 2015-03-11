@@ -29,9 +29,9 @@ _queryResult = [_result,2] call DB_fnc_asyncCall;
 */
 
 {
-	if (EQUAL(_uid, _x select 0)){
+	if (EQUAL(_uid, _x select 0)) then {
 		_queryResult = [SEL(_x,2),SEL(_x,3)];
-	}
+	};
 } forEach _list;
 
 _ret = owner _ret;

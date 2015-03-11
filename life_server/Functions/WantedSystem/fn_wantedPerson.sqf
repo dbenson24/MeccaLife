@@ -21,9 +21,9 @@ if(count _queryResult == 0) exitWith {[]};*/
 _list = missionNamespace getVariable "wantedList";
 
 {
-	if (EQUAL(_uid, _x select 0)){
+	if (EQUAL(_uid, _x select 0)) then {
 		_wanted = [SEL(_x,0),SEL(_x,1),SEL(_x,3)];
-	}
+	};
 } forEach _list;
 if(isNil "_wanted") exitWith {[]};
 
