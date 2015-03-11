@@ -20,6 +20,7 @@ _unit setVariable["Escorting",FALSE,TRUE];
 _unit setVariable["transporting",FALSE,TRUE]; //Why the fuck do I have this? Is it used?
 _unit setVariable["steam64id",(getPlayerUID player),true]; //Set the UID.
 
+[_unit] call life_fnc_fetchDeadGear;
 //Setup our camera view
 life_deathCamera  = "CAMERA" camCreate (getPosATL _unit);
 showCinemaBorder TRUE;

@@ -32,7 +32,7 @@ class Life_Settings {
 
 	/* Revive system settings */
 	revive_cops = false; //true to enable cops the ability to revive everyone or false for only medics/ems.
-	revive_fee = 25000; //Revive fee that players have to pay and medics / EMS are rewarded
+	revive_fee = 15000; //Revive fee that players have to pay and medics / EMS are rewarded
 	
 	/* House related settings */
 	house_limit = 5; //Maximum amount of houses a player can own.
