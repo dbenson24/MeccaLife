@@ -20,7 +20,7 @@ _unit setVariable["Escorting",FALSE,TRUE];
 _unit setVariable["transporting",FALSE,TRUE]; //Why the fuck do I have this? Is it used?
 _unit setVariable["steam64id",(getPlayerUID player),true]; //Set the UID.
 
-[_unit] call life_fnc_fetchDeadGear;
+
 //Setup our camera view
 life_deathCamera  = "CAMERA" camCreate (getPosATL _unit);
 showCinemaBorder TRUE;
@@ -100,6 +100,8 @@ if(side _killer == west && playerSide != west) then {
 if(!isNull _killer && {_killer != _unit} && {side _killer == west} && {side _killer != civilian}) then {
 	life_removeWanted = true;
 };
+
+[_unit] call life_fnc_fetchDeadGear;
 
 _handle = [_unit] spawn life_fnc_dropItems;
 waitUntil {scriptDone _handle};

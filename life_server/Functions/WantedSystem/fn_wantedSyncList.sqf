@@ -31,9 +31,10 @@ private["_query","_queryResult","_units","_wanted"];
     		"------------------------------------------------"
     	]] call TON_fnc_logIt;
     	
-        
-    	_wanted pushBack _queryResult;
-        
+        if (isNil"_queryResult") then {
+        } else {
+    	    _wanted pushBack _queryResult;
+        };
     } forEach _units;
     
     
