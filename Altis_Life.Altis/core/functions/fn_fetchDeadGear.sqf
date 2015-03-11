@@ -54,5 +54,4 @@ if(!(EQUAL(handgunWeapon _unit,""))) then {
 _unit selectWeapon (primaryWeapon _unit);
 
 if(isNil "_handgunItems") then {_handgunItems = ["","",""];};
-_name = format["%1gear",_uid];
-missionNamespace setVariable [_name, [_primary,_launcher,_handgun,_magazines,_uniform,_vest,_backpack,_items,_primitems,_secitems,_handgunitems,_uitems,_vitems,_bitems,_headgear,_goggles]];
+life_deadGear =  [_primary,_launcher,_handgun,_magazines,_uniform,_vest,_backpack,_items,_primitems,_secitems,_handgunitems,_uitems,_vitems,_bitems,_headgear,_goggles];
