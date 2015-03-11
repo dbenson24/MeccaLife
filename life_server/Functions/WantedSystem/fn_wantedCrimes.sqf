@@ -28,6 +28,8 @@ _queryResult = [_result,2] call DB_fnc_asyncCall;
 	]] call TON_fnc_logIt;
 */
 
+_list = missionNamespace getVariable "wantedList";
+
 {
 	if (EQUAL(_uid, _x select 0)) then {
 		_queryResult = [SEL(_x,2),SEL(_x,3)];
