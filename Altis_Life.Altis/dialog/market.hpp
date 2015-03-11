@@ -39,7 +39,7 @@ class Market
 	
 	class Controls
 	{
-		class Life_RscListbox_1500: Life_RscListbox
+		class GoodsDisplay: Life_RscListbox
 		{
 			idc = 39001;
 			text = "";
