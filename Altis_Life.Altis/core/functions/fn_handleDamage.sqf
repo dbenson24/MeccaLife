@@ -41,6 +41,10 @@ if (((_curMag == "30Rnd_65x39_caseless_mag_Tracer") || (_curWep in ["SMG_02_F","
 		[_source] spawn life_fnc_handleDowned;
 	};
 };
+if ((((getDammage _unit) + _damage) >= 0.99) || (_damage >= 0.99)) then {
+		[_unit] call life_fnc_fetchDeadGear;
+};
+
 
 [] call life_fnc_hudUpdate;
 _damage;
