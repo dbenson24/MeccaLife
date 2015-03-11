@@ -1478,18 +1478,18 @@
 			<Portuguese>%1 has been added to the wanted list.</Portuguese>
 		</Key>
 		<Key ID="STR_Wanted_Count">
-			<Original>%1 count(s) of %2</Original>
-			<German>%1 count(s) of %2</German>
-			<French>%1 count(s) of %2</French>
-			<Italian>%1 count(s) of %2</Italian>
-			<Portuguese>%1 count(s) of %2</Portuguese>
+			<Original>(%1) %2</Original>
+			<German>(%1) %2</German>
+			<French>(%1) %2</French>
+			<Italian>(%1) %2</Italian>
+			<Portuguese>(%1) %2 </Portuguese>
 		</Key>
 		<Key ID="STR_Wanted_Bounty">
-			<Original>Current Bounty Price: $%1</Original>
-			<German>Current Bounty Price: $%1</German>
-			<French>Current Bounty Price: $%1</French>
-			<Italian>Current Bounty Price: $%1</Italian>
-			<Portuguese>Current Bounty Price: $%1</Portuguese>
+			<Original>Bounty: $%1</Original>
+			<German>Bounty: $%1</German>
+			<French>Bounty: $%1</French>
+			<Italian>Bounty: $%1</Italian>
+			<Portuguese>Bounty: $%1</Portuguese>
 		</Key>
 	</Package>
 	<Package name="Animals">

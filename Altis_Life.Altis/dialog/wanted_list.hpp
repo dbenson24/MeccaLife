@@ -156,7 +156,7 @@ class life_wanted_menu {
 		{
 			idc = 1001;
 			text = "$STR_Wanted_Citizens";
-			x = 0.4175 * safezoneW + safezoneX;
+			x = 0.54125 * safezoneW + safezoneX;
 			y = 0.236 * safezoneH + safezoneY;
 			w = 0.113437 * safezoneW;
 			h = 0.022 * safezoneH;
@@ -165,7 +165,7 @@ class life_wanted_menu {
 		{
 			idc = 1002;
 			text = "$STR_Wanted_Crimes";
-			x = 0.54125 * safezoneW + safezoneX;
+			x = 0.4175 * safezoneW + safezoneX;
 			y = 0.236 * safezoneH + safezoneY;
 			w = 0.113437 * safezoneW;
 			h = 0.022 * safezoneH;
