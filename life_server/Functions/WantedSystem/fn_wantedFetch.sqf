@@ -29,6 +29,7 @@ _tickTime = diag_tickTime;
 		_inStatement = _inStatement + "','" + _x;
 	};
 } forEach _units;
+_inStatement = _inStatement + "'";
 
 _result = format["wantedFetchID:%1",_inStatement];
 waitUntil{!DB_Async_Active};
