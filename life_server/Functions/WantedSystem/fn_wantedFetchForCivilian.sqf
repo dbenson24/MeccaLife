@@ -15,7 +15,7 @@ _uid = getPlayerUID _player;
 _list = missionNamespace getVariable "wantedList";
 
 {
-	if (EQUAL(_uid, _x select 0)) then {
+	if (EQUAL(_uid, SEL(_x,0))) then {
 		_updateBounty = SEL(_x,3);
 	};
 } forEach _list;
