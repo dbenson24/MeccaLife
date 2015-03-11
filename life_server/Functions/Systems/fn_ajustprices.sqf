@@ -60,7 +60,7 @@ _sellingfactor =((count _itemArray)-1);
     _varprice =  (_x select 3);
     _minprice = (_x select 4);
     _maxprice = (_x select 5);
-    
+    _x set [8, _sellprice];
     if (_ressource == _var) then { 
         if (_type == 0) then { 
             if ((_sellprice - (_varprice * _amount * _sellingfactor)) > _minprice) then {
@@ -84,6 +84,7 @@ _sellingfactor =((count _itemArray)-1);
         
         };
     };
+    
     _x set [2, _sellprice];
     _name = format["%1price",SEL(_x,0)];
     missionNamespace setVariable [_name,_x];

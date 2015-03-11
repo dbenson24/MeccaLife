@@ -7,93 +7,132 @@ class Market
 	
 	class controlsBackground
 	{
-		class RscTitleBackground : Life_RscText
+		class TitleBackground: Life_RscText
 		{
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
-			idc = -1;
-			x = 0.1;
-			y = 0.2;
-			w = 0.7;
-			h = (1 / 25);
+			idc = 1000;
+			x = 0.29375 * safezoneW + safezoneX;
+			y = 0.225 * safezoneH + safezoneY;
+			w = 0.4125 * safezoneW;
+			h = 0.044 * safezoneH;
+			colorBackground[] = {0.05,0.5,0.05,0.8};
+			colorActive[] = {0.05,0.5,0.05,0.8};
 		};
-		
-		class RscBackground : Life_RscText
+		class MarketBackground: Life_RscText
 		{
-			colorBackground[] = {0, 0, 0, 0.7};
-			idc = -1;
-			x = 0.1;
-			y = 0.2 + (11 / 250);
-			w = 0.7;
-			h = 0.7 - (22 / 250);
+			idc = 1001;
+			x = 0.29375 * safezoneW + safezoneX;
+			y = 0.269 * safezoneH + safezoneY;
+			w = 0.4125 * safezoneW;
+			h = 0.506 * safezoneH;
+			colorBackground[] = {0,0,0,0.6};
 		};
-		
-		class RscTitleText : Life_RscTitle
+		class Title: Life_RscText
 		{
-			colorBackground[] = {0, 0, 0, 0};
-			idc = 39001;
-			text = "";
-			x = 0.1;
-			y = 0.2;
-			w = 0.7;
-			h = (1 / 25);
+			idc = 1002;
+			text = "The Mecca Market"; //--- ToDo: Localize;
+			x = 0.29375 * safezoneW + safezoneX;
+			y = 0.225 * safezoneH + safezoneY;
+			w = 0.4125 * safezoneW;
+			h = 0.044 * safezoneH;
 		};
-		
-		
-		class RscTrunkText : Life_RscText
-		{
-			idc = -1;
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-			text = "Your Buy Price";
-			sizeEx = 0.04;
-			
-			x = 0.11; y = 0.25;
-			w = 0.3; h = 0.04;
-		};
-		
-		class RscPlayerText : Life_RscText
-		{
-			idc = -1;
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-			text = "Your Sell Price";
-			sizeEx = 0.04;
-			
-			x = 0.49; y = 0.25;
-			w = 0.3; h = 0.04;
-		};	
 	};
 	
 	class Controls
 	{
-		class achatGear : Life_RscListBox
+		class Life_RscListbox_1500: Life_RscListbox
+		{
+			idc = 39001;
+			text = "";
+			sizeEx = 0.035;
+			onLBSelChanged = "[] spawn life_fnc_marketGrab";
+			x = 0.304062 * safezoneW + safezoneX;
+			y = 0.335 * safezoneH + safezoneY;
+			w = 0.134062 * safezoneW;
+			h = 0.418 * safezoneH;
+		};
+		class GoodsTitle: Life_RscText
+		{
+			idc = -1;
+			text = "Goods"; //--- ToDo: Localize;
+			x = 0.329844 * safezoneW + safezoneX;
+			y = 0.28 * safezoneH + safezoneY;
+			w = 0.0360937 * safezoneW;
+			h = 0.033 * safezoneH;
+		};
+		class InfoTitle: Life_RscText
+		{
+			idc = -1;
+			text = "Information"; //--- ToDo: Localize;
+			x = 0.515469 * safezoneW + safezoneX;
+			y = 0.28 * safezoneH + safezoneY;
+			w = 0.0567187 * safezoneW;
+			h = 0.033 * safezoneH;
+		};
+		class CurrentGood: Life_RscText
 		{
 			idc = 39002;
-			text = "";
-			sizeEx = 0.030;
-			
-			x = 0.11; y = 0.29;
-			w = 0.3; h = 0.55;
+			text = "Current Good:"; //--- ToDo: Localize;
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.335 * safezoneH + safezoneY;
+			w = 0.232031 * safezoneW;
+			h = 0.022 * safezoneH;
 		};
-		
-		class VenteGear : Life_RscListBox
+		class CurrentPrice: Life_RscText
 		{
 			idc = 39003;
-			text = "";
-			sizeEx = 0.030;
-			
-			x = 0.49; y = 0.29;
-			w = 0.3; h = 0.55;
+			text = "Current Price:"; //--- ToDo: Localize;
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.401 * safezoneH + safezoneY;
+			w = 0.232031 * safezoneW;
+			h = 0.022 * safezoneH;
 		};
-		
-		
-		class ButtonClose : Life_RscButtonMenu {
-			idc = -1;
-			//shortcuts[] = {0x00050000 + 2};
+		class RecentPrice: Life_RscText
+		{
+			idc = 39004;
+			text = "Most Recent Price:"; //--- ToDo: Localize;
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.467 * safezoneH + safezoneY;
+			w = 0.232031 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class RecentChange: Life_RscText
+		{
+			idc = 39005;
+			text = "Most Recent Change:"; //--- ToDo: Localize;
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.533 * safezoneH + safezoneY;
+			w = 0.232031 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class StartPrice: Life_RscText
+		{
+			idc = 39006;
+			text = "Server Start Price:"; //--- ToDo: Localize;
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.599 * safezoneH + safezoneY;
+			w = 0.232031 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class StartChange: Life_RscText
+		{
+			idc = 39007;
+			text = "Change Since Server Start:"; //--- ToDo: Localize;
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.665 * safezoneH + safezoneY;
+			w = 0.232031 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class ExitButton: Life_RscButtonMenu
+		{
+			idc = 39008;
 			text = "$STR_Global_Close";
 			onButtonClick = "closeDialog 0;";
-			x = 0.1;
-			y = 0.9 - (1 / 25);
-			w = (6.25 / 40);
-			h = (1 / 25);
+			x = 0.654688 * safezoneW + safezoneX;
+			y = 0.291 * safezoneH + safezoneY;
+			w = 0.0360937 * safezoneW;
+			h = 0.022 * safezoneH;
+			colorBackground[] = {0.05,0.5,0.05,0.8};
+			colorActive[] = {0.05,0.5,0.05,0.8};
 		};
 	};
 };
