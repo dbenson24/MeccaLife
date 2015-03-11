@@ -214,3 +214,6 @@ PVAR_ALL("life_server_isReady");
 /* Initialize the economy */
 
 [] spawn TON_fnc_syncPrices;
+
+/* Initialize the wanted list */
+[] spawn life_fnc_wantedSyncList;
