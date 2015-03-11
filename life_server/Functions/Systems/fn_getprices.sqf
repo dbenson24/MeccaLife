@@ -76,7 +76,7 @@ default {""};
     if ((_fact in _factor) or (_shop in _shoptype)) then {
         _name = format["%1price",SEL(_x,0)];
         _priceArray = missionNamespace getVariable (_name);
-        _itemArray pushBack [_priceArray];
+        _itemArray pushBack _priceArray;
     };
 } forEach _market;
 

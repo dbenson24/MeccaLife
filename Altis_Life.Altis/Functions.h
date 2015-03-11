@@ -466,5 +466,6 @@ class Life_Client_Core
 		class addsubstract {};
 		class openEconomy {};
 		class virt_updateEconomy {};
+		class marketGrab {};
 	};
 };
