@@ -83,8 +83,8 @@
 			<French>Acheteur Industriel</French>
 		</Key>
 		<Key ID="STR_Shops_Cop">
-			<Original>APD Item Shop</Original>
-			<German>APD Gegenstände</German>
+			<Original>MST Item Shop</Original>
+			<German>MST Gegenstände</German>
 			<Italian>Negozio Polizia</Italian>
 			<French>Equipement de Police</French>
 		</Key>

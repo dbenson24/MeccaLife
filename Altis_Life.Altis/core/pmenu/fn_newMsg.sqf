@@ -39,7 +39,7 @@ switch(_type) do
 	//copmessage
 	case 2:
 	{
-		if(({side _x == west} count playableUnits) == 0) exitWith {hint format["The APD is currently unavailable."];};
+		if(({side _x == west} count playableUnits) == 0) exitWith {hint format["The MST is currently unavailable."];};
 		ctrlShow[888895,false];
 		if(_msg == "") exitWith {hint "You must enter a message to send!";ctrlShow[888895,true];};
 		[[ObjNull,_msg,player,1],"TON_fnc_handleMessages",false] spawn life_fnc_MP;
