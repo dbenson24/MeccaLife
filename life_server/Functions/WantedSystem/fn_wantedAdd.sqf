@@ -83,4 +83,6 @@ if(count _queryResult != 0) then
 if(!isNil "_query") then {
 	waitUntil{!DB_Async_Active};
 	[_query,2] call DB_fnc_asyncCall;
+	
+	[] spawn life_fnc_wantedSyncList;
 };

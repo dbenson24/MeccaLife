@@ -13,13 +13,31 @@ private["_ret","_list","_result","_queryResult","_units","_inStatement"];
 _ret = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _ret) exitWith {};
 _ret = owner _ret;
-_inStatement = "";
+/*_inStatement = "";
 _list = [];
 _units = [];
 _tickTime = diag_tickTime;
 {if((side _x) == civilian) then {_units pushBack (getPlayerUID _x)};} foreach playableUnits;
 
+
+// Start of new Code
+
 {
+	_query = format["",];
+	
+	
+	
+	
+} forEach _units*/
+
+_list = missionNamespace getVariable "wantedList";
+
+
+[[_list],"life_fnc_wantedList",_ret,false] spawn life_fnc_MP;
+
+// End of new Code
+
+/*{
 	if(_inStatement == "") then
 	{
 		_inStatement = format["'%1",_x];
@@ -54,4 +72,6 @@ if(count _list == 0) exitWith {[[_list],"life_fnc_wantedList",_ret,false] spawn 
 	
 //};
 
-[[_list],"life_fnc_wantedList",_ret,false] spawn life_fnc_MP;
+
+
+[[_list],"life_fnc_wantedList",_ret,false] spawn life_fnc_MP; */
