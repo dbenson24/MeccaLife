@@ -228,7 +228,7 @@ class MECCA_Life_Create_Group_Diag {
 	
 		class InfoMsg : Life_RscStructuredText
 		{
-			idc = -1;
+			idc = 2523;
 			sizeEx = 0.020;
 			text = "You can create a group for free.";
 			x = 0.1;
