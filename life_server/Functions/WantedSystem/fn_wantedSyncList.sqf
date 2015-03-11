@@ -18,7 +18,6 @@ while {true} do {
     {if((side _x) == civilian) then {_units pushBack (getPlayerUID _x)};} foreach playableUnits;
     
     
-    // Start of new Code
     _wanted = [];
     {
     	_query = format["wantedSyncTable:%1",_x];
@@ -32,9 +31,8 @@ while {true} do {
     		"------------------------------------------------"
     	]] call TON_fnc_logIt;
     	
-        if (_queryResult != []) then {
-    	    _wanted pushBack _queryResult;
-        };
+        
+    	_wanted pushBack _queryResult;
         
     } forEach _units;
     
