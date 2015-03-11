@@ -22,7 +22,7 @@ _tickTime = diag_tickTime;
 {
 	if(_inStatement == "") then
 	{
-		_inStatement = _x;
+		_inStatement = format["'%1",_x];
 	}
 	else
 	{
@@ -40,7 +40,7 @@ _queryResult = [_result,2,true] call DB_fnc_asyncCall;
 forEach _queryResult;
 
 ["diag_log",[
-		"------------- Wanted Query Request -------------",
+		"------------- Wanted Fetch ID Request -------------",
 		format["QUERY: %1",_result],
 		format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)],
 		format["Result: %1",_queryResult],

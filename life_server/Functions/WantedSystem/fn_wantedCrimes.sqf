@@ -19,7 +19,7 @@ _tickTime = diag_tickTime;
 _queryResult = [_result,2] call DB_fnc_asyncCall;
 
 ["diag_log",[
-		"------------- Load Prices Request -------------",
+		"------------- Wanted Fetch Crimes Request -------------",
 		format["QUERY: %1",_result],
 		format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)],
 		format["Result: %1",_queryResult],
