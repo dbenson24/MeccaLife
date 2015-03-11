@@ -12,7 +12,7 @@ private["_query","_queryResult","_units","_wanted"];
     		"------------- Called wantedSyncList -------------"
     	]] call TON_fnc_logIt;
 
-while {true} do {
+//while {true} do {
     _units = [];
     
     {if((side _x) == civilian) then {_units pushBack (getPlayerUID _x)};} foreach playableUnits;
@@ -38,8 +38,8 @@ while {true} do {
     
     
     missionNamespace setVariable ["wantedList", _wanted];
-    sleep (30);
-};
+//    sleep (30);
+//};
 /*missionNamespace setVariable ["wantedListUpdated", true];
 
 sleep 30;
