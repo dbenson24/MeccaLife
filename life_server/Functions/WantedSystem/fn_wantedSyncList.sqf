@@ -36,7 +36,7 @@ while {true} do {
     	    _wanted pushBack _queryResult;
         };
         
-    } forEach _units
+    } forEach _units;
     
     
     missionNamespace setVariable ["wantedList", _wanted];
