@@ -101,8 +101,6 @@ if(!isNull _killer && {_killer != _unit} && {side _killer == west} && {side _kil
 	life_removeWanted = true;
 };
 
-[_unit] call life_fnc_fetchDeadGear;
-
 _handle = [_unit] spawn life_fnc_dropItems;
 waitUntil {scriptDone _handle};
 
