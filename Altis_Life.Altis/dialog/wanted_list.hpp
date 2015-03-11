@@ -6,22 +6,25 @@ class life_wanted_menu {
 	//onLoad = "[] spawn life_fnc_wantedadd2;";
 	
 	class controlsBackground {
-		class Life_RscTitleBackground:Life_RscText {
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
+		class WantedBackground: Life_RscText
+		{
 			idc = -1;
-			x = 0.1;
-			y = 0.2;
-			w = 0.6;
-			h = (1 / 25);
+			x = 0.283437 * safezoneW + safezoneX;
+			y = 0.225 * safezoneH + safezoneY;
+			w = 0.433125 * safezoneW;
+			h = 0.55 * safezoneH;
+			colorBackground[] = {0,0,0,0.7};
+			colorActive[] = {0,0,0,0.7};
 		};
-		
-		class MainBackground:Life_RscText {
-			colorBackground[] = {0, 0, 0, 0.7};
+		class TitleBackground: Life_RscText
+		{
 			idc = -1;
-			x = 0.1;
-			y = 0.2 + (11 / 250);
-			w = 0.6;
-			h = 0.6 - (22 / 250);
+			x = 0.283437 * safezoneW + safezoneX;
+			y = 0.19222 * safezoneH + safezoneY;
+			w = 0.433125 * safezoneW;
+			h = 0.033 * safezoneH;
+			colorBackground[] = {0,0,0.35,0.7};
+			colorActive[] = {0,0,0.8,0.7};
 		};
 	};
 	
@@ -32,10 +35,10 @@ class life_wanted_menu {
 			colorBackground[] = {0, 0, 0, 0};
 			idc = -1;
 			text = "$STR_Wanted_Title";
-			x = 0.1;
-			y = 0.2;
-			w = 0.6;
-			h = (1 / 25);
+			x = 0.283437 * safezoneW + safezoneX;
+			y = 0.192 * safezoneH + safezoneY;
+			w = 0.433125 * safezoneW;
+			h = 0.033 * safezoneH;
 		};
 		
 		class WantedConnection : Title {
@@ -51,8 +54,10 @@ class life_wanted_menu {
 			sizeEx = 0.035;
 			onLBSelChanged = "[] spawn life_fnc_wantedGrab";
 			
-			x = 0.12; y = 0.28;
-			w = 0.2; h = 0.3;
+			x = 0.29375 * safezoneW + safezoneX;
+			y = 0.269 * safezoneH + safezoneY;
+			w = 0.113437 * safezoneW;
+			h = 0.484 * safezoneH;
 		};
 		
 		class PlayerList : Life_RscListBox 
@@ -63,8 +68,10 @@ class life_wanted_menu {
 			//colorBackground[] = {0,0,0,0};
 			onLBSelChanged = "";
 			
-			x = 0.34; y = 0.28;
-			w = 0.2; h = 0.3;
+			x = 0.54125 * safezoneW + safezoneX;
+			y = 0.269 * safezoneH + safezoneY;
+			w = 0.113437 * safezoneW;
+			h = 0.484 * safezoneH;
 		};
 		
 		class WantedDetails : Life_RscListBox
@@ -74,49 +81,53 @@ class life_wanted_menu {
 			sizeEx = 0.035;
 			colorBackground[] = {0, 0, 0, 0};
 			
-			x = 0.12;
-			y = 0.62;
-			w = 0.48;
-			h = 0.12;
+			x = 0.417499 * safezoneW + safezoneX;
+			y = 0.313 * safezoneH + safezoneY;
+			w = 0.113437 * safezoneW;
+			h = 0.44 * safezoneH;
 		};
 		
 		class BountyPrice : Life_RscText
 		{
 			idc = 2403;
 			text = "";
-			x = 0.12;
-			y = 0.30;
-			w = 0.6;
-			h = 0.6;
+			x = 0.4175 * safezoneW + safezoneX;
+			y = 0.269 * safezoneH + safezoneY;
+			w = 0.113437 * safezoneW;
+			h = 0.033 * safezoneH;
 		};
 		
 		class WantedAddL : Life_RscCombo
 		{
 			idc = 2407;
-			x = 0.542; 
-			y = 0.28;
-			w = (8 / 52); 
-			h = 0.03;
+			x = 0.665 * safezoneW + safezoneX;
+			y = 0.423 * safezoneH + safezoneY;
+			w = 0.0464063 * safezoneW;
+			h = 0.022 * safezoneH;
 		};
 		
 		class CloseButtonKey : Life_RscButtonMenu {
 			idc = -1;
 			text = "$STR_Global_Close";
 			onButtonClick = "closeDialog 0;";
-			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.8 - (1 / 25);
-			w = (6.25 / 40);
-			h = (1 / 25);
+			x = 0.665 * safezoneW + safezoneX;
+			y = 0.291 * safezoneH + safezoneY;
+			w = 0.0464063 * safezoneW;
+			h = 0.022 * safezoneH;
+			colorBackground[] = {0,0,0.35,0.7};
+			colorActive[] = {0,0,0.35,0.7};
 		};
 		
 		class PardonButtonKey : Life_RscButtonMenu {
 			idc = 2405;
 			text = "$STR_Wanted_Pardon";
 			onButtonClick = "[] call life_fnc_pardon; closeDialog 0;";
-			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.8 - (1 / 25);
-			w = (6.25 / 40);
-			h = (1 / 25);
+			x = 0.665 * safezoneW + safezoneX;
+			y = 0.335 * safezoneH + safezoneY;
+			w = 0.0464063 * safezoneW;
+			h = 0.022 * safezoneH;
+			colorBackground[] = {0,0,0.35,0.7};
+			colorActive[] = {0,0,0.35,0.7};
 		};
 		
 		class ButtonWantedAdd : life_RscButtonMenu {
@@ -124,38 +135,40 @@ class life_wanted_menu {
 			//shortcuts[] = {0x00050000 + 2};
 			text = "$STR_Wanted_Add";
 			onButtonClick = "[] call life_fnc_wantedAddP;";
-			x = 0.1 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.8 - (1 / 25);
-			w = (6.25 / 40);
-			h = (1 / 25);
+			x = 0.665 * safezoneW + safezoneX;
+			y = 0.379 * safezoneH + safezoneY;
+			w = 0.0464063 * safezoneW;
+			h = 0.022 * safezoneH;
+			colorBackground[] = {0,0,0.35,0.7};
+			colorActive[] = {0,0,0.35,0.7};
 		};
 		
 		class wantedText: Life_RscText
 		{
 			idc = 1000;
 			text = "$STR_Wanted_People";
-			x = 0.12; 
-			y = 0.11;
-			w = 0.2; 
-			h = 0.3;
+			x = 0.29375 * safezoneW + safezoneX;
+			y = 0.236 * safezoneH + safezoneY;
+			w = 0.113437 * safezoneW;
+			h = 0.022 * safezoneH;
 		};
 		class citizensText: Life_RscText
 		{
 			idc = 1001;
 			text = "$STR_Wanted_Citizens";
-			x = 0.34; 
-			y = 0.11;
-			w = 0.2; 
-			h = 0.3;
+			x = 0.4175 * safezoneW + safezoneX;
+			y = 0.236 * safezoneH + safezoneY;
+			w = 0.113437 * safezoneW;
+			h = 0.022 * safezoneH;
 		};
 		class crimesText: Life_RscText
 		{
 			idc = 1002;
 			text = "$STR_Wanted_Crimes";
-			x = 0.542; 
-			y = 0.245;
-			w = (8 / 52); 
-			h = 0.03;
+			x = 0.54125 * safezoneW + safezoneX;
+			y = 0.236 * safezoneH + safezoneY;
+			w = 0.113437 * safezoneW;
+			h = 0.022 * safezoneH;
 		};
 	};
 }; 

@@ -233,7 +233,7 @@ class MECCA_Life_Create_Group_Diag {
 			text = "You can create a group for free.";
 			x = 0.1;
 			y = 0.25;
-			w = 0.5; h = 0.32;
+			w = 0.5; h = 0.11;
 		};
 		
 		class Title : Life_RscTitle {
