@@ -9,7 +9,7 @@
 private["_query","_queryResult","_units","_wanted"];
 
 ["diag_log",[
-    		"------------- Called wantedSyncList -------------",
+    		"------------- Called wantedSyncList -------------"
     	]] call TON_fnc_logIt;
 
 while {true} do {
