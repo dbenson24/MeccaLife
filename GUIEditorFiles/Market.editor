@@ -1,0 +1,19 @@
+/* This is the GUI for the Market, Import it into the editor to make changes
+$[
+	1.063,
+	["MarketGUI",[[0,0,1,1],0.025,0.04,"GUI_GRID"],-1,0,0],
+	[1000,"TitleBackground",[1,"",["0.29375 * safezoneW + safezoneX","0.225 * safezoneH + safezoneY","0.4125 * safezoneW","0.044 * safezoneH"],[-1,-1,-1,-1],[0.05,0.5,0.05,0.8],[0.05,0.5,0.05,0.8],"","-1"],[]],
+	[1001,"MarketBackground",[1,"",["0.29375 * safezoneW + safezoneX","0.269 * safezoneH + safezoneY","0.4125 * safezoneW","0.506 * safezoneH"],[-1,-1,-1,-1],[0,0,0,0.6],[-1,-1,-1,-1],"","-1"],[]],
+	[1002,"Title",[1,"The Mecca Market",["0.29375 * safezoneW + safezoneX","0.225 * safezoneH + safezoneY","0.4125 * safezoneW","0.044 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1500,"",[1,"",["0.304062 * safezoneW + safezoneX","0.335 * safezoneH + safezoneY","0.134062 * safezoneW","0.418 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1003,"GoodsTitle",[1,"Goods",["0.329844 * safezoneW + safezoneX","0.28 * safezoneH + safezoneY","0.0360937 * safezoneW","0.033 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1004,"InfoTitle",[1,"Information",["0.515469 * safezoneW + safezoneX","0.28 * safezoneH + safezoneY","0.0567187 * safezoneW","0.033 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1005,"CurrentGood",[1,"Current Good:",["0.448438 * safezoneW + safezoneX","0.335 * safezoneH + safezoneY","0.232031 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1006,"CurrentPrice",[1,"Current Price:",["0.448438 * safezoneW + safezoneX","0.401 * safezoneH + safezoneY","0.232031 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1008,"RecentPrice",[1,"Most Recent Price:",["0.448438 * safezoneW + safezoneX","0.467 * safezoneH + safezoneY","0.232031 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1007,"ChangeChange",[1,"Most Recent Change:",["0.448438 * safezoneW + safezoneX","0.533 * safezoneH + safezoneY","0.232031 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1009,"StartPrice",[1,"Server Start Price:",["0.448438 * safezoneW + safezoneX","0.599 * safezoneH + safezoneY","0.232031 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1010,"StartChange",[1,"Change Since Server Start:",["0.448438 * safezoneW + safezoneX","0.665 * safezoneH + safezoneY","0.232031 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[2400,"ExitButton",[1,"Close",["0.654688 * safezoneW + safezoneX","0.291 * safezoneH + safezoneY","0.0360937 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[0.05,0.5,0.05,0.8],[0.05,0.5,0.05,0.8],"","-1"],[]]
+]
+*/

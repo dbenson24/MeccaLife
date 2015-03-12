@@ -1,0 +1,27 @@
+/* This is the GUI for the Vehicle Upgrades, Import it to make changes
+$[
+	1.063,
+	["VehicleUpgradesGUI",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],
+	[1000,"Background",[1,"",["0.29375 * safezoneW + safezoneX","0.269 * safezoneH + safezoneY","0.4125 * safezoneW","0.506 * safezoneH"],[-1,-1,-1,-1],[0,0,0,0.7],[0,0,0,0.7],"","-1"],[]],
+	[1001,"TitleBackground",[1,"",["0.29375 * safezoneW + safezoneX","0.225 * safezoneH + safezoneY","0.4125 * safezoneW","0.044 * safezoneH"],[-1,-1,-1,-1],[0.35,0,0,0.7],[0,0,0,0.7],"","-1"],[]],
+	[1002,"Title",[1,"Upgrade Vehicle",["0.29375 * safezoneW + safezoneX","0.225 * safezoneH + safezoneY","0.4125 * safezoneW","0.044 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1900,"TrunkSlider",[1,"",["0.4175 * safezoneW + safezoneX","0.313 * safezoneH + safezoneY","0.0825 * safezoneW","0.044 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1901,"SpeedSlider",[1,"",["0.4175 * safezoneW + safezoneX","0.379 * safezoneH + safezoneY","0.0825 * safezoneW","0.044 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1902,"InsuranceSlider",[1,"",["0.4175 * safezoneW + safezoneX","0.445 * safezoneH + safezoneY","0.0825 * safezoneW","0.044 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1003,"TrunkLabel",[1,"Trunk Space:",["0.309219 * safezoneW + safezoneX","0.313 * safezoneH + safezoneY","0.0825 * safezoneW","0.033 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1007,"InsuranceLabel",[1,"Insurance:",["0.309219 * safezoneW + safezoneX","0.445 * safezoneH + safezoneY","0.0825 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1004,"SpeedLabel",[1,"Manueverability:",["0.309219 * safezoneW + safezoneX","0.379 * safezoneH + safezoneY","0.0825 * safezoneW","0.033 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1005,"TrunkLevelLabel",[1,"Trunk Level:",["0.510312 * safezoneW + safezoneX","0.313 * safezoneH + safezoneY","0.0825 * safezoneW","0.033 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1006,"SpeedLevelLabel",[1,"Manueverability Level:",["0.510312 * safezoneW + safezoneX","0.379 * safezoneH + safezoneY","0.108281 * safezoneW","0.033 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1008,"InsuranceLevelLabel",[1,"Insurance Level:",["0.510312 * safezoneW + safezoneX","0.445 * safezoneH + safezoneY","0.108281 * safezoneW","0.033 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[2800,"SecurityCheck",[1,"",["0.371563 * safezoneW + safezoneX","0.508333 * safezoneH + safezoneY","0.0154688 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[2801,"HooksCheck",[1,"",["0.463125 * safezoneW + safezoneX","0.507528 * safezoneH + safezoneY","0.0154688 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[2802,"GPSCheck",[1,"",["0.561172 * safezoneW + safezoneX","0.507528 * safezoneH + safezoneY","0.0154688 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1009,"SecurityLabel",[1,"HQ Security:",["0.309219 * safezoneW + safezoneX","0.5 * safezoneH + safezoneY","0.0670312 * safezoneW","0.033 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1010,"HooksLabel",[1,"Sling Hooks:",["0.402031 * safezoneW + safezoneX","0.5 * safezoneH + safezoneY","0.0670312 * safezoneW","0.033 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1011,"GPSLabel",[1,"GPS Tracker:",["0.494844 * safezoneW + safezoneX","0.5 * safezoneH + safezoneY","0.0670312 * safezoneW","0.033 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1012,"PriceLabel",[1,"Cost of Upgrades:",["0.314375 * safezoneW + safezoneX","0.544 * safezoneH + safezoneY","0.0979687 * safezoneW","0.033 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[2400,"ConfirmButton",[1,"Confirm",["0.479375 * safezoneW + safezoneX","0.599 * safezoneH + safezoneY","0.0464063 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[2401,"CancelButton",[1,"Cancel",["0.402031 * safezoneW + safezoneX","0.599 * safezoneH + safezoneY","0.0464063 * safezoneW","0.022 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]
+]
+*/
