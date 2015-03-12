@@ -8,7 +8,6 @@
 private["_exitLoop","_group","_wait"];
 if(playerSide != civilian) exitWith {}; //What in the hell?
 [player] join (createGroup civilian);
-hint format["life_gangData: %1",life_gangData];
 if(EQUAL(count life_gangData,0)) exitWith {}; //Dafuq?
 
 _wait = round(random(8));
