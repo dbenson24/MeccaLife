@@ -58,3 +58,6 @@ if ((_x select 1) > 1 ) then {
 		};
 	};
 } foreach (_array);
+
+lbSort _item_list;
+lbSort _gear_list;

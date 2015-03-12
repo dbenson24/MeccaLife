@@ -39,4 +39,4 @@ if (count life_market == 0 ) exitwith {};
 } foreach life_market;
 
 
-lbSortByValue _goodlist;
+lbSort _goodlist;
