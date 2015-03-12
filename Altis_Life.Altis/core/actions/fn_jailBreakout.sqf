@@ -42,10 +42,10 @@ _time = time + (12 * 60);
 _ok = true;
 while {true} do {
 	if(round(_time - time) < 1) exitWith {_ok = true;};
-	if(!alive player) exitWith {_ok = false;};
-	if(player distance _unit > 2500) exitWith {_ok = false;};
-	if(life_isDowned) exitWith {_ok = false;};
-	if(player getVariable["restrained",false]) exitWith {_ok = false;};
+//	if(!alive player) exitWith {_ok = false;};
+//	if(player distance _unit > 2500) exitWith {_ok = false;};
+//	if(life_isDowned) exitWith {_ok = false;};
+//	if(player getVariable["restrained",false]) exitWith {_ok = false;};
 	sleep 1;
 };
 _unit setVariable["inbreakout",false,true]; 
