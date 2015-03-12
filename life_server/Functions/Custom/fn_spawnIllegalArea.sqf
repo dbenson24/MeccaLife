@@ -36,7 +36,7 @@ _Pos = position _heli;
 _marker = createMarker ["cocaine_redZone", _Pos];
 "cocaine_redZone" setMarkerColor "ColorRed";
 "cocaine_redZone" setMarkerShape "ELLIPSE";
-"cocaine_redZone" setMarkerSize [150, 150];
+"cocaine_redZone" setMarkerSize [200, 200];
 "cocaine_redZone" setMarkerBrush "Grid";
  
 //Create heroine area
