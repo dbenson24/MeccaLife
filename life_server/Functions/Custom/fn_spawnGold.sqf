@@ -14,8 +14,8 @@ gold_safe setVectorDirAndUp [[90,0,80],[-90,0,0]];
 gold_safe enableSimulation false;
 gold_safe allowDamage false;
 
-_minTime = (10*60);
-_maxTime = (20*80);
+_minTime = (30*60);
+_maxTime = (120*60);
 _finalTime = (random (_maxTime - _minTime)) + _minTime;
 sleep _finalTime;
 _Pos = position _heli;
