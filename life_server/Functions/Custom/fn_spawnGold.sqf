@@ -6,7 +6,7 @@ _heli setPosASLW [(position _heli) select 0, (position _heli) select 1, -5.5];
 _heli enableSimulation false;
 
 _wreck = "Land_UWreck_FishingBoat_F" createVehicle (getPos _heli);
-_wreck SetPosATL [(getPos _heli select 0)-300*sin(round(random 359)),(getPos _heli select 1)-300*cos(round(random 359)), 0];
+_wreck SetPosATL [(getPos _heli select 0)-900*sin(round(random 359)),(getPos _heli select 1)-900*cos(round(random 359)), 0];
 _wreck enableSimulation false;
 
 gold_safe attachTo [_wreck,[3,4,-0.4]];
