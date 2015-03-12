@@ -23,7 +23,7 @@ _Pos = position _heli;
 "Marker201" setMarkerColor "ColorOrange";
 "Marker201" setMarkerType "Empty";
 "Marker201" setMarkerShape "ELLIPSE";
-"Marker201" setMarkerSize [2500,2500];
+"Marker201" setMarkerSize [1500,1500];
  _markerText = createMarker ["MarkerText201", _Pos];
 "MarkerText201" setMarkerColor "ColorBlack";
 "MarkerText201" setMarkerText "Shipwreck";
