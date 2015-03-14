@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<!-- 
+
+	This file is only provided as an example file and might not sute your needs/demands/taste. 
+	Web Doc : http://www.ibattle.org/install-and-configure/define-commands/
+
+	Define In-game Commands
+	name  : The name you want to call your command!. DO NOT START YOUR NAME WITH #
+	group : The permission level needed to execute the command!
+	cmd   : The Rcon command. Root command. arguments are not passed here!
+	time  : leave empty except for ban commands!
+	text  : Used as reason for kick/ban commands. but also to set default values for example maxping command!
+	desc  : Used to describe the command. will be used in the help system
+	
+	###############################################################################################################################
+	
+	Note: Keep the id=  in order for your "<command id=X>" block. else parsing the file will cause errors. 1st command starts with 0
+	
+	Note: Do not start you command with # since its used by the game engine.
+	
+	Note: Group number 100 is for public use. be careful.. all players may execute commands set to group 100.
+	
+	Note: The text tag may be cut off if its too long. this is due to a limitation with Battleye.
+	
+	###############################################################################################################################
+	
+	Supported commands in the <cmd> </cmd> tag are:
+	########################
+	# Arma server commands
+	########################
+	
+	#Missions
+	#Mission 
+	#Reassign
+	#Restart
+	#Shutdown
+	#Lock
+	#Unlock
+	
+	########################
+	# Be commands.
+	########################
+	kick
+	ban
+	maxping
+	say
+	
+	########################
+	# Bec commands
+	########################
+	kid |___. same as kick and ban but. used beid insetead of names: !kid 0, !bid 3 , Use "#beclient players" to get hold of the Id. DO NOT USE "#USERLIST" thats a diffrent thing.
+	bid |
+	grant
+	degrant
+	warn
+	makeroom
+	help
+	pinfo
+	ainfo
+	uptime
+	external
+	loadadmins
+	loadcommands
+
+-->
+
+<BeCommands>	
+	<!-- 
+		Change the maxping value. 
+		
+		Set the ping limit on the server. Players with a ping higher than the limit will be kicked off the server.
+	
+		!cmdName : Will set what is defined in the <text> tag as the new maxping limit.
+		!cmdName N : Will set a new maxping limit to N milliseconds.
+	
+		Uses BE maxping command.
+	-->
+	<command id="0">
+		<name>!mp</name>
+		<group>1</group>
+		<cmd>maxping</cmd>
+		<time></time>
+		<text>150</text>
+		<desc>USAGE :: [!mp] or [!mp N] :: INFO -> Set a maxping limit on the server. N is the value in milliseconds, default = 150</desc>
+	</command>		
+	
+	
+	<!-- 
+		Ban a player
+	
+		The <time> tag defines how long the ban is last.
+		The time value is in minutes.
+		Value 0 is permanent ban
+	
+		The <text> tag defines the ban reason
+		
+		There are two special words that can be used in the  <text> tag. 
+		_name_ and,or _time_
+		
+		if _name_ is used in the reason text, it will replace _name_ with the name of the admin who executed the command.
+		if _time_ is used in the reason text, it will replace _time_ with the date when the player can come back.
+		
+		Uses BE ban command.
+	-->
+	<command id="1">
+		<name>!banp</name>
+		<group>1</group>
+		<cmd>ban</cmd>
+		<time>0</time>
+		<text>You were perma-banned by : _name_ .</text>
+		<desc>USAGE :: !banp name :: INFO -> Ban a player.</desc>
+	</command>
+	
+	<command id="2">
+		<name>!ban3</name>
+		<group>1</group>
+		<cmd>ban</cmd>
+		<time>4320</time>
+		<text>You got a ban by : _name_ , come back _time_</text>
+		<desc>USAGE :: !ban3 name :: INFO -> Ban a player.</desc>
+	</command>	
+	
+	<command id="3">
+		<name>!ban7</name>
+		<group>1</group>
+		<cmd>ban</cmd>
+		<time>10080</time>
+		<text>You got a ban by : _name_ , come back _time_</text>
+		<desc>USAGE :: !ban7 name :: INFO -> Ban a player.</desc>
+	</command>	
+	
+	<command id="4">
+		<name>!ban14</name>
+		<group>1</group>
+		<cmd>ban</cmd>
+		<time>20160</time>
+		<text>You got a ban by : _name_ , come back _time_</text>
+		<desc>USAGE :: !ban14 name :: INFO -> Ban a player.</desc>
+	</command>	
+	
+	
+	<!-- 
+		Kick Command 
+		
+		The <text> tag defines the reason the player will be given.
+		Like the ban command, the kick support the _name_ place holder in the reason text.
+		
+		Uses BE kick command.
+	-->
+	<command id="5">
+		<name>!kick</name>
+		<group>1</group>
+		<cmd>kick</cmd>
+		<time></time>
+		<text>Decision By Admin: _name_</text>
+		<desc>USAGE :: !kick name :: INFO -> Kick a player.</desc>
+	</command>		
+	
+	<!-- 
+		Reloade the command file 
+		If you have edited your commands file you can make Bec reloade the data instead of restarting Bec.	
+	-->
+	<command id="6">
+		<name>!rcf</name>
+		<group>1</group>
+		<cmd>loadcommands</cmd>
+		<time></time>
+		<text></text>
+		<desc>USAGE :: !rcf :: INFO -> Reload the command file.</desc>
+	</command>
+
+	<!-- 
+		Show the server uptime 
+		This will show how long the server has been running and when it was started (Local Server Time)
+		
+		The command will send back a private message to the player.
+		Server Uptime : 8:21:34 ~ Started : 2014-12-17 18:28:32
+		
+	-->
+	<command id="7">
+		<name>!uptime</name>
+		<group>1</group>
+		<cmd>uptime</cmd>
+		<time></time>
+		<text></text>
+		<desc>USAGE :: !uptime :: INFO -> Show Server Uptime.</desc>
+	</command>		
+	
+	
+	<!-- 
+		Show basic help 
+
+		This will list up all commands the admin/player is allowed to execute.
+		If this is set to group 100 Normal players will be able to see all commands in group 100 ("Public commands")
+	-->
+	<command id="8">
+		<name>!help</name>
+		<group>1</group>
+		<cmd>help</cmd>
+		<time></time>
+		<text></text>
+		<desc>USAGE :: [!help] or [!help !command] :: INFO -> Use help to show available commands.</desc>
+	</command>	
+
+	<!-- group 5 admin may send a global message to all players. -->
+	<command id="9">
+		<name>!notify</name>
+		<group>5</group>
+		<cmd>say</cmd>
+		<time></time>
+		<text>The Server will be restart after this mission</text>
+		<desc>USAGE :: !notify :: INFO :: Sends global message to all player</desc>
+	</command>
+	
+	
+	<!-- 
+		External scripts 
+		Note:
+		The 1st Argument Passed to a External script is always the Username "Hardcoded"
+		The 2nd,3rd,4th.. and so forth are separated by spaces.
+	-->
+	<command id="10">
+		<name>!math</name>
+		<group>2</group>
+		<cmd>external</cmd>
+		<time></time>
+		<text>Config\Script_Example.bat</text>
+		<desc>USAGE :: !math Int+Int :: INFO -> Do simple bat math!.</desc>
+	</command>	
+	
+
+</BeCommands>
