@@ -1,0 +1,346 @@
+﻿10:04:17 : No Valid response. Trying to reconnect.!
+﻿10:04:21 : No Valid response. Trying to reconnect.!
+﻿10:04:25 : No Valid response. Trying to reconnect.!
+﻿10:04:29 : Lost Connection!
+﻿10:04:29 : Closing socket & exiting!
+﻿10:05:24 : No Valid response. Trying to reconnect.!
+﻿10:05:28 : No Valid response. Trying to reconnect.!
+﻿10:06:03 : No Valid response. Trying to reconnect.!
+﻿10:08:24 : No Valid response. Trying to reconnect.!
+﻿10:08:28 : No Valid response. Trying to reconnect.!
+﻿10:08:32 : No Valid response. Trying to reconnect.!
+﻿10:11:50 : No Valid response. Trying to reconnect.!
+﻿10:11:54 : No Valid response. Trying to reconnect.!
+﻿10:11:58 : No Valid response. Trying to reconnect.!
+﻿10:12:02 : Lost Connection!
+﻿10:12:02 : Closing socket & exiting!
+﻿10:17:28 : No Valid response. Trying to reconnect.!
+﻿10:17:32 : No Valid response. Trying to reconnect.!
+﻿10:17:36 : No Valid response. Trying to reconnect.!
+﻿10:30:22 : No Valid response. Trying to reconnect.!
+﻿10:59:45 : Rcon client logging in
+﻿10:59:45 : RCon admin #0 (72.5.102.156:51630) logged in
+﻿11:01:07 : Player #0 Addison (50.183.33.61:2304) connected
+﻿11:01:08 : Player #0 Addison - GUID: 3be0777b15765e2269a4c801c0d1276e (unverified)
+﻿11:01:08 : RCon admin #0: (Global) BEC : Guardian Addison Connected
+﻿11:01:09 : Verified GUID (3be0777b15765e2269a4c801c0d1276e) of player #0 Addison
+﻿11:01:15 : Player #0 Addison disconnected
+﻿11:01:47 : Lost Connection!
+﻿11:01:47 : Closing socket & exiting!
+﻿11:10:23 : Rcon client logging in
+﻿11:10:23 : RCon admin #0 (72.5.102.156:50600) logged in
+﻿11:11:54 : Player #0 Addison (50.183.33.61:2304) connected
+﻿11:11:55 : Player #0 Addison - GUID: 3be0777b15765e2269a4c801c0d1276e (unverified)
+﻿11:11:55 : RCon admin #0: (Global) BEC : Guardian Addison Connected
+﻿11:11:56 : Verified GUID (3be0777b15765e2269a4c801c0d1276e) of player #0 Addison
+﻿11:13:49 : (Unknown) Addison: !banp Addison
+﻿11:14:53 : (Unknown) Addison: test
+﻿11:16:25 : (Unknown) Addison: !
+﻿11:16:30 : (Unknown) Addison: !rcf
+﻿11:16:33 : (Unknown) Addison: !uptime
+﻿11:18:43 : Lost Connection!
+﻿11:18:43 : Closing socket & exiting!
+﻿11:27:34 : Rcon client logging in
+﻿11:27:40 : RCon admin #0 (72.5.102.156:61600) logged in
+﻿11:28:23 : Player #0 Addison disconnected
+﻿11:28:30 : Player #0 Addison (50.183.33.61:2304) connected
+﻿11:28:31 : Player #0 Addison - GUID: 3be0777b15765e2269a4c801c0d1276e (unverified)
+﻿11:28:31 : RCon admin #0: (Global) BEC : Guardian Addison Connected
+﻿11:28:32 : Verified GUID (3be0777b15765e2269a4c801c0d1276e) of player #0 Addison
+﻿11:30:09 : RCon admin #0: (To Addison) BEC : Server Uptime : 0:08:29 ~ Started : 2015-01-23 11:21:40
+﻿11:30:19 : kick was issued by admin : Addison
+﻿11:30:19 : Player #0 Addison (3be0777b15765e2269a4c801c0d1276e) has been kicked by BattlEye: Admin Kick (Decision By Admin: Addison)
+﻿11:30:27 : Player #0 Addison (50.183.33.61:2304) connected
+﻿11:30:28 : Player #0 Addison - GUID: 3be0777b15765e2269a4c801c0d1276e (unverified)
+﻿11:30:28 : RCon admin #0: (Global) BEC : Guardian Addison Connected
+﻿11:30:29 : Verified GUID (3be0777b15765e2269a4c801c0d1276e) of player #0 Addison
+﻿11:31:06 : (Unknown) Addison: !ban3 Addison
+﻿11:31:19 : (Unknown) Addison: !ban3 Addison
+﻿11:31:25 : (Unknown) Addison: !kick Addison
+﻿11:32:08 : RCon admin #0: (To Addison) BEC : Addison, you do not have permission to perform ban on Addison
+﻿11:32:22 : RCon admin #0: (To Addison) BEC : Addison, you do not have permission to perform ban on Addison
+﻿11:32:27 : RCon admin #0: (To Addison) BEC : Usage [ !help !Command ]. Available commands: !uptime, !ban14, !ban7, !banp, !ban3, !rcf, !help, !math, !mp, !notify, !kick
+﻿11:32:40 : RCon admin #0: (Global) The Server will be restart after this mission
+﻿11:32:50 : maxping was issued by admin : Addison
+﻿11:32:50 : RCon admin #0: (Global) maxping is set to 150 ms
+﻿11:34:51 : Lost Connection!
+﻿11:34:51 : Closing socket & exiting!
+﻿12:17:44 : No Valid response. Trying to reconnect.!
+﻿12:17:48 : No Valid response. Trying to reconnect.!
+﻿12:17:52 : No Valid response. Trying to reconnect.!
+﻿12:19:35 : Rcon client logging in
+﻿12:19:35 : RCon admin #0 (72.5.102.156:56586) logged in
+﻿12:19:51 : Player #0 Addison (50.183.33.61:2304) connected
+﻿12:19:52 : Player #0 Addison - GUID: 3be0777b15765e2269a4c801c0d1276e (unverified)
+﻿12:19:52 : RCon admin #0: (Global) BEC : Guardian Addison Connected
+﻿12:19:53 : Verified GUID (3be0777b15765e2269a4c801c0d1276e) of player #0 Addison
+﻿12:21:06 : Player #1 UnNamed (108.88.248.180:2304) connected
+﻿12:21:08 : Player #1 UnNamed - GUID: b022d7a2302046c4973e114cbb6eab7d (unverified)
+﻿12:21:09 : Verified GUID (b022d7a2302046c4973e114cbb6eab7d) of player #1 UnNamed
+﻿12:21:42 : kick was issued by admin : Addison
+﻿12:21:42 : Player #1 UnNamed (b022d7a2302046c4973e114cbb6eab7d) has been kicked by BattlEye: Admin Kick (Decision By Admin: Addison)
+﻿12:21:52 : Player #1 UnNamed (108.88.248.180:2304) connected
+﻿12:21:53 : Player #1 UnNamed - GUID: b022d7a2302046c4973e114cbb6eab7d (unverified)
+﻿12:21:53 : Verified GUID (b022d7a2302046c4973e114cbb6eab7d) of player #1 UnNamed
+﻿12:22:21 : ban was issued by admin : Addison
+﻿12:22:22 : Player #1 UnNamed (b022d7a2302046c4973e114cbb6eab7d) has been kicked by BattlEye: Admin Ban (You were perma-banned by : Addison .)
+﻿12:22:32 : Player #1 UnNamed (108.88.248.180:2304) connected
+﻿12:22:33 : Player #1 UnNamed - GUID: b022d7a2302046c4973e114cbb6eab7d (unverified)
+﻿12:22:34 : Player #1 UnNamed (b022d7a2302046c4973e114cbb6eab7d) has been kicked by BattlEye: Admin Ban (You were perma-banned by : Addison .)
+﻿12:22:57 : Player #1 UnNamed (108.88.248.180:2304) connected
+﻿12:22:58 : Player #1 UnNamed - GUID: b022d7a2302046c4973e114cbb6eab7d (unverified)
+﻿12:22:59 : Verified GUID (b022d7a2302046c4973e114cbb6eab7d) of player #1 UnNamed
+﻿12:23:36 : ban was issued by admin : Addison
+﻿12:23:36 : Player #1 UnNamed (b022d7a2302046c4973e114cbb6eab7d) has been kicked by BattlEye: Admin Ban (You got a ban by : Addison , come back 12:23 2015.01.26)
+﻿12:23:54 : Player #1 UnNamed (108.88.248.180:2304) connected
+﻿12:23:56 : Player #1 UnNamed - GUID: b022d7a2302046c4973e114cbb6eab7d (unverified)
+﻿12:23:56 : Player #1 UnNamed (b022d7a2302046c4973e114cbb6eab7d) has been kicked by BattlEye: Admin Ban (You got a ban by : Addison , come back 12:23 2015.01.26)
+﻿12:24:36 : Player #1 UnNamed (108.88.248.180:2304) connected
+﻿12:24:38 : Player #1 UnNamed - GUID: b022d7a2302046c4973e114cbb6eab7d (unverified)
+﻿12:24:38 : Verified GUID (b022d7a2302046c4973e114cbb6eab7d) of player #1 UnNamed
+﻿12:26:00 : Player #0 Addison disconnected
+﻿12:26:26 : Lost Connection!
+﻿12:26:26 : Closing socket & exiting!
+﻿13:09:18 : Rcon client logging in
+﻿13:09:18 : RCon admin #0 (72.5.102.156:60687) logged in
+﻿13:11:01 : Rcon client logging in
+﻿13:11:01 : RCon admin #0 (72.5.102.156:59675) logged in
+﻿13:12:01 : Lost Connection!
+﻿13:12:01 : Closing socket & exiting!
+﻿13:12:18 : Rcon client logging in
+﻿13:12:18 : RCon admin #0 (72.5.102.156:59676) logged in
+﻿13:13:28 : Player #0 Addison (50.183.33.61:2304) connected
+﻿13:13:29 : Player #0 Addison - GUID: 3be0777b15765e2269a4c801c0d1276e (unverified)
+﻿13:13:29 : RCon admin #0: (Global) BEC : Guardian Addison Connected
+﻿13:13:44 : Verified GUID (3be0777b15765e2269a4c801c0d1276e) of player #0 Addison
+﻿13:18:18 : Player #0 Addison disconnected
+﻿13:18:40 : Lost Connection!
+﻿13:18:40 : Closing socket & exiting!
+﻿13:46:02 : Rcon client logging in
+﻿13:46:02 : RCon admin #0 (72.5.102.156:55338) logged in
+﻿13:48:21 : Lost Connection!
+﻿13:48:21 : Closing socket & exiting!
+﻿13:48:51 : Rcon client logging in
+﻿13:48:51 : RCon admin #0 (72.5.102.156:55339) logged in
+﻿13:49:35 : Lost Connection!
+﻿13:49:35 : Closing socket & exiting!
+﻿13:50:03 : Rcon client logging in
+﻿13:50:03 : RCon admin #0 (72.5.102.156:55340) logged in
+﻿13:51:37 : Lost Connection!
+﻿13:51:37 : Closing socket & exiting!
+﻿13:51:53 : Rcon client logging in
+﻿13:51:53 : RCon admin #0 (72.5.102.156:55341) logged in
+﻿13:53:11 : Rcon client logging in
+﻿13:53:11 : RCon admin #0 (72.5.102.156:55342) logged in
+﻿13:53:11 : Lost Connection!
+﻿13:53:11 : Closing socket & exiting!
+﻿13:56:37 : Rcon client logging in
+﻿13:56:37 : RCon admin #0 (72.5.102.156:55343) logged in
+﻿13:57:16 : Rcon client logging in
+﻿13:57:16 : RCon admin #0 (72.5.102.156:55344) logged in
+﻿13:57:27 : RCon admin #0: (Global) Server Restart Message 1
+﻿13:57:32 : RCon admin #0: (Global) Server Restart Message 2
+﻿13:57:37 : RCon admin #0: (Global) Server Restart Message 3
+﻿13:57:48 : Lost Connection!
+﻿13:57:48 : Closing socket & exiting!
+﻿14:00:25 : Rcon client logging in
+﻿14:00:25 : RCon admin #0 (72.5.102.156:53476) logged in
+﻿14:00:56 : Lost Connection!
+﻿14:00:56 : Closing socket & exiting!
+﻿14:01:12 : Lost Connection!
+﻿14:01:12 : Closing socket & exiting!
+﻿14:02:21 : Rcon client logging in
+﻿14:02:21 : RCon admin #0 (72.5.102.156:53478) logged in
+﻿14:04:13 : Lost Connection!
+﻿14:04:13 : Closing socket & exiting!
+﻿14:07:22 : Rcon client logging in
+﻿14:07:22 : RCon admin #0 (72.5.102.156:56446) logged in
+﻿14:07:44 : Player #0 UnNamed (108.88.248.180:2304) connected
+﻿14:08:05 : Could not connect to BE Master
+﻿14:08:05 : Update attempt failed
+﻿14:08:07 : Player #1 Addison (50.183.33.61:2304) connected
+﻿14:08:08 : Player #1 Addison - GUID: 3be0777b15765e2269a4c801c0d1276e (unverified)
+﻿14:08:08 : RCon admin #0: (Global) BEC : Guardian Addison Connected
+﻿14:08:15 : Player #0 UnNamed (-) has been kicked by BattlEye: Client not responding
+﻿14:08:20 : Verified GUID (3be0777b15765e2269a4c801c0d1276e) of player #1 Addison
+﻿14:09:08 : Player #0 UnNamed (108.88.248.180:2304) connected
+﻿14:09:09 : Player #0 UnNamed - GUID: b022d7a2302046c4973e114cbb6eab7d (unverified)
+﻿14:09:44 : Verified GUID (b022d7a2302046c4973e114cbb6eab7d) of player #0 UnNamed
+﻿14:36:54 : Player #0 UnNamed disconnected
+﻿14:37:42 : Player #1 Addison disconnected
+﻿15:02:46 : Rcon client logging in
+﻿15:02:46 : RCon admin #0 (72.5.102.156:52551) logged in
+﻿15:18:29 : Player #0 UnNamed disconnected
+﻿15:18:47 : Player #0 UnNamed (108.88.248.180:2304) connected
+﻿15:18:48 : Player #0 UnNamed - GUID: b022d7a2302046c4973e114cbb6eab7d (unverified)
+﻿15:18:49 : Verified GUID (b022d7a2302046c4973e114cbb6eab7d) of player #0 UnNamed
+﻿15:20:16 : Player #0 UnNamed disconnected
+﻿15:23:59 : Rcon client logging in
+﻿15:23:59 : RCon admin #0 (72.5.102.156:59767) logged in
+﻿15:25:53 : Player #0 UnNamed (108.88.248.180:2304) connected
+﻿15:25:54 : Player #0 UnNamed - GUID: b022d7a2302046c4973e114cbb6eab7d (unverified)
+﻿15:25:56 : Verified GUID (b022d7a2302046c4973e114cbb6eab7d) of player #0 UnNamed
+﻿15:27:25 : No Valid response. Trying to reconnect.!
+﻿15:28:03 : Rcon client logging in
+﻿15:28:03 : RCon admin #0 (72.5.102.156:59767) logged in
+﻿15:28:15 : Player #0 UnNamed disconnected
+﻿15:28:24 : Could not connect to BE Master
+﻿15:28:24 : Update attempt failed
+﻿15:28:34 : Player #0 UnNamed (108.88.248.180:2304) connected
+﻿15:28:35 : Player #0 UnNamed - GUID: b022d7a2302046c4973e114cbb6eab7d (unverified)
+﻿15:28:36 : Verified GUID (b022d7a2302046c4973e114cbb6eab7d) of player #0 UnNamed
+﻿15:44:46 : Lost Connection!
+﻿15:44:46 : Closing socket & exiting!
+﻿15:57:45 : Rcon client logging in
+﻿15:57:45 : RCon admin #0 (72.5.102.156:61288) logged in
+﻿15:59:09 : No Valid response. Trying to reconnect.!
+﻿15:59:09 : Rcon client logging in
+﻿15:59:09 : Player #0 UnNamed (108.88.248.180:2304) connected
+﻿15:59:09 : Player #1 Addison (50.183.33.61:2304) connected
+﻿15:59:09 : RCon admin #0 (72.5.102.156:61288) logged in
+﻿15:59:10 : Player #0 UnNamed - GUID: b022d7a2302046c4973e114cbb6eab7d (unverified)
+﻿15:59:10 : Player #1 Addison - GUID: 3be0777b15765e2269a4c801c0d1276e (unverified)
+﻿15:59:11 : RCon admin #0: (Global) BEC : Guardian Addison Connected
+﻿15:59:12 : Verified GUID (3be0777b15765e2269a4c801c0d1276e) of player #1 Addison
+﻿15:59:12 : Verified GUID (b022d7a2302046c4973e114cbb6eab7d) of player #0 UnNamed
+﻿16:01:42 : Player #1 Addison disconnected
+﻿16:01:56 : Player #1 Addison (50.183.33.61:2304) connected
+﻿16:01:57 : Player #1 Addison - GUID: 3be0777b15765e2269a4c801c0d1276e (unverified)
+﻿16:01:57 : RCon admin #0: (Global) BEC : Guardian Addison Connected
+﻿16:01:58 : Verified GUID (3be0777b15765e2269a4c801c0d1276e) of player #1 Addison
+﻿16:13:09 : Player #1 Addison disconnected
+﻿16:14:14 : Player #0 UnNamed disconnected
+﻿16:16:58 : Lost Connection!
+﻿16:16:58 : Closing socket & exiting!
+﻿16:23:51 : Rcon client logging in
+﻿16:23:51 : RCon admin #0 (72.5.102.156:64911) logged in
+﻿16:24:59 : Player #0 Addison (50.183.33.61:2304) connected
+﻿16:25:00 : Player #0 Addison - GUID: 3be0777b15765e2269a4c801c0d1276e (unverified)
+﻿16:25:00 : RCon admin #0: (Global) BEC : Guardian Addison Connected
+﻿16:25:01 : Verified GUID (3be0777b15765e2269a4c801c0d1276e) of player #0 Addison
+﻿16:29:12 : Player #0 Addison disconnected
+﻿16:29:32 : Lost Connection!
+﻿16:29:32 : Closing socket & exiting!
+﻿16:30:21 : Rcon client logging in
+﻿16:30:21 : RCon admin #0 (72.5.102.156:49469) logged in
+﻿16:31:19 : Player #0 Addison (50.183.33.61:2304) connected
+﻿16:31:20 : Player #0 Addison - GUID: 3be0777b15765e2269a4c801c0d1276e (unverified)
+﻿16:31:20 : RCon admin #0: (Global) BEC : Guardian Addison Connected
+﻿16:31:21 : Verified GUID (3be0777b15765e2269a4c801c0d1276e) of player #0 Addison
+﻿16:35:38 : Player #1 UnNamed (108.88.248.180:2304) connected
+﻿16:35:39 : Player #1 UnNamed - GUID: b022d7a2302046c4973e114cbb6eab7d (unverified)
+﻿16:35:40 : Verified GUID (b022d7a2302046c4973e114cbb6eab7d) of player #1 UnNamed
+﻿16:37:24 : Player #1 UnNamed disconnected
+﻿16:38:57 : Player #1 UnNamed (108.88.248.180:2304) connected
+﻿16:38:58 : Player #1 UnNamed - GUID: b022d7a2302046c4973e114cbb6eab7d (unverified)
+﻿16:38:58 : Verified GUID (b022d7a2302046c4973e114cbb6eab7d) of player #1 UnNamed
+﻿16:44:30 : Player #1 UnNamed disconnected
+﻿16:46:09 : Player #1 UnNamed (108.88.248.180:2304) connected
+﻿16:46:10 : Player #1 UnNamed - GUID: b022d7a2302046c4973e114cbb6eab7d (unverified)
+﻿16:46:11 : Verified GUID (b022d7a2302046c4973e114cbb6eab7d) of player #1 UnNamed
+﻿16:48:05 : Player #1 UnNamed disconnected
+﻿16:48:40 : Lost Connection!
+﻿16:48:40 : Closing socket & exiting!
+﻿16:49:01 : Rcon client logging in
+﻿16:49:01 : RCon admin #0 (72.5.102.156:49288) logged in
+﻿16:49:06 : Player #0 Addison (50.183.33.61:2304) connected
+﻿16:49:07 : Player #0 Addison - GUID: 3be0777b15765e2269a4c801c0d1276e (unverified)
+﻿16:49:07 : RCon admin #0: (Global) BEC : Guardian Addison Connected
+﻿16:49:08 : Verified GUID (3be0777b15765e2269a4c801c0d1276e) of player #0 Addison
+﻿16:50:08 : Player #1 UnNamed (108.88.248.180:2304) connected
+﻿16:50:09 : Player #1 UnNamed - GUID: b022d7a2302046c4973e114cbb6eab7d (unverified)
+﻿16:50:11 : Verified GUID (b022d7a2302046c4973e114cbb6eab7d) of player #1 UnNamed
+﻿17:07:31 : Player #0 Addison disconnected
+﻿17:13:35 : Lost Connection!
+﻿17:13:35 : Closing socket & exiting!
+﻿17:14:24 : Rcon client logging in
+﻿17:14:24 : RCon admin #0 (72.5.102.156:55490) logged in
+﻿17:14:57 : Player #0 Addison (50.183.33.61:2304) connected
+﻿17:14:58 : Player #0 Addison - GUID: 3be0777b15765e2269a4c801c0d1276e (unverified)
+﻿17:14:58 : RCon admin #0: (Global) BEC : Guardian Addison Connected
+﻿17:15:00 : Verified GUID (3be0777b15765e2269a4c801c0d1276e) of player #0 Addison
+﻿17:15:13 : Player #1 UnNamed (108.88.248.180:2304) connected
+﻿17:15:37 : Player #1 UnNamed - GUID: b022d7a2302046c4973e114cbb6eab7d (unverified)
+﻿17:16:22 : Verified GUID (b022d7a2302046c4973e114cbb6eab7d) of player #1 UnNamed
+﻿17:41:40 : Rcon client logging in
+﻿17:41:40 : RCon admin #0 (72.5.102.156:52331) logged in
+﻿17:42:40 : Player #0 Addison (50.183.33.61:2304) connected
+﻿17:42:41 : Player #0 Addison - GUID: 3be0777b15765e2269a4c801c0d1276e (unverified)
+﻿17:42:41 : RCon admin #0: (Global) BEC : Guardian Addison Connected
+﻿17:42:42 : Verified GUID (3be0777b15765e2269a4c801c0d1276e) of player #0 Addison
+﻿17:45:53 : Player #0 Addison disconnected
+﻿17:47:11 : Lost Connection!
+﻿17:47:11 : Closing socket & exiting!
+﻿17:53:04 : Rcon client logging in
+﻿17:53:04 : RCon admin #0 (72.5.102.156:51666) logged in
+﻿17:54:08 : Player #0 Addison (50.183.33.61:2304) connected
+﻿17:54:09 : Player #0 Addison - GUID: 3be0777b15765e2269a4c801c0d1276e (unverified)
+﻿17:54:09 : RCon admin #0: (Global) BEC : Guardian Addison Connected
+﻿17:54:11 : Verified GUID (3be0777b15765e2269a4c801c0d1276e) of player #0 Addison
+﻿17:57:53 : Player #0 Addison disconnected
+﻿18:17:50 : Lost Connection!
+﻿18:17:50 : Closing socket & exiting!
+﻿18:18:18 : Rcon client logging in
+﻿18:18:18 : RCon admin #0 (72.5.102.156:55412) logged in
+﻿18:18:32 : Player #0 UnNamed (108.88.248.180:2304) connected
+﻿18:18:33 : Player #0 UnNamed - GUID: b022d7a2302046c4973e114cbb6eab7d (unverified)
+﻿18:18:34 : Verified GUID (b022d7a2302046c4973e114cbb6eab7d) of player #0 UnNamed
+﻿18:22:19 : Player #1 Addison (50.183.33.61:2304) connected
+﻿18:22:21 : Player #1 Addison - GUID: 3be0777b15765e2269a4c801c0d1276e (unverified)
+﻿18:22:21 : RCon admin #0: (Global) BEC : Guardian Addison Connected
+﻿18:22:22 : Verified GUID (3be0777b15765e2269a4c801c0d1276e) of player #1 Addison
+﻿18:37:23 : Lost Connection!
+﻿18:37:23 : Closing socket & exiting!
+﻿18:39:19 : Rcon client logging in
+﻿18:39:20 : RCon admin #0 (72.5.102.156:49594) logged in
+﻿18:39:31 : Player #0 UnNamed (108.88.248.180:2304) connected
+﻿18:39:33 : Player #0 UnNamed - GUID: b022d7a2302046c4973e114cbb6eab7d (unverified)
+﻿18:39:34 : Verified GUID (b022d7a2302046c4973e114cbb6eab7d) of player #0 UnNamed
+﻿18:49:24 : Lost Connection!
+﻿18:49:24 : Closing socket & exiting!
+﻿19:55:35 : Rcon client logging in
+﻿19:55:35 : RCon admin #0 (72.5.102.156:64795) logged in
+﻿19:56:47 : Player #0 Addison (50.183.33.61:2304) connected
+﻿19:56:48 : Player #0 Addison - GUID: 3be0777b15765e2269a4c801c0d1276e (unverified)
+﻿19:56:48 : RCon admin #0: (Global) BEC : Guardian Addison Connected
+﻿19:56:50 : Verified GUID (3be0777b15765e2269a4c801c0d1276e) of player #0 Addison
+﻿19:58:02 : Player #1 UnNamed (108.88.248.180:2304) connected
+﻿19:58:04 : Player #1 UnNamed - GUID: b022d7a2302046c4973e114cbb6eab7d (unverified)
+﻿19:58:21 : Verified GUID (b022d7a2302046c4973e114cbb6eab7d) of player #1 UnNamed
+﻿19:59:35 : Player #0 Addison disconnected
+﻿19:59:43 : Player #1 UnNamed disconnected
+﻿20:00:18 : Lost Connection!
+﻿20:00:18 : Closing socket & exiting!
+﻿20:58:46 : Rcon client logging in
+﻿20:58:46 : RCon admin #0 (72.5.102.156:57057) logged in
+﻿20:59:32 : Player #0 Addison (50.183.33.61:2304) connected
+﻿20:59:34 : Player #0 Addison - GUID: 3be0777b15765e2269a4c801c0d1276e (unverified)
+﻿20:59:34 : RCon admin #0: (Global) BEC : Guardian Addison Connected
+﻿20:59:35 : Verified GUID (3be0777b15765e2269a4c801c0d1276e) of player #0 Addison
+﻿21:01:16 : No Valid response. Trying to reconnect.!
+﻿21:01:16 : Rcon client logging in
+﻿21:01:17 : RCon admin #0 (72.5.102.156:57057) logged in
+﻿21:16:00 : Lost Connection!
+﻿21:16:00 : Closing socket & exiting!
+﻿22:40:25 : Rcon client logging in
+﻿22:40:25 : RCon admin #0 (72.5.102.156:55014) logged in
+﻿22:41:06 : Player #0 Addison (50.183.33.61:2304) connected
+﻿22:41:07 : Player #0 Addison - GUID: 3be0777b15765e2269a4c801c0d1276e (unverified)
+﻿22:41:07 : RCon admin #0: (Global) BEC : Guardian Addison Connected
+﻿22:41:08 : Verified GUID (3be0777b15765e2269a4c801c0d1276e) of player #0 Addison
+﻿22:44:06 : Lost Connection!
+﻿22:44:06 : Closing socket & exiting!
+﻿22:45:30 : Rcon client logging in
+﻿22:45:30 : RCon admin #0 (72.5.102.156:49352) logged in
+﻿22:45:31 : Player #0 Addison (50.183.33.61:2304) connected
+﻿22:45:32 : Player #0 Addison - GUID: 3be0777b15765e2269a4c801c0d1276e (unverified)
+﻿22:45:32 : RCon admin #0: (Global) BEC : Guardian Addison Connected
+﻿22:45:33 : Verified GUID (3be0777b15765e2269a4c801c0d1276e) of player #0 Addison
+﻿23:10:21 : Player #1 UnNamed (108.88.248.180:2304) connected
+﻿23:10:23 : Player #1 UnNamed - GUID: b022d7a2302046c4973e114cbb6eab7d (unverified)
+﻿23:10:24 : Verified GUID (b022d7a2302046c4973e114cbb6eab7d) of player #1 UnNamed
+﻿23:31:40 : Player #0 Addison disconnected
+﻿23:31:45 : Player #0 Addison (50.183.33.61:2304) connected
+﻿23:31:46 : Player #0 Addison - GUID: 3be0777b15765e2269a4c801c0d1276e (unverified)
+﻿23:31:46 : RCon admin #0: (Global) BEC : Guardian Addison Connected
+﻿23:31:47 : Verified GUID (3be0777b15765e2269a4c801c0d1276e) of player #0 Addison

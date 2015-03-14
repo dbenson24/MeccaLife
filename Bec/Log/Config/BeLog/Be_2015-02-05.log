@@ -1,0 +1,60 @@
+﻿12:09:41 : Login failed : Wrong password!
+﻿12:13:55 : Login failed : Wrong password!
+﻿12:14:40 : Login failed : Wrong password!
+﻿12:16:37 : Login failed : Wrong password!
+﻿12:20:37 : Login failed : Wrong password!
+﻿12:25:14 : Login failed : Wrong password!
+﻿12:27:50 : Login failed : Wrong password!
+﻿12:29:17 : Rcon client logging in
+﻿12:29:17 : RCon admin #0 (72.5.102.156:59417) logged in
+﻿12:41:44 : Rcon client logging in
+﻿12:41:44 : RCon admin #0 (72.5.102.156:52809) logged in
+﻿12:42:55 : Player #0 Addison (50.183.33.61:2304) connected
+﻿12:42:56 : Player #0 Addison - GUID: 3be0777b15765e2269a4c801c0d1276e (unverified)
+﻿12:42:56 : RCon admin #0: (Global) BEC : Guardian Addison Connected
+﻿12:42:56 : Verified GUID (3be0777b15765e2269a4c801c0d1276e) of player #0 Addison
+﻿12:44:44 : RCon admin #0: (Global) Server will restart in 30 minutes.
+﻿12:44:49 : RCon admin #0: (Global) Server will restart in 15 minutes.
+﻿12:44:54 : RCon admin #0: (Global) Server will restart in 5 minutes.
+﻿12:44:59 : RCon admin #0: (Global) Server will restart in 1 minute.
+﻿12:47:41 : Rcon client logging in
+﻿12:47:41 : RCon admin #0 (72.5.102.156:52810) logged in
+﻿12:48:21 : Player #0 Addison (50.183.33.61:2304) connected
+﻿12:48:22 : Player #0 Addison - GUID: 3be0777b15765e2269a4c801c0d1276e (unverified)
+﻿12:48:23 : RCon admin #0: (Global) BEC : Guardian Addison Connected
+﻿12:48:23 : Verified GUID (3be0777b15765e2269a4c801c0d1276e) of player #0 Addison
+﻿12:50:41 : RCon admin #0: (Global) Server will restart in 30 minutes.
+﻿12:50:46 : RCon admin #0: (Global) Server will restart in 15 minutes.
+﻿12:50:51 : RCon admin #0: (Global) Server will restart in 5 minutes.
+﻿12:50:56 : RCon admin #0: (Global) Server will restart in 1 minute.
+﻿12:52:32 : Rcon client logging in
+﻿12:52:32 : RCon admin #0 (72.5.102.156:52812) logged in
+﻿12:55:32 : RCon admin #0: (Global) Server will restart in 30 minutes.
+﻿12:55:37 : RCon admin #0: (Global) Server will restart in 15 minutes.
+﻿12:55:42 : RCon admin #0: (Global) Server will restart in 5 minutes.
+﻿12:55:47 : RCon admin #0: (Global) Server will restart in 1 minute.
+﻿12:56:10 : Rcon client logging in
+﻿12:56:10 : RCon admin #0 (72.5.102.156:52814) logged in
+﻿12:58:43 : Rcon client logging in
+﻿12:58:43 : RCon admin #0 (72.5.102.156:52815) logged in
+﻿13:01:20 : RCon admin #1 (72.5.102.156:64407) logged in
+﻿13:01:25 : RCon admin #1: (Global) Elemtael: test
+﻿13:01:29 : RCon admin #1: (Global) Elemtael: testies 1 2 3
+﻿14:38:10 : Player #0 Anchorman RonBig (108.88.248.180:2304) connected
+﻿14:38:11 : Player #0 Anchorman RonBig - GUID: b022d7a2302046c4973e114cbb6eab7d (unverified)
+﻿14:38:11 : Verified GUID (b022d7a2302046c4973e114cbb6eab7d) of player #0 Anchorman RonBig
+﻿14:46:38 : No Valid response. Trying to reconnect.!
+﻿14:46:38 : Rcon client logging in
+﻿14:46:38 : RCon admin #0 (72.5.102.156:52815) logged in
+﻿14:50:38 : RCon admin #0: (To Anchorman RonBig) BEC : You have about 60 seconds left to join the mission.
+﻿14:51:09 : RCon admin #0: (To Anchorman RonBig) BEC : You have about 30 seconds left to join the mission.
+﻿14:51:24 : RCon admin #0: (To Anchorman RonBig) BEC : You have about 15 seconds left to join the mission.
+﻿14:51:41 : Player #1 Anchorman RonBig (b022d7a2302046c4973e114cbb6eab7d) has been kicked by BattlEye: Admin Kick (BEC : Lobby idling to long)
+﻿14:54:47 : Player #0 Anchorman RonBig (108.88.248.180:2304) connected
+﻿14:54:48 : Player #0 Anchorman RonBig - GUID: b022d7a2302046c4973e114cbb6eab7d (unverified)
+﻿14:54:48 : Verified GUID (b022d7a2302046c4973e114cbb6eab7d) of player #0 Anchorman RonBig
+﻿15:28:43 : RCon admin #0: (Global) Server will restart in 30 minutes.
+﻿15:43:43 : RCon admin #0: (Global) Server will restart in 15 minutes.
+﻿15:48:43 : RCon admin #0: (Global) Server will restart in 5 minutes.
+﻿15:53:10 : Lost Connection!
+﻿15:53:10 : Closing socket & exiting!
