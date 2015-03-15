@@ -7,11 +7,11 @@ if(isNull _unit) exitWith {};
 if(!alive player) exitWith {};
 if(playerSide != civilian) exitWith {hint "Only civilians can do this!";};
 if(vehicle player != player) exitWith {hint "You need to be outside of your vehicle!";};
-if(currentWeapon player == "" || currentWeapon player == "Binocular") exitWith {hint "The guards do not feel threatened in any way, go home hobo!";};
+if(currentWeapon player == "" || currentWeapon player == "Binocular") exitWith {hint "The guards do not feel threatened in any way!";};
 if(life_inv_blastingcharge < 1) exitWith {hint "You need a blasting charge to initiate a prison break!";};	
-if({side _x == west} count playableUnits < 2) exitWith {hint "There needs to be two or more cops online for you to initiate a robbery!";}; // Spectral does not want a limit on when to jailbreak
+//if({side _x == west} count playableUnits < 2) exitWith {hint "There needs to be two or more cops online for you to initiate a robbery!";}; // Spectral does not want a limit on when to jailbreak
 if(_unit getVariable["inbreakout",false]) exitWith {hint "Someone is already breaking out the prisoners!";};
-if(time - (_unit getVariable["lastbreakout",-9000]) < 500) exitWith {hint "The jail is currently under lockdown and you are unable to get near to the walls."};
+if(time - (_unit getVariable["lastbreakout",-9000]) < 30*60) exitWith {hint "The jail is currently under lockdown and you are unable to get near to the walls."};
 
 _unit setVariable["lastbreakout",time,true];
 _unit setVariable["inbreakout",true,true];
@@ -38,10 +38,14 @@ _unit spawn {
 
 _time = time + (12 * 60);
 
+jailDefused = false;
+
+publicVariable "jailDefused";
 
 _ok = true;
 while {true} do {
 	if(round(_time - time) < 1) exitWith {_ok = true;};
+	if (jailDefused) exitWith {_ok = false;};
 //	if(!alive player) exitWith {_ok = false;};
 //	if(player distance _unit > 2500) exitWith {_ok = false;};
 //	if(life_isDowned) exitWith {_ok = false;};

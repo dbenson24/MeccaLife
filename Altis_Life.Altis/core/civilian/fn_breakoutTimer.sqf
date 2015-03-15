@@ -7,7 +7,7 @@ disableSerialization;
 0 cutRsc ["life_breakouttimer","PLAIN"];
 _uiDisp = uiNamespace getVariable "life_breakouttimer";
 _timer = _uiDisp displayCtrl 38301;
-_time = time + (4 * 60);
+_time = time + (12 * 60);
 while {true} do {
 	if(isNull _uiDisp) then {
 		0 cutRsc ["life_breakouttimer","PLAIN"];
