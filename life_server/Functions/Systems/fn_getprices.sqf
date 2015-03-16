@@ -34,38 +34,36 @@ _shoptype pushBack _data;
 _query = switch (_data) do {
 
 
+case "market" :{
+    _shoptype pushBack "civ";
+}
 
-//case "market" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
-//case "drugdealer" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
 case "rebel" :{ 
     _shoptype pushBack "market";
-    _shoptype pushBack "vigilante";};
-//    format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' OR shoptype='market' OR shoptype='vigilante'",_data];};
-//case "fishmarket" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
-//case "wongs" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
-//case "oil" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
+    _shoptype pushBack "vigilante";
+    _shoptype pushBack "special";
+    _shoptype pushBack "civ";
+};
+
 case "cop" :{ 
     _shoptype pushBack "market";
     _shoptype pushBack "coffee";
+    _shoptype pushBack "special";
 };
 
-//    format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' OR shoptype='market'",_data];};
-//case "diamond" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
-//case "iron" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
-//case "glass" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
-//case "salt" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
-//case "cement" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
-//case "gold" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
 case "gang" :{ 
     _shoptype pushBack "rebel";
-    _shoptype pushBack "market";};    
-//    format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='rebel' OR shoptype='market' ",_data];};
+    _shoptype pushBack "market";
+    _shoptype pushBack "special";
+    _shoptype pushBack "civ";
+};    
 case "economy" :{ 
-    _factor = [2,3,4];};
-//    format["SELECT ressource, buyprice, sellprice FROM economy WHERE factor=2 OR factor = 3 OR factor = 4",_data];};
+    _factor = [2,3,4];
+};
 case "vigilante" :{ 
-    _shoptype pushBack "market";};
-//    format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' OR shoptype='market' ",_data];};
+    _shoptype pushBack "market";
+    _shoptype pushBack "civ";
+};
 default {""};
 };
 

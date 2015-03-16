@@ -97,7 +97,9 @@ class Life_Settings {
 									"goldbarp","heliblastcharge","lostcargo","goldBar","blastingCharge","boltCutter","oilUnprocessed",
 									"oilProcessed","copperUnrefined","copperRefined","ironUnrefined","ironRefined","saltUnrefined",
 									"saltRefined","sand","glass","diamondUncut","diamondCut","rock","cement","mushroom","largesoda",
-									"ziptie","gpstracker","speedbomb","bottledwhiskey","bottledshine","bottledbeer"
+									"ziptie","gpstracker","speedbomb","bottledwhiskey","bottledshine","bottledbeer","rabbit_raw","salema_raw","ornate_raw",
+									"mackerel_raw","tuna_raw","mullet_raw","catshark_raw","turtle_raw","hen_raw","rooster_raw","sheep_raw",
+									"goat_raw"
 									};
 };
 
@@ -284,7 +286,7 @@ class VirtualShops {
 		items[] = { "oil_processed", "pickaxe", "fuelFull" };
 	};
 
-	class fishmarket {
+	class fish {
 		name = "STR_Shops_FishMarket";
 		items[] = { "salema_raw", "salema_grilled", "ornate_raw", "ornate_grilled", "mackerel_raw", "mackerel_grilled", "tuna_raw", "tuna_grilled", "mullet_raw", "mullet_fried", "catshark_raw", "catshark_fried" };
 	};
@@ -327,6 +329,16 @@ class VirtualShops {
 	class vigilante {
 		name = "STR_Shops_Vigilante";
 		items[] = { "waterBottle", "apple", "peach", "redgull", "tbacon", "ziptie" };
+	};
+	
+	class turtle {
+		name = "Wong's Turtle Cart";
+		items[] = {"Nothing"};
+	};
+	
+	class hunting {
+		name = "Honest Abe's Butcher";
+		items[] = {"Nothing"};
 	};
 };
 
