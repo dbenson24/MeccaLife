@@ -39,7 +39,7 @@
 <start>030000</start>
 <runtime>030000</runtime>
 <loop>0</loop>
-<cmd>C:\arma3server\Startup.bat</cmd>
+<cmd>E:\_arma3serverData\Configs & Bats\Startup.bat</cmd>
 </job>
 
 </Scheduler>
