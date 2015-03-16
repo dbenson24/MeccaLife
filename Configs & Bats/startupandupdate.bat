@@ -23,17 +23,17 @@ if exist C:\Users\Administrator\Desktop\update (
 		rd /q /s @extDB
 	)
 )
-timeout 3
-cd C:\arma3server\
-start arma3server.exe "-config=C:\ArmA3Data\server_configy92h3.cfg" "-cfg=C:\ArmA3Data\server_network.cfg" "-BEPath=C:\ArmA3Data\BE" "-profiles=C:\ArmA3Data" "-mod=@life_server;@extDB"
-timeout 6
+timeout 9
+cd E:\arma3server\
+start arma3server.exe "-config=E:\_arma3serverData\serverConfig.cfg" "-cfg=E:\_arma3serverData\server_network.cfg" "-BEPath=E:\_arma3serverData\battleye" "-profiles=E:\_arma3serverData\profiles" "-mod=@life_server;@extDB" "-enableHT"
 echo ARMA 3 Server has started.
 
 timeout 10
-set becpath="C:\ArmA3Data\Bec"
+set becpath="E:\_arma3serverData\Bec"
 cd /d %becpath%
 start "" /min "Bec.exe" -f Config.cfg
 timeout 3
 echo Battleye has started.. 
 echo Exiting.
+timeout 3
 exit
