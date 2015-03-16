@@ -7,7 +7,7 @@ taskkill /im Bec.exe
 
 timeout 5
 cd E:\arma3server\
-start arma3server.exe "-config=E:\_arma3serverData\Configs & Bats\serverConfig.cfg" "-cfg=E:\_arma3serverData\Configs & Bats\server_network.cfg" "-BEPath=E:\_arma3serverData\battleye" "-profiles=E:\_arma3serverData\Profiles" "-mod=@life_server;@extDB" "-enableHT"
+start arma3server.exe "-config=E:\_arma3serverData\configs\serverConfig.cfg" "-cfg=E:\_arma3serverData\configs\server_network.cfg" "-BEPath=E:\_arma3serverData\battleye" "-profiles=E:\_arma3serverData\Profiles" "-mod=@life_server;@extDB" "-enableHT"
 echo ARMA 3 Server has started.
 
 timeout 10
