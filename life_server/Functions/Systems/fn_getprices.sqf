@@ -36,7 +36,7 @@ _query = switch (_data) do {
 
 case "market" :{
     _shoptype pushBack "civ";
-}
+};
 
 case "rebel" :{ 
     _shoptype pushBack "market";
