@@ -6,9 +6,9 @@ taskkill /f /im arma3server.exe
 taskkill /im Bec.exe
 
 timeout 5
-if exist C:\Users\Administrator\Desktop\update (
+if exist E:\update (
 	echo update folder present
-	cd C:\Users\Administrator\Desktop\update
+	cd E:\update
 	if exist Altis_Life.Altis (
 		echo MAltis_Life.Altis folder is being updated
 		ren Altis_Life.Altis MAltis_Life.Altis	
