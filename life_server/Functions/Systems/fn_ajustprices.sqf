@@ -35,6 +35,14 @@ _market = missionNamespace getVariable "marketPrices";
 
 _good = missionNamespace getVariable format["%1price",_var];
 _itemArray = [];
+
+["diag_log",[
+    		"------------- Price Change Occurring -------------",
+    		format["Good: %1",_good],
+    		format["Quantity: %1",_amount],
+    		"------------------------------------------------"
+    	]] call TON_fnc_logIt;
+
 //we check the factor of the object
 
 _factor = SEL(_good, 6);
