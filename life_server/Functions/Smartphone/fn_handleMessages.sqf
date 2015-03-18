@@ -5,7 +5,7 @@
 
 */	
 	
-private["_msg","_to","_target","_player","_type","_msgarr"];
+private["_msg","_to","_target","_player","_type"];
 _target = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _msg = [_this,1,"",[""]] call BIS_fnc_param;
 _player = [_this,2,ObjNull,[ObjNull]] call BIS_fnc_param;
@@ -23,14 +23,7 @@ switch(_type) do
 		private["_query","_pid","_toID"];
 		_pid = getPlayerUID _player;
 		_toID = getPlayerUID _target;
-		//_msg = [_msg] call DB_fnc_mresString;
-		_msgarr = toArray(_msg);
-		{
-			if (_x == 58) then {
-				_x = 59;
-			};
-		} forEach _msgarr;
-		_msg = toString(_msgarr);
+		_msg = [_msg] call DB_fnc_mresString;
 		_fromName = name _player;
 		_toName = name _target;
 		_query = format['handleMessages:%1:%2:"%3":%4:%5',_pid,_toID,_msg,_fromName,_toName];
