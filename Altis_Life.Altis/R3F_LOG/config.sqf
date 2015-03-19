@@ -317,6 +317,7 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
  * List of class names of objects which can be carried and moved by a player.
  * Liste des noms de classes des objets qui peuvent être portés et déplacés par le joueur.
  */
-R3F_LOG_CFG_can_be_moved_by_player =
+R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 [
+	// e.g. : "MyMovableObjectClassName1", "MyMovableObjectClassName2"
 ];
