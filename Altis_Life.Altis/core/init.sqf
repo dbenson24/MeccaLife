@@ -65,6 +65,7 @@ switch (playerSide) do {
 	};
 	case independent: {
 		//Initialize Medics and blah
+		0 = execVM "IgiLoad\IgiLoadInit.sqf";
 		_handle = [] spawn life_fnc_initMedic;
 		waitUntil {scriptDone _handle};
 	};
