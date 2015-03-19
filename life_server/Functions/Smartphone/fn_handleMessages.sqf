@@ -24,8 +24,8 @@ switch(_type) do
 		_pid = getPlayerUID _player;
 		_toID = getPlayerUID _target;
 		_msg = [_msg] call DB_fnc_mresString;
-		_fromName = name _player;
-		_toName = name _target;
+		_fromName = [name _player] call DB_fnc_mresString;
+		_toName = [name _target] call DB_fnc_mresString;
 		_query = format['handleMessages:%1:%2:"%3":%4:%5',_pid,_toID,_msg,_fromName,_toName];
 		diag_log format["Query: %1",_query];
 		waitUntil{!DB_Async_Active};
