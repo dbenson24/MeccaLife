@@ -12,7 +12,7 @@ R3F_LOG_CFG_can_lift = R3F_LOG_CFG_can_lift +
 
 R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 [
-/*
+
 	"flagsmall_f",
 	"land_hbarriertower_f",
 	"land_hbarrierwall6_f",
@@ -42,7 +42,6 @@ R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 	"land_plasticbarrier_01_f",
 	"land_plasticbarrier_02_f",
 	"land_bagbunker_small_f"
-	*/
 ];
 
 R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
@@ -51,7 +50,6 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 
 R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 [
-/*
 	["flagsmall_f", 1], //
 	["land_hbarriertower_f", 8], //
 	["land_hbarrierwall6_f", 4], //
@@ -81,12 +79,10 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 	["land_plasticbarrier_01_f", 2],
 	["land_plasticbarrier_02_f", 2],
 	["land_bagbunker_small_f", 6]
-	*/
 ];
 
 R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 [
-/*
 	"flagsmall_f",
 	"land_hbarriertower_f",
 	"land_hbarrierwall6_f",
@@ -116,5 +112,4 @@ R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 	"land_plasticbarrier_01_f",
 	"land_plasticbarrier_02_f",
 	"land_bagbunker_small_f"
-	*/
 ];
