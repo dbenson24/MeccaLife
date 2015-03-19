@@ -33,7 +33,6 @@ SPY_Enable = true;
 #include "Config_Spyglass.hpp"
 
 #include "dialog\MasterHandler.h"
-#include "scripts\outlw_magRepack\MagRepack_config.hpp"
 #include "Config_Master.hpp"
 
 class RscTitles
