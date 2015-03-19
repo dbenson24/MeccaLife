@@ -5123,16 +5123,16 @@
 			<Portuguese>Hit and run</Portuguese>
 		</Key>
 		<Key ID="STR_Crime_1018">
-			<Original>Use Of Fire Arms within city limits</Original>
+			<Original>Use of Firearms in city limits</Original>
 		</Key>
 		<Key ID="STR_Crime_5447">
-			<Original>Impersonating an officer.</Original>
+			<Original>Impersonating a trooper.</Original>
 		</Key>
 		<Key ID="STR_Crime_5489">
-			<Original>MST Equipment</Original>
+			<Original>Possession of MST Equipment</Original>
 		</Key>
 		<Key ID="STR_Crime_1412">
-			<Original>Possession of an illegal Firearm</Original>
+			<Original>Possession of an illegal weapon</Original>
 		</Key>
 		<Key ID="STR_Crime_1337">
 			<Original>Weapon Trafficking</Original>
@@ -5144,13 +5144,13 @@
 			<Original>Insurance fraud</Original>
 		</Key>
 		<Key ID="STR_Crime_5894">
-		<Original>noise pollution</Original>
+		<Original>Speeding</Original>
 		</Key>
 		<Key ID="STR_Crime_4532">
-		<Original>Hate/Harrasment/verbal threats</Original>
+		<Original>Verbal threats</Original>
 		</Key>
 		<Key ID="STR_Crime_5217">
-		<Original>Disobeying a trooper.</Original>
+		<Original>Disobeying a trooper</Original>
 		</Key>
 		<Key ID="STR_Crime_481">
 			<Original>Drug Possession</Original>
@@ -5174,7 +5174,7 @@
 			<Portuguese>Drug Trafficking</Portuguese>
 		</Key>
 		<Key ID="STR_Crime_459">
-			<Original>Burglary</Original>
+			<Original>Armed Robbery</Original>
 			<German>Burglary</German>
 			<French>Burglary</French>
 			<Italian>Burglary</Italian>		
@@ -5217,7 +5217,7 @@
 		</Key>
 		
 		<Key ID="STR_Crime_1">
-			<Original>Driving without Lights</Original>
+			<Original>Driving w/o Lights or Blinkers</Original>
 			<German>Driving without Lights</German>
 			<French>Driving without Lights</French>
 			<Italian>Driving without Lights</Italian>		
@@ -5231,14 +5231,14 @@
 			<Portuguese>Driving without License</Portuguese>
 		</Key>
 		<Key ID="STR_Crime_3">
-			<Original>Driving over the Speed</Original>
+			<Original>Driving over the Speed Limit</Original>
 			<German>Driving over the Speed</German>
 			<French>Driving over the Speed</French>
 			<Italian>Driving over the Speed</Italian>		
 			<Portuguese>Driving over the Speed</Portuguese>
 		</Key>
 		<Key ID="STR_Crime_4">
-			<Original>Reckless Driving MinO</Original>
+			<Original>Reckless Driving</Original>
 			<German>Reckless Driving</German>
 			<French>Reckless Driving</French>
 			<Italian>Reckless Driving</Italian>		
@@ -5266,7 +5266,31 @@
 			<Portuguese>Attempted Murder</Portuguese>
 		</Key>
 		<Key ID="STR_Crime_8">
-			<Original>Evading Arrest</Original>
+			<Original>Resisting/Evading Arrest</Original>
+		</Key>
+		<Key ID="STR_Crime_9">
+			<Original>Driving an Illegal Vehicle</Original>
+		</Key>
+		<Key ID="STR_Crime_10">
+			<Original>Firearms w/o License</Original>
+		</Key>
+		<Key ID="STR_Crime_11">
+			<Original>Wielding Firearms in city</Original>
+		</Key>
+		<Key ID="STR_Crime_12">
+			<Original>Noise Pollution</Original>
+		</Key>
+		<Key ID="STR_Crime_13">
+			<Original>Vehicle Theft</Original>
+		</Key>
+		<Key ID="STR_Crime_13A">
+			<Original>Attempted Vehicle Theft</Original>
+		</Key>
+		<Key ID="STR_Crime_14">
+			<Original>Terroristic Actions</Original>
+		</Key>
+		<Key ID="STR_Crime_14A">
+			<Original>Terroristic Threats</Original>
 		</Key>
 	</Package>
 	<Package name="Smartphone">
