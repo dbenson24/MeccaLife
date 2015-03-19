@@ -23,6 +23,7 @@ if((FETCH_CONST(life_medicLevel)) < 1) exitWith {
         waitUntil {backpack player != "B_Carryall_oucamo"}; 
     };
 };
+_igiload = execVM "IgiLoad\IgiLoadInit.sqf";
 
 [] spawn life_fnc_INFO;
 	waitUntil{!isNull (findDisplay 999999)}; //Wait for the welcome to be open.
