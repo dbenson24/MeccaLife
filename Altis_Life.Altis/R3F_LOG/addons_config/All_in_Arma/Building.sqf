@@ -12,7 +12,6 @@ R3F_LOG_CFG_can_lift = R3F_LOG_CFG_can_lift +
 
 R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 [
-/*
 	"land_misc_cargo1a_ep1",
 	"land_misc_cargo1ao",
 	"land_misc_cargo1ao_ep1",
@@ -32,12 +31,10 @@ R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 	"misc_cargo_cont_net1",
 	"misc_cargo_cont_small",
 	"misc_cargo_cont_small2"
-	*/
 ];
 
 R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 [
-/*
 	["land_misc_cargo1ao", 110],
 	["land_misc_cargo1a_ep1", 110],
 	["land_misc_cargo1ao_ep1", 110],
@@ -58,12 +55,10 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["warfarebcamp", 30],
 	["misc_cargo_cont_small", 65],
 	["misc_cargo_cont_small2", 50]
-	*/
 ];
 
 R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 [
-/*
 	["concrete_wall_ep1", 3],
 	["fencewood", 1],
 	["fencewoodpalet", 1],
@@ -129,12 +124,10 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 	["misc_cargo_cont_small2", 60],
 	["shed", 2],
 	["target", 2]
-	*/
 ];
 
 R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 [
-/*
 	"concrete_wall_ep1",
 	"fencewood",
 	"fencewoodpalet",
@@ -175,5 +168,4 @@ R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 	"misc_cargo_cont_net1",
 	"shed",
 	"target"
-	*/
 ];
