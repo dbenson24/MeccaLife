@@ -260,7 +260,7 @@ R3F_LOG_CFG_can_be_towed = R3F_LOG_CFG_can_be_towed +
  * List of class names of helicopters which can lift objects.
  * Liste des noms de classes des hélicoptères pouvant héliporter des objets.
  */
-R3F_LOG_CFG_can_lift =
+R3F_LOG_CFG_can_lift = R3F_LOG_CFG_can_lift +
 [
 ];
 
