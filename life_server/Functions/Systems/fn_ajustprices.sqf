@@ -58,7 +58,7 @@ if (_factor == 0) exitwith {};//the factor 0 is not a real group
     };
 } forEach _market;
 
-_sellingfactor =((count _itemArray)-1);
+_sellingfactor =((count _itemArray)-1
 
 
 {

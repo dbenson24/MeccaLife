@@ -9,3 +9,8 @@ Rebel Island
 Admin Panel
 Ledger System
 
+Bugs:
+Towing for medics
+Medics check registration
+
+
