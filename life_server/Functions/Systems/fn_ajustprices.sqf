@@ -38,7 +38,6 @@ _itemArray = [];
 if (_type == 0) then {
     ["diag_log",[
         		"------------- Price Change Occurring -------------",
-        		format["Player: %1",name _unit],
         		format["Good: %1",_good],
         		format["Quantity: %1",_amount],
         		"------------------------------------------------"
