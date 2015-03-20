@@ -12,7 +12,7 @@ life_versionInfo = "Altis Life RPG v4.0";
 [] execVM "scripts\fn_statusBar.sqf";
 [] execVM "scripts\welcome.sqf"; 
 [] execVM "scripts\teargas.sqf"; 
-
+0 = execVM "IgiLoad\IgiLoadInit.sqf";
 
 
 //LIONS.. hiding custom markerse... rawr..? fk em

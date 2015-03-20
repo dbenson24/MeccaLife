@@ -64,7 +64,7 @@ if((life_veh_shop select 0) == "med_air_hs") then {
 	_vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
 } else {
 	_sp = getMarkerPos _spawnPoint;
-	_sp set [2,1];
+	_sp set [2,0.3];
 	_vehicle = createVehicle [_className, _sp, [], 0, "NONE"];
 	waitUntil {!isNil "_vehicle"}; //Wait?
 	_vehicle allowDamage false; //Temp disable damage handling..
