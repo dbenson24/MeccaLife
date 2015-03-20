@@ -38,7 +38,6 @@ _itemArray = [];
 if (_type == 0) then {
     ["diag_log",[
         		"------------- Price Change Occurring -------------",
-        		format["Player: %1",name _unit],
         		format["Good: %1",_good],
         		format["Quantity: %1",_amount],
         		"------------------------------------------------"
@@ -59,7 +58,7 @@ if (_factor == 0) exitwith {};//the factor 0 is not a real group
     };
 } forEach _market;
 
-_sellingfactor =((count _itemArray)-1);
+_sellingfactor =((count _itemArray)-1
 
 
 {

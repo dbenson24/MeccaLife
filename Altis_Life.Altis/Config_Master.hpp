@@ -71,7 +71,7 @@ class Life_Settings {
 		{"STR_Crime_8","20000","8"},
 		{"STR_Crime_9","30000","9"},
 		{"STR_Crime_10","30000","10"},
-		{"STR_Crime_11","2000","11"},,
+		{"STR_Crime_11","2000","11"},
 		{"STR_Crime_12","5000","12"},
 		{"STR_Crime_13","8000","13"},
 		{"STR_Crime_13A","4000","13A"},
