@@ -21,11 +21,13 @@ if((GVAR_UINS ["Weapon_Shop_Filter",0]) == 1) then {
 		_price = 0;
 	} else {
 		_price = SEL(SEL(_sellArray,_iS),1);
+		_price = _price * life_donDis;
 	};
 	_priceTag ctrlSetStructuredText parseText format ["<t size='0.8'>Price: <t color='#8cff9b'>$%1</t></t>",[(_price)] call life_fnc_numberText];
 	_control lbSetValue[_index,_price];
 } else {
 	_price = _control lbValue _index;
+	_price = _price * life_donDis;
 	if(_price > CASH) then {
 		_priceTag ctrlSetStructuredText parseText format ["<t size='0.8'>Price: <t color='#ff0000'>$%1</t><br/>You lack: <t color='#8cff9b'>$%2</t></t>",[(_price)] call life_fnc_numberText,[(_price - CASH)] call life_fnc_numberText];
 	} else {
