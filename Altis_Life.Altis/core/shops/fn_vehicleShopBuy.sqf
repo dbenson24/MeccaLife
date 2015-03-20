@@ -6,7 +6,7 @@
 	Description:
 	Does something with vehicle purchasing.
 */
-private["_mode","_spawnPoints","_className","_basePrice","_colorIndex","_spawnPoint","_vehicle","_shopSide","_license","_sp","_vh","_box","_offset"];
+private["_mode","_spawnPoints","_className","_basePrice","_colorIndex","_spawnPoint","_vehicle","_shopSide","_license","_sp","_vh","_box","_offset","_sp"];
 _mode = SEL(_this,0);
 if((lbCurSel 2302) == -1) exitWith {hint localize "STR_Shop_Veh_DidntPick"};
 _className = lbData[2302,(lbCurSel 2302)];
@@ -63,13 +63,15 @@ if((life_veh_shop select 0) == "med_air_hs") then {
 	[[_vehicle,"vehicle_info_owners",[[getPlayerUID player,profileName]],true],"TON_fnc_setObjVar",false,false] call life_fnc_MP;
 	_vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
 } else {
-	_vehicle = createVehicle [_className, (getMarkerPos _spawnPoint), [], 0, "NONE"];
+	_sp = getMarkerPos _spawnPoint;
+	_sp set [2,1];
+	_vehicle = createVehicle [_className, _sp, [], 0, "NONE"];
 	waitUntil {!isNil "_vehicle"}; //Wait?
 	_vehicle allowDamage false; //Temp disable damage handling..
 	_vehicle lock 2;
-	_vehicle setVectorUp (surfaceNormal (getMarkerPos _spawnPoint));
+	_vehicle setVectorUp (surfaceNormal _sp);
 	_vehicle setDir (markerDir _spawnPoint);
-	_vehicle setPos (getMarkerPos _spawnPoint);
+	_vehicle setPos (_sp);
 	[[_vehicle,_colorIndex],"life_fnc_colorVehicle",true,false] call life_fnc_MP;
 	[_vehicle] call life_fnc_clearVehicleAmmo;
 	[[_vehicle,"trunk_in_use",false,true],"TON_fnc_setObjVar",false,false] call life_fnc_MP;
