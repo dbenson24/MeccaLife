@@ -2716,7 +2716,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Fish Market"",life_fnc_virt_menu,""fishmarket""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Fish Market"",life_fnc_virt_menu,""fish""];";
 				};
 				class Item40
 				{
