@@ -119,12 +119,12 @@ class Life_upgrade_car
 			y = 0.313 * safezoneH + safezoneY;
 			w = 0.0825 * safezoneW;
 			h = 0.044 * safezoneH;
-			onSliderPosChanged = "ctrlSetText [5511, round(sliderPosition 5501)]";
+			onSliderPosChanged = "ctrlSetText [5511, round(sliderPosition 5501)];";
 		};
 		class TrunkLevel : Life_RscText
 		{
 			idc = 5511;
-			text = "4"; //--- ToDo : Localize;
+			//text = "4"; //--- ToDo : Localize;
 			x = 0.628906 * safezoneW + safezoneX;
 			y = 0.302 * safezoneH + safezoneY;
 			w = 0.0360937 * safezoneW;
@@ -137,12 +137,12 @@ class Life_upgrade_car
 			y = 0.379 * safezoneH + safezoneY;
 			w = 0.0825 * safezoneW;
 			h = 0.044 * safezoneH;
-			onSliderPosChanged = "ctrlSetText [5512, round(sliderPosition 5502)]";
+			onSliderPosChanged = "ctrlSetText [5512, round(sliderPosition 5502)];";
 		};
 		class InsuranceLevel : Life_RscText
 		{
 			idc = 5512;
-			text = "3"; //--- ToDo : Localize;
+			//text = "3"; //--- ToDo : Localize;
 			x = 0.628906 * safezoneW + safezoneX;
 			y = 0.368 * safezoneH + safezoneY;
 			w = 0.0360937 * safezoneW;
@@ -186,7 +186,8 @@ class Life_upgrade_car
 		class CancelButton : Life_RscButtonMenu
 		{
 			idc = 2401;
-			text = "Cancel"; //--- ToDo : Localize;
+			text = "$STR_Global_Close";
+			onButtonClick = "closeDialog 0;";
 			x = 0.4175 * safezoneW + safezoneX;
 			y = 0.577 * safezoneH + safezoneY;
 			w = 0.0515625 * safezoneW;
