@@ -9,7 +9,7 @@ switch (_mode) do
 	{
 	    _ins = round(sliderPosition 5502);
 		ctrlSetText[5512,format["%1",round(_ins)]];
-		_trunk = round(slidePosition 5501);
+		_trunk = round(sliderPosition 5501);
 		ctrlSetText[5511,format["%1",round(_trunk)]];
 	};
 	
