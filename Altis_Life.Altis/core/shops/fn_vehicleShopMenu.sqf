@@ -41,7 +41,6 @@ ctrlShow [2304,false];
 {
 	_className = SEL(_x,0);
 	_basePrice = SEL(_x,1);
-	_basePrice = _basePrice * life_donDis;
 	_levelData = SEL(_x,3);
 	_passOver = false;
 	

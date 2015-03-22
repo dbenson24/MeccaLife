@@ -18,6 +18,7 @@ _vIndex = _control lbValue _index;
 
 _vehicleList = M_CONFIG(getArray,"CarShops",SEL(life_veh_shop,0),"vehicles");
 _basePrice = SEL(SEL(_vehicleList,_vIndex),1);
+_basePrice = _basePrice * life_donDis;
 
 _vehicleInfo = [_className] call life_fnc_fetchVehInfo;
 _trunkSpace = [_className] call life_fnc_vehicleWeightCfg;
