@@ -182,6 +182,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 		player addVest "V_PlateCarrier1_blk";
 		player addWeapon "arifle_MXM_F";
 		player addPrimaryWeaponItem "optic_Hamr";
+		player addPrimaryWeaponItem "acc_flashlight";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
 		player addMagazine "30Rnd_65x39_caseless_mag_Tracer";

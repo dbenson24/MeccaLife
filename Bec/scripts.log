@@ -1,0 +1,2 @@
+06.02.2015 09:51:37: Cal (99.231.48.11:2304) 88298b1b41dcf2df03f809d4639a6742 - #0 "this allowDamage false; this enableSimulation false; this addAction[format["%1 ($%2)",localize (getText(missionConfigFile >> "Li"
+06.02.2015 10:27:21: Cal (99.231.48.11:2304) 88298b1b41dcf2df03f809d4639a6742 - #0 "this allowDamage false; this enableSimulation false; this addAction[format["%1 ($%2)",localize (getText(missionConfigFile >> "Li"

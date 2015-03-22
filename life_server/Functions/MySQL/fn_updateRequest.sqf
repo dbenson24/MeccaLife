@@ -33,7 +33,7 @@ for "_i" from 0 to count(_licenses)-1 do {
 switch (_side) do {
 	case west: {_query = format["playerWestUpdate:%1:%2:%3:%4:%5:%6",_name,_cash,_bank,_gear,_licenses,_uid];};
 	case civilian: {_query = format["playerCivilianUpdate:%1:%2:%3:%4:%6:%7:%5",_name,_cash,_bank,_licenses,_uid,_gear,[_this select 7] call DB_fnc_bool];};
-	case independent: {_query = format["playerWestUpdate:%1:%2:%3:%4:%6:%5",_name,_cash,_bank,_licenses,_uid,_gear];};
+	case independent: {_query = format["playerIndependentUpdate:%1:%2:%3:%4:%6:%5",_name,_cash,_bank,_licenses,_uid,_gear];};
 };
 
 waitUntil {sleep (random 0.3); !DB_Async_Active};

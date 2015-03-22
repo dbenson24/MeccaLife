@@ -19,6 +19,8 @@ _name = name _unit;
 _side = side _unit;
 _unit = owner _unit;
 
+_sp set [2,0.3];
+
 if(EQUAL(_vid,-1) OR EQUAL(_pid,"")) exitWith {};
 if(_vid in serv_sv_use) exitWith {};
 serv_sv_use pushBack _vid;

@@ -61,29 +61,39 @@ class Life_Settings {
 	delivery_points[] = { "dp_1", "dp_2", "dp_3", "dp_4", "dp_5", "dp_6", "dp_7", "dp_8", "dp_9", "dp_10", "dp_11", "dp_12", "dp_13", "dp_14", "dp_15", "dp_15", "dp_16", "dp_17", "dp_18", "dp_19", "dp_20", "dp_21", "dp_22", "dp_23", "dp_24", "dp_25" };
 
 	crimes[] = { 
-		{"STR_Crime_1","350","1"}, 
+		{"STR_Crime_1","2000","1"}, 
 		{"STR_Crime_2","1500","2"}, 
 		{"STR_Crime_3","2500","3"}, 
-		{"STR_Crime_4","3500","4"}, 
+		{"STR_Crime_4","5000","4"}, 
 		{"STR_Crime_5","10000","5"}, 
 		{"STR_Crime_6","5000","6"}, 
 		{"STR_Crime_7","10000","7"},
+		{"STR_Crime_8","20000","8"},
+		{"STR_Crime_9","30000","9"},
+		{"STR_Crime_10","30000","10"},
+		{"STR_Crime_11","2000","11"},
+		{"STR_Crime_12","5000","12"},
+		{"STR_Crime_13","8000","13"},
+		{"STR_Crime_13A","4000","13A"},
+		{"STR_Crime_14","120000","14"},
+		{"STR_Crime_14A","20000","14A"},
+		{"STR_Crime_459","15000","459"},
 		{"STR_Crime_213","35000","213"},
 		{"STR_Crime_390","45000","390"},
-		{"STR_Crime_207A","55000","207A"},
+		{"STR_Crime_207A","50000","207A"},
 		{"STR_Crime_667","55000","667"},
 		{"STR_Crime_668","5000","668"},
-		{"STR_Crime_8","10000","8"},
 		{"STR_Crime_5447","25000","5447"},
 		{"STR_Crime_5489","25000","5489"},
-		{"STR_Crime_1412","20000","1412"},
+		{"STR_Crime_1412","50000","1412"},
 		{"STR_Crime_1337","50000","1337"},
 		{"STR_Crime_13371","100000","13371"},
 		{"STR_Crime_1018","5000","1018"},
-		{"STR_Crime_4389","15000","4389"},
+		{"STR_Crime_4389","20000","4389"},
 		{"STR_Crime_5894","25000","5894"},
-		{"STR_Crime_4532","5000","4532"},
-		{"STR_Crime_5217","25000","5217"}
+		{"STR_Crime_4532","10000","4532"},
+		{"STR_Crime_5217","10000","5217"},
+		{"STR_Crime_5894","2000","5894"}
 	};
 		
 	sellArray[] = {
@@ -97,7 +107,9 @@ class Life_Settings {
 									"goldbarp","heliblastcharge","lostcargo","goldBar","blastingCharge","boltCutter","oilUnprocessed",
 									"oilProcessed","copperUnrefined","copperRefined","ironUnrefined","ironRefined","saltUnrefined",
 									"saltRefined","sand","glass","diamondUncut","diamondCut","rock","cement","mushroom","largesoda",
-									"ziptie","gpstracker","speedbomb","bottledwhiskey","bottledshine","bottledbeer"
+									"ziptie","gpstracker","speedbomb","bottledwhiskey","bottledshine","bottledbeer","rabbit_raw","salema_raw","ornate_raw",
+									"mackerel_raw","tuna_raw","mullet_raw","catshark_raw","turtle_raw","hen_raw","rooster_raw","sheep_raw",
+									"goat_raw"
 									};
 };
 
@@ -284,7 +296,7 @@ class VirtualShops {
 		items[] = { "oil_processed", "pickaxe", "fuelFull" };
 	};
 
-	class fishmarket {
+	class fish {
 		name = "STR_Shops_FishMarket";
 		items[] = { "salema_raw", "salema_grilled", "ornate_raw", "ornate_grilled", "mackerel_raw", "mackerel_grilled", "tuna_raw", "tuna_grilled", "mullet_raw", "mullet_fried", "catshark_raw", "catshark_fried" };
 	};
@@ -327,6 +339,16 @@ class VirtualShops {
 	class vigilante {
 		name = "STR_Shops_Vigilante";
 		items[] = { "waterBottle", "apple", "peach", "redgull", "tbacon", "ziptie" };
+	};
+	
+	class turtle {
+		name = "Wong's Turtle Cart";
+		items[] = {"Nothing"};
+	};
+	
+	class hunting {
+		name = "Honest Abe's Butcher";
+		items[] = {"Nothing"};
 	};
 };
 

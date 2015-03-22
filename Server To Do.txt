@@ -1,0 +1,28 @@
+-Steam CMD - https://developer.valvesoftware.com/wiki/SteamCMD - C:/SteamCMD
+	+login <username>
+	+<password>
+	+<validation code>
+	+force_install_dir D:/arma3server
+	+app_update 107410 validate
+
+-Altis Life Files - Github
+Copy @extDB, Altis_Life.Altis, life_server to core directory
+
+-WinRAR - http://www.rarlab.com/download.htm
+
+-MySQL - http://dev.mysql.com/downloads/mysql/
+	+Not to sure of the order and was unable to find the repo containing the original database
+
+-Navicat Lite - http://premiumsoft-navicat-lite.software.informer.com/
+
+-PBO Manager - http://www.armaholic.com/page.php?id=16369
+
+-Notepad++ - http://notepad-plus-plus.org/download/v6.7.5.html
+
+-Github - https://windows.github.com/
+
+-BEC
+	+add 	127.0.0.1 ibattle.org
+		127.0.0.1 www.ibattle.org
+
+	to 	C:\Windows\System32\drivers\etc\hosts

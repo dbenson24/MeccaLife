@@ -34,6 +34,7 @@ if((uiNamespace getVariable["Weapon_Shop_Filter",0]) == 1) then
 }
 	else
 {
+	//_price = _price * life_donDis;
 	private["_hideout"];
 	_hideout = (nearestObjects[getPosATL player,["Land_u_Barracks_V2_F","Land_i_Barracks_V2_F"],25]) select 0;
 	if(!isNil "_hideout" && {!isNil {grpPlayer getVariable "gang_bank"}} && {(grpPlayer getVariable "gang_bank") >= _price}) then {

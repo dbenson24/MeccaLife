@@ -24,12 +24,12 @@ private["_query","_queryResult","_units","_wanted"];
         waitUntil{!DB_Async_Active};
         _queryResult = [_query,2] call DB_fnc_asyncCall;
         
-        ["diag_log",[
+        /*["diag_log",[
     		"------------- Wanted Sync Table Request -------------",
     		format["QUERY: %1",_query],
     		format["Result: %1",_queryResult],
     		"------------------------------------------------"
-    	]] call TON_fnc_logIt;
+    	]] call TON_fnc_logIt;*/
     	
         if (!(EQUAL(_queryResult,[]))) then {
     	    _wanted pushBack _queryResult;

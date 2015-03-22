@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<Scheduler>
+
+<job id='0'>
+<day>1,2,3,4,5,6,7</day>
+<start>023000</start>
+<runtime>030000</runtime>
+<loop>0</loop>
+<cmd>say -1 Server will restart in 30 minutes.</cmd>
+</job>
+
+<job id='1'>
+<day>1,2,3,4,5,6,7</day>
+<start>024500</start>
+<runtime>030000</runtime>
+<loop>0</loop>
+<cmd>say -1 Server will restart in 15 minutes.</cmd>
+</job>
+
+<job id='2'>
+<day>1,2,3,4,5,6,7</day>
+<start>025000</start>
+<runtime>030000</runtime>
+<loop>0</loop>
+<cmd>say -1 Server will restart in 5 minutes.</cmd>
+</job>
+
+<job id='3'>
+<day>1,2,3,4,5,6,7</day>
+<start>025900</start>
+<runtime>030000</runtime>
+<loop>0</loop>
+<cmd>say -1 Server will restart in 1 minute.</cmd>
+</job>
+
+<job id='4'>
+<day>1,2,3,4,5,6,7</day>
+<start>030000</start>
+<runtime>030000</runtime>
+<loop>0</loop>
+<cmd>E:\_arma3serverData\configs\Startup.bat</cmd>
+</job>
+
+</Scheduler>

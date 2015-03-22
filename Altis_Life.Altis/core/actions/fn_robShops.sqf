@@ -53,9 +53,9 @@ if(_rip) then
         sleep  2.50;
         _cP = _cP + 0.01;
         _progress progressSetPosition _cP;
-        _pgText ctrlSetText format["Robbery in Progress, stay close (5m) (%1%2)...",round(_cP * 100),"%"];
+        _pgText ctrlSetText format["Robbery in Progress, stay close (15m) (%1%2)...",round(_cP * 100),"%"];
         if(_cP >= 1) exitWith {};
-        if(_robber distance _shop > 5) exitWith { };
+        if(_robber distance _shop > 17) exitWith { };
         if!(alive _robber) exitWith {};
 		playSound3D ["A3\Sounds_F\sfx\alarm_independent.wss", player];
     }; // the loop continues til the progressbar is full, distance is exceeded or robber dies. 
@@ -63,7 +63,7 @@ if(_rip) then
 
 	deleteMarker "Marker200"; 
     if!(alive _robber) exitWith { _rip = false; };
-    if(_robber distance _shop > 5) exitWith { hint "You need to stay within 5m to Rob registry! - Now the registry is locked."; 5 cutText ["","PLAIN"]; _rip = false; };
+    if(_robber distance _shop > 17) exitWith { hint "You need to stay within 15m to Rob registry! - Now the registry is locked."; 5 cutText ["","PLAIN"]; _rip = false; };
     5 cutText ["","PLAIN"];
     titleText[format["You have stolen $%1, now get away before the cops arrive!",[_kassa] call life_fnc_numberText],"PLAIN"];
     life_cash = life_cash + _kassa; 
