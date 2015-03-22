@@ -723,9 +723,6 @@ class Life_RscEdit {
 };
 
 class Life_RscSlider {
-	deletable = 0;
-	fade = 0;
-	access = 0;
 	type = 3;
 	style = 1024;
 	w = 0.3;
