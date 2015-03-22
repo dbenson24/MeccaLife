@@ -119,6 +119,7 @@ class Life_upgrade_car
 			y = 0.313 * safezoneH + safezoneY;
 			w = 0.0825 * safezoneW;
 			h = 0.044 * safezoneH;
+			onSliderPosChanged = "ctrlSetText [5511, round(sliderPosition 5501)]";
 		};
 		class TrunkLevel : Life_RscText
 		{
@@ -136,6 +137,7 @@ class Life_upgrade_car
 			y = 0.379 * safezoneH + safezoneY;
 			w = 0.0825 * safezoneW;
 			h = 0.044 * safezoneH;
+			onSliderPosChanged = "ctrlSetText [5512, round(sliderPosition 5502)]";
 		};
 		class InsuranceLevel : Life_RscText
 		{

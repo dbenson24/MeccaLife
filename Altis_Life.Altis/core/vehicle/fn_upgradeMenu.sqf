@@ -11,10 +11,24 @@ disableSerialization;
 private["_nearVehicles","_control"];
 _nearVehicles = nearestObjects [getMarkerPos (_this select 3),["Car","Truck","Air","Ship"],25];
 
-life_chopShop = SEL(_this,3);
 //Error check
-if(EQUAL(count _nearVehicles,0)) exitWith {titleText[localize "STR_Shop_NoVehNear","PLAIN"];};
-if(!(createDialog "Life_upgrade_car")) exitWith {hint localize "Upgrade Menu Error"};
+if(EQUAL(count _nearVehicles,0)) exitWith {titleText["No Vehicle Near to Upgrade","PLAIN"];};
+if(!(createDialog "Life_upgrade_car")) exitWith {hint "Upgrade Menu Error"};
+
+_display = findDisplay 5500;
+_trunkslider = 5501;
+_trunklevel = 5511;
+_insslider = 5502;
+_inslevel = 5512;
+_securecheck = 5503;
+_hookcheck = 5504;
+_gpscheck = 5505;
+
+sliderSetRange [_trunkslider, 0, 4];
+sliderSetRange [_insslider, 0, 3];
+
+sliderSetSpeed [_trunkslider, 1, 1];
+sliderSetSpeed [_insslider, 1, 1];
 
 /*
 _control = CONTROL(39400,39402);
