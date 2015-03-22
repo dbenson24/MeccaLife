@@ -16,6 +16,7 @@ life_chopShop = SEL(_this,3);
 if(EQUAL(count _nearVehicles,0)) exitWith {titleText[localize "STR_Shop_NoVehNear","PLAIN"];};
 if(!(createDialog "Life_upgrade_car")) exitWith {hint localize "Upgrade Menu Error"};
 
+/*
 _control = CONTROL(39400,39402);
 {
 	if(alive _x) then {
@@ -33,3 +34,4 @@ _control = CONTROL(39400,39402);
 		};
 	};
 } foreach _nearVehicles;
+*/
