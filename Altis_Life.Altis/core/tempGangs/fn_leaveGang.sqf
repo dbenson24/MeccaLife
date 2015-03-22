@@ -42,6 +42,9 @@ if(rank player != "PRIVATE") then
 	player setRank "PRIVATE";
 };
 [player] joinSilent (createGroup civilian);
+
 hint "You have left your group.";
+
+[] spawn life_fnc_initGang;
 
 closeDialog 0;
