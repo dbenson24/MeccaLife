@@ -119,7 +119,7 @@ class Life_upgrade_car
 			y = 0.313 * safezoneH + safezoneY;
 			w = 0.0825 * safezoneW;
 			h = 0.044 * safezoneH;
-			onSliderPosChanged = "[0,-1] call life_fnc_upgradeMenuChange;";
+			onSliderPosChanged = "[0] call life_fnc_upgradeMenuChange;";
 		};
 		class TrunkLevel : Life_RscText
 		{
@@ -138,7 +138,7 @@ class Life_upgrade_car
 			w = 0.0825 * safezoneW;
 			h = 0.044 * safezoneH;
 		//	onSliderPosChanged = "ctrlSetText [5512, round(sliderPosition 5502)];";
-			onSliderPosChanged = "[0,-1] call life_fnc_upgradeMenuChange;";
+			onSliderPosChanged = "[0] call life_fnc_upgradeMenuChange;";
 
 		};
 		class InsuranceLevel : Life_RscText
@@ -150,47 +150,34 @@ class Life_upgrade_car
 			w = 0.0360937 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
-		class SecurityCheck : Life_RscButtonMenu
+		class SecurityCheck : Life_RscCheckbox
 		{
 			idc = 5503;
-			text = "Off"; //--- ToDo: Localize;
-			onButtonClick = "[0,0] call life_fnc_upgradeMenuChange;";
-			x = 0.402031 * safezoneW + safezoneX;
+			x = 0.412344 * safezoneW + safezoneX;
 			y = 0.467 * safezoneH + safezoneY;
-			w = 0.0257812 * safezoneW;
+			w = 0.0154688 * safezoneW;
 			h = 0.022 * safezoneH;
-			colorBackground[] = {0.35,0,0,0.7};
-			colorActive[] = {0.35,0,0,0.7};
 		};
-		class HooksCheck : Life_RscButtonMenu
+		class HooksCheck : Life_RscCheckbox
 		{
 			idc = 5504;
-			text = "Off"; //--- ToDo: Localize;
-			onButtonClick = "[0,1] call life_fnc_upgradeMenuChange;";
 			x = 0.515469 * safezoneW + safezoneX;
 			y = 0.467 * safezoneH + safezoneY;
-			w = 0.0257812 * safezoneW;
+			w = 0.0154688 * safezoneW;
 			h = 0.022 * safezoneH;
-			colorBackground[] = {0.35,0,0,0.7};
-			colorActive[] = {0.35,0,0,0.7};
 		};
-		class GPSCheck : Life_RscButtonMenu
+		class GPSCheck : Life_RscCheckbox
 		{
 			idc = 5505;
-			text = "Off"; //--- ToDo: Localize;
-			onButtonClick = "[0,2] call life_fnc_upgradeMenuChange;";
-			x = 0.634062 * safezoneW + safezoneX;
+			x = 0.62375 * safezoneW + safezoneX;
 			y = 0.467 * safezoneH + safezoneY;
-			w = 0.0257812 * safezoneW;
+			w = 0.0154688 * safezoneW;
 			h = 0.022 * safezoneH;
-			colorBackground[] = {0.35,0,0,0.7};
-			colorActive[] = {0.35,0,0,0.7};
 		};
 		class ConfirmButton : Life_RscButtonMenu
 		{
 			idc = 2400;
 			text = "Confirm"; //--- ToDo : Localize;
-			onButtonClick = "[0] call life_fnc_upgradeMenuChange;";
 			x = 0.510312 * safezoneW + safezoneX;
 			y = 0.577 * safezoneH + safezoneY;
 			w = 0.0464063 * safezoneW;

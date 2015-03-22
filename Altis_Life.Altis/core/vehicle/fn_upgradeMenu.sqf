@@ -30,10 +30,6 @@ sliderSetRange [_insslider, 0, 3];
 sliderSetSpeed [_trunkslider, 1, 1];
 sliderSetSpeed [_insslider, 1, 1];
 
-gps = false;
-security = false;
-hooks = false;
-
 /*
 _control = CONTROL(39400,39402);
 {
