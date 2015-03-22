@@ -303,6 +303,7 @@ class Life_Client_Core
 		class blinkerleft {};
 		class blinkerright {};
 		class warnblinker {};
+		class upgradeMenu {};
 	};
 	
 	class Cop

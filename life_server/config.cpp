@@ -200,7 +200,13 @@ class CfgFunctions
 			class handleMessages {};
 			class msgRequest {};
 			class cleanupMessages {};
-		};    
+		};
+		
+		class VehUpgrades
+		{
+			file "\life_server\Functions\VehicleUpgrades";
+			class updateUpgrades {};
+		}
 	};
 };
 

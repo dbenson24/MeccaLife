@@ -1,4 +1,4 @@
-class VehicleUpgrade
+class Life_upgrade_car
 {
 	idd = 5500;
 	name = "VehicleUpgrade";
@@ -114,7 +114,7 @@ class VehicleUpgrade
 	{
 		class TrunkSlider: Life_RscSlider
 		{
-			idc = 1900;
+			idc = 5501;
 			x = 0.432969 * safezoneW + safezoneX;
 			y = 0.313 * safezoneH + safezoneY;
 			w = 0.0825 * safezoneW;
@@ -122,7 +122,7 @@ class VehicleUpgrade
 		};
 		class TrunkLevel: Life_RscText
 		{
-			idc = 1004;
+			idc = 5511;
 			text = "4"; //--- ToDo: Localize;
 			x = 0.628906 * safezoneW + safezoneX;
 			y = 0.302 * safezoneH + safezoneY;
@@ -131,7 +131,7 @@ class VehicleUpgrade
 		};
 		class InsuranceSlider: Life_RscSlider
 		{
-			idc = 1902;
+			idc = 5502;
 			x = 0.432969 * safezoneW + safezoneX;
 			y = 0.379 * safezoneH + safezoneY;
 			w = 0.0825 * safezoneW;
@@ -139,7 +139,7 @@ class VehicleUpgrade
 		};
 		class InsuranceLevel: Life_RscText
 		{
-			idc = 1006;
+			idc = 5512;
 			text = "3"; //--- ToDo: Localize;
 			x = 0.628906 * safezoneW + safezoneX;
 			y = 0.368 * safezoneH + safezoneY;
@@ -148,7 +148,7 @@ class VehicleUpgrade
 		};
 		class SecurityCheck: Life_RscCheckbox
 		{
-			idc = 2800;
+			idc = 5503;
 			x = 0.412344 * safezoneW + safezoneX;
 			y = 0.467 * safezoneH + safezoneY;
 			w = 0.0154688 * safezoneW;
@@ -156,7 +156,7 @@ class VehicleUpgrade
 		};
 		class HooksCheck: Life_RscCheckbox
 		{
-			idc = 2801;
+			idc = 5504;
 			x = 0.515469 * safezoneW + safezoneX;
 			y = 0.467 * safezoneH + safezoneY;
 			w = 0.0154688 * safezoneW;
@@ -164,7 +164,7 @@ class VehicleUpgrade
 		};
 		class GPSCheck: Life_RscCheckbox
 		{
-			idc = 2802;
+			idc = 5505;
 			x = 0.62375 * safezoneW + safezoneX;
 			y = 0.467 * safezoneH + safezoneY;
 			w = 0.0154688 * safezoneW;
