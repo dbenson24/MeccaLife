@@ -304,6 +304,7 @@ class Life_Client_Core
 		class blinkerright {};
 		class warnblinker {};
 		class upgradeMenu {};
+		class upgradeMenuChange {};
 	};
 	
 	class Cop
