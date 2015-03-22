@@ -1,6 +1,6 @@
 /*
 	fn_newLifeRule.sqf
-	LIONS. fk server
+	Derek
 */
 private["_uiDisp","_time","_timer"];
 disableSerialization;

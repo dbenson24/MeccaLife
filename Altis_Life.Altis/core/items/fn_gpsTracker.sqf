@@ -1,6 +1,6 @@
 /*
 	File: fn_gpsTracker.sqf
-	Author: LIONS
+	Author: Derek
 	Description: Attaches a GPS tracker to selected vehicle
 */
 private["_unit"];
