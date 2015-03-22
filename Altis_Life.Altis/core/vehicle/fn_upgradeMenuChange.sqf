@@ -1,5 +1,5 @@
 private["_mode","_price","_ins","_trunk"];
-_mode = [_this,1,-1,[0]] call BIS_fnc_param;
+_mode = [_this,0,-1,[0]] call BIS_fnc_param;
 if(_mode == -1 OR _value == -1 OR _type == -1) exitWith {};
 disableSerialization;
 
