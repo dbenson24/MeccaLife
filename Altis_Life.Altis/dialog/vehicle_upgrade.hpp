@@ -112,7 +112,7 @@ class Life_upgrade_car
 	
 	class Controls
 	{
-		class TrunkSlider : Life_RscSlider
+		class TrunkSlider : Life_RscXSliderH
 		{
 			idc = 5501;
 			x = 0.432969 * safezoneW + safezoneX;
@@ -130,7 +130,7 @@ class Life_upgrade_car
 			w = 0.0360937 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
-		class InsuranceSlider : Life_RscSlider
+		class InsuranceSlider : Life_RscXSliderH
 		{
 			idc = 5502;
 			x = 0.432969 * safezoneW + safezoneX;
