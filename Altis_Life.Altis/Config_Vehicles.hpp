@@ -876,7 +876,7 @@ class CfgVehicles {
         };
     };
     
-    class B_SDV_01_F {
+    class B_SDV_01_F : Default {
         vItemSpace = 100;
         price = psdv;
     }
