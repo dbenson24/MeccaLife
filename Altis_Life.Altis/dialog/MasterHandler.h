@@ -35,4 +35,5 @@
 #include "v_useItem.h"
 #include "prision_list.hpp"
 #include "group.hpp"
+#include "vehicle_upgrade.hpp"
 
