@@ -206,7 +206,7 @@ class CfgFunctions
 		{
 			file "\life_server\Functions\VehicleUpgrades";
 			class updateUpgrades {};
-		}
+		};
 	};
 };
 
