@@ -1,7 +1,7 @@
 class Life_upgrade_car
 {
 	idd = 5500;
-	name = "VehicleUpgrade";
+	name = "Life_upgrade_car";
 	movingEnable = false;
 	enableSimulation = true;
 	
