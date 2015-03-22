@@ -514,27 +514,138 @@ class Life_RscShortcutButtonMain : Life_RscShortcutButton {
 
 class Life_RscCheckbox {
 	idc = -1;
-	type = 7;
+	type = 77;
 	style = 0;
-	x = "LINE_X(XVAL)";
-	y = LINE_Y;
-	w = "LINE_W(WVAL)";
-	h = 0.029412;
-	colorText[] = {1, 0, 0, 1};
-	color[] = {0, 0, 0, 0};
-	colorBackground[] = {0, 0, 1, 1};
-	colorTextSelect[] = {0, 0.8, 0, 1};
-	colorSelectedBg[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 1};
-	colorSelect[] = {0, 0, 0, 1};
-	colorTextDisable[] = {0.4, 0.4, 0.4, 1};
-	colorDisable[] = {0.4, 0.4, 0.4, 1};
-	font = "PuristaMedium";
-	sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
-	rows = 1;
-	columns = 1;
-	5ns = 1;
-	strings[] = {UNCHECKED};
-	checked_strings[] = {CHECKED};
+	checked = 0;
+	x = "0.375 * safezoneW + safezoneX";
+	y = "0.36 * safezoneH + safezoneY";
+	w = "0.025 * safezoneW";
+	h = "0.04 * safezoneH";
+	color[] = 
+	{
+		1,
+		1,
+		1,
+		0.7
+	};
+	colorFocused[] = 
+	{
+		1,
+		1,
+		1,
+		1
+	};
+	colorHover[] = 
+	{
+		1,
+		1,
+		1,
+		1
+	};
+	colorPressed[] = 
+	{
+		1,
+		1,
+		1,
+		1
+	};
+	colorDisabled[] = 
+	{
+		1,
+		1,
+		1,
+		0.2
+	};
+	colorBackground[] = 
+	{
+		0,
+		0,
+		0,
+		0
+	};
+	colorBackgroundFocused[] = 
+	{
+		0,
+		0,
+		0,
+		0
+	};
+	colorBackgroundHover[] = 
+	{
+		0,
+		0,
+		0,
+		0
+	};
+	colorBackgroundPressed[] = 
+	{
+		0,
+		0,
+		0,
+		0
+	};
+	colorBackgroundDisabled[] = 
+	{
+		0,
+		0,
+		0,
+		0
+	};
+	textureChecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_checked_ca.paa";
+	textureUnchecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_unchecked_ca.paa";
+	textureFocusedChecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_checked_ca.paa";
+	textureFocusedUnchecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_unchecked_ca.paa";
+	textureHoverChecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_checked_ca.paa";
+	textureHoverUnchecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_unchecked_ca.paa";
+	texturePressedChecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_checked_ca.paa";
+	texturePressedUnchecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_unchecked_ca.paa";
+	textureDisabledChecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_checked_ca.paa";
+	textureDisabledUnchecked = "A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_unchecked_ca.paa";
+	tooltipColorText[] = 
+	{
+		1,
+		1,
+		1,
+		1
+	};
+	tooltipColorBox[] = 
+	{
+		1,
+		1,
+		1,
+		1
+	};
+	tooltipColorShade[] = 
+	{
+		0,
+		0,
+		0,
+		0.65
+	};
+	soundEnter[] = 
+	{
+		"",
+		0.1,
+		1
+	};
+	soundPush[] = 
+	{
+		"",
+		0.1,
+		1
+	};
+	soundClick[] = 
+	{
+		"",
+		0.1,
+		1
+	};
+	soundEscape[] = 
+	{
+		"",
+		0.1,
+		1
+	};
 };
 
 class Life_RscProgress 
@@ -612,9 +723,28 @@ class Life_RscEdit {
 };
 
 class Life_RscSlider {
+	deletable = 0;
+	fade = 0;
+	access = 0;
+	type = 3;
+	style = 1024;
+	w = 0.3;
+	color[] = 
+	{
+		1,
+		1,
+		1,
+		0.8
+	};
+	colorActive[] = 
+	{
+		1,
+		1,
+		1,
+		1
+	};
+	shadow = 0;
 	h = 0.025;
-	color[] = {1, 1, 1, 0.8};
-	colorActive[] = {1, 1, 1, 1};
 };
 
 class life_RscXSliderH 
