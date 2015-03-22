@@ -202,9 +202,9 @@ class CfgFunctions
 			class cleanupMessages {};
 		};
 		
-		class VehUpgrades
+		class VehicleUpgrades
 		{
-			file "\life_server\Functions\VehicleUpgrades";
+			file = "\life_server\Functions\VehicleUpgrades";
 			class updateUpgrades {};
 		};
 	};
