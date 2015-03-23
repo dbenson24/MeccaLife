@@ -187,7 +187,7 @@ class Life_upgrade_car
 			h = 0.022 * safezoneH;
 			colorBackground[] = {0.35,0,0,0.7};
 			colorActive[] = {0.35,0,0,0.7};
-			onButtonClick = "[0] call life_fnc_upgradeVehicle; closeDialog 0;"
+			onButtonClick = "[0] call life_fnc_upgradeVehicle; closeDialog 0;";
 		};
 		class CancelButton : Life_RscButtonMenu
 		{
