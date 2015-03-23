@@ -34,6 +34,7 @@ if(EQUAL(typeName life_garage_sp,typeName [])) then {
 		_veh = [[_vid,_pid,(getMarkerPos life_garage_sp),_unit,_price,markerDir life_garage_sp],"TON_fnc_spawnVehicle",false,false] call life_fnc_MP;
 	};
 };
+_veh = _veh select 0;
 
 if (_veh getVariable["gps",false]) then {
     [_veh] spawn {
