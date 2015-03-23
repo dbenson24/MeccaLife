@@ -24,7 +24,7 @@ _gps = [_gps, 0] call DB_fnc_bool;
 _security = [_security, 0] call DB_fnc_bool;
 _hooks = [_hooks, 0] call DB_fnc_bool;
 
-_query = format["updateCarUpgrades:%1:%2:%3:%4:%5:%6:%7",_gps,_security,_trunk,_insurance,_hooks,uid,_plate];
+_query = format["updateCarUpgrades:%1:%2:%3:%4:%5:%6:%7",_gps,_security,_trunk,_insurance,_hooks,_uid,_plate];
 
 
 	["diag_log",[
