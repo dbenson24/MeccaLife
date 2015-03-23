@@ -60,16 +60,17 @@ switch (_mode) do
         _vehicle setVariable["security",_security,true];
         _vehicle setVariable["trunklevel",_trunk,true];
         
-        _dbInfo = _vehicle getVariable["dbInfo",[]];
-        if(count _dbInfo == 0) exitWith {};
-        _uid = _dbInfo select 0;
-        _plate = _dbInfo select 1;
-        [[_vehicle,_gps,_security,_trunk,_insurance,_hooks,_uid,_plate],"TON_fnc_updateUpgrades",false,false] spawn life_fnc_MP;
         
     };
 };
 
 upgradeVehicle = _vehicle;
 
+_dbInfo = _vehicle getVariable["dbInfo",[]];
+if(count _dbInfo == 0) exitWith {};
+_uid = _dbInfo select 0;
+_plate = _dbInfo select 1;
+
+[[upgradeVehicle,_gps,_security,_trunk,_insurance,_hooks,_uid,_plate],"TON_fnc_updateUpgrades",false] spawn life_fnc_MP;
 
 diag_log "updateUpgrades called";
