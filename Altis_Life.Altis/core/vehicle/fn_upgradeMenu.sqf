@@ -18,7 +18,6 @@ if(vehicle player != player) then
 	_nearVehicles = nearestObjects [getMarkerPos (_this select 3),["Car","Truck","Air","Ship"],25];
 
 	//Error check
-	if(EQUAL(count _nearVehicles,0)) exitWith {titleText["No Vehicle Near to Upgrade","PLAIN"];};
 	if(count _nearVehicles > 0) then
 	{
 		{
@@ -41,6 +40,8 @@ if(vehicle player != player) then
 		} foreach _nearVehicles;
 	};
 };
+
+if(EQUAL(count _nearVehicles,0)) exitWith {titleText["No Vehicle Near to Upgrade","PLAIN"];};
 
 diag_log format["Vehicle after loop exit: %1",_vehicle];
 diag_log format["Vehicle after loop exit upgv: %1",upgradeVehicle];
