@@ -38,7 +38,7 @@ switch (_mode) do
 		_security = cbChecked _securityctrl;
         
         if (_gps && !(_vehicle getVariable["gps",false])) then {
-            [_vehicle,true,_vehicle] spawn life_fnc_gpstracker;
+            [[_vehicle,true,_vehicle],"life_fnc_gpstracker",owner player,false] spawn life_fnc_MP;
         };
         _vehicle setVariable["security",_security];
         _vehicle setVariable["gps",_gps];
