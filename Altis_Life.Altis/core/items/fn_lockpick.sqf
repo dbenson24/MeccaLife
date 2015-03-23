@@ -35,7 +35,7 @@ _security = _curTarget getVariable ["security", false];
 if (_security) then {
 	_cp = 0.005;
 	[_curTarget] spawn {
-		sleep 60;
+		sleep 45;
 		_vehicle = _this select 0;
 		_vehData = _vehicle getVariable["vehicle_info_owners",[]];
 		_vehOwner = -1;
@@ -48,7 +48,8 @@ if (_security) then {
 		{
 			if (getPlayerUID _x == _uid) exitWith {_x;};
 		} forEach allUnits;
-		_msg = format["The security system on one of your vehicles was activated"];
+		_vehname = getText(configFile >> "CfgVehicles" >> typeof _vehicle >> "displayName");
+		_msg = format["The security system on your %1 was activated",_vehname];
 		[[_owner,_msg,player,6],"TON_fnc_handleMessages",false] spawn life_fnc_MP;
 	};
 } else {
