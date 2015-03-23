@@ -33,8 +33,9 @@ _titleText ctrlSetText format["%2 (1%1)...","%",_title];
 _progressBar progressSetPosition 0.01;
 _security = _curTarget getVariable ["security", false];
 if (_security) then {
-	_cp = 0.007;
+	_cp = 0.005;
 	[_curTarget] spawn {
+		sleep 60;
 		_vehicle = _this select 0;
 		_vehData = _vehicle getVariable["vehicle_info_owners",[]];
 		_vehOwner = -1;
@@ -47,8 +48,7 @@ if (_security) then {
 		{
 			if (getPlayerUID _x == _uid) exitWith {_x;};
 		} forEach allUnits;
-		_vehname = getText(configFile >> "CfgVehicles" >> typeof _curTarget >> "displayName");
-		_msg = format["The security system on your %1 was activated", _vehname];
+		_msg = format["The security system on one of your vehicles was activated"];
 		[[_owner,_msg,player,6],"TON_fnc_handleMessages",false] spawn life_fnc_MP;
 	};
 } else {
@@ -97,7 +97,7 @@ if(!_isVehicle) then {
 	_curTarget setVariable["transporting",false,true];
 } else {
 	_dice = random(100);
-	if(_dice < 30) then {
+	if(_dice < 20) then {
 		titleText[localize "STR_ISTR_Lock_Success","PLAIN"];
 		life_vehicles pushBack _curTarget;
 		[[getPlayerUID player,profileName,"487"],"life_fnc_wantedAdd",false,false] call life_fnc_MP;
