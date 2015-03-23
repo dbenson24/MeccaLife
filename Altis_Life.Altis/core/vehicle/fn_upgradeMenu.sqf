@@ -1,10 +1,10 @@
 #include <macro.h>
 /*
 	File: fn_upgradeMenu.sqf
-	Author: Bryan "Tonic" Boardwine
+	Author: Derek
 	
 	Description:
-	Opens & initializes the chop shop menu.
+	Opens & initializes the car upgrade menu
 */
 if(life_action_inUse) exitWith {hint localize "STR_NOTF_ActionInProc"};
 disableSerialization;
@@ -14,23 +14,28 @@ _nearVehicles = nearestObjects [getMarkerPos (_this select 3),["Car","Truck","Ai
 //Error check
 if(EQUAL(count _nearVehicles,0)) exitWith {titleText["No Vehicle Near to Upgrade","PLAIN"];};
 
-if(count _nearVehicles > 0) then
+if(vehicle player != player) then
 {
+	_vehicle = vehicle player;
+} else {
+	if(count _nearVehicles > 0) then
 	{
-		if(!isNil "_vehicle") exitWith {}; //Kill the loop.
-		_vehData = _x getVariable["vehicle_info_owners",[]];
-		if(count _vehData  > 0) then
 		{
-			_vehOwner = (_vehData select 0) select 0;
-			if((getPlayerUID player) == _vehOwner) exitWith
+			if(!isNil "_vehicle") exitWith {}; //Kill the loop.
+			_vehData = _x getVariable["vehicle_info_owners",[]];
+			if(count _vehData  > 0) then
 			{
-				_vehicle = _x;
+				_vehOwner = (_vehData select 0) select 0;
+				if((getPlayerUID player) == _vehOwner) exitWith
+				{
+					_vehicle = _x;
+				};
 			};
-		};
-	} foreach _nearVehicles;
+		} foreach _nearVehicles;
+	};
 };
 
-if(isNil "_vehicle") exitWith {hint "No Vehicle Near to Upgrade"};
+if(isNil "_vehicle") exitWith {hint "You don't own that vehicle"};
 if(isNull _vehicle) exitWith {};
 
 upgradeVehicle = _vehicle;
