@@ -24,7 +24,7 @@ _insurance = SEL(_dataArr,5);
 _hooks = SEL(_dataArr,6);
 
 _trunklevel = format["Trunk Level: %1",_trunklevel];
-_insurance = format["Insurance Level: %1",_trunklevel];
+_insurance = format["Insurance Level: %1",_insurance];
 
 _gps = [_gps, 1] call DB_fnc_bool;
 _security = [_security, 1] call DB_fnc_bool;
@@ -85,7 +85,7 @@ if(!(EQUAL(typeName _retrievePrice,typeName 0)) OR _retrievePrice < 1) then {_re
 	" +(localize "STR_Shop_Veh_UI_PSeats")+ " %5<br/>
 	" +(localize "STR_Shop_Veh_UI_Trunk")+ " %6<br/>
 	" +(localize "STR_Shop_Veh_UI_Fuel")+ " %7<br/>
-	"+ "%8 <br/>%9<br/>%10<br/>%11<br/>%12<br/>",
+	"+ " %8 <br/> %9<br/> %10<br/> %11<br/> %12<br/>",
 [_retrievePrice] call life_fnc_numberText,
 [_sellPrice] call life_fnc_numberText,
 SEL(_vehicleInfo,8),
