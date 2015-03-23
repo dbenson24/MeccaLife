@@ -65,15 +65,19 @@ switch (_mode) do
         
         
     };
+    default:
+    {
+        diag_log "No Mode passed in";
+    };
 };
 
 upgradeVehicle = _vehicle;
-
+/*
 _dbInfo = _vehicle getVariable["dbInfo",[]];
 if(count _dbInfo == 0) exitWith {};
 _uid = _dbInfo select 0;
 _plate = _dbInfo select 1;
-
+*/
 diag_log "Upgrade finished. Time to sync to DB";
 //[[upgradeVehicle,_gps,_security,_trunk,_insurance,_hooks,_uid,_plate],"TON_fnc_updateUpgrades",false,false] spawn life_fnc_MP;
 [[_vehicle],"TON_fnc_updateUpgrades",false,false] spawn life_fnc_MP;
