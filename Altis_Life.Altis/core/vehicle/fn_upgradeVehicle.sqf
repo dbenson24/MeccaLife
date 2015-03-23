@@ -5,7 +5,7 @@
 	Description:
 	Upgrades the vehicle.
 */
-private["_nearVehicles","upgradeVehicle","_trunk","_insurance","_security","_gps","_hooks","_display","_hooksctrl","_gpsctrl","_securityctrl"];
+private["_nearVehicles","_trunk","_insurance","_security","_gps","_hooks","_display","_hooksctrl","_gpsctrl","_securityctrl"];
 
 _mode = [_this,0,-1,[0]] call BIS_fnc_param;
 if(_mode == -1) exitWith {};
