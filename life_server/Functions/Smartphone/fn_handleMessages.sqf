@@ -60,4 +60,11 @@ switch(_type) do
 	{
 		[[_msg,name _player,4],"TON_fnc_clientMessage",true,false] spawn life_fnc_MP;
 	};
+	case 6:
+	{
+		if(isNULL _target)  exitWith {};
+		_to = call compile format["%1", _target];
+		[[_msg,"Mecca Security",6],"TON_fnc_clientMessage",_to,false] spawn life_fnc_MP;
+		
+	};
 };

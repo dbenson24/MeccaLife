@@ -5,7 +5,7 @@
 	Description:
 	Main functionality for lock-picking.
 */
-private["_curTarget","_distance","_isVehicle","_title","_progressBar","_cP","_titleText","_dice","_badDistance"];
+private["_curTarget","_distance","_isVehicle","_title","_progressBar","_cP","_titleText","_dice","_badDistance","_security"];
 _curTarget = cursorTarget;
 life_interrupted = false;
 if(life_action_inUse) exitWith {};
@@ -31,7 +31,24 @@ _progressBar = _ui displayCtrl 38201;
 _titleText = _ui displayCtrl 38202;
 _titleText ctrlSetText format["%2 (1%1)...","%",_title];
 _progressBar progressSetPosition 0.01;
-_cP = 0.01;
+_security = _curTarget getVariable ["security", false];
+if (_security) then {
+	_cp = 0.007;
+	[_curTarget] spawn {
+		_vehicle = _this select 0;
+		_uid = owner _vehicle;
+		_owner =
+		{
+			if (getPlayerUID _x == _uid) exitWith {_x;};
+		} forEach allUnits;
+		_vehname = getText(configFile >> "CfgVehicles" >> typeof _curTarget >> "displayName";
+		_msg = format["The security system on your %1 was activated", _vehname];
+		[[_owner,_msg,player,6],"TON_fnc_handleMessages",false] spawn life_fnc_MP;
+	};
+} else {
+	_cP = 0.01;
+};
+
 
 while {true} do
 {

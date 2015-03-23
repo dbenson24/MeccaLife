@@ -296,6 +296,16 @@ compileFinal "
 			
 			[""TextMessage"",[format[""EMS Request from %1"",_from]]] call bis_fnc_showNotification;
 		};
+		
+		case 6 :
+		{
+			private[""_message""];
+			_message = format["">>>MESSAGE FROM %1: %2"",_from,_msg];
+			hint parseText format [""<t color='#FFCC00'><t size='2'><t align='center'>New Message<br/><br/><t color='#33CC33'><t align='left'><t size='1'>To: <t color='#ffffff'>You<br/><t color='#33CC33'>From: <t color='#ffffff'>%1<br/><br/><t color='#33CC33'>Message:<br/><t color='#ffffff'>%2"",_from,_msg];
+			
+			[""TextMessage"",[format[""You Received A New Private Message From %1"",_from]]] call bis_fnc_showNotification;
+			systemChat _message;
+		};
 	};
 ";
 publicVariable "TON_fnc_clientMessage";
