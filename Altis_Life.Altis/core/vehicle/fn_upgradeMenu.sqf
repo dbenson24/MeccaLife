@@ -45,8 +45,8 @@ if(vehicle player != player) then
 diag_log format["Vehicle after loop exit: %1",_vehicle];
 diag_log format["Vehicle after loop exit upgv: %1",upgradeVehicle];
 
-if(isNil "upgradeVehicle") exitWith {hint "You don't own that vehicle"};
-if(isNull upgradeVehicle) exitWith {};
+if(isNil "_vehicle") exitWith {hint "You don't own that vehicle"};
+if(isNull _vehicle) exitWith {};
 
 //upgradeVehicle = _vehicle;
 
