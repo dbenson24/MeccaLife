@@ -62,4 +62,4 @@ switch (_mode) do
     };
 };
 
-[[_vehicle],"TON_fnc_updateUpgrades",false] spawn life_fnc_MP;
+[[upgradeVehicle],"TON_fnc_updateUpgrades",false,false] spawn life_fnc_MP;

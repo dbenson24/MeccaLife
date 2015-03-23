@@ -7,6 +7,11 @@
 */
 private["_vehicle","_plate","_uid","_query","_sql","_dbInfo","_thread","_insurance","_hooks","_gps","_trunk","_security"];
 _vehicle = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
+["diag_log",[
+		"------------- UpdateCar Upgrades Request -------------",
+		format["Car: %1",_vehicle],
+		"------------------------------------------------"
+	]] call TON_fnc_logIt;
 hint str _vehicle;
 if(isNull _vehicle) exitWith {}; //NULL
 
