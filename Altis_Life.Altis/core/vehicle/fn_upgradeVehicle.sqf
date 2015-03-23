@@ -37,18 +37,18 @@ switch (_mode) do
 		_hooks = cbChecked _hooksctrl;
 		_security = cbChecked _securityctrl;
         
-        if (_gps && !(_vehicle getVariable["gps",false])) then {
-            [_vehicle] spawn {
-                diag_log format["gpsUpgrade unit: %1", _vehicle];
-            	_markerName = format["%1_gpstracker",_vehicle];
-            	_marker = createMarkerLocal [_markerName, visiblePosition _vehicle];
+        if (_gps && !(upgradeVehicle getVariable["gps",false])) then {
+            [upgradeVehicle] spawn {
+                diag_log format["gpsUpgrade unit: %1", upgradeVehicle];
+            	_markerName = format["%1_gpstracker",upgradeVehicle];
+            	_marker = createMarkerLocal [_markerName, visiblePosition upgradeVehicle];
             	_marker setMarkerColorLocal "ColorRed";
             	_marker setMarkerTypeLocal "Mil_dot";
-            	_marker setMarkerTextLocal "GPS Tracker "+getText(configFile >> "CfgVehicles" >> typeof _vehicle >> "displayName");
-            	_marker setMarkerPosLocal getPos _vehicle;
+            	_marker setMarkerTextLocal "GPS Tracker "+getText(configFile >> "CfgVehicles" >> typeof upgradeVehicle >> "displayName");
+            	_marker setMarkerPosLocal getPos upgradeVehicle;
             	while {true} do {
-            		if(not alive _vehicle) exitWith {deleteMarkerLocal _markerName;};
-            		_marker setMarkerPosLocal getPos _vehicle;
+            		if(not alive upgradeVehicle) exitWith {deleteMarkerLocal _markerName;};
+            		_marker setMarkerPosLocal getPos upgradeVehicle;
             		sleep 0.5;
             	};
             };
