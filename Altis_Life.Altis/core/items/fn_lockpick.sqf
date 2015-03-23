@@ -36,7 +36,13 @@ if (_security) then {
 	_cp = 0.007;
 	[_curTarget] spawn {
 		_vehicle = _this select 0;
-		_uid = owner _vehicle;
+		_vehData = _vehicle getVariable["vehicle_info_owners",[]];
+		_vehOwner = -1;
+		if(count _vehData  > 0) then
+		{
+			_vehOwner = (_vehData select 0) select 0;
+		};
+		_uid = _vehOwner;
 		_owner =
 		{
 			if (getPlayerUID _x == _uid) exitWith {_x;};
