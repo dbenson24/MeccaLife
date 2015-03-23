@@ -157,6 +157,7 @@ class Life_upgrade_car
 			y = 0.467 * safezoneH + safezoneY;
 			w = 0.0154688 * safezoneW;
 			h = 0.022 * safezoneH;
+			onCheckedChanged = "[0] call life_fnc_upgradeMenuChange;";
 		};
 		class HooksCheck : Life_RscCheckbox
 		{
@@ -165,6 +166,7 @@ class Life_upgrade_car
 			y = 0.467 * safezoneH + safezoneY;
 			w = 0.0154688 * safezoneW;
 			h = 0.022 * safezoneH;
+			onCheckedChanged = "[0] call life_fnc_upgradeMenuChange;";
 		};
 		class GPSCheck : Life_RscCheckbox
 		{
@@ -173,6 +175,7 @@ class Life_upgrade_car
 			y = 0.467 * safezoneH + safezoneY;
 			w = 0.0154688 * safezoneW;
 			h = 0.022 * safezoneH;
+			onCheckedChanged = "[0] call life_fnc_upgradeMenuChange;";
 		};
 		class ConfirmButton : Life_RscButtonMenu
 		{

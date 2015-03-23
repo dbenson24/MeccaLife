@@ -20,7 +20,7 @@ switch (_mode) do
 		_trunk = round(sliderPosition 5501);
 		ctrlSetText[5511,format["%1",round(_trunk)]];
 		_securityctrl = _display displayCtrl 5503;
-        _hookctrl = _display displayCtrl 5504;
+        _hooksctrl = _display displayCtrl 5504;
         _gpsctrl = _display displayCtrl 5505;
 		_price = _trunk * 50000;
 		_price = _price + _ins * 50000;
