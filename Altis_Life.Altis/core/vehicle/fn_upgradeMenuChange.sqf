@@ -18,11 +18,11 @@ switch (_mode) do
 		ctrlSetText[5511,format["%1",round(_trunk)]];
 		_price = _trunk * 50000;
 		_price = _price + _ins * 50000;
-		_gps = ctrlChecked 5505;
-		_hooks = ctrlChecked 5504;
-		_security = ctrlChecked 5503;
+		_gps = cbChecked 5505;
+		_hooks = cbChecked 5504;
+		_security = cbChecked 5503;
 	};
-	
+
 	case 1: //air
 	{
 		ctrlSetText[2912,format["%1",round(_value)]];
