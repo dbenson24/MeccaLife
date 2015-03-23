@@ -63,3 +63,5 @@ switch (_mode) do
 };
 
 [[upgradeVehicle],"TON_fnc_updateUpgrades",false,false] spawn life_fnc_MP;
+
+diag_log "updateUpgrades called";

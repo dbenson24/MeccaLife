@@ -6,7 +6,7 @@
 	Description:
 	Yeah... Gets the vehicle from the garage.
 */
-private["_vehicle","_vid","_pid","_unit","_price"];
+private["_vehicle","_vid","_pid","_unit","_price","_veh"];
 disableSerialization;
 if(EQUAL(lbCurSel 2802,-1)) exitWith {hint localize "STR_Global_NoSelection"};
 _vehicle = lbData[2802,(lbCurSel 2802)];
@@ -26,17 +26,17 @@ if(!(EQUAL(typeName _price,typeName 0)) OR _price < 1) then {_price = 1000};
 if(BANK < _price) exitWith {hint format[(localize "STR_Garage_CashError"),[_price] call life_fnc_numberText];};
 
 if(EQUAL(typeName life_garage_sp,typeName [])) then {
-	_vehicle = [[_vid,_pid,SEL(life_garage_sp,0),_unit,_price,SEL(life_garage_sp,1)],"TON_fnc_spawnVehicle",false,false] call life_fnc_MP;
+	_veh = [[_vid,_pid,SEL(life_garage_sp,0),_unit,_price,SEL(life_garage_sp,1)],"TON_fnc_spawnVehicle",false,false] call life_fnc_MP;
 } else {
 	if(life_garage_sp in ["medic_spawn_1","medic_spawn_2","medic_spawn_3"]) then {
-		_vehicle = [[_vid,_pid,life_garage_sp,_unit,_price],"TON_fnc_spawnVehicle",false,false] call life_fnc_MP;
+		_veh = [[_vid,_pid,life_garage_sp,_unit,_price],"TON_fnc_spawnVehicle",false,false] call life_fnc_MP;
 	} else {
-		_vehicle = [[_vid,_pid,(getMarkerPos life_garage_sp),_unit,_price,markerDir life_garage_sp],"TON_fnc_spawnVehicle",false,false] call life_fnc_MP;
+		_veh = [[_vid,_pid,(getMarkerPos life_garage_sp),_unit,_price,markerDir life_garage_sp],"TON_fnc_spawnVehicle",false,false] call life_fnc_MP;
 	};
 };
 
-if (_vehicle getVariable["gps",false]) then {
-    [_vehicle] spawn {
+if (_veh getVariable["gps",false]) then {
+    [_veh] spawn {
     	_vehicle = _this select 0;
         diag_log format["gpsUpgrade unit: %1", _vehicle];
     	_markerName = format["%1_gpstracker",_vehicle];
