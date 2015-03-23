@@ -24,8 +24,8 @@ lbClear _control;
 
 {
 	_vehicleInfo = [SEL(_x,2)] call life_fnc_fetchVehInfo;
-	_control lbAdd (SEL(_vehicleInfo,3));
-	_tmp = [SEL(_x,2),SEL(_x,8)];
+	_control lbAdd (SEL(_vehicleInfo,3));//													  0         1     2      3        4        5       6
+	_tmp = [SEL(_x,2),SEL(_x,8),SEL(_x,9),SEL(_x,10),SEL(_x,11),SEL(_x,12),SEL(_x,13)]; // classname, color, gps, security, trunk, insurance, hooks
 	_tmp = str(_tmp);
 	_control lbSetData [(lbSize _control)-1,_tmp];
 	_control lbSetPicture [(lbSize _control)-1,SEL(_vehicleInfo,2)];
