@@ -5,7 +5,7 @@
 	Description:
 	Upgrades the vehicle.
 */
-private["_nearVehicles","_vehicle","_trunk","_insurance","_security","_gps","_hooks","_display","_hooksctrl","_gpsctrl","_securityctrl"];
+private["_nearVehicles","upgradeVehicle","_trunk","_insurance","_security","_gps","_hooks","_display","_hooksctrl","_gpsctrl","_securityctrl"];
 
 _mode = [_this,0,-1,[0]] call BIS_fnc_param;
 if(_mode == -1) exitWith {};
@@ -13,7 +13,6 @@ disableSerialization;
 
 if(isNil "upgradeVehicle") exitWith {hint "No Vehicle Near to Upgrade"};
 if(isNull upgradeVehicle) exitWith {};
-_vehicle = upgradeVehicle;
 
 diag_log "Upgrade Vehicle called";
 
@@ -57,11 +56,11 @@ switch (_mode) do
             };
         };
         diag_log "marker check passed";
-        _vehicle setVariable["gps",_gps,true];
-        _vehicle setVariable["hooks",_hooks,true];
-        _vehicle setVariable["insurance",_insurance,true];
-        _vehicle setVariable["security",_security,true];
-        _vehicle setVariable["trunklevel",_trunk,true];
+        upgradeVehicle setVariable["gps",_gps,true];
+        upgradeVehicle setVariable["hooks",_hooks,true];
+        upgradeVehicle setVariable["insurance",_insurance,true];
+        upgradeVehicle setVariable["security",_security,true];
+        upgradeVehicle setVariable["trunklevel",_trunk,true];
         
         
     };
@@ -71,15 +70,14 @@ switch (_mode) do
     };
 };
 
-upgradeVehicle = _vehicle;
 /*
-_dbInfo = _vehicle getVariable["dbInfo",[]];
+_dbInfo = upgradeVehicle getVariable["dbInfo",[]];
 if(count _dbInfo == 0) exitWith {};
 _uid = _dbInfo select 0;
 _plate = _dbInfo select 1;
 */
 diag_log "Upgrade finished. Time to sync to DB";
 //[[upgradeVehicle,_gps,_security,_trunk,_insurance,_hooks,_uid,_plate],"TON_fnc_updateUpgrades",false,false] spawn life_fnc_MP;
-[[_vehicle],"TON_fnc_updateUpgrades",false,false] spawn life_fnc_MP;
+[[upgradeVehicle],"TON_fnc_updateUpgrades",false,false] spawn life_fnc_MP;
 
 diag_log "updateUpgrades called";
