@@ -11,15 +11,17 @@ _mode = [_this,0,-1,[0]] call BIS_fnc_param;
 if(_mode == -1) exitWith {};
 disableSerialization;
 
-
 if(isNil "upgradeVehicle") exitWith {hint "No Vehicle Near to Upgrade"};
 if(isNull upgradeVehicle) exitWith {};
 _vehicle = upgradeVehicle;
+
+diag_log "Upgrade Vehicle called";
 
 switch (_mode) do
 {
     case 0:
     {
+        diag_log "Vehicle Type: Car";
         _gps = false;
         _hooks = false;
         _security = false;
@@ -72,6 +74,7 @@ if(count _dbInfo == 0) exitWith {};
 _uid = _dbInfo select 0;
 _plate = _dbInfo select 1;
 
+diag_log "Upgrade finished. Time to sync to DB";
 //[[upgradeVehicle,_gps,_security,_trunk,_insurance,_hooks,_uid,_plate],"TON_fnc_updateUpgrades",false,false] spawn life_fnc_MP;
 [[_vehicle],"TON_fnc_updateUpgrades",false,false] spawn life_fnc_MP;
 
