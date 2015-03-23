@@ -61,3 +61,5 @@ switch (_mode) do
         _vehicle setVariable["trunklevel",_trunk];
     };
 };
+
+[[_vehicle],"TON_fnc_updateUpgrades",false] spawn life_fnc_MP;
