@@ -8,7 +8,7 @@
 */
 if(life_action_inUse) exitWith {hint localize "STR_NOTF_ActionInProc"};
 disableSerialization;
-private["_nearVehicles","_control","_vehicle","_vehData","_vehOwner"];
+private["_nearVehicles","_control","_vehicle","_vehData","_vehOwner","_trunkslider","_trunklevel","_insslider","_inslevel","_securecheck","_hookcheck","_gpscheck"];
 
 
 if(vehicle player != player) then
@@ -71,6 +71,11 @@ sliderSetSpeed [_insslider, 1, 1];
 
 sliderSetPosition[_trunkslider, (_vehicle getVariable["trunklevel", 0])];
 sliderSetPosition[_insslider, (_vehicle getVariable["insurance", 0])];
+
+ctrlSetText[5512,format["%1",(_vehicle getVariable["insurance", 0])]];
+ctrlSetText[5511,format["%1",(_vehicle getVariable["trunklevel", 0])]];
+
+
 
 _securecheck cbSetChecked (_vehicle getVariable["security",false]);
 _hookcheck cbSetChecked (_vehicle getVariable["hooks",false]);
