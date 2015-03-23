@@ -23,7 +23,7 @@ _insurance = _vehicle getVariable["insurance",0];
 _gps = _vehicle getVariable["gps",false];
 _hooks = _vehicle getVariable["hooks",false];
 _trunk = _vehicle getVariable["trunklevel",0];
-_security = vehicle getVariable["security",false];
+_security = _vehicle getVariable["security",false];
 
 _gps = [_gps, 0] call DB_fnc_bool;
 _security = [_security, 0] call DB_fnc_bool;
