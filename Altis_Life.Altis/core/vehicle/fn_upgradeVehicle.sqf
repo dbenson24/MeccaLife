@@ -54,7 +54,6 @@ switch (_mode) do
             	};
             };
         };
-        _vehicle setVariable["security",_security];
         _vehicle setVariable["gps",_gps];
         _vehicle setVariable["hooks",_hooks];
         _vehicle setVariable["insurance",_insurance];
