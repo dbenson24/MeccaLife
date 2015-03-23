@@ -38,7 +38,21 @@ switch (_mode) do
 		_security = cbChecked _securityctrl;
         
         if (_gps && !(_vehicle getVariable["gps",false])) then {
-            [[_vehicle,true,_vehicle],"life_fnc_gpstracker",owner player,false] spawn life_fnc_MP;
+            [player] spawn {
+                diag_log format["gpsUpgrade unit: %1", player];
+            	_veh = _vehicle;
+            	_markerName = format["%1_gpstracker",_veh];
+            	_marker = createMarkerLocal [_markerName, visiblePosition _veh];
+            	_marker setMarkerColorLocal "ColorRed";
+            	_marker setMarkerTypeLocal "Mil_dot";
+            	_marker setMarkerTextLocal "GPS Tracker "+getText(configFile >> "CfgVehicles" >> typeof _veh >> "displayName");
+            	_marker setMarkerPosLocal getPos _veh;
+            	while {true} do {
+            		if(not alive _veh) exitWith {deleteMarkerLocal _markerName;};
+            		_marker setMarkerPosLocal getPos _veh;
+            		sleep 0.5;
+            	};
+            };
         };
         _vehicle setVariable["security",_security];
         _vehicle setVariable["gps",_gps];

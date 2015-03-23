@@ -11,6 +11,8 @@ if(player distance _unit > 5) exitWith {hint "You need to be within 5 feet!"};
 if(!([false,"gpstracker",1] call life_fnc_handleInv)) exitWith {};
 closeDialog 0;
 
+diag_log format["gpsTracker Unit: %1",_unit];
+
 life_action_inUse = true;
 player playMove "AinvPknlMstpSnonWnonDnon_medic_1";
 waitUntil {animationState player != "ainvpknlmstpsnonwnondnon_medic_1"};
