@@ -138,5 +138,3 @@ switch (_vInfo select 3) do
         _vehicle setVariable["hooks",_hooks,true];
 	};
 };
-
-_vehicle;
