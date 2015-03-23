@@ -27,23 +27,25 @@ _hooks = parseNumber format["%1",SEL(_dataArr,6)];
 _trunklevel = format["Trunk Level: %1",_trunklevel];
 _insurance = format["Insurance Level: %1",_insurance];
 
+/*
 _gps = [_gps, 1] call DB_fnc_bool;
 _security = [_security, 1] call DB_fnc_bool;
 _hooks = [_hooks, 1] call DB_fnc_bool;
+*/
 
-if (_gps) then {
+if (_gps == 1) then {
 	_gpsstring = "GPS: Enabled";
 } else {
 	_gpsstring = "GPS: Disabled";
 };
 
-if (_security) then {
+if (_security == 1) then {
 	_securitystring = "Security: Enabled";
 } else {
 	_securitystring = "Security: Disabled";
 };
 
-if (_hooks) then {
+if (_hooks == 1) then {
 	_hookstring = "Sling Hooks: Enabled";
 } else {
 	_hookstring = "Sling Hooks: Disabled";
