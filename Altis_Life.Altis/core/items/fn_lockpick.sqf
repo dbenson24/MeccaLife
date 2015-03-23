@@ -47,7 +47,7 @@ if (_security) then {
 		{
 			if (getPlayerUID _x == _uid) exitWith {_x;};
 		} forEach allUnits;
-		_vehname = getText(configFile >> "CfgVehicles" >> typeof _curTarget >> "displayName";
+		_vehname = getText(configFile >> "CfgVehicles" >> typeof _curTarget >> "displayName");
 		_msg = format["The security system on your %1 was activated", _vehname];
 		[[_owner,_msg,player,6],"TON_fnc_handleMessages",false] spawn life_fnc_MP;
 	};
