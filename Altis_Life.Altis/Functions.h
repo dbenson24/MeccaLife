@@ -305,6 +305,7 @@ class Life_Client_Core
 		class warnblinker {};
 		class upgradeMenu {};
 		class upgradeMenuChange {};
+		class upgradeVehicle {};
 	};
 	
 	class Cop
