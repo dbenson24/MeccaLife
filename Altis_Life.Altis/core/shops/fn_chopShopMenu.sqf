@@ -8,12 +8,34 @@
 */
 if(life_action_inUse) exitWith {hint localize "STR_NOTF_ActionInProc"};
 disableSerialization;
-private["_nearVehicles","_control"];
+private["_nearVehicles","_control","_vehicle","_vehData"];
 _nearVehicles = nearestObjects [getMarkerPos (_this select 3),["Car","Truck","Air","Ship"],25];
 
 life_chopShop = SEL(_this,3);
 //Error check
 if(EQUAL(count _nearVehicles,0)) exitWith {titleText[localize "STR_Shop_NoVehNear","PLAIN"];};
+
+if(count _nearVehicles > 0) then
+{
+	{
+		if(!isNil "_vehicle") exitWith {}; //Kill the loop.
+		_vehData = _x getVariable["vehicle_info_owners",[]];
+		if(count _vehData  > 0) then
+		{
+			_vehOwner = (_vehData select 0) select 0;
+			if((getPlayerUID player) == _vehOwner) exitWith
+			{
+				_vehicle = _x;
+			};
+		};
+	} foreach _nearVehicles;
+};
+
+if(isNil "_vehicle") exitWith {hint localize "No Vehicle Near to Upgrade"};
+if(isNull _vehicle) exitWith {};
+
+upgradeVehicle = _vehicle;
+
 if(!(createDialog "Chop_Shop")) exitWith {hint localize "STR_Shop_ChopShopError"};
 
 _control = CONTROL(39400,39402);
