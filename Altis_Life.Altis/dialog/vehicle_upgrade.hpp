@@ -197,5 +197,14 @@ class Life_upgrade_car
 			colorBackground[] = {0.35,0,0,0.7};
 			colorActive[] = {0.35,0,0,0.7};
 		};
+		class Price : Life_RscText
+		{
+			idc = 5510;
+			text = " $0"; //--- ToDo: Localize;
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.511 * safezoneH + safezoneY;
+			w = 0.185625 * safezoneW;
+			h = 0.055 * safezoneH;
+		};
 	};
 };

@@ -52,3 +52,6 @@ if (_security) then {
     _price = _price + 25000;
 };
 
+ctrlSetText [5510, format[" $%1",_price]];
+
+upgrade_price = _price;
