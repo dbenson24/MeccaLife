@@ -26,32 +26,13 @@ if(!(EQUAL(typeName _price,typeName 0)) OR _price < 1) then {_price = 1000};
 if(BANK < _price) exitWith {hint format[(localize "STR_Garage_CashError"),[_price] call life_fnc_numberText];};
 
 if(EQUAL(typeName life_garage_sp,typeName [])) then {
-	_veh = [[_vid,_pid,SEL(life_garage_sp,0),_unit,_price,SEL(life_garage_sp,1)],"TON_fnc_spawnVehicle",false,false] call life_fnc_MP;
+	[[_vid,_pid,SEL(life_garage_sp,0),_unit,_price,SEL(life_garage_sp,1)],"TON_fnc_spawnVehicle",false,false] call life_fnc_MP;
 } else {
 	if(life_garage_sp in ["medic_spawn_1","medic_spawn_2","medic_spawn_3"]) then {
-		_veh = [[_vid,_pid,life_garage_sp,_unit,_price],"TON_fnc_spawnVehicle",false,false] call life_fnc_MP;
+		[[_vid,_pid,life_garage_sp,_unit,_price],"TON_fnc_spawnVehicle",false,false] call life_fnc_MP;
 	} else {
-		_veh = [[_vid,_pid,(getMarkerPos life_garage_sp),_unit,_price,markerDir life_garage_sp],"TON_fnc_spawnVehicle",false,false] call life_fnc_MP;
+		[[_vid,_pid,(getMarkerPos life_garage_sp),_unit,_price,markerDir life_garage_sp],"TON_fnc_spawnVehicle",false,false] call life_fnc_MP;
 	};
-};
-_veh = _veh select 0;
-
-if (_veh getVariable["gps",false]) then {
-    [_veh] spawn {
-    	_vehicle = _this select 0;
-        diag_log format["gpsUpgrade unit: %1", _vehicle];
-    	_markerName = format["%1_gpstracker",_vehicle];
-    	_marker = createMarkerLocal [_markerName, visiblePosition _vehicle];
-    	_marker setMarkerColorLocal "ColorRed";
-    	_marker setMarkerTypeLocal "Mil_dot";
-    	_marker setMarkerTextLocal "GPS Tracker "+getText(configFile >> "CfgVehicles" >> typeof _vehicle >> "displayName");
-    	_marker setMarkerPosLocal getPos _vehicle;
-    	while {true} do {
-    		if(not alive _vehicle) exitWith {deleteMarkerLocal _markerName;};
-    		_marker setMarkerPosLocal getPos _vehicle;
-    		sleep 0.5;
-    	};
-    };
 };
 
 
