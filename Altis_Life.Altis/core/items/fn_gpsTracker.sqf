@@ -3,7 +3,7 @@
 	Author: Derek
 	Description: Attaches a GPS tracker to selected vehicle
 */
-private["_unit","_veh","_vehicle","_marker","_markerName"];
+private["_unit","_veh","_vehicle","_marker","_markerName","_upgrade"];
 _unit = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _upgrade = [_this,1,false] call BIS_fnc_param;
 _vehicle = [_this,2,ObjNull,[ObjNull]] call BIS_fnc_param;
