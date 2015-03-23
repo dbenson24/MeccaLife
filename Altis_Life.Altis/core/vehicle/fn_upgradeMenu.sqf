@@ -24,9 +24,13 @@ if(vehicle player != player) then
 		{
 			if(!isNil "_vehicle") exitWith {}; //Kill the loop.
 			_vehData = _x getVariable["vehicle_info_owners",[]];
+			diag_log format ["Vehicle Data: %1",_vehData];
 			if(count _vehData  > 0) then
 			{
 				_vehOwner = (_vehData select 0) select 0;
+				diag_log format ["Vehicle Owner: %1",_vehOwner];
+				diag_log format ["Player: %1",getPlayerUID player];
+				
 				if((getPlayerUID player) == _vehOwner) exitWith
 				{
 					_vehicle = _x;
