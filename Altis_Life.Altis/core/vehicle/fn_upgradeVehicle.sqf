@@ -12,8 +12,9 @@ if(_mode == -1) exitWith {};
 disableSerialization;
 
 
-if(isNil "upgradeVehicle") exitWith {hint localize "No Vehicle Near to Upgrade"};
+if(isNil "upgradeVehicle") exitWith {hint "No Vehicle Near to Upgrade"};
 if(isNull upgradeVehicle) exitWith {};
+_vehicle = upgradeVehicle;
 
 switch (_mode) do
 {
