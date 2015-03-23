@@ -39,7 +39,7 @@ switch (_mode) do
         
         if (_gps && !(_vehicle getVariable["gps",false])) then {
             [_vehicle,true,_vehicle] spawn life_fnc_gpstracker;
-        }
+        };
         _vehicle setVariable["security",_security];
         _vehicle setVariable["gps",_gps];
         _vehicle setVariable["hooks",_hooks];
