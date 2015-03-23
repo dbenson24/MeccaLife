@@ -18,11 +18,11 @@ _className = SEL(_dataArr,0);
 
 diag_log format["GarageLBChange _dataArr: %1",_dataArr];
 // Start of Upgrades
-_gps = SEL(_dataArr,2);
-_security = SEL(_dataArr,3);
+_gps = parseNumber SEL(_dataArr,2);
+_security = parseNumber SEL(_dataArr,3);
 _trunklevel = SEL(_dataArr,4);
 _insurance = SEL(_dataArr,5);
-_hooks = SEL(_dataArr,6);
+_hooks = parseNumber SEL(_dataArr,6);
 
 _trunklevel = format["Trunk Level: %1",_trunklevel];
 _insurance = format["Insurance Level: %1",_insurance];
