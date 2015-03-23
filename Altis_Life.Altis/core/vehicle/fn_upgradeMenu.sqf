@@ -8,7 +8,7 @@
 */
 if(life_action_inUse) exitWith {hint localize "STR_NOTF_ActionInProc"};
 disableSerialization;
-private["_nearVehicles","_control"];
+private["_nearVehicles","_control","_vehicle","_vehData","_vehOwner"];
 
 
 if(vehicle player != player) then
@@ -34,6 +34,7 @@ if(vehicle player != player) then
 				if((getPlayerUID player) == _vehOwner) exitWith
 				{
 					_vehicle = _x;
+					upgradeVehicle = _vehicle;
 					diag_log format["Vehicle Selected: %1",_vehicle];
 				};
 			};
@@ -42,11 +43,12 @@ if(vehicle player != player) then
 };
 
 diag_log format["Vehicle after loop exit: %1",_vehicle];
+diag_log format["Vehicle after loop exit upgv: %1",upgradeVehicle];
 
-if(isNil "_vehicle") exitWith {hint "You don't own that vehicle"};
-if(isNull _vehicle) exitWith {};
+if(isNil "upgradeVehicle") exitWith {hint "You don't own that vehicle"};
+if(isNull upgradeVehicle) exitWith {};
 
-upgradeVehicle = _vehicle;
+//upgradeVehicle = _vehicle;
 
 if(!(createDialog "Life_upgrade_car")) exitWith {hint "Upgrade Menu Error"};
 
