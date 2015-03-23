@@ -34,11 +34,14 @@ if(vehicle player != player) then
 				if((getPlayerUID player) == _vehOwner) exitWith
 				{
 					_vehicle = _x;
+					diag_log format["Vehicle Selected: %1",_vehicle];
 				};
 			};
 		} foreach _nearVehicles;
 	};
 };
+
+diag_log format["Vehicle after loop exit: %1",_vehicle];
 
 if(isNil "_vehicle") exitWith {hint "You don't own that vehicle"};
 if(isNull _vehicle) exitWith {};
