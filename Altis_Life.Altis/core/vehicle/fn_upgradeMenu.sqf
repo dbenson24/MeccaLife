@@ -9,15 +9,16 @@
 if(life_action_inUse) exitWith {hint localize "STR_NOTF_ActionInProc"};
 disableSerialization;
 private["_nearVehicles","_control"];
-_nearVehicles = nearestObjects [getMarkerPos (_this select 3),["Car","Truck","Air","Ship"],25];
 
-//Error check
-if(EQUAL(count _nearVehicles,0)) exitWith {titleText["No Vehicle Near to Upgrade","PLAIN"];};
 
 if(vehicle player != player) then
 {
 	_vehicle = vehicle player;
 } else {
+	_nearVehicles = nearestObjects [getMarkerPos (_this select 3),["Car","Truck","Air","Ship"],25];
+
+	//Error check
+	if(EQUAL(count _nearVehicles,0)) exitWith {titleText["No Vehicle Near to Upgrade","PLAIN"];};
 	if(count _nearVehicles > 0) then
 	{
 		{
