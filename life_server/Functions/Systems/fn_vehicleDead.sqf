@@ -18,7 +18,7 @@ switch (_insurance) do
 {
 	case 1:
 	{
-		_query = format["updateCarUpgrades:0:0:0:0:0:%1:%2",uid,_plate];
+		_query = format["updateCarUpgrades:0:0:0:0:0:0:%1:%2",uid,_plate];
 	};
 	case 2:
 	{
@@ -35,6 +35,13 @@ switch (_insurance) do
 };
 waitUntil {!DB_Async_Active};
 _thread = [_query,1] call DB_fnc_asyncCall;
+
+["diag_log",[
+		"------------- Vehicle Dead Request -------------",
+		format["QUERY: %1",_query],
+		"-------------------------------------------------"
+	]] call TON_fnc_logIt;
+
 
 sleep (1.3 * 60);
 if(!isNil "_vehicle" && {!isNull _vehicle}) then {
