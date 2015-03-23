@@ -64,7 +64,7 @@ switch (_mode) do
         
         
     };
-    default:
+    default
     {
         diag_log "No Mode passed in";
     };

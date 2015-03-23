@@ -28,7 +28,7 @@ switch (_insurance) do
 	{
 		_query = format["removeInsurance:%1:%2",_uid,_plate];
 	};
-	default:
+	default
 	{
 		_query = format["vehicleDead:0:%1:%2",_uid,_plate];
 	};
