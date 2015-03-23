@@ -54,11 +54,11 @@ switch (_mode) do
             	};
             };
         };
-        _vehicle setVariable["gps",_gps];
-        _vehicle setVariable["hooks",_hooks];
-        _vehicle setVariable["insurance",_insurance];
-        _vehicle setVariable["security",_security];
-        _vehicle setVariable["trunklevel",_trunk];
+        _vehicle setVariable["gps",_gps,true];
+        _vehicle setVariable["hooks",_hooks,true];
+        _vehicle setVariable["insurance",_insurance,true];
+        _vehicle setVariable["security",_security,true];
+        _vehicle setVariable["trunklevel",_trunk,true];
         
         _dbInfo = _vehicle getVariable["dbInfo",[]];
         if(count _dbInfo == 0) exitWith {};

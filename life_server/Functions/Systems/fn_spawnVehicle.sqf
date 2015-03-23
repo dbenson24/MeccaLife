@@ -131,11 +131,11 @@ switch (_vInfo select 3) do
 		_insurance = _vInfo select 12;
 		_hooks = _vInfo select 13;
 		_hooks = [_hooks, 1] call DB_fnc_bool;
-        _vehicle setVariable["gps",_gps];
-        _vehicle setVariable["security",_security];
-        _vehicle setVariable["trunklevel",_trunk];
-        _vehicle setVariable["insurance",_insurance];
-        _vehicle setVariable["hooks",_hooks];
+        _vehicle setVariable["gps",_gps,true];
+        _vehicle setVariable["security",_security,true];
+        _vehicle setVariable["trunklevel",_trunk,true];
+        _vehicle setVariable["insurance",_insurance,true];
+        _vehicle setVariable["hooks",_hooks,true];
 	};
 };
 
