@@ -14,7 +14,7 @@ _used = (_vehicle getVariable "Trunk") select 1;
 _trunklevel = _vehicle getVariable ["trunklevel",0];
 _trunklevel = 1 + (_trunklevel/20);
 _weight = [(typeOf _vehicle)] call life_fnc_vehicleWeightCfg;
-_weight = _trunklevel * _weight;
+_weight = round(_trunklevel * _weight);
 
 if(isNil "_used") then {_used = 0};
 [_weight,_used];

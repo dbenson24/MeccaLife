@@ -8,11 +8,6 @@ _vehicle = upgradeVehicle;
 if(isNil "_vehicle") exitWith {hint "You don't own that vehicle"};
 if(isNull _vehicle) exitWith {};
 
-
-
-
-
-
 _price = 0;
 _gps = false;
 _hooks = false;
