@@ -30,6 +30,19 @@ _Btn5 = _display displayCtrl Btn5;
 _Btn6 = _display displayCtrl Btn6;
 life_vInact_curTarget = _curTarget;
 
+
+_vehData = _x getVariable["vehicle_info_owners",[]];
+_owner = false;
+if(count _vehData  > 0) then
+{
+	_vehOwner = (_vehData select 0) select 0;
+	if((getPlayerUID player) == _vehOwner) exitWith
+	{
+		_owner = true;
+	};
+};
+
+
 //Button 1 - Set vehicle repair action
 _Btn1 ctrlSetText localize "STR_vInAct_Repair";
 _Btn1 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_repairTruck;";
@@ -75,8 +88,14 @@ if(_curTarget isKindOf "Ship") then
 	};
 };
 
-//Button 3 - undefined
-_Btn3 ctrlShow false;
+//Button 3 - GPS
+if (_owner && _vehicle getVariable["gps",false]) then {
+	_Btn3 ctrlEnable true;
+	_Btn3 ctrlSetText "Toggle GPS";
+	_Btn3 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_toggleGPS; closeDialog 0;"
+} else {
+	_Btn3 ctrlShow false;
+};
 //Button 4 - undefined
 _Btn4 ctrlShow false;
 //Button 5 - undefined

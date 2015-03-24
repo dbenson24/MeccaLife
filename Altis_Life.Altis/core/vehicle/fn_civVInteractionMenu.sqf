@@ -36,6 +36,18 @@ _Btn8 = _display displayCtrl Btn8;
 _Btn9 = _display displayCtrl Btn9;
 life_vInact_curTarget = _curTarget;
 
+_vehData = _x getVariable["vehicle_info_owners",[]];
+_owner = false;
+if(count _vehData  > 0) then
+{
+	_vehOwner = (_vehData select 0) select 0;
+	if((getPlayerUID player) == _vehOwner) exitWith
+	{
+		_owner = true;
+	};
+};
+
+
 //Button 1 - Set vehicle repair action
 _Btn1 ctrlSetText localize "STR_vInAct_Repair";
 _Btn1 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_repairTruck;";
@@ -101,18 +113,25 @@ _Btn4 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_vUseItem; closeDia
 //DeviceMine Action
 if(typeOf _curTarget == "O_Truck_03_device_F") then 
 {
-	_Btn5 ctrlSetText localize "STR_vInAct_DeviceMine";
-	_Btn5 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_deviceMine";
+	_Btn6 ctrlSetText localize "STR_vInAct_DeviceMine";
+	_Btn6 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_deviceMine";
 	if(!isNil {(_curTarget getVariable "mining")} OR !local _curTarget && {_curTarget in life_vehicles}) then 
 	{
-		_Btn5 ctrlEnable false;
+		_Btn6 ctrlEnable false;
 	} else {
-		_Btn5 ctrlEnable true;
+		_Btn6 ctrlEnable true;
 	};
 } else {
-	_Btn5 ctrlShow false;
 	_Btn6 ctrlShow false;
 	_Btn7 ctrlShow false;
 	_Btn8 ctrlShow false;
 	_Btn9 ctrlShow false;
+};
+
+if (_owner && _vehicle getVariable["gps",false]) then {
+	_Btn5 ctrlEnable true;
+	_Btn5 ctrlSetText "Toggle GPS";
+	_Btn5 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_toggleGPS; closeDialog 0;"
+} else {
+	_Btn5 ctrlShow false;
 };
