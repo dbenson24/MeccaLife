@@ -136,5 +136,6 @@ switch (_vInfo select 3) do
         _vehicle setVariable["trunklevel",_trunk,true];
         _vehicle setVariable["insurance",_insurance,true];
         _vehicle setVariable["hooks",_hooks,true];
+        _vehicle enableRopeAttach _hooks;
 	};
 };
