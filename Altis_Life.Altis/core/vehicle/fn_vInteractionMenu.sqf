@@ -107,6 +107,8 @@ if(playerSide == west) then {
 		if (_owner && _vehicle getVariable["gps",false]) then {
 			_Btn9 ctrlSetText "Toggle GPS";
 			_Btn9 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_toggleGPS; closeDialog 0;"
+		} else {
+			_Btn9 ctrlShow false;
 		};
 } else {
 	
