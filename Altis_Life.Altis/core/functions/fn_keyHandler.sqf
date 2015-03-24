@@ -475,8 +475,10 @@ switch (_code) do {
 							_veh animateDoor ['Door_RB',1];
 						};
 						if (_veh getVariable ["hooks",false]) then {
+							diag_log "Vehicle Unlocked: Hooks upgrade on: Sling Load Ready";
 							_veh enableRopeAttach true;
 						} else {
+							diag_log "Vehicle Unlocked: No Hooks: Sling Load Off";
 							_veh enableRopeAttach false;
 						};
 						systemChat localize "STR_MISC_VehUnlock";
@@ -510,8 +512,10 @@ switch (_code) do {
 							_veh animateDoor ['Door_RB',0];
 						};
 						if (_veh getVariable ["hooks",false]) then {
+							diag_log "Vehicle Locked: Hooks upgrade on: Sling Load Off";
 							_veh enableRopeAttach false;
 						} else {
+							diag_log "Vehicle Locked: No Hooks: Sling Load Off";
 							_veh enableRopeAttach false;
 						};
 						systemChat localize "STR_MISC_VehLock";

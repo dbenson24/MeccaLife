@@ -54,9 +54,6 @@ switch (_mode) do
 
 [[upgradeVehicle],"TON_fnc_updateUpgrades",false,false] spawn life_fnc_MP;
 
-if(isNil "upgrade_price") exitWith {};
-if(isNull upgrade_price) exitWith {};
-
 if (BANK < upgrade_price) exitWith {hint "You don't have enough money to purchase those upgrades";};
 
 SUB(BANK,upgrade_price);
