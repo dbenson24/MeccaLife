@@ -32,7 +32,7 @@ _insprice = 0;
 
 _display = findDisplay 5500;
 
-_baseprice = M_CONFIG(getNumber,CONFIG_VEHICLES,typeOf _vehicle,"price");
+_baseprice = Life_donDis * M_CONFIG(getNumber,CONFIG_VEHICLES,typeOf _vehicle,"price");
 
 // Getting variables from car
 _oldtrunk = _vehicle getVariable["trunklevel", 0];
