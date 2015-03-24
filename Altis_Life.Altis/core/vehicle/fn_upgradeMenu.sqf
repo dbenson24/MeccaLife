@@ -15,7 +15,7 @@ if(vehicle player != player) then
 {
 	_vehicle = vehicle player;
 } else {
-	_nearVehicles = nearestObjects [getMarkerPos (_this select 3),["Car","Truck","Air","Ship"],25];
+	_nearVehicles = nearestObjects [(position player),["Car","Truck","Air","Ship"],15];
 
 	//Error check
 	if(count _nearVehicles > 0) then
