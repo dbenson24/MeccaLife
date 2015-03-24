@@ -24,8 +24,8 @@ _hooks = false;
 _security = false;
 
 
-_gpsco = 0.2;
-_hooksco = 0.3;
+_gpsco = 0.15;
+_hooksco = 0.25;
 _trunkco = 0.1;
 _securityco = 0.2;
 _insprice = 0;
