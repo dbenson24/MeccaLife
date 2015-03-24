@@ -139,13 +139,12 @@ if(playerSide == west) then {
 	};
 	
 	if (_owner && _vehicle getVariable["gps",false]) then {
-		_Btn4 ctrlEnable true;
-		_Btn4 ctrlSetText "Toggle GPS";
-		_Btn4 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_toggleGPS; closeDialog 0;"
+		_Btn5 ctrlEnable true;
+		_Btn5 ctrlSetText "Toggle GPS";
+		_Btn5 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_toggleGPS; closeDialog 0;"
 	} else {
-		_Btn4 ctrlShow false;
+		_Btn5 ctrlShow false;
 	};
-	_Btn5 ctrlShow false;
 	_Btn6 ctrlShow false;
 	_Btn7 ctrlShow false;
 	_Btn9 ctrlShow false;
