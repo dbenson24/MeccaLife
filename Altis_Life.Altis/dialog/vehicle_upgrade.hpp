@@ -72,15 +72,6 @@ class Life_upgrade_car
 			w = 0.0670312 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
-		class HooksLabel : Life_RscText
-		{
-			idc = 1010;
-			text = "Sling Hooks :"; //--- ToDo : Localize;
-			x = 0.448438 * safezoneW + safezoneX;
-			y = 0.445 * safezoneH + safezoneY;
-			w = 0.0670312 * safezoneW;
-			h = 0.055 * safezoneH;
-		};
 		class GPSLabel : Life_RscText
 		{
 			idc = 1011;
@@ -167,6 +158,15 @@ class Life_upgrade_car
 			w = 0.0154688 * safezoneW;
 			h = 0.022 * safezoneH;
 			onCheckedChanged = "[0] call life_fnc_upgradeMenuChange;";
+		};
+		class HooksLabel : Life_RscText
+		{
+			idc = 1010;
+			text = "Sling Hooks :"; //--- ToDo : Localize;
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.445 * safezoneH + safezoneY;
+			w = 0.0670312 * safezoneW;
+			h = 0.055 * safezoneH;
 		};
 		class GPSCheck : Life_RscCheckbox
 		{

@@ -109,7 +109,7 @@ class WeaponShops {
 		
             { "acc_flashlight", "", 500 },
             { "optic_ACO_grn", "", 10000 },	
-            { "optic_ACO_grn", "", 10000 },
+            { "optic_Aco", "", 10000 },
             { "optic_MRCO", "", 20000 },	
 			{ "optic_Hamr", "", 4000 },			
             { "optic_Holosight", "", 25000 },
@@ -190,7 +190,7 @@ class WeaponShops {
             { "acc_flashlight", "", 500 },
             { "optic_ACO_grn", "", 10000 },	
 			{ "optic_Hamr", "", 4000 },
-            { "optic_ACO_grn", "", 10000 },
+            { "optic_Aco", "", 10000 },
             { "optic_MRCO", "", 20000 },		
             { "optic_Holosight", "", 25000 },
             { "optic_Arco", "", 20000 },		
@@ -262,7 +262,7 @@ class WeaponShops {
 			
             { "acc_flashlight", "", 500 },
             { "optic_ACO_grn", "", 10000 },	
-            { "optic_ACO_grn", "", 10000 },
+            { "optic_Aco", "", 10000 },
             { "optic_MRCO", "", 20000 },		
             { "optic_Holosight", "", 25000 },
             { "optic_Arco", "", 20000 },		

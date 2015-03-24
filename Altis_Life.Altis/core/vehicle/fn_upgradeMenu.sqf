@@ -63,6 +63,7 @@ _inslevel = 5512;
 _securecheck = _display displayCtrl 5503;
 _hookcheck = _display displayCtrl 5504;
 _gpscheck = _display displayCtrl 5505;
+_hooklabel = _display displayCtrl 1010;
 
 sliderSetRange [_trunkslider, 0, 4];
 sliderSetRange [_insslider, 0, 3];
@@ -81,6 +82,11 @@ ctrlSetText[5511,format["%1",(_vehicle getVariable["trunklevel", 0])]];
 _securecheck cbSetChecked (_vehicle getVariable["security",false]);
 _hookcheck cbSetChecked (_vehicle getVariable["hooks",false]);
 _gpscheck cbSetChecked (_vehicle getVariable["gps",false]);
+
+if (_vehicle isKindOf "Air") then {
+	_hooklabel ctrlShow false;
+	_hookcheck ctrlShow false;
+}
 
 /*
 _control = CONTROL(39400,39402);
