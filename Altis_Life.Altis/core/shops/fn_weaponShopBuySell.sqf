@@ -12,7 +12,7 @@ if((lbCurSel 38403) == -1) exitWith {hint localize "STR_Shop_Weapon_NoSelect"};
 _price = lbValue[38403,(lbCurSel 38403)]; if(isNil "_price") then {_price = 0;};
 _item = lbData[38403,(lbCurSel 38403)];
 _itemInfo = [_item] call life_fnc_fetchCfgDetails;
-
+_price = _price * Life_donDis;
 _bad = "";
 
 if((_itemInfo select 6) != "CfgVehicles") then
@@ -34,7 +34,6 @@ if((uiNamespace getVariable["Weapon_Shop_Filter",0]) == 1) then
 }
 	else
 {
-	//_price = _price * life_donDis;
 	private["_hideout"];
 	_hideout = (nearestObjects[getPosATL player,["Land_u_Barracks_V2_F","Land_i_Barracks_V2_F"],25]) select 0;
 	if(!isNil "_hideout" && {!isNil {grpPlayer getVariable "gang_bank"}} && {(grpPlayer getVariable "gang_bank") >= _price}) then {
