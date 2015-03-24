@@ -476,10 +476,7 @@ switch (_code) do {
 						};
 						if (_veh getVariable ["hooks",false]) then {
 							diag_log "Vehicle Unlocked: Hooks upgrade on: Sling Load Ready";
-							_veh enableRopeAttach true;
-						} else {
-							diag_log "Vehicle Unlocked: No Hooks: Sling Load Off";
-							_veh enableRopeAttach false;
+							[[_veh,true],"TON_fnc_changeSlingLoad",false,false] spawn life_fnc_MP;
 						};
 						systemChat localize "STR_MISC_VehUnlock";
 						_veh say3D "unlock";
@@ -513,10 +510,7 @@ switch (_code) do {
 						};
 						if (_veh getVariable ["hooks",false]) then {
 							diag_log "Vehicle Locked: Hooks upgrade on: Sling Load Off";
-							_veh enableRopeAttach false;
-						} else {
-							diag_log "Vehicle Locked: No Hooks: Sling Load Off";
-							_veh enableRopeAttach false;
+							[[_veh,false],"TON_fnc_changeSlingLoad",false,false] spawn life_fnc_MP;
 						};
 						systemChat localize "STR_MISC_VehLock";
 						_veh say3D "lock";

@@ -13,5 +13,6 @@ Bugs:
 Towing for medics
 Medics check registration
 Donator Discounts for weapons: fn_weaponShopSelection * life_donDis maybe?
-
+Tool kits are not used
+Clothing Menu: Outback outfits graphical bug
 
