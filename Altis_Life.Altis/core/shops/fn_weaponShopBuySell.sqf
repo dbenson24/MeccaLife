@@ -63,7 +63,7 @@ if((uiNamespace getVariable["Weapon_Shop_Filter",0]) == 1) then
 	} else {
 		if(_price > CASH) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
 		
-		player say3D "buy";
+		//player say3D "buy";
 		
 		hint parseText format[localize "STR_Shop_Weapon_BoughtItem",_itemInfo select 1,[_price] call life_fnc_numberText];
 		CASH = CASH - _price;

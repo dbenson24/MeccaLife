@@ -190,6 +190,7 @@ if((life_clothing_purchase select 2) == -1) then {
 if((life_clothing_purchase select 3) == -1) then {
 	if(life_oldVest != vest player) then {
 		if(life_oldVest == "") then {removeVest player;} else {
+			removeVest player;
 			player addVest life_oldVest;
 			{[_x,true,false,false,true] call life_fnc_handleItem;} foreach life_oldVestItems;
 		};
