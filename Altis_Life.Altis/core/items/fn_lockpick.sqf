@@ -35,7 +35,7 @@ _security = _curTarget getVariable ["security", false];
 if (_security) then {
 	_cp = 0.005;
 	[_curTarget] spawn {
-		sleep 45;
+		sleep 60;
 		_vehicle = _this select 0;
 		_vehData = _vehicle getVariable["vehicle_info_owners",[]];
 		_vehOwner = -1;
@@ -64,7 +64,7 @@ while {true} do
 		player switchMove "AinvPknlMstpSnonWnonDnon_medic_1";
 		player playMoveNow "AinvPknlMstpSnonWnonDnon_medic_1";
 	};
-	sleep 0.26;
+	sleep 0.4;
 	if(isNull _ui) then {
 		5 cutRsc ["life_progress","PLAIN"];
 		_ui = uiNamespace getVariable "life_progress";

@@ -505,7 +505,9 @@ switch (_code) do {
 							_veh animateDoor ['Door_LB',0];
 							_veh animateDoor ['Door_RB',0];
 						};
-						_veh enableRopeAttach (_veh getVariable ["hooks",false]);
+						if (_veh getVariable ["hooks",false]) then {
+							_veh enableRopeAttach ;
+						}
 						systemChat localize "STR_MISC_VehLock";
 						_veh say3D "lock";
 					};
