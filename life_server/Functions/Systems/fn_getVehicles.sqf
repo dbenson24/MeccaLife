@@ -37,7 +37,7 @@ waitUntil{sleep (random 0.3); !DB_Async_Active};
 _tickTime = diag_tickTime;
 _queryResult = [_query,2,true] call DB_fnc_asyncCall;
 
-//if((EQUAL(EXTDB_SETTINGS("MySQL_Query"),1))) then {
+if((EQUAL(EXTDB_SETTINGS("MySQL_Query"),1))) then {
 	["diag_log",[
 		"------------- VehiclesInfo Query Request -------------",
 		format["QUERY: %1",_query],
@@ -45,7 +45,7 @@ _queryResult = [_query,2,true] call DB_fnc_asyncCall;
 		format["Result: %1",_queryResult],
 		"-------------------------------------------------"
 	]] call TON_fnc_logIt;
-//};
+};
 
 if(typeName _queryResult == "STRING") exitWith {
 	[[[]],"life_fnc_impoundMenu",(owner _unit),false] call life_fnc_MP;

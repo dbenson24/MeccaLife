@@ -39,13 +39,13 @@ _hooks = [_hooks, 0] call DB_fnc_bool;
 
 _query = format["updateCarUpgrades:1:%1:%2:%3:%4:%5:%6:%7",_gps,_security,_trunk,_insurance,_hooks,_uid,_plate];
 
-
+if((EQUAL(EXTDB_SETTINGS("MySQL_Query"),1))) then {
 	["diag_log",[
 		"------------- UpdateCar Upgrades Request -------------",
 		format["QUERY: %1",_query],
 		"------------------------------------------------"
 	]] call TON_fnc_logIt;
-
+};
 
 waitUntil {!DB_Async_Active};
 _thread = [_query,1] call DB_fnc_asyncCall;
