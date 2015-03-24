@@ -2731,7 +2731,7 @@ class Mission
 				};
 				class Item41
 				{
-					position[]={3045.5254,2.0151806,12613.715};
+					position[]={3018.6,2.13829,12641};
 					azimut=225;
 					special="NONE";
 					id=139;
@@ -3163,8 +3163,8 @@ class Mission
 				};
 				class Item78
 				{
-					position[]={20078.871,100.96817,6744.1006};
-					azimut=-547.823;
+					position[]={20073.2,101.843,6724.73};
+					azimut=45;
 					special="NONE";
 					id=176;
 					side="EAST";
@@ -3278,8 +3278,8 @@ class Mission
 				};
 				class Item88
 				{
-					position[]={17542.035,2.8116601,18941.018};
-					azimut=-34.818043;
+					position[]={17565,2.14737,18904.5};
+					azimut=-315;
 					special="NONE";
 					id=186;
 					side="CIV";
@@ -3289,9 +3289,8 @@ class Mission
 				};
 				class Item89
 				{
-					position[]={20687.047,4.7817235,19447.77};
-					azimut=133.99702;
-					offsetY=0.5;
+					position[]={20681,4.425,19451};
+					azimut=215;
 					special="NONE";
 					id=187;
 					side="CIV";
@@ -3731,9 +3730,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={25974.449,25.925364,21616.031};
+					position[]={25974.3,26.27,21618.5};
 					azimut=170;
-					offsetY=0.1;
 					special="NONE";
 					id=218;
 					side="CIV";
@@ -3938,7 +3936,6 @@ class Mission
 				{
 					position[]={16576.674,2.0710719,12420.002};
 					azimut=135;
-					offsetY=1;
 					special="NONE";
 					id=228;
 					side="CIV";
@@ -4446,12 +4443,13 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={20776.725,36.858665,16660.225};
+					position[]={20778,37.0125,16668.5};
 					special="NONE";
 					id=254;
 					side="CIV";
 					vehicle="C_man_1";
 					leader=1;
+					azimut = 125;
 					skill=0.60000002;
 					init="this enableSimulation false; this allowDamage false; this addAction[""Rob Store"",life_fnc_robshops]; this addAction[""Market"",life_fnc_virt_menu,""market""];this addAction[""General Store"",life_fnc_weaponShopMenu,""genstore""];this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
 				};
@@ -6224,7 +6222,6 @@ class Mission
 				{
 					position[]={17537.299,3.1320143,18937.633};
 					azimut=110;
-					offsetY=0.49000001;
 					special="NONE";
 					id=343;
 					side="CIV";
@@ -6245,7 +6242,6 @@ class Mission
 				{
 					position[]={16591.805,2.307539,12421.24};
 					azimut=110;
-					offsetY=0.49000001;
 					special="NONE";
 					id=344;
 					side="CIV";
@@ -7096,8 +7092,8 @@ class Mission
 		};
 		class Item81
 		{
-			position[]={20770.799,36.74324,16658.928};
-			azimut=306.42456;
+			position[]={20772,37.0113,16667.4};
+			azimut=205;
 			id=426;
 			side="EMPTY";
 			vehicle="Land_Atm_02_F";
@@ -95469,7 +95465,7 @@ class Mission
 		};
 		class Item109
 		{
-			position[]={3002.437,0.019021351,12651.198};
+			position[]={3012.5,0.019021351,12644};
 			name="civ_ship_1";
 			text="Boat Spawn";
 			type="loc_Quay";
@@ -95766,7 +95762,7 @@ class Mission
 		};
 		class Item146
 		{
-			position[]={17558.477,-0.01261176,18862.256};
+			position[]={17573,-0.01261176,18908};
 			name="civ_ship_3";
 			text="Boat Spawn";
 			type="loc_Quay";
