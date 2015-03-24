@@ -28,8 +28,11 @@ _dbInfo = _vehicle GVAR ["dbInfo",[]];
 if(count _dbInfo > 0) then {
 	_uid = SEL(_dbInfo,0);
 	_plate = SEL(_dbInfo,1);
-
-	_query = format["vehicleDead:0:%1:%2",_uid,_plate];
+	if (_vehicle getVariable["insurance",0] == 3 ) then {
+		query = format["removeInsurance:%1:%2",_uid,_plate];
+	} else {
+		_query = format["vehicleDead:0:%1:%2",_uid,_plate];
+	};
 	waitUntil {!DB_Async_Active};
 	_sql = [_query,1] call DB_fnc_asyncCall;
 };
