@@ -37,7 +37,7 @@ _Btn8 = _display displayCtrl Btn8;
 _Btn9 = _display displayCtrl Btn9;
 life_vInact_curTarget = _curTarget;
 
-_vehData = _x getVariable["vehicle_info_owners",[]];
+_vehData = life_vInact_curTarget getVariable["vehicle_info_owners",[]];
 _owner = false;
 if(count _vehData  > 0) then
 {
