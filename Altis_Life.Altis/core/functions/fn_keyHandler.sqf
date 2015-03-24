@@ -476,7 +476,7 @@ switch (_code) do {
 						};
 						if (_veh getVariable ["hooks",false]) then {
 							_veh enableRopeAttach true;
-						}
+						};
 						systemChat localize "STR_MISC_VehUnlock";
 						_veh say3D "unlock";
 					} else {
@@ -509,7 +509,7 @@ switch (_code) do {
 						};
 						if (_veh getVariable ["hooks",false]) then {
 							_veh enableRopeAttach false;
-						}
+						};
 						systemChat localize "STR_MISC_VehLock";
 						_veh say3D "lock";
 					};

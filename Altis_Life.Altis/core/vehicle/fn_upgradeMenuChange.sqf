@@ -133,7 +133,7 @@ switch (_oldins) do {
 _insprice = round(_insprice);
 _oldinsprice = round(_oldinsprice);
 
-_pricechanges[] = {};
+_pricechanges = [];
 _pricechanges pushBack round(_gpsprice - _oldgpsprice);
 _pricechanges pushBack round(_insprice - _oldinsprice);
 _pricechanges pushBack round(_hooksprice - _oldhooksprice);
