@@ -1,3 +1,4 @@
+#include "\life_server\script_macros.hpp"
 /*
 	File: fn_updateUpgrades.sqf
 	Author: Derek
