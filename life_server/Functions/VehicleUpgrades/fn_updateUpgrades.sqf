@@ -15,12 +15,13 @@ _insurance = [_this,4,0] call BIS_fnc_param;
 _hooks = [_this,5,false] call BIS_fnc_param;
 _uid = [_this,6,-1] call BIS_fnc_param;
 _plate = [_this,7,-1] call BIS_fnc_param;*/
-
-["diag_log",[
-		"------------- UpdateCar Upgrades Request -------------",
-		format["Car: %1",_vehicle],
-		"------------------------------------------------"
-	]] call TON_fnc_logIt;
+if((EQUAL(EXTDB_SETTINGS("MySQL_Query"),1))) then {
+	["diag_log",[
+			"------------- UpdateCar Upgrades Request -------------",
+			format["Car: %1",_vehicle],
+			"------------------------------------------------"
+		]] call TON_fnc_logIt;
+};
 hint str _vehicle;
 if(isNull _vehicle) exitWith {}; //NULL
 
