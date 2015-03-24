@@ -145,7 +145,7 @@ _pricechanges pushBack round(_trunkprice - _oldtrunkprice);
 		_price = round(0.5 * _x) + _price;
 	} else {
 		_price = _price + _x;
-	}
+	};
 } forEach _pricechanges;
 
 ctrlSetText [5510, format[" $%1",_price]];
