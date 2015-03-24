@@ -18,7 +18,7 @@ switch (_insurance) do
 {
 	case 1:
 	{
-		_query = format["updateCarUpgrades:0:0:0:0:0:0:%1:%2",uid,_plate];
+		_query = format["updateCarUpgrades:0:0:0:0:0:0:%1:%2",_uid,_plate];
 	};
 	case 2:
 	{
