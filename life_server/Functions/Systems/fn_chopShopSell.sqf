@@ -29,7 +29,7 @@ if(count _dbInfo > 0) then {
 	_uid = SEL(_dbInfo,0);
 	_plate = SEL(_dbInfo,1);
 	if (_vehicle getVariable["insurance",0] == 3 ) then {
-		query = format["removeInsurance:%1:%2",_uid,_plate];
+		_query = format["removeInsurance:%1:%2",_uid,_plate];
 	} else {
 		_query = format["vehicleDead:0:%1:%2",_uid,_plate];
 	};
