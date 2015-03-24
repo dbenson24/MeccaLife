@@ -40,8 +40,14 @@ class WeaponShops {
 			{ "ItemRadio", "", 100 },
             { "hgun_Rook40_F", "", 5000 },
             { "30Rnd_9x21_Mag", "", 500 },
-            { "hgun_PDW2000_F", "", 20000 },
+            { "hgun_PDW2000_F", "", 10000 },
             { "30Rnd_9x21_Mag", "", 1000 },
+			{ "hgun_ACPC2_F", "", 6000 },
+			{ "9Rnd_45ACP_Mag", "", 500 },
+			{ "hgun_Pistol_heavy_02_F", "", 25000 },
+            { "6Rnd_45ACP_Cylinder", "", 500 },
+			
+			
             { "optic_ACO_grn", "", 2500 },
             { "optic_Aco", "", 2500 }
         };
@@ -106,7 +112,7 @@ class WeaponShops {
 				
 			{ "launch_Titan_F", "", 500000 },
             { "Titan_AA", "", 200000 },
-		
+			{ "Rangefinder", "",5000},
             { "acc_flashlight", "", 500 },
             { "optic_ACO_grn", "", 10000 },	
             { "optic_Aco", "", 10000 },
@@ -186,7 +192,7 @@ class WeaponShops {
 				
 			{ "launch_Titan_F", "", 500000 },
             { "Titan_AA", "", 200000 },
-			
+			{ "Rangefinder", "",5000},
             { "acc_flashlight", "", 500 },
             { "optic_ACO_grn", "", 10000 },	
 			{ "optic_Hamr", "", 4000 },
@@ -253,13 +259,8 @@ class WeaponShops {
             { "srifle_DMR_01_F", "", 80000 },
             { "10Rnd_762x51_Mag", "", 500 },
 			
-            { "srifle_EBR_F", "", 100000 },
-            { "20Rnd_762x51_Mag", "", 500 },
 			
-            { "srifle_LRR_LRPS_F", "", 1200000 },
-            { "7Rnd_408_Mag", "", 500000 },
-			
-			
+			{ "Rangefinder", "",5000},
             { "acc_flashlight", "", 500 },
             { "optic_ACO_grn", "", 10000 },	
             { "optic_Aco", "", 10000 },
@@ -294,6 +295,7 @@ class WeaponShops {
             { "Binocular", "", 1000 },
             { "NVGoggles_INDEP", "", 1000 },
             { "NVGoggles", "", 1000 },
+			{ "Rangefinder", "",5000},
 			{ "Chemlight_red", "", 300 },
 			{ "Chemlight_yellow", "", 300 },
 			{ "Chemlight_green", "", 300 },
