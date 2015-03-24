@@ -4005,8 +4005,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={27775.502,18.962534,22215.129};
-					azimut=10;
+					position[]={27756.2,19.1862,22215.6};
+					azimut=75;
 					special="NONE";
 					id=232;
 					side="EAST";
@@ -4026,8 +4026,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={27777.201,18.926308,22214.256};
-					azimut=30;
+					position[]={27756.2,19.1863,22218.8};
+					azimut=75;
 					special="NONE";
 					id=233;
 					side="EAST";
