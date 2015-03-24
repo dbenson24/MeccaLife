@@ -37,7 +37,7 @@ switch (_mode) do
         _gps = cbChecked _gpsctrl;
 		_hooks = cbChecked _hooksctrl;
 		_security = cbChecked _securityctrl;
-        
+        /*
         if (_gps && !(upgradeVehicle getVariable["gps",false])) then {
             [upgradeVehicle] spawn {
                 diag_log format["gpsUpgrade unit: %1", upgradeVehicle];
@@ -55,7 +55,7 @@ switch (_mode) do
             	};
             };
         };
-        diag_log "marker check passed";
+        diag_log "marker check passed";*/
         upgradeVehicle setVariable["gps",_gps,true];
         upgradeVehicle setVariable["hooks",_hooks,true];
         upgradeVehicle setVariable["insurance",_insurance,true];

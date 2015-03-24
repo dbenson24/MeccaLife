@@ -16,7 +16,7 @@
 #define Btn8 37457
 #define Btn9 37458
 #define Title 37401
-private["_display","_curTarget","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6","_Btn7","_Btn8","_Btn9"];
+private["_display","_curTarget","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6","_Btn7","_Btn8","_Btn9","_owner"];
 if(!dialog) then {
 	createDialog "vInteraction_Menu";
 };
@@ -36,6 +36,18 @@ _Btn7 = _display displayCtrl Btn7;
 _Btn8 = _display displayCtrl Btn8;
 _Btn9 = _display displayCtrl Btn9;
 life_vInact_curTarget = _curTarget;
+
+_vehData = _x getVariable["vehicle_info_owners",[]];
+_owner = false;
+if(count _vehData  > 0) then
+{
+	_vehOwner = (_vehData select 0) select 0;
+	if((getPlayerUID player) == _vehOwner) exitWith
+	{
+		_owner = true;
+	};
+};
+
 
 //Set Repair Action
 _Btn1 ctrlSetText localize "STR_vInAct_Repair";
@@ -91,7 +103,11 @@ if(playerSide == west) then {
 	
 		_Btn8 ctrlSetText localize "STR_vInAct_vUseItem";
 		_Btn8 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_vUseItem; closeDialog 0;";
-	
+		
+		if (_owner && _vehicle getVariable["gps",false]) then {
+			_Btn9 ctrlSetText "Toggle GPS";
+			_Btn9 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_toggleGPS; closeDialog 0;"
+		};
 } else {
 	
 	if(_curTarget isKindOf "Ship") then {
@@ -122,7 +138,13 @@ if(playerSide == west) then {
 		_Btn3 ctrlShow false;
 	};
 	
-	_Btn4 ctrlShow false;
+	if (_owner && _vehicle getVariable["gps",false]) then {
+		_Btn4 ctrlEnable true;
+		_Btn4 ctrlSetText "Toggle GPS";
+		_Btn4 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_toggleGPS; closeDialog 0;"
+	} else {
+		_Btn4 ctrlShow false;
+	};
 	_Btn5 ctrlShow false;
 	_Btn6 ctrlShow false;
 	_Btn7 ctrlShow false;
