@@ -478,7 +478,7 @@ switch (_code) do {
 							_veh enableRopeAttach true;
 						} else {
 							_veh enableRopeAttach false;
-						}
+						};
 						systemChat localize "STR_MISC_VehUnlock";
 						_veh say3D "unlock";
 					} else {
