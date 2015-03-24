@@ -15,6 +15,8 @@ disableSerialization;
 if(isNil "upgradeVehicle") exitWith {hint "No Vehicle Near to Upgrade"};
 if(isNull upgradeVehicle) exitWith {};
 
+if (BANK < upgrade_price) exitWith {hint "You don't have enough money to purchase those upgrades";};
+
 switch (_mode) do
 {
     case 0:
@@ -53,8 +55,6 @@ switch (_mode) do
 
 
 [[upgradeVehicle],"TON_fnc_updateUpgrades",false,false] spawn life_fnc_MP;
-
-if (BANK < upgrade_price) exitWith {hint "You don't have enough money to purchase those upgrades";};
 
 SUB(BANK,upgrade_price);
 

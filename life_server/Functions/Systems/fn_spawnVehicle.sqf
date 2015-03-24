@@ -32,7 +32,7 @@ waitUntil{sleep (random 0.3); !DB_Async_Active};
 _tickTime = diag_tickTime;
 _queryResult = [_query,2] call DB_fnc_asyncCall;
 
-//if((EQUAL(EXTDB_SETTINGS("MySQL_Query"),1))) then {
+if((EQUAL(EXTDB_SETTINGS("MySQL_Query"),1))) then {
 	["diag_log",[
 		"------------- Vehicle Query Request -------------",
 		format["QUERY: %1",_query],
@@ -40,7 +40,7 @@ _queryResult = [_query,2] call DB_fnc_asyncCall;
 		format["Result: %1",_queryResult],
 		"-------------------------------------------------"
 	]] call TON_fnc_logIt;
-//};
+};
 
 if(EQUAL(typeName _queryResult,typeName "")) exitWith {};
 
@@ -119,23 +119,18 @@ serv_sv_use deleteAt _servIndex;
 
 //Add upgrades to vehicle
 
-switch (_vInfo select 3) do
-{
-	case "Car":
-	{
-		_gps = _vInfo select 9;
-		_gps = [_gps, 1] call DB_fnc_bool;
-		_security = _vInfo select 10;
-		_security = [_security, 1] call DB_fnc_bool;
-		_trunk = _vInfo select 11;
-		_insurance = _vInfo select 12;
-		_hooks = _vInfo select 13;
-		_hooks = [_hooks, 1] call DB_fnc_bool;
-        _vehicle setVariable["gps",_gps,true];
-        _vehicle setVariable["security",_security,true];
-        _vehicle setVariable["trunklevel",_trunk,true];
-        _vehicle setVariable["insurance",_insurance,true];
-        _vehicle setVariable["hooks",_hooks,true];
-      	_vehicle enableRopeAttach false;
-	};
-};
+
+_gps = _vInfo select 9;
+_gps = [_gps, 1] call DB_fnc_bool;
+_security = _vInfo select 10;
+_security = [_security, 1] call DB_fnc_bool;
+_trunk = _vInfo select 11;
+_insurance = _vInfo select 12;
+_hooks = _vInfo select 13;
+_hooks = [_hooks, 1] call DB_fnc_bool;
+_vehicle setVariable["gps",_gps,true];
+_vehicle setVariable["security",_security,true];
+_vehicle setVariable["trunklevel",_trunk,true];
+_vehicle setVariable["insurance",_insurance,true];
+_vehicle setVariable["hooks",_hooks,true];
+  _vehicle enableRopeAttach false;
