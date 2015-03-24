@@ -89,7 +89,7 @@ if(_curTarget isKindOf "Ship") then
 };
 
 //Button 3 - GPS
-if (_owner && _vehicle getVariable["gps",false]) then {
+if (_owner && life_vInact_curTarget getVariable["gps",false]) then {
 	_Btn3 ctrlEnable true;
 	_Btn3 ctrlSetText "Toggle GPS";
 	_Btn3 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_toggleGPS; closeDialog 0;"

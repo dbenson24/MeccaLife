@@ -128,7 +128,7 @@ if(typeOf _curTarget == "O_Truck_03_device_F") then
 	_Btn9 ctrlShow false;
 };
 
-if (_owner && _vehicle getVariable["gps",false]) then {
+if (_owner && life_vInact_curTarget getVariable["gps",false]) then {
 	_Btn5 ctrlEnable true;
 	_Btn5 ctrlSetText "Toggle GPS";
 	_Btn5 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_toggleGPS; closeDialog 0;"
