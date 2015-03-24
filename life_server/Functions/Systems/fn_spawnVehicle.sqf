@@ -133,4 +133,4 @@ _vehicle setVariable["security",_security,true];
 _vehicle setVariable["trunklevel",_trunk,true];
 _vehicle setVariable["insurance",_insurance,true];
 _vehicle setVariable["hooks",_hooks,true];
-  _vehicle enableRopeAttach false;
+_vehicle enableRopeAttach false;

@@ -23,18 +23,14 @@ if(vehicle player != player) then
 		{
 			if(!isNil "_vehicle") exitWith {}; //Kill the loop.
 			_vehData = _x getVariable["vehicle_info_owners",[]];
-			diag_log format ["Vehicle Data: %1",_vehData];
 			if(count _vehData  > 0) then
 			{
 				_vehOwner = (_vehData select 0) select 0;
-				diag_log format ["Vehicle Owner: %1",_vehOwner];
-				diag_log format ["Player: %1",getPlayerUID player];
 				
 				if((getPlayerUID player) == _vehOwner) exitWith
 				{
 					_vehicle = _x;
 					upgradeVehicle = _vehicle;
-					diag_log format["Vehicle Selected: %1",_vehicle];
 				};
 			};
 		} foreach _nearVehicles;
@@ -43,8 +39,6 @@ if(vehicle player != player) then
 
 if(EQUAL(count _nearVehicles,0)) exitWith {titleText["No Vehicle Near to Upgrade","PLAIN"];};
 
-diag_log format["Vehicle after loop exit: %1",_vehicle];
-diag_log format["Vehicle after loop exit upgv: %1",upgradeVehicle];
 
 if(isNil "_vehicle") exitWith {hint "You don't own that vehicle"};
 if(isNull _vehicle) exitWith {};

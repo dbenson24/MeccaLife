@@ -16,7 +16,6 @@ _dataArr = CONTROL_DATAI(_control,_index);
 _dataArr = call compile format["%1",_dataArr];
 _className = SEL(_dataArr,0);
 
-diag_log format["GarageLBChange _dataArr: %1",_dataArr];
 // Start of Upgrades
 _gps = parseNumber format["%1",SEL(_dataArr,2)];
 _security = parseNumber format["%1",SEL(_dataArr,3)];
