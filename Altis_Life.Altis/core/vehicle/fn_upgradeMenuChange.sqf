@@ -148,6 +148,6 @@ _pricechanges pushBack round(_trunkprice - _oldtrunkprice);
 	};
 } forEach _pricechanges;
 
-ctrlSetText [5510, format[" $%1",_price]];
+ctrlSetText [5510, format[" $%1",([_price] call life_fnc_numberText)]];
 
 upgrade_price = _price;
