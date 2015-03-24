@@ -1,3 +1,12 @@
+#include <macro.h>
+/*
+	File: fn_upgradeMenuChange.sqf
+
+	Author: Derek
+
+	Updates the values for the vehicle upgrade dialog
+
+*/
 private["_mode","_price","_ins","_trunk","_gps","_hooks","_security","_display","_hooksctrl","_gpsctrl","_securityctrl","_oldtrunk","_oldins","_oldhooks","_oldsecurity","_oldgps","_vehicle","_pchange","_baseprice"];
 private["_oldinsprice","_insprice","_gpsco","_hooksco","_trunkco","_securityco","_trunkprice","_gpsprice","_hooksprice","_securityprice","_oldtrunkprice","_oldgpsprice","_oldhooksprice","_oldsecurityprice"];
 _mode = [_this,0,-1,[0]] call BIS_fnc_param;
