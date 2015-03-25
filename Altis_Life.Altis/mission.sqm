@@ -2506,6 +2506,7 @@ class Mission
 				class Item22
 				{
 					position[]={14547.563,36.380276,18825.943};
+					offsetY=0.257;
 					azimut=-187.526;
 					special="NONE";
 					id=120;
@@ -74874,7 +74875,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_PCSet_01_screen_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; this addAction[""Break out prisoner"",life_fnc_p_prisionbreak,""computer""]; this setVectorUp [0,0,1];";
+			init="this enableSimulation false; this allowDamage false; this setVectorUp [0,0,1];";
 		};
 		class Item6536
 		{
