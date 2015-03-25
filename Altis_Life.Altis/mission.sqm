@@ -6271,13 +6271,12 @@ class Mission
 				{
 					position[]={9318.5,0,17460.8};
 					azimut=45;
-					id=345;
 					special="NONE";
+					id=345;
 					side="CIV";
 					vehicle="C_man_1";
-					skill=0.60000002;
-					text="hunting_1";
 					leader=1;
+					skill=0.60000002;
 					init="removeAllWeapons this; this allowDamage false; this enableSimulation false; this addAction[""Raw Meat Market"",life_fnc_virt_menu,""hunting""];";
 
 				};
