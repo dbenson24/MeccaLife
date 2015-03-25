@@ -6290,7 +6290,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={9320.417,97.701111,20249.557};
+					position[]={9318.5,0,17460.801};
 					azimut=45;
 					special="NONE";
 					id=346;
