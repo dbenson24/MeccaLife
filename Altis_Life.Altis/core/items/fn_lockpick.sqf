@@ -106,7 +106,7 @@ if(!_isVehicle) then {
 		[_curTarget] spawn {
 			sleep 5*60;
 			_vehicle = _this select 0;
-			_vehicle setVariable["gpsoff",true,true] ;
+			_vehicle setVariable["gpsoff",true,true];
 		};
 	} else {
 		[[getPlayerUID player,profileName,"215"],"life_fnc_wantedAdd",false,false] call life_fnc_MP;

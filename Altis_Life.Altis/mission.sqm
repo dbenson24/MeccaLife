@@ -94618,9 +94618,10 @@ class Mission
 			side="CIV";
 			vehicle="C_man_polo_6_F";
 			skill=0.60000002;
-			text="Dealer_1";
+			text="hunting_1";
+			leader=1;
 			init="removeAllWeapons this; this allowDamage false; this enableSimulation false; this addAction[""Raw Meat Market"",life_fnc_virt_menu,""hunting""];";
-};
+		};
 	};
 	class Markers
 	{
