@@ -9,7 +9,7 @@
 closeDialog 0;
 private["_mine","_itemWeight","_diff","_itemName"];
 _mine = [];
-for "_y" from 0 to 10 do {
+for "_y" from 0 to 11 do {
 	switch (true) do {
 		case (player distance (getMarkerPos "lead_1") < 30): {_mine = ["copper_unrefined",3];};
 		case (player distance (getMarkerPos "iron_1") < 30): {_mine = ["iron_unrefined",3];};

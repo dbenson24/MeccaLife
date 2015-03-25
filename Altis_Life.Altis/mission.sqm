@@ -6264,7 +6264,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=8318;
+		items=8319;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -90875,7 +90875,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Concrete_SmallWall_8m_F";
 			skill=0.2;
-			init="this allowdamage false;this enableSimulation false;";
+			init="this allowdamage false;this enableSimulation false; this addAction[""Raw Meat Market"",life_fnc_virt_menu,""hunting""];";
 		};
 		class Item7974
 		{
@@ -94610,10 +94610,21 @@ class Mission
 			skill=0.60000002;
 			init="this enableSimulation false; this allowDamage false; this setPosASL [position this select 0, position this select 1, 17.28]; this setVectorUp [0,0,1];";
 		};
+		class Item8318
+		{
+			position[]={9318.5,0,17460.8};
+			azimut=45;
+			id=8663;
+			side="CIV";
+			vehicle="C_man_polo_6_F";
+			skill=0.60000002;
+			text="Dealer_1";
+			init="removeAllWeapons this; this allowDamage false; this enableSimulation false; ";
+};
 	};
 	class Markers
 	{
-		items=412;
+		items=413;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -94812,7 +94823,7 @@ class Mission
 			position[]={17117.832,33.311741,9927.417};
 			name="cocaine processing";
 			text="Cocaine Processing";
-			type="mil_dot";
+			type="mil_triangle";
 			colorName="ColorRed";
 		};
 		class Item27
@@ -95354,7 +95365,7 @@ class Mission
 			position[]={3037.0662,3.5343347,18149.9};
 			name="Weed_p_1";
 			text="Weed Processing";
-			type="mil_dot";
+			type="mil_triangle";
 			colorName="ColorRed";
 		};
 		class Item93
@@ -95684,7 +95695,7 @@ class Mission
 			position[]={8445.5215,49.525951,12763.709};
 			name="heroin_p";
 			text="Heroin Processing";
-			type="mil_dot";
+			type="mil_triangle";
 			colorName="ColorRed";
 		};
 		class Item135
@@ -97190,7 +97201,7 @@ class Mission
 		{
 			position[]={23560.018,46.462498,21831.779};
 			name="FrogPro";
-			text="Frog Proccessing";
+			text="Frog Processing";
 			type="mil_triangle";
 			colorName="ColorRed";
 		};
@@ -98053,6 +98064,14 @@ class Mission
 			colorName="ColorBlue";
 			a=0.5;
 			b=0.5;
+		};
+		class Item412
+		{
+			position[]={9318.5,0,20241.7};
+			name="Hunting1";
+			text="Raw Meat Market";
+			type="b_unknown";
+			colorName="ColorBlue";
 		};
 	};
 	class Sensors
