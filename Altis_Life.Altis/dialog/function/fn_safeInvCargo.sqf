@@ -14,7 +14,7 @@ lbClear _tInv;
 _safeInfo = _safe getVariable["cargo",-1];
 if(_safeInfo < 1) exitWith {closeDialog 0; hint localize "STR_Civ_VaultEmpty";};
 
-_str = M_CONFIG(getText,"VirtualItems","lostcargo","displayName");
+_str = localize "STR_Item_lostcargo";
 _shrt = M_CONFIG(getText,"VirtualItems","lostcargo","variable");
 _tInv lbAdd format["[%1] - %2",_safeInfo,_str];
 _tInv lbSetData [(lbSize _tInv)-1,_shrt];
