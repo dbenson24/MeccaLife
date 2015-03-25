@@ -251,7 +251,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=213;
+		items=214;
 		class Item0
 		{
 			side="WEST";
@@ -6261,10 +6261,32 @@ class Mission
 				};
 			};
 		};
+		class Item213
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={9318.5,0,17460.8};
+					azimut=45;
+					id=345;
+					special="NONE";
+					side="CIV";
+					vehicle="C_man_1";
+					skill=0.60000002;
+					text="hunting_1";
+					leader=1;
+					init="removeAllWeapons this; this allowDamage false; this enableSimulation false; this addAction[""Raw Meat Market"",life_fnc_virt_menu,""hunting""];";
+
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
-		items=8319;
+		items=8318;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -94609,18 +94631,6 @@ class Mission
 			vehicle="Land_Pier_Box_F";
 			skill=0.60000002;
 			init="this enableSimulation false; this allowDamage false; this setPosASL [position this select 0, position this select 1, 17.28]; this setVectorUp [0,0,1];";
-		};
-		class Item8318
-		{
-			position[]={9318.5,0,17460.8};
-			azimut=45;
-			id=8663;
-			side="CIV";
-			vehicle="C_man_polo_6_F";
-			skill=0.60000002;
-			text="hunting_1";
-			leader=1;
-			init="removeAllWeapons this; this allowDamage false; this enableSimulation false; this addAction[""Raw Meat Market"",life_fnc_virt_menu,""hunting""];";
 		};
 	};
 	class Markers
