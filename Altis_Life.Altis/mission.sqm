@@ -2970,7 +2970,7 @@ class Mission
 				{
 					position[]={16555.629,11.007075,12788.258};
 					azimut=-333.66513;
-					offsetY=0.1;
+					offsetY=0.477;
 					special="NONE";
 					id=159;
 					side="CIV";
@@ -4282,6 +4282,7 @@ class Mission
 				class Item0
 				{
 					position[]={23559.316,46.500725,21830.871};
+					offsetY = 0.52;
 					azimut=175;
 					id=245;
 					side="CIV";
@@ -6048,7 +6049,8 @@ class Mission
 				class Item0
 				{
 					position[]={3685.5647,10.830457,13121.495};
-					azimut=100;
+					azimut=265;
+					offsetY = 0.554441;
 					id=334;
 					side="CIV";
 					vehicle="C_man_1";
