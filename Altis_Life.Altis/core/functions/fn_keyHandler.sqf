@@ -55,7 +55,7 @@ if(!(EQUAL(count (actionKeys "User10"),0)) && {(inputAction "User10" > 0)}) exit
 };
 
 switch (_code) do {
-
+	/* disabled for now -Derek 3/25/2015
 	//Pickaxe - KEY B
 	case 48:
 	{
@@ -67,7 +67,7 @@ switch (_code) do {
 					 };
         };
 	};
-
+	*/
 
 	//Q: left signal
 	case 16:
