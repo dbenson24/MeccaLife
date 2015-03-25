@@ -3163,10 +3163,11 @@ class Mission
 				};
 				class Item78
 				{
-					position[]={20073.2,101.843,6724.73};
+					position[]={20073.2,0,6724.73};
 					azimut=45;
 					special="NONE";
 					id=176;
+					offsetY=0.7156;
 					side="EAST";
 					vehicle="O_Soldier_F";
 					skill=0.60000002;
@@ -3278,8 +3279,9 @@ class Mission
 				};
 				class Item88
 				{
-					position[]={17565,2.14737,18904.5};
+					position[]={17565,0,18904.5};
 					azimut=-315;
+					offsetY=5.12;
 					special="NONE";
 					id=186;
 					side="CIV";
@@ -3730,8 +3732,9 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={25974.3,26.27,21618.5};
+					position[]={25974.3,0,21618.5};
 					azimut=170;
+					offsetY=0.236641;
 					special="NONE";
 					id=218;
 					side="CIV";
@@ -33824,8 +33827,9 @@ class Mission
 		};
 		class Item2673
 		{
-			position[]={23686.828,5.23,16127.561};
+			position[]={23686.828,0,16127.561};
 			azimut=337.90955;
+			offsetY=5.15;
 			id=3018;
 			side="EMPTY";
 			vehicle="PlasticBarrier_01_red_F";
@@ -95039,7 +95043,7 @@ class Mission
 		};
 		class Item56
 		{
-			position[]={3041.5544,2.0197022,12612.536};
+			position[]={3020,2.0197022,12637};
 			name="boat_2";
 			text="Boat Shop";
 			type="c_ship";
