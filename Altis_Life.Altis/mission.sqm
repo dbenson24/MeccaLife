@@ -4399,7 +4399,7 @@ class Mission
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.60000002;
-					init="this enableSimulation false; this allowDamage false; this addAction[""Rob Store"",life_fnc_robshops]; this addAction[""Market"",life_fnc_virt_menu,""market""];this addAction[""General Store"",life_fnc_weaponShopMenu,""genstore""];this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Market"",life_fnc_virt_menu,""market""];this addAction[""General Store"",life_fnc_weaponShopMenu,""genstore""]; this addAction[""Rob Cashier"",life_fnc_robshops]; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
 				};
 			};
 		};
@@ -4418,7 +4418,7 @@ class Mission
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.60000002;
-					init="this enableSimulation false; this allowDamage false; this addAction[""Rob Cashier"",life_fnc_robshops]; this addAction[""Market"",life_fnc_virt_menu,""market""];this addAction[""General Store"",life_fnc_weaponShopMenu,""genstore""];this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Market"",life_fnc_virt_menu,""market""];this addAction[""General Store"",life_fnc_weaponShopMenu,""genstore""]; this addAction[""Rob Cashier"",life_fnc_robshops]; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
 				};
 			};
 		};
@@ -4430,14 +4430,15 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={15781.777,14.333579,17461.656};
+					position[]={15788.7,14.333579,17460.8};
 					special="NONE";
+					azimut = 245;
 					id=253;
 					side="CIV";
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.60000002;
-					init="this enableSimulation false; this allowDamage false; this addAction[""Rob Store"",life_fnc_robshops]; this addAction[""Market"",life_fnc_virt_menu,""market""];this addAction[""General Store"",life_fnc_weaponShopMenu,""genstore""];this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Market"",life_fnc_virt_menu,""market""];this addAction[""General Store"",life_fnc_weaponShopMenu,""genstore""]; this addAction[""Rob Cashier"",life_fnc_robshops]; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
 				};
 			};
 		};
@@ -4457,7 +4458,7 @@ class Mission
 					leader=1;
 					azimut = 125;
 					skill=0.60000002;
-					init="this enableSimulation false; this allowDamage false; this addAction[""Rob Store"",life_fnc_robshops]; this addAction[""Market"",life_fnc_virt_menu,""market""];this addAction[""General Store"",life_fnc_weaponShopMenu,""genstore""];this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Market"",life_fnc_virt_menu,""market""];this addAction[""General Store"",life_fnc_weaponShopMenu,""genstore""]; this addAction[""Rob Cashier"",life_fnc_robshops]; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
 				};
 			};
 		};
@@ -4476,7 +4477,7 @@ class Mission
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.60000002;
-					init="this enableSimulation false; this allowDamage false; this addAction[""Rob Store"",life_fnc_robshops]; this addAction[""Market"",life_fnc_virt_menu,""market""];this addAction[""General Store"",life_fnc_weaponShopMenu,""genstore""];this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Market"",life_fnc_virt_menu,""market""];this addAction[""General Store"",life_fnc_weaponShopMenu,""genstore""]; this addAction[""Rob Cashier"",life_fnc_robshops]; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
 				};
 			};
 		};
@@ -4496,7 +4497,7 @@ class Mission
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.60000002;
-					init="this enableSimulation false; this allowDamage false; this addAction[""Rob Cashier"",life_fnc_robshops]; this addAction[""Market"",life_fnc_virt_menu,""market""];this addAction[""General Store"",life_fnc_weaponShopMenu,""genstore""];this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Market"",life_fnc_virt_menu,""market""];this addAction[""General Store"",life_fnc_weaponShopMenu,""genstore""]; this addAction[""Rob Cashier"",life_fnc_robshops]; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
 				};
 			};
 		};
@@ -4515,7 +4516,7 @@ class Mission
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.60000002;
-					init="this enableSimulation false; this allowDamage false; this addAction[""Rob Cashier"",life_fnc_robshops]; this addAction[""Market"",life_fnc_virt_menu,""market""];this addAction[""General Store"",life_fnc_weaponShopMenu,""genstore""];this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Market"",life_fnc_virt_menu,""market""];this addAction[""General Store"",life_fnc_weaponShopMenu,""genstore""]; this addAction[""Rob Cashier"",life_fnc_robshops]; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
 				};
 			};
 		};
@@ -4535,7 +4536,7 @@ class Mission
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.60000002;
-					init="this enableSimulation false; this allowDamage false; this addAction[""Rob Cashier"",life_fnc_robshops]; this addAction[""Market"",life_fnc_virt_menu,""market""];this addAction[""General Store"",life_fnc_weaponShopMenu,""genstore""];this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Market"",life_fnc_virt_menu,""market""];this addAction[""General Store"",life_fnc_weaponShopMenu,""genstore""]; this addAction[""Rob Cashier"",life_fnc_robshops]; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
 				};
 			};
 		};
