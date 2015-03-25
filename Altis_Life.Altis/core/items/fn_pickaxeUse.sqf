@@ -33,7 +33,7 @@ for "_y" from 0 to 10 do {
 	for "_i" from 0 to 2 do {
 		player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 		waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
-		sleep 2.5;
+		sleep 3;
 	};
 	
 	if(([true,SEL(_mine,0),_diff] call life_fnc_handleInv)) then {
