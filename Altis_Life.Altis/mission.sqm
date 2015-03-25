@@ -2932,7 +2932,7 @@ class Mission
 				{
 					position[]={15813.5,0,11381};
 					azimut=0;
-					offsetY = 4.012;
+					offsetY = 0.302334;
 					special="NONE";
 					id=156;
 					side="CIV";
@@ -94809,7 +94809,7 @@ class Mission
 			name="cocaine processing";
 			text="Cocaine Processing";
 			type="mil_dot";
-			colorName="Color1_FD_F";
+			colorName="ColorRed";
 		};
 		class Item27
 		{
@@ -95351,7 +95351,7 @@ class Mission
 			name="Weed_p_1";
 			text="Weed Processing";
 			type="mil_dot";
-			colorName="Color1_FD_F";
+			colorName="ColorRed";
 		};
 		class Item93
 		{
@@ -97099,7 +97099,7 @@ class Mission
 			text="Not Yet Functional But getting there.";
 			markerType="ELLIPSE";
 			type="mil_destroy";
-			colorName="ColorEAST";
+			colorName="ColorRed";
 			fillName="FDiagonal";
 			a=3000;
 			b=3000;

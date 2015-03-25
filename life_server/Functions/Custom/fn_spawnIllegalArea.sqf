@@ -19,7 +19,7 @@ _marker = createMarker ["frog_redZone", _Pos];
 "frog_redZone" setMarkerColor "ColorRed";
 "frog_redZone" setMarkerShape "ELLIPSE";
 "frog_redZone" setMarkerSize [150, 150];
-"frog_redZone" setMarkerBrush "Grid";
+"frog_redZone" setMarkerBrush "DiagGrid";
 
 
 //Create cocaine area
@@ -37,7 +37,7 @@ _marker = createMarker ["cocaine_redZone", _Pos];
 "cocaine_redZone" setMarkerColor "ColorRed";
 "cocaine_redZone" setMarkerShape "ELLIPSE";
 "cocaine_redZone" setMarkerSize [200, 200];
-"cocaine_redZone" setMarkerBrush "Grid";
+"cocaine_redZone" setMarkerBrush "DiagGrid";
  
 //Create heroine area
 _heli = "Land_ClutterCutter_small_F" createVehicle (["mrkheroinGreen",0,["mrkheroinRed","mrkheroinRed_1","mrkcocaineRed_2","mrkcocaineRed_3","mrkcocaineRed_4"]] call SHK_pos);
@@ -54,7 +54,7 @@ _marker = createMarker ["heroine_redZone", _Pos];
 "heroine_redZone" setMarkerColor "ColorRed";
 "heroine_redZone" setMarkerShape "ELLIPSE";
 "heroine_redZone" setMarkerSize [200, 200];
-"heroine_redZone" setMarkerBrush "Grid";
+"heroine_redZone" setMarkerBrush "DiagGrid";
 
  
 //Create cannabis area
@@ -72,7 +72,7 @@ _marker = createMarker ["weed_redZone", _Pos];
 "weed_redZone" setMarkerColor "ColorRed";
 "weed_redZone" setMarkerShape "ELLIPSE";
 "weed_redZone" setMarkerSize [200, 200];
-"weed_redZone" setMarkerBrush "Grid";
+"weed_redZone" setMarkerBrush "DiagGrid";
 
 _heli = "Land_ClutterCutter_small_F" createVehicle (["mrkmushroomGreen",0,["mrkmushroomRed"]] call SHK_pos);
 _heli setPosASLW [(position _heli) select 0, (position _heli) select 1, -5.5];
