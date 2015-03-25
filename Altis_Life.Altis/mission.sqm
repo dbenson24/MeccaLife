@@ -90875,7 +90875,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Concrete_SmallWall_8m_F";
 			skill=0.2;
-			init="this allowdamage false;this enableSimulation false; this addAction[""Raw Meat Market"",life_fnc_virt_menu,""hunting""];";
+			init="this allowdamage false;this enableSimulation false;";
 		};
 		class Item7974
 		{
@@ -94619,7 +94619,7 @@ class Mission
 			vehicle="C_man_polo_6_F";
 			skill=0.60000002;
 			text="Dealer_1";
-			init="removeAllWeapons this; this allowDamage false; this enableSimulation false; ";
+			init="removeAllWeapons this; this allowDamage false; this enableSimulation false; this addAction[""Raw Meat Market"",life_fnc_virt_menu,""hunting""];";
 };
 	};
 	class Markers

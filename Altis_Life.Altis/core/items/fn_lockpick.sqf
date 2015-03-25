@@ -103,6 +103,11 @@ if(!_isVehicle) then {
 		life_vehicles pushBack _curTarget;
 		[[getPlayerUID player,profileName,"487"],"life_fnc_wantedAdd",false,false] call life_fnc_MP;
 		[[player],"life_fnc_wantedFetchForCivilian",false,false] spawn life_fnc_MP;
+		[_curTarget] spawn {
+			sleep 5*60;
+			_vehicle = _this select 0;
+			_vehicle setVariable["gpsoff",true,true] ;
+		};
 	} else {
 		[[getPlayerUID player,profileName,"215"],"life_fnc_wantedAdd",false,false] call life_fnc_MP;
 		[[player],"life_fnc_wantedFetchForCivilian",false,false] spawn life_fnc_MP;
