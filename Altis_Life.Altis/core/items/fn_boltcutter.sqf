@@ -4,7 +4,7 @@
 	Description:
 	Breaks the lock on a single door (Closet door to the player).
 */
-private["_building","_door","_doors","_cpRate","_title","_progressBar","_titleText","_cp","_ui"];
+private["_building","_door","_doors","_cpRate","_title","_progressBar","_titleText","_cp","_ui","_owneruid","_owner"];
 _building = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _building) exitWith {};
 if(!(_building isKindOf "House_F")) exitWith {hint "You are not looking at a house door."};
@@ -44,7 +44,16 @@ _cP = 0.01;
 switch (typeOf _building) do {
 	case "Land_Dome_Big_F": {_cpRate = 0.003;};
 	case "Land_Research_house_V1_F": {_cpRate = 0.0015;};
-	default {_cpRate = 0.0015;}
+	default {
+		_cpRate = 0.0015;
+		_owneruid = _building getVariable ["house_owner",-1];
+		if (_owneruid == -1) exitWith {};
+		_owner =
+		{
+			if (getPlayerUID _x == _owneruid) exitWith {_x;};
+		} forEach allUnits
+		
+	}
 };
 
 while {true} do
