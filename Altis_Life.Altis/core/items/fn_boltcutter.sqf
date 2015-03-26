@@ -46,7 +46,7 @@ switch (typeOf _building) do {
 	case "Land_Research_house_V1_F": {_cpRate = 0.0015;};
 	default {
 		_cpRate = 0.0015;
-		_owneruid = _building getVariable ["house_owner",-1];
+		_owneruid = (_building getVariable ["house_owner",[-1]]) select 0;
 		if (_owneruid == -1) exitWith {};
 		_owner =
 		{
