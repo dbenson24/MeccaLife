@@ -45,14 +45,18 @@ switch (typeOf _building) do {
 	case "Land_Dome_Big_F": {_cpRate = 0.003;};
 	case "Land_Research_house_V1_F": {_cpRate = 0.0015;};
 	default {
-		_cpRate = 0.0015;
+		_cpRate = 0.0015;/*
 		_owneruid = _building getVariable ["house_owner",-1];
 		if (_owneruid == -1) exitWith {};
 		_owner =
 		{
 			if (getPlayerUID _x == _owneruid) exitWith {_x;};
 		} forEach allUnits
+		_vehname = getText(configFile >> "CfgVehicles" >> typeof _building >> "displayName");
+		_position = position player;
 		
+		_msg = format["The security system on your %1 was activated",_vehname];
+		[[_owner,_msg,player,6],"TON_fnc_handleMessages",false] spawn life_fnc_MP;*/
 	}
 };
 
