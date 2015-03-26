@@ -27,6 +27,12 @@ life_market = [_this,1,[],[[]]] call BIS_fnc_param;
 
 if (count life_market == 0 ) exitwith {};
 
+_goodlist lbAdd format["-----------Illegal Goods-----------"];
+_goodlist lbSetValue [(lbSize _goodlist)-1,1.5];
+_goodlist lbAdd format["---------Natural Resources---------"];
+_goodlist lbSetValue [(lbSize _goodlist)-1,2.5];
+_goodlist lbAdd format["-------Hunting and Gathering-------"];
+_goodlist lbSetValue [(lbSize _goodlist)-1,3.5];
 
 {
 	if ((_x select 2) > 1 ) then {
@@ -39,4 +45,4 @@ if (count life_market == 0 ) exitwith {};
 } foreach life_market;
 
 
-lbSort _goodlist;
+lbSortByValue _goodlist;
