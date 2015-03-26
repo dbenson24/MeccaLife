@@ -40,12 +40,12 @@ _time = time + (12 * 60);
 
 jailDefused = false;
 
-publicVariable "jailDefused";
+//publicVariable "jailDefused";
 
 _ok = true;
 while {true} do {
 	if(round(_time - time) < 1) exitWith {_ok = true;};
-	if (jailDefused) exitWith {_ok = false;};
+//	if (jailDefused) exitWith {_ok = false;};
 //	if(!alive player) exitWith {_ok = false;};
 //	if(player distance _unit > 2500) exitWith {_ok = false;};
 //	if(life_isDowned) exitWith {_ok = false;};
