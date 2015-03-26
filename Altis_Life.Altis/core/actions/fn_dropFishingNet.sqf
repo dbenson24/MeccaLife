@@ -12,7 +12,7 @@ life_net_dropped = true;
 titleText[localize "STR_NOTF_NetDrop","PLAIN"];
 sleep 5;
 _full = false;
-while (!_full) do {
+while {!_full} do {
 	if(count _fish == 0) exitWith {titleText[localize "STR_NOTF_NetDropFail","PLAIN"]; life_net_dropped = false;};
 	{
 		if(_x isKindOf "Fish_Base_F") then
