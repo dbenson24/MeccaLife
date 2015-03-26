@@ -9,7 +9,7 @@ Updates the variables serverside.
 
 
 //[[0,player,life_shop_type,_amount,_price,_var],"TON_fnc_Adjustprices",false,false] spawn life_fnc_MP;
-private["_type","_side","_data","_unit","_ret","_tickTime","_queryResult","_var","_price","_amount","_market","_factor","_good","_itemArray","_priceChanges","_delay"];
+private["_type","_side","_data","_unit","_ret","_tickTime","_queryResult","_var","_price","_amount","_market","_factor","_good","_itemArray","_priceChanges","_delay","_changeco"];
 _type = [_this,0,0,[0]] call BIS_fnc_param;
 _unit = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
 _data = [_this,2,"",[""]] call BIS_fnc_param;
@@ -68,6 +68,7 @@ _sellingfactor =((count _itemArray)-1);
     _varprice =  (_x select 3);
     _minprice = (_x select 4);
     _maxprice = (_x select 5);
+    _changeco = 0.7 + random 0.8;
     _x set [8, _sellprice];
     if (_ressource == _var) then { 
         if (_type == 0) then { 
@@ -83,6 +84,7 @@ _sellingfactor =((count _itemArray)-1);
             };
         };
     } else {
+        _varprice = _varprice * _changeco;
         if (_type == 0) then {
             if ((_sellprice + (_varprice * _amount)) < _maxprice) then {
                 _sellprice = _sellprice + (_varprice * _amount);
