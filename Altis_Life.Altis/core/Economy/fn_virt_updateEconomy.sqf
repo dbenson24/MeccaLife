@@ -40,6 +40,7 @@ _goodlist lbSetValue [(lbSize _goodlist)-1,3.5];
 		_goodlist lbAdd format["%1",(localize _name)];
 		_goodlist lbSetData [(lbSize _goodlist)-1,_x select 0];
 		_goodlist lbSetValue [(lbSize _goodlist)-1,_x select 6];
+		diag_log format["good: %1  : factor: %2",localize _name,_x select 6];
 	
 	};
 } foreach life_market;
