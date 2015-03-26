@@ -237,7 +237,7 @@ class CfgVehicles {
 	};
 
 	class C_Rubberboat {
-        vItemSpace = 45;
+        vItemSpace = 185;
         price = prescueboat;
         storageFee[] = { 400, 300, 0, 0 };
 		garageSell[] = { 950, 350, 0, 0 };
@@ -376,7 +376,7 @@ class CfgVehicles {
     };
 
 	class C_Boat_Civil_01_F {
-        vItemSpace = 85;
+        vItemSpace = 275;
         price = pspeedboat;
         storageFee[] = { 4500, 2500, 0, 0 };
 		garageSell[] = { 6800, 3500, 0, 0 };
@@ -386,7 +386,7 @@ class CfgVehicles {
     };
 
 	class C_Boat_Civil_01_police_F {
-        vItemSpace = 85;
+        vItemSpace = 275;
         price = pspeedboat;
         storageFee[] = { 0, 3500, 0, 0 };
 		garageSell[] = { 0, 4950, 0, 0 };
@@ -396,7 +396,7 @@ class CfgVehicles {
     };
 
 	class C_Boat_Civil_01_rescue_F {
-        vItemSpace = 85;
+        vItemSpace = 275;
         price = pspeedboat;
         storageFee[] = { 1000, 0, 0, 0 };
         insurance = 2500;
