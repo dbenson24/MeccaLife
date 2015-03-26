@@ -17,7 +17,7 @@ _recchange = 39005;
 _startprice = 39006;
 _startchange = 39007;
 _value = lbValue[39001,(lbCurSel 39001)];
-if (_value in [1.5,2.5,3.5]) exitWith {};
+if (_value in [1.5,2.9,3.5]) exitWith {};
 _good = lbData[39001,(lbCurSel 39001)];
 
 {
