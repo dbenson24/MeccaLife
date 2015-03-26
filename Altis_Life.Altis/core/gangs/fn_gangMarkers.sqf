@@ -10,7 +10,7 @@ _markers = [];
 _members = [];
 
 sleep 0.5;
-if(alive player) then {
+if(visibleMap) then {
 	{if((side _x != west) && (_x != player)) then {_members pushBack _x;}} forEach (units group player); //Fetch gang members
 	
 	//Create markers
@@ -23,7 +23,7 @@ if(alive player) then {
 		_markers pushBack [_marker,_x];
 	} foreach _members;
 		
-	while {(alive player)} do {
+	while {visibleMap} do {
 		{
 			private["_marker","_unit"];
 			_marker = _x select 0;
