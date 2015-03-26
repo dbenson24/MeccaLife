@@ -27,11 +27,11 @@ life_market = [_this,1,[],[[]]] call BIS_fnc_param;
 
 if (count life_market == 0 ) exitwith {};
 
-_goodlist lbAdd format["-----------Illegal Goods-----------"];
+_goodlist lbAdd format["------------Illegal Goods------------"];
 _goodlist lbSetValue [(lbSize _goodlist)-1,1.5];
-_goodlist lbAdd format["---------Natural Resources---------"];
+_goodlist lbAdd format["--------Natural Resources--------"];
 _goodlist lbSetValue [(lbSize _goodlist)-1,2.9];
-_goodlist lbAdd format["-------Hunting and Gathering-------"];
+_goodlist lbAdd format["-----Hunting and Gathering-----"];
 _goodlist lbSetValue [(lbSize _goodlist)-1,3.5];
 
 {
