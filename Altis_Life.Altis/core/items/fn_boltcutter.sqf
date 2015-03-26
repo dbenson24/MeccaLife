@@ -13,7 +13,7 @@ if((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _building OR (near
 	[[_vault],"life_fnc_bankalarmsound",true,true] call life_fnc_MP;
 	[[[1,2],"STR_ISTR_Bolt_AlertFed",true,[]],"life_fnc_broadcast",true,false] call life_fnc_MP;
 } else {
-	[[_vault],"life_fnc_bankalarmsound",true,true] call life_fnc_MP;
+	[[_building],"life_fnc_bankalarmsound",true,true] call life_fnc_MP;
 	[[0,"STR_ISTR_Bolt_AlertHouse",true,[profileName]],"life_fnc_broadcast",true,false] call life_fnc_MP;
 };
 
@@ -45,7 +45,7 @@ switch (typeOf _building) do {
 	case "Land_Dome_Big_F": {_cpRate = 0.003;};
 	case "Land_Research_house_V1_F": {_cpRate = 0.0015;};
 	default {
-		_cpRate = 0.0015;
+		_cpRate = 0.0010;
 		diag_log format["Building: %1", _building];
 		diag_log format["Type: %1", typeOf _building];
 		_owneruid = (_building getVariable "house_owner") select 0;
@@ -55,15 +55,15 @@ switch (typeOf _building) do {
 			if ((getPlayerUID _x) == _owneruid) exitWith {_x;};
 		} forEach allUnits;
 		_position = position player;
-		_a = round ((_position select 0)/100);
-		_b = round ((_position select 1)/100);
+		_a = floor ((_position select 0)/100);
+		_b = floor ((_position select 1)/100);
 		if (_a < 100) then {
 			_a = format["0%1",_a];
 		};
 		if (_b < 100) then {
 			_b = format["0%1",_b];
 		};
-		_msg = format["The security system on your house was activated in grid: %1%2",_a,_b];
+		_msg = format["The security system on your house (grid %1%2) was activated",_a,_b];
 		[[_owner,_msg,player,6],"TON_fnc_handleMessages",false] spawn life_fnc_MP;
 	}
 };
