@@ -34,3 +34,6 @@ _igiload = execVM "IgiLoad\IgiLoadInit.sqf";
 	waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
 	
 [] call life_fnc_Uniformscolor;
+
+
+[] execVM "scripts\fn_statusBar.sqf";
