@@ -6,13 +6,13 @@
 	Drops a virtual fishing net from the boat.
 */
 private["_fish","_type","_typeName","_full"];
-if(!(vehicle player isKindOf "Ship")) exitWith {};
-_fish = (nearestObjects[getPos vehicle player,["Fish_Base_F"],35]);
-life_net_dropped = true;
-titleText[localize "STR_NOTF_NetDrop","PLAIN"];
-sleep 5;
 _full = false;
 while {!_full} do {
+	if(!(vehicle player isKindOf "Ship")) exitWith {};
+	_fish = (nearestObjects[getPos vehicle player,["Fish_Base_F"],35]);
+	life_net_dropped = true;
+	titleText[localize "STR_NOTF_NetDrop","PLAIN"];
+	sleep 5;
 	if(count _fish == 0) exitWith {titleText[localize "STR_NOTF_NetDropFail","PLAIN"]; life_net_dropped = false;};
 	{
 		if(_x isKindOf "Fish_Base_F") then
