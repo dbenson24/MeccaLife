@@ -39,7 +39,7 @@ _goodlist lbSetValue [(lbSize _goodlist)-1,3.5];
 		_name = ITEM_NAME(SEL(_x,0));
 		_goodlist lbAdd format["%1",(localize _name)];
 		_goodlist lbSetData [(lbSize _goodlist)-1,_x select 0];
-		_goodlist lbSetValue [(lbSize _goodlist)-1,_x select 6];
+		_goodlist lbSetValue [(lbSize _goodlist)-1,_x select 2];
 	
 	};
 } foreach life_market;
