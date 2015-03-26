@@ -102,7 +102,7 @@ if(!_isVehicle) then {
 		titleText[localize "STR_ISTR_Lock_Success","PLAIN"];
 		life_vehicles pushBack _curTarget;
 		[[getPlayerUID player,profileName,"487"],"life_fnc_wantedAdd",false,false] call life_fnc_MP;
-		[[player],"life_fnc_wantedFetchForCivilian",false,false] spawn life_fnc_MP;
+		//[[player],"life_fnc_wantedFetchForCivilian",false,false] spawn life_fnc_MP;
 		[_curTarget] spawn {
 			sleep 5*60;
 			_vehicle = _this select 0;
@@ -110,7 +110,7 @@ if(!_isVehicle) then {
 		};
 	} else {
 		[[getPlayerUID player,profileName,"215"],"life_fnc_wantedAdd",false,false] call life_fnc_MP;
-		[[player],"life_fnc_wantedFetchForCivilian",false,false] spawn life_fnc_MP;
+		//[[player],"life_fnc_wantedFetchForCivilian",false,false] spawn life_fnc_MP;
 		[[0,"STR_ISTR_Lock_FailedNOTF",true,[profileName]],"life_fnc_broadcast",west,false] call life_fnc_MP;
 		titleText[localize "STR_ISTR_Lock_Failed","PLAIN"];
 	};

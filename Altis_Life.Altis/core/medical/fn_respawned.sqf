@@ -72,7 +72,7 @@ if(!isNil "life_copRecieve") then {
 //So I guess a fellow gang member, cop or myself killed myself so get me off that Altis Most Wanted
 if(life_removeWanted) then {
 	[[getPlayerUID player],"life_fnc_wantedRemove",false,false] spawn life_fnc_MP;
-	[[player],"life_fnc_wantedFetchForCivilian",false,false] spawn life_fnc_MP;
+	//[[player],"life_fnc_wantedFetchForCivilian",false,false] spawn life_fnc_MP;
 };
 
 [] call SOCK_fnc_updateRequest;

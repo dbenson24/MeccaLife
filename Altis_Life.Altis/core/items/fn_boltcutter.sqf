@@ -108,4 +108,4 @@ if((_building getVariable["locked",false])) then {
 	_building setVariable["locked",false,true];
 };
 [[getPlayerUID player,profileName,"459"],"life_fnc_wantedAdd",false,false] call life_fnc_MP;
-[[player],"life_fnc_wantedFetchForCivilian",false,false] spawn life_fnc_MP;
+//[[player],"life_fnc_wantedFetchForCivilian",false,false] spawn life_fnc_MP;

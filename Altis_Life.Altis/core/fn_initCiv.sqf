@@ -51,3 +51,10 @@ if((str(player) in ["civ_9999","civ_99999"])) then {
 [[],"life_fnc_wantedSyncList",false, false] spawn life_fnc_MP;
 
 [] execVM "scripts\fn_statusBar.sqf";
+
+[] spawn {
+        while {alive player} do {
+                [[player],"life_fnc_wantedFetchForCivilian",false,false] spawn life_fnc_MP;
+                sleep 15;
+        };
+};
