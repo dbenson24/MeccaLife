@@ -25,3 +25,5 @@ if(((lbSize _list)-1) == -1) then
 {
 	_list lbAdd "No criminals";
 }; 
+
+lbSort _list;
