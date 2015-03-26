@@ -48,11 +48,11 @@ switch (typeOf _building) do {
 		_cpRate = 0.0015;
 		diag_log format["Building: %1", _building];
 		diag_log format["Type: %1", typeOf _building];
-		_owneruid = (_building getVariable ["house_owner"]) select 0;
+		_owneruid = (_building getVariable "house_owner") select 0;
 //		if (_owneruid == -1) exitWith {};
 		_owner =
 		{
-			if (getPlayerUID _x == _owneruid) exitWith {_x;};
+			if ((getPlayerUID _x) == _owneruid) exitWith {_x;};
 		} forEach allUnits;
 		_position = position player;
 		_a = round ((_position select 0)/100);
