@@ -51,7 +51,7 @@ switch (typeOf _building) do {
 		_owner =
 		{
 			if (getPlayerUID _x == _owneruid) exitWith {_x;};
-		} forEach allUnits
+		} forEach allUnits;
 		_position = position player;
 		_a = round ((_position select 0)/100);
 		_b = round ((_position select 1)/100);
