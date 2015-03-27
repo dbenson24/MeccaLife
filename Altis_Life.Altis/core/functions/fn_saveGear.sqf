@@ -20,9 +20,7 @@ _return pushBack assignedITems player;
 if(playerSide == west || playerSide == civilian && {EQUAL(LIFE_SETTINGS(getNumber,"save_civ_weapons"),1)}) then {
     _return pushBack RIFLE;
     _return pushBack PISTOL;
-    _reurn pushBack LAUNCHER;
 } else {
-    _return pushBack [];
     _return pushBack [];
     _return pushBack [];
 };
@@ -154,5 +152,12 @@ if(EQUAL(LIFE_SETTINGS(getNumber,"save_virtualItems"),1)) then {
 } else {
     _return pushBack [];
 };
+
+if(playerSide == west || playerSide == civilian && {EQUAL(LIFE_SETTINGS(getNumber,"save_civ_weapons"),1)}) then {
+    _return pushBack LAUNCHER;
+} else {
+    _return pushBack [];
+};
+
 
 life_gear = _return;
