@@ -307,6 +307,7 @@ class Life_Client_Core
 		class upgradeMenuChange {};
 		class upgradeVehicle {};
 		class toggleGPS {};
+		class lowerCenter {};
 	};
 	
 	class Cop
