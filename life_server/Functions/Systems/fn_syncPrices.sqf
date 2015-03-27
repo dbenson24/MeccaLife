@@ -1,5 +1,5 @@
 #include "\life_server\script_macros.hpp"
-private["_market", "_query", "_price", "_name", "_goods"];
+private["_market", "_query", "_price", "_name", "_goods","_endtime"];
 /*
 File: fn_syncPrices.sqf
 Author: Derek Benson
@@ -39,5 +39,11 @@ while {true} do {
     } forEach _goods;
     
     //[] spawn TON_fnc_loadPrices;
-    sleep (60);
+    _endtime = 4*60*60;
+    _diff = _endtime - time;
+    if (_diff > 15*60) then {
+        sleep (15*60);
+    } else {
+        sleep (_diff - 5);
+    };
 };
