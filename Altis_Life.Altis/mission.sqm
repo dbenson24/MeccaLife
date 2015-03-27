@@ -3941,7 +3941,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={16576.674,2.0710719,12420.002};
+					position[]={16568.4,0,12419};
+					offsetY=1.12407;
 					azimut=135;
 					special="NONE";
 					id=228;
@@ -96599,7 +96600,7 @@ class Mission
 		};
 		class Item253
 		{
-			position[]={16506.994,0.20607926,12402.338};
+			position[]={16563,0.20607926,12414};
 			name="civ_ship_p";
 			text="Boat Spawn";
 			type="loc_Quay";
