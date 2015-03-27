@@ -42,7 +42,7 @@ life_is_alive = true;
 player addRating 9999999;
 
 if((str(player) in ["civ_9999","civ_99999"])) then {
-	if!(FETCH_CONST(life_adminlevel) == 3) then {
+	if!(FETCH_CONST(life_adminlevel) == 2) then {
 				["NotWhitelisted",false,true] call BIS_fnc_endMission;
 		sleep 35;
 	};
