@@ -84,10 +84,10 @@ _sellingfactor =((count _itemArray)-1);
             };
         };
     } else {
-        _varprice = round(_varprice * _changeco);
+        _varprice = _varprice * _changeco;
         if (_type == 0) then {
             if ((_sellprice + (_varprice * _amount)) < _maxprice) then {
-                _sellprice = _sellprice + (_varprice * _amount);
+                _sellprice = round(_sellprice + (_varprice * _amount));
             } else {
                 _sellprice = _maxprice;
             };
