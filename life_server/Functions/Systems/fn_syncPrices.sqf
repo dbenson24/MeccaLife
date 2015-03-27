@@ -9,7 +9,7 @@ refreshes the SQL database with the new sell prices
 */
 
 while {true} do {
-
+    diag_log "Sync prices";
     _market = missionNamespace getVariable "marketPrices";
     
     if (isNil "_market") then {
