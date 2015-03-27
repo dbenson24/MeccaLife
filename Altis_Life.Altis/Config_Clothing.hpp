@@ -236,7 +236,10 @@ class Clothing {
 			{ "H_Cap_red", "", 150, { "", "", -1 } },
 			{ "H_Cap_tan", "", 150, { "", "", -1 } },
 			{ "H_HelmetCrew_B", "", 4500, { "", "", -1 } },
-			{ "H_CrewHelmetHeli_I", "Donor Helmet", 5000, { "life_donator", "SCALAR", 3 } }
+			{ "H_CrewHelmetHeli_I", "Donor Helmet", 5000, { "life_donator", "SCALAR", 3 } },
+			{ "H_CrewHelmetHeli_O", "Donor Helmet", 5000, { "life_donator", "SCALAR", 3 } },
+			{ "H_CrewHelmetHeli_B", "Donor Helmet", 5000, { "life_donator", "SCALAR", 3 } }
+			
 		};
 
 		goggles[] = {
