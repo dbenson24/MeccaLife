@@ -139,7 +139,7 @@ if(count (secondaryWeaponMagazine player) > 0 && alive player) then {
             _handled = true;
         };
 		
-        if(_bag && !_handled) then {
+        if(!_handled) then {
 			ADD(_bMags,[_sMag]);
             _handled = true;
         };
