@@ -17,6 +17,17 @@ _players = _display displayCtrl 2406;
 lbClear _list;
 _units = [];
 
+if (playerSide == civilian) then {
+		ctrlShow[2405,false];
+		ctrlShow[9800,false];
+		ctrlShow[2407,false];
+};
+
+if (playerSide == independent) then {
+	closeDialog 0;
+	hint "You have no business looking through criminal records!";
+};
+
 lbClear _players;
 
 {
