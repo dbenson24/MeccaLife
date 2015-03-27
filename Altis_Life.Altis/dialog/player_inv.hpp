@@ -75,6 +75,16 @@ class playerSettings {
 			w = 0.275; h = 0.04;
 		};
 		
+		class remainingTime : Life_RscText
+		{
+			idc = 1015;
+			text = "";
+			sizeEx = 0.04;
+			
+			x = 0.336; y = 0.70;
+			w = 0.275; h = 0.04;
+		};
+		
 		class moneySHeader : Life_RscText
 		{
 			idc = -1;
