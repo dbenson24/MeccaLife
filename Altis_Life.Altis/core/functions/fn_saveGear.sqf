@@ -8,7 +8,7 @@
     Description:
     Saves the players gear for syncing to the database for persistence..
 */
-private["_return","_uItems","_bItems","_vItems","_pItems","_hItems","_yItems","_uMags","_vMags","_bMags","_pMag","_hMag","_uni","_ves","_bag","_handled"];
+private["_return","_uItems","_bItems","_vItems","_pItems","_hItems","_yItems","_uMags","_vMags","_bMags","_pMag","_hMag","_uni","_ves","_bag","_handled","_sMag"];
 _return = [];
 
 _return pushBack uniform player;
@@ -115,6 +115,32 @@ if(count (handgunMagazine player) > 0 && alive player) then {
 		
         if(_bag && !_handled) then {
             ADD(_uMags,[_hMag]);
+            _handled = true;
+        };
+    };
+};
+
+if(count (secondaryWeaponMagazine player) > 0 && alive player) then {
+    _sMag = SEL((secondaryWeaponMagazine player),0);
+	
+    if(!(EQUAL(_sMag,""))) then {
+        _uni = player canAddItemToUniform _sMag;
+        _ves = player canAddItemToVest _sMag;
+        _bag = player canAddItemToBackpack _sMag;
+        _handled = false;
+		
+        if(_ves) then {
+			ADD(_vMags,[_sMag]);
+            _handled = true;
+        };
+		
+        if(_uni && !_handled) then {
+			ADD(_uMags,[_sMag]);
+            _handled = true;
+        };
+		
+        if(_bag && !_handled) then {
+			ADD(_bMags,[_sMag]);
             _handled = true;
         };
     };
