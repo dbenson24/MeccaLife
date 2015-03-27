@@ -79,7 +79,7 @@ class playerSettings {
 		{
 			idc = 1015;
 			text = "";
-			sizeEx = 0.04;
+			sizeEx = 0.03;
 			
 			x = 0.11; y = 0.70;
 			w = 0.275; h = 0.04;
