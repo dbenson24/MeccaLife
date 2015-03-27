@@ -71,4 +71,4 @@ _lic ctrlSetStructuredText parseText format["
 ",_struct];
 
 _time = 4*60*60;
-ctrlSetText[1015, format["Time Remaining: %1",(_time-time)]];
+ctrlSetText[1015, format["Time Remaining: %1",round((_time-time)/60)]];
