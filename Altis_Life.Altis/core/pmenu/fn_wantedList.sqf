@@ -10,6 +10,15 @@
 private["_info","_display","_list",/*"_units",*/"_entry"];
 disableSerialization;
 _info = [_this,0,[],[[]]] call BIS_fnc_param;
+if (playerSide == civilian) then {
+		ctrlShow[2405,false];
+		ctrlShow[9800,false];
+		ctrlShow[2407,false];
+} else if (playerSide == independent) then {
+	closeDialog 0;
+	hint "You have no business looking through criminal records!";
+};
+
 _display = findDisplay 2400;
 _list = _display displayctrl 2401;
 
