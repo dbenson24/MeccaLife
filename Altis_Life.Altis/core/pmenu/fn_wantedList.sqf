@@ -14,7 +14,9 @@ if (playerSide == civilian) then {
 		ctrlShow[2405,false];
 		ctrlShow[9800,false];
 		ctrlShow[2407,false];
-} else if (playerSide == independent) then {
+};
+
+if (playerSide == independent) then {
 	closeDialog 0;
 	hint "You have no business looking through criminal records!";
 };
