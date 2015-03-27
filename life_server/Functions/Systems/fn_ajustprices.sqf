@@ -9,7 +9,7 @@ Updates the variables serverside.
 
 
 //[[0,player,life_shop_type,_amount,_price,_var],"TON_fnc_Adjustprices",false,false] spawn life_fnc_MP;
-private["_type","_side","_data","_unit","_ret","_tickTime","_queryResult","_var","_price","_amount","_market","_factor","_good","_itemArray","_priceChanges","_delay","_changeco"];
+private["_type","_side","_data","_unit","_ret","_tickTime","_queryResult","_var","_price","_amount","_market","_factor","_good","_itemArray","_priceChanges","_delay","_changeco","_endtime","_diff"];
 _type = [_this,0,0,[0]] call BIS_fnc_param;
 _unit = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
 _data = [_this,2,"",[""]] call BIS_fnc_param;
@@ -18,9 +18,18 @@ _price = [_this,4,0,[0]] call BIS_fnc_param;
 _var = [_this,5,"",[""]] call BIS_fnc_param;
 
 /* Randomizes when changes hit the market */
+_endtime = 4*60*60;
+_diff = _endtime - time;
 _delay = 2*60 + random(12);
-sleep _delay;
 
+if (_diff < _delay) then {
+    _delay = _diff - 10;
+    if (_delay < 0) then {
+        _delay = 0;
+    };
+};
+
+sleep _delay;
 //Error checks
 
 diag_log format ["%1   %2    %3    %4      %5      %6",_unit,_type,_data,_amount,_price,_var];
