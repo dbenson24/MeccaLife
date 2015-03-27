@@ -480,6 +480,9 @@ switch (_code) do {
 						};
 						systemChat localize "STR_MISC_VehUnlock";
 						_veh say3D "unlock";
+						if ((typeOf _veh) == "C_SUV_01_F") then {
+							[_veh] call life_fnc_lowerCenter;
+						};
 					} else {
 						if(local _veh) then {
 							_veh lock 2;
