@@ -107,6 +107,14 @@ if(EQUAL(SEL(_vInfo,1),"civ") && EQUAL(SEL(_vInfo,2),"B_Heli_Light_01_F") && !(E
 	[[_vehicle,"civ_littlebird",true],"life_fnc_vehicleAnimate",_unit,false] call life_fnc_MP;
 };
 
+if(EQUAL(SEL(_vInfo,2),"C_SUV_01_F")) then {
+	 _mass = getCenterOfMass  _vehicle;
+	 _z = _mass select 2;
+	 _z = _z - 0.1;
+	 _mass set [2,_z];
+	 _vehicle setCenterOfMass _mass;
+};
+
 if(EQUAL(SEL(_vInfo,1),"cop") && (SEL(_vInfo,2)) in ["C_Offroad_01_F","B_MRAP_01_F","C_SUV_01_F"]) then {
 	[[_vehicle,"cop_offroad",true],"life_fnc_vehicleAnimate",_unit,false] call life_fnc_MP;
 };
