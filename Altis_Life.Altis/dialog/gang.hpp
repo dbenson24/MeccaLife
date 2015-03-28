@@ -187,3 +187,111 @@ class Life_Create_Gang_Diag {
 		};
 	};
 };
+
+
+class Life_My_Group_Diag {
+	idd = 2620;
+	name= "life_my_groups_menu";
+	movingEnable = false;
+	enableSimulation = true;
+	onLoad = "";
+	
+	class controlsBackground {
+	
+	    class fondtablet: Life_RscPicture
+		{
+			idc = 9090909;
+			text = "textures\menu.paa";
+			x = 0;
+			y = -0.12;
+			w = 1;
+			h = 1.28;
+		};
+		
+		class MainBackground:life_RscText {
+			idc = -1;
+			x = 0.1;
+			y = 0.2 + (11 / 250);
+			w = 0.8;
+			h = 0.6 - (22 / 250);
+		};
+	};
+	
+	class controls {
+
+		
+		class PlayerList:Life_RscListbox
+		{
+			idc = 2621;
+			sizeEx = 0.035;
+			x = 0.1125;
+			y = 0.26;
+			w = 0.4625;
+			h = 0.54;
+		};
+		class DisplayGroupButton:Life_RscButtonMenu
+		{
+			idc = 2401;
+			text = "Gang"; //--- ToDo: Localize;
+			x = 0.6;
+			y = 0.28;
+			w = 0.2;
+			h = 0.04;
+			colorBackground[] = {0, 0, 0, 0};
+		};
+		class LockGroupButton: DisplayGroupButton
+		{
+			idc = 2622;
+			text = "Lock";
+			onButtonClick = "[] spawn life_fnc_lockGang";
+			y = 0.44;
+		};
+		class UnlockGroupButton: LockGroupButton
+		{
+			idc = 2623;
+			text = "Unlock";
+			onButtonClick = "[] spawn life_fnc_unlockGang";
+			y = 0.44;
+		};
+		class LeaveGangButton: DisplayGroupButton
+		{
+			idc = 2403;
+			text = "$STR_Gang_Leave";
+			onButtonClick = "[] call life_fnc_leaveGang";
+			y = 0.36;
+		};
+		class PromoteGangButton: DisplayGroupButton
+		{
+			idc = 2625;
+			text = "$STR_Gang_SetLeader";
+			onButtonClick = "[] spawn life_fnc_setGangLeader";
+			y = 0.6;
+		};
+		class KickGangButton: DisplayGroupButton
+		{
+			idc = 2624;
+			text = "$STR_Gang_Kick";
+			onButtonClick = "[] call life_fnc_kickGang";
+			y = 0.52;
+		};
+		class CloseButton: DisplayGroupButton
+		{
+			idc = -1;
+			text = "Close"; //--- ToDo: Localize;
+			onButtonClick = "closeDialog 0;";
+			x = 0.1;
+			y = 0.82;
+			w = 0.1;
+			h = 0.04;
+		};
+		class GangNameLabel:Life_RscText
+		{
+			idc = 1003;
+			text = "Your Gang:"; //--- ToDo: Localize;
+			x = 0.1125;
+			y = 0.2;
+			w = 0.462499;
+			h = 0.06;
+		};
+	};
+};

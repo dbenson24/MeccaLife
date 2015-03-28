@@ -21,6 +21,6 @@ life_my_gang = _group;
 if(!isNull life_my_gang) then
 {	
 	closeDialog 0;	
-	createDialog "MECCA_Life_My_Group_Diag";	
+	createDialog "Life_My_Group_Diag";	
 	publicVariable "life_gang_list";
 };
