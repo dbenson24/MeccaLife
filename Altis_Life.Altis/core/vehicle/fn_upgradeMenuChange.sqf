@@ -103,7 +103,7 @@ switch (_ins) do {
 	};
 	case 3:
 	{
-		_insprice = 0.7 * _baseprice + 0.6 * (_hooksprice + _trunkprice + _gpsprice + _securityprice);
+		_insprice = 0.9 * _baseprice + 0.3 * (_hooksprice + _trunkprice + _gpsprice + _securityprice);
 	};
 	default
 	{
@@ -122,7 +122,7 @@ switch (_oldins) do {
 	};
 	case 3:
 	{
-		_oldinsprice = 0.7 * _baseprice + 0.6 * (_oldhooksprice + _oldtrunkprice + _oldgpsprice + _oldsecurityprice);
+		_oldinsprice = 0.9 * _baseprice + 0.3 * (_oldhooksprice + _oldtrunkprice + _oldgpsprice + _oldsecurityprice);
 	};
 	default
 	{
