@@ -5,7 +5,7 @@
 	Description:
 	31 hours of no sleep screw your description.
 */
-private["_ownerID","_gangBank","_gangMax","_gangName","_members","_allUnits","_ctrl"];
+private["_ownerID","_gangBank","_gangMax","_gangName","_members","_allUnits","_ctrl","_members"];
 disableSerialization;
 if(isNull (findDisplay 2620)) then {
 	if(!(createDialog "Life_My_Gang_Diag")) exitWith {}; //NOOOOOOOOOOOOOOOOOOOOOOOoooooooooooooOOOOOOOOOOOOOOOOOOOOOOOOOOO00000000000000oooooo
@@ -16,6 +16,7 @@ if(_ownerID == "") exitWith {closeDialog 0;}; //Bad juju
 _gangName = grpPlayer getVariable "gang_name";
 _gangBank = GANG_FUNDS;
 _gangMax = grpPlayer getVariable "gang_maxMembers";
+_members = grpPlayer getVariable "gang_members";
 
 if(_ownerID != steamid) then {
 	(CONTROL(2620,2622)) ctrlEnable false; //Upgrade
@@ -32,14 +33,14 @@ if(_ownerID != steamid) then {
 _members = CONTROL(2620,2621);
 lbClear _members;
 {
-	if((getPlayerUID _x) == _ownerID) then {
-		_members lbAdd format["%1 " +(localize "STR_GNOTF_GangLeader"),(_x GVAR ["realname",name _x])];
+	if((_x select 0) == _ownerID) then {
+		_members lbAdd format["%1 " +(localize "STR_GNOTF_GangLeader"),_x select 1];
 		_members lbSetData [(lbSize _members)-1,str(_x)];
 	} else {
-		_members lbAdd format["%1",(_x GVAR ["realname",name _x])];
+		_members lbAdd format["%1",(_x select 1)];
 		_members lbSetData [(lbSize _members)-1,str(_x)];
 	};
-} foreach (units grpPlayer);
+} foreach _members;
 
 _grpMembers = units grpPlayer;
 _allUnits = playableUnits;
