@@ -22,7 +22,6 @@ if(!(EQUAL(typeName _members,"ARRAY"))) exitWith {};
 	_uid = _x select 0;
 	if (_uid == getPlayerUID _unit) then {
 		_members set [_forEachIndex, -1];
-		exitWith{};
 	};
 } forEach _members;
 

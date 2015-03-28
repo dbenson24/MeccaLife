@@ -29,7 +29,6 @@ if(_action) then {
 		_uid = _x select 0;
 		if (_uid == steamid) then {
 			_grpMembers set [_forEachIndex, -1];
-			exitWith{};
 		};
 	} forEach _grpMembers;
 	SUB(_grpMembers,[-1]);
