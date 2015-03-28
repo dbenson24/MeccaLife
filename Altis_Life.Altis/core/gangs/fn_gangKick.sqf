@@ -18,7 +18,16 @@ _members = grpPlayer GVAR "gang_members";
 if(isNil "_members") exitWith {};
 if(!(EQUAL(typeName _members,"ARRAY"))) exitWith {};
 
-SUB(_members,[_unitID]);
+{
+	_uid = _x select 0;
+	if (_uid == getPlayerUID _unit) then {
+		_members set [_forEachIndex, -1];
+		exitWith{};
+	};
+} forEach _members;
+
+SUB(_members,[-1]);
+
 grpPlayer SVAR ["gang_members",_members,true];
 
 [[_unit,grpPlayer],"TON_fnc_clientGangKick",_unit,false] call life_fnc_MP; //Boot that bitch!

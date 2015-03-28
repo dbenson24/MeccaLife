@@ -10,7 +10,18 @@ if(EQUAL(steamid,(grpPlayer GVAR "gang_owner"))) exitWith {hint localize "STR_GN
 
 _grp = grpPlayer;
 _grpMembers = grpPlayer GVAR "gang_members";
-SUB(_grpMembers,[steamid]);
+
+
+{
+	_uid = _x select 0;
+	if (_uid == steamid) then {
+		_grpMembers set [_forEachIndex, -1];
+		exitWith{};
+	};
+} forEach _grpMembers;
+SUB(_grpMembers,[-1]);
+
+
 _grp SVAR ["gang_members",_grpMembers,true];
 [player] joinSilent (createGroup civilian);
 
