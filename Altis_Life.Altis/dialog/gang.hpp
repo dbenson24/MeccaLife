@@ -32,18 +32,18 @@ class Life_My_Gang_Diag {
 		class PlayerList:Life_RscListbox
 		{
 			idc = 2621;
-			x = 0.1125;
 			sizeEx = 0.035;
-			y = 0.34;
+			x = 0.1125;
+			y = 0.26;
 			w = 0.4625;
-			h = 0.4;
+			h = 0.54;
 		};
 		class DisplayGroupButton:Life_RscButtonMenu
 		{
 			idc = 2401;
 			text = "Group"; //--- ToDo: Localize;
 			x = 0.6;
-			y = 0.3;
+			y = 0.28;
 			w = 0.2;
 			h = 0.04;
 			colorBackground[] = {0, 0, 0, 0};
@@ -53,14 +53,14 @@ class Life_My_Gang_Diag {
 			idc = 2630;
 			text = "$STR_Gang_Invite_Player";
 			onButtonClick = "[] spawn life_fnc_gangInvitePlayer";
-			y = 0.48;
+			y = 0.44;
 		};
 		class LeaveGangButton: DisplayGroupButton
 		{
 			idc = 2403;
 			text = "$STR_Gang_Leave";
 			onButtonClick = "[] call life_fnc_gangLeave";
-			y = 0.42;
+			y = 0.36;
 		};
 		class PromoteGangButton: DisplayGroupButton
 		{
@@ -74,30 +74,33 @@ class Life_My_Gang_Diag {
 			idc = 2405;
 			text = "$STR_Gang_Disband_Gang";
 			onButtonClick = "[] spawn life_fnc_gangDisband";
-			y = 0.66;
+			y = 0.68;
 		};
 		class KickGangButton: DisplayGroupButton
 		{
 			idc = 2624;
 			text = "$STR_Gang_Kick";
 			onButtonClick = "[] call life_fnc_gangKick";
-			y = 0.54;
+			y = 0.52;
 		};
 		class CloseButton: DisplayGroupButton
 		{
 			idc = -1;
 			text = "Close"; //--- ToDo: Localize;
 			onButtonClick = "closeDialog 0;";
-			y = 0.36;
+			x = 0.1;
+			y = 0.82;
+			w = 0.1;
+			h = 0.04;
 		};
 		class GangNameLabel:Life_RscText
 		{
 			idc = 1003;
 			text = "Your Gang:"; //--- ToDo: Localize;
-			x = 0.365937 * safezoneW + safezoneX;
-			y = 0.291 * safezoneH + safezoneY;
-			w = 0.195937 * safezoneW;
-			h = 0.033 * safezoneH;
+			x = 0.1125;
+			y = 0.2;
+			w = 0.462499;
+			h = 0.06;
 		};
 	};
 };
