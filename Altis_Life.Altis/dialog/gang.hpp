@@ -3,7 +3,7 @@ class Life_My_Gang_Diag {
 	name= "life_my_gang_menu";
 	movingEnable = false;
 	enableSimulation = true;
-	onLoad = "[false] spawn life_fnc_gangManagement;";
+	onLoad = "";
 	
 	class controlsBackground {
 	
@@ -195,7 +195,7 @@ class Life_My_Group_Diag {
 	name= "life_my_groups_menu";
 	movingEnable = false;
 	enableSimulation = true;
-	onLoad = "";
+	onLoad = "[false] spawn life_fnc_gangManagement;";
 	
 	class controlsBackground {
 	
@@ -238,7 +238,7 @@ class Life_My_Group_Diag {
 			y = 0.28;
 			w = 0.2;
 			h = 0.04;
-			onButtonClick = "closeDialog 0; [] call life_fnc_gangMenu;"
+			onButtonClick = "closeDialog 0; [] call life_fnc_gangMenu;";
 			colorBackground[] = {0, 0, 0, 0};
 		};
 		class LockGroupButton: DisplayGroupButton
