@@ -1,0 +1,18 @@
+/* GangMenu
+$[
+	1.063,
+	["GangMenu",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],
+	[1000,"TitleBackground",[1,"",["0.340155 * safezoneW + safezoneX","0.225 * safezoneH + safezoneY","0.324844 * safezoneW","0.044 * safezoneH"],[-1,-1,-1,-1],[0.5,0,1,0.8],[-1,-1,-1,-1],"","-1"],[]],
+	[1001,"Background",[1,"",["0.340155 * safezoneW + safezoneX","0.269 * safezoneH + safezoneY","0.324844 * safezoneW","0.506 * safezoneH"],[-1,-1,-1,-1],[0,0,0,0.8],[-1,-1,-1,-1],"","-1"],[]],
+	[1002,"Title",[1,"Gang/Group Management",["0.340156 * safezoneW + safezoneX","0.225 * safezoneH + safezoneY","0.324844 * safezoneW","0.044 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[1500,"PlayerList",[1,"",["0.365937 * safezoneW + safezoneX","0.335 * safezoneH + safezoneY","0.195937 * safezoneW","0.418 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[2401,"DisplayGroupButton",[1,"Group",["0.577344 * safezoneW + safezoneX","0.346 * safezoneH + safezoneY","0.0515625 * safezoneW","0.033 * safezoneH"],[-1,-1,-1,-1],[0.5,0,1,0.8],[-1,-1,-1,-1],"","-1"],[]],
+	[2402,"InviteGangButton",[1,"Invite",["0.577344 * safezoneW + safezoneX","0.401 * safezoneH + safezoneY","0.0515625 * safezoneW","0.033 * safezoneH"],[-1,-1,-1,-1],[0.5,0,1,0.8],[-1,-1,-1,-1],"","-1"],[]],
+	[2403,"LeaveGangButton",[1,"Leave",["0.577344 * safezoneW + safezoneX","0.456 * safezoneH + safezoneY","0.0515625 * safezoneW","0.033 * safezoneH"],[-1,-1,-1,-1],[0.5,0,1,0.8],[-1,-1,-1,-1],"","-1"],[]],
+	[2404,"PromoteGangButton",[1,"Promote",["0.577344 * safezoneW + safezoneX","0.511 * safezoneH + safezoneY","0.0515625 * safezoneW","0.033 * safezoneH"],[-1,-1,-1,-1],[0.5,0,1,0.8],[-1,-1,-1,-1],"","-1"],[]],
+	[2405,"DisbandGangButton",[1,"Disband",["0.577344 * safezoneW + safezoneX","0.621 * safezoneH + safezoneY","0.0515625 * safezoneW","0.033 * safezoneH"],[-1,-1,-1,-1],[0.5,0,1,0.8],[-1,-1,-1,-1],"","-1"],[]],
+	[1003,"GangNameLabel",[1,"Your Gang:",["0.365937 * safezoneW + safezoneX","0.291 * safezoneH + safezoneY","0.195937 * safezoneW","0.033 * safezoneH"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],
+	[2400,"KickGangButton",[1,"Kick",["0.577344 * safezoneW + safezoneX","0.566 * safezoneH + safezoneY","0.0515625 * safezoneW","0.033 * safezoneH"],[-1,-1,-1,-1],[0.5,0,1,0.8],[-1,-1,-1,-1],"","-1"],[]],
+	[2406,"CloseButton",[1,"Close",["0.577344 * safezoneW + safezoneX","0.291 * safezoneH + safezoneY","0.0515625 * safezoneW","0.033 * safezoneH"],[-1,-1,-1,-1],[0.5,0,1,0.8],[-1,-1,-1,-1],"","-1"],[]]
+]
+*/
