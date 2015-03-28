@@ -41,7 +41,7 @@ if(!(EQUAL(count _queryResult,0))) exitWith {
 _query = format["gangNameSelectID:%1:%2",_gangName,0];
 waitUntil{!DB_Async_Active};
 _queryResult = [_query,2] call DB_fnc_asyncCall;
-_gangMembers = [_uid,_playerName];
+_gangMembers = [[_uid,_playerName]];
 
 if(!(EQUAL(count _queryResult,0))) then {
 	_query = format["gangUpdate:%1:%2:%3",_uid,_gangMembers,(_queryResult select 0)];
@@ -55,7 +55,7 @@ _group setVariable["gang_name",_gangName,true];
 _group setVariable["gang_owner",_uid,true];
 _group setVariable["gang_bank",0,true];
 _group setVariable["gang_maxMembers",8,true];
-_group setVariable["gang_members",[_uid,_playerName],true];
+_group setVariable["gang_members",[[_uid,_playerName]],true];
 [[_group],"life_fnc_gangCreated",_ownerID,false] call life_fnc_MP;
 
 sleep 0.35;
