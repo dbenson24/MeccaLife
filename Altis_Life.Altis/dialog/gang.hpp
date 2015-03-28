@@ -33,6 +33,7 @@ class Life_My_Gang_Diag {
 		{
 			idc = 2621;
 			x = 0.1125;
+			sizeEx = 0.035;
 			y = 0.34;
 			w = 0.4625;
 			h = 0.4;
@@ -42,7 +43,7 @@ class Life_My_Gang_Diag {
 			idc = 2401;
 			text = "Group"; //--- ToDo: Localize;
 			x = 0.6;
-			y = 0.48;
+			y = 0.3;
 			w = 0.2;
 			h = 0.04;
 			colorBackground[] = {0, 0, 0, 0};
@@ -52,7 +53,7 @@ class Life_My_Gang_Diag {
 			idc = 2630;
 			text = "$STR_Gang_Invite_Player";
 			onButtonClick = "[] spawn life_fnc_gangInvitePlayer";
-			y = 0.42;
+			y = 0.48;
 		};
 		class LeaveGangButton: DisplayGroupButton
 		{
