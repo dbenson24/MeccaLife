@@ -3,7 +3,7 @@ class Life_My_Gang_Diag {
 	name= "life_my_gang_menu";
 	movingEnable = false;
 	enableSimulation = true;
-	onLoad = "";
+	onLoad = "[false] spawn life_fnc_gangManagement;";
 	
 	class controlsBackground {
 	
