@@ -1,2 +1,2 @@
 // For now, log everything
-1 ""
+1 "" != "removeBackpack this; removeAllWeapons this;"

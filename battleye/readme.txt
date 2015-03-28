@@ -1,10 +1,4 @@
-This is just a starting point!
+These filters are a WIP and are only applicable to the most update to date vanilla Altis Life RPG. Any modifications to Altis Life will require you
+to test the Battleye filters first!
 
-Right now we're doing two things:
-
-1) Kicking the most blatant and obvious hacks
-2) Logging everything.
-
-It'll hardly catch anyone but this at least gives us a solid base with
-which to build upon.
-
+As said some of these filters are WIP as others are tested. A few of which cause concern.
