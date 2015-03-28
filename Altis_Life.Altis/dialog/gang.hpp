@@ -7,7 +7,7 @@ class Life_My_Gang_Diag {
 	
 	class controlsBackground {
 	
-	    class TitleBackground: RscText
+	    class TitleBackground:Life_RscText
 		{
 			idc = 1000;
 			x = 0.340155 * safezoneW + safezoneX;
@@ -16,7 +16,7 @@ class Life_My_Gang_Diag {
 			h = 0.044 * safezoneH;
 			colorBackground[] = {0.5,0,1,0.8};
 		};
-		class Background: RscText
+		class Background:Life_RscText
 		{
 			idc = 1001;
 			x = 0.340155 * safezoneW + safezoneX;
@@ -30,7 +30,7 @@ class Life_My_Gang_Diag {
 	class controls {
 
 		
-		class Title: RscText
+		class Title:Life_RscText
 		{
 			idc = 2629;
 			text = "Gang/Group Management"; //--- ToDo: Localize;
@@ -39,7 +39,7 @@ class Life_My_Gang_Diag {
 			w = 0.324844 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
-		class PlayerList: RscListbox
+		class PlayerList:Life_RscListbox
 		{
 			idc = 2621;
 			x = 0.365937 * safezoneW + safezoneX;
@@ -47,7 +47,7 @@ class Life_My_Gang_Diag {
 			w = 0.195937 * safezoneW;
 			h = 0.418 * safezoneH;
 		};
-		class DisplayGroupButton: RscButtonMenu
+		class DisplayGroupButton:Life_RscButtonMenu
 		{
 			idc = 2401;
 			text = "Group"; //--- ToDo: Localize;
@@ -98,7 +98,7 @@ class Life_My_Gang_Diag {
 			text = "Close"; //--- ToDo: Localize;
 			y = 0.291 * safezoneH + safezoneY;
 		};
-		class GangNameLabel: RscText
+		class GangNameLabel:Life_RscText
 		{
 			idc = 1003;
 			text = "Your Gang:"; //--- ToDo: Localize;
