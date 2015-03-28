@@ -1,2 +1,0 @@
-// For now, log everything
-1 ""
