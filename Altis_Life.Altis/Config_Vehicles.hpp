@@ -22,8 +22,8 @@
 #define pzamaktrans 135000
 #define pzamakcov 200000
 #define phemtttrans 260000
-#define ptempesttrans 187000
-#define ptempestcov 251500
+#define ptempesttrans 600000
+#define ptempestcov 750000
 #define phemttbox 600000
 #define ptempestdev 800000
 #define ftruck 50000
@@ -39,7 +39,7 @@
 #define pghosthawkcop 500000
 
 #define pmh9civ 325000
-#define pm900 253000
+#define pm900 250000
 #define porcaciv 750000
 #define ptarutrans 1800000
 #define ptarubench 1500000
@@ -117,8 +117,8 @@ class CarShops {
 		vehicles[] = {
 			{ "B_Quadbike_01_F", pquadbike, "" },
 			{ "B_G_Offroad_01_F", poffroad, "" },
-			{ "O_MRAP_02_F", pifrit, "" },
-			{ "B_Heli_Light_01_F", pmh9civ, "" },
+			{ "O_MRAP_02_F", pifrit, "rebel" },
+			{ "B_Heli_Light_01_F", pmh9civ, "rebel" },
 			{ "B_G_Offroad_01_armed_F", p50cal, "rebel" },
 			{ "O_Heli_Transport_04_bench_F", ptarubench, "rebel" },
 			{ "O_Heli_Transport_04_box_F", ptarutrans, "rebel" },
@@ -139,7 +139,7 @@ class CarShops {
 	class civ_air {
 		side = "civ";
 		vehicles[] = {
-			{ "B_Heli_Light_01_F", pmh9civ, "pilot" },
+			{ "C_Heli_Light_01_civil_F", pm900, "pilot" },
 			{ "O_Heli_Light_02_unarmed_F", porcaciv, "pilot" },
 			{ "O_Heli_Transport_04_fuel_F", ptarufuel, "pilot" },
 			{ "I_Heli_Transport_02_F", mohawk, "pilot" }
@@ -317,7 +317,7 @@ class CfgVehicles {
     };
 
 	class O_Truck_03_transport_F {
-        vItemSpace = 175;
+        vItemSpace = 700;
         price = ptempesttrans;
         storageFee[] = { 100, 0, 0, 0 };
         insurance = 2500;
@@ -425,7 +425,7 @@ class CfgVehicles {
     };
 
 	class O_MRAP_02_F {
-        vItemSpace = 80;
+        vItemSpace = 150;
         price = pifrit;
         storageFee[] = { 450, 0, 0, 0 };
 		garageSell[] = { 65000, 0, 0, 0 };
@@ -573,7 +573,7 @@ class CfgVehicles {
     };
 
 	class I_Truck_02_covered_F {
-        vItemSpace = 250;
+        vItemSpace = 500;
         price = pzamakcov;
         storageFee[] = { 14500, 0, 0, 0 };
 		garageSell[] = { 62000, 0, 0, 0 };
@@ -591,14 +591,14 @@ class CfgVehicles {
     };
 
 	class I_Truck_02_transport_F : I_Truck_02_covered_F {
-        vItemSpace = 120;
-        price = ptempesttrans;
+        vItemSpace = 400;
+        price = pzamaktrans;
         storageFee[] = { 12000, 0, 0, 0 };
 		garageSell[] = { 49800, 3500, 0, 0 };
     };
 
 	class O_Truck_03_covered_F {
-		vItemSpace = 305;
+		vItemSpace = 900;
 		price = ptempestcov;
 		storageFee[] = { 25000, 0, 0, 0 };
 		garageSell[] = { 65000, 0, 0, 0 };
@@ -879,5 +879,10 @@ class CfgVehicles {
     class B_SDV_01_F : Default {
         vItemSpace = 100;
         price = psdv;
+    }
+    
+    class C_Heli_Light_01_civil_F : Default {
+        vItemSpace = 90;
+        price = pm900;
     }
 };
