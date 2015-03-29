@@ -9,7 +9,7 @@ refreshes the SQL database with the new sell prices
 */
 
 while {true} do {
-    diag_log "Sync prices";
+    diag_log format["Sync prices at uptime: "];
     _market = missionNamespace getVariable "marketPrices";
     
     if (isNil "_market") then {
@@ -41,7 +41,7 @@ while {true} do {
     //[] spawn TON_fnc_loadPrices;
     _endtime = 4*60*60;
     _diff = _endtime - time;
-    if (_diff > 15*60) then {
+    if (_diff > 15*60 || time > _endtime+5) then {
         sleep (15*60);
     } else {
         sleep (_diff - 5);
