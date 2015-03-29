@@ -12,7 +12,7 @@ if(isNull _vehicle OR !(_vehicle isKindOf "Car" OR _vehicle isKindOf "Air" OR _v
 
 if(!createDialog "TrunkMenu") exitWith {hint localize "STR_MISC_DialogError";}; //Couldn't create the menu?
 [_vehicle] spawn {
-	_x = _this select 0;
+	_vehicle = _this select 0;
 	sleep random(2);
 	if((_vehicle getVariable ["trunk_in_use",false])) exitWith {closeDialog 0; hint localize "STR_MISC_VehInvUse";};
 	_vehicle setVariable["trunk_in_use",true,true];
