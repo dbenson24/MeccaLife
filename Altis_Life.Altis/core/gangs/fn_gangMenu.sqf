@@ -17,7 +17,7 @@ _ownerID = SEL(life_gangData,1);
 _gangName = SEL(life_gangData,2);
 _gangBank = GANG_FUNDS;
 _gangMax = SEL(life_gangData,3);
-_members = SEL(life_gangData,5);
+_gangMembers = SEL(life_gangData,5);
 
 if(_ownerID != steamid) then {
 	(CONTROL(2620,2622)) ctrlEnable false; //Upgrade
@@ -41,7 +41,7 @@ lbClear _members;
 		_members lbAdd format["%1",(_x select 1)];
 		_members lbSetData [(lbSize _members)-1,str(_x)];
 	};
-} foreach _members;
+} foreach _gangMembers;
 
 _grpMembers = units grpPlayer;
 _allUnits = playableUnits;
