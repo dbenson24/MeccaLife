@@ -103,6 +103,12 @@ class Life_My_Gang_Diag {
 			w = 0.462499;
 			h = 0.06;
 		};
+		class ColorList : Life_RscCombo
+		{
+			idc = 2632;
+			x = 0.6; y = 0.76;
+			w = (9 / 40); h = 0.03;
+		};
 	};
 };
 

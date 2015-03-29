@@ -31,6 +31,7 @@ if(!isNil "_group") then {
 		_group selectLeader player;
 		[[player,_group],"TON_fnc_clientGangLeader",(units _group),false] call life_fnc_MP;
 	};
+	life_in_gang = true;
 } else {
 	_group = group player;
 	_group SVAR ["gang_id",SEL(life_gangData,0),true];
@@ -39,4 +40,6 @@ if(!isNil "_group") then {
 	_group SVAR ["gang_maxMembers",SEL(life_gangData,3),true];
 	_group SVAR ["gang_bank",SEL(life_gangData,4),true];
 	_group SVAR ["gang_members",SEL(life_gangData,5),true];
+	life_in_gang = true;
 };
+
