@@ -13,7 +13,7 @@ if((_vehicle getVariable ["trunk_in_use",false])) exitWith {hint localize "STR_M
 if(!createDialog "TrunkMenu") exitWith {hint localize "STR_MISC_DialogError";}; //Couldn't create the menu?
 _handle = [_vehicle] spawn {
 	_vehicle = _this select 0;
-	sleep random(0.75);
+	sleep random(1);
 	if((_vehicle getVariable ["trunk_in_use",false])) exitWith {closeDialog 0; hint localize "STR_MISC_VehInvUse";};
 	_vehicle setVariable["trunk_in_use",true,true];
 };
