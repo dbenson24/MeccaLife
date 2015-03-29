@@ -1,2 +1,0 @@
-// AI disabled in life
-5 ""
