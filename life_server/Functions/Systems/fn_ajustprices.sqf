@@ -77,7 +77,7 @@ _sellingfactor =((count _itemArray)-1);
     _varprice =  (_x select 3);
     _minprice = (_x select 4);
     _maxprice = (_x select 5);
-    _changeco = 0.7 + random 0.8;
+    _changeco = 0.3 + random 1.4;
     _x set [8, _sellprice];
     if (_ressource == _var) then { 
         if (_type == 0) then { 
