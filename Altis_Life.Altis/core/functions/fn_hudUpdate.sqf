@@ -46,7 +46,6 @@ else
 {
 	LIFEctrl(IDC_LIFE_BAR_WANTED) ctrlShow false;
 	LIFEctrl(IDC_LIFE_WANTED_TEXT) ctrlShow false;
-	LIFEctrl(IDC_LIFE_PICTURE_WANTED) ctrlShow false;
 };
 
 LIFEctrl(IDC_LIFE_STAMINA_TEXT) ctrlsetText format["%1", round((1 - (getFatigue player)) * 100)];
