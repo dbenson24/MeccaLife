@@ -65,6 +65,7 @@ switch(playerSide) do {
 		} foreach life_houses;
 		
 		life_gangData = SEL(_this,10);
+		life_in_gang = false;
 		if(!(EQUAL(count life_gangData,0))) then {
 			[] spawn life_fnc_initGang;
 		};

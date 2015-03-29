@@ -11,12 +11,13 @@ if(isNull (findDisplay 2620)) then {
 	if(!(createDialog "Life_My_Gang_Diag")) exitWith {}; //NOOOOOOOOOOOOOOOOOOOOOOOoooooooooooooOOOOOOOOOOOOOOOOOOOOOOOOOOO00000000000000oooooo
 };
 
-_ownerID = grpPlayer GVAR ["gang_owner",""];
-if(_ownerID == "") exitWith {closeDialog 0;}; //Bad juju
-_gangName = grpPlayer getVariable "gang_name";
+
+if(!life_in_gang) exitWith {closeDialog 0;}; //Bad juju
+_ownerID = SEL(life_gangData,1);
+_gangName = SEL(life_gangData,2);
 _gangBank = GANG_FUNDS;
-_gangMax = grpPlayer getVariable "gang_maxMembers";
-_members = grpPlayer getVariable "gang_members";
+_gangMax = SEL(life_gangData,3);
+_members = SEL(life_gangData,5);
 
 if(_ownerID != steamid) then {
 	(CONTROL(2620,2622)) ctrlEnable false; //Upgrade
