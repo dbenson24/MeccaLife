@@ -57,6 +57,7 @@ _allUnits = playableUnits;
 //Clear out the list..
 {
 	_unit = _x;
+	_good = false;
 	if (typeName (_gangMembers select 0) == "ARRAY") then {
 		{
 			if (getPlayerUID _unit == _x select 0) then {

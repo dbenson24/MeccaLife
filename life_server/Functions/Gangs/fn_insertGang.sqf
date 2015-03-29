@@ -44,7 +44,7 @@ _queryResult = [_query,2] call DB_fnc_asyncCall;
 _gangMembers = [[_uid,_playerName]];
 
 if(!(EQUAL(count _queryResult,0))) then {
-	_query = format["gangUpdate:%1:%2:%3",_uid,_gangMembers,(_queryResult select 0)];
+	_query = format["gangUpdate:%1:%2:%3",_uid,[_gangMembers],(_queryResult select 0)];
 } else {
 	_query = format["gangInsert:%1:%2:%3",_uid,_gangName,_gangMembers];
 };
