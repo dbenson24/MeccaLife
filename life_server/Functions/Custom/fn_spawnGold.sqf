@@ -14,6 +14,9 @@ gold_safe setVectorDirAndUp [[90,0,80],[-90,0,0]];
 gold_safe enableSimulation false;
 gold_safe allowDamage false;
 
+_wreck hideObjectGlobal true;
+gold_safe hideObjectGlobal true;
+
 _minTime = (30*60);
 _maxTime = (120*60);
 _finalTime = (random (_maxTime - _minTime)) + _minTime;
@@ -29,3 +32,5 @@ _Pos = position _heli;
 "MarkerText201" setMarkerText "Shipwreck";
 "MarkerText201" setMarkerType "mil_warning";
 [[3,"<t size='3'><t color='#00FF00'>SHIPWRECK</t></t> <br/><t size='1.5'>A ship wreck site has been spotted, check the area for <t color='#FFFF00'>underwater crates of gold</t>. Check your map</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+_wreck hideObjectGlobal false;
+gold_safe hideObjectGlobal false;

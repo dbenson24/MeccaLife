@@ -16,6 +16,9 @@ heli_safe setVectorDirAndUp [[90,0,80],[-90,0,0]];
 heli_safe enableSimulation false;
 heli_safe allowDamage false;
 
+_wreck hideObjectGlobal true;
+heli_safe hideObjectGlobal true;
+
 _minTime = (30*60);
 _maxTime = (120*60);
 _finalTime = (random (_maxTime - _minTime)) + _minTime;
@@ -31,3 +34,5 @@ _Pos = position _heli;
 "MarkerText200" setMarkerText "PLANEWRECK";
 "MarkerText200" setMarkerType "mil_warning";
 [[3,"<t size='2'><t color='#00FF00'>PLANEWRECK</t></t> <br/><t size='1.5'>A plane wreck site has been spotted, check the area for <t color='#FFFF00'> crates of lost cargo</t>. Check your map</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+_wreck hideObjectGlobal false;
+heli_safe hideObjectGlobal false;

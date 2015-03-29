@@ -31,6 +31,6 @@ _numbars = round(_units + random(2*_units))
 if (_numbars < 20) then {
 	_numbars = 20;
 };
-fed_bank setVariable["safe",_numbars];
+fed_bank setVariable["safe",_numbars,true];
 
 hint localize "STR_ISTR_Blast_Opened";
