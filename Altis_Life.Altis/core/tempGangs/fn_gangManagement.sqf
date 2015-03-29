@@ -60,7 +60,7 @@ switch (true) do
 	};
 };
 
-ctrlSetText[601,(_gang select 0)];
+ctrlSetText[1003,format["Your Group: %1",(_gang select 0)]];
 
 for "_i" from 0 to (count _units)-1 do
 {	

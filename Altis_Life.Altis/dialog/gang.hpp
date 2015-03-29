@@ -244,7 +244,7 @@ class Life_My_Group_Diag {
 			y = 0.28;
 			w = 0.2;
 			h = 0.04;
-			onButtonClick = "closeDialog 0; [] call life_fnc_gangMenu;";
+			onButtonClick =  "if(isNil ""life_action_gangInUse"") then {if(!life_in_gang) then {createDialog ""Life_Create_Gang_Diag"";} else {[] spawn life_fnc_gangMenu;};};";
 			colorBackground[] = {0, 0, 0, 0};
 		};
 		class LockGroupButton: DisplayGroupButton
