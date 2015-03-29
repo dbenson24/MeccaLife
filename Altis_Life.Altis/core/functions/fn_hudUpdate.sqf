@@ -3,6 +3,7 @@
 #define IDC_LIFE_BAR_WATER 2201
 #define IDC_LIFE_BAR_HEALTH 2202
 #define IDC_LIFE_BAR_WANTED 2204
+#define IDC_LIFE_PICTURE_WANTED 1203
 #define IDC_LIFE_FOOD_TEXT 1000
 #define IDC_LIFE_WATER_TEXT 1001
 #define IDC_LIFE_HEALTH_TEXT 1002
@@ -46,6 +47,7 @@ else
 {
 	LIFEctrl(IDC_LIFE_BAR_WANTED) ctrlShow false;
 	LIFEctrl(IDC_LIFE_WANTED_TEXT) ctrlShow false;
+	LIFEctrl(IDC_LIFE_PICTURE_WANTED) ctrlShow false;
 };
 
 LIFEctrl(IDC_LIFE_STAMINA_TEXT) ctrlsetText format["%1", round((1 - (getFatigue player)) * 100)];

@@ -27,7 +27,7 @@ class playerHUD {
         movingEnable = 0;
         fadein = 0;
         fadeout = 0;
-        name = "playerHUD";
+        name ="playerHUD";
         onLoad = "uiNamespace setVariable ['playerHUD',_this select 0]";
         objects[] = {};
         controls[] = {
