@@ -27,7 +27,7 @@ if(_ownerID != steamid) then {
 	(CONTROL(2620,2631)) ctrlEnable false; //Disband Gang
 };
 
-(CONTROL(2620,1003)) ctrlSetText format["Your Gang: %1"_gangName];
+(CONTROL(2620,1003)) ctrlSetText format["Your Gang: %1",_gangName];
 (CONTROL(2620,601)) ctrlSetText format[(localize "STR_GNOTF_Funds")+ " $%1",[_gangBank] call life_fnc_numberText];
 
 //Loop through the players.
