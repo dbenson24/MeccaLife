@@ -33,15 +33,25 @@ if(_ownerID != steamid) then {
 //Loop through the players.
 _members = CONTROL(2620,2621);
 lbClear _members;
-{
-	if((_x select 0) == _ownerID) then {
-		_members lbAdd format["%1 " +(localize "STR_GNOTF_GangLeader"),_x select 1];
-		_members lbSetData [(lbSize _members)-1,str(_x)];
+if (typeName (_gangMembers select 0) == "ARRAY") then {
+	{
+		if((_x select 0) == _ownerID) then {
+			_members lbAdd format["%1 " +(localize "STR_GNOTF_GangLeader"),_x select 1];
+			_members lbSetData [(lbSize _members)-1,str(_x)];
+		} else {
+			_members lbAdd format["%1",(_x select 1)];
+			_members lbSetData [(lbSize _members)-1,str(_x)];
+		};
+	} foreach _gangMembers;
+} else {
+	if((_gangMembers select 0) == _ownerID) then {
+		_members lbAdd format["%1 " +(localize "STR_GNOTF_GangLeader"),_gangMembers select 1];
+		_members lbSetData [(lbSize _members)-1,str(_gangMembers)];
 	} else {
-		_members lbAdd format["%1",(_x select 1)];
-		_members lbSetData [(lbSize _members)-1,str(_x)];
+		_members lbAdd format["%1",(_gangMembers select 1)];
+		_members lbSetData [(lbSize _members)-1,str(_gangMembers)];
 	};
-} foreach _gangMembers;
+};
 
 _allUnits = playableUnits;
 //Clear out the list..
