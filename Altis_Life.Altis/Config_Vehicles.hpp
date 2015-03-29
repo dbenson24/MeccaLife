@@ -26,7 +26,7 @@
 #define ptempestcov 750000
 #define phemttbox 600000
 #define ptempestdev 800000
-#define ftruck 150000
+#define ftruck 300000
 
 
 #define pifrit 700000
