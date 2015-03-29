@@ -574,7 +574,7 @@ class CfgVehicles {
 
 	class I_Truck_02_covered_F {
         vItemSpace = 250;
-        price = ptempestcov;
+        price = pzamakcov;
         storageFee[] = { 14500, 0, 0, 0 };
 		garageSell[] = { 62000, 0, 0, 0 };
         insurance = 6500;
@@ -599,7 +599,7 @@ class CfgVehicles {
 
 	class O_Truck_03_covered_F {
 		vItemSpace = 305;
-		price = pzamakcov;
+		price = ptempestcov;
 		storageFee[] = { 25000, 0, 0, 0 };
 		garageSell[] = { 65000, 0, 0, 0 };
 		insurance = 2500;
