@@ -5,7 +5,7 @@
 	Description:
 	31 hours of no sleep screw your description.
 */
-private["_ownerID","_gangBank","_gangMax","_gangName","_members","_allUnits","_ctrl","_members","_gangMembers"];
+private["_ownerID","_gangBank","_gangMax","_gangName","_members","_allUnits","_ctrl","_members","_gangMembers","_unit","_good"];
 disableSerialization;
 if(isNull (findDisplay 2620)) then {
 	if(!(createDialog "Life_My_Gang_Diag")) exitWith {}; //NOOOOOOOOOOOOOOOOOOOOOOOoooooooooooooOOOOOOOOOOOOOOOOOOOOOOOOOOO00000000000000oooooo
@@ -43,11 +43,17 @@ lbClear _members;
 	};
 } foreach _gangMembers;
 
-_grpMembers = units grpPlayer;
 _allUnits = playableUnits;
 //Clear out the list..
 {
-	if(_x in _grpMembers OR side _x != civilian && isNil {(group _x) getVariable "gang_id"}) then {
+	_unit = _x;
+	{
+		if (getPlayerUID _unit == _x select 0) then {
+			_good = true;
+		};
+	}foreach _gangMembers;
+	
+	if(_good || (side _x != civilian && isNil {(group _x) getVariable "gang_id"})) then {
 		_allUnits set[_forEachIndex,-1];
 	};
 } foreach _allUnits;
