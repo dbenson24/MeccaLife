@@ -57,11 +57,17 @@ _allUnits = playableUnits;
 //Clear out the list..
 {
 	_unit = _x;
-	{
-		if (getPlayerUID _unit == _x select 0) then {
+	if (typeName (_gangMembers select 0) == "ARRAY") then {
+		{
+			if (getPlayerUID _unit == _x select 0) then {
+				_good = true;
+			};
+		}foreach _gangMembers;
+	} else {
+		if (getPlayerUID _unit == _gangMembers select 0) then {
 			_good = true;
 		};
-	}foreach _gangMembers;
+	};
 	
 	if(_good || (side _x != civilian && isNil {(group _x) getVariable "gang_id"})) then {
 		_allUnits set[_forEachIndex,-1];
