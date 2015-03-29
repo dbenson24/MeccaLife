@@ -53,6 +53,6 @@ if((str(player) in ["civ_9999","civ_99999"])) then {
 [] spawn {
         while {alive player} do {
                 [[player],"life_fnc_wantedFetchForCivilian",false,false] spawn life_fnc_MP;
-                sleep 15;
+                sleep 60;
         };
 };
