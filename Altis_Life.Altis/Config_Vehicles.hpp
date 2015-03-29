@@ -18,15 +18,15 @@
 #define pmh9med 250000
 #define porcamed 500000
 
-#define pboxer 250000
+#define pboxer 200000
 #define pzamaktrans 135000
-#define pzamakcov 200000
-#define phemtttrans 260000
+#define pzamakcov 250000
+#define phemtttrans 300000
 #define ptempesttrans 600000
 #define ptempestcov 750000
 #define phemttbox 600000
 #define ptempestdev 800000
-#define ftruck 50000
+#define ftruck 150000
 
 
 #define pifrit 700000
@@ -121,7 +121,6 @@ class CarShops {
 			{ "B_Heli_Light_01_F", pmh9civ, "rebel" },
 			{ "B_G_Offroad_01_armed_F", p50cal, "rebel" },
 			{ "O_Heli_Transport_04_bench_F", ptarubench, "rebel" },
-			{ "O_Heli_Transport_04_box_F", ptarutrans, "rebel" },
 			{ "B_Heli_Transport_03_F", huron, "rebel" }
 		};
 	};
@@ -142,6 +141,7 @@ class CarShops {
 			{ "C_Heli_Light_01_civil_F", pm900, "pilot" },
 			{ "O_Heli_Light_02_unarmed_F", porcaciv, "pilot" },
 			{ "O_Heli_Transport_04_fuel_F", ptarufuel, "pilot" },
+			{ "O_Heli_Transport_04_box_F", ptarutrans, "pilot" },
 			{ "I_Heli_Transport_02_F", mohawk, "pilot" }
 		};
 	};
@@ -690,7 +690,7 @@ class CfgVehicles {
     };
 
 	class C_Van_01_box_F {
-        vItemSpace = 325;
+        vItemSpace = 350;
         price = pboxer;
         storageFee[] = { 1000, 0, 0, 0 };
 		garageSell[] = { 35000, 0, 0, 0 };
