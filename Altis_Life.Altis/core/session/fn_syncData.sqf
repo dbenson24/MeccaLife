@@ -31,7 +31,7 @@ hint localize "STR_Session_SyncData";
 [] spawn
 {
 	life_session_time = true;
-	sleep (5 * 60);
+	sleep (15 * 60);
 	life_session_time = false;
 };
 	
