@@ -47,7 +47,7 @@ class Life_My_Gang_Diag {
 			w = 0.2;
 			h = 0.04;
 			colorBackground[] = {0, 0, 0, 0};
-			onButtonClick = "closeDialog 0; [] call life_fnc_groupMenu;";
+			onButtonClick = "[] call life_fnc_groupMenu;";
 		};
 		class InviteGangButton: DisplayGroupButton
 		{
