@@ -27,7 +27,7 @@ _bomb = "Bo_GBU12_LGB_MI10" createVehicle [getPosATL fed_bank select 0, getPosAT
 fed_bank setVariable["chargeplaced",false,true];
 fed_bank setVariable["safe_open",true,true];
 _units = count playableUnits;
-_numbars = round(_units + random(2*_units))
+_numbars = round(_units + random(2*_units));
 if (_numbars < 20) then {
 	_numbars = 20;
 };
