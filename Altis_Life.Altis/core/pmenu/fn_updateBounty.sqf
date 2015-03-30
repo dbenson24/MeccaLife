@@ -3,7 +3,7 @@
         File: fn_updateBounty.sqf
 
 */
-private["_val","_total","_list","_uid"];
+private["_val","_total","_list","_uid","_updateBounty"];
 
 _uid = getPlayerUID player;
 _list = wantedList;

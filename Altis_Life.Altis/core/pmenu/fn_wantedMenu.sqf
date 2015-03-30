@@ -54,4 +54,4 @@ if(FETCH_CONST(life_coplevel) < 2 && FETCH_CONST(life_adminlevel) == 0) then
 	ctrlShow[2405,false];
 };
 
-[] spawn life_wantedList;
+[] spawn life_fnc_wantedList;
