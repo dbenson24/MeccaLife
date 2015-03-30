@@ -5,6 +5,10 @@ Author: Worldtrade1101
 
 Description:
 Send a query to retrieve the price of stuff on the server
+
+
+DEAD FUNCTION as of Public Variable Update 3/30/2015 -Derek
+
 */
 private["_type","_side","_data","_unit","_ret","_tickTime","_queryResult","_market","_shoptype","_priceArray"];
 _type = [_this,0,0,[0]] call BIS_fnc_param;
