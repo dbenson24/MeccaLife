@@ -216,4 +216,7 @@ PVAR_ALL("life_server_isReady");
 [] spawn TON_fnc_syncPrices;
 
 /* Initialize the wanted list */
-[] spawn life_fnc_wantedSyncList;
+[] spawn {
+	[] spawn life_fnc_wantedSyncList;
+	sleep 2*60;
+};
