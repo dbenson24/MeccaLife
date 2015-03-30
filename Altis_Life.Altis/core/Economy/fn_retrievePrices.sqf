@@ -80,6 +80,6 @@ default {""};
 
 
 
-if (_data == "economy") exitwith {[[_type,_itemArray],"life_fnc_virt_updateEconomy",_unit,false] spawn life_fnc_MP;};
+if (_data == "economy") exitwith {[_type,_itemArray] spawn life_fnc_virt_updateEconomy};
 
 [_type,_itemArray] spawn life_fnc_virt_updatePrice;
