@@ -30,7 +30,6 @@ if(count _invs > 0) then {
 	};
 	
 	[[getPlayerUID _civ,_civ GVAR ["realname",name _civ],"481"],"life_fnc_wantedAdd",false,false] call life_fnc_MP;
-	[[_civ],"life_fnc_wantedFetchForCivilian",_civ,false] spawn life_fnc_MP;
 	[[0,"STR_Cop_Contraband",true,[(_civ GVAR ["realname",name _civ]),[_illegal] call life_fnc_numberText]],"life_fnc_broadcast",west,false] call life_fnc_MP;
 } else {
 	_inv = localize "STR_Cop_NoIllegal";
