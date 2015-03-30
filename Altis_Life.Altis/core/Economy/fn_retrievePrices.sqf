@@ -1,4 +1,4 @@
-#include "\life_server\script_macros.hpp"
+#include <macro.h>
 /*
 File: fn_retrievePrices.sqf
 Author: Derek
