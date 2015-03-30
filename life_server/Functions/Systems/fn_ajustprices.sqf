@@ -104,7 +104,7 @@ _sellingfactor =((count _itemArray)-1);
     };
     
     _x set [2, _sellprice];
-    _name = format["%1price",SEL(_x,0)];
+    _name = format["%1MeccaMarketGoodPrice",SEL(_x,0)];
     missionNamespace setVariable [_name,_x];
 } forEach _itemArray;
 

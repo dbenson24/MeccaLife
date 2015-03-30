@@ -41,7 +41,7 @@ _marketPrices = [];
 
 {
     _marketPrices pushBack [SEL(_x,0),SEL(_x,6),SEL(_x,7)];
-    _name = format["%1price",SEL(_x,0)];
+    _name = format["%1MeccaMarketGoodPrice",SEL(_x,0)];
     _x pushBack SEL(_x,2);
     _x pushBack SEL(_x,2);
     missionNamespace setVariable [_name, _x];
