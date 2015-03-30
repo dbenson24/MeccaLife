@@ -1,3 +1,4 @@
+#include <macro.h>
 /*
 	File: fn_wantedGrab.sqf
 	Author: ColinM
