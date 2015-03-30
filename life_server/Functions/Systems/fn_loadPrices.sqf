@@ -47,4 +47,5 @@ _marketPrices = [];
     missionNamespace setVariable [_name, _x];
 } forEach _queryResult;
 
-missionNamespace setVariable ["marketPrices", _marketPrices];
+missionNamespace setVariable ["MeccaMarketPrices", _marketPrices];
+publicVariable "MeccaMarketPrices";

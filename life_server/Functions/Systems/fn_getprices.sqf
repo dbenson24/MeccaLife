@@ -24,7 +24,7 @@ diag_log "data ou type ou unit null";
 
 _unit = owner _unit;
 
-_market = missionNamespace getVariable "marketPrices";
+_market = missionNamespace getVariable "MeccaMarketPrices";
 
 _itemArray = [];
 _factor = [];

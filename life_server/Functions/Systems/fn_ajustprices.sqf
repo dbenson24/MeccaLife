@@ -40,7 +40,7 @@ diag_log "data ou type ou unit null";
 
 _unit = owner _unit; //for hack purpose!
 
-_market = missionNamespace getVariable "marketPrices";
+_market = missionNamespace getVariable "MeccaMarketPrices";
 
 _good = missionNamespace getVariable format["%1price",_var];
 _itemArray = [];

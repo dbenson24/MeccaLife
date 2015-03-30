@@ -10,11 +10,11 @@ refreshes the SQL database with the new sell prices
 
 while {true} do {
     diag_log format["Sync prices at uptime: %1",round(time/60)];
-    _market = missionNamespace getVariable "marketPrices";
+    _market = missionNamespace getVariable "MeccaMarketPrices";
     
     if (isNil "_market") then {
         [] call TON_fnc_loadPrices;
-        _market = missionNamespace getVariable "marketPrices";
+        _market = missionNamespace getVariable "MeccaMarketPrices";
     };
     
     _goods = [];
