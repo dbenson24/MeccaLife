@@ -13,7 +13,7 @@ _queryResult = [_result,2] call DB_fnc_asyncCall;
 _updateBounty = _queryResult select 0;
 */
 _uid = getPlayerUID _player;
-_list = missionNamespace getVariable "wantedList";
+_list = missionNamespace getVariable "WantedList";
 
 {
 	if (EQUAL(_uid, SEL(_x,0))) then {

@@ -28,7 +28,7 @@ _queryResult = [_result,2] call DB_fnc_asyncCall;
 	]] call TON_fnc_logIt;
 */
 
-_list = missionNamespace getVariable "wantedList";
+_list = missionNamespace getVariable "WantedList";
 _uid = _criminal select 0;
 {
 	if (EQUAL(_uid, SEL(_x,0))) then {

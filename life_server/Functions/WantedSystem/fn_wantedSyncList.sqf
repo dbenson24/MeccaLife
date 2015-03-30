@@ -2,7 +2,7 @@
 /*
     wantedSyncList.sqf
     Written by: Derek Benson
-    Loads the server wanted list into serverside variable "wantedList"
+    Loads the server wanted list into serverside variable "WantedList"
 */
 
 
@@ -37,7 +37,7 @@ private["_query","_queryResult","_units","_wanted"];
     } forEach _units;
     
     
-    missionNamespace setVariable ["wantedList", _wanted];
+    missionNamespace setVariable ["WantedList", _wanted];
 //    sleep (30);
 //};
 /*missionNamespace setVariable ["wantedListUpdated", true];
