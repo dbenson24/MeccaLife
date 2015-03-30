@@ -18,7 +18,7 @@ _uid = getPlayerUID player;
 waitUntil{!DB_Async_Active};
 _queryResult = [_result,2] call DB_fnc_asyncCall;
 if(count _queryResult == 0) exitWith {[]};*/
-_list = missionNamespace getVariable "WantedList";
+_list = missionNamespace getVariable "wantedList";
 
 {
 	if (EQUAL(_uid, SEL(_x,0))) then {

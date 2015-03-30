@@ -30,7 +30,7 @@ _tickTime = diag_tickTime;
 	
 } forEach _units*/
 
-_list = missionNamespace getVariable "WantedList";
+_list = missionNamespace getVariable "wantedList";
 
 
 [[_list],"life_fnc_wantedList",_ret,false] spawn life_fnc_MP;
