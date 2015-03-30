@@ -22,9 +22,6 @@ lbClear _goodlist;
 _type= [_this,0,0,[0]] call BIS_fnc_param;
 _market = [_this,1,[],[[]]] call BIS_fnc_param;
 
-
-
-
 if (count _market == 0 ) exitwith {};
 
 _goodlist lbAdd format["------------Illegal Goods------------"];
