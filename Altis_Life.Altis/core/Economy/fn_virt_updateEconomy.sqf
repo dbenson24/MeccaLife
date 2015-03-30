@@ -20,9 +20,9 @@ lbClear _goodlist;
 //lbClear _venteliste;
 
 _type= [_this,0,0,[0]] call BIS_fnc_param;
-_market = [_this,1,[],[[]]] call BIS_fnc_param;
+life_market = [_this,1,[],[[]]] call BIS_fnc_param;
 
-if (count _market == 0 ) exitwith {};
+if (count life_market == 0 ) exitwith {};
 
 _goodlist lbAdd format["------------Illegal Goods------------"];
 _goodlist lbSetValue [(lbSize _goodlist)-1,1.5];
@@ -39,7 +39,7 @@ _goodlist lbSetValue [(lbSize _goodlist)-1,3.5];
 		_goodlist lbSetValue [(lbSize _goodlist)-1,_x select 6];
 	
 	};
-} foreach _market;
+} foreach life_market;
 
 
 lbSortByValue _goodlist;

@@ -22,7 +22,7 @@ _good = lbData[39001,(lbCurSel 39001)];
 
 {
 	if (EQUAL(SEL(_x,0),_good)) exitWith {_good = _x;};
-}forEach MeccaMarketPrices;
+}forEach life_market;
 
 _name = ITEM_NAME(SEL(_good,0));
 
