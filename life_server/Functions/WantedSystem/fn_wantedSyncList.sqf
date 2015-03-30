@@ -38,6 +38,7 @@ private["_query","_queryResult","_units","_wanted"];
     
     
     missionNamespace setVariable ["wantedList", _wanted];
+    publicVariable "wantedList";
 //    sleep (30);
 //};
 /*missionNamespace setVariable ["wantedListUpdated", true];
