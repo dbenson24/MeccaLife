@@ -25,7 +25,7 @@ _market = [_this,1,[],[[]]] call BIS_fnc_param;
 
 
 
-if (count life_market == 0 ) exitwith {};
+if (count _market == 0 ) exitwith {};
 
 _goodlist lbAdd format["------------Illegal Goods------------"];
 _goodlist lbSetValue [(lbSize _goodlist)-1,1.5];
