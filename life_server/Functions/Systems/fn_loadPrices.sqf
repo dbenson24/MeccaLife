@@ -45,6 +45,7 @@ _marketPrices = [];
     _x pushBack SEL(_x,2);
     _x pushBack SEL(_x,2);
     missionNamespace setVariable [_name, _x];
+    publicVariable _name;
 } forEach _queryResult;
 
 missionNamespace setVariable ["MeccaMarketPrices", _marketPrices];

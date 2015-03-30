@@ -472,5 +472,6 @@ class Life_Client_Core
 		class openEconomy {};
 		class virt_updateEconomy {};
 		class marketGrab {};
+		class retrievePrices {};
 	};
 };
