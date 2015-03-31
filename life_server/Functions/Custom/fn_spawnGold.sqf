@@ -47,3 +47,14 @@ _lightrightback setLightFlareSize 1;
 _lightrightback setLightDayLight true; 
 _lightrightback setLightBrightness 30; 
 _lightrightback setLightAttenuation [0.1, 100, 100, 1000];
+
+_lightYello = [50, 20, 0];
+_lightrightback = "#lightpoint" createVehicle getposATL gold_safe; 
+_lightrightback setLightColor _lightYello;   
+_lightrightback setLightFlareMaxDistance 150;  
+_lightrightback setLightUseFlare true;  
+_lightrightback lightAttachObject [gold_safe, [0, 0, 10]]; 
+_lightrightback setLightFlareSize 1;  
+_lightrightback setLightDayLight true;  
+_lightrightback setLightBrightness 5;
+_lightrightback setLightAttenuation [25, 100, 100, 1000];
