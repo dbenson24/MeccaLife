@@ -99,6 +99,8 @@ switch (_code) do {
 			[_veh,"right"] call life_fnc_BlinkerInit;
 		};
 	};
+	
+	
 
 
 	//Open Wanted
@@ -231,6 +233,7 @@ switch (_code) do {
 	
 	//Holster / recall weapon.
 	case 35: {
+		if (vehicle player != player) exitWith {};
 		if(!(EQUAL(currentWeapon player,""))) then {
 			life_curWep_h = currentWeapon player;
 			player action ["SwitchWeapon", player, player, 100];

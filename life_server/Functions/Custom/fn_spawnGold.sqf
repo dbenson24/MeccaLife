@@ -53,7 +53,7 @@ _lightrightback = "#lightpoint" createVehicle getposATL gold_safe;
 _lightrightback setLightColor _lightYello;   
 _lightrightback setLightFlareMaxDistance 150;  
 _lightrightback setLightUseFlare true;  
-_lightrightback lightAttachObject [gold_safe, [0, 0, 10]]; 
+_lightrightback lightAttachObject [gold_safe, [0, 5, 0]]; 
 _lightrightback setLightFlareSize 1;  
 _lightrightback setLightDayLight true;  
 _lightrightback setLightBrightness 5;
