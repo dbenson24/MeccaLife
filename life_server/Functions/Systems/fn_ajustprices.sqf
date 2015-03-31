@@ -42,7 +42,7 @@ _unit = owner _unit; //for hack purpose!
 
 _market = missionNamespace getVariable "MeccaMarketPrices";
 
-_good = missionNamespace getVariable format["%1price",_var];
+_good = missionNamespace getVariable format["%1MeccaMarketGoodPrice",_var];
 _itemArray = [];
 if (_type == 0) then {
     ["diag_log",[
