@@ -40,7 +40,9 @@ waitUntil {sleep (random 0.3); !DB_Async_Active};
 _queryResult = [_query,1] call DB_fnc_asyncCall;
 
 /* Update player position */
-_query = format["playerPositionUpdate:%1:%2:%3",_position,_isalive,_uid];
-waitUntil {sleep (random 0.3); !DB_Async_Active};
-_queryResult = [_query,1] call DB_fnc_asyncCall;
+if (_side == civilian) then {
+	_query = format["playerPositionUpdate:%1:%2:%3",_position,_isalive,_uid];
+	waitUntil {sleep (random 0.3); !DB_Async_Active};
+	_queryResult = [_query,1] call DB_fnc_asyncCall;
+};
 
