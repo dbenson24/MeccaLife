@@ -5,7 +5,7 @@
 	Description:
 	Ain't got time to describe it, READ THE FILE NAME!
 */
-private["_uid","_side","_cash","_bank","_licenses","_gear","_name","_query","_thread","_position","_isalive"];
+private["_uid","_side","_cash","_bank","_licenses","_gear","_name","_query","_thread","_position","_isalive","_isjailed"];
 _uid = [_this,0,"",[""]] call BIS_fnc_param;
 _name = [_this,1,"",[""]] call BIS_fnc_param;
 _side = [_this,2,sideUnknown,[civilian]] call BIS_fnc_param;
@@ -13,8 +13,11 @@ _cash = [_this,3,0,[0]] call BIS_fnc_param;
 _bank = [_this,4,5000,[0]] call BIS_fnc_param;
 _licenses = [_this,5,[],[[]]] call BIS_fnc_param;
 _gear = [_this,6,[],[[]]] call BIS_fnc_param;
+_isjailed = [_this,7,false] call BIS_fnc_param;
+_isjailed = [_isjailed] call DB_fnc_bool;
 _position = [_this,8,""] call BIS_fnc_param;
-_isalive = [_this select 9] call DB_fnc_bool; 
+_isalive = [_this,9,false] call BIS_fnc_param;
+_isalive = [_isalive] call DB_fnc_bool; 
 
 //Get to those error checks.
 if((_uid == "") OR (_name == "")) exitWith {};
@@ -32,7 +35,7 @@ for "_i" from 0 to count(_licenses)-1 do {
 
 switch (_side) do {
 	case west: {_query = format["playerWestUpdate:%1:%2:%3:%4:%5:%6",_name,_cash,_bank,_gear,_licenses,_uid];};
-	case civilian: {_query = format["playerCivilianUpdate:%1:%2:%3:%4:%6:%7:%5:%8:%9",_name,_cash,_bank,_licenses,_uid,_gear,[_this select 7] call DB_fnc_bool,_position,_isalive];};
+	case civilian: {_query = format["playerCivilianUpdate:%1:%2:%3:%4:%6:%7:%5:%8:%9",_name,_cash,_bank,_licenses,_uid,_gear,_isjailed,_position,_isalive];};
 	case independent: {_query = format["playerIndependentUpdate:%1:%2:%3:%4:%6:%5",_name,_cash,_bank,_licenses,_uid,_gear];};
 };
 
