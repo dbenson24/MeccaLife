@@ -17,10 +17,12 @@ gold_safe allowDamage false;
 _wreck hideObjectGlobal true;
 gold_safe hideObjectGlobal true;
 
+/*
 _minTime = (30*60);
 _maxTime = (120*60);
 _finalTime = (random (_maxTime - _minTime)) + _minTime;
 sleep _finalTime;
+*/
 _Pos = position _heli;
  _marker = createMarker ["Marker201", _Pos];
 "Marker201" setMarkerColor "ColorOrange";
@@ -35,7 +37,7 @@ _Pos = position _heli;
 _wreck hideObjectGlobal false;
 gold_safe hideObjectGlobal false;
 
-_lightYello = [20, 20, 0];
+_lightYello = [50, 20, 0];
 _lightrightback = "#lightpoint" createVehicle getposATL gold_safe;
 _lightrightback setLightColor _lightYello;  
 _lightrightback setLightFlareMaxDistance 150; 
