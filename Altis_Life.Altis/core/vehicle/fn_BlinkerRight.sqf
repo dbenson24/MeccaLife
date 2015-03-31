@@ -42,7 +42,12 @@ switch (typeOf _vehicle) do{
 		_lightrightback lightAttachObject [_vehicle, [0.8, -3.0, -0.35]];
 		_lightrightfront lightAttachObject [_vehicle, [0.8, 2.1, -0.35]];
 	};
-		
+	
+	case "B_SDV_01_F":{
+		_lightrightback lightAttachObject [_vehicle, [0.8, -3.0, -0.35]];
+		_lightrightfront lightAttachObject [_vehicle, [0.8, 2.1, -0.35]];		
+	};
+	
 	case "O_G_Offroad_01_F":{
 		_lightrightfront lightAttachObject [_vehicle, [-0.80, 2.1, -0.35]]; 
 		_lightrightback lightAttachObject [_vehicle, [-0.80, -3.0, -0.35]];
