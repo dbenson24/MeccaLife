@@ -29,4 +29,5 @@ switch (playerSide) do {
 _packet pushBack last_known_position;
 _packet pushBack life_is_alive;
 
+diag_log format["_packet: %1",_packet];
 [_packet,"DB_fnc_updateRequest",false,false] call life_fnc_MP;
