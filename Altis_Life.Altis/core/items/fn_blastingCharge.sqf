@@ -19,8 +19,8 @@ hint localize "STR_ISTR_Blast_KeepOff";
 _handle = [] spawn life_fnc_demoChargeTimer;
 [[15],"life_fnc_demoChargeTimer",west,false] call life_fnc_MP;
 
-waitUntil {scriptDone _handle};
-sleep 0.9;
+sleep (15*60+2);
+
 if(!(fed_bank getVariable["chargeplaced",false])) exitWith {hint localize "STR_ISTR_Blast_Disarmed"};
 
 _bomb = "Bo_GBU12_LGB_MI10" createVehicle [getPosATL fed_bank select 0, getPosATL fed_bank select 1, (getPosATL fed_bank select 2)+0.5];
