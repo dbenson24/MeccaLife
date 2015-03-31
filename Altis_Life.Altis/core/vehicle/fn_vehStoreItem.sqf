@@ -43,7 +43,7 @@ case (!(_ctrl in _FuelStuff) && (_Truck in _FuelTrucks)): {life_TankLaster = 3};
 case ((_ctrl in _FuelStuff) && !(_Truck in _FuelTrucks)): {life_TankLaster = 4}; //Fuel in NonFuelTruck -> Nope!
 };
 
-if (life_TankLaster == 3) exitWith {hint "Ey boy!! That won't pass through the nozzle! (Only Fuel Trucks and Taru Fuel can store fuel!)"};
+if (life_TankLaster == 3) exitWith {hint "Ey boy!! That won't pass through the nozzle! (Fuel Trucks and the Taru Fuel can only store fuel!)"};
 if (life_TankLaster == 4) exitWith {hint "Are you crazy? What about the mess you would create? (You can only put fuel inside of a Fuel Truck or Taru Fuel.)";};
 
 
