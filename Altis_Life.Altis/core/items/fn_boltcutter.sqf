@@ -18,7 +18,7 @@ if((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _building OR (near
 };
 
 
-//if(_fed && ({side _x == west} count playableUnits < 5)) exitWith {hint localize "STR_Civ_NotEnoughCops"};
+if(_fed && ({side _x == west} count playableUnits < 5)) exitWith {hint localize "STR_Civ_NotEnoughCops"};
 
 if(_fed) then {
 	[[[1,2],"STR_ISTR_Bolt_AlertFed",true,[]],"life_fnc_broadcast",true,false] call life_fnc_MP;
@@ -49,8 +49,8 @@ _progressBar progressSetPosition 0.01;
 _cP = 0.01;
 
 switch (typeOf _building) do {
-	case "Land_Dome_Big_F": {_cpRate = 0.1;};
-	case "Land_Research_house_V1_F": {_cpRate = 0.1;};
+	case "Land_Dome_Big_F": {_cpRate = 0.003;};
+	case "Land_Research_house_V1_F": {_cpRate = 0.0015;};
 	default {
 		_cpRate = 0.0010;
 		diag_log format["Building: %1", _building];
