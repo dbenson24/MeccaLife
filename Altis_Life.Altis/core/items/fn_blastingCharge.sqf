@@ -18,6 +18,7 @@ _vault setVariable["chargeplaced",true,true];
 hint localize "STR_ISTR_Blast_KeepOff";
 _handle = [] spawn life_fnc_demoChargeTimer;
 [[15],"life_fnc_demoChargeTimer",west,false] call life_fnc_MP;
+[[15],"life_fnc_demoChargeTimer",group player,false] call life_fnc_MP;
 
 sleep (15*60+2);
 
