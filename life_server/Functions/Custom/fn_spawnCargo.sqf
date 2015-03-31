@@ -36,3 +36,14 @@ _Pos = position _heli;
 [[3,"<t size='2'><t color='#00FF00'>PLANEWRECK</t></t> <br/><t size='1.5'>A plane wreck site has been spotted, check the area for <t color='#FFFF00'> crates of lost cargo</t>. Check your map</t>"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 _wreck hideObjectGlobal false;
 heli_safe hideObjectGlobal false;
+
+_lightYello = [20, 20, 0];
+_lightrightback = "#lightpoint" createVehicle getposATL player;
+_lightrightback setLightColor _lightYello;  
+_lightrightback setLightFlareMaxDistance 150; 
+_lightrightback setLightUseFlare true; 
+_lightrightback lightAttachObject [player, [5, -5, 0.5]]; 
+_lightrightback setLightFlareSize 1; 
+_lightrightback setLightDayLight true; 
+_lightrightback setLightBrightness 30; 
+_lightrightback setLightAttenuation [0.1, 100, 100, 1000];
