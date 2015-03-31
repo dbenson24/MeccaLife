@@ -20,7 +20,7 @@ while {true} do {
 	};
 	if(round(_time - time) < 1) exitWith {};
 	if(!(fed_bank GVAR ["chargeplaced",false])) exitWith {};
-	_timer ctrlSetText format["%1",[(_time - time),"MM:SS.MS"] call BIS_fnc_secondsToString];
+	_timer ctrlSetText format["Fed Rob Timer: %1",[(_time - time),"MM:SS.MS"] call BIS_fnc_secondsToString];
 	sleep 0.08;
 };
 6 cutText["","PLAIN"];
