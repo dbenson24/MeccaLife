@@ -35,12 +35,20 @@ for "_i" from 0 to count(_licenses)-1 do {
 
 switch (_side) do {
 	case west: {_query = format["playerWestUpdate:%1:%2:%3:%4:%5:%6",_name,_cash,_bank,_gear,_licenses,_uid];};
-	case civilian: {_query = format["playerCivilianUpdate:%1:%2:%3:%4:%6:%7:%5:%8:%9",_name,_cash,_bank,_licenses,_uid,_gear,_isjailed,_position,_isalive];};
+	case civilian: {_query = format["playerCivilianUpdate:%1:%2:%3:%4:%6:%7:%8:%9:%5",_name,_cash,_bank,_licenses,_uid,_gear,_isjailed,_position,_isalive];};
 	case independent: {_query = format["playerIndependentUpdate:%1:%2:%3:%4:%6:%5",_name,_cash,_bank,_licenses,_uid,_gear];};
 };
 
 waitUntil {sleep (random 0.3); !DB_Async_Active};
 _queryResult = [_query,1] call DB_fnc_asyncCall;
+
+["diag_log",[
+		"------------- Update Request -------------",
+		format["QUERY: %1",_query],
+		format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)],
+		format["Result: %1",_queryResult],
+		"-------------------------------------------------"
+	]] call TON_fnc_logIt;
 
 /*
 // Update player position 
