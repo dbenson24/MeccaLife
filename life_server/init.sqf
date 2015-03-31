@@ -217,6 +217,8 @@ PVAR_ALL("life_server_isReady");
 
 /* Initialize the wanted list */
 [] spawn {
-	[] spawn life_fnc_wantedSyncList;
-	sleep 2*60;
+	while {true} {
+		[] spawn life_fnc_wantedSyncList;
+		sleep 2*60;
+	};
 };
