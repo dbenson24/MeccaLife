@@ -57,4 +57,4 @@ _lightrightback lightAttachObject [gold_safe, [0, 0, 10]];
 _lightrightback setLightFlareSize 1;  
 _lightrightback setLightDayLight true;  
 _lightrightback setLightBrightness 5;
-_lightrightback setLightAttenuation [25, 100, 100, 1000];
+_lightrightback setLightAttenuation [1, 0.3, 0.1, 0.05];
