@@ -31,7 +31,7 @@ _inv = _veh_data select 0;
 if(_ctrl == "goldbar" && {!(life_trunk_vehicle isKindOf "LandVehicle" OR life_trunk_vehicle isKindOf "House_F")}) exitWith {hint "You cannot store that in anything but a land vehicle!"};
 
 _Truck = TypeOf life_trunk_vehicle;
-_FuelStuff = ["oilu","oilp"];
+_FuelStuff = ["oil_unprocessed","oil_processed"];
 _FuelTrucks = ["C_Van_01_fuel_F","O_Heli_Transport_04_fuel_F"]; 
 
 
