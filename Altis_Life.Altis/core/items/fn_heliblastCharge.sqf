@@ -21,4 +21,10 @@ _bomb = "Bo_GBU12_LGB_MI10" createVehicle [getPosATL heli_safe select 0, getPosA
 heli_safe setVariable["hchargeplaced",false,true];
 heli_safe setVariable["heli_open",true,true];
 
+_numbars = round(0.2*_units+random(0.8*_units));
+if (_numbars < 10) then {
+	_numbars = 10;
+};
+heli_safe setVariable["safe",_numbars,true];
+
 hint localize "STR_ISTR_Blast_Opened";
