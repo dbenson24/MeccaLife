@@ -233,14 +233,15 @@ switch (_code) do {
 	
 	//Holster / recall weapon.
 	case 35: {
-		if (vehicle player != player) exitWith {};
-		if(!(EQUAL(currentWeapon player,""))) then {
-			life_curWep_h = currentWeapon player;
-			player action ["SwitchWeapon", player, player, 100];
-			player switchCamera cameraView;
-		}else{
-			if(life_curWep_h in [RIFLE,LAUNCHER,PISTOL]) then {
-				player selectWeapon life_curWep_h;
+		if ((vehicle player) == player) then {
+			if(!(EQUAL(currentWeapon player,""))) then {
+				life_curWep_h = currentWeapon player;
+				player action ["SwitchWeapon", player, player, 100];
+				player switchCamera cameraView;
+			}else{
+				if(life_curWep_h in [RIFLE,LAUNCHER,PISTOL]) then {
+					player selectWeapon life_curWep_h;
+				};
 			};
 		};
 	};
