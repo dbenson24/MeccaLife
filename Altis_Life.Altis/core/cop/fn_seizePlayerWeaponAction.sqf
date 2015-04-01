@@ -27,4 +27,5 @@ if(life_inv_ziptie > 0) then {[false,"ziptie",life_inv_ziptie] call life_fnc_han
 [] call life_fnc_civFetchGear;
 [] call SOCK_fnc_updateRequest;
 [] call life_fnc_civLoadGear;
+life_last_sync = time;
 titleText["The Illegal issued gear on your personnel has been seized.","PLAIN"];
