@@ -32,7 +32,7 @@ grpPlayer SVAR ["gang_members",_members,true];
 
 {
 	if (_unitID == getPlayerUID _x) then {
-		[[_unit,grpPlayer],"TON_fnc_clientGangKick",_unit,false] call life_fnc_MP; //Boot that bitch!	
+		[[_x,grpPlayer],"TON_fnc_clientGangKick",_unit,false] call life_fnc_MP; //Boot that bitch!	
 	};
 } forEach playableUnits;
 
