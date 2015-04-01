@@ -68,6 +68,7 @@ _Btn2 buttonSetAction "
 			life_pInact_curTarget setVariable['Escorting',false,true];
 			life_pInact_curTarget setVariable['transporting',false,true];
 			life_pInact_curTarget setVariable ['surrender', false, true];
+			detach life_pInact_curTarget;
 		};
 		
 		if(([false,'lockpick',1] call life_fnc_handleInv)) then
@@ -83,6 +84,7 @@ _Btn2 buttonSetAction "
 				life_pInact_curTarget setVariable['Escorting',false,true];
 				life_pInact_curTarget setVariable['transporting',false,true];
 				life_pInact_curTarget setVariable ['surrender', false, true];
+				detach life_pInact_curTarget;
 			} else {
 				titleText['The lockpick broke.','PLAIN'];
 			};
