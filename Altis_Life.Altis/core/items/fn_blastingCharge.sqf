@@ -19,13 +19,7 @@ _vault setVariable["chargeplaced",true,true];
 [[_vault],"life_fnc_bankalarmsound",true,true] call life_fnc_MP;
 hint localize "STR_ISTR_Blast_KeepOff";
 
-[[1],"life_fnc_demoChargeTimer",west,false] call life_fnc_MP;
-[[1],"life_fnc_demoChargeTimer",group player,false] call life_fnc_MP;
+[[15],"life_fnc_demoChargeTimer",west,false] call life_fnc_MP;
+[[15],"life_fnc_demoChargeTimer",group player,false] call life_fnc_MP;
 
-[["fed",1],"TON_fnc_blowSafe",false,false] spawn life_fnc_MP;
-
-sleep (1*60+1);
-
-if(!(fed_bank getVariable["chargeplaced",false])) exitWith {hint localize "STR_ISTR_Blast_Disarmed"};
-
-hint localize "STR_ISTR_Blast_Opened";
+[["fed",15],"TON_fnc_blowSafe",false,false] spawn life_fnc_MP;
