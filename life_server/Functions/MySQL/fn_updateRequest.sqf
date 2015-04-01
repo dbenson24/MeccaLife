@@ -42,14 +42,6 @@ switch (_side) do {
 waitUntil {sleep (random 0.3); !DB_Async_Active};
 _queryResult = [_query,1] call DB_fnc_asyncCall;
 
-["diag_log",[
-		"------------- Update Request -------------",
-		format["QUERY: %1",_query],
-		format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)],
-		format["Result: %1",_queryResult],
-		"-------------------------------------------------"
-	]] call TON_fnc_logIt;
-
 /*
 // Update player position 
 if (_side == civilian) then {
