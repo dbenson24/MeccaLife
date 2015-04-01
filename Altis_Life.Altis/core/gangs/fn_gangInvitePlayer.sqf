@@ -26,7 +26,11 @@ _action = [
 if(_action) then {
 	[[profileName,grpPlayer],"life_fnc_gangInvite",_unit,false] call life_fnc_MP;
 	_members = grpPlayer GVAR "gang_members";
-	_members pushBack [getPlayerUID _unit, _unit GVAR ["realname",name _unit]];
+	if (typeName (_members select 0) != "ARRAY") then {
+		_members = [[_members],[getPlayerUID _unit, _unit GVAR ["realname",name _unit]]];
+	} else {
+		_members pushBack [getPlayerUID _unit, _unit GVAR ["realname",name _unit]];
+	};
 	grpPlayer SVAR ["gang_members",_members,true];
 	hint format[localize "STR_GNOTF_InviteSent",_unit GVAR ["realname",name _unit]];
 } else {
