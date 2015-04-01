@@ -76,4 +76,5 @@ if(life_removeWanted) then {
 };
 
 [] call SOCK_fnc_updateRequest;
+life_last_sync = time;
 [] call life_fnc_hudUpdate; //Request update of hud.
