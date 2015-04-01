@@ -41,6 +41,7 @@ if(!isNil "_group") then {
 	_group SVAR ["gang_maxMembers",life_gangmaxmembers,true];
 	_group SVAR ["gang_bank",life_gangbank,true];
 	_group SVAR ["gang_members",life_gangmembers,true];
+	_group SVAR ["gang",true,true];
 	life_in_gang = true;
 	life_ganggroup = _group;
 };

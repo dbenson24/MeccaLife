@@ -11,6 +11,7 @@ private["_mine","_itemWeight","_diff","_itemName"];
 _mine = [];
 for "_y" from 0 to 11 do {
 	if!(EQUAL(currentWeapon player,"")) exitWith {hint localize "STR_Civ_GatherGun"};
+	if (life_interrupted) exitWith {hint "Action Cancelled"};
 	switch (true) do {
 		case (player distance (getMarkerPos "lead_1") < 30): {_mine = ["copper_unrefined",3];};
 		case (player distance (getMarkerPos "iron_1") < 30): {_mine = ["iron_unrefined",3];};
