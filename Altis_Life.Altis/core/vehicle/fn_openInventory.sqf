@@ -39,7 +39,7 @@ _handle = [_vehicle] spawn {
 	_vehicle = _this select 0;
 	sleep random(1);
 	if((_vehicle getVariable ["trunk_in_use",false])) exitWith {closeDialog 0; hint localize "STR_MISC_VehInvUse";};
-	_vehicle setVariable["trunk_in_use",true,true];
+	if (!isNull (findDisplay 3500)) then {_vehicle setVariable["trunk_in_use",true,true];};
 };
 
 waitUntil {scriptDone _handle};
