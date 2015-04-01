@@ -13,11 +13,13 @@ if(isNull (findDisplay 2620)) then {
 
 
 if(!life_in_gang) exitWith {closeDialog 0;}; //Bad juju
-_ownerID = SEL(life_gangData,1);
-_gangName = SEL(life_gangData,2);
-_gangBank = GANG_FUNDS;
-_gangMax = SEL(life_gangData,3);
-_gangMembers = SEL(life_gangData,5);
+
+_group = life_ganggroup;
+_ownerID = _group GVAR ["gang_owner"];
+_gangName = _group GVAR ["gang_name"];
+_gangMax = _group GVAR ["gang_maxMembers"];
+_gangBank = _group GVAR ["gang_bank"];
+_gangMembers = _group GVAR ["gang_members"];
 
 if(_ownerID != steamid) then {
 	(CONTROL(2620,2622)) ctrlEnable false; //Upgrade
