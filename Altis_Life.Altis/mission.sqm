@@ -94998,7 +94998,7 @@ class Mission
 		};
 		class Item42
 		{
-			position[]={14037.903,25.621716,18750.951};
+			position[]={14042.378,25.727526,18748.164};
 			name="civ_car_3";
 			type="Empty";
 			angle=126.40627;
