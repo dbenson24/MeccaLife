@@ -9,7 +9,7 @@ _vault = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _vault) exitWith {}; //Bad object
 if(typeOf _vault != "Land_CargoBox_V1_F") exitWith {hint localize "STR_ISTR_Blast_VaultOnly"};
 _lastrobbery = _vault getVariable ["lastrobbery",-1];
-if (_lastrobbery != -1 && (_lastrobbery + 90*60) > time) exitWith {hint "The reserves need at least 90 minutes to recover between robberies!";
+if (_lastrobbery != -1 && (_lastrobbery + 90*60) > time) exitWith {hint "The reserves need at least 90 minutes to recover between robberies!"};
 if(_vault getVariable["chargeplaced",false]) exitWith {hint localize "STR_ISTR_Blast_AlreadyPlaced"};
 if(_vault getVariable["safe_open",false]) exitWith {hint localize "STR_ISTR_Blast_AlreadyOpen"};
 if(!([false,"blastingcharge",1] call life_fnc_handleInv)) exitWith {}; //Error?
