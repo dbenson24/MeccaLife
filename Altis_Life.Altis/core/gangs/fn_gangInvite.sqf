@@ -22,6 +22,7 @@ _action = [
 if(_action) then {
 	[player] join _group;
 	[[4,_group],"TON_fnc_updateGang",false,false] call life_fnc_MP;
+	life_in_gang = true;
 } else {
 	_grpMembers = grpPlayer GVAR "gang_members";
 	

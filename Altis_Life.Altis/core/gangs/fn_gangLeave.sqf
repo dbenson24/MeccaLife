@@ -25,4 +25,5 @@ _grp SVAR ["gang_members",_grpMembers,true];
 [player] joinSilent (createGroup civilian);
 
 [[4,_grp],"TON_fnc_updateGang",false,false] call life_fnc_MP;
+life_in_gang = false;
 closeDialog 0;
