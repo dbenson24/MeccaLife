@@ -11,9 +11,10 @@ disableSerialization;
 if((lbCurSel 2621) == -1) exitWith {hint localize "STR_GNOTF_SelectKick"};
 _unit = call compile format["%1",CONTROL_DATA(2621)];
 //if(isNull _unit) exitWith {}; //Bad unit?
-if(_unit == player) exitWith {hint localize "STR_GNOTF_KickSelf"};
 
 _unitID = _unit select 0;
+
+if(_unitID == getPlayerUID player) exitWith {hint localize "STR_GNOTF_KickSelf"};
 _members = grpPlayer GVAR "gang_members";
 if(isNil "_members") exitWith {};
 if(!(EQUAL(typeName _members,"ARRAY"))) exitWith {};
