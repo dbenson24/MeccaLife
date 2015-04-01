@@ -7,6 +7,9 @@
 
 
 private["_query","_queryResult","_units","_wanted"];
+if (life_wantedsync > time) exitWith {};
+life_wantedsync = time + 10;
+sleep 10;
 
 ["diag_log",[
     		"------------- Called wantedSyncList -------------"
@@ -38,6 +41,7 @@ private["_query","_queryResult","_units","_wanted"];
     
     
     missionNamespace setVariable ["wantedList", _wanted];
+    publicVariable "wantedList";
 //    sleep (30);
 //};
 /*missionNamespace setVariable ["wantedListUpdated", true];

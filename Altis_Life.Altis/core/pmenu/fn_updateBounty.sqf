@@ -1,8 +1,20 @@
+#include <macro.h>
 /*
         File: fn_updateBounty.sqf
 
 */
-private["_val","_total"];
-_val = [_this,0,0,[0]] call BIS_fnc_param;
+private["_val","_total","_list","_uid","_updateBounty"];
 
-mecca_wanted_status = _val;
+_uid = getPlayerUID player;
+_list = wantedList;
+
+{
+	if (EQUAL(_uid, SEL(_x,0))) then {
+		_updateBounty = SEL(_x,3);
+	};
+} forEach _list;
+
+
+if(isNil "_updateBounty") then {_updateBounty = 0};
+
+mecca_wanted_status = _updateBounty;

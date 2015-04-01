@@ -26,12 +26,12 @@ _escSync = {
 			round(_timeStamp - time) <= 0 || isNull (findDisplay 49)
 		};
 		
+		[] call SOCK_fnc_updateRequest; //call our silent sync.
 		_abortButton ctrlSetText localize "STR_DISP_INT_ABORT";
 		_abortButton ctrlCommit 0;
 	};
 	
 	_abortButton = CONTROL(49,104);
-	[] call SOCK_fnc_updateRequest; //call our silent sync.
 	
 	if(_this) then {
 		_thread = [] spawn _syncManager;

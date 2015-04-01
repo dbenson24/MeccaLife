@@ -54,7 +54,7 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 			case (_vehicle isKindOf "Ship"): {_price = (call life_impound_boat);};
 			case (_vehicle isKindOf "Air"): {_price = (call life_impound_air);};
 		};
-		
+		_vehicle setVariable ["siezed",true,true];
 		[[player,_vehicle],"TON_fnc_chopShopSell",false,false] spawn life_fnc_MP; 
 
 		hint format["You have seized %1\nYou have collected $%2!",_type,_price];

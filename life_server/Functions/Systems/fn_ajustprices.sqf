@@ -40,9 +40,9 @@ diag_log "data ou type ou unit null";
 
 _unit = owner _unit; //for hack purpose!
 
-_market = missionNamespace getVariable "marketPrices";
+_market = missionNamespace getVariable "MeccaMarketPrices";
 
-_good = missionNamespace getVariable format["%1price",_var];
+_good = missionNamespace getVariable format["%1MeccaMarketGoodPrice",_var];
 _itemArray = [];
 if (_type == 0) then {
     ["diag_log",[
@@ -62,7 +62,7 @@ if (_factor == 0) exitwith {};//the factor 0 is not a real group
 
 {
     if(SEL(_x,1) == _factor) then {
-        _name = format["%1price",SEL(_x,0)];
+        _name = format["%1MeccaMarketGoodPrice",SEL(_x,0)];
         _itemArray pushBack (missionNamespace getVariable _name);
     };
 } forEach _market;
@@ -77,7 +77,7 @@ _sellingfactor =((count _itemArray)-1);
     _varprice =  (_x select 3);
     _minprice = (_x select 4);
     _maxprice = (_x select 5);
-    _changeco = 0.7 + random 0.8;
+    _changeco = 0.3 + random 1.4;
     _x set [8, _sellprice];
     if (_ressource == _var) then { 
         if (_type == 0) then { 
@@ -104,7 +104,8 @@ _sellingfactor =((count _itemArray)-1);
     };
     
     _x set [2, _sellprice];
-    _name = format["%1price",SEL(_x,0)];
+    _name = format["%1MeccaMarketGoodPrice",SEL(_x,0)];
     missionNamespace setVariable [_name,_x];
+    publicVariable _name;
 } forEach _itemArray;
 

@@ -31,6 +31,6 @@ player say3D "ticket";
 	}
 	else 
 	{
-		[[1,format["You have a collected $%1 from that ticket.",life_ticket_val * 0.5]],"life_fnc_broadcast",life_ticket_cop,false] spawn life_fnc_MP;
+		[[1,format["You have a collected $%1 from that ticket.",life_ticket_val]],"life_fnc_broadcast",life_ticket_cop,false] spawn life_fnc_MP;
 	};
 };

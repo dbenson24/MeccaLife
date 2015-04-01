@@ -7,7 +7,7 @@
 	Description:
 	Update and fill the Economy gui menu.
 */
-private["_display","_achatliste","_gear_list","_shop_data","_name","_price"];
+private["_display","_achatliste","_gear_list","_shop_data","_name","_price","_market"];
 disableSerialization;
 
 //Setup control vars.
@@ -21,9 +21,6 @@ lbClear _goodlist;
 
 _type= [_this,0,0,[0]] call BIS_fnc_param;
 life_market = [_this,1,[],[[]]] call BIS_fnc_param;
-
-
-
 
 if (count life_market == 0 ) exitwith {};
 

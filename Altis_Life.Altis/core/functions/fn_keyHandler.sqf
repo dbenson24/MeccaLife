@@ -99,6 +99,8 @@ switch (_code) do {
 			[_veh,"right"] call life_fnc_BlinkerInit;
 		};
 	};
+	
+	
 
 
 	//Open Wanted
@@ -231,13 +233,15 @@ switch (_code) do {
 	
 	//Holster / recall weapon.
 	case 35: {
-		if(!(EQUAL(currentWeapon player,""))) then {
-			life_curWep_h = currentWeapon player;
-			player action ["SwitchWeapon", player, player, 100];
-			player switchCamera cameraView;
-		}else{
-			if(life_curWep_h in [RIFLE,LAUNCHER,PISTOL]) then {
-				player selectWeapon life_curWep_h;
+		if ((vehicle player) == player) then {
+			if(!(EQUAL(currentWeapon player,""))) then {
+				life_curWep_h = currentWeapon player;
+				player action ["SwitchWeapon", player, player, 100];
+				player switchCamera cameraView;
+			}else{
+				if(life_curWep_h in [RIFLE,LAUNCHER,PISTOL]) then {
+					player selectWeapon life_curWep_h;
+				};
 			};
 		};
 	};
@@ -307,7 +311,7 @@ switch (_code) do {
 			if(vehicle player != player && alive vehicle player) then {
 				if((vehicle player) in life_vehicles) then {
 					player say3D "trunk_open";
-					[vehicle player] call life_fnc_openInventory;
+					[vehicle player] spawn life_fnc_openInventory;
 				};
 			} else {
 				private "_list";
@@ -315,7 +319,7 @@ switch (_code) do {
 				if(KINDOF_ARRAY(cursorTarget,_list) && {player distance cursorTarget < 7} && {vehicle player == player} && {alive cursorTarget}) then {
 					if(cursorTarget in life_vehicles OR {!(cursorTarget GVAR ["locked",true])}) then {
 						player say3D "trunk_open";
-						[cursorTarget] call life_fnc_openInventory;
+						[cursorTarget] spawn life_fnc_openInventory;
 					};
 				};
 			};

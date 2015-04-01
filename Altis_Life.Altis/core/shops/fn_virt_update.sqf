@@ -27,7 +27,7 @@ ctrlSetText[2403,localize (M_CONFIG(getText,"VirtualShops",life_shop_type,"name"
 _sender = player;
 _uid = getPlayerUID _sender;
 
-[[0,_sender,life_shop_type],"TON_fnc_getprices",false,false] spawn life_fnc_MP;
+[0,_sender,life_shop_type] spawn life_fnc_retrievePrices;
 
 
 /*

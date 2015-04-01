@@ -13,6 +13,7 @@
 #define Btn6 37455
 #define Btn7 37456
 #define Btn8 37457
+#define Btn9 37458
 #define Title 37401
 
 private["_display","_curTarget","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6","_Btn7"];
@@ -22,8 +23,6 @@ if(!dialog) then {
 disableSerialization;
 _curTarget = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _curTarget) exitWith {closeDialog 0;}; //Bad target
-_houseCfg = M_CONFIG(getNumber,"Houses",typeOf(_curTarget),"price");
-if (_houseCfg == 0) exitWith {closeDialog 0};
 
 _Btn1 = CONTROL(37400,Btn1);
 _Btn2 = CONTROL(37400,Btn2);
@@ -32,10 +31,11 @@ _Btn4 = CONTROL(37400,Btn4);
 _Btn5 = CONTROL(37400,Btn5);
 _Btn6 = CONTROL(37400,Btn6);
 _Btn7 = CONTROL(37400,Btn7);
-{_x ctrlShow false;} foreach [_Btn1,_Btn2,_Btn3,_Btn4,_Btn5,_Btn6,_Btn7];
+_Btn8 = CONTROL(37400,Btn8);
+{_x ctrlShow false;} foreach [_Btn1,_Btn2,_Btn3,_Btn4,_Btn5,_Btn6,_Btn7,_Btn8];
 
 life_pInact_curTarget = _curTarget;
-if(_curTarget isKindOf "House_F" && playerSide == west) exitWith {
+if(playerSide == west) exitWith {
 	if((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _curTarget OR (nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"]) == _curTarget) then {
 		
 		_Btn1 ctrlSetText localize "STR_pInAct_Repair";
@@ -72,6 +72,9 @@ if(_curTarget isKindOf "House_F" && playerSide == west) exitWith {
 		};
 	};
 };
+
+_houseCfg = M_CONFIG(getNumber,"Houses",typeOf(_curTarget),"price");
+if (_houseCfg == 0) exitWith {closeDialog 0};
 
 if(!(_curTarget in life_vehicles) OR isNil {_curTarget GVAR "house_owner"}) then {
 	if(_curTarget in life_vehicles) then {SUB(life_vehicles,[_curTarget]);};

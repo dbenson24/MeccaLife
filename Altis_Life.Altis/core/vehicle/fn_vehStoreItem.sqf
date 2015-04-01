@@ -31,7 +31,7 @@ _inv = _veh_data select 0;
 if(_ctrl == "goldbar" && {!(life_trunk_vehicle isKindOf "LandVehicle" OR life_trunk_vehicle isKindOf "House_F")}) exitWith {hint "You cannot store that in anything but a land vehicle!"};
 
 _Truck = TypeOf life_trunk_vehicle;
-_FuelStuff = ["oilu","oilp"];
+_FuelStuff = ["oil_unprocessed","oil_processed"];
 _FuelTrucks = ["C_Van_01_fuel_F","O_Heli_Transport_04_fuel_F"]; 
 
 
@@ -43,7 +43,7 @@ case (!(_ctrl in _FuelStuff) && (_Truck in _FuelTrucks)): {life_TankLaster = 3};
 case ((_ctrl in _FuelStuff) && !(_Truck in _FuelTrucks)): {life_TankLaster = 4}; //Fuel in NonFuelTruck -> Nope!
 };
 
-if (life_TankLaster == 3) exitWith {hint "Ey boy!! That won't pass through the nozzle! (Only Fuel Trucks and Taru Fuel can store fuel!)"};
+if (life_TankLaster == 3) exitWith {hint "Ey boy!! That won't pass through the nozzle! (Fuel Trucks and the Taru Fuel can only store fuel!)"};
 if (life_TankLaster == 4) exitWith {hint "Are you crazy? What about the mess you would create? (You can only put fuel inside of a Fuel Truck or Taru Fuel.)";};
 
 

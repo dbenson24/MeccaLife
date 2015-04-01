@@ -21,4 +21,11 @@ _bomb = "Bo_GBU12_LGB_MI10" createVehicle [getPosATL gold_safe select 0, getPosA
 gold_safe setVariable["wchargeplaced",false,true];
 gold_safe setVariable["gold_open",true,true];
 
+_numbars = round(0.5*_units + 0.5*random(_units));
+if (_numbars < 20) then {
+	_numbars = 20;
+};
+gold_safe setVariable["safe",_numbars,true];
+
+
 hint localize "STR_ISTR_Blast_Opened";

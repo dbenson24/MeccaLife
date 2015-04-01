@@ -143,7 +143,7 @@ life_radio_indep = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT
 
 /* Set the amount of gold in the federal reserve at mission start */
 fed_bank setVariable ["safe",count playableUnits,true];
-[] spawn TON_fnc_federalUpdate;
+//[] spawn TON_fnc_federalUpdate;
 
 /* Event handler for disconnecting players */
 addMissionEventHandler ["HandleDisconnect",{_this call TON_fnc_clientDisconnect; false;}];
@@ -216,4 +216,10 @@ PVAR_ALL("life_server_isReady");
 [] spawn TON_fnc_syncPrices;
 
 /* Initialize the wanted list */
-[] spawn life_fnc_wantedSyncList;
+[] spawn {
+	while {true} do {
+		life_wantedsync = time;
+		sleep (3*60);
+		[] spawn life_fnc_wantedSyncList;
+	};
+};

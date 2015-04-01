@@ -1,14 +1,10 @@
-#include "\life_server\script_macros.hpp"
+#include <macro.h>
 /*
-File: fn_getPrices.sqf
-Author: Worldtrade1101
+File: fn_retrievePrices.sqf
+Author: Derek
 
 Description:
 Send a query to retrieve the price of stuff on the server
-
-
-DEAD FUNCTION as of Public Variable Update 3/30/2015 -Derek
-
 */
 private["_type","_side","_data","_unit","_ret","_tickTime","_queryResult","_market","_shoptype","_priceArray"];
 _type = [_this,0,0,[0]] call BIS_fnc_param;
@@ -84,6 +80,6 @@ default {""};
 
 
 
-if (_data == "economy") exitwith {[[_type,_itemArray],"life_fnc_virt_updateEconomy",_unit,false] spawn life_fnc_MP;};
+if (_data == "economy") exitwith {[_type,_itemArray] spawn life_fnc_virt_updateEconomy};
 
-[[_type,_itemArray],"life_fnc_virt_updateprice",_unit,false] spawn life_fnc_MP;
+[_type,_itemArray] spawn life_fnc_virt_updatePrice;

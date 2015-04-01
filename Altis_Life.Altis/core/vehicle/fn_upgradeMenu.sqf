@@ -80,7 +80,13 @@ _gpscheck cbSetChecked (_vehicle getVariable["gps",false]);
 if (_vehicle isKindOf "Air") then {
 	_hooklabel ctrlShow false;
 	_hookcheck ctrlShow false;
-}
+};
+if ((typeOf _vehicle) in ["B_Truck_01_transport_F","B_Truck_01_box_F","O_Truck_03_device_F","O_Truck_03_covered_F","O_Truck_03_transport_F"]) then {
+	_hooklabel ctrlShow false;
+	_hookcheck ctrlShow false;
+};
+
+
 
 /*
 _control = CONTROL(39400,39402);

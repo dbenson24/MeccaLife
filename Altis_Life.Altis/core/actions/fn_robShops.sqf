@@ -70,7 +70,6 @@ if(_rip) then
     _rip = false;
     life_use_atm = false;
 	[[getPlayerUID _robber,name _robber,"211"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP; 
-	[[_robber],"life_fnc_wantedFetchForCivilian",_robber,false] spawn life_fnc_MP;
     sleep (30 + random(180)); //Clerk in the store takes between 30-210 seconds before he manage to warn the police about the robbery. 
     life_use_atm = true; // Robber can not use the ATM at this point.
     if!(alive _robber) exitWith {};
