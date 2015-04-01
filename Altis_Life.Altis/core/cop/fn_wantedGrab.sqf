@@ -21,7 +21,6 @@ _uid = _criminal select 0;
 	};
 } forEach _list;
 
-_ret = owner _ret;
 _crimesArr = [];
 
 _type = _queryResult select 0;
