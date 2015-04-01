@@ -38,6 +38,7 @@ class Life_My_Gang_Diag {
 			w = 0.4625;
 			h = 0.54;
 		};
+		/*
 		class DisplayGroupButton:Life_RscButtonMenu
 		{
 			idc = 2401;
@@ -49,6 +50,7 @@ class Life_My_Gang_Diag {
 			colorBackground[] = {0, 0, 0, 0};
 			onButtonClick = "closeDialog 0; [] call life_fnc_groupMenu;";
 		};
+		*/
 		class InviteGangButton: DisplayGroupButton
 		{
 			idc = 2630;
@@ -236,6 +238,7 @@ class Life_My_Group_Diag {
 			w = 0.4625;
 			h = 0.54;
 		};
+		/*
 		class DisplayGroupButton:Life_RscButtonMenu
 		{
 			idc = 2401;
@@ -247,6 +250,7 @@ class Life_My_Group_Diag {
 			onButtonClick =  "if(isNil ""life_action_gangInUse"") then {if(!life_in_gang) then {createDialog ""Life_Create_Gang_Diag"";} else {[] spawn life_fnc_gangMenu;};};";
 			colorBackground[] = {0, 0, 0, 0};
 		};
+		*/
 		class LockGroupButton: DisplayGroupButton
 		{
 			idc = 2622;

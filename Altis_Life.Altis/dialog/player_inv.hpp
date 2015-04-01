@@ -237,7 +237,7 @@ class playerSettings {
 			colorBackground[] = {0, 0, 0, 0};
 			idc = 2011;
 			text = "$STR_PM_MyGang";
-			onButtonClick = "if(isNil ""life_action_gangInUse"") then {if(!life_in_gang) then {[] call life_fnc_groupMenu;} else {[] spawn life_fnc_gangMenu;};};";
+			onButtonClick = "if(isNil ""life_action_gangInUse"") then {if(!life_in_gang) then {createDialog ""Life_Create_Gang_Diag"";} else {[] spawn life_fnc_gangMenu;};};";
 			x = 0.1 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.797 - (1 / 25);
 			w = (6.25 / 40);
