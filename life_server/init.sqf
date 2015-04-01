@@ -215,6 +215,8 @@ PVAR_ALL("life_server_isReady");
 
 [] spawn TON_fnc_syncPrices;
 
+wantedList = [];
+publicVariable "wantedList";
 /* Initialize the wanted list */
 [] spawn {
 	while {true} do {
