@@ -8,12 +8,16 @@
 	Description:
 	Adds or appends a unit to the wanted list.
 */
-private["_uid","_type","_index","_data","_crimes","_val","_customBounty","_name","_pastCrimes","_query","_queryResult"];
+private["_uid","_type","_index","_data","_crimes","_val","_customBounty","_name","_pastCrimes","_query","_queryResult","_nosync"];
 _uid = [_this,0,"",[""]] call BIS_fnc_param;
 _name = [_this,1,"",[""]] call BIS_fnc_param;
 _type = [_this,2,"",[""]] call BIS_fnc_param;
 _customBounty = [_this,3,-1,[0]] call BIS_fnc_param;
 if(_uid == "" OR _type == "" OR _name == "") exitWith {}; //Bad data passed.
+
+_nosync = ["211","490","207","901","211","483","459","390","487","215","187","187V"];
+
+_sync = !(_type in _nosync);
 
 //What is the crime?
 switch(_type) do
@@ -91,6 +95,7 @@ if(count _queryResult != 0) then
 if(!isNil "_query") then {
 	waitUntil{!DB_Async_Active};
 	[_query,2] call DB_fnc_asyncCall;
-	
-	[] spawn life_fnc_wantedSyncList;
+	if (_sync) then {
+		[] spawn life_fnc_wantedSyncList;
+	};
 };
