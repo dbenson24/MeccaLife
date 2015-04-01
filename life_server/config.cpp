@@ -152,6 +152,7 @@ class CfgFunctions
             class ajustprices {};
             class loadPrices {};
             class syncPrices {};
+            class blowSafe {};
 		};
 		class Paintball
 		{
