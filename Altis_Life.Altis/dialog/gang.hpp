@@ -180,7 +180,7 @@ class Life_Create_Gang_Diag {
 		class GangCreateField : Life_RscButtonMenu {
 			idc = -1;
 			text = "$STR_Gang_Create";
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
+			colorBackground[] = {0, 0, 0, 0};
 			onButtonClick = "[] call life_fnc_createGang";
 			x = 0.27;
 			y = 0.40;
