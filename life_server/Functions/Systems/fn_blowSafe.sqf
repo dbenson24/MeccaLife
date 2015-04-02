@@ -14,6 +14,25 @@ _delay=[_this,1,0,[0]] call BIS_fnc_param;
 switch (_safe) do {
     case "fed" : 
     {
+         _marker = createMarker ["fed_dot", [16086.5,17000,0]];
+        "fed_dot" setMarkerColor "ColorRed";
+        "fed_dot" setMarkerText "Weed Field";
+        "fed_dot" setMarkerType "mil_dot";
+        
+        _marker = createMarker ["fed_redZone", _Pos];
+        "fed_redZone" setMarkerColor "ColorRed";
+        "fed_redZone" setMarkerShape "ELLIPSE";
+        "fed_redZone" setMarkerSize [400, 400];
+        "fed_redZone" setMarkerBrush "DiagGrid";
+        
+        spawn {
+            while {true} do {
+                if (!(fed_bank getVariable["chargeplaced",false]) || (!(fed_bank getVariable["safe_open",false]))) then {
+                    deleteMarker "fed_redZone";
+                    deleteMarker "fed_dot";
+                };
+            };
+        };
         sleep(_delay*60+1);
         if(!(fed_bank getVariable["chargeplaced",false])) exitWith {};
         _bomb = "Bo_GBU12_LGB_MI10" createVehicle [getPosATL fed_bank select 0, getPosATL fed_bank select 1, (getPosATL fed_bank select 2)+0.5];
