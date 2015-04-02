@@ -91,7 +91,7 @@ if(playerSide == west) then {
 		};
 	};
 	
-		if((FETCH_CONST(life_coplevel) > 2 ) && !(_curTarget isKindOf "Cargo_base_F")) then
+		if((FETCH_CONST(life_coplevel) > 0 ) && !(_curTarget isKindOf "Cargo_base_F")) then
 	{
 		_Btn7 ctrlSetText localize "STR_vInAct_Seize";
 		_Btn7 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_seizeAction;";

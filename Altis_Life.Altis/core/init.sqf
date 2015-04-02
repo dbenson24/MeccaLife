@@ -131,6 +131,7 @@ life_last_sync = time;
         if (time > life_last_sync + 10*60) then {
 	        [] call SOCK_fnc_updateRequest;
 	        hint "Game Autosaved.";
+	        life_last_sync = time;
         };
     };
 };
