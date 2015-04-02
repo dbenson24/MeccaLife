@@ -7,7 +7,7 @@
     Description: Handles the explosion of a blasting charge
     
 */
-private["_safe","_delay","_numbars","_bomb","_units"];
+private["_safe","_delay","_numbars","_bomb","_units","_marker"];
 _safe=[_this,0,"",[""]] call BIS_fnc_param;
 _delay=[_this,1,0,[0]] call BIS_fnc_param;
 
@@ -16,7 +16,7 @@ switch (_safe) do {
     {
          _marker = createMarker ["fed_dot", [16086.5,17000,0]];
         "fed_dot" setMarkerColor "ColorRed";
-        "fed_dot" setMarkerText "Weed Field";
+        "fed_dot" setMarkerText "The Federal Reserve is being robbed!";
         "fed_dot" setMarkerType "mil_dot";
         
         _marker = createMarker ["fed_redZone", [16086.5,17000,0]];
