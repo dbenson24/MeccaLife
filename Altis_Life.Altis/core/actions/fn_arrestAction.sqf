@@ -4,9 +4,10 @@
 	Description:
 	Arrests the targeted person.
 */
-private["_unit","_id","_time"];
+private["_unit","_id","_time","_amount"];
 _unit = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
-_time = [_this,1,30] call BIS_fnc_param;
+_time = [_this,1,15] call BIS_fnc_param;
+_vigi = [_this,3,false,[false]] call BIS_fnc_param;
 
 if(isNull _unit) exitWith {}; //Not valid
 if(isNil "_unit") exitwith {}; //Not Valid
@@ -18,7 +19,9 @@ if(isNull _unit) exitWith {}; //Not valid
 if(_time < 1) exitwith {}; //Not Valid
 
 
-[[getPlayerUID _unit,_unit,player,true],"life_fnc_wantedBounty",false,false] call life_fnc_MP;
+_amount = [[getPlayerUID _unit,_unit,player,true],"life_fnc_wantedBounty",false,false] call life_fnc_MP;
+
+if (_vigi && (_amount < 75000)) exitWith {hint "You can only arrest players with a bounty larger than $75,000! Please let this player go."};
 
 if(isNull _unit) exitWith {}; //Not valid
 detach _unit;
