@@ -19,13 +19,13 @@ switch (_safe) do {
         "fed_dot" setMarkerText "Weed Field";
         "fed_dot" setMarkerType "mil_dot";
         
-        _marker = createMarker ["fed_redZone", _Pos];
+        _marker = createMarker ["fed_redZone", [16086.5,17000,0]];
         "fed_redZone" setMarkerColor "ColorRed";
         "fed_redZone" setMarkerShape "ELLIPSE";
         "fed_redZone" setMarkerSize [400, 400];
         "fed_redZone" setMarkerBrush "DiagGrid";
         
-        spawn {
+        [] spawn {
             while {true} do {
                 sleep 5;
                 if (!(fed_bank getVariable["chargeplaced",false]) || (!(fed_bank getVariable["safe_open",false]))) then {
