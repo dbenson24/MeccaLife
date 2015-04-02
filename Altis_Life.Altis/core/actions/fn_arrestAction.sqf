@@ -21,7 +21,7 @@ if(_time < 1) exitwith {}; //Not Valid
 
 _amount = [[getPlayerUID _unit,_unit,player,true],"life_fnc_wantedBounty",false,false] call life_fnc_MP;
 
-if (_vigi && (_amount < 75000)) exitWith {hint "You can only arrest players with a bounty larger than $75,000! Please let this player go."};
+if (_vigi && (_amount < 75000)) exitWith {hint "You can only arrest players with a bounty larger than $75,000! Please let this player go.";};
 
 if(isNull _unit) exitWith {}; //Not valid
 detach _unit;
