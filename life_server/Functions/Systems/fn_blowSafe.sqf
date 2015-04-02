@@ -27,6 +27,7 @@ switch (_safe) do {
         
         spawn {
             while {true} do {
+                sleep 5;
                 if (!(fed_bank getVariable["chargeplaced",false]) || (!(fed_bank getVariable["safe_open",false]))) then {
                     deleteMarker "fed_redZone";
                     deleteMarker "fed_dot";
