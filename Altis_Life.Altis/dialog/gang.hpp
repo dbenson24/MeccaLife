@@ -126,22 +126,22 @@ class Life_Create_Gang_Diag {
 	onLoad = "[] spawn {waitUntil {!isNull (findDisplay 2520)}; ((findDisplay 2520) displayCtrl 2523) ctrlSetText format[localize ""STR_Gang_PriceTxt"",[(call life_gangPrice)] call life_fnc_numberText]};";
 	
 	class controlsBackground {
-		class Life_RscTitleBackground:Life_RscText {
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
-			idc = -1;
-			x = 0.1;
-			y = 0.2;
-			w = 0.5;
-			h = (1 / 25);
+		class fondtablet: Life_RscPicture
+		{
+			idc = 9090909;
+			text = "textures\menu.paa";
+			x = 0;
+			y = -0.12;
+			w = 1;
+			h = 1.28;
 		};
 		
-		class MainBackground:Life_RscText {
-			colorBackground[] = {0, 0, 0, 0.7};
+		class MainBackground:life_RscText {
 			idc = -1;
 			x = 0.1;
 			y = 0.2 + (11 / 250);
-			w = 0.5;
-			h = 0.3 - (22 / 250);
+			w = 0.8;
+			h = 0.6 - (22 / 250);
 		};
 	};
 	
