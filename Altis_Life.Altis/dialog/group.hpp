@@ -249,6 +249,7 @@ class MECCA_Life_Create_Group_Diag {
 		class CloseLoadMenu : Life_RscButtonMenu {
 			idc = -1;
 			text = "$STR_Global_Close";
+			colorBackground[] = {0, 0, 0, 0};
 			onButtonClick = "closeDialog 0;[] call life_fnc_p_updateMenu;";
 			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.5 - (1 / 25);
@@ -315,7 +316,7 @@ class MECCA_Life_Gang_Prompt
 		{
 			idc = -1;
 			sizeEx = 0.020;
-			text = "          Create or Choose a group!";
+			text = "Create or Choose a group!";
 			x = 0.287;
 			y = 0.2 + (11 / 250);
 			w = 0.5; h = 0.12;
@@ -326,7 +327,7 @@ class MECCA_Life_Gang_Prompt
 			text = "$STR_Gang_Browse";
 			colorBackground[] = {0, 0, 0, 0};
 			onButtonClick = "closeDialog 0; createDialog ""MECCA_Life_Browse_Gang_Diag""";
-			x = 0.2 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			x = (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.42 - (1 / 25);
 			w = (6.25 / 40);
 			h = (1 / 25);
@@ -337,7 +338,7 @@ class MECCA_Life_Gang_Prompt
 			text = "$STR_Gang_Create";
 			colorBackground[] = {0, 0, 0, 0};
 			onButtonClick = "closeDialog 0; createDialog ""MECCA_Life_Create_Group_Diag""; ctrlShow[2522,true]";
-			x = 0.4 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			x = 0.2 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.42 - (1 / 25);
 			w = (6.25 / 40);
 			h = (1 / 25);
