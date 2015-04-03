@@ -12,6 +12,8 @@ _mode = [_this,0,0,[0]] call BIS_fnc_param;
 _packet = [steamid,playerSide,nil,_mode];
 _array = [];
 _flag = switch(playerSide) do {case west: {"cop"}; case civilian: {"civ"}; case independent: {"med"};};
+if (isNull BANK) exitWith {hint "Please go to lobby and come back, your bank account is bugged!";};
+if (isNull CASH) exitWith {hint "Please go to lobby and come back, your cash is bugged!";};
 
 switch(_mode) do {
 	case 0: {
