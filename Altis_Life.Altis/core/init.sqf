@@ -135,3 +135,5 @@ life_last_sync = time;
         };
     };
 };
+
+life_invisible = false;

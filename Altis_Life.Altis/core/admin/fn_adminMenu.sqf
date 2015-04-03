@@ -18,7 +18,6 @@ if(FETCH_CONST(life_adminlevel) == 3) exitWith {closeDialog 0;};
 switch(FETCH_CONST(life_adminlevel)) do
 {
 	case 1: {ctrlShow [2904,false];ctrlShow [2909,false];ctrlShow [2910,false];ctrlShow [2911,false];};
-	case 2: {ctrlShow [2911,false];};
 };
 
 //2904: Compensate, 2905: Spectate, 2906:Teleport, 2907: TpHere, 2908: GodMode, 2909: Freeze, 2910: Markers, 2911: Debug

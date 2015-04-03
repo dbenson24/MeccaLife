@@ -209,6 +209,12 @@ class CfgFunctions
 			class updateUpgrades {};
 			class changeSlingLoad {};
 		};
+		class Admin
+		{
+			file = "\life_server\Functions\Admin";
+			class toggleInvisible {};
+			class restorePlayers {};
+		};
 	};
 };
 
