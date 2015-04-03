@@ -426,7 +426,7 @@ class CfgVehicles {
 
 	class O_MRAP_02_F {
         vItemSpace = 150;
-        price = pifrit;
+//        price = pifrit;
         storageFee[] = { 450, 0, 0, 0 };
 		garageSell[] = { 65000, 0, 0, 0 };
         insurance = 2500;
@@ -436,7 +436,7 @@ class CfgVehicles {
 
 	class I_MRAP_03_F {
         vItemSpace = 58;
-//        price = pifrit;
+        price = pifrit;
         storageFee[] = { 1000, 0, 0, 0 };
         insurance = 2500;
         chopShop = 5000;
