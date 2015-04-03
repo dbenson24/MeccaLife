@@ -6,7 +6,7 @@ player createDiarySubject ["CivRules","Civilian Rules"];
 player createDiarySubject ["CopRules","Cop Rules"];
 player createDiarySubject ["MedicRules","Medic Rules"];
 player createDiarySubject ["controls","Controls"];
-
+player createDiarySubject ["serverfeatures","Server Features"];
 /*  Example
 	player createDiaryRecord ["", //Container
 		[
@@ -52,19 +52,18 @@ player createDiarySubject ["controls","Controls"];
 		[
 			"General Controls",
 				"
-				1: Wanted List
-				2: Smartphone
-				3: Market
+				1: Wanted List<br/>
+				2: Smartphone<br/>
+				3: Market<br/>
 				Y: Open Player Menu<br/>
 				U: Lock and unlock cars<br/>
 				F: Cop Siren (if cop)<br/>
 				T: Vehicle Trunk<br/>
-				Left Windows: Interaction Menu
+				Left Windows: Interaction Menu<br/>
 				H: Holster/Unholster your weapon<br/>
 				Left Shift + P: Ear Plugs (Reduce Sound by 80%)<br/>
 				Q/E: Vehicle Signals<br/>
-				B: Pickaxe<br/>
-				SHIFT+R: Knock players out
+				SHIFT+R: Knock players out<br/>
 				User11: Redgull<br/>
 				"
 		]
@@ -74,18 +73,63 @@ player createDiarySubject ["controls","Controls"];
 		[
 			"Cop Controls",
 				"
-				1: Wanted List
-				2: Smartphone
-				3: Market
+				1: Wanted List<br/>
+				2: Smartphone<br/>
+				3: Market<br/>
 				U: Lock and unlock cars<br/>
-				Left Windows: Interaction Menu
+				Left Windows: Interaction Menu<br/>
 				O: Gate Opener/Spikestrip for Cops<br/>
 				Shift + R: Restrains mouse cursor target<br/>
 				Shift + L: Turns on Cop Lights<br/>
 				F: Cop Siren toggle<br/>
 				Shift + F: Cop Yelp<br/>
 				User11: Redgull<br/>
-				User11: Redgull<br/>
+				"
+		]
+	];
+	
+	player createDiaryRecord ["serverfeatures",
+		[
+			"Vehicle Upgrades",
+				"
+				You can upgrade your vehicle at any garage or air garage on the map.<br/>
+				
+				Trunk Level: There are 5 levels of trunk space from 0-4.<br/>
+					         Each additional level adds 5% to the vehicles space.<br/>
+					         
+				Insurance Level: There are 3 levels of insurance.<br/>
+					1: Protection from vehicle explosions, only the vehicle body<br/>
+					   is covered.<br/>
+					2: Adds protection for modifications to the insured vehicle.<br/>
+					3: Adds protection for when the vehicle is chopped.<br/>
+					If the vehicle is covered by your insurance plan it will be placed<br/>
+					back into your garage.<br/>
+					NOTE: Insurance will NOT cover a vehicle if it is siezed by police<br/>
+				
+				GPS: This allows you to toggle a marker for your vehicle on the map.<br/>
+					 Simply hit windows key on your vehicle and click toggle GPS.<br/>
+				
+				Security: This upgrade increases the time that it takes someone to lockpick<br/>
+						  your vehicle. It also sends you a delayed text message that someone<br/>
+						  accessed the security system on your vehicle.<br/>
+				"
+		]
+	];
+	
+	player createDiaryRecord ["serverfeatures",
+		[
+			"Paintball",
+				"
+				Paintball can be played at a number of the major cities on Altis. Simply proceed to the paintball vendor and select to join the match. 
+				"
+		]
+	];
+	
+	player createDiaryRecord ["serverfeatures",
+		[
+			"Random Fields",
+				"
+				The gathering fields on this server are dynamically generated every restart to help encourage new and different encounters each time.
 				"
 		]
 	];
