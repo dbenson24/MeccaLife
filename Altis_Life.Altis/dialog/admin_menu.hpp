@@ -157,7 +157,7 @@ class life_admin_menu {
 		class Debug : Life_RscButtonMenu {
 			idc = 2911;
 			text = "Invisible";
-			onButtonClick = '[[player,life_invisible],"TON_fnc_toggleInvisible",false,false] call life_fnc_MP; life_invisible = !life_invisible;';
+			onButtonClick = "[] spawn life_fnc_adminInvisibility;";
 			colorBackground[] = {0, 0, 0, 0.0};	
 			x = 0.58 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8;
