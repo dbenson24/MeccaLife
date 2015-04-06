@@ -160,7 +160,7 @@ if(count (PISTOL_ITEMS) > 0) then {
 
 {
     _val = ITEM_VALUE(_x);
-    if (_val > 0) then {
+    if (finite _val && _val > 0) then {
 		_yItems pushBack [_x,_val];
     };
 } forEach LIFE_SETTINGS(getArray,"allowedSavedVirtualItems");
