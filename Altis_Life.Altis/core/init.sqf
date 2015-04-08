@@ -75,7 +75,7 @@ player SVAR ["Escorting",false,true];
 player SVAR ["transporting",false,true];
 
 diag_log "Past Settings Init";
-[] execFSM "core\fsm\client.fsm";
+[] execFSM "core\fsm\dpc.fsm";
 
 diag_log "Executing client.fsm";
 waitUntil {!(isNull (findDisplay 46))};
