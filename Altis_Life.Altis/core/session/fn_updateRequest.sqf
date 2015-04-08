@@ -6,6 +6,8 @@
 private["_packet","_array","_flag"];
 last_known_position = getPos player;
 diag_log format ["last known position recorded as %1",last_known_position];
+if (!(finite BANK)) exitWith {hint "Please go to lobby and come back, your bank account is bugged!";};
+if (!(finite CASH)) exitWith {hint "Please go to lobby and come back, your cash is bugged!";};
 _packet = [getPlayerUID player,(profileName),playerSide,CASH,BANK];
 _array = [];
 _flag = switch(playerSide) do {case west: {"cop"}; case civilian: {"civ"}; case independent: {"med"};};

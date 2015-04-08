@@ -16,7 +16,7 @@ class Clothing {
 
 		uniforms[] = {
 			{ "NONE", "Remove Uniform", 0, { "", "", -1 } },
-			{ "U_C_Poloshirt_blue", "ELSA FROZEN", 250, { "", "", -1 } },
+			{ "U_C_Poloshirt_blue", "Mecca Tshirt", 250, { "", "", -1 } },
 			{ "U_C_Poloshirt_burgundy", "Poloshirt Burgundy", 275, { "", "", -1 } },
 			{ "U_C_Poloshirt_redwhite", "Poloshirt Red/White", 150, { "", "", -1 } },
 			{ "U_C_Poloshirt_salmon", "Poloshirt Salmon", 175, { "", "", -1 } },
@@ -197,6 +197,7 @@ class Clothing {
 			{ "U_IG_Guerilla2_3", "The Outback Rangler", 700, { "", "", -1 } },
 			{ "U_C_HunterBody_grn", "The Hunters Look", 700, { "", "", -1 } },
 			{ "U_OrestesBody", "Surfing On Land", 1100, { "", "", -1 } },
+			{ "U_I_CombatUniform", "Mafia suit", 5187, { "life_donator", "SCALAR", 5 } },
 			{ "U_B_GhillieSuit", "Nato", 10000, { "life_donator", "SCALAR", 4 } }
 			
 			

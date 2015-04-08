@@ -111,7 +111,7 @@ _Btn5 ctrlSetText "Rob Player";
 _Btn5 buttonSetAction "if(player distance life_pInact_curTarget > 4) exitWith {hint 'You are too far away.'}; [life_pInact_curTarget] call life_fnc_robAction;";
 
 _Btn6 ctrlSetText "Send to Jail";
-_Btn6 buttonSetAction "if(player distance life_pInact_curTarget > 4) exitWith {hint 'You are too far away.'}; [life_pInact_curTarget] call life_fnc_arrestAction; ";
+_Btn6 buttonSetAction "if(player distance life_pInact_curTarget > 4) exitWith {hint 'You are too far away.'}; [life_pInact_curTarget,15,true] call life_fnc_arrestAction; ";
 
 //disable certain buttons depending on if the target is restrained or not
 if((life_pInact_curTarget getVariable["restrained",false])) then
@@ -148,7 +148,7 @@ if(currentWeapon player == "") then {
 };
 
 //Check that you are near a place to jail them.
-if(!((player distance (getMarkerPos "jail_marker") < 55) OR (player distance (getMarkerPos "jail_marker_1") < 55))) then 
+if(!((player distance (getMarkerPos "jail_marker_1") < 55) OR (player distance (getMarkerPos "jail_marker_2") < 55) OR (player distance (getMarkerPos "jail_marker_3") < 55) OR (player distance (getMarkerPos "jail_marker_4") < 55))) then 
 {
 	_Btn6 ctrlEnable false;
 };

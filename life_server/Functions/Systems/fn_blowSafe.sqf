@@ -22,7 +22,7 @@ switch (_safe) do {
         _marker = createMarker ["fed_redZone", [16086.5,17000,0]];
         "fed_redZone" setMarkerColor "ColorRed";
         "fed_redZone" setMarkerShape "ELLIPSE";
-        "fed_redZone" setMarkerSize [400, 400];
+        "fed_redZone" setMarkerSize [350, 350];
         "fed_redZone" setMarkerBrush "DiagGrid";
         
         [] spawn {

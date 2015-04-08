@@ -156,8 +156,8 @@ class life_admin_menu {
 		};
 		class Debug : Life_RscButtonMenu {
 			idc = 2911;
-			text = "$STR_Admin_Debug";
-			onButtonClick = "[] call life_fnc_adminDebugCon;";
+			text = "Invisible";
+			onButtonClick = "[] spawn life_fnc_adminInvisibility;";
 			colorBackground[] = {0, 0, 0, 0.0};	
 			x = 0.58 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8;

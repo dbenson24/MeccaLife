@@ -3,4 +3,8 @@ Altis_Life.Altis/textures/Thumbs.db
 Altis_Life.Altis/textures/Thumbs.db
 *.pbo
 *.bak
+*.sdf
 backup/
+Debug/
+Release/
+ipch/

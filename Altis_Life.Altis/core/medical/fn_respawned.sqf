@@ -14,6 +14,7 @@ life_thirst = 100;
 life_carryWeight = 0;
 CASH = 0; //Make sure we don't get our cash back.
 life_respawned = false;
+life_is_alive = true;
 player playMove "amovpercmstpsnonwnondnon";
 
 life_corpse setVariable["Revive",nil,TRUE];
