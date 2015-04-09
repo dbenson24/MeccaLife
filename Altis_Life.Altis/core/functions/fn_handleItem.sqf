@@ -327,7 +327,55 @@ if(_bool) then {
 							};
 						};
 					};
+					
+					case 302:{
+						if(_ispack) then {
+							player addItemToBackpack _item;
+						} else {
+							private "_type";
+							_type = [_item,302] call life_fnc_accType;
 
+							if(_ongun) then {
+								switch (_type) do {
+									case 1: { player addPrimaryWeaponItem _item; };
+									case 2: { player addSecondaryWeaponItem _item; };
+									case 3: { player addHandgunItem _item; };
+								};
+							} else {
+								if(_override) then {
+									player addItem _item;
+								} else {
+									private["_wepItems","_action","_slotTaken"];
+									_wepItems = switch(_type) do {case 1:{RIFLE_ITEMS}; case 2:{secondaryWeaponItems player}; case 3:{PISTOL_ITEMS}; default {["","",""]};};
+									_slotTaken = false;
+
+									if(!(EQUAL(SEL(_wepItems,3),""))) then {_slotTaken = true;};
+
+									if(_slotTaken) then {
+										_action = [localize "STR_MISC_AttachmentMSG",localize "STR_MISC_Attachment",localize "STR_MISC_Weapon",localize "STR_MISC_Inventory"] call BIS_fnc_guiMessage;
+										if(_action) then {
+											switch(_type) do {
+												case 1: {player addPrimaryWeaponItem _item;};
+												case 2: {player addSecondaryWeaponItem _item;};
+												case 3: {player addHandgunItem _item;};
+												default {player addItem _item;};
+											};
+										} else {
+											player addItem _item; //Add it to any available container
+										};
+									} else {
+										switch(_type) do {
+											case 1: {player addPrimaryWeaponItem _item;};
+											case 2: {player addSecondaryWeaponItem _item;};
+											case 3: {player addHandgunItem _item;};
+											default {player addItem _item;};
+										};
+									};
+								};
+							};
+						};
+					};
+					
 					case 621: {
 						if(_ispack) then {
 							player addItemToBackpack _item;
