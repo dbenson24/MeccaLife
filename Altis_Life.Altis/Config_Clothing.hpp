@@ -319,13 +319,13 @@ class Clothing {
 			{ "V_BandollierB_cbr", "", 4500, { "", "", -1 } },
 			{ "V_HarnessO_brn", "", 7000, { "", "", -1 } },
 			{ "V_Rangemaster_belt", "", 1800, { "", "", -1 } },
-			{ "V_PlateCarrier2_rgr", "", 25000, { "", "", -1 } },
+			{ "V_PlateCarrier2_rgr", "", 50000, { "", "", -1 } },
 			{ "V_HarnessOGL_gry", "SuicideVest", 500000, { "", "", -1 } },
 			{ "V_PlateCarrierSpec_mtp", "Special Carrier", 500000, { "", "", -1 } },
 			{ "V_PlateCarrierSpec_rgr", "Special Carrier", 500000, { "", "", -1 } },
-			{ "V_PlateCarrierGL_rgr", " Carrier GL Green", 1000000, { "", "", -1 } },
-			{ "V_PlateCarrierIAGL_dgtl", "Carrier Rig Donor", 25000, { "life_donator", "SCALAR", 2 } },
-			{ "V_PlateCarrierIGL_mtp", "Carrier GL Rig DonorSkin", 1000000, { "life_donator", "SCALAR", 2 } }
+			{ "V_PlateCarrierGL_rgr", " Carrier GL Green", 1000000, { "", "", -1 } }, // broken
+			{ "V_PlateCarrierIAGL_dgtl", "Carrier Rig Donor", 25000, { "life_donator", "SCALAR", 2 } }, 
+			{ "V_PlateCarrierIGL_mtp", "Carrier GL Rig DonorSkin", 1000000, { "life_donator", "SCALAR", 2 } } // broken
 			
 		};
 
