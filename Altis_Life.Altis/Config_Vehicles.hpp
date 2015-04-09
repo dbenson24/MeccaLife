@@ -52,6 +52,8 @@
 
 #define huron 1500000
 #define mohawk 1400000
+
+#define pstrider 150000
 /* End Vehicle Prices */
 
 class CarShops {
@@ -88,7 +90,7 @@ class CarShops {
 			{ "C_Offroad_01_repair_F", poffroadmed, "" },
 			{ "B_Truck_01_medical_F", pzamakmed, "" , { "life_medlevel", 3 } },
 			{ "C_Hatchback_01_sport_F", phatchbacksport, "", { "life_medlevel", 2 } },
-			{ "I_MRAP_03_F", pzamakmed, "" , { "life_medlevel", 5 } }
+			{ "I_MRAP_03_F", pstrider, "" , { "life_medlevel", 5 } }
 		};
 	};
 
@@ -438,7 +440,7 @@ class CfgVehicles {
 
 	class I_MRAP_03_F {
         vItemSpace = 58;
-        price = pifrit;
+        price = pstrider;
         storageFee[] = { 1000, 0, 0, 0 };
         insurance = 2500;
         chopShop = 5000;
