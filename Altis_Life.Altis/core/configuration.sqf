@@ -51,7 +51,16 @@ life_my_gang = ObjNull;
 life_noname_clothing = [
 	"U_I_GhillieSuit",
 	"U_O_GhillieSuit",
-	"U_I_GhillieSuit"
+	"U_B_GhillieSuit",
+	"U_B_FullGhillie_lsh",
+	"U_O_FullGhillie_lsh",
+	"U_I_FullGhillie_lsh",
+	"U_B_FullGhillie_sard",
+	"U_O_FullGhillie_sard",
+	"U_I_FullGhillie_sard",
+	"U_B_FullGhillie_ard",
+	"U_O_FullGhillie_ard",
+	"U_I_FullGhillie_ard"
 ];
 
 life_hidden_clothing = [
@@ -65,7 +74,17 @@ life_hidden_clothing = [
 	"G_Balaclava_combat",
 	"G_Bandanna_beast",
 	"U_O_GhillieSuit",
-	"U_I_GhillieSuit"
+	"U_I_GhillieSuit",
+	"U_B_GhillieSuit",
+	"U_B_FullGhillie_lsh",
+	"U_O_FullGhillie_lsh",
+	"U_I_FullGhillie_lsh",
+	"U_B_FullGhillie_sard",
+	"U_O_FullGhillie_sard",
+	"U_I_FullGhillie_sard",
+	"U_B_FullGhillie_ard",
+	"U_O_FullGhillie_ard",
+	"U_I_FullGhillie_ard"
 	
 ];
 

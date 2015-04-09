@@ -233,7 +233,7 @@ class Clothing {
 			{ "U_O_PilotCoveralls", "", 5610, { "", "", -1 } },
 			{ "U_IG_leader", "Guerilla Leader", 5340, { "", "", -1 } },
 			{ "U_O_GhillieSuit", "", 10000, { "", "", -1 } },
-			{ "U_b_FullGhillie_lsh", "", 30000, { "", "", -1 } },
+			{ "U_B_FullGhillie_lsh", "", 30000, { "", "", -1 } },
 			{ "U_O_FullGhillie_lsh", "", 30000, { "", "", -1 } },
 			{ "U_I_FullGhillie_lsh", "", 30000, { "", "", -1 } },
 			{ "U_B_FullGhillie_sard", "Semi Arid NATO", 30000, { "", "", -1 } },
