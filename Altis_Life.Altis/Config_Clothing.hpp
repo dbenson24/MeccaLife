@@ -335,6 +335,7 @@ class Clothing {
 			{ "B_Kitbag_mcamo", "", 400, { "", "", -1 } },
 			{ "B_TacticalPack_oli", "", 800, { "", "", -1 } },
 			{ "B_FieldPack_ocamo", "", 800, { "", "", -1 } },
+			{ "B_FieldPack_blk", "", 800, { "", "", -1 } },
 			{ "B_Bergen_sgg", "", 800, { "", "", -1 } },
 			{ "B_Kitbag_cbr", "", 1000, { "", "", -1 } },
 			{ "B_Carryall_oli", "", 2000, { "", "", -1 } },
