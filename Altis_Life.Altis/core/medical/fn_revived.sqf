@@ -81,6 +81,8 @@ player SVAR ["Revive",nil,TRUE];
 player SVAR ["name",nil,TRUE];
 player SVAR ["Reviving",nil,TRUE];
 
+life_removeWanted = false;
+
 if(life_nlrtimer_running) then {life_nlrtimer_stop = true};
 
 [] call life_fnc_hudUpdate; //Request update of hud.
