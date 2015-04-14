@@ -1,3 +1,4 @@
+#include <macro.h>
 /*
 	File: fn_arrestAction.sqf
 	
@@ -7,7 +8,7 @@
 private["_unit","_id","_time","_amount"];
 _unit = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _time = [_this,1,15] call BIS_fnc_param;
-_vigi = [_this,3,false,[false]] call BIS_fnc_param;
+_vigi = [_this,2,false,[false]] call BIS_fnc_param;
 
 if(isNull _unit) exitWith {}; //Not valid
 if(isNil "_unit") exitwith {}; //Not Valid
@@ -19,10 +20,22 @@ if(isNull _unit) exitWith {}; //Not valid
 if(_time < 1) exitwith {}; //Not Valid
 
 
-_amount = [[getPlayerUID _unit,_unit,player,false],"life_fnc_wantedBounty",false,false] call life_fnc_MP;
+_uid = getPlayerUID _unit;
+_list = wantedList;
+
+{
+	if (EQUAL(_uid, SEL(_x,0))) then {
+		_amount = SEL(_x,3);
+	};
+} forEach _list;
+
+
 diag_log format["amount :%1 vigilante: %2",_amount,_vigi];
-_amount = _amount select 0;
 if (_vigi && (_amount < 75000)) exitWith {hint "You can only arrest players with a bounty larger than $75,000! Please let this player go.";};
+
+[[getPlayerUID _unit,_unit,player,false],"life_fnc_wantedBounty",false,false] call life_fnc_MP;
+
+
 
 if(isNull _unit) exitWith {}; //Not valid
 detach _unit;
