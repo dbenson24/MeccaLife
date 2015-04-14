@@ -39,18 +39,6 @@ class Life_My_Gang_Diag {
 			h = 0.54;
 		};
 		
-	/*	class DisplayGroupButton:Life_RscButtonMenu
-		{
-			idc = 2401;
-			text = "Group"; //--- ToDo: Localize;
-			x = 0.6;
-			y = 0.44;
-			w = 0.2;
-			h = 0.04;
-			colorBackground[] = {0, 0, 0, 0};
-	//		onButtonClick = "closeDialog 0; [] call life_fnc_groupMenu;";
-		};*/
-		
 		class InviteGangButton
 		{
 			idc = 2630;
@@ -242,18 +230,6 @@ class Life_My_Group_Diag {
 			w = 0.4625;
 			h = 0.54;
 		};
-/*		
-		class DisplayGroupButton:Life_RscButtonMenu
-		{
-			idc = 2401;
-			text = "Gang"; //--- ToDo: Localize;
-			x = 0.6;
-			y = 0.44;
-			w = 0.2;
-			h = 0.04;
-			colorBackground[] = {0, 0, 0, 0};
-		};
-		*/
 		class LockGroupButton
 		{
 			idc = 2622;
