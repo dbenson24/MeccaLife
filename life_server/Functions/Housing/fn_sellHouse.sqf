@@ -14,7 +14,7 @@ _houseID = _house getVariable["house_id",-1];
 if(EQUAL(_houseID,-1)) then {
 	_housePos = getPosATL _house;
 	_ownerID = (_house getVariable "house_owner") select 0;
-	_query = format["housingSellHouse:%1:%2:%3",_ownerID,_housePos];
+	_query = format["housingSellHouse:%1:%2",_ownerID,_housePos];
 	//systemChat format[":SERVER:sellHouse: house_id does not exist, query: %1",_query];
 } else {
 	//systemChat format[":SERVER:sellHouse: house_id is %1",_houseID];
