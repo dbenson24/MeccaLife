@@ -17,7 +17,7 @@ _unitID = _unit select 0;
 if(_unitID == getPlayerUID player) exitWith {hint localize "STR_GNOTF_TransferSelf"};
 
 _action = [
-	format[localize "STR_GNOTF_TransferMSG",_unit GVAR ["realname",name _unit]],
+	format[localize "STR_GNOTF_TransferMSG",_unit select 1],
 	localize "STR_Gang_Transfer",
 	localize "STR_Global_Yes",
 	localize "STR_Global_No"
