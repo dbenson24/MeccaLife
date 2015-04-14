@@ -39,7 +39,7 @@ class Life_My_Gang_Diag {
 			h = 0.54;
 		};
 		
-		class InviteGangButton
+		class InviteGangButton : Life_RscButtonMenu
 		{
 			idc = 2630;
 			text = "$STR_Gang_Invite_Player";
@@ -230,7 +230,7 @@ class Life_My_Group_Diag {
 			w = 0.4625;
 			h = 0.54;
 		};
-		class LockGroupButton
+		class LockGroupButton : Life_RscButtonMenu
 		{
 			idc = 2622;
 			text = "Lock";
