@@ -28,7 +28,7 @@ if(_ownerID != steamid) then {
 	(CONTROL(2620,2624)) ctrlEnable false; // Kick
 	(CONTROL(2620,2625)) ctrlEnable false; //Set New Leader
 	(CONTROL(2620,2630)) ctrlEnable false; //Invite Player
-	(CONTROL(2620,2631)) ctrlEnable false; //Disband Gang
+	(CONTROL(2620,2431)) ctrlEnable false; //Disband Gang
 };
 
 (CONTROL(2620,1003)) ctrlSetText format["Your Gang: %1",_gangName];
