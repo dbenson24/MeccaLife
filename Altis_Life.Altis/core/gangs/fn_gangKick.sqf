@@ -15,7 +15,7 @@ _unit = call compile format["%1",CONTROL_DATA(2621)];
 _unitID = _unit select 0;
 
 if(_unitID == getPlayerUID player) exitWith {hint localize "STR_GNOTF_KickSelf"};
-_members = grpPlayer GVAR "gang_members";
+_members = life_ganggroup GVAR "gang_members";
 if(isNil "_members") exitWith {};
 if(!(EQUAL(typeName _members,"ARRAY"))) exitWith {};
 
@@ -28,13 +28,13 @@ if(!(EQUAL(typeName _members,"ARRAY"))) exitWith {};
 
 SUB(_members,[-1]);
 
-grpPlayer SVAR ["gang_members",_members,true];
+life_ganggroup SVAR ["gang_members",_members,true];
 
 {
 	if (_unitID == getPlayerUID _x) then {
-		[[_x,grpPlayer],"TON_fnc_clientGangKick",_unit,false] call life_fnc_MP; //Boot that bitch!	
+		[[_x,life_ganggroup],"TON_fnc_clientGangKick",_unit,false] call life_fnc_MP; //Boot that bitch!	
 	};
 } forEach playableUnits;
 
-[[4,grpPlayer],"TON_fnc_updateGang",false,false] call life_fnc_MP; //Update the database.
+[[4,life_ganggroup],"TON_fnc_updateGang",false,false] call life_fnc_MP; //Update the database.
 [] call life_fnc_gangMenu;
