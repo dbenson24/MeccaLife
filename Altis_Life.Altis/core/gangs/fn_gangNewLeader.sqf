@@ -10,8 +10,11 @@ disableSerialization;
 
 if(EQUAL((lbCurSel 2621),-1)) exitWith {hint localize "STR_GNOTF_TransferSelect"};
 _unit = call compile format["%1",CONTROL_DATA(2621)];
-if(isNull _unit) exitWith {}; //Bad unit?
-if(_unit == player) exitWith {hint localize "STR_GNOTF_TransferSelf"};
+_unitID = _unit select 0;
+
+
+//if(isNull _unit) exitWith {}; //Bad unit?
+if(_unitID == getPlayerUID player) exitWith {hint localize "STR_GNOTF_TransferSelf"};
 
 _action = [
 	format[localize "STR_GNOTF_TransferMSG",_unit GVAR ["realname",name _unit]],
@@ -21,12 +24,16 @@ _action = [
 ] call BIS_fnc_guiMessage;
 
 if(_action) then {
-	_unitID = getPlayerUID _unit;
 	if(EQUAL(_unitID,"")) exitWith {hint "Bad UID?"}; //Unlikely?
-	grpPlayer SVAR ["gang_owner",_unitID,true];
-	grpPlayer selectLeader _unit;
-	[[_unit,grpPlayer],"TON_fnc_clientGangLeader",_unit,false] call life_fnc_MP; //Boot that bitch!
-	[[3,grpPlayer],"TON_fnc_updateGang",false,false] call life_fnc_MP; //Update the database.
+	life_ganggroup SVAR ["gang_owner",_unitID,true];
+	{
+		if (_unitID == getPlayerUID _x) then {
+			life_ganggroup selectLeader _x;
+			[[_x,life_ganggroup],"TON_fnc_clientGangLeader",_unit,false] call life_fnc_MP; //Boot that bitch!	
+		};
+	} forEach playableUnits;
+	
+	[[3,life_ganggroup],"TON_fnc_updateGang",false,false] call life_fnc_MP; //Update the database.
 } else {
 	hint localize "STR_GNOTF_TransferCancel";
 };
