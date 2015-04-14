@@ -36,10 +36,10 @@ if((uiNamespace getVariable["Weapon_Shop_Filter",0]) == 1) then
 {
 	private["_hideout"];
 	_hideout = (nearestObjects[getPosATL player,["Land_u_Barracks_V2_F","Land_i_Barracks_V2_F"],25]) select 0;
-	if(!isNil "_hideout" && {!isNil {grpPlayer getVariable "gang_bank"}} && {(grpPlayer getVariable "gang_bank") >= _price}) then {
+	if(!isNil "_hideout" && {!isNil {life_ganggroup getVariable "gang_bank"}} && {(life_ganggroup getVariable "gang_bank") >= _price}) then {
 		_action = [
 			format[(localize "STR_Shop_Virt_Gang_FundsMSG")+ "<br/><br/>" +(localize "STR_Shop_Virt_Gang_Funds")+ " <t color='#8cff9b'>$%1</t><br/>" +(localize "STR_Shop_Virt_YourFunds")+ " <t color='#8cff9b'>$%2</t>",
-				[(grpPlayer getVariable "gang_bank")] call life_fnc_numberText,
+				[(life_ganggroup getVariable "gang_bank")] call life_fnc_numberText,
 				[CASH] call life_fnc_numberText
 			],
 			localize "STR_Shop_Virt_YourorGang",
@@ -48,11 +48,11 @@ if((uiNamespace getVariable["Weapon_Shop_Filter",0]) == 1) then
 		] call BIS_fnc_guiMessage;
 		if(_action) then {
 			hint parseText format[localize "STR_Shop_Weapon_BoughtGang",_itemInfo select 1,[_price] call life_fnc_numberText];
-			_funds = grpPlayer getVariable "gang_bank";
+			_funds = life_ganggroup getVariable "gang_bank";
 			_funds = _funds - _price;
-			grpPlayer setVariable["gang_bank",_funds,true];
+			life_ganggroup setVariable["gang_bank",_funds,true];
 			[_item,true] spawn life_fnc_handleItem;
-			[[1,grpPlayer],"TON_fnc_updateGang",false,false] call life_fnc_MP;
+			[[1,life_ganggroup],"TON_fnc_updateGang",false,false] call life_fnc_MP;
 		} else {
 			if(_price > CASH) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
 			hint parseText format[localize "STR_Shop_Weapon_BoughtItem",_itemInfo select 1,[_price] call life_fnc_numberText];

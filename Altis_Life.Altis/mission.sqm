@@ -8525,7 +8525,7 @@ class Mission
 			vehicle="FlagPole_F";
 			skill=0.60000002;
 			text="gang_flag_1";
-			init="this allowDamage false; this addAction [""Capture Gang Area"",life_fnc_captureHideout,"""",0,false,false,"""",' playerSide == civilian && !isNil {(group player) getVariable ""gang_owner""}'];";
+			init="this allowDamage false; this addAction [""Capture Gang Area"",life_fnc_captureHideout,"""",0,false,false,"""",' playerSide == civilian && !isNil {(life_ganggroup) getVariable ""gang_owner""}'];";
 		};
 		class Item184
 		{
@@ -8857,7 +8857,7 @@ class Mission
 			vehicle="FlagPole_F";
 			skill=0.60000002;
 			text="gang_flag_2";
-			init="this allowDamage false; this addAction [""Capture Gang Area"",life_fnc_captureHideout,"""",0,false,false,"""",' playerSide == civilian && !isNil {(group player) getVariable ""gang_owner""}'];";
+			init="this allowDamage false; this addAction [""Capture Gang Area"",life_fnc_captureHideout,"""",0,false,false,"""",' playerSide == civilian && !isNil {(life_ganggroup) getVariable ""gang_owner""}'];";
 		};
 		class Item214
 		{
@@ -9189,7 +9189,7 @@ class Mission
 			vehicle="FlagPole_F";
 			skill=0.60000002;
 			text="gang_flag_3";
-			init="this allowDamage false; this addAction [""Capture Gang Area"",life_fnc_captureHideout,"""",0,false,false,"""",' playerSide == civilian && !isNil {(group player) getVariable ""gang_owner""}'];";
+			init="this allowDamage false; this addAction [""Capture Gang Area"",life_fnc_captureHideout,"""",0,false,false,"""",' playerSide == civilian && !isNil {(life_ganggroup) getVariable ""gang_owner""}'];";
 		};
 		class Item244
 		{
@@ -9607,7 +9607,7 @@ class Mission
 			vehicle="FlagPole_F";
 			skill=0.60000002;
 			text="gang_Rebelflag_1";
-			init="this allowDamage false; this addAction [""Capture Gang Area"",life_fnc_captureRebelHideout,"""",0,false,false,"""",' playerSide == civilian && !isNil {(group player) getVariable ""gang_owner""}'];";
+			init="this allowDamage false; this addAction [""Capture Gang Area"",life_fnc_captureRebelHideout,"""",0,false,false,"""",' playerSide == civilian && !isNil {(life_ganggroup) getVariable ""gang_owner""}'];";
 		};
 		class Item286
 		{
@@ -9618,7 +9618,7 @@ class Mission
 			vehicle="FlagPole_F";
 			skill=0.60000002;
 			text="gang_Rebelflag_2";
-			init="this allowDamage false; this addAction [""Capture Gang Area"",life_fnc_captureRebelHideout,"""",0,false,false,"""",' playerSide == civilian && !isNil {(group player) getVariable ""gang_owner""}'];";
+			init="this allowDamage false; this addAction [""Capture Gang Area"",life_fnc_captureRebelHideout,"""",0,false,false,"""",' playerSide == civilian && !isNil {(life_ganggroup) getVariable ""gang_owner""}'];";
 		};
 		class Item287
 		{
@@ -9629,7 +9629,7 @@ class Mission
 			vehicle="FlagPole_F";
 			skill=0.60000002;
 			text="gang_rebelflag_3";
-			init="this allowDamage false; this addAction [""Capture Gang Area"",life_fnc_captureRebelHideout,"""",0,false,false,"""",' playerSide == civilian && !isNil {(group player) getVariable ""gang_owner""}'];";
+			init="this allowDamage false; this addAction [""Capture Gang Area"",life_fnc_captureRebelHideout,"""",0,false,false,"""",' playerSide == civilian && !isNil {(life_ganggroup) getVariable ""gang_owner""}'];";
 		};
 		class Item288
 		{
