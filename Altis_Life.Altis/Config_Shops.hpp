@@ -67,17 +67,18 @@ class WeaponShops {
 			{ "ItemCompass", "", 50 },
 			{ "MineDetector", "", 10000 },
             { "Binocular", "", 1000 },
+			{ "Rangefinder", "", 5000},
             { "NVGoggles_INDEP", "", 1000 },
             { "NVGoggles", "", 1000 },
 			
-            { "hgun_Rook40_F", "", 500 },
+            { "hgun_Rook40_F", "", 5000 },
             { "30Rnd_9x21_Mag", "", 500 },
 			
             { "hgun_PDW2000_F", "", 10000 },
             { "30Rnd_9x21_Mag", "", 500 },
 			
             { "arifle_sdar_F", "", 25000 },
-            { "20Rnd_556x45_UW_mag", "", 25000 },
+            { "20Rnd_556x45_UW_mag", "", 500 },
 			
             { "hgun_Pistol_heavy_02_F", "", 25000 },
             { "6Rnd_45ACP_Cylinder", "", 500 },
@@ -100,19 +101,28 @@ class WeaponShops {
             { "srifle_DMR_01_F", "", 80000 },
             { "10Rnd_762x51_Mag", "", 500 },
 			
-            { "srifle_EBR_F", "", 100000 },
-            { "20Rnd_762x51_Mag", "", 500 },
-			
             { "srifle_LRR_LRPS_F", "", 1200000 },
-            { "7Rnd_408_Mag", "", 500000 },
+            { "7Rnd_408_Mag", "", 350000 },
 				
 			{ "LMG_Mk200_F", "", 150000 },
             { "200Rnd_65x39_cased_Box", "", 50000 },
 			{ "200Rnd_65x39_cased_Box_Tracer", "", 50000 },
+			
+			{ "srifle_DMR_03_F", "", 125000 },
+			{ "srifle_DMR_03_multicam_F", "", 125000 },
+			{ "srifle_DMR_03_khaki_F", "", 125000 },
+			{ "srifle_DMR_03_woodland_F", "", 125000 },
+			{ "srifle_DMR_06_camo_F", "", 125000 },
+			{ "srifle_DMR_06_olive_F", "", 125000 },
+			{ "srifle_EBR_F", "", 125000 },
+            { "20Rnd_762x51_Mag", "", 500 },
 				
+			{ "bipod_01_F_blk", "Black Bipod", 35000 },
+			{ "bipod_01_F_snd", "Desert Bipod", 35000 },
+			{ "bipod_01_F_mtp", "Woodland Bipod", 35000 },
+			
 			{ "launch_Titan_F", "", 500000 },
             { "Titan_AA", "", 200000 },
-			{ "Rangefinder", "",5000},
             { "acc_flashlight", "", 500 },
             { "optic_ACO_grn", "", 10000 },	
             { "optic_Aco", "", 10000 },
@@ -128,7 +138,7 @@ class WeaponShops {
             { "SmokeShellPurple", "", 1000 },		
             { "SmokeShellOrange", "", 1000 },
             { "HandGrenade", "", 50000 },		
-            { "SLAMDirectionalMine_Wire_Mag", "", 75000 }										
+            { "SLAMDirectionalMine_Wire_Mag", "", 275000 }										
         };
     };
 	

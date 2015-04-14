@@ -52,6 +52,8 @@
 
 #define huron 1500000
 #define mohawk 1400000
+
+#define pstrider 150000
 /* End Vehicle Prices */
 
 class CarShops {
@@ -86,15 +88,17 @@ class CarShops {
 		side = "med";
 		vehicles[] = {
 			{ "C_Offroad_01_repair_F", poffroadmed, "" },
-			{ "I_Truck_02_medical_F", pzamakmed, "" }
+			{ "B_Truck_01_medical_F", pzamakmed, "" , { "life_medlevel", 3 } },
+			{ "C_Hatchback_01_sport_F", phatchbacksport, "", { "life_medlevel", 2 } },
+			{ "I_MRAP_03_F", pstrider, "" , { "life_medlevel", 5 } }
 		};
 	};
 
 	class med_air_hs {
 		side = "med";
 		vehicles[] = {
-			{ "B_Heli_Light_01_F", pmh9med, "mAir" },
-			{ "O_Heli_Light_02_unarmed_F", porcamed, "mAir" }
+			{ "B_Heli_Light_01_F", pmh9med, "mAir" , { "life_medlevel", 2 } },
+			{ "O_Heli_Light_02_unarmed_F", porcamed, "mAir" , { "life_medlevel", 4 } }
 		};
 	};
 
@@ -436,7 +440,7 @@ class CfgVehicles {
 
 	class I_MRAP_03_F {
         vItemSpace = 58;
-        price = pifrit;
+        price = pstrider;
         storageFee[] = { 1000, 0, 0, 0 };
         insurance = 2500;
         chopShop = 5000;
@@ -773,8 +777,8 @@ class CfgVehicles {
 			{ "Rebel Digital", "reb", {
 	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_digital_co.paa"
             } },
-            { "EMS White", "med", {
-                "#(argb,8,8,3)color(1,1,1,0.8)"
+            { "MES", "med", {
+                "textures\mlbird.jpg"
             } }
         };
     };
@@ -849,8 +853,8 @@ class CfgVehicles {
 			{ "Desert Digi", "reb", {
 	                "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_opfor_co.paa" 
             } },
-            { "EMS White", "med", {
-                "#(argb,8,8,3)color(1,1,1,0.8)"
+            { "MES Orca", "med", {
+                "textures\morca.jpg"
             } }
         };
     };

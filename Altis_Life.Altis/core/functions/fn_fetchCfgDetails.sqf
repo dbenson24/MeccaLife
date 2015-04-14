@@ -118,4 +118,5 @@ if(!isNil "_classes") then {
 	_classes = _classes - ["PointerSlot"];
 };
 _return = [_className,_displayName,_picture,_scope,_type,_itemInfo,_section,_magazines,_muzzles,_desc,_accPointer,_accOptic,_accMuzzle,_base,_classes];
+diag_log format["%1", _return];
 _return;

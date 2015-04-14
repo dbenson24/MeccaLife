@@ -28,7 +28,7 @@ class Clothing {
 			{ "U_IG_Guerilla2_3", "The Outback Rangler", 700, { "", "", -1 } },
 			{ "U_C_HunterBody_grn", "The Hunters Look", 700, { "", "", -1 } },
 			{ "U_OrestesBody", "Surfing On Land", 1100, { "", "", -1 } },
-			{ "U_I_CombatUniform", "Mafia suit", 5187, { "life_donator", "SCALAR", 5 } },
+			{ "U_I_CombatUniform", "Mafia suit", 5187, { "life_donator", "SCALAR", 4 } },
 			{ "U_B_Protagonist_VR", "VR Suit Blue", 5187, { "life_donator", "SCALAR", 3 } },
 			{ "U_B_Protagonist_VR", "VR Suit Red", 5187, { "life_donator", "SCALAR", 3 } },
 			{ "U_B_Protagonist_VR", "VR Suit Green", 5187, { "life_donator", "SCALAR", 3 } }
@@ -108,12 +108,13 @@ class Clothing {
 			{ "U_BG_Guerilla3_2", "Working Uniform", 25, { "life_coplevel", "SCALAR", 4 } },
 			{ "U_O_OfficerUniform_ocamo", "HighRanking Uniform", 25, { "life_coplevel", "SCALAR", 5 } },
 			{ "U_O_OfficerUniform_ocamo", "HighRanking Uniform", 25, { "life_coplevel", "SCALAR", 6 } },
-			{ "U_O_OfficerUniform_ocamo", "HighRanking Uniform", 25, { "life_coplevel", "SCALAR", 7 } }
+			{ "U_O_OfficerUniform_ocamo", "HighRanking Uniform", 25, { "life_coplevel", "SCALAR", 7 } },
+			{ "U_B_Wetsuit", "", 2000, { "", "", -1 } }
 		};
 
 		headgear[] = {
 			{ "NONE", "Remove Hat", 0, { "", "", -1 } },
-			{ "H_PilotHelmetFighter_B", "Teargas Helmet", 100, { "life_coplevel", "SCALAR", 1 } }
+			{ "H_PilotHelmetFighter_B", "Teargas Helmet", 100, { "life_coplevel", "SCALAR", 3 } }
 		};
 
 		goggles[] = {
@@ -146,6 +147,46 @@ class Clothing {
 			{ "B_AssaultPack_cbr", "", 700, { "", "", -1 } },
 			{ "B_Bergen_sgg", "", 2500, { "", "", -1 } },
 			{ "B_Carryall_cbr", "", 3500, { "", "", -1 } }
+		};
+	};
+	class swat {
+		title = "STR_Shops_C_Swat";
+		license = "";
+		side = "cop";
+
+		uniforms[] = {
+			{ "NONE", "Remove Uniform", 0, { "", "", -1 } },
+			{ "U_O_OfficerUniform_ocamo", "Swat", 25, { "life_coplevel", "SCALAR", 6 } }
+		};
+
+		headgear[] = {
+			{ "NONE", "Remove Hat", 0, { "", "", -1 } },
+			{ "H_PilotHelmetFighter_B", "Teargas Helmet", 100, { "life_coplevel", "SCALAR", 6 } }
+		};
+
+		goggles[] = {
+			{ "NONE", "Remove Glasses", 0, { "", "", -1 } },
+			{ "G_Shades_Black", "", 25, { "", "", -1 } },
+			{ "G_Shades_Blue", "", 20, { "", "", -1 } },
+			{ "G_Sport_Blackred", "", 20, { "", "", -1 } },
+			{ "G_Sport_Checkered", "", 20, { "", "", -1 } },
+			{ "G_Sport_Blackyellow", "", 20, { "", "", -1 } },
+			{ "G_Sport_BlackWhite", "", 20, { "", "", -1 } },
+			{ "G_Squares", "", 10, { "", "", -1 } },
+			{ "G_Aviator", "", 100, { "", "", -1 } },
+			{ "G_Lady_Mirror", "", 150, { "", "", -1 } },
+			{ "G_Lady_Dark", "", 150, { "", "", -1 } },
+			{ "G_Lady_Blue", "", 150, { "", "", -1 } },
+			{ "G_Lowprofile", "", 30, { "", "", -1 } },
+			{ "G_Combat", "", 55, { "", "", -1 } }
+		};
+
+		vests[] = {
+			{ "V_PlateCarrier2_rgr", "", 1500, { "life_coplevel", "SCALAR", 3 } }
+		};
+
+		backpacks[] = {
+			{ "NONE", "Remove Backpack", 0, { "", "", -1 } }
 		};
 	};
 
@@ -192,6 +233,15 @@ class Clothing {
 			{ "U_O_PilotCoveralls", "", 5610, { "", "", -1 } },
 			{ "U_IG_leader", "Guerilla Leader", 5340, { "", "", -1 } },
 			{ "U_O_GhillieSuit", "", 10000, { "", "", -1 } },
+			{ "U_B_FullGhillie_lsh", "", 30000, { "", "", -1 } },
+			{ "U_O_FullGhillie_lsh", "", 30000, { "", "", -1 } },
+			{ "U_I_FullGhillie_lsh", "", 30000, { "", "", -1 } },
+			{ "U_B_FullGhillie_sard", "Semi Arid NATO", 30000, { "", "", -1 } },
+			{ "U_O_FullGhillie_sard", "Semi Arid CSAT", 30000, { "", "", -1 } },
+			{ "U_I_FullGhillie_sard", "Semi Arid AAF", 30000, { "", "", -1 } },
+			{ "U_B_FullGhillie_ard", "Arid NATO", 30000, { "", "", -1 } },
+			{ "U_O_FullGhillie_ard", "Arid CSAT", 30000, { "", "", -1 } },
+			{ "U_I_FullGhillie_ard", "Arid AAF", 30000, { "", "", -1 } },
 			{ "U_IG_Guerilla2_2", "Green stripped shirt & Pants", 650, { "", "", -1 } },
 			{ "U_IG_Guerilla3_1", "Brown Jacket & Pants", 735, { "", "", -1 } },
 			{ "U_IG_Guerilla2_3", "The Outback Rangler", 700, { "", "", -1 } },
@@ -238,8 +288,8 @@ class Clothing {
 			{ "H_Cap_tan", "", 150, { "", "", -1 } },
 			{ "H_HelmetCrew_B", "", 4500, { "", "", -1 } },
 			{ "H_CrewHelmetHeli_I", "Donor Helmet", 5000, { "life_donator", "SCALAR", 3 } },
-			{ "H_CrewHelmetHeli_O", "Donor Helmet", 5000, { "life_donator", "SCALAR", 3 } },
-			{ "H_CrewHelmetHeli_B", "Donor Helmet", 5000, { "life_donator", "SCALAR", 3 } }
+			{ "H_CrewHelmetHeli_O", "Green", 5000, { "life_donator", "SCALAR", 3 } },
+			{ "H_CrewHelmetHeli_B", "Vader", 5000, { "life_donator", "SCALAR", 3 } }
 			
 		};
 
@@ -269,9 +319,14 @@ class Clothing {
 			{ "V_BandollierB_cbr", "", 4500, { "", "", -1 } },
 			{ "V_HarnessO_brn", "", 7000, { "", "", -1 } },
 			{ "V_Rangemaster_belt", "", 1800, { "", "", -1 } },
-			{ "V_PlateCarrier2_rgr", "", 25000, { "", "", -1 } },
+			{ "V_PlateCarrier2_rgr", "", 50000, { "", "", -1 } },
 			{ "V_HarnessOGL_gry", "SuicideVest", 500000, { "", "", -1 } },
-			{ "V_PlateCarrierIAGL_dgtl", "Carrier Rig Donor", 25000, { "life_donator", "SCALAR", 2 } }
+			{ "V_PlateCarrierSpec_mtp", "Special Carrier", 250000, { "", "", -1 } },
+			{ "V_PlateCarrierSpec_rgr", "Special Carrier", 250000, { "", "", -1 } },
+			{ "V_PlateCarrierGL_rgr", "Carrier GL Green", 500000, { "", "", -1 } },
+			{ "V_PlateCarrierIAGL_dgtl", "Carrier Rig Donor", 350000, { "life_donator", "SCALAR", 2 } }, 
+			{ "V_PlateCarrierIAGL_oli", "Carrier GL Rig DonorSkin", 350000, { "life_donator", "SCALAR", 2 } }
+			
 		};
 
 		backpacks[] = {
@@ -280,6 +335,7 @@ class Clothing {
 			{ "B_Kitbag_mcamo", "", 400, { "", "", -1 } },
 			{ "B_TacticalPack_oli", "", 800, { "", "", -1 } },
 			{ "B_FieldPack_ocamo", "", 800, { "", "", -1 } },
+			{ "B_FieldPack_blk", "", 800, { "", "", -1 } },
 			{ "B_Bergen_sgg", "", 800, { "", "", -1 } },
 			{ "B_Kitbag_cbr", "", 1000, { "", "", -1 } },
 			{ "B_Carryall_oli", "", 2000, { "", "", -1 } },

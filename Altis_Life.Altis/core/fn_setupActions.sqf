@@ -13,7 +13,7 @@ switch (playerSide) do
 		(surfaceisWater (getPos vehicle player)) && (vehicle player isKindOf "Ship") && life_carryWeight < life_maxWeight && speed (vehicle player) < 2 && speed (vehicle player) > -1 && !life_net_dropped ']];
 		
 		life_actions = life_actions + [player addAction["Suicide Bomb Initiate",life_fnc_suicideBomb,"",0,false,false,"",
-        'vest player == "V_HarnessOGL_gry" && alive player && playerSide == civilian && !life_isDowned && !life_isSuicide && !(player getVariable "restrained") && !(player getVariable "Escorting") && !(player getVariable "transporting")']];
+        'vest player == "V_HarnessOGL_gry" && alive player && (vehicle player == player) && playerSide == civilian && !life_isDowned && !life_isSuicide && !(player getVariable "restrained") && !(player getVariable "Escorting") && !(player getVariable "transporting")']];
 	};
 	
 	case west:

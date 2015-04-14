@@ -5,9 +5,9 @@
 	Removes the players weapons client side
 */
 removeAllWeapons player;
-if (uniform player in ["U_I_GhillieSuit","U_O_GhillieSuit","U_I_GhillieSuit"]) then {removeUniform player;};
-if (vest player in ["V_TacVest_blk_POLICE","V_PlateCarrier1_blk"]) then {removeVest player;};
-if (headgear player in ["H_Shemag_khk","H_Shemag_tan","H_Shemag_olive","H_Shemag_olive_hs","H_ShemagOpen_khk","H_ShemagOpen_tan","G_Balaclava_lowprofile","G_Balaclava_combat","G_Bandanna_beast"]) then {removeHeadgear player;};
+if (uniform player in life_hidden_clothing) then {removeUniform player;};
+if (vest player in life_hidden_clothing or vest player == "V_HarnessOGL_gry") then {removeVest player;};
+if (headgear player in life_hidden_clothing) then {removeHeadgear player;};
 //if (backpack player in ["B_Bergen_blk","B_Kitbag_mcamo_Eng"]) then {removeBackpack player;};
 
 license_civ_gun = false;
