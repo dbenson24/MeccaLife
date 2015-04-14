@@ -29,7 +29,7 @@ if(_action) then {
 	{
 		if (_unitID == getPlayerUID _x) then {
 			life_ganggroup selectLeader _x;
-			[[_x,life_ganggroup],"TON_fnc_clientGangLeader",_unit,false] call life_fnc_MP; //Boot that bitch!	
+			[[_x,life_ganggroup],"TON_fnc_clientGangLeader",_x,false] call life_fnc_MP; //Boot that bitch!	
 		};
 	} forEach playableUnits;
 	
