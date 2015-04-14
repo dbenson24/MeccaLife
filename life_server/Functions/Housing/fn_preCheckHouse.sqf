@@ -12,5 +12,6 @@ _housePos = getPosATL _house;
 waitUntil {!DB_Async_Active};
 _query = format ["housingCheckHouse:%1",_housePos];
 _queryResult = [_query,2] call DB_fnc_asyncCall;
+diag_log format["QueryResult for housing precheck: %1"];
 if(_queryResult == []) exitWith {false;};
 true;
