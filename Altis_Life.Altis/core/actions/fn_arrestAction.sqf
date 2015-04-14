@@ -31,7 +31,7 @@ _list = wantedList;
 
 
 diag_log format["amount :%1 vigilante: %2",_amount,_vigi];
-if (_vigi && (_amount < 75000)) exitWith {hint "You can only arrest players with a bounty larger than $75,000! Please let this player go.";};
+if (_vigi && (_amount < 75000)) exitWith {hint "You can only arrest players with a bounty larger than $75,000! Please let this player go."; [_unit] call life_fnc_unrestrain;};
 
 [[getPlayerUID _unit,_unit,player,false],"life_fnc_wantedBounty",false,false] call life_fnc_MP;
 
