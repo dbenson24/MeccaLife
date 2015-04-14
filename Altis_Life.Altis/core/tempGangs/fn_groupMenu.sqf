@@ -1,5 +1,5 @@
 /*	
-		File: fn_gangMenu.sqf
+		File: fn_groupMenu.sqf
 */
 
 if(!isNull life_my_gang) then
