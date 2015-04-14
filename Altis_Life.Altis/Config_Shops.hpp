@@ -99,7 +99,7 @@ class WeaponShops {
             { "30Rnd_45ACP_Mag_SMG_01", "", 500 },
 			
             { "srifle_DMR_01_F", "", 80000 },
-            { "10Rnd_762x51_Mag", "", 500 },
+            { "10Rnd_762x54_Mag", "", 500 },
 			
             { "srifle_LRR_LRPS_F", "", 1200000 },
             { "7Rnd_408_Mag", "", 350000 },
@@ -188,7 +188,7 @@ class WeaponShops {
             { "30Rnd_45ACP_Mag_SMG_01", "", 500 },
 			
             { "srifle_DMR_01_F", "", 80000 },
-            { "10Rnd_762x51_Mag", "", 500 },
+            { "10Rnd_762x54_Mag", "", 500 },
 			
             { "srifle_EBR_F", "", 100000 },
             { "20Rnd_762x51_Mag", "", 500 },
@@ -267,7 +267,7 @@ class WeaponShops {
             { "30Rnd_45ACP_Mag_SMG_01", "", 500 },
 			
             { "srifle_DMR_01_F", "", 80000 },
-            { "10Rnd_762x51_Mag", "", 500 },
+            { "10Rnd_762x54_Mag", "", 500 },
 			
 			
 			{ "Rangefinder", "",5000},
