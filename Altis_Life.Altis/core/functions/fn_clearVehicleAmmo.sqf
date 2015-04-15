@@ -27,6 +27,10 @@ if(EQUAL(_veh,"O_Heli_Attack_02_black_F")) then {
 	_vehicle removeMagazinesTurret ["38Rnd_80mm_rockets",[0]];
 };
 
+if(EQUAL(_veh,"O_APC_Wheeled_02_rcws_F")) then {
+	_vehicle removeMagazinesTurret ["96Rnd_40mm_G_belt",[0]];
+};
+
 /*
 if(EQUAL(_veh,"B_Heli_Transport_01_F")) then 
 {
