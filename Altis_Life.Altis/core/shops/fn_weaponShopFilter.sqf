@@ -6,7 +6,7 @@
 	Description:
 	Applies the filter selected and changes the list.
 */
-private["_list","_index","_config","_priceTag","_var","_varValue","className","_control","_selection","_list","_filter","_pic","_details"];
+private["_bool","_list","_index","_config","_priceTag","_var","_varValue","className","_control","_selection","_list","_filter","_pic","_details"];
 _index = [_this,1,-1,[0]] call BIS_fnc_param;
 _shop = uiNamespace getVariable ["Weapon_Shop",""];
 if(_index == -1 OR _shop == "") exitWith {systemChat "Bad Data Filter"; closeDialog 0;}; //Bad data passing.
@@ -32,47 +32,29 @@ switch (_index) do
 			_varName = SEL(_dataPoint,0);
 			_varType = SEL(_dataPoint,1);
 			_varValue = SEL(_dataPoint,2);
-			if(!(EQUAL(_className,"NONE"))) then {
-				_details = [_className] call life_fnc_fetchCfgDetails;
-				_pic = SEL(_details,2);
-			};
-			
+			_details = [_className] call life_fnc_fetchCfgDetails;
+			_pic = SEL(_details,2);
 			if(!(EQUAL(_varName,""))) then {
 				_var = GVAR_MNS _varName;
 				if(typeName _var == typeName {}) then {_var = FETCH_CONST(_var);};
-				
 				_bool = switch(_varType) do {
 					case (typeName 0): {_var >= _varValue};
 					case (typeName true): {_var};
 					default {EQUAL(_var,_varValue)};
 				};
-				
-				if(_bool && {!isNil "_details"}) then {
-					if(EQUAL(_displayName,"")) then {
-						_list lbAdd format ["%1",(SEL(_details,1))];
-					} else {
-						_list lbAdd format ["%1",_displayName];
-					};
-					
-					_list lbSetData [(lbSize _list)-1,_className];
-					_list lbSetValue [(lbSize _list)-1,_price];
-					_list lbSetPicture [(lbSize _list)-1,_pic];
-				};
 			} else {
-				if(isNil "_details") then {
-					_list lbAdd _displayName;
-					_list lbSetData [(lbSize _list)-1,_className];
+				_bool = true;
+			};
+			if(_bool && {!isNil "_details"}) then {
+				if(EQUAL(_displayName,"")) then {
+					_list lbAdd format ["%1",(SEL(_details,1))];
 				} else {
-					if(EQUAL(_displayName,"")) then {
-						_list lbAdd format["%1",(SEL(_details,1))];
-					} else {
-						_list lbAdd format["%1",_displayName];
-					};
-					
-					_list lbSetData [(lbSize _list)-1,_className];
-					_list lbSetValue [(lbSize _list)-1,_price];
-					_list lbSetPicture [(lbSize _list)-1,_pic];
+					_list lbAdd format ["%1",_displayName];
 				};
+				
+				_list lbSetData [(lbSize _list)-1,_className];
+				_list lbSetValue [(lbSize _list)-1,_price];
+				_list lbSetPicture [(lbSize _list)-1,_pic];
 			};
 		} foreach (_config);
 		
