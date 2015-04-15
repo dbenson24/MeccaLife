@@ -103,18 +103,18 @@ class Clothing {
 		uniforms[] = {
 			{ "NONE", "Remove Uniform", 0, { "", "", -1 } },
 			{ "U_BG_Guerilla2_2", "Basic Uniform", 2500, { "life_coplevel", "SCALAR", 1 } },
-			{ "U_BG_Guerilla2_2", "Basic Uniform", 2500, { "life_coplevel", "SCALAR", 2 } },
 			{ "U_BG_Guerilla3_2", "Working Uniform", 2500, { "life_coplevel", "SCALAR", 3 } },
-			{ "U_BG_Guerilla3_2", "Working Uniform", 2500, { "life_coplevel", "SCALAR", 4 } },
 			{ "U_O_OfficerUniform_ocamo", "HighRanking Uniform", 2500, { "life_coplevel", "SCALAR", 5 } },
-			{ "U_O_OfficerUniform_ocamo", "HighRanking Uniform", 2500, { "life_coplevel", "SCALAR", 6 } },
-			{ "U_O_OfficerUniform_ocamo", "HighRanking Uniform", 2500, { "life_coplevel", "SCALAR", 7 } },
 			{ "U_B_Wetsuit", "", 2000, { "", "", -1 } }
 		};
 
 		headgear[] = {
 			{ "NONE", "Remove Hat", 0, { "", "", -1 } },
-			{ "H_PilotHelmetFighter_B", "Teargas Helmet", 1000, { "life_coplevel", "SCALAR", 3 } }
+			{ "H_PilotHelmetFighter_B", "Teargas Helmet", 1000, { "life_coplevel", "SCALAR", 3 } },
+			{ "H_Cap_police", "", 1000, { "life_coplevel", "SCALAR", 1 } },
+			{ "H_Beret_blk_POLICE", "", 1000, { "life_coplevel", "SCALAR", 2 } },
+			{ "H_Beret_02", "", 1000, { "life_coplevel", "SCALAR", 4 } },
+			{ "H_Beret_Colonel", "", 1000, { "life_coplevel", "SCALAR", 7 } },
 		};
 
 		goggles[] = {
@@ -136,18 +136,14 @@ class Clothing {
 
 		vests[] = {
 			{ "NONE", "Remove Vest", 0, { "", "", -1 } },
-			{ "V_TacVest_blk_POLICE", "", 800, { "", "", -1 } },
-			{ "V_PlateCarrier2_rgr", "", 1500, { "life_coplevel", "SCALAR", 3 } },
+			{ "V_TacVest_blk_POLICE", "", 5000, { "", "", -1 } },
+			{ "V_PlateCarrier1_blk", "", 25000, { "life_coplevel", "SCALAR", 3 } },
 			{ "V_RebreatherB", "", 5000, { "", "", -1 } }
 		};
 
 		backpacks[] = {
 			{ "NONE", "Remove Backpack", 0, { "", "", -1 } },
-			{ "B_Kitbag_cbr", "", 800, { "", "", -1 } },
-			{ "B_FieldPack_cbr", "", 500, { "", "", -1 } },
-			{ "B_AssaultPack_cbr", "", 700, { "", "", -1 } },
-			{ "B_Bergen_sgg", "", 2500, { "", "", -1 } },
-			{ "B_Carryall_cbr", "", 3500, { "", "", -1 } }
+			{ "B_Carryall_oucamo", "Cop Backpack", 1500, { "", "", -1 } },
 		};
 	};
 	class swat {

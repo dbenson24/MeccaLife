@@ -28,6 +28,7 @@ player setVariable["Reviving",nil,TRUE];
 switch(playerSide) do
 {
 	case west: {
+		If(BANK > 15000) then {BANK = BANK - 15000;};
 		_handle = [] spawn life_fnc_loadgear;
 		 
 	};
