@@ -24,4 +24,4 @@ _queryResult = [_query,2,true] call DB_fnc_asyncCall;
 
 
 if(EQUAL(_queryResult,[])) exitWith {[[_house],"life_fnc_boughtHouse",_unit,false] call life_fnc_MP};
-true;
+[[],"life_fnc_boughtHouseFail",_unit,false] call life_fnc_MP;

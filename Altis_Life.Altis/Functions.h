@@ -152,6 +152,7 @@ class Life_Client_Core
 		class lockHouse {};
 		class garageRefund {};
 		class boughtHouse{};
+		class boughtHouseFail{};
 	};
 	
 	class Config
