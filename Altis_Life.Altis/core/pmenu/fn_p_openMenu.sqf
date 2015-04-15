@@ -18,7 +18,7 @@ _Btn1 = _display displayCtrl 2011;
 switch(playerSide) do {
 	case west: {
 		_Btn1 ctrlSetText "Sync Gear";
-		_Btn1 buttonSetAction "[3] call SOCK_fnc_updatePartial;";
+		_Btn1 buttonSetAction "[3] call SOCK_fnc_updatePartial; closeDialog 0;";
 		ctrlShow[1999,false];
 		
 	};
