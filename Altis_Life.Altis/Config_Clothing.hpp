@@ -114,7 +114,7 @@ class Clothing {
 			{ "H_Cap_police", "", 1000, { "life_coplevel", "SCALAR", 1 } },
 			{ "H_Beret_blk_POLICE", "", 1000, { "life_coplevel", "SCALAR", 2 } },
 			{ "H_Beret_02", "", 1000, { "life_coplevel", "SCALAR", 4 } },
-			{ "H_Beret_Colonel", "", 1000, { "life_coplevel", "SCALAR", 7 } },
+			{ "H_Beret_Colonel", "", 1000, { "life_coplevel", "SCALAR", 7 } }
 		};
 
 		goggles[] = {
@@ -138,12 +138,14 @@ class Clothing {
 			{ "NONE", "Remove Vest", 0, { "", "", -1 } },
 			{ "V_TacVest_blk_POLICE", "", 5000, { "", "", -1 } },
 			{ "V_PlateCarrier1_blk", "", 25000, { "life_coplevel", "SCALAR", 3 } },
+			{ "V_PlateCarrierSpec_blk", "", 45000, { "life_coplevel", "SCALAR", 4 } },
+			{ "V_PlateCarrierGL_blk", "", 65000, { "life_coplevel", "SCALAR", 7 } },
 			{ "V_RebreatherB", "", 5000, { "", "", -1 } }
 		};
 
 		backpacks[] = {
 			{ "NONE", "Remove Backpack", 0, { "", "", -1 } },
-			{ "B_Carryall_oucamo", "Cop Backpack", 1500, { "", "", -1 } },
+			{ "B_Carryall_oucamo", "Cop Backpack", 1500, { "", "", -1 } }
 		};
 	};
 	class swat {
@@ -227,12 +229,12 @@ class Clothing {
 			{ "U_I_G_Story_Protagonist_F", "", 750, { "", "", -1 } },
 			{ "U_I_G_resistanceLeader_F", "", 1500, { "", "", -1 } },
 			{ "U_O_SpecopsUniform_ocamo", "", 7500, { "", "", -1 } },
-			{ "U_O_PilotCoveralls", "", 5610, { "", "", -1 } },
-			{ "U_IG_leader", "Guerilla Leader", 5340, { "", "", -1 } },
+			{ "U_O_PilotCoveralls", "", 5000, { "", "", -1 } },
+			{ "U_IG_leader", "Guerilla Leader", 5000, { "", "", -1 } },
 			{ "U_O_GhillieSuit", "", 10000, { "", "", -1 } },
-			{ "U_B_FullGhillie_lsh", "", 30000, { "", "", -1 } },
-			{ "U_O_FullGhillie_lsh", "", 30000, { "", "", -1 } },
-			{ "U_I_FullGhillie_lsh", "", 30000, { "", "", -1 } },
+			{ "U_B_FullGhillie_lsh", "Lush NATO", 30000, { "", "", -1 } },
+			{ "U_O_FullGhillie_lsh", "Lush CSAT", 30000, { "", "", -1 } },
+			{ "U_I_FullGhillie_lsh", "Lush AAF", 30000, { "", "", -1 } },
 			{ "U_B_FullGhillie_sard", "Semi Arid NATO", 30000, { "", "", -1 } },
 			{ "U_O_FullGhillie_sard", "Semi Arid CSAT", 30000, { "", "", -1 } },
 			{ "U_I_FullGhillie_sard", "Semi Arid AAF", 30000, { "", "", -1 } },
@@ -246,7 +248,9 @@ class Clothing {
 			{ "U_OrestesBody", "Surfing On Land", 1100, { "", "", -1 } },
 			{ "U_I_CombatUniform", "Mafia suit", 5187, { "life_donator", "SCALAR", 5 } },
 			{ "U_B_GhillieSuit", "Nato", 10000, { "life_donator", "SCALAR", 4 } },
-			{ "U_B_Wetsuit", "", 2000, { "", "", -1 } }
+			{ "U_B_Wetsuit", "", 2000, { "", "", -1 } },
+			{ "U_I_Wetsuit", "", 2000, { "", "", -1 } },
+			{ "U_O_Wetsuit", "", 2000, { "", "", -1 } }
 			
 			
 			
@@ -319,6 +323,8 @@ class Clothing {
 			{ "V_Rangemaster_belt", "", 1800, { "", "", -1 } },
 			{ "V_PlateCarrier2_rgr", "", 50000, { "", "", -1 } },
 			{ "V_RebreatherB", "", 5000, { "", "", -1 } },
+			{ "V_RebreatherIA", "", 5000, { "", "", -1 } },
+			{ "V_RebreatherIR", "", 5000, { "", "", -1 } },
 			{ "V_HarnessOGL_gry", "SuicideVest", 500000, { "", "", -1 } },
 			{ "V_PlateCarrierSpec_mtp", "Special Carrier", 250000, { "", "", -1 } },
 			{ "V_PlateCarrierSpec_rgr", "Special Carrier", 250000, { "", "", -1 } },
