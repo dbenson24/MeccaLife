@@ -37,6 +37,7 @@
 #define phuntercop 250000
 #define pmh9cop 250000
 #define pghosthawkcop 500000
+#define pmarid 750000
 
 #define pmh9civ 325000
 #define pm900 250000
@@ -135,6 +136,7 @@ class CarShops {
 			{ "C_Offroad_01_F", poffroadcop, ""},
 			{ "C_SUV_01_F", psuvcop, "" },
 			{ "B_MRAP_01_F", phuntercop, "", { "life_coplevel", 4 } },
+			{ "O_APC_Wheeled_02_rcws_F", pmarid, "", { "life_swatlevel", 1 } },
 			{ "C_Hatchback_01_sport_F", phatchbacksport, "", { "life_coplevel", 2 } }
 		};
 	};
@@ -210,6 +212,15 @@ class CfgVehicles {
 		insurance = 2500;
 		chopShop = 1200;
 		textures[] = {};
+	};
+	class O_APC_Wheeled_02_rcws_F : Default {
+	    vItemSpace = 150;
+	    price = pmarid;
+	    textures[] = {
+	        { "Swat", "cop", {
+                "textures\swat apc.jpg"
+            } }
+	    };
 	};
 	class C_Offroad_01_repair_F : Default {
 		vItemSpace = 150;
