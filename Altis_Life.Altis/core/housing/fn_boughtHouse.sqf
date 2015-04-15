@@ -4,9 +4,12 @@
 	File: fn_boughtHouse.sqf
 	Description: Buys the house for the player
 */
+private["_house","_uid","_houseCfg"];
 _house = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _uid = getPlayerUID player;
 
+_houseCfg = [M_CONFIG(getNumber,"Houses",typeOf(_house),"price"),M_CONFIG(getNumber,"Houses",typeOf(_house),"maxStorage")];
+if(EQUAL(count _houseCfg,0)) exitWith {};
 
 if(BANK < (_houseCfg select 0)) exitWith {hint format [localize "STR_House_NotEnough"]};
 [[_uid,_house],"TON_fnc_addHouse",false,false] call life_fnc_MP;
