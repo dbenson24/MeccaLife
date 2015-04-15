@@ -24,6 +24,10 @@ if(side player == WEST) then {
 	if (uniform player == "U_O_OfficerUniform_ocamo") then {
 		player setObjectTextureGlobal [0, "textures\capttroop.jpg"]; 
 	};
+	
+	if (uniform player == "U_O_SpecopsUniform_ocamo") then {
+		player setObjectTextureGlobal [0, "textures\swat.jpg"]; 
+	};
 };
 
 if(side player == civilian) then {

@@ -105,6 +105,7 @@ class Clothing {
 			{ "U_BG_Guerilla2_2", "Basic Uniform", 2500, { "life_coplevel", "SCALAR", 1 } },
 			{ "U_BG_Guerilla3_2", "Working Uniform", 2500, { "life_coplevel", "SCALAR", 3 } },
 			{ "U_O_OfficerUniform_ocamo", "HighRanking Uniform", 2500, { "life_coplevel", "SCALAR", 5 } },
+			{ "U_O_SpecopsUniform_ocamo", "Swat Uniform", 2500, { "life_swatlevel", "SCALAR", 1 } },
 			{ "U_B_Wetsuit", "", 2000, { "", "", -1 } }
 		};
 
