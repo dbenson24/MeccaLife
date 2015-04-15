@@ -219,7 +219,8 @@ class CfgVehicles {
 	    textures[] = {
 	        { "Swat", "cop", {
                 "textures\swat apc.jpg",
-                "textures\swat apc2.jpg"
+                "textures\swat apc2.jpg",
+                "textures\swat turret.jpg"
             } }
 	    };
 	};
