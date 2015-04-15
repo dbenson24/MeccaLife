@@ -9,6 +9,8 @@
 private["_obj","_unit","_item","_value"];
 _unit = SEL(_this,0);
 
+if(side _unit != civilian) exitWith {};
+
 {
 	if(typeName _x == typeName "") then {_item = _x;} else {_item = configName _x};
 	_value = ITEM_VALUE(_item);
