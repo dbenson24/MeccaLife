@@ -6,7 +6,7 @@
 	Description:
 	Applies the filter selected and changes the list.
 */
-private["_itemList","_index","_config","_priceTag"];
+private["_list","_index","_config","_priceTag","_var","_varValue","className","_control","_selection","_list","_filter","_pic","_details"];
 _index = [_this,1,-1,[0]] call BIS_fnc_param;
 _shop = uiNamespace getVariable ["Weapon_Shop",""];
 if(_index == -1 OR _shop == "") exitWith {systemChat "Bad Data Filter"; closeDialog 0;}; //Bad data passing.
