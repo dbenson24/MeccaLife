@@ -343,19 +343,25 @@ class WeaponShops {
 			{ "20Rnd_556x45_UW_mag", "", 500, { "life_coplevel", "SCALAR", 2 } },
             { "30Rnd_65x39_caseless_mag_Tracer", "", 500, { "life_coplevel", "SCALAR", 2 } },
 			{ "30Rnd_65x39_caseless_mag", "", 500, { "life_coplevel", "SCALAR", 3 } },
+            { "5Rnd_127x108_APDS_Mag", "", 500, { "life_swatlevel", "SCALAR", 1 } },
+            { "10Rnd_338_Mag", "", 500, { "life_swatlevel", "SCALAR", 1 } },
 			{ "arifle_MXC_Black_F", "", 45000, { "life_coplevel", "SCALAR", 2 } },
 			{ "arifle_MX_Black_F", "", 65000, { "life_coplevel", "SCALAR", 3 } },
 			{ "arifle_MXM_Black_F", "", 85000, { "life_coplevel", "SCALAR", 4 } },
 			{ "arifle_MXM_F", "", 85000, { "life_coplevel", "SCALAR", 7 } },
-            { "arifle_sdar_F", "", 25000, { "life_coplevel", "SCALAR", 2 } },
+            { "arifle_sdar_F", "", 25000, { "life_coplevel", "SCALAR", 1 } },
+            { "srifle_GM6_F", "", 500, { "life_swatlevel", "SCALAR", 1 } },
+            { "srifle_DMR_02_F", "", 500, { "life_swatlevel", "SCALAR", 1 } },
+            { "muzzle_snds_H", "", 500, { "life_swatlevel", "SCALAR", 1 } },
 			{ "bipod_01_F_blk", "Black Bipod", 15000, { "life_coplevel", "SCALAR", 3 } },
 			{ "bipod_01_F_snd", "Desert Bipod", 15000, { "life_coplevel", "SCALAR", 7 } },
 			{ "HandGrenade_Stone", "Flash Bang", 5000, { "life_coplevel", "SCALAR", 2 } },
 			{ "optic_Hamr", "", 10000, { "life_coplevel", "SCALAR", 2 } },
             { "optic_Arco", "", 10000, { "life_coplevel", "SCALAR", 2 } },
 			{ "optic_MRCO", "", 10000, { "life_coplevel", "SCALAR", 2 } },
+            { "optic_LRPS", "", 500, { "life_swatlevel", "SCALAR", 1 } },
             { "acc_flashlight", "", 1000, { "life_coplevel", "SCALAR", 2 } },
-			{ "acc_pointer_IR", "", 1000, { "life_coplevel", "SCALAR", 2 } },
+			{ "acc_pointer_IR", "", 1000, { "life_coplevel", "SCALAR", 2 } }
         };
     };
  
