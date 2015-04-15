@@ -114,4 +114,7 @@ CASH = 0;
 [[player,life_sidechat,playerSide],"TON_fnc_managesc",false,false] call life_fnc_MP;
 
 [0] call SOCK_fnc_updatePartial;
-[3] call SOCK_fnc_updatePartial;
+if (playerSide == civilian) then {
+	[3] call SOCK_fnc_updatePartial;
+	[4] call SOCK_fnc_updatePartial;
+};

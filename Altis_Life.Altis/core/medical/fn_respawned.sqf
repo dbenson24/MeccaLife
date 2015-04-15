@@ -33,7 +33,8 @@ switch(playerSide) do
 	};
 	case civilian: {
 		_handle = [] spawn life_fnc_civLoadout;
-		 If(BANK > 10000) then {BANK = BANK - 3000;};
+		 If(BANK > 1000000) then {BANK = BANK - 3000;};
+		[4] call SOCK_fnc_updatePartial;
 	};
 	case independent: {
 		_handle = [] spawn life_fnc_medicLoadout;

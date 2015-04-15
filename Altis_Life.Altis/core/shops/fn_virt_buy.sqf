@@ -59,5 +59,9 @@ if(([true,_type,_amount] call life_fnc_handleInv)) then
 	
 	[] call life_fnc_virt_update;
 };
+/* commented out for performance
 [0] call SOCK_fnc_updatePartial;
-[3] call SOCK_fnc_updatePartial;
+if (playerSide != west) then {
+	[3] call SOCK_fnc_updatePartial;
+};
+*/

@@ -6,6 +6,8 @@
 	Sends specific information to the server to update on the player,
 	meant to keep the network traffic down with large sums of data flowing
 	through life_fnc_MP
+	
+	File: fn_updatePartial.sqf
 */
 private["_mode","_packet","_array","_flag"];
 _mode = [_this,0,0,[0]] call BIS_fnc_param;
@@ -39,7 +41,7 @@ switch(_mode) do {
 	};
 	
 	case 4: {
-		//Not yet implemented
+		_packet set[2, life_is_alive];
 	};
 	
 	case 5: {
@@ -52,4 +54,4 @@ switch(_mode) do {
 	};
 };
 
-[_packet,"DB_fnc_updatePartial",false,false] call life_fnc_MP;
+[_packet,steamid,playerSide,_mode"DB_fnc_updatePartial",false,false] call life_fnc_MP;
