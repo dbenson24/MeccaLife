@@ -16,6 +16,8 @@ if(_medicsOnline) then {
 	[[life_corpse,profileName],"life_fnc_copMedicRequest",west,FALSE] call life_fnc_MP;
 };
 
+maxDeathTime = time + 5*60;
+
 //Create a thread to monitor duration since last request (prevent spammage).
 [] spawn 
 {

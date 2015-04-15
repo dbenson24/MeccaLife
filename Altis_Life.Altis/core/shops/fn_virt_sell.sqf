@@ -44,5 +44,9 @@ if(EQUAL(life_shop_type,"drugdealer")) then {
 		life_shop_npc setVariable["sellers",_array,true];
 	};
 };
+/* commented out for performance
 [0] call SOCK_fnc_updatePartial;
-[3] call SOCK_fnc_updatePartial;
+if (playerSide != west) then {
+	[3] call SOCK_fnc_updatePartial;
+};
+*/

@@ -48,7 +48,6 @@ player addMagazine "16Rnd_9x21_Mag";
 [true,"tbacon",3] call life_fnc_handleInv;
 [true,"coffee",3] call life_fnc_handleInv;
 
-If(BANK > 0) then {BANK = BANK - 5000;};
 
 if (playerSide == west) then {
 

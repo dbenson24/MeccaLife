@@ -7,12 +7,18 @@
 	Opens the players virtual inventory menu
 */
 if(!alive player || dialog) exitWith {}; //Prevent them from opening this for exploits while dead.
+private["_display","_curTarget","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6"];
 createDialog "playerSettings";
 disableSerialization;
 
+_display = findDisplay 2001;
+
+_Btn1 = _display displayCtrl 2011;
+
 switch(playerSide) do {
 	case west: {
-		ctrlShow[2011,false];
+		_Btn1 ctrlSetText "Sync Gear";
+		_Btn1 buttonSetAction "[3] call SOCK_fnc_updatePartial; closeDialog 0;";
 		ctrlShow[1999,false];
 		
 	};

@@ -44,12 +44,14 @@ if(count (SEL(_this,6)) > 0) then {
 };
 
 life_gear = SEL(_this,8);
-[true] call life_fnc_loadGear;
+life_copgear = life_gear;
+[] call life_fnc_loadGear;
 
 //Parse side specific information.
 switch(playerSide) do {
 	case west: {
 		CONST(life_coplevel, parseNumber(SEL(_this,7)));
+		CONST(life_swatlevel, parseNumber(SEL(_this,10)));
 		CONST(life_medicLevel,0);
 		life_blacklisted = SEL(_this,9);
 	};
@@ -58,6 +60,7 @@ switch(playerSide) do {
 		life_is_arrested = SEL(_this,7);
 		CONST(life_coplevel, 0);
 		CONST(life_medicLevel, 0);
+		CONST(life_swatlevel, 0);
 		life_houses = SEL(_this,9);
 		{
 			_house = nearestBuilding (call compile format["%1", SEL(_x,0)]);
@@ -81,6 +84,7 @@ switch(playerSide) do {
 	case independent: {
 		CONST(life_medicLevel, parseNumber(SEL(_this,7)));
 		CONST(life_coplevel,0);
+		CONST(life_swatlevel, 0);
 	};
 };
 

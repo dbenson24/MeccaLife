@@ -3,7 +3,7 @@
 		0: STRING (Classname)
 		1: STRING (Display Name, leave as "" for default)
 		2: SCALAR (Price)
-		4: ARRAY (This is for limiting items to certain things)
+		3: ARRAY (This is for limiting items to certain things)
 			0: Variable to read from
 			1: Variable Value Type
 			2: What to compare to v
@@ -102,19 +102,19 @@ class Clothing {
 
 		uniforms[] = {
 			{ "NONE", "Remove Uniform", 0, { "", "", -1 } },
-			{ "U_BG_Guerilla2_2", "Basic Uniform", 25, { "life_coplevel", "SCALAR", 1 } },
-			{ "U_BG_Guerilla2_2", "Basic Uniform", 25, { "life_coplevel", "SCALAR", 2 } },
-			{ "U_BG_Guerilla3_2", "Working Uniform", 25, { "life_coplevel", "SCALAR", 3 } },
-			{ "U_BG_Guerilla3_2", "Working Uniform", 25, { "life_coplevel", "SCALAR", 4 } },
-			{ "U_O_OfficerUniform_ocamo", "HighRanking Uniform", 25, { "life_coplevel", "SCALAR", 5 } },
-			{ "U_O_OfficerUniform_ocamo", "HighRanking Uniform", 25, { "life_coplevel", "SCALAR", 6 } },
-			{ "U_O_OfficerUniform_ocamo", "HighRanking Uniform", 25, { "life_coplevel", "SCALAR", 7 } },
+			{ "U_BG_Guerilla2_2", "Basic Uniform", 2500, { "life_coplevel", "SCALAR", 1 } },
+			{ "U_BG_Guerilla3_2", "Working Uniform", 2500, { "life_coplevel", "SCALAR", 3 } },
+			{ "U_O_OfficerUniform_ocamo", "HighRanking Uniform", 2500, { "life_coplevel", "SCALAR", 5 } },
 			{ "U_B_Wetsuit", "", 2000, { "", "", -1 } }
 		};
 
 		headgear[] = {
 			{ "NONE", "Remove Hat", 0, { "", "", -1 } },
-			{ "H_PilotHelmetFighter_B", "Teargas Helmet", 100, { "life_coplevel", "SCALAR", 3 } }
+			{ "H_PilotHelmetFighter_B", "Teargas Helmet", 1000, { "life_coplevel", "SCALAR", 2 } },
+			{ "H_Cap_police", "", 1000, { "life_coplevel", "SCALAR", 1 } },
+			{ "H_Beret_blk_POLICE", "", 1000, { "life_coplevel", "SCALAR", 2 } },
+			{ "H_Beret_02", "", 1000, { "life_coplevel", "SCALAR", 4 } },
+			{ "H_Beret_Colonel", "", 1000, { "life_coplevel", "SCALAR", 7 } }
 		};
 
 		goggles[] = {
@@ -136,17 +136,16 @@ class Clothing {
 
 		vests[] = {
 			{ "NONE", "Remove Vest", 0, { "", "", -1 } },
-			{ "V_TacVest_blk_POLICE", "", 800, { "", "", -1 } },
-			{ "V_PlateCarrier2_rgr", "", 1500, { "life_coplevel", "SCALAR", 3 } }
+			{ "V_TacVest_blk_POLICE", "Police Vest", 5000, { "", "", -1 } },
+			{ "V_PlateCarrier1_blk", "Officer Vest", 25000, { "life_coplevel", "SCALAR", 3 } },
+			{ "V_PlateCarrierSpec_blk", "Leader Vest", 45000, { "life_coplevel", "SCALAR", 5 } },
+			{ "V_PlateCarrierGL_blk", "Swat Vest", 500, { "life_swatlevel", "SCALAR", 1} },
+			{ "V_RebreatherB", "", 5000, { "", "", -1 } }
 		};
 
 		backpacks[] = {
 			{ "NONE", "Remove Backpack", 0, { "", "", -1 } },
-			{ "B_Kitbag_cbr", "", 800, { "", "", -1 } },
-			{ "B_FieldPack_cbr", "", 500, { "", "", -1 } },
-			{ "B_AssaultPack_cbr", "", 700, { "", "", -1 } },
-			{ "B_Bergen_sgg", "", 2500, { "", "", -1 } },
-			{ "B_Carryall_cbr", "", 3500, { "", "", -1 } }
+			{ "B_Carryall_oucamo", "Cop Backpack", 1500, { "", "", -1 } }
 		};
 	};
 	class swat {
@@ -161,7 +160,7 @@ class Clothing {
 
 		headgear[] = {
 			{ "NONE", "Remove Hat", 0, { "", "", -1 } },
-			{ "H_PilotHelmetFighter_B", "Teargas Helmet", 100, { "life_coplevel", "SCALAR", 6 } }
+			{ "H_PilotHelmetFighter_B", "Swat Teargas Helmet", 100, { "life_swatlevel", "SCALAR", 1 } }
 		};
 
 		goggles[] = {
@@ -230,12 +229,12 @@ class Clothing {
 			{ "U_I_G_Story_Protagonist_F", "", 750, { "", "", -1 } },
 			{ "U_I_G_resistanceLeader_F", "", 1500, { "", "", -1 } },
 			{ "U_O_SpecopsUniform_ocamo", "", 7500, { "", "", -1 } },
-			{ "U_O_PilotCoveralls", "", 5610, { "", "", -1 } },
-			{ "U_IG_leader", "Guerilla Leader", 5340, { "", "", -1 } },
+			{ "U_O_PilotCoveralls", "", 5000, { "", "", -1 } },
+			{ "U_IG_leader", "Guerilla Leader", 5000, { "", "", -1 } },
 			{ "U_O_GhillieSuit", "", 10000, { "", "", -1 } },
-			{ "U_B_FullGhillie_lsh", "", 30000, { "", "", -1 } },
-			{ "U_O_FullGhillie_lsh", "", 30000, { "", "", -1 } },
-			{ "U_I_FullGhillie_lsh", "", 30000, { "", "", -1 } },
+			{ "U_B_FullGhillie_lsh", "Lush NATO", 30000, { "", "", -1 } },
+			{ "U_O_FullGhillie_lsh", "Lush CSAT", 30000, { "", "", -1 } },
+			{ "U_I_FullGhillie_lsh", "Lush AAF", 30000, { "", "", -1 } },
 			{ "U_B_FullGhillie_sard", "Semi Arid NATO", 30000, { "", "", -1 } },
 			{ "U_O_FullGhillie_sard", "Semi Arid CSAT", 30000, { "", "", -1 } },
 			{ "U_I_FullGhillie_sard", "Semi Arid AAF", 30000, { "", "", -1 } },
@@ -248,7 +247,10 @@ class Clothing {
 			{ "U_C_HunterBody_grn", "The Hunters Look", 700, { "", "", -1 } },
 			{ "U_OrestesBody", "Surfing On Land", 1100, { "", "", -1 } },
 			{ "U_I_CombatUniform", "Mafia suit", 5187, { "life_donator", "SCALAR", 5 } },
-			{ "U_B_GhillieSuit", "Nato", 10000, { "life_donator", "SCALAR", 4 } }
+			{ "U_B_GhillieSuit", "Nato", 10000, { "life_donator", "SCALAR", 4 } },
+			{ "U_B_Wetsuit", "", 2000, { "", "", -1 } },
+			{ "U_I_Wetsuit", "", 2000, { "", "", -1 } },
+			{ "U_O_Wetsuit", "", 2000, { "", "", -1 } }
 			
 			
 			
@@ -320,6 +322,9 @@ class Clothing {
 			{ "V_HarnessO_brn", "", 7000, { "", "", -1 } },
 			{ "V_Rangemaster_belt", "", 1800, { "", "", -1 } },
 			{ "V_PlateCarrier2_rgr", "", 50000, { "", "", -1 } },
+			{ "V_RebreatherB", "", 5000, { "", "", -1 } },
+			{ "V_RebreatherIA", "", 5000, { "", "", -1 } },
+			{ "V_RebreatherIR", "", 5000, { "", "", -1 } },
 			{ "V_HarnessOGL_gry", "SuicideVest", 500000, { "", "", -1 } },
 			{ "V_PlateCarrierSpec_mtp", "Special Carrier", 250000, { "", "", -1 } },
 			{ "V_PlateCarrierSpec_rgr", "Special Carrier", 250000, { "", "", -1 } },

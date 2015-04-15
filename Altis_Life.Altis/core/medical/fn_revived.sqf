@@ -12,6 +12,7 @@ _uid = getPlayerUID life_corpse;
 _name = format["%1gear",_uid];
 //_oldGear = missionNamespace getVariable _name;
 [life_deadGear] spawn life_fnc_loadDeadGear;
+life_deadGear = ObjNull;
 life_corpse SVAR ["realname",nil,true]; //Should correct the double name sinking into the ground.
 [[life_corpse],"life_fnc_corpse",nil,FALSE] call life_fnc_MP;
 _dir = getDir life_corpse;

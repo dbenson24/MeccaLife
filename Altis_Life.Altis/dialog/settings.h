@@ -195,7 +195,6 @@ class SettingsMenu
 		
 		class ButtonClose : life_RscButtonMenu {
 			idc = -1;
-			//shortcuts[] = {0x00050000 + 2};
 			colorBackground[] = {0, 0, 0, 0.4};	
 			text = "$STR_Global_Close";
 			onButtonClick = "closeDialog 0;";
