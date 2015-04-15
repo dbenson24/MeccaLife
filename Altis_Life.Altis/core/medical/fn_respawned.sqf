@@ -28,13 +28,12 @@ player setVariable["Reviving",nil,TRUE];
 switch(playerSide) do
 {
 	case west: {
-		_handle = [] spawn life_fnc_copLoadout;
+		_handle = [] spawn life_fnc_loadgear;
 		 
 	};
 	case civilian: {
 		_handle = [] spawn life_fnc_civLoadout;
 		 If(BANK > 1000000) then {BANK = BANK - 3000;};
-		[4] call SOCK_fnc_updatePartial;
 	};
 	case independent: {
 		_handle = [] spawn life_fnc_medicLoadout;
