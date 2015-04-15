@@ -34,7 +34,7 @@ for "_i" from 0 to count(_licenses)-1 do {
 
 
 switch (_side) do {
-	case west: {_query = format["playerWestUpdate:%1:%2:%3:%4:%5:%6",_name,_cash,_bank,_gear,_licenses,_uid];};
+	case west: {_query = format["playerWestUpdate:%1:%2:%3:%4:%5",_name,_cash,_bank,_licenses,_uid];};
 	case civilian: {_query = format["playerCivilianUpdate:%1:%2:%3:%4:%6:%7:%8:%9:%5",_name,_cash,_bank,_licenses,_uid,_gear,_isjailed,_position,_isalive];};
 	case independent: {_query = format["playerIndependentUpdate:%1:%2:%3:%4:%6:%5",_name,_cash,_bank,_licenses,_uid,_gear];};
 };
