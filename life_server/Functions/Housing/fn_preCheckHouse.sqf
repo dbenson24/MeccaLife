@@ -11,15 +11,15 @@ if(isNull _house) exitWith {false;};
 if(isNull _unit) exitWith {false;};
 _housePos = getPosATL _house;
 
-waitUntil {!DB_Async_Active};
 _query = format ["housingCheckHouse:%1",_housePos];
-_queryResult = [_query,2] call DB_fnc_asyncCall;
-/*
+waitUntil {!DB_Async_Active};
+_queryResult = [_query,2,true] call DB_fnc_asyncCall;
+
 ["diag_log",[
 			"------------- Housing Precheck -------------",
 			format["Result: %1",_queryResult],
 			"------------------------------------------------"
-		]] call TON_fnc_logIt;*/
+		]] call TON_fnc_logIt;
 
 
 if(isNull(_queryResult)) exitWith {[[_house],"life_fnc_boughtHouse",_unit,false]};
