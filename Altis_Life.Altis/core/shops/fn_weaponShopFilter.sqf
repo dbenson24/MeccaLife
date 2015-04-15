@@ -17,7 +17,7 @@ uiNamespace setVariable["Weapon_Shop_Filter",_index];
 _priceTag = ((findDisplay 38400) displayCtrl 38404);
 _priceTag ctrlSetStructuredText parseText "";
 _list = ((findDisplay 38400) displayCtrl 38403);
-lbClear _itemList;
+lbClear _list;
 
 switch (_index) do
 {
@@ -106,17 +106,17 @@ switch (_index) do
 				_itemCount = {_x == (_itemInfo select 0)} count _config;
 				if(_itemCount > 1) then
 				{
-					_itemList lbAdd format["[%2] %1",_itemInfo select 1,_itemCount];
+					_list lbAdd format["[%2] %1",_itemInfo select 1,_itemCount];
 				}
 					else
 				{
-					_itemList lbAdd format["%1",_itemInfo select 1];
+					_list lbAdd format["%1",_itemInfo select 1];
 				};
-				_itemList lbSetData[(lbSize _itemList)-1,_itemInfo select 0];
-				_itemList lbSetPicture[(lbSize _itemList)-1,_itemInfo select 2];
+				_list lbSetData[(lbSize _list)-1,_itemInfo select 0];
+				_list lbSetPicture[(lbSize _list)-1,_itemInfo select 2];
 			};
 		} foreach _config;
 	};
 };
 
-if(isNil {_this select 0}) then {_itemList lbSetCurSel 0;};
+if(isNil {_this select 0}) then {_list lbSetCurSel 0;};
