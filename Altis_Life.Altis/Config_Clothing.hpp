@@ -160,7 +160,7 @@ class Clothing {
 
 		headgear[] = {
 			{ "NONE", "Remove Hat", 0, { "", "", -1 } },
-			{ "H_PilotHelmetFighter_B", "Teargas Helmet", 100, { "life_swatlevel", "SCALAR", 1 } }
+			{ "H_PilotHelmetFighter_B", "Swat Teargas Helmet", 100, { "life_swatlevel", "SCALAR", 1 } }
 		};
 
 		goggles[] = {
