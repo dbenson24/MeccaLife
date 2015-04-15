@@ -8,6 +8,7 @@
 */
 private["_itemArray","_uniform","_vest","_backpack","_goggles","_headgear","_items","_prim","_seco","_uItems","_bItems","_vItems","_pItems","_hItems","_yItems","_uMags","_bMags","_vMags","_handle"];
 _itemArray = life_gear;
+diag_log format ["life_gear: %1", life_gear];
 waitUntil {!(isNull (findDisplay 46))};
 
 _handle = [] spawn life_fnc_stripDownPlayer;
