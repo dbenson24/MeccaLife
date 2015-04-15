@@ -218,7 +218,8 @@ class CfgVehicles {
 	    price = pmarid;
 	    textures[] = {
 	        { "Swat", "cop", {
-                "textures\swat apc.jpg"
+                "textures\swat apc.jpg",
+                "textures\swat apc2.jpg"
             } }
 	    };
 	};
