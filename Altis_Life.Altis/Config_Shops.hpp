@@ -348,7 +348,7 @@ class WeaponShops {
 			{ "arifle_MXM_Black_F", "", 85000, { "life_coplevel", "SCALAR", 4 } },
 			{ "arifle_MXM_F", "", 85000, { "life_coplevel", "SCALAR", 7 } },
             { "arifle_sdar_F", "", 25000, { "life_coplevel", "SCALAR", 2 } },
-			{ "bipod_01_F_blk", "Black Bipod", 15000, { "life_coplevel", "SCALAR", 2 } },
+			{ "bipod_01_F_blk", "Black Bipod", 15000, { "life_coplevel", "SCALAR", 3 } },
 			{ "bipod_01_F_snd", "Desert Bipod", 15000, { "life_coplevel", "SCALAR", 7 } },
 			{ "HandGrenade_Stone", "Flash Bang", 5000, { "life_coplevel", "SCALAR", 2 } },
 			{ "optic_Hamr", "", 10000, { "life_coplevel", "SCALAR", 2 } },
