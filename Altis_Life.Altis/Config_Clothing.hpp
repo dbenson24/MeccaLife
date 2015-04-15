@@ -30,8 +30,8 @@ class Clothing {
 			{ "U_OrestesBody", "Surfing On Land", 1100, { "", "", -1 } },
 			{ "U_I_CombatUniform", "Mafia suit", 5187, { "life_donator", "SCALAR", 4 } },
 			{ "U_B_Protagonist_VR", "VR Suit Blue", 5187, { "life_donator", "SCALAR", 3 } },
-			{ "U_B_Protagonist_VR", "VR Suit Red", 5187, { "life_donator", "SCALAR", 3 } },
-			{ "U_B_Protagonist_VR", "VR Suit Green", 5187, { "life_donator", "SCALAR", 3 } }
+			{ "U_O_Protagonist_VR", "VR Suit Red", 5187, { "life_donator", "SCALAR", 3 } },
+			{ "U_I_Protagonist_VR", "VR Suit Green", 5187, { "life_donator", "SCALAR", 3 } }
 
 		};
 
