@@ -12,7 +12,7 @@ if(isNull _house) exitWith {};
 _trunkData = _house getVariable["Trunk",[[],0]];
 _houseID = _house getVariable["house_id",-1];
 
-if(EQUAL(_houseID,-1)) exitwith {}; //Dafuq?
+if(EQUAL(_houseID,-1)) exitwith {["diag_log",["House Trunk Not Update. HouseID equal to -1."]] call TON_fnc_logIt;}; //Dafuq?
 
 _query = format["housingUpdateInventory:%1:%2",_trunkData,_houseID];
 waitUntil{!DB_Async_Active};

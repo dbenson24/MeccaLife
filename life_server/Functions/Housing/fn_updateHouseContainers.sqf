@@ -8,7 +8,7 @@ private["_house","_houseID","_containers","_query"];
 _house = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _house) exitWith {};
 _houseID = _house getVariable["house_id",-1];
-if(EQUAL(_houseID,-1)) exitWith {};
+if(EQUAL(_houseID,-1)) exitWith {["diag_log",["Containers not updated, House ID of -1."]] call TON_fnc_logIt;};
 
 _containers = _house getVariable ["containers",[]];
 
