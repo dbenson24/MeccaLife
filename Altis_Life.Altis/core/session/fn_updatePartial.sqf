@@ -59,6 +59,5 @@ diag_log format ["Packet: %1",_packet];
 diag_log format ["SteamID: %1", steamid];
 diag_log format ["Playerside: %1",playerSide];
 diag_log format ["Mode: %1", _mode];
-diag_log format 
 
-[[_packet],"DB_fnc_updatePartial",false,false] call life_fnc_MP;
+[[_packet],"DB_fnc_updatePartial",false,false] spawn life_fnc_MP;
