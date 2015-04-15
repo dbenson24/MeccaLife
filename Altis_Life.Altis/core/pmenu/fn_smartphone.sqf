@@ -38,7 +38,6 @@ switch(_type) do
 		} forEach playableUnits;
 		
 		[[getPlayerUID player, player],"TON_fnc_msgRequest",false] spawn life_fnc_MP;
-		ctrlEnable[887892,false];
 	};
 	case 1:
 	{
