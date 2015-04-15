@@ -16,7 +16,7 @@ uiNamespace setVariable["Weapon_Shop_Filter",_index];
 
 _priceTag = ((findDisplay 38400) displayCtrl 38404);
 _priceTag ctrlSetStructuredText parseText "";
-_itemList = ((findDisplay 38400) displayCtrl 38403);
+_list = ((findDisplay 38400) displayCtrl 38403);
 lbClear _itemList;
 
 switch (_index) do
@@ -25,11 +25,55 @@ switch (_index) do
 	{
 		_config = M_CONFIG(getArray,"WeaponShops",_shop,"items");
 		{
-			_itemInfo = [SEL(_x,0)] call life_fnc_fetchCfgDetails;
-			_itemList lbAdd format["%1",if(!(EQUAL(SEL(_x,1),""))) then {SEL(_x,1)} else {_itemInfo select 1}];
-			_itemList lbSetData[(lbSize _itemList)-1,_itemInfo select 0];
-			_itemList lbSetPicture[(lbSize _itemList)-1,_itemInfo select 2];
-			_itemList lbSetValue[(lbSize _itemList)-1,SEL(_x,2)];
+			_className = SEL(_x,0);
+			_displayName = SEL(_x,1);
+			_price = SEL(_x,2);
+			_dataPoint = SEL(_x,3);
+			_varName = SEL(_dataPoint,0);
+			_varType = SEL(_dataPoint,1);
+			_varValue = SEL(_dataPoint,2);
+			if(!(EQUAL(_className,"NONE"))) then {
+				_details = [_className] call life_fnc_fetchCfgDetails;
+				_pic = SEL(_details,2);
+			};
+			
+			if(!(EQUAL(_varName,""))) then {
+				_var = GVAR_MNS _varName;
+				if(typeName _var == typeName {}) then {_var = FETCH_CONST(_var);};
+				
+				_bool = switch(_varType) do {
+					case (typeName 0): {_var >= _varValue};
+					case (typeName true): {_var};
+					default {EQUAL(_var,_varValue)};
+				};
+				
+				if(_bool && {!isNil "_details"}) then {
+					if(EQUAL(_displayName,"")) then {
+						_list lbAdd (SEL(_details,1));
+					} else {
+						_list lbAdd _displayName;
+					};
+					
+					_list lbSetData [(lbSize _list)-1,_className];
+					_list lbSetValue [(lbSize _list)-1,_price];
+					_list lbSetPicture [(lbSize _list)-1,_pic];
+				};
+			} else {
+				if(isNil "_details") then {
+					_list lbAdd _displayName;
+					_list lbSetData [(lbSize _list)-1,_className];
+				} else {
+					if(EQUAL(_displayName,"")) then {
+						_list lbAdd (SEL(_details,1));
+					} else {
+						_list lbAdd _displayName;
+					};
+					
+					_list lbSetData [(lbSize _list)-1,_className];
+					_list lbSetValue [(lbSize _list)-1,_price];
+					_list lbSetPicture [(lbSize _list)-1,_pic];
+				};
+			};
 		} foreach (_config);
 		
 		((findDisplay 38400) displayCtrl 38405) ctrlSetText localize "STR_Global_Buy";
