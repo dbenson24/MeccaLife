@@ -10,14 +10,14 @@ if(_this == "") exitWith {};
 _query = format["housingFetchPlayerHouse:%1",_this];
 waitUntil{!DB_Async_Active};
 _houses = [_query,2,true] call DB_fnc_asyncCall;
-
-["diag_log",[
-		"------------- housingFetchPlayerHouse Request -------------",
-		format["QUERY: %1",_query],
-		format["Result: %1",_houses],
-		"-------------------------------------------------"
-	]] call TON_fnc_logIt;
-
+if((EQUAL(EXTDB_SETTINGS("MySQL_Query"),1))) then {
+	["diag_log",[
+			"------------- housingFetchPlayerHouse Request -------------",
+			format["QUERY: %1",_query],
+			format["Result: %1",_houses],
+			"-------------------------------------------------"
+		]] call TON_fnc_logIt;
+};
 
 
 
