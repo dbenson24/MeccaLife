@@ -339,6 +339,7 @@ class WeaponShops {
             { "SmokeShellPurple", "", 1000, { "", "", -1 } },		
             { "SmokeShellOrange", "", 1000, { "", "", -1 } },
 			{ "SmokeShellBlue", "Swat Tear Gas", 500, { "life_swatlevel", "SCALAR", 1 } },
+            { "hgun_P07_F", "", 500, { "", "", -1 } },
             { "30Rnd_9x21_Mag", "", 500, { "", "", -1 } },
 			{ "20Rnd_556x45_UW_mag", "", 500, { "life_coplevel", "SCALAR", 2 } },
             { "30Rnd_65x39_caseless_mag_Tracer", "", 500, { "life_coplevel", "SCALAR", 2 } },
