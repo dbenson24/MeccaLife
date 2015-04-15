@@ -42,11 +42,11 @@ switch (_side) do
 	{
 		if(_bool) then
 		{
-			life_radio_indep radioChannelAdd [_unit];
+			life_radio_civ radioChannelAdd [_unit];
 		}
 			else
 		{
-			life_radio_indep radioChannelRemove [_unit];
+			life_radio_civ radioChannelRemove [_unit];
 		};
 	};
 };
