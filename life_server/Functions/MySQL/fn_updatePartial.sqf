@@ -11,6 +11,8 @@ _uid = [_this,1,"",[""]] call BIS_fnc_param;
 _side = [_this,2,sideUnknown,[civilian]] call BIS_fnc_param;
 _mode = [_this,3,-1,[0]] call BIS_fnc_param;
 
+["diag_log",[format ["Update Partial Packet: %1",_packet]]] call TON_fnc_logIt;
+
 if(_uid == "" OR _side == sideUnknown) exitWith {}; //Bad.
 _query = "";
 
@@ -80,3 +82,5 @@ switch(_mode) do {
 if(_query == "") exitWith {};
 waitUntil {!DB_Async_Active};
 [_query,1] call DB_fnc_asyncCall;
+
+["diag_log",[format["Update Partial Query %1:",_query]]] call TON_fnc_logIt;
