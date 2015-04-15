@@ -23,5 +23,5 @@ _queryResult = [_query,2,true] call DB_fnc_asyncCall;
 		]] call TON_fnc_logIt;
 
 
-if(EQUAL(_queryResult,[])) exitWith {[[_house],"life_fnc_boughtHouse",_unit,false]};
+if(EQUAL(_queryResult,[])) exitWith {[[_house],"life_fnc_boughtHouse",_unit,false] call life_fnc_MP};
 true;
