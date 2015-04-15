@@ -54,4 +54,11 @@ switch(_mode) do {
 	};
 };
 
-[_packet,steamid,playerSide,_mode"DB_fnc_updatePartial",false,false] call life_fnc_MP;
+diag_log format ["------------------Update Partial-----------------"];
+diag_log format ["Packet: %1",_packet];
+diag_log format ["SteamID: %1", steamid];
+diag_log format ["Playerside: %1",playerSide];
+diag_log format ["Mode: %1", _mode];
+diag_log format 
+
+[[_packet],"DB_fnc_updatePartial",false,false] call life_fnc_MP;

@@ -7,9 +7,9 @@
 */
 private["_uid","_side","_value","_mode","_query","_packet"];
 _packet = [_this,0,[],[[]]] call BIS_fnc_param;
-_uid = [_this,1,"",[""]] call BIS_fnc_param;
-_side = [_this,2,sideUnknown,[civilian]] call BIS_fnc_param;
-_mode = [_this,3,-1,[0]] call BIS_fnc_param;
+_uid = _packet select 0;
+_side = _packet select 1;
+_mode = _packet select 3;
 
 ["diag_log",[format ["Update Partial Packet: %1",_packet]]] call TON_fnc_logIt;
 
