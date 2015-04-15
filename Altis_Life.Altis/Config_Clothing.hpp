@@ -110,7 +110,7 @@ class Clothing {
 
 		headgear[] = {
 			{ "NONE", "Remove Hat", 0, { "", "", -1 } },
-			{ "H_PilotHelmetFighter_B", "Teargas Helmet", 1000, { "life_coplevel", "SCALAR", 3 } },
+			{ "H_PilotHelmetFighter_B", "Teargas Helmet", 1000, { "life_coplevel", "SCALAR", 2 } },
 			{ "H_Cap_police", "", 1000, { "life_coplevel", "SCALAR", 1 } },
 			{ "H_Beret_blk_POLICE", "", 1000, { "life_coplevel", "SCALAR", 2 } },
 			{ "H_Beret_02", "", 1000, { "life_coplevel", "SCALAR", 4 } },
@@ -136,10 +136,10 @@ class Clothing {
 
 		vests[] = {
 			{ "NONE", "Remove Vest", 0, { "", "", -1 } },
-			{ "V_TacVest_blk_POLICE", "", 5000, { "", "", -1 } },
-			{ "V_PlateCarrier1_blk", "", 25000, { "life_coplevel", "SCALAR", 3 } },
-			{ "V_PlateCarrierSpec_blk", "", 45000, { "life_coplevel", "SCALAR", 4 } },
-			{ "V_PlateCarrierGL_blk", "", 65000, { "life_coplevel", "SCALAR", 7 } },
+			{ "V_TacVest_blk_POLICE", "Police Vest", 5000, { "", "", -1 } },
+			{ "V_PlateCarrier1_blk", "Officer Vest", 25000, { "life_coplevel", "SCALAR", 3 } },
+			{ "V_PlateCarrierSpec_blk", "Leader Vest", 45000, { "life_coplevel", "SCALAR", 5 } },
+			{ "V_PlateCarrierGL_blk", "Swat Vest", 500, { "life_swatlevel", "SCALAR", 1} },
 			{ "V_RebreatherB", "", 5000, { "", "", -1 } }
 		};
 
@@ -160,7 +160,7 @@ class Clothing {
 
 		headgear[] = {
 			{ "NONE", "Remove Hat", 0, { "", "", -1 } },
-			{ "H_PilotHelmetFighter_B", "Teargas Helmet", 100, { "life_coplevel", "SCALAR", 6 } }
+			{ "H_PilotHelmetFighter_B", "Teargas Helmet", 100, { "life_swatlevel", "SCALAR", 1 } }
 		};
 
 		goggles[] = {

@@ -42,10 +42,10 @@ _unit spawn
 	_RespawnBtn = ((findDisplay 7300) displayCtrl 7302);
 	_Timer = ((findDisplay 7300) displayCtrl 7301);
 	
-	_maxTime = time + (life_respawn_timer * 60);
+	maxDeathTime = time + (life_respawn_timer * 60);
 	_RespawnBtn ctrlEnable false;
-	waitUntil {_Timer ctrlSetText format[localize "STR_Medic_Respawn",[(_maxTime - time),"MM:SS.MS"] call BIS_fnc_secondsToString]; 
-	round(_maxTime - time) <= 0 OR isNull _this};
+	waitUntil {_Timer ctrlSetText format[localize "STR_Medic_Respawn",[(maxDeathTime - time),"MM:SS.MS"] call BIS_fnc_secondsToString]; 
+	round(maxDeathTime - time) <= 0 OR isNull _this};
 	_RespawnBtn ctrlEnable true;
 	_Timer ctrlSetText localize "STR_Medic_Respawn_2";
 };
