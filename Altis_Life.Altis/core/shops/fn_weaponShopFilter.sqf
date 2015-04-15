@@ -49,9 +49,9 @@ switch (_index) do
 				
 				if(_bool && {!isNil "_details"}) then {
 					if(EQUAL(_displayName,"")) then {
-						_list lbAdd (SEL(_details,1));
+						_list lbAdd format ["%1",(SEL(_details,1))];
 					} else {
-						_list lbAdd _displayName;
+						_list lbAdd format ["%1",_displayName];
 					};
 					
 					_list lbSetData [(lbSize _list)-1,_className];
@@ -64,9 +64,9 @@ switch (_index) do
 					_list lbSetData [(lbSize _list)-1,_className];
 				} else {
 					if(EQUAL(_displayName,"")) then {
-						_list lbAdd (SEL(_details,1));
+						_list lbAdd format["%1",(SEL(_details,1))];
 					} else {
-						_list lbAdd _displayName;
+						_list lbAdd format["%1",_displayName];
 					};
 					
 					_list lbSetData [(lbSize _list)-1,_className];
