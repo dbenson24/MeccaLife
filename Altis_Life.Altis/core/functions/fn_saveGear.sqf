@@ -187,3 +187,4 @@ if(playerSide == west || playerSide == civilian && {EQUAL(LIFE_SETTINGS(getNumbe
 
 
 life_gear = _return;
+diag_log format["Saved Gear: %1", life_gear];

@@ -7,8 +7,12 @@
     Loads saved civilian gear, this is limited for a reason and that's balance.
 */
 private["_itemArray","_uniform","_vest","_backpack","_goggles","_headgear","_items","_prim","_seco","_uItems","_bItems","_vItems","_pItems","_hItems","_yItems","_uMags","_bMags","_vMags","_handle"];
-_itemArray = life_gear;
-diag_log format ["life_gear: %1", life_gear];
+if (playerSide == west) then {
+    _itemArray = life_copgear;
+} else {
+    _itemArray = life_gear;
+};
+diag_log format ["loadGear: %1", _itemArray];
 waitUntil {!(isNull (findDisplay 46))};
 
 _handle = [] spawn life_fnc_stripDownPlayer;

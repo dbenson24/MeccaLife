@@ -37,6 +37,7 @@ switch(_mode) do {
 	
 	case 3: {
 		[] call life_fnc_saveGear;
+		life_copgear = life_gear;
 		_packet set[2,life_gear];
 	};
 	
