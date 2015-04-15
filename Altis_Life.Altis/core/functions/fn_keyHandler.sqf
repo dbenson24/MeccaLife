@@ -487,6 +487,10 @@ switch (_code) do {
 						if ((typeOf _veh) == "C_SUV_01_F") then {
 							[_veh] call life_fnc_lowerCenter;
 						};
+						if ((typeOf _veh) == "O_APC_Wheeled_02_rcws_F") then {
+							_veh disableTIEquipment true;
+						};
+						
 					} else {
 						if(local _veh) then {
 							_veh lock 2;
@@ -521,6 +525,9 @@ switch (_code) do {
 						};
 						systemChat localize "STR_MISC_VehLock";
 						_veh say3D "lock";
+						if ((typeOf _veh) == "O_APC_Wheeled_02_rcws_F") then {
+							_veh disableTIEquipment true;
+						};
 					};
 				};
 			};
