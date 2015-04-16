@@ -95,7 +95,7 @@ _Btn3 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_searchVehAction;";
 
 //Button 4 - Pull Out Dead Bodies
 _Btn4 ctrlSetText "Pull Out Dead";
-_Btn4 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_pulloutDead; closeDialog 0;"
+_Btn4 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_pulloutDead; closeDialog 0;";
 
 //Button 5 - undefined
 if (_owner && life_vInact_curTarget getVariable["gps",false]) then {
