@@ -10,6 +10,6 @@ if(player getVariable "restrained") then
 	player setVariable["transporting",false,true];
 };
 
-player action ["Eject", vehicle player];
+moveOut player;
 titleText[localize "STR_NOTF_PulledOut","PLAIN"];
 titleFadeOut 4;
