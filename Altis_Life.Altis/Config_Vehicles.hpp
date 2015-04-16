@@ -133,6 +133,7 @@ class CarShops {
 	class cop_car {
 		side = "cop";
 		vehicles[] = {
+			{ "B_Quadbike_01_F", pquadbike, "" }, 
 			{ "C_Offroad_01_F", poffroadcop, ""},
 			{ "C_SUV_01_F", psuvcop, "" },
 			{ "B_MRAP_01_F", phuntercop, "", { "life_coplevel", 4 } },
@@ -248,6 +249,7 @@ class CfgVehicles {
 
 	class B_Truck_01_medical_F : Default {
 		vItemSpace = 250;
+		price = pzamakmed;
 		storageFee[] = { 0, 0, 6500, 0 };
 		garageSell[] = { 0, 0, 25000, 0 };
 		chopShop = 12500;
