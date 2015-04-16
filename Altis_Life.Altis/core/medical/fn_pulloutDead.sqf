@@ -16,3 +16,5 @@ if (isNull(_veh)) exitWith {};
         moveOut _x;
     };
 } forEach (crew _veh);
+
+hint "You have pulled the dead players out of this vehicle";
