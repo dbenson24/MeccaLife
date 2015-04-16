@@ -88,17 +88,22 @@ if(_curTarget isKindOf "Ship") then
 	};
 };
 
-//Button 3 - GPS
-if (_owner && life_vInact_curTarget getVariable["gps",false]) then {
-	_Btn3 ctrlEnable true;
-	_Btn3 ctrlSetText "Toggle GPS";
-	_Btn3 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_toggleGPS; closeDialog 0;"
-} else {
-	_Btn3 ctrlShow false;
-};
-//Button 4 - undefined
-_Btn4 ctrlShow false;
+//Button 3 - Check Vehicle Registration
+_Btn3 ctrlSetText localize "STR_vInAct_Registration";
+_Btn3 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_searchVehAction;";
+
+
+//Button 4 - Pull Out Dead Bodies
+_Btn4 ctrlSetText "Pull Out Dead";
+_Btn4 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_pulloutDead; closeDialog 0;"
+
 //Button 5 - undefined
-_Btn5 ctrlShow false;
+if (_owner && life_vInact_curTarget getVariable["gps",false]) then {
+	_Btn5 ctrlEnable true;
+	_Btn5 ctrlSetText "Toggle GPS";
+	_Btn5 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_toggleGPS; closeDialog 0;"
+} else {
+	_Btn5 ctrlShow false;
+};
 //Button 6 - undefined
 _Btn6 ctrlShow false; 
