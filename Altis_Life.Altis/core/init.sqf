@@ -136,4 +136,13 @@ life_last_sync = time;
     };
 };
 
+if (playerSide == independent) {
+	[] spawn {
+		_updateTime = time;
+		while {true} dp {
+			if (time > )
+		}
+	}
+}
+
 life_invisible = false;
