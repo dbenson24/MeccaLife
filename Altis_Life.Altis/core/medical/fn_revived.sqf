@@ -41,7 +41,7 @@ switch(playerSide) do {
 		switch (FETCH_CONST(life_coplevel)) do {
 			case 1:
 		{
-			[[player,0,"textures\cadetTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+			[[player,0,"textures\cadettroop.paa"], "life_fnc_setTexture", true, false] call life_fnc_MP;
 		};
 	
 		case 2:
@@ -56,16 +56,16 @@ switch(playerSide) do {
 	
 		case 4:
 		{
-			[[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+			[[player,0,"textures\corptroop.paa"], "life_fnc_setTexture", true, false] call life_fnc_MP;
 		};
 	
 		case 5:
 		{
-			[[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+			[[player,0,"textures\corptroop.paa"], "life_fnc_setTexture", true, false] call life_fnc_MP;
 		};
 		case 6:
 		{
-			[[player,0,"textures\corpTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
+			[[player,0,"textures\corptroop.paa"], "life_fnc_setTexture", true, false] call life_fnc_MP;
 		};
 	};
 	

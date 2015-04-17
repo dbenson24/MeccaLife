@@ -505,8 +505,8 @@ class CfgVehicles {
 	                "#(ai,64,64,1)Fresnel(0.3,3)"
             } },
 			{ "Police", "cop", {
-	                "textures\policeoffroad.jpg",
-					"textures\policeoffroad.jpg"
+	                "textures\policeoffroad.paa",
+					"textures\policeoffroad.paa"
             } },
             { "Taxi", "civ", {
 	                "#(argb,8,8,3)color(0.6,0.3,0.01,1)"
@@ -555,7 +555,7 @@ class CfgVehicles {
 	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport06_co.paa"
             } },
             { "Police", "cop", {
-                "textures\policehatch.jpg"
+                "textures\policehatch.paa"
             } }
         };
     };
@@ -691,7 +691,7 @@ class CfgVehicles {
 	                "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa"
             } },
             { "Cop", "cop", {
-                "textures\meccapolicesuv.jpg"
+                "textures\meccapolicesuv.paa"
             } },
             { "Donut", "civ", {
                 "textures\donut_suv_textures.jpg"
@@ -740,8 +740,8 @@ class CfgVehicles {
         chopShop = 5000;
         textures[] = {
         	{ "Mecca State", "cop", {
-                "textures\hunter1.jpg",
-                "textures\hunter2.jpg"
+                "textures\Hunter1.paa",
+                "textures\Hunter2.paa"
             } },
             { "Black", "fed", {
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
@@ -758,7 +758,7 @@ class CfgVehicles {
         chopShop = 5000;
         textures[] = {
         	{ "Sheriff", "cop", {
-                "textures\meccalittlebird.jpg"
+                "textures\meccalittlebird.paa"
             } },
 			{ "Black", "fed", {
 	                "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa"

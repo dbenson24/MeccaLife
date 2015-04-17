@@ -14,15 +14,15 @@ if(side player == independent) then {
 if(side player == WEST) then {
 	// Cop Level 1 & 2
 	if (uniform player == "U_BG_Guerilla2_2") then {
-		player setObjectTextureGlobal [0, "textures\cadettroop.jpg"]; 
+		player setObjectTextureGlobal [0, "textures\cadettroop.paa"]; 
 	};
 	// Cop Level 3 & 4
 	if (uniform player == "U_BG_Guerilla3_2") then {
-		player setObjectTextureGlobal [0, "textures\corptroop.jpg"]; 
+		player setObjectTextureGlobal [0, "textures\corptroop.paa"]; 
 	};
 	// Cop Level 5 & 6 & 7
 	if (uniform player == "U_O_OfficerUniform_ocamo") then {
-		player setObjectTextureGlobal [0, "textures\capttroop.jpg"]; 
+		player setObjectTextureGlobal [0, "textures\capttroop.paa"]; 
 	};
 	
 	if (uniform player == "U_O_SpecopsUniform_ocamo") then {
