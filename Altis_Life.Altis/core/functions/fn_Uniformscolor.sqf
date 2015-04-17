@@ -6,7 +6,7 @@
 
 if(side player == independent) then {
 	if ((uniform player) == "U_B_CTRG_3") then {
-		player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"];
+		player setObjectTextureGlobal [0, "textures\medic_uniform.paa"];
 	};
 };
 

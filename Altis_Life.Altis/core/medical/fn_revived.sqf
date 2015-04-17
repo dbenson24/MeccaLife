@@ -36,7 +36,7 @@ life_is_alive = true;
 
 //Retexturing of units clothing, vanilla files only retexture the EMS unit.
 switch(playerSide) do {
-	case independent: {[[player,0,"textures\medic_uniform.jpg"],"life_fnc_setTexture",true,false] call life_fnc_MP;};
+	case independent: {[[player,0,"textures\medic_uniform.paa"],"life_fnc_setTexture",true,false] call life_fnc_MP;};
 	case west: {
 		switch (FETCH_CONST(life_coplevel)) do {
 			case 1:

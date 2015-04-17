@@ -240,8 +240,8 @@ class CfgVehicles {
 		chopShop = 3000;
 		textures[] = {
 		    { "EMS", "med", {
-                "textures\Zamak medical 2.jpg",
-                "textures\Zamak medical 1.jpg"
+                "textures\Zamak medical 1.paa",
+                "textures\Zamak medical 2.paa"
             } }
 		};
 	};
@@ -609,7 +609,7 @@ class CfgVehicles {
                 "\A3\Soft_F_Beta\Truck_02\data\truck_02_kab_co.paa",
                 "\a3\soft_f_beta\Truck_02\data\truck_02_kuz_co.paa"
             } },
-            { "Black", "fed", {
+            { "Black", "civ", {
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
             } }
         };
@@ -799,7 +799,7 @@ class CfgVehicles {
 	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_digital_co.paa"
             } },
             { "MES", "med", {
-                "textures\mlbird.jpg"
+                "textures\mlbird.paa"
             } }
         };
     };
@@ -875,7 +875,7 @@ class CfgVehicles {
 	                "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_opfor_co.paa" 
             } },
             { "MES Orca", "med", {
-                "textures\morca.jpg"
+                "textures\morca.paa"
             } }
         };
     };

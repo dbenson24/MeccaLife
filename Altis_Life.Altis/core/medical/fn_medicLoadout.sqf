@@ -32,7 +32,7 @@ player addItem	"Chemlight_red";
 player addItem	"Chemlight_yellow";
 player addItem	"Chemlight_blue";
 
-[[player,0,"textures\medic_uniform.jpg"],"life_fnc_setTexture",true,false] call life_fnc_MP;
+[[player,0,"textures\medic_uniform.paa"],"life_fnc_setTexture",true,false] call life_fnc_MP;
 
 [] call life_fnc_saveGear;
 [] call life_fnc_Uniformscolor;
