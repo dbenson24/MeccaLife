@@ -164,5 +164,16 @@ class life_admin_menu {
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
+		class ReviveAll : Life_RscButtonMenu {
+			idc = 2912;
+			text = "Revive All";
+			onButtonClick = "[] spawn life_fnc_adminRevive;";
+			colorBackground[] = {0, 0, 0, 0.0};	
+			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.2;
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
+	};
 	};
 };
