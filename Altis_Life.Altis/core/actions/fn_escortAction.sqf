@@ -20,7 +20,7 @@ if (life_action_inUse) exitWith {
     hint "You're already performing another action.";
 };
 life_action_inUse = true;
-_obj_main = player;
+_obj_main = player;;
 _target setPos((getPos player) vectorAdd(vectorDir player));
 _target attachTo[player, [0, -0.175, -1.2], "LeftShoulder"];
 waitUntil {

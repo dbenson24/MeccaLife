@@ -20,7 +20,7 @@ waitUntil {
 		if (side _x == independent) then {
 			_distance = _pos distance _x;
 			if (_distance < _lowestdistance) then {
-				_lowestdistance = _distance;	
+				_lowestdistance = round(_distance);	
 			};
 		};
 	} foreach playableUnits;
