@@ -26,4 +26,9 @@ switch (playerSide) do
 		life_actions = life_actions + [player addAction["Seize Objects",life_fnc_seizeObjects,cursorTarget,0,false,false,"",'((count(nearestObjects [player,["WeaponHolder"],3])>0) || (count(nearestObjects [player,["GroundWeaponHolder"],3])>0) || (count(nearestObjects [player,["WeaponHolderSimulated"],3])>0))']];
 		
 	};
+	
+	case independent:
+	{
+		life_actions = life_actions + [player addAction["Pull Out Dead Players",life_fnc_pulloutDead,"",200,false,false,"",'!isNull cursorTarget && ((cursorTarget isKindOf "Car")||(cursorTarget isKindOf "Air")||(cursorTarget isKindOf "Ship")) && cursorTarget distance player < 5']];
+	};
 };

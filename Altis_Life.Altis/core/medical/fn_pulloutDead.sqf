@@ -7,8 +7,10 @@
 
 */
 private["_veh"];
-_veh = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
-if (isNull(_veh)) exitWith {};
+/*_veh = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
+if (isNull(_veh)) exitWith {};*/
+
+_veh = cursorTarget;
 
 {
     if !(alive _x) then
