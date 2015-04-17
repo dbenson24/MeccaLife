@@ -11,7 +11,7 @@ disableSerialization;
 
 _medicsOnline = ((findDisplay 7300) displayCtrl 7304);
 _medicsNear = ((findDisplay 7300) displayCtrl 7305);
-_lowestdistance = -1;
+_lowestdistance = 999999;
 _distance = 0;
 _pos = getPosATL player;
 
