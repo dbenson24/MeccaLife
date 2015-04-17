@@ -6,8 +6,10 @@
 	Description:
 	Starts the revive process on the player.
 */
-private["_target","_revivable","_targetName","_ui","_progressBar","_titleText","_cP","_title"];
+private["_target","_revivable","_targetName","_ui","_progressBar","_titleText","_cP","_title","_incar","_ploc"];
 _target = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
+_incar = [_this,1,false,[false]] call BIS_fnc_param;
+_ploc = [_this,2,[],[[]]] call BIS_fnc_param;
 if(isNull _target) exitWith {}; //DAFUQ?@!%$!R?EFFD?TGSF?HBS?DHBFNFD?YHDGN?D?FJH
 
 _revivable = _target GVAR ["Revive",FALSE];
@@ -66,7 +68,7 @@ ADD(BANK,(LIFE_SETTINGS(getNumber,"revive_fee")));
 
 life_action_inUse = false;
 _target SVAR ["Revive",TRUE,TRUE];
-[[profileName],"life_fnc_revived",_target,FALSE] call life_fnc_MP;
+[[profileName,_incar,_ploc],"life_fnc_revived",_target,FALSE] call life_fnc_MP;
 titleText[format[localize "STR_Medic_RevivePayReceive",_targetName,[LIFE_SETTINGS(getNumber,"revive_fee")] call life_fnc_numberText],"PLAIN"];
 
 sleep .6;

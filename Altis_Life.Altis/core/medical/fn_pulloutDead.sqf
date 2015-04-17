@@ -17,7 +17,7 @@ if (isNull(_veh)) exitWith {};
     if !(alive _x) then
     {
         life_action_inUse = true;
-        [_x] call life_fnc_revivePlayer;
+        [_x, true, position player] call life_fnc_revivePlayer;
         waitUntil{!life_action_inUse};
         _x setPos (getPos player);
     };

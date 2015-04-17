@@ -6,8 +6,10 @@
 	Description:
 	THANK YOU JESUS I WAS SAVED!
 */
-private["_medic","_dir"];
+private["_medic","_dir","_incar","_ploc"];
 _medic = [_this,0,"Unknown Medic",[""]] call BIS_fnc_param;
+_incar = [_this,1,false,[false]] call BIS_fnc_param;
+_ploc = [_this,2,[],[[]]] call BIS_fnc_param;
 _uid = getPlayerUID life_corpse;
 _name = format["%1gear",_uid];
 //_oldGear = missionNamespace getVariable _name;
@@ -72,7 +74,11 @@ switch(playerSide) do {
 
 //Bring me back to life.
 player setDir _dir;
-player setPosASL (visiblePositionASL life_corpse);
+if (_incar) then {
+	player setPos _ploc;
+} else {
+	player setPosASL (visiblePositionASL life_corpse);
+};
 life_corpse SVAR ["Revive",nil,TRUE];
 life_corpse SVAR ["name",nil,TRUE];
 [[life_corpse],"life_fnc_corpse",true,false] call life_fnc_MP;

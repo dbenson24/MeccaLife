@@ -93,8 +93,8 @@ _Btn3 ctrlSetText localize "STR_vInAct_Registration";
 _Btn3 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_searchVehAction;";
 
 
-//Button 4 - Pull Out Dead Bodies
-_Btn4 ctrlSetText "Pull Out Dead";
+//Button 4 - Pull Out and Revive Dead Bodies
+_Btn4 ctrlSetText "Rescue Dead";
 _Btn4 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_pulloutDead; closeDialog 0;";
 
 //Button 5 - undefined
