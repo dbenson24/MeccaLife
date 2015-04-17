@@ -241,7 +241,8 @@ class CfgVehicles {
 		textures[] = {
 		    { "EMS", "med", {
                 "textures\Zamak medical 1.paa",
-                "textures\Zamak medical 2.paa"
+                "textures\Zamak medical 2.paa",
+                "textures\Zamak medical 3.paa"
             } }
 		};
 	};
