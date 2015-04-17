@@ -175,5 +175,4 @@ class life_admin_menu {
 			h = (1 / 25);
 		};
 	};
-	};
 };
