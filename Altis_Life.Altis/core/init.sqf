@@ -135,14 +135,21 @@ life_last_sync = time;
         };
     };
 };
-
+/*
 if (playerSide == independent) {
 	[] spawn {
-		_updateTime = time;
+		_updateTime = time - 30;
 		while {true} dp {
-			if (time > )
-		}
-	}
-}
+			if (time > _updateTime + 30) then {
+				{
+					_veh = vehicle _x;
+					if (_veh != _x) then {
+						_veh
+					};
+				} forEach allDeadMen;
+			};
+		};
+	};
+};*/
 
 life_invisible = false;
