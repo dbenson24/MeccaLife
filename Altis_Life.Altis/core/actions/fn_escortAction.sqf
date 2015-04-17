@@ -46,7 +46,7 @@ else {
 ] spawn life_fnc_MP;
 player switchMove "acinpercmstpsraswrfldnon";
 player playMoveNow "acinpercmstpsraswrfldnon";
-life_stopEscortAction = _obj_main addAction[format["<t color='#FF0000'>%1</t>", "Stop Escorting"], "player removeAction life_stopEscortAction; life_stopEscortAction = nil;", nil, 20, false, true, "", ""];
+life_stopEscortAction = _obj_main addAction[format["<t color='#DEFF24'>%1</t>", "Stop Escorting"], "player removeAction life_stopEscortAction; life_stopEscortAction = nil;", nil, 20, false, true, "", ""];
 waitUntil {
     sleep 0.3;
     _target = (player getVariable["TransportingPlayer", objNull]);
