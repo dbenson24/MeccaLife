@@ -63,7 +63,7 @@ if(_curTarget isKindOf "Man" && {!alive _curTarget} && {playerSide in [west,inde
 };
 
 //Check if it's a dead body.
-if(_curTarget isKindOf "Man" && {!alive _curTarget} && {playerSide in [west,civilian]}) exitWith {
+if(_curTarget isKindOf "Man" && {!alive _curTarget} ) exitWith {
 	// Put your friend inside the vehicle
 	[_curTarget] call life_fnc_putInCar;
 };
