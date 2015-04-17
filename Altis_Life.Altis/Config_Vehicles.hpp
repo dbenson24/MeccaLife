@@ -89,7 +89,7 @@ class CarShops {
 		side = "med";
 		vehicles[] = {
 			{ "C_Offroad_01_repair_F", poffroadmed, "" },
-			{ "B_Truck_01_medical_F", pzamakmed, "" , { "life_medicLevel", 3 } },
+			{ "I_Truck_02_medical_F", pzamakmed, "" , { "life_medicLevel", 3 } },
 			{ "C_Hatchback_01_sport_F", phatchbacksport, "", { "life_medicLevel", 2 } },
 			{ "I_MRAP_03_F", pstrider, "" , { "life_medicLevel", 5 } }
 		};
@@ -238,6 +238,12 @@ class CfgVehicles {
 		storageFee[] = { 0, 0, 1500, 0 };
 		garageSell[] = { 0, 0, 5000, 0 };
 		chopShop = 3000;
+		textures[] = {
+		    { "EMS", "med", {
+                "textures\Zamak medical 2.jpg",
+                "textures\Zamak medical 1.jpg"
+            } }
+		};
 	};
 
 	class O_Truck_03_medical_F : Default {
