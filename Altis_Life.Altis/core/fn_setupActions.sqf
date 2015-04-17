@@ -27,8 +27,8 @@ switch (playerSide) do
 		
 	};
 	
-	case independent:
+	/*case independent:
 	{
 		life_actions = life_actions + [player addAction["Rescue Dead Players",life_fnc_pulloutDead,"",200,false,false,"",'!isNull cursorTarget && ((cursorTarget isKindOf "Car")||(cursorTarget isKindOf "Air")||(cursorTarget isKindOf "Ship")) && cursorTarget distance player < 5']];
-	};
+	};*/
 };

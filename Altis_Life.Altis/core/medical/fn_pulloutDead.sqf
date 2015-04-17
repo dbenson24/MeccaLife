@@ -7,10 +7,10 @@
 
 */
 private["_veh"];
-/*_veh = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;*/
+_veh = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 
 
-_veh = cursorTarget;
+//_veh = cursorTarget;
 if (isNull(_veh)) exitWith {};
 
 {
@@ -19,6 +19,7 @@ if (isNull(_veh)) exitWith {};
         life_action_inUse = true;
         [_x] call life_fnc_revivePlayer;
         waitUntil{!life_action_inUse};
+        _x setPos (getPos player);
     };
 } forEach (crew _veh);
 
