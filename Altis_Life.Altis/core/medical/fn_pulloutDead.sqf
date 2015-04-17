@@ -7,38 +7,19 @@
 
 */
 private["_veh"];
-/*_veh = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
-if (isNull(_veh)) exitWith {};*/
+/*_veh = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;*/
+
 
 _veh = cursorTarget;
-
-_vehPos = getPos _veh;
-
-_posDriverExit = _veh selectionPosition ("pos driver");
-_posCommanderExit = _veh selectionPosition ("pos codriver");
-_posCargoExit = _veh selectionPosition ("pos driver");
-
-_posDriver = (driver _veh) worldToModel _vehPos;
-_posCommander = (commander _veh) worldToModel _vehPos;
-_posCargo = ((crew _veh ) select 0) worldToModel _vehPos;
-
-_driverExitOffset = (_posDriverExit select 0) - (_posDriver select 0);
+if (isNull(_veh)) exitWith {};
 
 {
     if !(alive _x) then
     {
-        _deadPos = _x worldToModel _vehPos;
-        if ((_deadPos select 0) > 0) then
-        {
-            _deadPos set [0, (_deadPos select 0) + (abs _driverExitOffset)];
-        }else
-        {
-            _deadPos set [0, (_deadPos select 0) + (_driverExitOffset)];
-        };
-        _deadExitPos = _x modelToWorld _deadPos;
-        _deadExitPos set [1, (getPos _x) select 1];
-        _x setPos _deadExitPos;
+        life_action_inUse = true;
+        [_x] call life_fnc_revivePlayer;
+        waitUntil{!life_action_inUse};
     };
 } forEach (crew _veh);
 
-hint "You have pulled the dead players out of this vehicle";
+hint "You have rescued the dead players in this vehicle";
