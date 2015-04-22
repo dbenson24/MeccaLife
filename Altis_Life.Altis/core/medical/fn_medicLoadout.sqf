@@ -21,6 +21,8 @@ player addItem "ItemCompass";
 player assignItem "ItemCompass";
 player addItem "ItemWatch";
 player assignItem "ItemWatch";
+player addItem "ItemGPS";
+player assignItem "ItemGPS";
 player addItem "Medikit";
 player addItem "ToolKit";
 player addItem "ToolKit";

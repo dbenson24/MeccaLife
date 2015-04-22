@@ -24,5 +24,7 @@ player addItem "ItemWatch";
 player assignItem "ItemWatch";
 player addItem "ItemRadio";
 player assignItem "ItemRadio";
+player addItem "ItemGPS";
+player assignItem "ItemGPS";
 [] call life_fnc_Uniformscolor;
 [] call life_fnc_saveGear;
