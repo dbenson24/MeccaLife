@@ -361,7 +361,6 @@ class WeaponShops {
 			{ "srifle_EBR_F", "Swat MK18", 500, { "life_swatlevel", "SCALAR", 1 } },
 			{ "srifle_DMR_01_F", "Swat Rahim", 500, { "life_swatlevel", "SCALAR", 1 } },
             { "muzzle_snds_H", "Swat Suppressor", 500, { "life_swatlevel", "SCALAR", 1 } },
-            { "muzzle_snds_H_MG", "Swat MG Suppressor", 500, { "life_swatlevel", "SCALAR", 1 } },
 			{ "bipod_01_F_blk", "Black Bipod", 15000, { "life_coplevel", "SCALAR", 3 } },
 			{ "bipod_01_F_snd", "Desert Bipod", 15000, { "life_coplevel", "SCALAR", 7 } },
             { "bipod_03_F_blk", "Swat Bipod", 500, { "life_swatlevel", "SCALAR", 1 } },
