@@ -26,7 +26,7 @@ if(side player == WEST) then {
 	};
 	
 	if (uniform player == "U_O_SpecopsUniform_ocamo") then {
-		player setObjectTextureGlobal [0, "textures\swat.jpg"]; 
+		player setObjectTextureGlobal [0, "textures\swat.paa"]; 
 	};
 };
 
@@ -35,6 +35,6 @@ if(side player == civilian) then {
 	player setObjectTextureGlobal [0, "textures\mafia.paa"];
 	};
 	if(side player == civilian && uniform player == "U_C_Poloshirt_blue") then {
-	player setObjectTextureGlobal [0, "textures\frozen.jpg"];
+	player setObjectTextureGlobal [0, "textures\meccashirt.paa"];
 	};
 };

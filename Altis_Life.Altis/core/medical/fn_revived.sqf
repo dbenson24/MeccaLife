@@ -35,42 +35,7 @@ if(BANK > (LIFE_SETTINGS(getNumber,"revive_fee"))) then {
 life_is_alive = true;
 
 //Retexturing of units clothing, vanilla files only retexture the EMS unit.
-switch(playerSide) do {
-	case independent: {[[player,0,"textures\medic_uniform.paa"],"life_fnc_setTexture",true,false] call life_fnc_MP;};
-	case west: {
-		switch (FETCH_CONST(life_coplevel)) do {
-			case 1:
-		{
-			[[player,0,"textures\cadettroop.paa"], "life_fnc_setTexture", true, false] call life_fnc_MP;
-		};
-	
-		case 2:
-		{
-			[[player,0,"textures\stateTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
-		};
-	
-		case 3:
-		{
-			[[player,0,"textures\stateTroop.jpg"], "life_fnc_setTexture", true, false] call life_fnc_MP;
-		};
-	
-		case 4:
-		{
-			[[player,0,"textures\corptroop.paa"], "life_fnc_setTexture", true, false] call life_fnc_MP;
-		};
-	
-		case 5:
-		{
-			[[player,0,"textures\corptroop.paa"], "life_fnc_setTexture", true, false] call life_fnc_MP;
-		};
-		case 6:
-		{
-			[[player,0,"textures\corptroop.paa"], "life_fnc_setTexture", true, false] call life_fnc_MP;
-		};
-	};
-	
-};
-};
+[] call life_fnc_Uniformscolor;
 
 //Bring me back to life.
 player setDir _dir;

@@ -219,9 +219,9 @@ class CfgVehicles {
 	    price = pmarid;
 	    textures[] = {
 	        { "Swat", "cop", {
-                "textures\swat apc.jpg",
-                "textures\swat apc2.jpg",
-                "textures\swat turret.jpg"
+                "textures\swat apc.paa",
+                "textures\swat apc2.paa",
+                "textures\swat turret.paa"
             } }
 	    };
 	};
@@ -694,7 +694,7 @@ class CfgVehicles {
                 "textures\meccapolicesuv.paa"
             } },
             { "Donut", "civ", {
-                "textures\donut_suv_textures.jpg"
+                "textures\donut_suv_textures.paa"
             } }
 	        };
     };
