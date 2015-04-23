@@ -59,6 +59,33 @@ if(!(EQUAL(_uniform,""))) then {_handle = [_uniform,true,false,false,false] spaw
 if(!(EQUAL(_vest,""))) then {_handle = [_vest,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};};
 if(!(EQUAL(_backpack,""))) then {_handle = [_backpack,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};};
 
+
+// Removing lethal rounds from dumbass privates or cadets who synced gear with them
+if ((playerSide == west) && (life_coplevel < 3)) then {
+    {
+        if (_x == "30Rnd_65x39_caseless_mag") then {
+            _uMags set [_foreachindex, -1];
+        };
+    } foreach _uMags;
+    
+    {
+        if (_x == "30Rnd_65x39_caseless_mag") then {
+            _bMags set [_foreachindex, -1];
+        };
+    } foreach _bMags;
+    
+    {
+        if (_x == "30Rnd_65x39_caseless_mag") then {
+            _vMags set [_foreachindex, -1];
+        };
+    } foreach _vMags;
+};
+
+SUB(_uMags,[-1]);
+SUB(_bMags,[-1]);
+SUB(_vMags,[-1]);
+
+
 /* Hotfix for losing virtual items on login */
 if(!isNil {SEL(_this,0)}) then {
 	ADD(life_maxWeight,(round(FETCH_CONFIG2(getNumber,CONFIG_VEHICLES,(backpack player),"maximumload") / 4)));

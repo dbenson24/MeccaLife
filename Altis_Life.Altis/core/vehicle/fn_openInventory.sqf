@@ -13,6 +13,11 @@ if((_vehicle getVariable ["trunk_in_use",false])) exitWith {hint localize "STR_M
 if(!createDialog "TrunkMenu") exitWith {hint localize "STR_MISC_DialogError";}; //Couldn't create the menu?
 disableSerialization;
 
+_vehicle spawn {
+	sleep (5 * 60);
+	_this setVariable["trunk_in_use",false,true];
+};
+
 if(_vehicle isKindOf "House_F") then {
 	ctrlSetText[3501,format[(localize "STR_MISC_HouseStorage")+ " - %1",getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")]];
 } else {
