@@ -1,6 +1,9 @@
 #include <macro.h>
 /*
 	File: fn_escortAction.sqf
+	Description: Handles picking up a player and putting him on shouler
+	Author: Poseidon
+	Edited by: Derek
 */
 private["_target", "_currwep"];
 _target = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
@@ -20,7 +23,6 @@ if (life_action_inUse) exitWith {
     hint "You're already performing another action.";
 };
 life_action_inUse = true;
-_obj_main = player;;
 _target setPos((getPos player) vectorAdd(vectorDir player));
 _target attachTo[player, [0.3, -0.175, -1.2], "LeftShoulder"];
 waitUntil {
@@ -46,7 +48,7 @@ else {
 ] spawn life_fnc_MP;
 player switchMove "acinpercmstpsraswrfldnon";
 player playMoveNow "acinpercmstpsraswrfldnon";
-life_stopEscortAction = _obj_main addAction[format["<t color='#DEFF24'>%1</t>", "Stop Escorting"], "player removeAction life_stopEscortAction; life_stopEscortAction = nil;", nil, 20, false, true, "", ""];
+life_stopEscortAction = player addAction[format["<t color='#DEFF24'>%1</t>", "Stop Escorting"], "player removeAction life_stopEscortAction; life_stopEscortAction = nil;", nil, 20, false, true, "", ""];
 waitUntil {
     sleep 0.3;
     _target = (player getVariable["TransportingPlayer", objNull]);

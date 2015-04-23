@@ -14,7 +14,7 @@ if(!createDialog "TrunkMenu") exitWith {hint localize "STR_MISC_DialogError";}; 
 disableSerialization;
 
 _vehicle spawn {
-	sleep (5 * 60);
+	sleep (2 * 60);
 	_this setVariable["trunk_in_use",false,true];
 };
 
