@@ -2,7 +2,7 @@
 	fn_breakoutTimer.sqf
 */
 private["_uiDisp","_time","_timer"];
-if(!(playerSide == west || life_is_arrested || player == (_this select 1))) exitWith {}; //If you do not need to display this then dont! (Check order: Cop || Prisoner || Player Robbing)
+//if(!(playerSide == west || life_is_arrested || player == (_this select 1))) exitWith {}; //If you do not need to display this then dont! (Check order: Cop || Prisoner || Player Robbing)
 disableSerialization;
 0 cutRsc ["life_breakouttimer","PLAIN"];
 _uiDisp = uiNamespace getVariable "life_breakouttimer";

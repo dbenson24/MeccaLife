@@ -21,9 +21,16 @@ _unit setVariable["inbreakout",true,true];
 
 //hint "You are currently breaking prisoners out of the prison, you need to stay within 50 meters of your current location or you will stop the breakout. The breakout will take around four minutes to complete.";
 
-[[_unit,player],"life_fnc_breakoutTimer",true] spawn life_fnc_MP; //Show the countdown to all prisoners, cops and the player.
+[[_unit,player],"life_fnc_breakoutTimer",group player, false] spawn life_fnc_MP; //Show the countdown to all prisoners, cops and the player.
+[[_unit,player],"life_fnc_breakoutTimer",west, false] spawn life_fnc_MP;
 
 [[_unit],"life_fnc_bankalarmsound",true,true] call life_fnc_MP;
+
+// Charge all the players in the group with robbing the fed
+{
+	[[getPlayerUID _x,_x getVariable["realname",name _x],"14"],"life_fnc_wantedAdd",false,false] call life_fnc_MP;
+} foreach group player;
+
 
 /*
 //Alarm Bell
