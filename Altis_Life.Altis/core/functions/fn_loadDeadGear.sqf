@@ -9,6 +9,10 @@
 private["_allowedItems","_loadout","_primary","_launcher","_handgun","_magazines","_uniform","_vest","_backpack","_items","_primitems","_secitems","_handgunitems","_uitems","_vitems","_bitems","_handle"];
 _itemArray = [_this,0,[],[[]]] call BIS_fnc_param;
 
+_handle = [] spawn life_fnc_stripDownPlayer;
+waitUntil {scriptDone _handle};
+
+
 _uniform = [_itemArray,0,"",[""]] call BIS_fnc_param;
 _vest = [_itemArray,1,"",[""]] call BIS_fnc_param;
 _backpack = [_itemArray,2,"",[""]] call BIS_fnc_param;
