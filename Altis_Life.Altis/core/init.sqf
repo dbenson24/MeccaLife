@@ -162,3 +162,4 @@ if (playerSide == independent) {
 
 
 life_invisible = false;
+life_deadGear = [];

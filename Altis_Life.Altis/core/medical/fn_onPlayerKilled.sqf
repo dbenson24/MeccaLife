@@ -39,6 +39,8 @@ if(side player == civilian) then {
 	life_gear set[16,[]];
 };
 
+life_deadGear = life_gear;
+
 life_hunger = 100;
 life_thirst = 100;
 life_carryWeight = 0;
