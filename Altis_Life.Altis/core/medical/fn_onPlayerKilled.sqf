@@ -100,8 +100,10 @@ if(!isNull _killer && {_killer != _unit} && {side _killer == west} && {side _kil
 	life_removeWanted = true;
 };
 
-_handle = [_unit] spawn life_fnc_dropItems;
-waitUntil {scriptDone _handle};
+if(side player == civilian) then {
+	_handle = [_unit] spawn life_fnc_dropItems;
+	waitUntil {scriptDone _handle};
+};
 
 life_hunger = 100;
 life_thirst = 100;
