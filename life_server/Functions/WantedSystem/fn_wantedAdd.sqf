@@ -15,7 +15,7 @@ _type = [_this,2,"",[""]] call BIS_fnc_param;
 _customBounty = [_this,3,-1,[0]] call BIS_fnc_param;
 if(_uid == "" OR _type == "" OR _name == "") exitWith {}; //Bad data passed.
 
-_nosync = ["211","490","207","901","211","483","459","390","487","215","187","187V"];
+_nosync = ["211","490","207","901","211","483","459","390","487","215","187","187V","14"];
 
 _sync = !(_type in _nosync);
 
