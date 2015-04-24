@@ -33,6 +33,24 @@ life_deathCamera camCommit 0;
 
 (findDisplay 7300) displaySetEventHandler ["KeyDown","if((_this select 1) == 1) then {true}"]; //Block the ESC menu
 
+if(side player == civilian) then {
+	_handle = [_unit] spawn life_fnc_dropItems;
+	waitUntil {scriptDone _handle};
+	life_gear set[16,[]];
+};
+
+life_hunger = 100;
+life_thirst = 100;
+life_carryWeight = 0;
+life_is_alive = false;
+CASH = 0;
+
+[0] call SOCK_fnc_updatePartial;
+if (playerSide == civilian) then {
+	[7] call SOCK_fnc_updatePartial;
+	[4] call SOCK_fnc_updatePartial;
+};
+
 //Create a thread for something?
 _unit spawn
 {
@@ -100,23 +118,6 @@ if(!isNull _killer && {_killer != _unit} && {side _killer == west} && {side _kil
 	life_removeWanted = true;
 };
 
-if(side player == civilian) then {
-	_handle = [_unit] spawn life_fnc_dropItems;
-	waitUntil {scriptDone _handle};
-	life_gear set[16,[]];
-};
-
-life_hunger = 100;
-life_thirst = 100;
-life_carryWeight = 0;
-life_is_alive = false;
-CASH = 0;
-
 [] call life_fnc_hudUpdate; //Get our HUD updated.
 [[player,life_sidechat,playerSide],"TON_fnc_managesc",false,false] call life_fnc_MP;
 
-[0] call SOCK_fnc_updatePartial;
-if (playerSide == civilian) then {
-	[7] call SOCK_fnc_updatePartial;
-	[4] call SOCK_fnc_updatePartial;
-};
