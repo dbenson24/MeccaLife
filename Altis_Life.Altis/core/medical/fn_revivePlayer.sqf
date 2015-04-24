@@ -64,12 +64,15 @@ if((player GVAR ["restrained",false])) exitWith {life_action_inUse = false;};
 if(!isNil "_badDistance") exitWith {titleText[localize "STR_Medic_TooFar","PLAIN"]; life_action_inUse = false;};
 if(life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"]; life_action_inUse = false;};
 
-ADD(BANK,(LIFE_SETTINGS(getNumber,"revive_fee")));
+_fee = (LIFE_SETTINGS(getNumber,"revive_fee"));
+_fee = _fee + 20000;
+
+ADD(BANK,_fee);
 
 life_action_inUse = false;
 _target SVAR ["Revive",TRUE,TRUE];
 [[profileName,_incar,_ploc],"life_fnc_revived",_target,FALSE] call life_fnc_MP;
-titleText[format[localize "STR_Medic_RevivePayReceive",_targetName,[LIFE_SETTINGS(getNumber,"revive_fee")] call life_fnc_numberText],"PLAIN"];
+titleText[format[localize "STR_Medic_RevivePayReceive",_targetName,[_fee] call life_fnc_numberText],"PLAIN"];
 
 sleep .6;
 player reveal _target;
