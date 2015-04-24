@@ -740,7 +740,7 @@ class CfgVehicles {
         insurance = 2500;
         chopShop = 5000;
         textures[] = {
-        	{ "Mecca State", "cop", {
+        	{ "Cop", "cop", {
                 "textures\Hunter1.paa",
                 "textures\Hunter2.paa"
             } },
@@ -758,7 +758,7 @@ class CfgVehicles {
         insurance = 2500;
         chopShop = 5000;
         textures[] = {
-        	{ "Sheriff", "cop", {
+        	{ "Cop", "cop", {
                 "textures\meccalittlebird.paa"
             } },
 			{ "Black", "fed", {
@@ -906,10 +906,45 @@ class CfgVehicles {
     class B_SDV_01_F : Default {
         vItemSpace = 100;
         price = psdv;
-    }
+    };
     
     class C_Heli_Light_01_civil_F : Default {
         vItemSpace = 90;
         price = pm900;
-    }
+        textures[] = {
+            { "Civ Blue", "civ", {
+	                "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_blue_co.paa"
+            } },
+			{ "Civ Red", "civ", {
+	                "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_co.paa"
+            } },
+			{ "Digi Green", "donate", {
+	                "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_indp_co.paa"
+            } },
+			{ "Blueline", "civ", {
+	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_blueline_co.paa"
+            } },
+			{ "Elliptical", "civ", {
+	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_elliptical_co.paa"
+            } },
+			{ "Furious", "civ", {
+	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_furious_co.paa"
+            } },
+			{ "Jeans Blue", "civ", {
+	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_jeans_co.paa"
+            } },
+			{ "Speedy Redline", "civ", {
+	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_speedy_co.paa"
+            } },
+			{ "Sunset", "civ", {
+	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_sunset_co.paa"
+            } },
+			{ "Vrana", "civ", {
+	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_vrana_co.paa"
+            } },
+			{ "Waves Blue", "civ", {
+	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_wave_co.paa"
+            } }    
+        };
+    };
 };
