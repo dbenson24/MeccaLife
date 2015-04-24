@@ -15,7 +15,7 @@
 
 #define poffroadmed 10000
 #define pzamakmed 75000
-#define pmh9med 250000
+#define pm900med 200000
 #define porcamed 500000
 
 #define pboxer 200000
@@ -98,7 +98,7 @@ class CarShops {
 	class med_air_hs {
 		side = "med";
 		vehicles[] = {
-			{ "B_Heli_Light_01_F", pmh9med, "mAir" , { "life_medicLevel", 2 } },
+			{ "C_Heli_Light_01_civil_F", pm900med, "mAir" , { "life_medicLevel", 2 } },
 			{ "O_Heli_Light_02_unarmed_F", porcamed, "mAir" , { "life_medicLevel", 4 } }
 		};
 	};
@@ -944,7 +944,10 @@ class CfgVehicles {
             } },
 			{ "Waves Blue", "civ", {
 	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_wave_co.paa"
-            } }    
+            } },
+            { "MES", "med", {
+                "textures\mlbird.paa"
+            } }
         };
     };
 };
