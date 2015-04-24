@@ -1,3 +1,4 @@
+#include <macro.h>
 /* 
 	File: fn_jailBreakout.sqf
 */
@@ -26,10 +27,12 @@ _unit setVariable["inbreakout",true,true];
 
 [[_unit],"life_fnc_bankalarmsound",true,true] call life_fnc_MP;
 
-// Charge all the players in the group with robbing the fed
+// Charge all the players in the group with doing a jailbreak
 {
-	[[getPlayerUID _x,_x getVariable["realname",name _x],"14"],"life_fnc_wantedAdd",false,false] call life_fnc_MP;
-} foreach (group player);
+	if (EQUAL(group _x,group player)) then {
+		[[getPlayerUID _x,_x getVariable["realname",name _x],"14"],"life_fnc_wantedAdd",false,false] call life_fnc_MP;
+	};
+} foreach playableUnits;
 
 
 /*
