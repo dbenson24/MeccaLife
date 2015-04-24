@@ -43,10 +43,6 @@ if(count (SEL(_this,6)) > 0) then {
 	{SVAR_MNS [SEL(_x,0),SEL(_x,1)];} foreach (SEL(_this,6));
 };
 
-life_gear = SEL(_this,8);
-life_copgear = life_gear;
-[] call life_fnc_loadGear;
-
 //Parse side specific information.
 switch(playerSide) do {
 	case west: {
@@ -87,6 +83,11 @@ switch(playerSide) do {
 		CONST(life_swatlevel, 0);
 	};
 };
+
+
+life_gear = SEL(_this,8);
+life_copgear = life_gear;
+[] call life_fnc_loadGear;
 
 /* Vehicle/Garage information */
 if(count (SEL(_this,12)) > 0) then {
