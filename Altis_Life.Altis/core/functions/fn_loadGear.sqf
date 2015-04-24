@@ -61,7 +61,7 @@ if(!(EQUAL(_backpack,""))) then {_handle = [_backpack,true,false,false,false] sp
 
 
 // Removing lethal rounds from dumbass privates or cadets who synced gear with them
-if ((playerSide == west) && (life_coplevel < 3)) then {
+if ((playerSide == west) && (FETCH_CONST(life_coplevel) < 3)) then {
     {
         if (_x == "30Rnd_65x39_caseless_mag") then {
             _uMags set [_foreachindex, -1];
