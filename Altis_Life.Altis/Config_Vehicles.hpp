@@ -123,8 +123,9 @@ class CarShops {
 			{ "B_Quadbike_01_F", pquadbike, "" },
 			{ "B_G_Offroad_01_F", poffroad, "" },
 			{ "O_MRAP_02_F", pifrit, "rebel" },
-			{ "B_Heli_Light_01_F", pmh9civ, "rebel" },
 			{ "B_G_Offroad_01_armed_F", p50cal, "rebel" },
+			{ "B_Heli_Light_01_F", pmh9civ, "rebel" },
+			{ "O_Heli_Light_02_unarmed_F", porcaciv, "rebel" },
 			{ "O_Heli_Transport_04_bench_F", ptarubench, "rebel" },
 			{ "B_Heli_Transport_03_F", huron, "rebel" }
 		};
@@ -869,7 +870,7 @@ class CfgVehicles {
 			{ "White / Blue", "civ", {
 	                "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_civilian_co.paa"   
             } },
-			{ "Digi Green", "civ", {
+			{ "Digi Green", "reb", {
 	                "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_indp_co.paa"
             } },
 			{ "Desert Digi", "reb", {
