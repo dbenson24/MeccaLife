@@ -48,7 +48,9 @@ if((_veh isKindOf "Car") OR (_veh isKindOf "Ship") OR (_veh isKindOf "Air")) the
 		player playActionNow "stop";
 		if(life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"]; life_action_inUse = false;_ui = "osefStatusBar" call BIS_fnc_rscLayer;_ui cutRsc["osefStatusBar","PLAIN"];};
 		if(player != vehicle player) exitWith {titleText[localize "STR_NOTF_RepairingInVehicle","PLAIN"];};
-		player removeItem "ToolKit";
+		if (playerSide != independent) then {
+			player removeItem "ToolKit";
+		};
 		_pos = getPosATL _veh;
 		_z = (_pos select 2) + 0.2;
 		_pos set [2,_z];

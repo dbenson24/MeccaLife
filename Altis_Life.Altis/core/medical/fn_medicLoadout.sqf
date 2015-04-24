@@ -25,14 +25,18 @@ player addItem "ItemGPS";
 player assignItem "ItemGPS";
 player addItem "Medikit";
 player addItem "ToolKit";
-player addItem "ToolKit";
-player addItem "ToolKit";
 player addItem	"Chemlight_green";
 player addItem	"Chemlight_red";
 player addItem	"Chemlight_red";
 player addItem	"Chemlight_red";
 player addItem	"Chemlight_yellow";
 player addItem	"Chemlight_blue";
+[true,"redgull",15] call life_fnc_handleInv;
+[true,"tbacon",10] call life_fnc_handleInv;
+[true,"coffee",3] call life_fnc_handleInv;
+[true,"waterBottle",10] call life_fnc_handleInv;
+[true,"fuelFull",3] call life_fnc_handleInv;
+[true,"waterBottle",10] call life_fnc_handleInv;
 
 [[player,0,"textures\medic_uniform.paa"],"life_fnc_setTexture",true,false] call life_fnc_MP;
 
