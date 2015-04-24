@@ -13,11 +13,11 @@ waitUntil {!isNull (findDisplay 2900)};
 _display = findDisplay 2900;
 _list = _display displayCtrl 2902;
 if(FETCH_CONST(life_adminlevel) < 1) exitWith {closeDialog 0;};
-if(FETCH_CONST(life_adminlevel) == 3) exitWith {closeDialog 0;};
 
 switch(FETCH_CONST(life_adminlevel)) do
 {
-	case 1: {ctrlShow [2904,false];ctrlShow [2909,false];ctrlShow [2910,false];ctrlShow [2911,false];};
+	case 1: {ctrlShow [2904,false];ctrlShow [2908,false];ctrlShow [2909,false];ctrlShow [2910,false];ctrlShow [2911,false];ctrlShow [2912,false];};
+	case 2: {ctrlShow [2904,false];ctrlShow [2909,false];ctrlShow [2912,false];};
 };
 
 //2904: Compensate, 2905: Spectate, 2906:Teleport, 2907: TpHere, 2908: GodMode, 2909: Freeze, 2910: Markers, 2911: Debug
