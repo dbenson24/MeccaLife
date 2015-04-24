@@ -52,7 +52,7 @@ if((str(player) in ["civ_9999","civ_99999"])) then {
 //[[],"life_fnc_wantedSyncList",false, false] spawn life_fnc_MP;
 
 [] spawn {
-        while {alive player} do {
+        while {true} do {
                 //[[player],"life_fnc_wantedFetchForCivilian",false,false] spawn life_fnc_MP;
                 [] spawn life_fnc_updateBounty;
                 sleep 10;

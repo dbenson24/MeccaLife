@@ -60,9 +60,4 @@ if(side player == civilian) then {
 	if (uniform player == "U_O_OfficerUniform_ocamo") then {
 		player setObjectTextureGlobal [0, "textures\capttroop.paa"]; 
 	};
-	
-	if (uniform player == "U_O_SpecopsUniform_ocamo") then {
-		player setObjectTextureGlobal [0, "textures\swat.paa"]; 
-	};
-	
 };
