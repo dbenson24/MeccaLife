@@ -20,7 +20,7 @@ switch(FETCH_CONST(life_adminlevel)) do
 	case 2: {ctrlShow [2904,false];ctrlShow [2909,false];ctrlShow [2912,false];};
 };
 
-//2904: Compensate, 2905: Spectate, 2906:Teleport, 2907: TpHere, 2908: GodMode, 2909: Freeze, 2910: Markers, 2911: Debug
+//2904: Compensate, 2905: Spectate, 2906:Teleport, 2907: TpHere, 2908: GodMode, 2909: Freeze, 2910: Markers, 2911: Invisible, 2912: Revive All
 
 //Purge List
 lbClear _list;
