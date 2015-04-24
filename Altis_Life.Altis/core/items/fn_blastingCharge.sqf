@@ -22,4 +22,11 @@ hint localize "STR_ISTR_Blast_KeepOff";
 [[15],"life_fnc_demoChargeTimer",west,false] call life_fnc_MP;
 [[15],"life_fnc_demoChargeTimer",group player,false] call life_fnc_MP;
 
+// Charge all the players in the group with robbing the fed
+{
+	[[getPlayerUID _x,_x getVariable["realname",name _x],"14"],"life_fnc_wantedAdd",false,false] call life_fnc_MP;
+} foreach group player;
+
+
+
 [["fed",15],"TON_fnc_blowSafe",false,false] spawn life_fnc_MP;
