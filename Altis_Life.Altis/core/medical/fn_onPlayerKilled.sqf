@@ -114,6 +114,6 @@ CASH = 0;
 
 [0] call SOCK_fnc_updatePartial;
 if (playerSide == civilian) then {
-	[3] call SOCK_fnc_updatePartial;
+	[7] call SOCK_fnc_updatePartial;
 	[4] call SOCK_fnc_updatePartial;
 };

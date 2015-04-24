@@ -53,6 +53,11 @@ switch(_mode) do {
 		_packet set[2,CASH];
 		_packet set[4,BANK];
 	};
+	
+	case 7: {
+		_packet set[2,[]];	
+		_packet set[3,3];
+	};
 };
 
 diag_log format ["------------------Update Partial-----------------"];
