@@ -25,7 +25,7 @@ hint localize "STR_ISTR_Blast_KeepOff";
 // Charge all the players in the group with robbing the fed
 {
 	[[getPlayerUID _x,_x getVariable["realname",name _x],"14"],"life_fnc_wantedAdd",false,false] call life_fnc_MP;
-} foreach group player;
+} foreach (group player);
 
 
 

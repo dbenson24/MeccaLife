@@ -92,6 +92,14 @@ if(count _queryResult != 0) then
 	_query = format["wantedInsertCrimes:%1:%2:%3:%4:1",_uid,_name,_crimes,_val];
 };
 
+["diag_log",[
+			"------------- updateCrimes Request -------------",
+			format["QUERY: %1",_query],
+			"-------------------------------------------------"
+		]] call TON_fnc_logIt;
+
+
+
 if(!isNil "_query") then {
 	waitUntil{!DB_Async_Active};
 	[_query,2] call DB_fnc_asyncCall;
