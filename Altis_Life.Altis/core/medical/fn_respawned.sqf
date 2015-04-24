@@ -14,7 +14,6 @@ life_thirst = 100;
 life_carryWeight = 0;
 CASH = 0; //Make sure we don't get our cash back.
 life_respawned = false;
-life_is_alive = true;
 player playMove "amovpercmstpsnonwnondnon";
 
 life_corpse setVariable["Revive",nil,TRUE];
@@ -66,11 +65,13 @@ if(life_is_arrested) exitWith {
 };
 
 //Johnny law got me but didn't let the EMS revive me, reward them half the bounty.
+/*
 if(!isNil "life_copRecieve") then {
 	[[getPlayerUID player,player,life_copRecieve,true],"life_fnc_wantedBounty",false,false] spawn life_fnc_MP;
 	life_copRecieve = nil;
 };
-
+cops no longer recieve bounties for lethals 4/23/2015 Derek
+*/
 //So I guess a fellow gang member, cop or myself killed myself so get me off that Altis Most Wanted
 if(life_removeWanted) then {
 	[[getPlayerUID player],"life_fnc_wantedRemove",false,false] spawn life_fnc_MP;

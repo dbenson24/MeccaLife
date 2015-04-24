@@ -151,5 +151,14 @@ if (playerSide == independent) {
 		};
 	};
 };*/
+[] spawn {
+	while {true} do {
+		sleep(3*60);
+		if (life_is_alive) then {
+			call life_fnc_saveGear;
+		};
+	};
+};
+
 
 life_invisible = false;

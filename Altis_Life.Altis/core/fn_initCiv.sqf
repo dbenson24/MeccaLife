@@ -36,6 +36,7 @@ else
                 [] call life_fnc_spawnMenu;
                 waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
                 waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
+                life_is_alive = true;
         };
 };
 life_is_alive = true;

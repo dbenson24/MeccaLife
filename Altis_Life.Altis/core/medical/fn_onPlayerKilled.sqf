@@ -103,6 +103,7 @@ if(!isNull _killer && {_killer != _unit} && {side _killer == west} && {side _kil
 if(side player == civilian) then {
 	_handle = [_unit] spawn life_fnc_dropItems;
 	waitUntil {scriptDone _handle};
+	life_gear set[16,[]];
 };
 
 life_hunger = 100;
