@@ -1,6 +1,8 @@
 #include <macro.h>
 /*
 		fn_Uniformscolor.sqf
+		
+		Descriptions: Colors Uniforms
 */
 #define FETCH_CONST(var) (call var)
 
@@ -13,6 +15,10 @@ if(side player == independent) then {
 
 if(side player == WEST) then {
 	// Cop Level 1 & 2
+	if (backpack player == "B_Carryall_oucamo") then {
+    	(unitbackpack player) setObjectTextureGlobal [0, ""]; 
+	};
+	
 	if (uniform player == "U_BG_Guerilla2_2") then {
 		player setObjectTextureGlobal [0, "textures\cadettroop.paa"]; 
 	};
@@ -34,6 +40,11 @@ if(side player == civilian) then {
 	if((uniform player == "U_I_CombatUniform") && ( (FETCH_CONST(life_donator)) == 5)) then {
 	player setObjectTextureGlobal [0, "textures\mafia.paa"];
 	};
+	
+	if (backpack player == "B_Carryall_oucamo") then {
+    	(unitbackpack player) setObjectTextureGlobal [0, ""]; 
+	};
+	
 	if(uniform player == "U_C_Poloshirt_blue") then {
 	player setObjectTextureGlobal [0, "textures\meccashirt.paa"];
 	};

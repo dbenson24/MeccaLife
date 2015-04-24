@@ -22,6 +22,8 @@ if((FETCH_CONST(life_coplevel) == 0) && (FETCH_CONST(life_adminlevel) == 0)) the
 	player setVariable["rank",(FETCH_CONST(life_coplevel)),true];
 };
 
+/*
+Moving this into uniformscolor
 [] spawn
 {
     while {true} do
@@ -31,6 +33,7 @@ if((FETCH_CONST(life_coplevel) == 0) && (FETCH_CONST(life_adminlevel) == 0)) the
         waitUntil {backpack player != "B_Carryall_oucamo"}; 
     };
 };
+*/
 
 player setVariable["rank",(FETCH_CONST(life_coplevel)),true];
 [] spawn life_fnc_INFO;
