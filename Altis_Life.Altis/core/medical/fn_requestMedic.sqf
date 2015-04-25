@@ -8,6 +8,9 @@
 private["_medicsOnline"];
 _medicsOnline = {_x != player && {side _x == independent} && {alive _x}} count playableUnits > 0; //Check if medics (indep) are in the room.
 
+life_corpse setVariable ["requestMedic",true,true];
+player setVariable ["requestMedic",true,true];
+
 if(_medicsOnline) then {
 	//There is medics let's send them the request.
 	[[life_corpse,profileName, getpos life_corpse],"life_fnc_medicRequest",independent,FALSE] spawn life_fnc_MP;

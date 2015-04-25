@@ -16,6 +16,7 @@ _name = format["%1gear",_uid];
 [life_deadGear] spawn life_fnc_loadDeadGear;
 life_deadGear = [];
 life_corpse SVAR ["realname",nil,true]; //Should correct the double name sinking into the ground.
+life_corpse setVariable ["requestMedic",false,true];
 [[life_corpse],"life_fnc_corpse",nil,FALSE] call life_fnc_MP;
 _dir = getDir life_corpse;
 hint format[localize "STR_Medic_RevivePay",_medic,[LIFE_SETTINGS(getNumber,"revive_fee")] call life_fnc_numberText];
@@ -52,6 +53,7 @@ hideBody life_corpse;
 player SVAR ["Revive",nil,TRUE];
 player SVAR ["name",nil,TRUE];
 player SVAR ["Reviving",nil,TRUE];
+player setVariable ["requestMedic",false,true];
 
 life_removeWanted = false;
 
