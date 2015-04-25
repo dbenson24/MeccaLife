@@ -46,6 +46,7 @@ _Btn1 buttonSetAction "
 			life_pInact_curTarget setVariable['restrained',true,true];
 			[[player], 'life_fnc_restrain', life_pInact_curTarget, false] spawn life_fnc_MP;
 			hint format['%1 restrained.', name life_pInact_curTarget];
+			life_pInact_curTarget setVariable["restrainedby",player,true];
 			if(!(license_civ_vigilante)) then {
 				[[getPlayerUID player,name player,'207'],'life_fnc_wantedAdd',false,false] spawn life_fnc_MP;
 			};
@@ -60,8 +61,8 @@ _Btn2 ctrlSetText "Unrestrain";
 _Btn2 buttonSetAction "
 
 		if(player distance life_pInact_curTarget > 4) exitWith {hint 'You are too far away.'};
-		
-		if(license_civ_vigilante) exitWith {
+		_by = life_pInact_curTarget getVariable["restrainedby",objNull];
+		if(license_civ_vigilante || (EQUAL(player, _by))) exitWith {
 			titleText['You have unrestrained the player.','PLAIN'];
 			[life_pInact_curTarget] call life_fnc_unrestrain;
 			life_pInact_curTarget setVariable['restrained',false,true];
