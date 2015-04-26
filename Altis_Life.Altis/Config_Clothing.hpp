@@ -28,6 +28,7 @@ class Clothing {
 			{ "U_IG_Guerilla2_3", "The Outback Rangler", 700, { "", "", -1 } },
 			{ "U_C_HunterBody_grn", "The Hunters Look", 700, { "", "", -1 } },
 			{ "U_OrestesBody", "Surfing On Land", 1100, { "", "", -1 } },
+			{ "U_NikosBody", "Bro Suit", 5187, { "life_donator", "SCALAR", 1 } },			
 			{ "U_I_CombatUniform", "Mafia suit", 5187, { "life_donator", "SCALAR", 4 } },
 			{ "U_B_Protagonist_VR", "VR Suit Blue", 5187, { "life_donator", "SCALAR", 3 } },
 			{ "U_O_Protagonist_VR", "VR Suit Red", 5187, { "life_donator", "SCALAR", 3 } },
@@ -206,7 +207,8 @@ class Clothing {
 
 		goggles[] = {
 			{ "NONE", "Remove Glasses", 0, { "", "", -1 } },
-			{ "G_Diving", "", 500, { "", "", -1 } }
+			{ "G_Diving", "Dive Goggles", 5187, { "life_donator", "SCALAR", 1 } }
+			
 		};
 
 		vests[] = {
@@ -226,6 +228,7 @@ class Clothing {
 
 		uniforms[] = {
 			{ "NONE", "Remove Uniform", 0, { "", "", -1 } },
+			{ "U_NikosBody", "Bro Suit", 5187, { "life_donator", "SCALAR", 1 } },
 			{ "U_IG_Guerilla1_1", "", 500, {"", "", -1} },
 			{ "U_I_G_Story_Protagonist_F", "", 750, { "", "", -1 } },
 			{ "U_I_G_resistanceLeader_F", "", 1500, { "", "", -1 } },
@@ -247,6 +250,8 @@ class Clothing {
 			{ "U_IG_Guerilla2_3", "The Outback Rangler", 700, { "", "", -1 } },
 			{ "U_C_HunterBody_grn", "The Hunters Look", 700, { "", "", -1 } },
 			{ "U_OrestesBody", "Surfing On Land", 1100, { "", "", -1 } },
+			{ "U_IG_Guerilla1_1", "Metal", 5187, { "life_donator", "SCALAR", 3 } },
+			{ "U_O_CombatUniform_oucamo", "Urban Camo", 5187, { "life_donator", "SCALAR", 4 } },
 			{ "U_I_CombatUniform", "Mafia suit", 5187, { "life_donator", "SCALAR", 5 } },
 			{ "U_B_GhillieSuit", "Nato", 10000, { "life_donator", "SCALAR", 4 } },
 			{ "U_B_Wetsuit", "", 2000, { "", "", -1 } },
@@ -290,7 +295,10 @@ class Clothing {
 			{ "H_Cap_red", "", 150, { "", "", -1 } },
 			{ "H_Cap_tan", "", 150, { "", "", -1 } },
 			{ "H_HelmetCrew_B", "", 4500, { "", "", -1 } },
-			{ "H_CrewHelmetHeli_I", "Donor Helmet", 5000, { "life_donator", "SCALAR", 3 } },
+			{ "H_HelmetLeaderO_oucamo", "Cyborg", 5000, { "life_donator", "SCALAR", 5 } },
+			{ "H_HelmetB_light_snakeskin", "Donor Helmet", 5000, { "life_donator", "SCALAR", 1 } },
+			{ "H_HelmetSpecO_blk", "Donor Helmet", 5000, { "life_donator", "SCALAR", 2 } },
+			{ "H_CrewHelmetHeli_I", "Camo", 5000, { "life_donator", "SCALAR", 3 } },
 			{ "H_CrewHelmetHeli_O", "Green", 5000, { "life_donator", "SCALAR", 3 } },
 			{ "H_CrewHelmetHeli_B", "Vader", 5000, { "life_donator", "SCALAR", 3 } }
 			
@@ -313,7 +321,12 @@ class Clothing {
 			{ "G_Lady_Dark", "", 150, { "", "", -1 } },
 			{ "G_Lady_Blue", "", 150, { "", "", -1 } },
 			{ "G_Lowprofile", "", 300, { "", "", -1 } },
-			{ "G_Combat", "", 5500, { "", "", -1 } }
+			{ "G_Combat", "", 5500, { "", "", -1 } },
+			{ "G_Balaclava_lowprofile", "Balaclava LP", 5000, { "life_donator", "SCALAR", 4 } },
+			{ "G_Bandanna_beast", "Beast", 5000, { "life_donator", "SCALAR", 5 } },
+			{ "G_Bandanna_aviator", "aviator", 5000, { "life_donator", "SCALAR", 3 } },
+			{ "G_Bandanna_sport", "Masked Sport", 5000, { "life_donator", "SCALAR", 2 } },
+			{ "G_Bandanna_shades", "Masked Shades", 5000, { "life_donator", "SCALAR", 1 } },
 		};
 
 		vests[] = {
