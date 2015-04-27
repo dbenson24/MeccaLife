@@ -66,16 +66,15 @@ SUB(_units,[player]);
 						default {"Cop In Training"};
 					}]};
 				//NHS
-				case (!isNil {(_x GVAR "life_medicLevel")}): {format["<img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1.5'></img> <t size='1.35'>%2</t><br/><t size='1.2'>[%1]</t>",switch ((_x GVAR "life_medicLevel")) do {
+				case (!isNil {(_x GVAR "medrank")}): {format["<img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1.5'></img> <t size='1.35'>%2</t><br/><t size='1.2'>[%1]</t>",switch ((_x GVAR "medrank")) do {
 					case 1: {"Responder"};
 					case 2: {"First Responder"}; 
-					case 3: {"Advancced Responder"};
+					case 3: {"Advanced Responder"};
 					case 4: {"Paramedic"};
 					case 5: {"Medic Command"};
 					case 6: {"Head EMS"};
 					default {"Medic In Training"};
 					},_x GVAR ["realname",name _x]]};
-				case ((!isNil {_x GVAR "name"} && playerSide == independent)): {format["<t color='#FF0000'><img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1.5'></img></t> %1",_x GVAR ["name","Unknown Player"]]};
 				default {
 					if(!isNil {(group _x) GVAR "gang_name"}) then {
 						format["%1<br/><t size='0.8' color='#B6B6B6'>%2</t>",_x GVAR ["realname",name _x],(group _x) GVAR ["gang_name",""]];
