@@ -12,7 +12,6 @@ waitUntil {!(isNull (findDisplay 46))};
 
 if((FETCH_CONST(life_medicLevel)) < 1) exitWith {
 	["Notwhitelisted",FALSE,TRUE] call BIS_fnc_endMission;
-	player setVariable["medrank",(FETCH_CONST(life_medicLevel)),true];
 	sleep 35;
 };
 [] spawn
@@ -25,6 +24,8 @@ if((FETCH_CONST(life_medicLevel)) < 1) exitWith {
     };
 };
 _igiload = execVM "IgiLoad\IgiLoadInit.sqf";
+
+player setVariable["medrank",(FETCH_CONST(life_medicLevel)),true];
 
 [] spawn life_fnc_INFO;
 	waitUntil{!isNull (findDisplay 999999)}; //Wait for the welcome to be open.
