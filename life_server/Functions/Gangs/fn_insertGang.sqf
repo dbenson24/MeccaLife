@@ -54,7 +54,7 @@ _queryResult = [_query,1] call DB_fnc_asyncCall;
 _group setVariable["gang_name",_gangName,true];
 _group setVariable["gang_owner",_uid,true];
 _group setVariable["gang_bank",0,true];
-_group setVariable["gang_maxMembers",8,true];
+_group setVariable["gang_maxMembers",100,true];
 _group setVariable["gang_members",[[_uid,_playerName]],true];
 [[_group],"life_fnc_gangCreated",_ownerID,false] call life_fnc_MP;
 
