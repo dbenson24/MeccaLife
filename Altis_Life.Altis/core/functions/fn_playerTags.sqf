@@ -6,7 +6,7 @@
 	Description:
 	Adds the tags above other players heads when close and have visible range.
 */
-private["_ui","_units","_goggles"];
+private["_ui","_units","_goggles","_rp","_img"];
 #define iconID 78000
 #define scale 0.8
 
@@ -87,13 +87,13 @@ SUB(_units,[player]);
 			if(_x GVAR ["speaking",false]) then {_text = "[SPEAKING] " + _text};
 			
 			if (side _x = civilian) then {
-					_rp = format["<img image='%1' size='1.5'></img>",switch ((_x GVAR "rprank")) do {
-		                case 1: {"icons\rp\rp1.paa"};
-		                case 2: {"icons\rp\rp2.paa"};
-		                case 3: {"icons\rp\rp3.paa"};
-		                default {""};
-		           	}];	
-		           	_text = _text + _rp;
+				_img = switch ((_x GVAR "rprank")) do {
+	                case 1: {"icons\rp\rp1.paa"};
+	                case 2: {"icons\rp\rp2.paa"};
+	                case 3: {"icons\rp\rp3.paa"};
+	                default {""};
+	           	};
+				_text = _text + format["<img image='%1' size='1.5'></img>",_img];
 			};
 			
 			_idc ctrlSetStructuredText parseText _text;
