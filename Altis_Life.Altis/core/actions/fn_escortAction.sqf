@@ -29,11 +29,11 @@ waitUntil {
     _target in (attachedObjects player)
 };
 player reveal _target;
-/*
+
 [
     [_target, "ainjpfalmstpsnonwrfldf_carried_dead"], "life_fnc_animSync", true, false
 ] spawn life_fnc_MP;
-*/
+
 player setVariable["TransportingPlayer", _target, true];
 _target setVariable["Escorting", true, true];
 /*
@@ -58,7 +58,7 @@ life_stopEscortAction = player addAction[format["<t color='#DEFF24'>%1</t>", "St
 waitUntil {
     sleep 0.3;
     _target = (player getVariable["TransportingPlayer", objNull]);
-    player setFatigue 0.5;
+    player setFatigue 0.2;
     ((vehicle player != player) || (player getVariable["surrender", false]) || !(_target getVariable["restrained", false]) || (player getVariable["restrained", false]) || (_target != vehicle _target) || (isNull _target) || !(alive player) || !(alive _target) || (isNil "life_stopEscortAction"))
 };
 _target = (player getVariable["TransportingPlayer", objNull]);
@@ -79,13 +79,14 @@ if (!isNil "life_stopEscortAction") then {
     player removeAction life_stopEscortAction;
     life_stopEscortAction = nil;
 };
-/*
+
 if (vehicle player == player) then {
     [
         [player, ""], "life_fnc_animSync", true, false
     ] spawn life_fnc_MP;
     player switchMove "";
 };
+/*
 if ((primaryWeapon player) == "Rifle") then {
     player removeWeapon(primaryWeapon player);
     player selectWeapon(handgunWeapon player);
