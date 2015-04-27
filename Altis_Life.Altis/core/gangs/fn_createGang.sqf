@@ -8,6 +8,8 @@
 private["_gangName","_length","_badChar","_chrByte","_allowed"];
 disableSerialization;
 
+[player] joinSilent (createGroup civilian);
+
 _gangName = ctrlText (CONTROL(2520,2522));
 _length = count (toArray(_gangName));
 _chrByte = toArray (_gangName);
