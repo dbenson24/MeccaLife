@@ -134,8 +134,8 @@ class CarShops {
 	class cop_car {
 		side = "cop";
 		vehicles[] = {
-			{ "B_Quadbike_01_F", pquadbike, "" }, 
-			{ "C_Offroad_01_F", poffroadcop, ""},
+			{ "I_Quadbike_01_F", pquadbike, "" }, 
+			{ "C_Offroad_01_F", poffroadcop, "", { "life_coplevel", 2 } },
 			{ "C_SUV_01_F", psuvcop, "", { "life_coplevel", 2 } },
 			{ "B_MRAP_01_F", phuntercop, "", { "life_coplevel", 4 } },
 			{ "O_APC_Wheeled_02_rcws_F", pmarid, "", { "life_swatlevel", 1 } },
@@ -569,7 +569,7 @@ class CfgVehicles {
         insurance = 2500;
         chopShop = 5000;
         textures[] = {
-        	{ "Brown", "cop", {
+        	{ "Brown", "civ", {
                 "\A3\Soft_F\Quadbike_01\Data\Quadbike_01_co.paa"
             } },
 			{ "Digi Desert", "reb", {
@@ -595,10 +595,15 @@ class CfgVehicles {
 	        } },
 	        { "Rebel Camo", "reb", {
                 "\a3\soft_f_gamma\Quadbike_01\data\quadbike_01_indp_hunter_co.paa"
+            } },
+            { "Police", "cop", {
+                "textures\policequad.paa"
             } }
         };
     };
-
+	
+	class I_Quadbike_01_F : B_Quadbike_01_F {};
+	
 	class I_Truck_02_covered_F {
         vItemSpace = 500;
         price = pzamakcov;
