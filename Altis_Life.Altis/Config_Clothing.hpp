@@ -229,7 +229,6 @@ class Clothing {
 		uniforms[] = {
 			{ "NONE", "Remove Uniform", 0, { "", "", -1 } },
 			{ "U_NikosBody", "Bro Suit", 5187, { "life_donator", "SCALAR", 1 } },
-			{ "U_IG_Guerilla1_1", "", 500, {"", "", -1} },
 			{ "U_I_G_Story_Protagonist_F", "", 750, { "", "", -1 } },
 			{ "U_I_G_resistanceLeader_F", "", 1500, { "", "", -1 } },
 			{ "U_O_SpecopsUniform_ocamo", "", 7500, { "", "", -1 } },
