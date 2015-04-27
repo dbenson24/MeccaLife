@@ -93,7 +93,7 @@ SUB(_units,[player]);
 	                case 3: {"icons\rp\rp3.paa"};
 	                default {""};
 	           	};
-				_text = _text + format["<img image='%1' size='1.5'></img>",_img];
+				_text = format["<img image='%1' size='1.5'></img> ",_img] + _text;
 			};
 			
 			_idc ctrlSetStructuredText parseText _text;

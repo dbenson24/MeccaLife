@@ -538,7 +538,7 @@ switch (_code) do {
 	// TAB key
 	case 15:
 	{
-		if(!_alt && !_ctrlKey) then {
+		if(!_alt && !_ctrlKey && !_shift) then {
 			
 			if (vehicle player == player && !(player GVAR ["restrained", false]) && (animationState player) != "Incapacitated" && !life_isDowned) then
 			{
