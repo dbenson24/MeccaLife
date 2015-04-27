@@ -32,7 +32,7 @@ player addItem	"Chemlight_red";
 player addItem	"Chemlight_yellow";
 player addItem	"Chemlight_blue";
 [] spawn {
-	sleep (5);
+	sleep (10);
 	[true,"redgull",15] call life_fnc_handleInv;
 	[true,"tbacon",10] call life_fnc_handleInv;
 	[true,"coffee",3] call life_fnc_handleInv;
