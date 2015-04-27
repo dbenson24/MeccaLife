@@ -81,9 +81,21 @@ SUB(_units,[player]);
 					} else {
 						_x GVAR ["realname",name _x];
 					};
+					
 				};
 			};
 			if(_x GVAR ["speaking",false]) then {_text = "[SPEAKING] " + _text};
+			
+			if (side _x = civilian && !isNil {(_x GVAR "rprank")}) then {
+					_rp = format["<img image='%1' size='1.5'></img>",switch ((_x GVAR "rprank")) do {
+		                case 1: {"icons\rp\rp1.paa"};
+		                case 2: {"icons\rp\rp2.paa"};
+		                case 3: {"icons\rp\rp3.paa"};
+		                default {""};
+		           	};	
+		           	_text = _text + _rp;
+			};
+			
 			_idc ctrlSetStructuredText parseText _text;
 			_idc ctrlSetPosition [_sPos select 0, _sPos select 1, 0.4, 0.65];
 			_idc ctrlSetScale scale;
