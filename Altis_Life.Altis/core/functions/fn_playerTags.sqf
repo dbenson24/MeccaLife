@@ -6,7 +6,7 @@
 	Description:
 	Adds the tags above other players heads when close and have visible range.
 */
-private["_ui","_units","_goggles","_rp","_img"];
+private["_ui","_units","_goggles","_rp","_img","_name"];
 #define iconID 78000
 #define scale 0.8
 
@@ -66,15 +66,25 @@ SUB(_units,[player]);
 						default {"Cop In Training"};
 					}]};
 				//NHS
-				case (!isNil {(_x GVAR "medrank")}): {format["<img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1.5'></img> <t size='1.35'>%2</t><br/><t size='1.2'>[%1]</t>",switch ((_x GVAR "medrank")) do {
+				case (!isNil {(_x GVAR "medrank")}): {format["<img image='%3' size='1.5'></img> <t size='1.35'>%2</t><br/><t size='1.2'>[%1]</t>",switch ((_x GVAR "medrank")) do {
 					case 1: {"Responder"};
 					case 2: {"First Responder"}; 
 					case 3: {"Advanced Responder"};
 					case 4: {"Paramedic"};
-					case 5: {"Medic Command"};
-					case 6: {"Head EMS"};
+					case 5: {"MES Co-Director"};
+					case 6: {"MES Director"};
 					default {"Medic In Training"};
-					},_x GVAR ["realname",name _x]]};
+					},_x GVAR ["realname",name _x],
+					switch ((_x GVAR "medrank")) do {
+					case 1: {"icons\medic\medic3.paa"};
+					case 2: {"icons\medic\medic3.paa"}; 
+					case 3: {"icons\medic\medic3.paa"};
+					case 4: {"icons\medic\medic1.paa"};
+					case 5: {"icons\medic\medic1.paa"};
+					case 6: {"icons\medic\medic1.paa"};
+					default {"icons\medic\medic3.paa"};
+					}
+					]};
 				default {
 					if(!isNil {(group _x) GVAR "gang_name"}) then {
 						format["%1<br/><t size='0.8' color='#B6B6B6'>%2</t>",_x GVAR ["realname",name _x],(group _x) GVAR ["gang_name",""]];
@@ -94,6 +104,11 @@ SUB(_units,[player]);
 	                default {""};
 	           	};
 				_text = format["<img image='%1' size='1.5'></img> ",_img] + _text;
+				
+				_name = _x GVAR ["realname",name _x];
+				if (_name find "[MGS]" >= 0) then {
+					_text = format["<img image='icons\MeccaLogo.paa' size='1.5'></img> ",_img] + _text;
+				};
 			};
 			
 			_idc ctrlSetStructuredText parseText _text;
