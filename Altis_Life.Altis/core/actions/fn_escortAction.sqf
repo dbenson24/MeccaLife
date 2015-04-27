@@ -58,20 +58,20 @@ life_stopEscortAction = player addAction[format["<t color='#DEFF24'>%1</t>", "St
 waitUntil {
     sleep 0.3;
     _target = (player getVariable["TransportingPlayer", objNull]);
-    player setFatigue 0.2;
+    player setFatigue 0.8;
     ((vehicle player != player) || (player getVariable["surrender", false]) || !(_target getVariable["restrained", false]) || (player getVariable["restrained", false]) || (_target != vehicle _target) || (isNull _target) || !(alive player) || !(alive _target) || (isNil "life_stopEscortAction"))
 };
 _target = (player getVariable["TransportingPlayer", objNull]);
 
 if (!isNull _target) then {
     detach _target;
-    /*
+    
     if (alive _target) then {
         _target setpos(player ModelToWorld[0, 1.9, 0]);
         [
             [_target, ""], "life_fnc_animSync", true, false
         ] spawn life_fnc_MP;
-    }; */
+    }; 
     _target setVariable["Escorting", false, true];
 };
 player setVariable['TransportingPlayer', objNull, true];
