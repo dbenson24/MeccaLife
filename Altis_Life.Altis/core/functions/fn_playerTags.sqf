@@ -92,7 +92,7 @@ SUB(_units,[player]);
 		                case 2: {"icons\rp\rp2.paa"};
 		                case 3: {"icons\rp\rp3.paa"};
 		                default {""};
-		           	};	
+		           	}];	
 		           	_text = _text + _rp;
 			};
 			
