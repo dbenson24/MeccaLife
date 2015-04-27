@@ -18,6 +18,5 @@ if(BANK < (LIFE_SETTINGS(getNumber,"gang_price"))) exitWith {
 SUB(BANK,(LIFE_SETTINGS(getNumber,"gang_price")));
 life_in_gang = true;
 life_ganggroup = grpPlayer;
-life_ganggroup SVAR ["gang",true,true];
 
 hint format[localize "STR_GNOTF_CreateSuccess",(group player) getVariable "gang_name",[(LIFE_SETTINGS(getNumber,"gang_price"))] call life_fnc_numberText];

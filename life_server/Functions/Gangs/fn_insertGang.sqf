@@ -56,6 +56,7 @@ _group setVariable["gang_owner",_uid,true];
 _group setVariable["gang_bank",0,true];
 _group setVariable["gang_maxMembers",100,true];
 _group setVariable["gang_members",[[_uid,_playerName]],true];
+_group setVariable["gang",true,true];
 [[_group],"life_fnc_gangCreated",_ownerID,false] call life_fnc_MP;
 
 sleep 0.35;
