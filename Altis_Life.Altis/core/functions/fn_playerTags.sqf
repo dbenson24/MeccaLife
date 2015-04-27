@@ -6,7 +6,7 @@
 	Description:
 	Adds the tags above other players heads when close and have visible range.
 */
-private["_ui","_units","_goggles"];
+private["_ui","_units","_goggles","_rp"];
 #define iconID 78000
 #define scale 0.8
 
@@ -41,25 +41,17 @@ SUB(_units,[player]);
 				case (isPlayer _x && {(uniform _x in life_noname_clothing)}): {"";};
 				case (isPlayer _x && {(headgear _x in life_hidden_clothing) || (goggles _x in life_hidden_clothing)}): {"<t size='1.2'>[Masked Person]</t>";};
 				case (_x in (units grpPlayer) && playerSide == civilian): {format["<t color='#00FF00'>%1</t>",(_x GVAR ["realname",name _x])];};
-				
-				
-				case (!isNil {(_x GVAR "rprank")}): {format["<img image='%1' size='1.5'></img>",switch ((_x GVAR "rprank")) do {
-                    case 1: {"icons\rp\rp1.paa"};
-                    case 2: {"icons\rp\rp2.paa"};
-                    case 3: {"icons\rp\rp3.paa"};
- 
-                    default {""};
-                };
-				case (!isNil {(_x GVAR "rank")}): {format["<img image='%1' size='1.5'></img> <t size='1.2'>%2</t><br/><t size='1.1'>[%3]</t>",switch ((_x GVAR "rank")) do {
-					case 1: {"icons\cop\r.paa"};
-					case 2: {"icons\cop\p.paa"};
-					case 3: {"icons\cop\c.paa"};
-					case 4: {"icons\cop\s.paa"};
-					case 5: {"icons\cop\l.paa"};
-					case 6: {"icons\cop\sw.paa"};
-					case 7: {"icons\cop\ca.paa"};
-
-					default {"icons\cop\1.paa"};
+				case (!isNil {(_x GVAR "rank")}): {format["<img image='%1' size='1.5'></img> <t size='1.2'>%2</t><br/><t size='1.1'>[%3]</t>",
+					switch ((_x GVAR "rank")) do {
+						case 1: {"icons\cop\r.paa"};
+						case 2: {"icons\cop\p.paa"};
+						case 3: {"icons\cop\c.paa"};
+						case 4: {"icons\cop\s.paa"};
+						case 5: {"icons\cop\l.paa"};
+						case 6: {"icons\cop\sw.paa"};
+						case 7: {"icons\cop\ca.paa"};
+	
+						default {"icons\cop\1.paa"};
 					},
 
 					_x GVAR ["realname",name _x],
@@ -73,21 +65,30 @@ SUB(_units,[player]);
 						case 6: {"S.W.A.T"};
 						case 7: {"Captain"};
 						default {"Cop In Training"};
-					}]};
+				}]};
 				//NHS
-				case (!isNil {(_x GVAR "medrank")}): {format["<img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1.5'></img> <t size='1.35'>%2</t><br/><t size='1.2'>[%1]</t>",switch ((_x GVAR "life_medicLevel")) do {
-					case 1: {"Responder"};
-					case 2: {"First Responder"}; 
-					case 3: {"Advanced Responder"};
-					case 4: {"Paramedic"};
-					case 5: {"Medic Command"};
-					case 6: {"Head EMS"};
-					default {"Medic In Training"};
-					},_x GVAR ["realname",name _x]]};
+				case (!isNil {(_x GVAR "medrank")}): {format["<img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1.5'></img> <t size='1.35'>%2</t><br/><t size='1.2'>[%1]</t>",
+					switch ((_x GVAR "life_medicLevel")) do {
+						case 1: {"Responder"};
+						case 2: {"First Responder"}; 
+						case 3: {"Advanced Responder"};
+						case 4: {"Paramedic"};
+						case 5: {"Medic Command"};
+						case 6: {"Head EMS"};
+						default {"Medic In Training"};
+					}, _x GVAR ["realname",name _x]
+				]};
 				case ((!isNil {_x GVAR "name"} && playerSide == independent)): {format["<t color='#FF0000'><img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1.5'></img></t> %1",_x GVAR ["name","Unknown Player"]]};
 				default {
+					_rp = case (!isNil {(_x GVAR "rprank")}): {format["<img image='%1' size='1.5'></img>",switch ((_x GVAR "rprank")) do {
+		                case 1: {"icons\rp\rp1.paa"};
+		                case 2: {"icons\rp\rp2.paa"};
+		                case 3: {"icons\rp\rp3.paa"};
+		
+		                default {""};
+		           	};
 					if(!isNil {(group _x) GVAR "gang_name"}) then {
-						format["%1<br/><t size='0.8' color='#B6B6B6'>%2</t>",_x GVAR ["realname",name _x],(group _x) GVAR ["gang_name",""]];
+						format["%1 %2<br/><t size='0.8' color='#B6B6B6'>%2</t>",_x GVAR ["realname",name _x],_rp,(group _x) GVAR ["gang_name",""]];
 					} else {
 						_x GVAR ["realname",name _x];
 					};
