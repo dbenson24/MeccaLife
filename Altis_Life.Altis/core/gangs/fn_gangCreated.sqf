@@ -8,8 +8,6 @@
 private "_group";
 life_action_gangInUse = nil;
 
-[player] joinSilent (createGroup civilian);
-
 if(BANK < (LIFE_SETTINGS(getNumber,"gang_price"))) exitWith {
 	hint format[localize "STR_GNOTF_NotEnoughMoney",[((LIFE_SETTINGS(getNumber,"gang_price"))-BANK)] call life_fnc_numberText];
 	{grpPlayer SVAR [_x,nil,true];} foreach ["gang_id","gang_owner","gang_name","gang_members","gang_maxmembers","gang_bank"];
