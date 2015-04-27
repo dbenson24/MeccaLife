@@ -103,8 +103,9 @@ SUB(_units,[player]);
 	                case 3: {"icons\rp\rp3.paa"};
 	                default {""};
 	           	};
-				_text = format["<img image='%1' size='1.5'></img> ",_img] + _text;
-				
+	           	if (_img != "") then {
+					_text = format["<img image='%1' size='1.5'></img> ",_img] + _text;
+	           	};
 				_name = _x GVAR ["realname",name _x];
 				if (_name find "[MGS]" >= 0) then {
 					_text = format["<img image='icons\MeccaLogo.paa' size='1.5'></img> ",_img] + _text;
