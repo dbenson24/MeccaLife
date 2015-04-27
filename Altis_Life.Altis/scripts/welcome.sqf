@@ -15,13 +15,15 @@ _role3names = ["meccagaming.co"];
 _role4 = "Built from Altis Life 4.0.0";
 _role4names = ["by the MeccaDevTeam"];
 _role5 = "Developers";
-_role5names = ["Derek and Unnamed"];
+_role5names = ["Derek","UnNamed","Hohum"];
 _role6 = "Admins";
-_role6names = ["Unnamed","Elemtael","Spectral","Crusader"];
-_role7 = "Enjoy your stay";
-_role7names = ["Have fun and follow the rules<br/>posted on our website<br/>"];
-_role8 = "Special thanks to";
-_role8names = ["All you guys that join us daily!<br/>Thank you!"];
+_role6names = ["Forsaken","Crusader"];
+_role6 = "Moderators";
+_role6names = ["TOAD","Koko","Joo"];
+_role8 = "Enjoy your stay";
+_role8names = ["Have fun and follow the rules<br/>posted on our website<br/>"];
+_role9 = "Special thanks to";
+_role9names = ["All you guys that join us daily!<br/>Thank you!"];
 
 {
 	sleep 2;
@@ -49,5 +51,6 @@ _role8names = ["All you guys that join us daily!<br/>Thank you!"];
 	[_role5, _role5names],
 	[_role6, _role6names],
 	[_role7, _role7names],
-	[_role8, _role8names]
+	[_role8, _role8names],
+	[_role9, _role9names]
 ];
