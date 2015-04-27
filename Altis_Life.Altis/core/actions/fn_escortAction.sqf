@@ -29,11 +29,14 @@ waitUntil {
     _target in (attachedObjects player)
 };
 player reveal _target;
+/*
 [
     [_target, "ainjpfalmstpsnonwrfldf_carried_dead"], "life_fnc_animSync", true, false
 ] spawn life_fnc_MP;
+*/
 player setVariable["TransportingPlayer", _target, true];
 _target setVariable["Escorting", true, true];
+/*
 if ((primaryWeapon player) == "") then {
     player addWeapon "Rifle";
     player selectWeapon(primaryWeapon player);
@@ -43,7 +46,8 @@ else {
         player selectWeapon(primaryWeapon player);
     };
 };
-/*
+
+
 [
     [player, "acinpercmstpsraswrfldnon"], "life_fnc_animSync", true, false
 ] spawn life_fnc_MP;
@@ -58,14 +62,16 @@ waitUntil {
     ((vehicle player != player) || (player getVariable["surrender", false]) || !(_target getVariable["restrained", false]) || (player getVariable["restrained", false]) || (_target != vehicle _target) || (isNull _target) || !(alive player) || !(alive _target) || (isNil "life_stopEscortAction"))
 };
 _target = (player getVariable["TransportingPlayer", objNull]);
+
 if (!isNull _target) then {
     detach _target;
+    /*
     if (alive _target) then {
         _target setpos(player ModelToWorld[0, 1.9, 0]);
         [
             [_target, ""], "life_fnc_animSync", true, false
         ] spawn life_fnc_MP;
-    };
+    }; */
     _target setVariable["Escorting", false, true];
 };
 player setVariable['TransportingPlayer', objNull, true];
@@ -73,6 +79,7 @@ if (!isNil "life_stopEscortAction") then {
     player removeAction life_stopEscortAction;
     life_stopEscortAction = nil;
 };
+/*
 if (vehicle player == player) then {
     [
         [player, ""], "life_fnc_animSync", true, false
@@ -103,4 +110,5 @@ else {
         player selectWeapon(primaryWeapon player);
     };
 };
+*/
 life_action_inUse = false;
