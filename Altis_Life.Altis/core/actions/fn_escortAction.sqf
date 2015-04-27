@@ -43,11 +43,13 @@ else {
         player selectWeapon(primaryWeapon player);
     };
 };
+/*
 [
     [player, "acinpercmstpsraswrfldnon"], "life_fnc_animSync", true, false
 ] spawn life_fnc_MP;
 player switchMove "acinpercmstpsraswrfldnon";
 player playMoveNow "acinpercmstpsraswrfldnon";
+buggy animation */
 life_stopEscortAction = player addAction[format["<t color='#DEFF24'>%1</t>", "Stop Escorting"], "player removeAction life_stopEscortAction; life_stopEscortAction = nil;", nil, 20, false, true, "", ""];
 waitUntil {
     sleep 0.3;
