@@ -86,7 +86,7 @@ SUB(_units,[player]);
 			};
 			if(_x GVAR ["speaking",false]) then {_text = "[SPEAKING] " + _text};
 			
-			if (side _x = civilian && !isNil {(_x GVAR "rprank")}) then {
+			if (side _x = civilian) then {
 					_rp = format["<img image='%1' size='1.5'></img>",switch ((_x GVAR "rprank")) do {
 		                case 1: {"icons\rp\rp1.paa"};
 		                case 2: {"icons\rp\rp2.paa"};
