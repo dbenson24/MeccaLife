@@ -57,13 +57,14 @@ switch(playerSide) do {
 		CONST(life_coplevel, 0);
 		CONST(life_medicLevel, 0);
 		CONST(life_swatlevel, 0);
-		life_houses = SEL(_this,9);
+		CONST(life_rpLevel, SEL(_this,9));
+		life_houses = SEL(_this,10);
 		{
 			_house = nearestBuilding (call compile format["%1", SEL(_x,0)]);
 			life_vehicles pushBack _house;
 		} foreach life_houses;
 		
-		life_gangData = SEL(_this,10);
+		life_gangData = SEL(_this,11);
 		life_in_gang = false;
 		if(!(EQUAL(count life_gangData,0))) then {
 			life_gangid = SEL(life_gangData,0);

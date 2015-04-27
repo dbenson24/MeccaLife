@@ -12,6 +12,7 @@ waitUntil {!(isNull (findDisplay 46))};
 
 if((FETCH_CONST(life_medicLevel)) < 1) exitWith {
 	["Notwhitelisted",FALSE,TRUE] call BIS_fnc_endMission;
+	player setVariable["medrank",(FETCH_CONST(life_medicLevel)),true];
 	sleep 35;
 };
 [] spawn
