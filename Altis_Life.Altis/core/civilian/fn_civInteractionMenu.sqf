@@ -46,7 +46,7 @@ _Btn1 buttonSetAction "
 			life_pInact_curTarget setVariable['restrained',true,true];
 			[[player], 'life_fnc_restrain', life_pInact_curTarget, false] spawn life_fnc_MP;
 			hint format['%1 restrained.', name life_pInact_curTarget];
-			life_pInact_curTarget setVariable['restrainedby',player,true];
+			life_pInact_curTarget setVariable['restrainedby',getPlayerUID player,true];
 			if(!(license_civ_vigilante)) then {
 				[[getPlayerUID player,name player,'207'],'life_fnc_wantedAdd',false,false] spawn life_fnc_MP;
 			};
@@ -61,7 +61,7 @@ _Btn2 ctrlSetText "Unrestrain";
 _Btn2 buttonSetAction "
 
 		if(player distance life_pInact_curTarget > 4) exitWith {hint 'You are too far away.'};
-		_by = life_pInact_curTarget getVariable['restrainedby',objNull];
+		_by = life_pInact_curTarget getVariable['restrainedby',0];
 		_yourestrained = EQUAL(_by,player);
 		if(_yourestrained) exitWith {
 			titleText['You have unrestrained the player.','PLAIN'];
@@ -70,7 +70,7 @@ _Btn2 buttonSetAction "
 			life_pInact_curTarget setVariable['Escorting',false,true];
 			life_pInact_curTarget setVariable['transporting',false,true];
 			life_pInact_curTarget setVariable ['surrender', false, true];
-			life_pInact_curTarget setVariable['restrainedby',objNull,true];
+			life_pInact_curTarget setVariable['restrainedby',0,true];
 			detach life_pInact_curTarget;
 		};
 		if(license_civ_vigilante) exitWith {
@@ -80,7 +80,7 @@ _Btn2 buttonSetAction "
 			life_pInact_curTarget setVariable['Escorting',false,true];
 			life_pInact_curTarget setVariable['transporting',false,true];
 			life_pInact_curTarget setVariable ['surrender', false, true];
-			life_pInact_curTarget setVariable['restrainedby',objNull,true];
+			life_pInact_curTarget setVariable['restrainedby',0,true];
 			detach life_pInact_curTarget;
 		};
 		
@@ -97,7 +97,7 @@ _Btn2 buttonSetAction "
 				life_pInact_curTarget setVariable['Escorting',false,true];
 				life_pInact_curTarget setVariable['transporting',false,true];
 				life_pInact_curTarget setVariable ['surrender', false, true];
-				life_pInact_curTarget setVariable['restrainedby',objNull,true];
+				life_pInact_curTarget setVariable['restrainedby',0,true];
 				detach life_pInact_curTarget;
 			} else {
 				titleText['The lockpick broke.','PLAIN'];
