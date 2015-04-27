@@ -62,13 +62,14 @@ _Btn2 buttonSetAction "
 
 		if(player distance life_pInact_curTarget > 4) exitWith {hint 'You are too far away.'};
 		_by = life_pInact_curTarget getVariable["restrainedby",objNull];
-		if(license_civ_vigilante || (EQUAL(player, _by))) exitWith {
+		if(license_civ_vigilante or (EQUAL(player, _by))) exitWith {
 			titleText['You have unrestrained the player.','PLAIN'];
 			[life_pInact_curTarget] call life_fnc_unrestrain;
 			life_pInact_curTarget setVariable['restrained',false,true];
 			life_pInact_curTarget setVariable['Escorting',false,true];
 			life_pInact_curTarget setVariable['transporting',false,true];
 			life_pInact_curTarget setVariable ['surrender', false, true];
+			life_pInact_curTarget setVariable["restrainedby",objNull,true];
 			detach life_pInact_curTarget;
 		};
 		
