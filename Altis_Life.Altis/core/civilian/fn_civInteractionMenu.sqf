@@ -62,7 +62,7 @@ _Btn2 buttonSetAction "
 
 		if(player distance life_pInact_curTarget > 4) exitWith {hint 'You are too far away.'};
 		_by = life_pInact_curTarget getVariable['restrainedby',0];
-		_yourestrained = EQUAL(_by,player);
+		_yourestrained = _by == player;
 		if(_yourestrained) exitWith {
 			titleText['You have unrestrained the player.','PLAIN'];
 			[life_pInact_curTarget] call life_fnc_unrestrain;
