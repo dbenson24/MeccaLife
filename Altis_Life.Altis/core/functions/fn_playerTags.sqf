@@ -41,6 +41,13 @@ SUB(_units,[player]);
 				case (isPlayer _x && {(uniform _x in life_noname_clothing)}): {"";};
 				case (isPlayer _x && {(headgear _x in life_hidden_clothing) || (goggles _x in life_hidden_clothing)}): {"<t size='1.2'>[Masked Person]</t>";};
 				case (_x in (units grpPlayer) && playerSide == civilian): {format["<t color='#00FF00'>%1</t>",(_x GVAR ["realname",name _x])];};
+				case (!isNil {(_x GVAR "life_rprank")}): {format["<img image='%1' size='1.5'></img> <t size='1.2'>%2</t><br/><t size='1.1'>[%3]</t>",switch ((_x GVAR "life_rprank")) do {
+                    case 1: {"icons\rp\rp1.paa"};
+                    case 2: {"icons\rp\rp2.paa"};
+                    case 3: {"icons\rp\rp3.paa"};
+ 
+                    default {""};
+                },
 				case (!isNil {(_x GVAR "rank")}): {format["<img image='%1' size='1.5'></img> <t size='1.2'>%2</t><br/><t size='1.1'>[%3]</t>",switch ((_x GVAR "rank")) do {
 					case 1: {"icons\cop\r.paa"};
 					case 2: {"icons\cop\p.paa"};
