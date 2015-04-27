@@ -154,9 +154,14 @@ while{true} do {
 			_timesWhenToCleanup set[_forEachIndex, 0];
 		} else {
 			if(_timesWhenToCleanup select _forEachIndex < time) then {
-				deleteVehicle _x;
-				_objectsToCleanup set[_forEachIndex, 0];
-				_timesWhenToCleanup set[_forEachIndex, 0];			 	
+				if ([west,getPos _x,1500] call life_fnc_nearUnits || [civilian,getPos _x,1500] call life_fnc_nearUnits || [independent,getPos _x,1500] call life_fnc_nearUnits) then {
+					_objectsToCleanup set[_forEachIndex, 0];
+					_timesWhenToCleanup set[_forEachIndex, 0];
+				} else {
+					deleteVehicle _x;
+					_objectsToCleanup set[_forEachIndex, 0];
+					_timesWhenToCleanup set[_forEachIndex, 0];	
+				};
 			};
 		};	
 	} forEach _objectsToCleanup;
