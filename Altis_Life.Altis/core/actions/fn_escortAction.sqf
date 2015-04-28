@@ -36,24 +36,7 @@ player reveal _target;
 
 player setVariable["TransportingPlayer", _target, true];
 _target setVariable["Escorting", true, true];
-/*
-if ((primaryWeapon player) == "") then {
-    player addWeapon "Rifle";
-    player selectWeapon(primaryWeapon player);
-}
-else {
-    if (currentWeapon player != primaryWeapon player) then {
-        player selectWeapon(primaryWeapon player);
-    };
-};
 
-
-[
-    [player, "acinpercmstpsraswrfldnon"], "life_fnc_animSync", true, false
-] spawn life_fnc_MP;
-player switchMove "acinpercmstpsraswrfldnon";
-player playMoveNow "acinpercmstpsraswrfldnon";
-buggy animation */
 life_stopEscortAction = player addAction[format["<t color='#DEFF24'>%1</t>", "Stop Escorting"], "player removeAction life_stopEscortAction; life_stopEscortAction = nil;", nil, 20, false, true, "", ""];
 waitUntil {
     sleep 0.3;
@@ -76,41 +59,10 @@ if (!isNull _target) then {
     _target setVariable["Escorting", false, true];
 };
 player setVariable['TransportingPlayer', objNull, true];
+
 if (!isNil "life_stopEscortAction") then {
     player removeAction life_stopEscortAction;
     life_stopEscortAction = nil;
 };
 
-if (vehicle player == player) then {
-    [
-        [player, ""], "life_fnc_animSync", true, false
-    ] spawn life_fnc_MP;
-    player switchMove "";
-};
-/*
-if ((primaryWeapon player) == "Rifle") then {
-    player removeWeapon(primaryWeapon player);
-    player selectWeapon(handgunWeapon player);
-}
-else {
-    if ((primaryWeapon player) != "") then {
-        player action["SwitchWeapon", player, player, 100];
-        _currwep = [primaryWeapon player, primaryWeaponItems player];
-        player addMagazine({
-                if (_x select 4 == (primaryWeapon player)) exitWith {
-                    [_x select 0, _x select 1]
-                }
-            }
-            foreach(magazinesAmmoFull player));
-        player removeWeapon(primaryWeapon player);
-        player addWeapon(_currwep select 0); {
-            if (_x != "") then {
-                player addPrimaryWeaponItem _x;
-            };
-        }
-        foreach(_currwep select 1);
-        player selectWeapon(primaryWeapon player);
-    };
-};
-*/
 life_action_inUse = false;
