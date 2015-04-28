@@ -2,6 +2,8 @@
 /*
 	Author: Bryan "Tonic" Boardwine
 
+	File: fn_buyHouse.sqf
+
 	Description:
 	Buys the house?
 */
