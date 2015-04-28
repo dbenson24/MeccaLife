@@ -60,3 +60,5 @@ player setVariable["rprank",(FETCH_CONST(life_rpLevel)),true];
                 sleep 10;
         };
 };
+
+life_norevive = false;

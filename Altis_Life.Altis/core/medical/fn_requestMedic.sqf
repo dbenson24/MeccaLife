@@ -8,6 +8,8 @@
 private["_medicsOnline"];
 _medicsOnline = {_x != player && {side _x == independent} && {alive _x}} count playableUnits > 0; //Check if medics (indep) are in the room.
 
+if (life_norevive) exitWith{((findDisplay 7300) displayCtrl 7303) ctrlEnable false; life_norevive = false;};
+
 life_corpse setVariable ["requestMedic",true,true];
 player setVariable ["requestMedic",true,true];
 
