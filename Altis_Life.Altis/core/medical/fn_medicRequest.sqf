@@ -19,9 +19,9 @@ createMarkerLocal [_marker, _pos];
 _marker setMarkerColorLocal "ColorRed";
 _marker setMarkerTypeLocal "loc_Hospital";
 _marker setMarkerTextLocal format["%1 is requesting a revive!",(_callerName)];
-_marker spawn {
+[_marker] spawn {
 	sleep (5*60);
-	deleteMarkerLocal _this;
+	deleteMarkerLocal (_this select 0);
 };
 
 ["MedicalRequestEmerg",[format[localize "STR_Medic_Request",_callerName]]] call BIS_fnc_showNotification;
