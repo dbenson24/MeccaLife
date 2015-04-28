@@ -151,16 +151,19 @@ if (playerSide == independent) {
 		};
 	};
 };*/
+
+
 if (playerSide == civilian) then {
 	[] spawn {
 		while {true} do {
-			sleep(60);
+			sleep(3 * 60);
 			if (life_is_alive) then {
 				call life_fnc_saveGear;
 			};
 		};
 	};
 };
+
 
 life_invisible = false;
 life_deadGear = [];

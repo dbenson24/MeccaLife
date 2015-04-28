@@ -110,7 +110,6 @@ if(_mode) then {
 	};
 };
 
-[0] call SOCK_fnc_updatePartial;
 closeDialog 0; //Exit the menu.
 true;
 
@@ -128,7 +127,6 @@ _vh setPos _sp;
 
 [0] call SOCK_fnc_updatePartial;
 closeDialog 0; //Exit the menu.
-true;
 
 sleep 10;
 deleteVehicle _vh;
