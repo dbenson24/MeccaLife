@@ -10,7 +10,7 @@ _obj = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 _client = [_this,1,objNull,[objNull]] call BIS_fnc_param;
 _cash = [_this,2,false,[true]] call BIS_fnc_param;
 
-if(isNull _obj OR {isNull _client}) exitWith {systemChat "Obj or client is null?";
+if((isNull _obj) OR (isNull _client)) exitWith {systemChat "Obj or client is null?";
 }; //No.
 if(!(_obj GVAR ["inUse",false])) exitWith {
 	_client = owner _client;
