@@ -48,4 +48,10 @@ class Houses {
 	
 	class Land_i_Garage_V1_F { price = 700000; alarm = false; };
 	class Land_i_Garage_V2_F : Land_i_Garage_V1_F{};
+	
+	class Land_i_Shed_Ind_F {
+		price = 10000000;
+		maxStorage = 8;
+		alarm = true;
+	};
 };
