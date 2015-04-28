@@ -4138,7 +4138,7 @@
 			<Portuguese>Médicos Online: %1</Portuguese>
 		</Key>
 		<Key ID="STR_Medic_Near">
-			<Original>Medics Nearby: %1</Original>
+			<Original>Closest Medic: %1</Original>
 			<German>Sanitäter in der Nähe: %1</German>
 			<French>Medics à proximité: %1</French>
 			<Italian>Medici Vicini: %1</Italian>
