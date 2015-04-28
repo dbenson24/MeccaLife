@@ -116,6 +116,7 @@ switch(FETCH_CONST(life_copLevel)) do
 	case 4: {life_paycheck = life_paycheck + 1600;};
 	case 5: {life_paycheck = life_paycheck + 2000;};
 	case 6: {life_paycheck = life_paycheck + 2400;};
+	case 7: {life_paycheck = life_paycheck + 2800;};
 };
 
 switch(FETCH_CONST(life_medicLevel)) do
@@ -125,6 +126,7 @@ switch(FETCH_CONST(life_medicLevel)) do
 	case 3: {life_paycheck = life_paycheck + 1200;};
 	case 4: {life_paycheck = life_paycheck + 1600;};
 	case 5: {life_paycheck = life_paycheck + 2000;};
+	case 5: {life_paycheck = life_paycheck + 2400;};
 };
 
 life_session_completed = true;
