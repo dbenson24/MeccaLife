@@ -5,10 +5,17 @@
 	Description:
 	Fetches all the players houses and sets them up.
 */
-private["_query","_houses"];
+private["_query","_houses","_gang","_gangid"];
 if(_this == "") exitWith {};
 
-_query = format["housingFetchPlayerHouse:%1",_this];
+_gang = missionNamespace getVariable[format["gang_%1",_this],[]];
+if (count _gang > 0) then {
+	_gangid = _gang select 0;
+} else {
+	_gangid = -1;
+};
+
+_query = format["housingFetchPlayerHouse:%1:%2",_this,_gangid];
 waitUntil{!DB_Async_Active};
 _houses = [_query,2,true] call DB_fnc_asyncCall;
 if((EQUAL(EXTDB_SETTINGS("MySQL_Query"),1))) then {
