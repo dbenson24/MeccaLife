@@ -83,4 +83,4 @@ if(_query == "") exitWith {};
 waitUntil {!DB_Async_Active};
 [_query,1] call DB_fnc_asyncCall;
 
-["diag_log",[format["Update Partial Query %1:",_query]]] call TON_fnc_logIt;
+["diag_log",[format["Update Partial Query %1",_query]]] call TON_fnc_logIt;
