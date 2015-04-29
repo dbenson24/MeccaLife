@@ -17,7 +17,7 @@ if(!(_house isKindOf "House_F")) exitWith {};
 if((_house GVAR ["house_owned",false])) exitWith {hint "This house is already owned even though you shouldn't be seeing this hint..."};
 if(!isNil {(_house GVAR "house_sold")}) exitWith {hint localize "STR_House_Sell_Process"};
 if(!license_civ_home) exitWith {hint localize "STR_House_License"};
-if({typeOf _x != "Land_i_Shed_Ind_F"}count life_houses >= (LIFE_SETTINGS(getNumber,"house_limit"))) exitWith {hint format[localize "STR_House_Max_House",LIFE_SETTINGS(getNumber,"house_limit")]};
+if(count life_houses >= (LIFE_SETTINGS(getNumber,"house_limit")) && typeOf(_house) != "Land_i_Shed_Ind_F") exitWith {hint format[localize "STR_House_Max_House",LIFE_SETTINGS(getNumber,"house_limit")]};
 closeDialog 0;
 
 _houseCfg = [M_CONFIG(getNumber,"Houses",typeOf(_house),"price"),M_CONFIG(getNumber,"Houses",typeOf(_house),"maxStorage")];
