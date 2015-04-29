@@ -9,10 +9,24 @@ _uid = [_this,0,"",[""]] call BIS_fnc_param;
 _house = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _house OR _uid == "") exitWith {};
 
+["diag_log",[
+		"------------- House Add Request -------------",
+		"Called House Add",
+		"------------------------------------------------"
+	]] call TON_fnc_logIt;
+
 _housePos = getPosATL _house;
 
 waitUntil{!DB_Async_Active};
 _query = format["housingAddHouse:%1:%2:%3:%4:%5",_uid,_housePos,[[],0],[],1];
 _queryResult = [_query,2] call DB_fnc_asyncCall;
 systemChat format["House ID assigned: %1",_queryResult select 0];
+
+["diag_log",[
+		"------------- House Add Request -------------",
+		format["QUERY: %1",_result],
+		format["Result: %1",_queryResult],
+		"------------------------------------------------"
+	]] call TON_fnc_logIt;
+
 _house setVariable["house_id",(_queryResult select 0),true];

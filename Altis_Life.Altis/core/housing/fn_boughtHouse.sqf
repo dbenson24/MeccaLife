@@ -8,14 +8,17 @@ private["_house","_uid","_houseCfg"];
 _house = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _uid = getPlayerUID player;
 
+diag_log "called boughthouse";
 _houseCfg = [M_CONFIG(getNumber,"Houses",typeOf(_house),"price"),M_CONFIG(getNumber,"Houses",typeOf(_house),"maxStorage")];
 if(EQUAL(count _houseCfg,0)) exitWith {};
 
 if(BANK < (_houseCfg select 0)) exitWith {hint format [localize "STR_House_NotEnough"]};
 if ((typeOf _house == "Land_i_Shed_Ind_F") &&(!isNil{life_ganggroup getVariable "gang_id"})) then {
+	diag_log "Bought a shed";
 	_gangid = life_ganggroup getVariable "gang_id";
 	[[_gangid,_house],"TON_fnc_addHouse",false,false] call life_fnc_MP;
 } else {
+	diag_log "Bought a house";
 	[[_uid,_house],"TON_fnc_addHouse",false,false] call life_fnc_MP;
 };
 _house SVAR ["house_owner",[_uid,profileName],true];

@@ -31,5 +31,6 @@ _action = [
 
 if(_action) then {
 	hint "Contacting the Real Estate Broker...";
+	diag_log "Called Buy House";
 	[[_house, player],"TON_fnc_preCheckHouse",false,false] call life_fnc_MP;
 };
