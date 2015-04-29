@@ -10,6 +10,7 @@ _house = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
 ["diag_log",[
 		"------------- House Add Request -------------",
 		"Called House Add",
+		format["UID: %1, house: %2",_uid,_house],
 		"------------------------------------------------"
 	]] call TON_fnc_logIt;
 if(isNull _house OR _uid == "") exitWith {};
