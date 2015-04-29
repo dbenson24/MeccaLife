@@ -26,7 +26,7 @@ diag_log format["Gang ID: %1",_gangid];
 diag_log "Bought a house";
 
 if ((typeOf _house == "Land_i_Shed_Ind_F") &&(!isNil{life_ganggroup getVariable "gang_id"})) then {
-	[[life_ganggroup getVariable "gang_id",_house],"TON_fnc_addHouse",false,false] call life_fnc_MP;
+	[[life_gangid,_house],"TON_fnc_addHouse",false,false] call life_fnc_MP;
 } else {
 	[[getPlayerUID player,_house],"TON_fnc_addHouse",false,false] call life_fnc_MP;
 };
