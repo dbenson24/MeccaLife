@@ -4,7 +4,7 @@
 	File: fn_boughtHouse.sqf
 	Description: Buys the house for the player
 */
-private["_house","_uid","_houseCfg"];
+private["_house","_uid","_houseCfg","_gangid"];
 _house = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _uid = getPlayerUID player;
 
