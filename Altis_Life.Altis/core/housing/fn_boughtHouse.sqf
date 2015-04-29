@@ -16,6 +16,7 @@ if(BANK < (_houseCfg select 0)) exitWith {hint format [localize "STR_House_NotEn
 if ((typeOf _house == "Land_i_Shed_Ind_F") &&(!isNil{life_ganggroup getVariable "gang_id"})) then {
 	diag_log "Bought a shed";
 	_gangid = life_ganggroup getVariable "gang_id";
+	diag_log format["Gang ID: %1",_gangid];
 	[[_gangid,_house],"TON_fnc_addHouse",false,false] call life_fnc_MP;
 } else {
 	diag_log "Bought a house";

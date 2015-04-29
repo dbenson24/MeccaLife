@@ -7,11 +7,16 @@
 private["_house","_uid","_housePos","_query"];
 _uid = [_this,0,"",[""]] call BIS_fnc_param;
 _house = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
+["diag_log",[
+		"------------- House Add Request -------------",
+		"Called House Add",
+		"------------------------------------------------"
+	]] call TON_fnc_logIt;
 if(isNull _house OR _uid == "") exitWith {};
 
 ["diag_log",[
 		"------------- House Add Request -------------",
-		"Called House Add",
+		"Made it past the null checks.",
 		"------------------------------------------------"
 	]] call TON_fnc_logIt;
 
