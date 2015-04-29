@@ -114,7 +114,7 @@ while{true} do {
 	
 	{
 		if ((count units _x)==0) then {
-			if (!(_x getVariable ["gang",false])) then {
+			if (!(_x getVariable ["gang",false]) && isNil {life_ganggroup getVariable "gang_name"}) then {
 				deleteGroup _x;
 			};
 		};
