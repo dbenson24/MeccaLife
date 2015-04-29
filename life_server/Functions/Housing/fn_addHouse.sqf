@@ -5,7 +5,7 @@
 	Blah
 */
 private["_house","_uid","_housePos","_query"];
-_uid = [_this,0,"",[""]] call BIS_fnc_param;
+_uid = [_this,0,-1,[-1]] call BIS_fnc_param;
 _house = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
 ["diag_log",[
 		"------------- House Add Request -------------",
@@ -13,7 +13,7 @@ _house = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
 		format["UID: %1, house: %2",_uid,_house],
 		"------------------------------------------------"
 	]] call TON_fnc_logIt;
-if(isNull _house OR _uid == "") exitWith {};
+if(isNull _house OR _uid == -1) exitWith {};
 
 ["diag_log",[
 		"------------- House Add Request -------------",
