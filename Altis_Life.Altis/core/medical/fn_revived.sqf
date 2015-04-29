@@ -12,6 +12,7 @@ _incar = [_this,1,false,[false]] call BIS_fnc_param;
 _ploc = [_this,2,[],[[]]] call BIS_fnc_param;
 _uid = getPlayerUID life_corpse;
 _name = format["%1gear",_uid];
+if (life_is_alive) exitWith {};
 //_oldGear = missionNamespace getVariable _name;
 [life_deadGear] spawn life_fnc_loadDeadGear;
 life_deadGear = [];
