@@ -24,7 +24,12 @@ if(BANK < (_houseCfg select 0)) exitWith {hint format [localize "STR_House_NotEn
 _gangid = life_ganggroup getVariable "gang_id";
 diag_log format["Gang ID: %1",_gangid];
 diag_log "Bought a house";
-[[_uid,_house],"TON_fnc_addHouse",false,false] call life_fnc_MP;
+
+if ((typeOf _house == "Land_i_Shed_Ind_F") &&(!isNil{life_ganggroup getVariable "gang_id"})) then {
+	[[life_ganggroup getVariable "gang_id",_house],"TON_fnc_addHouse",false,false] call life_fnc_MP;
+} else {
+	[[getPlayerUID player,_house],"TON_fnc_addHouse",false,false] call life_fnc_MP;
+};
 
 _house SVAR ["house_owner",[_uid,profileName],true];
 _house SVAR ["locked",true,true];

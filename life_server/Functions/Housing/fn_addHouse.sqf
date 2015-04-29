@@ -30,7 +30,7 @@ systemChat format["House ID assigned: %1",_queryResult select 0];
 
 ["diag_log",[
 		"------------- House Add Request -------------",
-		format["QUERY: %1",_result],
+		format["QUERY: %1",_query],
 		format["Result: %1",_queryResult],
 		"------------------------------------------------"
 	]] call TON_fnc_logIt;
