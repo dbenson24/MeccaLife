@@ -12,7 +12,12 @@ _houseCfg = [M_CONFIG(getNumber,"Houses",typeOf(_house),"price"),M_CONFIG(getNum
 if(EQUAL(count _houseCfg,0)) exitWith {};
 
 if(BANK < (_houseCfg select 0)) exitWith {hint format [localize "STR_House_NotEnough"]};
-[[_uid,_house],"TON_fnc_addHouse",false,false] call life_fnc_MP;
+if ((typeOf _house == "Land_i_Shed_Ind_F") &&(!isNil{life_ganggroup getVariable "gang_id"})) then {
+	_gangid = life_ganggroup getVariable "gang_id";
+	[[_gangid,_house],"TON_fnc_addHouse",false,false] call life_fnc_MP;
+} else {
+	[[_uid,_house],"TON_fnc_addHouse",false,false] call life_fnc_MP;
+};
 _house SVAR ["house_owner",[_uid,profileName],true];
 _house SVAR ["locked",true,true];
 _house SVAR ["Trunk",[[],0],true];
