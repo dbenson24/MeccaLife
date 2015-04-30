@@ -2,6 +2,8 @@
 /*
 	Author: Bryan "Tonic" Boardwine
 	
+	File: fn_houseMenu.sqf
+	
 	Description:
 	Building interaction menu
 */
@@ -82,6 +84,12 @@ if(!(_curTarget in life_vehicles) OR isNil {_curTarget GVAR "house_owner"}) then
 	_Btn1 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_buyHouse;";
 	_Btn1 ctrlShow true;
 	
+	if (typeOf _curTarget == "Land_i_Shed_Ind_F") then {
+		if (life_gangowner != steamid) then {
+			_Btn1 ctrlEnable false;
+		};
+	};
+	
 	if(!isNil {_curTarget GVAR "house_owner"}) then {
 		_Btn1 ctrlEnable false;
 	};
@@ -109,6 +117,22 @@ if(!(_curTarget in life_vehicles) OR isNil {_curTarget GVAR "house_owner"}) then
 		
 		if(((_curTarget GVAR "house_owner") select 0) != (getPlayerUID player)) then {
 			_Btn1 ctrlEnable false;
+		};
+		
+		if (typeOf _curTarget == "Land_i_Shed_Ind_F") then {
+			if (life_gangowner != steamid) then {
+				_Btn1 ctrlEnable false;
+			} else {
+				_Btn1 ctrlEnable true;
+			};
+			_Btn4 ctrlSetText localize "STR_pInAct_AccessGarage";
+			_Btn4 buttonSetAction "[life_pInact_curTarget,""Car""] spawn life_fnc_vehicleGarage; closeDialog 0;";
+			_Btn4 ctrlShow true;
+			
+			_Btn5 ctrlSetText localize "STR_pInAct_StoreVeh";
+			_Btn5 buttonSetAction "[life_pInact_curTarget,player] spawn life_fnc_storeVehicle; closeDialog 0;";
+			_Btn5 ctrlShow true;
+			
 		};
 		
 		if(_curTarget GVAR ["locked",false]) then {
