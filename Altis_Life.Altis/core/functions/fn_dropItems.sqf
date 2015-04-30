@@ -11,6 +11,7 @@ _unit = SEL(_this,0);
 
 diag_log "called drop items";
 if(side _unit != civilian) exitWith {};
+if(playerSide != civilian) exitWith {};
 diag_log "passed drop items side check";
 {
 	if(typeName _x == typeName "") then {_item = _x;} else {_item = configName _x};
