@@ -21,7 +21,7 @@ for [{_x=0},{_x<=_count},{_x=_x+10}] do {
 			"-------------------------------------------------"
 		]] call TON_fnc_logIt;
 	};*/
-	
+	diag_log format["housinginit query result: %1",_queryResult];
 	if(count _queryResult == 0) exitWith {};
 	{
 		_pos = call compile format["%1",_x select 1];
