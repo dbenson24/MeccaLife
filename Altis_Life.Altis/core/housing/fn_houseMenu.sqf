@@ -39,7 +39,7 @@ _Btn9 = CONTROL(37400,Btn9);
 _Btn10 = CONTROL(37400,Btn10);
 {_x ctrlShow false;} foreach [_Btn1,_Btn2,_Btn3,_Btn4,_Btn5,_Btn6,_Btn7,_Btn8,_Btn9,_Btn10];
 
-diag_log = "opened house menu";
+diag_log "opened house menu";
 
 life_pInact_curTarget = _curTarget;
 if(playerSide == west) exitWith {
