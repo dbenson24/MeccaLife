@@ -16,6 +16,7 @@
 #define Btn7 37456
 #define Btn8 37457
 #define Btn9 37458
+#define Btn10 37459
 #define Title 37401
 
 private["_display","_curTarget","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6","_Btn7"];
@@ -34,7 +35,9 @@ _Btn5 = CONTROL(37400,Btn5);
 _Btn6 = CONTROL(37400,Btn6);
 _Btn7 = CONTROL(37400,Btn7);
 _Btn8 = CONTROL(37400,Btn8);
-{_x ctrlShow false;} foreach [_Btn1,_Btn2,_Btn3,_Btn4,_Btn5,_Btn6,_Btn7,_Btn8];
+_Btn9 = CONTROL(37400,Btn9);
+_Btn10 = CONTROL(37400,Btn10);
+{_x ctrlShow false;} foreach [_Btn1,_Btn2,_Btn3,_Btn4,_Btn5,_Btn6,_Btn7,_Btn8,_Btn9,_Btn10];
 
 life_pInact_curTarget = _curTarget;
 if(playerSide == west) exitWith {
@@ -134,6 +137,15 @@ if(!(_curTarget in life_vehicles) OR isNil {_curTarget GVAR "house_owner"}) then
 			_Btn5 ctrlShow true;
 			
 		};
+		
+		_Btn4 ctrlSetText localize "STR_pInAct_AccessGarage";
+		_Btn4 buttonSetAction "[life_pInact_curTarget,""Car""] spawn life_fnc_vehicleGarage; closeDialog 0;";
+		_Btn4 ctrlShow true;
+		
+		_Btn5 ctrlSetText localize "STR_pInAct_StoreVeh";
+		_Btn5 buttonSetAction "[life_pInact_curTarget,player] spawn life_fnc_storeVehicle; closeDialog 0;";
+		_Btn5 ctrlShow true;
+		
 		
 		if(_curTarget GVAR ["locked",false]) then {
 			_Btn2 ctrlSetText localize "STR_pInAct_UnlockStorage";
