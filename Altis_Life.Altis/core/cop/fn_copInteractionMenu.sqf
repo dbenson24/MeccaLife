@@ -88,8 +88,8 @@ _Btn4 ctrlSetText localize "STR_pInAct_SearchPlayer";
 _Btn4 buttonSetAction "if(player distance life_pInact_curTarget > 4) exitWith {hint 'You are too far away.'};[life_pInact_curTarget] spawn life_fnc_searchAction; closeDialog 0;";
 
 //Set Escort Button
-_Btn5 ctrlSetText localize "STR_pInAct_StopEscort";
-_Btn5 buttonSetAction "[life_pInact_curTarget] call life_fnc_stopEscorting; [life_pInact_curTarget] call life_fnc_copInteractionMenu;";
+_Btn5 ctrlSetText "Escort";
+_Btn5 buttonSetAction "if(player distance life_pInact_curTarget > 4) exitWith {hint 'You are too far away.'}; [life_pInact_curTarget] spawn life_fnc_escortAction; closeDialog 0;";
 
 //Set Ticket Button
 _Btn6 ctrlSetText localize "STR_pInAct_TicketBtn";
