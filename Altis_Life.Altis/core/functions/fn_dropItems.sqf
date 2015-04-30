@@ -9,8 +9,9 @@
 private["_obj","_unit","_item","_value"];
 _unit = SEL(_this,0);
 
+diag_log "called drop items";
 if(side _unit != civilian) exitWith {};
-
+diag_log "passed drop items side check";
 {
 	if(typeName _x == typeName "") then {_item = _x;} else {_item = configName _x};
 	_value = ITEM_VALUE(_item);
