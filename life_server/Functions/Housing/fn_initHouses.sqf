@@ -30,14 +30,22 @@ for [{_x=0},{_x<=_count},{_x=_x+10}] do {
 			_query2 = format["housingInitGang:%1",_pos];
 			waitUntil{!DB_Async_Active};
 			_queryResult2 = [_query2,2,true] call DB_fnc_asyncCall;
-			diag_log format["housinginit queryresult2: %1",_queryResult2];
-			_house setVariable["house_owner",[_queryResult2 select 0,_queryResult2 select 1],true];
+			diag_log format["housinginit gang queryresult2: %1",_queryResult2];
+			if(count _queryResult2 > 0) then {
+				_house setVariable["house_owner",[_queryResult2 select 0,_queryResult2 select 1],true];
+			} else {
+				_house setVariable["house_owner",[0,"Unknown"],true];
+			};
 		} else {
 			_query2 = format["housingInitCiv:%1",_pos];
 			waitUntil{!DB_Async_Active};
 			_queryResult2 = [_query2,2,true] call DB_fnc_asyncCall;
-			diag_log format["housinginit queryresult2: %1",_queryResult2];
-			_house setVariable["house_owner",[_queryResult2 select 0,_queryResult2 select 1],true];
+			diag_log format["housinginit civ queryresult2: %1",_queryResult2];
+			if(count _queryResult2 > 0) then {
+				_house setVariable["house_owner",[_queryResult2 select 0,_queryResult2 select 1],true];
+			} else {
+				_house setVariable["house_owner",[0,"Unknown"],true];
+			};
 		};
 		_house setVariable["house_id",_x select 0,true];
 		_house setVariable["locked",true,true]; //Lock up all the stuff.
