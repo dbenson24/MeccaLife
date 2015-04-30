@@ -4,7 +4,7 @@
 	Description:
 	WHAT THE HELL DO YOU THINK IT DOES?!?!!??!?!!?!??!
 */
-private["_queryResult","_query","_count","_query2","_queryresult2"];
+private["_queryResult","_query","_count","_query2","_queryresult2","_pos"];
 waitUntil{!DB_Async_Active};
 _count = (["housingCount",2] call DB_fnc_asyncCall) select 0;
 
