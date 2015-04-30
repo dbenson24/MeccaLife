@@ -118,7 +118,7 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 			} else {
 				//It wasn't a misc item so is it money?
 				if(EQUAL((typeOf _curTarget),_money) && {!(_curTarget GVAR ["inUse",false])}) then {
-					[[_curTarget,player,true],"**",false,false,true] spawn life_fnc_MP;
+					[[_curTarget,player,true],"TON_fnc_pickupAction"",false,false,true] spawn life_fnc_MP;
 				};
 			};
 		};
