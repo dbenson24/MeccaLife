@@ -25,6 +25,7 @@ if(([false,_type,_amount] call life_fnc_handleInv)) then
 {
 	hint format[localize "STR_Shop_Virt_SellItem",_amount,(localize _name),[_price] call life_fnc_numberText];
 	life_cash = life_cash + _price;
+	[] call life_fnc_virt_update;
 	
 };
 [[0,player,life_shop_type,_amount,_price,_type],"TON_fnc_Ajustprices",false,false] spawn life_fnc_MP;

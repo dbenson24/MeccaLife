@@ -57,6 +57,7 @@ if(([true,_type,_amount] call life_fnc_handleInv)) then
 		//[[1,player,life_shop_type,_amount,_price,_type],"TON_fnc_Ajustprices",false,false] spawn life_fnc_MP;
 	};
 	
+	[] call life_fnc_virt_update;
 };
 /* commented out for performance
 [0] call SOCK_fnc_updatePartial;
