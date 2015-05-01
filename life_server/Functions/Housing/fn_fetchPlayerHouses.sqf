@@ -5,7 +5,7 @@
 	Description:
 	Fetches all the players houses and sets them up.
 */
-private["_query","_houses","_gang","_gangid"];
+private["_query","_houses","_gang","_gangid","_containers"];
 if(_this == "") exitWith {};
 
 _gang = missionNamespace getVariable[format["gang_%1",_this],[]];

@@ -133,7 +133,8 @@ class Clothing {
 			{ "G_Lady_Dark", "", 150, { "", "", -1 } },
 			{ "G_Lady_Blue", "", 150, { "", "", -1 } },
 			{ "G_Lowprofile", "", 30, { "", "", -1 } },
-			{ "G_Combat", "", 55, { "", "", -1 } }
+			{ "G_Combat", "", 55, { "", "", -1 } },
+			{ "G_Diving", "Dive Goggles", 50, { "", "", -1 } }
 		};
 
 		vests[] = {
@@ -207,7 +208,7 @@ class Clothing {
 
 		goggles[] = {
 			{ "NONE", "Remove Glasses", 0, { "", "", -1 } },
-			{ "G_Diving", "Dive Goggles", 5187, { "life_donator", "SCALAR", 1 } }
+			{ "G_Diving", "Dive Goggles", 5000, { "", "", -1 } }
 			
 		};
 
@@ -326,6 +327,7 @@ class Clothing {
 			{ "G_Bandanna_aviator", "aviator", 5000, { "life_donator", "SCALAR", 3 } },
 			{ "G_Bandanna_sport", "Masked Sport", 5000, { "life_donator", "SCALAR", 2 } },
 			{ "G_Bandanna_shades", "Masked Shades", 5000, { "life_donator", "SCALAR", 1 } },
+			{ "G_Diving", "Dive Goggles", 5000, { "", "", -1 } }
 		};
 
 		vests[] = {
