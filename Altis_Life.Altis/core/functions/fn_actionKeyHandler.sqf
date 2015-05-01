@@ -62,12 +62,6 @@ if(_curTarget isKindOf "Man" && {!alive _curTarget} && {playerSide in [west,inde
 	};
 };
 
-//Check if it's a dead body.
-if(_curTarget isKindOf "Man" && {!alive _curTarget} ) exitWith {
-	// Put your friend inside the vehicle
-	hint "You are looking at a dead man";
-};
-
 //If target is a player then check if we can use the cop menu.
 if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 	if((_curTarget GVAR ["restrained",false]) && !dialog && playerSide == west) then {
@@ -123,4 +117,10 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 			};
 		};
 	};
+};
+
+//Check if it's a dead body.
+if(_curTarget isKindOf "Man" && {!alive _curTarget} ) exitWith {
+	// Put your friend inside the vehicle
+	hint "You are looking at a dead man";
 };
