@@ -33,11 +33,9 @@ life_deathCamera camCommit 0;
 
 (findDisplay 7300) displaySetEventHandler ["KeyDown","if((_this select 1) == 1) then {true}"]; //Block the ESC menu
 
-if(side _unit == civilian) then {
-	_handle = [_unit] spawn life_fnc_dropItems;
-	waitUntil {scriptDone _handle};
-	life_gear set[16,[]];
-};
+
+_handle = [_unit] spawn life_fnc_dropItems;
+waitUntil {scriptDone _handle};
 
 life_deadGear = life_gear;
 
