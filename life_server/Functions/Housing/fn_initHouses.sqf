@@ -64,7 +64,7 @@ for [{_x=0},{_x<=_count},{_x=_x+10}] do {
 					if(!(_forEachIndex in _slots)) exitWith {
 						_slots pushBack _forEachIndex;
 						_house setVariable["slots",_slots,true];
-						_pos = _x;
+						_pos = _positions select (_forEachIndex+2);
 					};
 				} foreach _positions;
 				
