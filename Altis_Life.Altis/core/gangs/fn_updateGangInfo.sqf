@@ -1,3 +1,4 @@
+#include <macro.h>
 /*
 	Author: Bryan "Tonic" Boardwine
 	
@@ -22,3 +23,12 @@ if(!_force && (life_gangid != _gang_id)) exitWith {};
 life_gangowner = _gang_owner;
 life_gangbank = _gang_bank;
 life_gangmembers = _gang_members;
+
+if (count life_gangmembers > 0) then {
+    {
+        _uid = _x select 0;
+        if (_uid == steamid) then {
+            life_gangrank = _x select 2;
+        };
+    }foreach life_gangmembers;
+};

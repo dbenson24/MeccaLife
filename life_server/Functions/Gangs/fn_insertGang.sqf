@@ -2,7 +2,7 @@
 /*
 	Author: Bryan "Tonic" Boardwine
 	
-	File: fn_initGang.sqf
+	File: fn_initGang.sq
 	
 	Description:
 	Inserts the gang into the database.
@@ -57,13 +57,15 @@ _group setVariable["gang_name",_gangName,true];
 _group setVariable["gang_owner",_uid,true];
 _group setVariable["gang_bank",0,true];
 _group setVariable["gang_maxMembers",100,true];
-_group setVariable["gang_members",[[_uid,_playerName]],true];
+_group setVariable["gang_members",[[_uid,_playerName,5]],true];
 _group setVariable["gang",true,true];
-[[_group],"life_fnc_gangCreated",_ownerID,false] call life_fnc_MP;
 
-sleep 0.35;
 _query = format["gangNameSelectID:%1:%2",_uid,1];
 waitUntil{!DB_Async_Active};
 _queryResult = [_query,2] call DB_fnc_asyncCall;
 
 _group SVAR ["gang_id",SEL(_queryResult,0),true];
+
+[[_gang_name,_uid,_gangid,0,[_uid,_playerName]],"life_fnc_gangCreated",_ownerID,false] call life_fnc_MP;
+
+

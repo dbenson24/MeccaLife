@@ -111,7 +111,7 @@ class Life_Create_Gang_Diag {
 	name= "life_my_gang_menu_create";
 	movingEnable = false;
 	enableSimulation = true;
-	onLoad = "[] spawn {waitUntil {!isNull (findDisplay 2520)}; ((findDisplay 2520) displayCtrl 2523) ctrlSetText format[localize ""STR_Gang_PriceTxt"",[(call life_gangPrice)] call life_fnc_numberText]};";
+	onLoad = "[] spawn {waitUntil {!isNull (findDisplay 2520)}; ((findDisplay 2520) displayCtrl 2523) ctrlSetText format[localize ""STR_Gang_PriceTxt"",[15000] call life_fnc_numberText]};";
 	
 	class controlsBackground {
 		class fondtablet: Life_RscPicture
