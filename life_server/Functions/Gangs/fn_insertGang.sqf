@@ -1,7 +1,9 @@
 #include "\life_server\script_macros.hpp"
 /*
 	Author: Bryan "Tonic" Boardwine
-
+	
+	File: fn_initGang.sqf
+	
 	Description:
 	Inserts the gang into the database.
 */

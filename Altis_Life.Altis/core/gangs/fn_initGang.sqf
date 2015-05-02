@@ -2,6 +2,8 @@
 /*
 	Author: Bryan "Tonic" Boardwine
 	
+	File: fn_initGang.sqf
+	
 	Description:
 	Main initialization for gangs?
 */

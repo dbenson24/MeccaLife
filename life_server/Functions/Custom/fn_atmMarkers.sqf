@@ -19,7 +19,7 @@ atmlist = [];
 {   
     if (typeof _x in ["Land_Atm_01_F","Land_Atm_02_F"]) then {
         _marker = createMarker [format["%1_marker",_x],visiblePosition _x];
-        _marker setMarkerColor "ColorGreen";
+        _marker setMarkerColor "ColorRed";
         _marker setMarkerType "loc_Tourism";
         atmlist pushBack [_marker,_x];
     };

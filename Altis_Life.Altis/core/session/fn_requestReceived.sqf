@@ -74,6 +74,11 @@ switch(playerSide) do {
 			life_gangbank = SEL(life_gangData,4);
 			life_gangmembers = SEL(life_gangData,5);
 			[] spawn life_fnc_initGang;
+		} else {
+			life_gangid = -1;
+			life_gangowner = -1;
+			life_gangname = "";
+			life_gangbank = 0;
 		};
 		[] spawn life_fnc_initHouses;
 	};
