@@ -103,8 +103,8 @@ switch (_type) do
 
     case "B_MRAP_01_F":
     {
-        [false, "red", [-0.87, 1.50, -0.55]] call _attach;
-        [true, "blue", [0.87, 1.50, -0.55]] call _attach;
+        [false, "red", [-0.82, 1.50, -0.55]] call _attach;
+        [true, "blue", [0.82, 1.50, -0.55]] call _attach;
         [false, "red", [-1.00, -2.80, 0.530]] call _attach;
         [true, "blue", [1.00, -2.80, 0.530]] call _attach;
         [false, "white", [1.05, 1.50, -0.55]] call _attach;
