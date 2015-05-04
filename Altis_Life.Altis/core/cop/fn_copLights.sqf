@@ -105,8 +105,8 @@ switch (_type) do
     {
         [false, "red", [-0.87, 1.50, -0.55]] call _attach;
         [true, "blue", [0.87, 1.50, -0.55]] call _attach;
-        [false, "red", [-1.05, -2.80, 0.525]] call _attach;
-        [true, "blue", [1.05, -2.80, 0.525]] call _attach;
+        [false, "red", [-1.05, -2.80, 0.530]] call _attach;
+        [true, "blue", [1.05, -2.80, 0.530]] call _attach;
         [false, "white", [1.05, 1.50, -0.55]] call _attach;
         [true, "white", [-1.05, 1.50, -0.55]] call _attach;
     };
