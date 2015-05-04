@@ -103,12 +103,12 @@ switch (_type) do
 
     case "B_MRAP_01_F":
     {
-        [false, "red", [-0.87, 1.45, -0.35]] call _attach;
-        [true, "blue", [0.87, 1.45, -0.35]] call _attach;
-        [false, "red", [-1.05, -2.70, 0.525]] call _attach;
-        [true, "blue", [1.05, -2.70, 0.525]] call _attach;
-        [false, "white", [1.05, 1.45, -0.35]] call _attach;
-        [true, "white", [-1.05, 1.45, -0.35]] call _attach;
+        [false, "red", [-0.87, 1.50, -0.55]] call _attach;
+        [true, "blue", [0.87, 1.50, -0.55]] call _attach;
+        [false, "red", [-1.05, -2.80, 0.525]] call _attach;
+        [true, "blue", [1.05, -2.80, 0.525]] call _attach;
+        [false, "white", [1.05, 1.50, -0.55]] call _attach;
+        [true, "white", [-1.05, 1.50, -0.55]] call _attach;
     };
 };
 
