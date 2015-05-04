@@ -91,7 +91,7 @@ switch (_type) do
 
     };
 
-    case "B_MRAP_01_F":
+    case "C_Hatchback_01_sport_F":
     {
         [false, "red", [-0.03, -0, 0.2]] call _attach;
         [true, "blue", [-0.03, -0, 0.2]] call _attach;

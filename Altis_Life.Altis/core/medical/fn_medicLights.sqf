@@ -70,7 +70,7 @@ _attach =
 
 switch (_type) do
 {
-    case "C_Offroad_01_F":
+    case "C_Offroad_01_repair_F":
     {
         [false, "red", [-0.44, 0, 0.525]] call _attach;
         [true, "yellow", [0.345, 0, 0.525]] call _attach;
