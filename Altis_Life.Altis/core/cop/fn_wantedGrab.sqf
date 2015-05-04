@@ -57,7 +57,7 @@ _type = _queryResult select 0;
 		case "4532": {_x = "STR_Crime_4532"};
 		case "5217": {_x = "STR_Crime_5217"};
 		case "1018": {_x = "STR_Crime_1018"};
-		case "5894": {_x = "STR_Crime_1018"};
+		case "5894": {_x = "STR_Crime_5894"};
 		
 		
 		case "1": {_x = "STR_Crime_1"};
