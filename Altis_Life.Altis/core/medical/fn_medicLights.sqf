@@ -110,6 +110,16 @@ switch (_type) do
         [false, "white", [1.05, 2.25, -0.3]] call _attach;
         [true, "white", [-1.05, 2.25, -0.3]] call _attach;
     };
+    
+    case "C_Heli_Light_01_civil_F":
+    {
+        [false, "red", [0, -1.5, -0.1]] call _attach;
+        [true, "yellow", [0, -1.5, -0.1]] call _attach;
+        [false, "red", [-0.8, 1.9, -0.2]] call _attach;
+        [true, "yellow", [0.8, 1.9, -0.2]] call _attach;
+        [false, "white", [0.2, 2.5, -0.2]] call _attach;
+        [true, "white", [-0.2, 2.5, -0.2]] call _attach;
+    };
 };
 
 _lightsOn = true;
