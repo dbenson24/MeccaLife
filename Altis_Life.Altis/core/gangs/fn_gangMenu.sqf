@@ -39,21 +39,22 @@ lbClear _members;
 if (typeName (_gangMembers select 0) == "ARRAY") then {
 	{
 		if((_x select 0) == _ownerID) then {
-			_members lbAdd format["%1 (%2)" +(localize "STR_GNOTF_GangLeader"),(_x select 1),6-(_x select 2)];
+			_members lbAdd format["%1 (%2) " +(localize "STR_GNOTF_GangLeader"),(_x select 1),(_x select 2)];
 			_members lbSetData [(lbSize _members)-1,str(_x)];
 			_members lbSetValue [(lbSize _members)-1,6-(_x select 2)];
 		} else {
-			_members lbAdd format["%1 (%2)",(_x select 1),6-(_x select 2)];
+			_members lbAdd format["%1 (%2) ",(_x select 1),(_x select 2)];
 			_members lbSetData [(lbSize _members)-1,str(_x)];
+			_members lbSetValue [(lbSize _members)-1,6-(_x select 2)];
 		};
 	} foreach _gangMembers;
 } else {
 	if((_gangMembers select 0) == _ownerID) then {
-		_members lbAdd format["%1 (%2)" +(localize "STR_GNOTF_GangLeader"),(_gangMembers select 1),(_gangMembers select 2)];
+		_members lbAdd format["%1 (%2) " +(localize "STR_GNOTF_GangLeader"),(_gangMembers select 1),(_gangMembers select 2)];
 		_members lbSetData [(lbSize _members)-1,str(_gangMembers)];
 		_members lbSetValue [(lbSize _members)-1,6-(_x select 2)];
 	} else {
-		_members lbAdd format["%1 (%2)",(_gangMembers select 1),(_gangMembers select 2)];
+		_members lbAdd format["%1 (%2) ",(_gangMembers select 1),(_gangMembers select 2)];
 		_members lbSetData [(lbSize _members)-1,str(_gangMembers)];
 		_members lbSetValue [(lbSize _members)-1,6-(_x select 2)];
 	};
