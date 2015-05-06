@@ -558,8 +558,8 @@ class CfgVehicles {
             { "Police", "cop", {
                 "textures\policehatch.paa"
             } },
-            { "Medic", "med", {
-	                "#(argb,8,8,3)color(1.0,1.0,0.42,1)"
+			{ "Medic", "med", {
+	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base06_co.paa"
             } }
         };
     };
