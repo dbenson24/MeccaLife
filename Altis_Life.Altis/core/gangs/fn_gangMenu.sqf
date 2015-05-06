@@ -16,12 +16,11 @@ if(isNull (findDisplay 2620)) then {
 
 if(!life_in_gang) exitWith {closeDialog 0;}; //Bad juju
 
-_group = life_ganggroup;
-_ownerID = _group GVAR "gang_owner";
-_gangName = _group GVAR "gang_name";
-_gangMax = _group GVAR "gang_maxMembers";
-_gangBank = _group GVAR "gang_bank";
-_gangMembers = _group GVAR "gang_members";
+_ownerID = life_gangowner;
+_gangName = life_gangname;
+_gangMax = life_gangmaxmembers;
+_gangBank = life_gangbank;
+_gangMembers = life_gangmembers;
 
 if(_ownerID != steamid) then {
 	(CONTROL(2620,2622)) ctrlEnable false; //Upgrade
@@ -40,20 +39,23 @@ lbClear _members;
 if (typeName (_gangMembers select 0) == "ARRAY") then {
 	{
 		if((_x select 0) == _ownerID) then {
-			_members lbAdd format["%1 " +(localize "STR_GNOTF_GangLeader"),_x select 1];
+			_members lbAdd format["%1 (%2)" +(localize "STR_GNOTF_GangLeader"),(_x select 1),6-(_x select 2)];
 			_members lbSetData [(lbSize _members)-1,str(_x)];
+			_members lbSetValue [(lbSize _members)-1,6-(_x select 2)];
 		} else {
-			_members lbAdd format["%1",(_x select 1)];
+			_members lbAdd format["%1 (%2)",(_x select 1),6-(_x select 2)];
 			_members lbSetData [(lbSize _members)-1,str(_x)];
 		};
 	} foreach _gangMembers;
 } else {
 	if((_gangMembers select 0) == _ownerID) then {
-		_members lbAdd format["%1 " +(localize "STR_GNOTF_GangLeader"),_gangMembers select 1];
+		_members lbAdd format["%1 (%2)" +(localize "STR_GNOTF_GangLeader"),(_gangMembers select 1),(_gangMembers select 2)];
 		_members lbSetData [(lbSize _members)-1,str(_gangMembers)];
+		_members lbSetValue [(lbSize _members)-1,6-(_x select 2)];
 	} else {
-		_members lbAdd format["%1",(_gangMembers select 1)];
+		_members lbAdd format["%1 (%2)",(_gangMembers select 1),(_gangMembers select 2)];
 		_members lbSetData [(lbSize _members)-1,str(_gangMembers)];
+		_members lbSetValue [(lbSize _members)-1,6-(_x select 2)];
 	};
 };
 
