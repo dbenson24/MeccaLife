@@ -372,6 +372,7 @@ class Life_Client_Core
 		class gangDisband {};
 		class gangDisbanded {};
 		class gangMarkers {};
+		class updateGangInfo {};
 	};
 	
 	class Shops
@@ -396,6 +397,7 @@ class Life_Client_Core
 		class chopShopMenu {};
 		class chopShopSelection {};
 		class chopShopSell {};
+		
 	};
 	
 	class Items

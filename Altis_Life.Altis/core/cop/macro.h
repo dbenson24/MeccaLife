@@ -5,7 +5,7 @@
 #define SEL(ARRAY,INDEX) (ARRAY select INDEX)
 #define CASH life_cash
 #define BANK life_atmbank
-#define GANG_FUNDS grpPlayer getVariable ["gang_bank",0];
+#define GANG_FUNDS life_gangbank;
 
 //Namespace Macros
 #define SVAR_MNS missionNamespace setVariable 

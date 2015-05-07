@@ -1,12 +1,12 @@
 #include <macro.h>
 /*
-	Author: Bryan "Tonic" Boardwine
+	Author: Derek
 	
 	File: fn_updateGangInfo.sqf
 	
 	Description:
 	Updates the gang for all players in the gang
-	Execute on all players on civilian. Caller should also update database.
+	Execute on all clients. Updates database on server as necessary.
 */
 private["_gang_id","_gang_owner","_gang_bank","_gang_members","_force"];
 _gang_id = [_this,0,-1,[-1]] call BIS_fnc_param;
@@ -15,20 +15,38 @@ _gang_bank = [_this,2,-1,[-1]] call BIS_fnc_param;
 _gang_members = [_this,3,[],[[]]] call BIS_fnc_param;
 _force = [_this,4,false,[false]] call BIS_fnc_param;
 if(_gang_id == -1) exitWith {};
-if(_gang_owner == -1) exitWith {};
-if(_gang_bank == -1) exitWith {};
-if(_gang_members == []) exitWith {};
-if(!_force && (life_gangid != _gang_id)) exitWith {};
-
-life_gangowner = _gang_owner;
-life_gangbank = _gang_bank;
-life_gangmembers = _gang_members;
-
-if (count life_gangmembers > 0) then {
-    {
-        _uid = _x select 0;
-        if (_uid == steamid) then {
-            life_gangrank = _x select 2;
-        };
-    }foreach life_gangmembers;
+if(!isServer)then {
+    if(playerSide != civilian) exitWith {};
+    if(life_gangid != _gang_id) exitWith {};
+    if(_gang_owner != -1) then {
+        life_gangowner = _gang_owner;
+    };
+    if(_gang_bank != -1) then {
+        life_gangbank = _gang_bank;
+    };
+    if(_gang_members != []) then {
+        life_gangmembers = _gang_members;
+        {
+            _uid = _x select 0;
+            if (_uid == steamid) then {
+                life_gangrank = _x select 2;
+            };
+        }foreach life_gangmembers;
+    };
+} else {
+    if(_gang_owner != -1) then {
+        _query = format["gangOwnerUpdate:%1:%2",_owner,_gang_id];
+    	waitUntil{!DB_Async_Active};
+    	[_query,1] call DB_fnc_asyncCall;
+    };
+    if(_gang_bank != -1) then {
+        _query = format["gangBankInfoUpdate:%1:%2",([_gang_bank] call DB_fnc_numberSafe),_gang_id];
+    	waitUntil{!DB_Async_Active};
+    	[_query,1] call DB_fnc_asyncCall;
+    };
+    if(_gang_members != []) then {
+        _query = format["gangMembersUpdate:%1:%2",_gang_members,_gang_id];
+    	waitUntil{!DB_Async_Active};
+    	[_query,1] call DB_fnc_asyncCall;
+    };
 };

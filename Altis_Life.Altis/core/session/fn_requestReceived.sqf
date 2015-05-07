@@ -73,12 +73,19 @@ switch(playerSide) do {
 			life_gangmaxmembers = SEL(life_gangData,3);
 			life_gangbank = SEL(life_gangData,4);
 			life_gangmembers = SEL(life_gangData,5);
+			{
+	            _uid = _x select 0;
+	            if (_uid == steamid) then {
+	                life_gangrank = _x select 2;
+	            };
+	        }foreach life_gangmembers;
 			[] spawn life_fnc_initGang;
 		} else {
 			life_gangid = -1;
 			life_gangowner = -1;
 			life_gangname = "";
 			life_gangbank = 0;
+			life_gangrank = 0;
 		};
 		[] spawn life_fnc_initHouses;
 	};
