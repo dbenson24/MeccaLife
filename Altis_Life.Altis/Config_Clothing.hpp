@@ -207,7 +207,7 @@ class Clothing {
 
 		goggles[] = {
 			{ "NONE", "Remove Glasses", 0, { "", "", -1 } },
-			{ "G_Diving", "Dive Goggles", 5187, { "life_donator", "SCALAR", 1 } }
+			{ "G_Diving", "Dive Goggles", 5187, { "", "", -1 } }
 			
 		};
 
