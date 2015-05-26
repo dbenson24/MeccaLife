@@ -9,7 +9,7 @@ private["_handle"];
 _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
-player addUniform "U_B_CTRG_3";
+player addUniform "U_I_CombatUniform_tshirt";
 player addBackpack "B_Carryall_oucamo";
 player addItem "FirstAidKit";
 
@@ -40,7 +40,7 @@ player addItem	"Chemlight_blue";
 	[true,"fuelFull",5] call life_fnc_handleInv;
 };
 
-[[player,0,"textures\medic_uniform.paa"],"life_fnc_setTexture",true,false] call life_fnc_MP;
+[[player,0,"textures\medic_uniform.jpg"],"life_fnc_setTexture",true,false] call life_fnc_MP;
 
 [] call life_fnc_saveGear;
 [] call life_fnc_Uniformscolor;

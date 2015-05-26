@@ -56,8 +56,8 @@ switch (FETCH_CONST(life_coplevel)) do {
 	case 1:
 	{
 		player addHeadgear "H_Cap_police";
-		player ForceAddUniform "U_BG_Guerilla2_2";
-		player setObjectTextureGlobal [0, "textures\cadettroop.paa"]; 
+		player ForceAddUniform "U_Rangemaster";
+		player setObjectTextureGlobal [0, "textures\cadettroop.jpg"]; 
 		player addVest "V_TacVest_blk_POLICE";
 		player addMagazine "16Rnd_9x21_Mag";
 		player addMagazine "16Rnd_9x21_Mag";
@@ -72,8 +72,8 @@ switch (FETCH_CONST(life_coplevel)) do {
 	case 2:
 	{
 		player addHeadgear "H_Beret_blk_POLICE";
-		player ForceAddUniform "U_BG_Guerilla2_2";
-		player setObjectTextureGlobal [0, "textures\cadettroop.paa"]; 
+		player ForceAddUniform "U_Rangemaster";
+		player setObjectTextureGlobal [0, "textures\cadettroop.jpg"]; 
 		player addWeapon "arifle_MXC_Black_F";
 		player addPrimaryWeaponItem "optic_Hamr";
 		player addVest "V_TacVest_blk_POLICE";
@@ -94,7 +94,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 	{
 		player addHeadgear "H_Beret_blk_POLICE";
 	    player ForceAddUniform "U_BG_Guerilla3_2";
-		player setObjectTextureGlobal [0, "textures\corptroop.paa"];
+		player setObjectTextureGlobal [0, "textures\corptroop.jpg"];
 		player addWeapon "arifle_MX_Black_F";
 		player addPrimaryWeaponItem "optic_Hamr";
 		player addVest "V_TacVest_blk_POLICE";
@@ -114,7 +114,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 	case 4:
 	{
 	    player ForceAddUniform "U_BG_Guerilla3_2";
-		player setObjectTextureGlobal [0, "textures\corptroop.paa"];
+		player setObjectTextureGlobal [0, "textures\corptroop.jpg"];
 		player addHeadgear "H_Beret_02";
 		player addWeapon "arifle_MXM_Black_F";
 		player addPrimaryWeaponItem "optic_Hamr";
@@ -135,7 +135,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 	case 5:
 	{
 	    player ForceAddUniform "U_O_OfficerUniform_ocamo";
-		player setObjectTextureGlobal [0, "textures\corptroop.paa"];
+		player setObjectTextureGlobal [0, "textures\capttroop.jpg"];
 		player addHeadgear "H_Beret_02";
 		player addVest "V_PlateCarrier1_blk";
 		player addWeapon "arifle_MXM_Black_F";
@@ -155,7 +155,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 	case 6:
 	{
 	    player ForceAddUniform "U_O_OfficerUniform_ocamo";
-		player setObjectTextureGlobal [0, "textures\corptroop.paa"];
+		player setObjectTextureGlobal [0, "textures\capttroop.jpg"];
 		player addHeadgear "H_Beret_02";
 		player addWeapon "arifle_MXM_Black_F";
 		player addPrimaryWeaponItem "optic_Hamr";
@@ -175,7 +175,7 @@ switch (FETCH_CONST(life_coplevel)) do {
 	case 7:
 	{
 	    player ForceAddUniform "U_O_OfficerUniform_ocamo";
-		player setObjectTextureGlobal [0, "textures\corptroop.paa"];
+		player setObjectTextureGlobal [0, "textures\capttroop.jpg"];
 		player addHeadgear "H_Beret_Colonel";
 		player addItemToBackpack "H_PilotHelmetFighter_B";
 		player addVest "V_PlateCarrier1_blk";
