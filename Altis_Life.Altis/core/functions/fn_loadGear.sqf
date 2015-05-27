@@ -123,7 +123,7 @@ if(!(EQUAL(_launch,""))) then {_handle = [_launch,true,false,false,false] spawn 
 } foreach (_hItems);
 
 if(playerSide == independent && {EQUAL(uniform player,"U_Rangemaster")}) then {
-	[[player,0,"textures\medic_uniform.paa"],"life_fnc_setTexture",true,false] call life_fnc_MP;
+	[[player,0,"textures\medic_uniform.jpg"],"life_fnc_setTexture",true,false] call life_fnc_MP;
 };
 [] call life_fnc_Uniformscolor;
 
