@@ -19,7 +19,7 @@ if(side player == WEST) then {
     	(unitbackpack player) setObjectTextureGlobal [0, ""]; 
 	};
 	
-	if (uniform player == "U_Rangemaster") then {
+	if (uniform player == "U_BG_Guerilla2_2") then {
 		player setObjectTextureGlobal [0, "textures\cadettroop.jpg"]; 
 	};
 	// Cop Level 3 & 4
