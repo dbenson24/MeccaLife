@@ -767,7 +767,7 @@ class CfgVehicles {
         chopShop = 5000;
         textures[] = {
         	{ "Cop", "cop", {
-                "textures\meccalittlebird.paa"
+                "textures\meccalittlebird.jpg"
             } },
 			{ "Black", "fed", {
 	                "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa"
