@@ -25,15 +25,8 @@ _action = [
 
 if(_action) then {
 	if(EQUAL(_unitID,"")) exitWith {hint "Bad UID?"}; //Unlikely?
-	life_ganggroup SVAR ["gang_owner",_unitID,true];
-	{
-		if (_unitID == getPlayerUID _x) then {
-			life_ganggroup selectLeader _x;
-			[[_x,life_ganggroup],"TON_fnc_clientGangLeader",_x,false] call life_fnc_MP; //Boot that bitch!	
-		};
-	} forEach playableUnits;
-	
-	[[3,life_ganggroup],"TON_fnc_updateGang",false,false] call life_fnc_MP; //Update the database.
+	life_gangowner = _unitID;
+	[[life_gangid,life_gangowner,-1,[]],"life_fnc_updateGangInfo",true,true] spawn life_fnc_MP;
 } else {
 	hint localize "STR_GNOTF_TransferCancel";
 };

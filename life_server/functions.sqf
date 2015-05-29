@@ -52,15 +52,19 @@ TON_fnc_clientGangKick =
 compileFinal "
 	private[""_unit"",""_group""];
 	_unit = _this select 0;
-	_group = _this select 1;
-	if(isNil ""_unit"" OR isNil ""_group"") exitWith {};
-	if(player == _unit && (group player) == _group) then
+	if(isNil ""_unit"") exitWith {};
+	if(player == _unit) then
 	{
 		life_my_gang = ObjNull;
 		[player] joinSilent (createGroup civilian);
 		hint ""You have been kicked out of the gang."";
 		life_ganggroup = ObjNull;
 		life_in_gang = false;
+		life_gangid = -1;
+		life_gangowner = -1;
+		life_gangname = "";
+		life_gangbank = 0;
+		life_gangrank = 0;
 	};
 ";
 publicVariable "TON_fnc_clientGangKick";

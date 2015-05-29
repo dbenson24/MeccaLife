@@ -8,7 +8,7 @@
 private["_unitID","_members"];
 if(EQUAL(steamid,(life_ganggroup GVAR "gang_owner"))) exitWith {hint localize "STR_GNOTF_LeaderLeave"};
 _unitID = getPlayerUID player;
-_members = life_ganggroup GVAR "gang_members";
+_members = life_gangmembers;
 if(isNil "_members") exitWith {};
 if(!(EQUAL(typeName _members,"ARRAY"))) exitWith {};
 
@@ -21,11 +21,12 @@ if(!(EQUAL(typeName _members,"ARRAY"))) exitWith {};
 
 SUB(_members,[-1]);
 
-life_ganggroup SVAR ["gang_members",_members,true];
+life_gangmembers = _members;
 
 [player] joinSilent (createGroup civilian);
 
-[[4,life_ganggroup],"TON_fnc_updateGang",false,false] call life_fnc_MP;
+
+[[life_gangid,-1,-1,life_gangmembers],"life_fnc_updateGangInfo",true,true] spawn life_fnc_MP;
 life_in_gang = false;
 life_ganggroup = ObjNull;
 closeDialog 0;
