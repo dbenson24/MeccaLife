@@ -22,14 +22,17 @@ _action = [
 ] call BIS_fnc_guiMessage;
 
 if(_action) then {
-	[[profileName,grpPlayer],"life_fnc_gangInvite",_unit,false] call life_fnc_MP;
-	_members = grpPlayer GVAR "gang_members";
+	[[profileName,[life_gangid,life_gangowner,life_gangbank,life_gangmembers,life_gangname],"life_fnc_gangInvite",_unit,false] call life_fnc_MP;
+	/*
+	_members = life_gangmembers;
 	if (typeName (_members select 0) != "ARRAY") then {
-		_members = [[_members],[getPlayerUID _unit, _unit GVAR ["realname",name _unit]]];
+		_members = [[_members],[getPlayerUID _unit, _unit GVAR ["realname",name _unit]],1];
 	} else {
-		_members pushBack [getPlayerUID _unit, _unit GVAR ["realname",name _unit]];
+		_members pushBack [getPlayerUID _unit, _unit GVAR ["realname",name _unit],1];
 	};
-	grpPlayer SVAR ["gang_members",_members,true];
+	life_gangmembers = _members;
+	[[life_gangid,-1,-1,life_gangmembers],"life_fnc_updateGangInfo",true,true] spawn life_fnc_MP;
+	*/
 	hint format[localize "STR_GNOTF_InviteSent",_unit GVAR ["realname",name _unit]];
 } else {
 	hint localize "STR_GNOTF_InviteCancel";

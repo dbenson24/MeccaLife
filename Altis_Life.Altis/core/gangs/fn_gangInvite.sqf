@@ -7,11 +7,11 @@
 */
 private["_name","_group"];
 _name = [_this,0,"",[""]] call BIS_fnc_param;
-_group = [_this,1,grpNull,[grpNull]] call BIS_fnc_param;
-if(_name == "" OR isNull _group) exitWith {}; //Fail horn anyone?
+_ganginfo = [_this,1,[],[[]]] call BIS_fnc_param;
+if(_name == "" OR _ganginfo == []) exitWith {}; //Fail horn anyone?
 if(!isNil {(group player) GVAR "gang_name"}) exitWith {hint "You are already in a gang"};
 
-_gangName = _group GVAR "gang_name";
+_gangName = SEL(_ganginfo,4);
 _action = [
 	format[localize "STR_GNOTF_InviteMSG",_name,_gangName],
 	localize "STR_Gang_Invitation",
@@ -20,20 +20,18 @@ _action = [
 ] call BIS_fnc_guiMessage;
 
 if(_action) then {
-	[player] join _group;
-	[[4,_group],"TON_fnc_updateGang",false,false] call life_fnc_MP;
-	life_ganggroup = _group;
+	life_gangid = SEL(_ganginfo,0);
+	life_gangowner = SEL(_ganginfo,1);
+	life_gangbank = SEL(_ganginfo,2);
+	life_gangmembers = SEL(_ganginfo,3);
+	_members = life_gangmembers;
+	if (typeName (_members select 0) != "ARRAY") then {
+		_members = [[_members],[getPlayerUID player, player GVAR ["realname",name player]],1];
+	} else {
+		_members pushBack [getPlayerUID player, player GVAR ["realname",name player],1];
+	};
+	life_gangmembers = _members;
+	[[life_gangid,life_gangowner,life_gangbank,life_gangmembers],"life_fnc_updateGangInfo",true,true] spawn life_fnc_MP;
 	life_in_gang = true;
 } else {
-	_grpMembers = grpPlayer GVAR "gang_members";
-	
-	{
-		_uid = _x select 0;
-		if (_uid == steamid) then {
-			_grpMembers set [_forEachIndex, -1];
-		};
-	} forEach _grpMembers;
-	SUB(_grpMembers,[-1]);
-	grpPlayer SVAR ["gang_members",_grpMembers,true];
-	[[4,_grpMembers],"TON_fnc_updateGang",false,false] call life_fnc_MP;
 };
