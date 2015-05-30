@@ -14,7 +14,6 @@ if ((typeOf _house == "Land_i_Shed_Ind_F") && (life_gangid != -1)) then {
 };
 diag_log format["called boughthouse with uid: %1",_uid];
 diag_log format["Player UID %1 called boughthouse",getPlayerUID player];
-if ((typeOf _house == "Land_i_Shed_Ind_F") && (life_gangid != -1)) exitWith {diag_log "gang bugged, cannot buy house";};
 
 _houseCfg = [M_CONFIG(getNumber,"Houses",typeOf(_house),"price"),M_CONFIG(getNumber,"Houses",typeOf(_house),"maxStorage")];
 if(EQUAL(count _houseCfg,0)) exitWith {};
