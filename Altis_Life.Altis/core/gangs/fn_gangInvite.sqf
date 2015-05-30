@@ -24,6 +24,9 @@ if(_action) then {
 	life_gangowner = SEL(_ganginfo,1);
 	life_gangbank = SEL(_ganginfo,2);
 	life_gangmembers = SEL(_ganginfo,3);
+	if(!(isNull SEL(_ganginfo,5))) then {
+		[[life_gangid,SEL(_ganginfo,5)],"life_fnc_updateGangHouse",true,false] call life_fnc_MP;	
+	};
 	_members = life_gangmembers;
 	if (typeName (_members select 0) != "ARRAY") then {
 		_members = [[_members],[getPlayerUID player, player GVAR ["realname",name player]],1];
