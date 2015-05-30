@@ -8,6 +8,7 @@ private["_building","_door","_doors","_cpRate","_title","_progressBar","_titleTe
 _building = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _building) exitWith {};
 if(!(_building isKindOf "House_F")) exitWith {hint "You are not looking at a house door."};
+if(typeOf _building == "Land_i_Shed_Ind_F") exitWith {hint "The metal door is reinforced, your boltcutter is not strong enough."};
 if(isNil "life_boltcutter_uses") then {life_boltcutter_uses = 0;};
 if((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _building OR (nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"]) == _building) then {
 	_fed = true;
