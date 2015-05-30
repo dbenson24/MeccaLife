@@ -22,16 +22,27 @@ _gangMax = life_gangmaxmembers;
 _gangBank = life_gangbank;
 _gangMembers = life_gangmembers;
 
-if(_ownerID != steamid) then {
-	(CONTROL(2620,2622)) ctrlEnable false; //Upgrade
-	(CONTROL(2620,2624)) ctrlEnable false; // Kick
-	(CONTROL(2620,2625)) ctrlEnable false; //Set New Leader
-	(CONTROL(2620,2630)) ctrlEnable false; //Invite Player
-	(CONTROL(2620,2431)) ctrlEnable false; //Disband Gang
+switch(life_gangrank) do {
+	case 3: {
+		(CONTROL(2620,2624)) ctrlEnable false; //Kick
+		(CONTROL(2620,2431)) ctrlEnable false; //Disband Gang
+	};
+	case 4: {
+		(CONTROL(2620,2431)) ctrlEnable false; //Disband Gang
+	};
+	case 5: {
+		
+	};
+	default: {
+		(CONTROL(2620,2624)) ctrlEnable false; //Kick
+		(CONTROL(2620,2625)) ctrlEnable false; //Promote
+		(CONTROL(2620,2401)) ctrlEnable false; //Demote
+		(CONTROL(2620,2630)) ctrlEnable false; //Invite Player
+		(CONTROL(2620,2431)) ctrlEnable false; //Disband Gang
+	};
 };
 
 (CONTROL(2620,1003)) ctrlSetText format["Your Gang: %1 - $%2",_gangName,[_gangBank] call life_fnc_numberText];
-(CONTROL(2620,601)) ctrlSetText format[(localize "STR_GNOTF_Funds")+ " $%1",[_gangBank] call life_fnc_numberText];
 
 //Loop through the players.
 _members = CONTROL(2620,2621);

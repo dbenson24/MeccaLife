@@ -20,7 +20,6 @@ if (_unitRank < 2) exitWith {hint "You cannot demote someone who is at the lowes
 if(_unitID == getPlayerUID player) exitWith {hint localize "STR_GNOTF_TransferSelf"};
 
 if (life_gangrank > _unitRank) then {
-	life_gangowner = _unitID;
 	{
 		if (SEL(_x,0) == _unitID) then {
 			_x set [2,_unitRank - 1];
