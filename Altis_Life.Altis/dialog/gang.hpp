@@ -94,7 +94,7 @@ class Life_My_Gang_Diag {
 			text = "Your Gang:"; //--- ToDo: Localize;
 			x = 0.1125;
 			y = 0.2;
-			w = 0.462499;
+			w = 0.7;
 			h = 0.06;
 		};
 		class ColorList : Life_RscCombo
