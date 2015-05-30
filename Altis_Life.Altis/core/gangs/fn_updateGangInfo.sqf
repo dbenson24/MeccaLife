@@ -35,7 +35,7 @@ if(!isServer)then {
     };
 } else {
     if(_gang_owner != -1) then {
-        _query = format["gangOwnerUpdate:%1:%2",_owner,_gang_id];
+        _query = format["gangOwnerUpdate:%1:%2",_gang_owner,_gang_id];
     	waitUntil{!DB_Async_Active};
     	[_query,1] call DB_fnc_asyncCall;
     };
