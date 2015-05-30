@@ -373,6 +373,7 @@ class Life_Client_Core
 		class gangDisbanded {};
 		class gangMarkers {};
 		class updateGangInfo {};
+		class gangDemote {};
 	};
 	
 	class Shops

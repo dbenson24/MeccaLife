@@ -2,6 +2,8 @@
 /*
 	Author: Bryan "Tonic" Boardwine
 	
+	File: fn_gangCreated.sqf
+	
 	Description:
 	Tells the player that the gang is created and throws him into it.
 */

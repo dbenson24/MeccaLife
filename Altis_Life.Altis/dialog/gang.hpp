@@ -45,24 +45,31 @@ class Life_My_Gang_Diag {
 			text = "$STR_Gang_Invite_Player";
 			onButtonClick = "[] spawn life_fnc_gangInvitePlayer";
 			x = 0.6;
-			y = 0.44;
+			y = 0.36;
 			w = 0.2;
 			h = 0.04;
 			colorBackground[] = {0, 0, 0, 0};
+		};
+		class DemoteButton : InviteGangButton
+		{
+			idc = 2401;
+			text = "Demote";
+			onButtonClick = "[] call life_fnc_gangDemote";
+			y = 0.52;
 		};
 		class LeaveGangButton: InviteGangButton
 		{
 			idc = 2403;
 			text = "$STR_Gang_Leave";
 			onButtonClick = "[] call life_fnc_gangLeave";
-			y = 0.36;
+			y = 0.28;
 		};
 		class PromoteGangButton: InviteGangButton
 		{
 			idc = 2625;
 			text = "$STR_Gang_SetLeader";
 			onButtonClick = "[] spawn life_fnc_gangNewLeader";
-			y = 0.6;
+			y = 0.44;
 		};
 		class DisbandGangButton: InviteGangButton
 		{
@@ -76,7 +83,7 @@ class Life_My_Gang_Diag {
 			idc = 2624;
 			text = "$STR_Gang_Kick";
 			onButtonClick = "[] call life_fnc_gangKick";
-			y = 0.52;
+			y = 0.60;
 		};
 		class CloseButton: InviteGangButton
 		{
