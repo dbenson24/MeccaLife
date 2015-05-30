@@ -28,7 +28,17 @@ if (life_gangrank == 5 && _unitRank == 4) then {
 	if(_action) then {
 		if(EQUAL(_unitID,"")) exitWith {hint "Bad UID?"}; //Unlikely?
 		life_gangowner = _unitID;
-		[[life_gangid,life_gangowner,-1,[]],"life_fnc_updateGangInfo",true,true] spawn life_fnc_MP;
+		{
+			if (SEL(_x,0) == _unitID) then {
+				_x set [2,_unitRank + 1];
+				life_gangmembers set [_foreachindex, _x];
+			};
+			if (SEL(_x,0) == steamid) then {
+				_x set [2,4];
+				life_gangmembers set [_foreachindex, _x];
+			};
+		} foreach life_gangmembers;
+		[[life_gangid,life_gangowner,-1,life_gangmembers],"life_fnc_updateGangInfo",true,true] spawn life_fnc_MP;
 	} else {
 		hint localize "STR_GNOTF_TransferCancel";
 	};
@@ -36,11 +46,12 @@ if (life_gangrank == 5 && _unitRank == 4) then {
 	if (life_gangrank > (_unitRank + 1)) then {
 		{
 			if (SEL(_x,0) == _unitID) then {
-				_x set [2,_unitRank + 1];	
+				_x set [2,_unitRank + 1];
+				life_gangmembers set [_foreachindex, _x];
 			};
-			life_gangmembers set [_foreachindex, _x];
 		} foreach life_gangmembers;
 	};
+	[[life_gangid,-1,-1,life_gangmembers],"life_fnc_updateGangInfo",true,true] spawn life_fnc_MP;
 	hint format["You have promoted %1 to rank %2.",_unit select 1, _unitRank+1];
 };
 [] call life_fnc_gangMenu;
