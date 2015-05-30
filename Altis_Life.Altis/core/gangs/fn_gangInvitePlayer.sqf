@@ -22,7 +22,7 @@ _action = [
 ] call BIS_fnc_guiMessage;
 
 if(_action) then {
-	[[profileName,[life_gangid,life_gangowner,life_gangbank,life_gangmembers,life_gangname],"life_fnc_gangInvite",_unit,false] call life_fnc_MP;
+	[[profileName,[life_gangid,life_gangowner,life_gangbank,life_gangmembers,life_gangname]],"life_fnc_gangInvite",_unit,false] call life_fnc_MP;
 	hint format[localize "STR_GNOTF_InviteSent",_unit GVAR ["realname",name _unit]];
 } else {
 	hint localize "STR_GNOTF_InviteCancel";
