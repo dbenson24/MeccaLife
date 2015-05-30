@@ -17,6 +17,8 @@ _sel = lbCurSel _list;
 _vehicle = _list lbData _sel;
 _vehicle = life_vehicles select parseNumber(_vehicle);
 
+if(typeof _vehicle == "Land_i_Shed_Ind_F") exitWith {closeDialog 0; hint "You can't give away keys to your gang warehouse!"};
+
 _sel = lbCurSel _plist;
 _unit = _plist lbData _sel;
 _unit = call compile format["%1", _unit];
