@@ -41,11 +41,8 @@ if(rank player != "PRIVATE") then
 {	
 	player setRank "PRIVATE";
 };
-if (isNil "life_ganggroup") then {
 	[player] joinSilent (createGroup civilian);
-} else {
-	[player] join life_ganggroup;
-};
+[] spawn life_fnc_initGang;
 
 
 hint "You have left your group.";

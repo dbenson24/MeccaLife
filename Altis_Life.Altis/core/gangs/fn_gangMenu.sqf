@@ -71,6 +71,8 @@ if (typeName (_gangMembers select 0) == "ARRAY") then {
 	};
 };
 
+lbSortByValue _members;
+
 _allUnits = playableUnits;
 //Clear out the list..
 {

@@ -36,5 +36,7 @@ if(_action) then {
 	life_gangmembers = _members;
 	[[life_gangid,life_gangowner,life_gangbank,life_gangmembers],"life_fnc_updateGangInfo",true,false] spawn life_fnc_MP;
 	life_in_gang = true;
+	[] spawn life_fnc_initGang;
 } else {
+	hint "You declined the offer.";
 };
