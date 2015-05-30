@@ -33,9 +33,10 @@ life_gangmembers = _members;
 
 {
 	if (_unitID == getPlayerUID _x) then {
-		[[_x,life_ganggroup],"TON_fnc_clientGangKick",_x,false] call life_fnc_MP; //Boot that bitch!	
+		[[life_gangid],"life_fnc_updateGangHouse",_x,false] call life_fnc_MP;
+		[[_x],"TON_fnc_clientGangKick",_x,false] call life_fnc_MP; //Boot that bitch!	
 	};
 } forEach playableUnits;
 
-[[life_gangid,-1,-1,life_gangmembers],"life_fnc_updateGangInfo",true,true] spawn life_fnc_MP;
+[[life_gangid,-1,-1,life_gangmembers],"life_fnc_updateGangInfo",true,false] spawn life_fnc_MP;
 [] call life_fnc_gangMenu;

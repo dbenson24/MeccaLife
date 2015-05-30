@@ -26,7 +26,7 @@ if (life_gangrank > _unitRank) then {
 			life_gangmembers set [_foreachindex, _x];
 		};
 	} foreach life_gangmembers;
-	[[life_gangid,-1,-1,life_gangmembers],"life_fnc_updateGangInfo",true,true] spawn life_fnc_MP;
+	[[life_gangid,-1,-1,life_gangmembers],"life_fnc_updateGangInfo",true,false] spawn life_fnc_MP;
 	hint format["You have demoted %1 to rank %2.",_unit select 1, _unitRank - 1];
 } else {
     hint "You cannot demote someone that is your rank or a rank higher than your own!";  

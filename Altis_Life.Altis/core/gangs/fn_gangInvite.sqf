@@ -31,7 +31,7 @@ if(_action) then {
 		_members pushBack [getPlayerUID player, player GVAR ["realname",name player],1];
 	};
 	life_gangmembers = _members;
-	[[life_gangid,life_gangowner,life_gangbank,life_gangmembers],"life_fnc_updateGangInfo",true,true] spawn life_fnc_MP;
+	[[life_gangid,life_gangowner,life_gangbank,life_gangmembers],"life_fnc_updateGangInfo",true,false] spawn life_fnc_MP;
 	life_in_gang = true;
 } else {
 };

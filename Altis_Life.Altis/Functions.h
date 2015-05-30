@@ -374,6 +374,7 @@ class Life_Client_Core
 		class gangMarkers {};
 		class updateGangInfo {};
 		class gangDemote {};
+		class updateGangHouse {};
 	};
 	
 	class Shops

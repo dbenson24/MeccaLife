@@ -44,6 +44,10 @@ if(_action) then {
 		life_houses set[_index,-1];
 		life_houses = life_houses - [-1];
 	};
+	
+	if(typeOf _house == "Land_i_Shed_Ind_F") then {
+		[[life_gangid],"life_fnc_updateGangHouse",true,false] call life_fnc_MP;
+	};
 	_numOfDoors = getNumber(configFile >> "CfgVehicles" >> (typeOf _house) >> "numberOfDoors");
 	for "_i" from 1 to _numOfDoors do {
 		_house setVariable[format["bis_disabled_Door_%1",_i],0,true];

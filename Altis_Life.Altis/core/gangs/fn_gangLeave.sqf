@@ -26,7 +26,15 @@ life_gangmembers = _members;
 [player] joinSilent (createGroup civilian);
 
 
-[[life_gangid,-1,-1,life_gangmembers],"life_fnc_updateGangInfo",true,true] spawn life_fnc_MP;
+[[life_gangid,-1,-1,life_gangmembers],"life_fnc_updateGangInfo",true,false] spawn life_fnc_MP;
+
+[life_gangid] call life_fnc_updateGangHouse;
+
+life_gangid = -1;
+life_gangowner = -1;
+life_gangname = "";
+life_gangbank = 0;
+life_gangrank = 0;
 life_in_gang = false;
 life_ganggroup = ObjNull;
 closeDialog 0;
