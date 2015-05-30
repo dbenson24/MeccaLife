@@ -17,7 +17,7 @@ while {true} do {
 	};
 	if(round(_time - time) < 1) exitWith {};
 	if(life_nlrtimer_stop) exitWith {life_nlrtimer_stop = false;};
-	_timer ctrlSetText format["NLR: %1",[(_time - time),"MM:SS.MS"] call BIS_fnc_secondsToString];
+	_timer ctrlSetText format["NLR: %1",[(_time - time),"MM:SS"] call BIS_fnc_secondsToString];
 	sleep 0.08;
 };
 life_nlrtimer_running = false;
