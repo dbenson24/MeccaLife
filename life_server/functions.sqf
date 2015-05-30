@@ -52,7 +52,6 @@ TON_fnc_clientGangKick =
 compileFinal "
 	private[""_unit"",""_group""];
 	_unit = _this select 0;
-	if(isNil ""_unit"") exitWith {};
 	if(player == _unit) then
 	{
 		life_my_gang = ObjNull;
@@ -65,6 +64,7 @@ compileFinal "
 		life_gangname = "";
 		life_gangbank = 0;
 		life_gangrank = 0;
+		life_gangmembers = [];
 	};
 ";
 publicVariable "TON_fnc_clientGangKick";

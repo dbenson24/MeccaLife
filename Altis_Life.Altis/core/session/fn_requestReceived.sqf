@@ -86,6 +86,7 @@ switch(playerSide) do {
 			life_gangname = "";
 			life_gangbank = 0;
 			life_gangrank = 0;
+			life_gangmembers = [];
 		};
 		[] spawn life_fnc_initHouses;
 	};
