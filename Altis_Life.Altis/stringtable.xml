@@ -907,7 +907,7 @@
 			<Portuguese>Transferencia de liderança cancelada.</Portuguese>
 		</Key>
 		<Key ID="STR_GNOTF_TransferSelf">
-			<Original>You are already the leader!</Original>
+			<Original>You cannot promote yourself!</Original>
 			<German>Du bist bereits der Anführer!</German>
 			<French>Vous êtes déjà leader!</French>
 			<Italian>Sei già il Capo!</Italian>
