@@ -24,7 +24,7 @@ if(!isServer)then {
     if(_gang_bank != -1) then {
         life_gangbank = _gang_bank;
     };
-    if(_gang_members != []) then {
+    if(!EQUAL(_gang_members,[])) then {
         life_gangmembers = _gang_members;
         {
             _uid = _x select 0;
@@ -44,7 +44,7 @@ if(!isServer)then {
     	waitUntil{!DB_Async_Active};
     	[_query,1] call DB_fnc_asyncCall;
     };
-    if(_gang_members != []) then {
+    if(!EQUAL(_gang_members,[])) then {
         _query = format["gangMembersUpdate:%1:%2",_gang_members,_gang_id];
     	waitUntil{!DB_Async_Active};
     	[_query,1] call DB_fnc_asyncCall;
