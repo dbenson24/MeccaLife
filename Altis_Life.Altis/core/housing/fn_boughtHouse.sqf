@@ -7,25 +7,25 @@
 private["_house","_uid","_houseCfg","_gangid"];
 _house = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 
-if ((typeOf _house == "Land_i_Shed_Ind_F") &&(!isNil{life_ganggroup getVariable "gang_id"})) then {
-	_uid = life_ganggroup getVariable "gang_id";
+if ((typeOf _house == "Land_i_Shed_Ind_F") && (life_gangid != -1)) then {
+	_uid = life_gangid;
 } else {
 	_uid = getPlayerUID player;
 };
 diag_log format["called boughthouse with uid: %1",_uid];
 diag_log format["Player UID %1 called boughthouse",getPlayerUID player];
-if ((typeOf _house == "Land_i_Shed_Ind_F") && (isNil{life_ganggroup getVariable "gang_id"})) exitWith {diag_log "gang bugged, cannot buy house";};
+if ((typeOf _house == "Land_i_Shed_Ind_F") && (life_gangid != -1)) exitWith {diag_log "gang bugged, cannot buy house";};
 
 _houseCfg = [M_CONFIG(getNumber,"Houses",typeOf(_house),"price"),M_CONFIG(getNumber,"Houses",typeOf(_house),"maxStorage")];
 if(EQUAL(count _houseCfg,0)) exitWith {};
 
 if(BANK < (_houseCfg select 0)) exitWith {hint format [localize "STR_House_NotEnough"]};
 
-_gangid = life_ganggroup getVariable "gang_id";
+_gangid = life_gangid;
 diag_log format["Gang ID: %1",_gangid];
 diag_log "Bought a house";
 
-if ((typeOf _house == "Land_i_Shed_Ind_F") &&(!isNil{life_ganggroup getVariable "gang_id"})) then {
+if ((typeOf _house == "Land_i_Shed_Ind_F") && (life_gangid != -1)) then {
 	[[life_gangid,_house],"TON_fnc_addHouse",false,false] call life_fnc_MP;
 	[[life_gangid,_house],"life_fnc_updateGangHouse",true,false] call life_fnc_MP;
 } else {
