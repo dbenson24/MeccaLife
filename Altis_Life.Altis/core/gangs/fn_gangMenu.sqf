@@ -33,7 +33,7 @@ switch(life_gangrank) do {
 	case 5: {
 		
 	};
-	default: {
+	default {
 		(CONTROL(2620,2624)) ctrlEnable false; //Kick
 		(CONTROL(2620,2625)) ctrlEnable false; //Promote
 		(CONTROL(2620,2401)) ctrlEnable false; //Demote
