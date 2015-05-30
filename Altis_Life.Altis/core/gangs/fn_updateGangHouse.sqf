@@ -21,6 +21,7 @@ _sheds = [];
     if (typeOf _b == "Land_i_Shed_Ind_F") then {
         _sheds pushBack _b;
         life_houses set [_foreachindex, -1];
+	    deleteMarkerLocal format["house_%1",_b getVariable "uid"];
     };
 }foreach life_houses;
 SUB(life_houses,[-1]);
@@ -35,4 +36,10 @@ if (!(isNull _gang_house)) then {
     life_vehicles pushBack _gang_house;
     _pos = getPosATL _gang_house;
     life_houses pushBack [str(_pos), _gang_house getVariable["containers",[]]];
+    _house = _gang_house;
+    _marker = createMarkerLocal [format["house_%1",(_house GVAR "uid")],getPosATL _house];
+    _houseName = FETCH_CONFIG2(getText,CONFIG_VEHICLES,(typeOf _house), "displayName");
+    _marker setMarkerTextLocal _houseName;
+    _marker setMarkerColorLocal "ColorBlue";
+    _marker setMarkerTypeLocal "loc_Lighthouse";
 };
