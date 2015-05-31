@@ -34,6 +34,7 @@ switch(life_gangrank) do {
 		(CONTROL(2620,2431)) ctrlEnable false; //Disband Gang
 	};
 	case 5: {
+		(CONTROL(2620,2403)) ctrlEnable false; //Leave Button
 		
 	};
 	default {
