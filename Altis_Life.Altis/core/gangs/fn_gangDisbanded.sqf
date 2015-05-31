@@ -5,7 +5,7 @@
 	Notifies members that the gang has been disbanded.
 */
 private["_groupID"];
-_groupID = [_this,0,-1,[-1]] call BIS_fnc_param;
+_groupID = [_this,0,-1] call BIS_fnc_param;
 if(_groupID == -1 or _groupID != life_gangid) exitWith {}; //Fail horn please.
 if(!isNull (findDisplay 2620)) then {closedialog 2620};
 hint localize "STR_GNOTF_DisbandWarn_2";

@@ -60,7 +60,7 @@ _group setVariable["gang_maxMembers",100,true];
 _group setVariable["gang_members",[[_uid,_playerName,5]],true];
 _group setVariable["gang",true,true];
 
-_query = format["gangNameSelectID:%1:%2",_uid,1];
+_query = format["gangOwnerSelectID:%1:%2",_uid,1];
 waitUntil{!DB_Async_Active};
 _queryResult = [_query,2] call DB_fnc_asyncCall;
 

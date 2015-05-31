@@ -11,6 +11,7 @@
 private["_gang_id","_gang_house","_pos","_gang_members","_sheds"];
 _gang_id = [_this,0,-1,[-1]] call BIS_fnc_param;
 _gang_house = [_this,1,objNull,[objNull]] call BIS_fnc_param;
+if(isServer) exitWith{};
 
 if (life_gangid != _gang_id) exitWith {};
 if ({_position = call compile format["%1",_x select 0]; _b = nearestBuilding _position; typeOf _b == "Land_i_Shed_Ind_F"}count life_houses > 0) then {

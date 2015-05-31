@@ -12,5 +12,3 @@ waitUntil{!DB_Async_Active};
 [format["gangRemove:%1",_groupID],2] call DB_fnc_asyncCall;
 [[_groupID],"life_fnc_updateGangHouse",true,false] call life_fnc_MP;
 [[_groupID],"life_fnc_gangDisbanded",true,false] call life_fnc_MP;
-sleep 5;
-deleteGroup _group;
