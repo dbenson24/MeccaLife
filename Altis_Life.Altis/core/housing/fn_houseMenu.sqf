@@ -27,9 +27,6 @@ disableSerialization;
 _curTarget = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _curTarget) exitWith {closeDialog 0;}; //Bad target
 
-_steamid = steamid;
-_steamid = parseNumber(_steamid);
-
 _Btn1 = CONTROL(37400,Btn1);
 _Btn2 = CONTROL(37400,Btn2);
 _Btn3 = CONTROL(37400,Btn3);
@@ -94,11 +91,7 @@ if(!(_curTarget in life_vehicles) OR isNil {_curTarget GVAR "house_owner"}) then
 	_Btn1 ctrlShow true;
 	
 	if (typeOf _curTarget == "Land_i_Shed_Ind_F") then {
-		if (life_gangowner != _steamid) then {
-			_Btn1 ctrlEnable false;
-		};
-		
-		if (life_gangowner == -1) then {
+		if (life_gangrank < 5) then {
 			_Btn1 ctrlEnable false;
 		};
 	};
@@ -135,7 +128,7 @@ if(!(_curTarget in life_vehicles) OR isNil {_curTarget GVAR "house_owner"}) then
 		
 		if (typeOf _curTarget == "Land_i_Shed_Ind_F") then {
 			diag_log "That house was a shed";
-			if (life_gangowner != _steamid) then {
+			if (life_gangrank == 5) then {
 				_Btn1 ctrlEnable false;
 				_Btn2 ctrlEnable false;
 			} else {
