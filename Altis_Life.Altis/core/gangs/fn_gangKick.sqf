@@ -15,14 +15,14 @@ _unit = call compile format["%1",CONTROL_DATA(2621)];
 _unitID = _unit select 0;
 
 if(_unitID == getPlayerUID player) exitWith {hint localize "STR_GNOTF_KickSelf"};
-if(_unitID == life_gangowner) exitWith {hint "You cannot kick the leader!"};
+if(_unitID == str(life_gangowner)) exitWith {hint "You cannot kick the leader!"};
 _members = life_gangmembers;
 if(isNil "_members") exitWith {};
 if(!(EQUAL(typeName _members,"ARRAY"))) exitWith {};
 
 {
 	_uid = _x select 0;
-	if (_uid == _unitID) then {
+	if (str(_uid) == str(_unitID)) then {
 		_members set [_forEachIndex, -1];
 	};
 } forEach _members;
