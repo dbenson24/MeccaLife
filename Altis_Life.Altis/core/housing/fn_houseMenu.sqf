@@ -94,6 +94,10 @@ if(!(_curTarget in life_vehicles) OR isNil {_curTarget GVAR "house_owner"}) then
 		if (life_gangowner != steamid) then {
 			_Btn1 ctrlEnable false;
 		};
+		
+		if (life_gangowner == -1) then {
+			_Btn1 ctrlEnable false;
+		};
 	};
 	
 	if(!isNil {_curTarget GVAR "house_owner"}) then {

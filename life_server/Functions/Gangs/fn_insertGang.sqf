@@ -66,6 +66,6 @@ _queryResult = [_query,2] call DB_fnc_asyncCall;
 
 _group SVAR ["gang_id",SEL(_queryResult,0),true];
 
-[[_gang_name,_uid,_gangid,0,[[_uid,_playerName,5]]],"life_fnc_gangCreated",_ownerID,false] call life_fnc_MP;
+[[_gangName,_uid,SEL(_queryResult,0),0,[[_uid,_playerName,5]]],"life_fnc_gangCreated",_ownerID,false] call life_fnc_MP;
 
 
