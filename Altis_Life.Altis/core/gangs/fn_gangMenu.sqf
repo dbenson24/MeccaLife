@@ -16,6 +16,10 @@ if(isNull (findDisplay 2620)) then {
 
 if(!life_in_gang) exitWith {closeDialog 0;}; //Bad juju
 
+if(typeName life_gangowner != "SCALAR") then {
+	life_gangowner = parseNumber(life_gangowner);	
+};
+
 _ownerID = life_gangowner;
 _gangName = life_gangname;
 _gangBank = life_gangbank;
