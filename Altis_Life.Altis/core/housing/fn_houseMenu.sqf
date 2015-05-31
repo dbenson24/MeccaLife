@@ -126,12 +126,13 @@ if(!(_curTarget in life_vehicles) OR isNil {_curTarget GVAR "house_owner"}) then
 		_Btn1 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_sellHouse; closeDialog 0;";
 		_Btn1 ctrlShow true;
 		diag_log "Opened a house";
-		if(((_curTarget GVAR "house_owner") select 0) != (getPlayerUID player)) then {
-			_Btn1 ctrlEnable false;
-		};
+		
 		
 		if (typeOf _curTarget == "Land_i_Shed_Ind_F") then {
 			diag_log "That house was a shed";
+			if(((_curTarget GVAR "house_owner") select 0) != parseNumber(getPlayerUID player)) then {
+				_Btn1 ctrlEnable false;
+			};
 			if (life_gangowner != parseNumber(steamid)) then {
 				_Btn1 ctrlEnable false;
 				_Btn2 ctrlEnable false;
@@ -146,6 +147,10 @@ if(!(_curTarget in life_vehicles) OR isNil {_curTarget GVAR "house_owner"}) then
 			_Btn5 buttonSetAction "[life_pInact_curTarget,player] spawn life_fnc_storeVehicle; closeDialog 0;";
 			_Btn5 ctrlShow true;
 			
+		} else {
+			if(((_curTarget GVAR "house_owner") select 0) != (getPlayerUID player)) then {
+				_Btn1 ctrlEnable false;
+			};	
 		};
 		
 		if(_curTarget GVAR ["locked",false]) then {

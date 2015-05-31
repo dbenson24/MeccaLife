@@ -8,7 +8,7 @@ private["_house","_uid","_houseCfg","_gangid"];
 _house = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 
 if ((typeOf _house == "Land_i_Shed_Ind_F") && (life_gangid != -1)) then {
-	_uid = life_gangid;
+	_uid = str(life_gangid);
 } else {
 	_uid = getPlayerUID player;
 };
