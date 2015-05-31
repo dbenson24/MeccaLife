@@ -48,7 +48,7 @@ _members = CONTROL(2620,2621);
 lbClear _members;
 if (typeName (_gangMembers select 0) == "ARRAY") then {
 	{
-		if((_x select 0) == _ownerID) then {
+		if(parseNumber(_x select 0) == _ownerID) then {
 			_members lbAdd format["%1 (%2) " +(localize "STR_GNOTF_GangLeader"),(_x select 1),(_x select 2)];
 			_members lbSetData [(lbSize _members)-1,str(_x)];
 			_members lbSetValue [(lbSize _members)-1,6-(_x select 2)];
