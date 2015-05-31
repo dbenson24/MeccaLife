@@ -18,7 +18,6 @@ if(!life_in_gang) exitWith {closeDialog 0;}; //Bad juju
 
 _ownerID = life_gangowner;
 _gangName = life_gangname;
-_gangMax = life_gangmaxmembers;
 _gangBank = life_gangbank;
 _gangMembers = life_gangmembers;
 

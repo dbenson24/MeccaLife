@@ -91,7 +91,7 @@ if(!(_curTarget in life_vehicles) OR isNil {_curTarget GVAR "house_owner"}) then
 	_Btn1 ctrlShow true;
 	
 	if (typeOf _curTarget == "Land_i_Shed_Ind_F") then {
-		if (life_gangowner != steamid) then {
+		if (life_gangowner != (steamid)) then {
 			_Btn1 ctrlEnable false;
 		};
 		

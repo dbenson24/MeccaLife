@@ -68,7 +68,7 @@ switch(playerSide) do {
 		life_in_gang = false;
 		if(!(EQUAL(count life_gangData,0))) then {
 			life_gangid = SEL(life_gangData,0);
-			life_gangowner = SEL(life_gangData,1);
+			life_gangowner = parseNumber(SEL(life_gangData,1));
 			life_gangname = SEL(life_gangData,2);
 			life_gangmaxmembers = SEL(life_gangData,3);
 			life_gangbank = SEL(life_gangData,4);

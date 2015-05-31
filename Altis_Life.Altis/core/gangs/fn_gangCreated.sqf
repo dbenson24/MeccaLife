@@ -9,8 +9,8 @@
 */
 private "_group";
 _gang_name = [_this,0,"",[""]] call BIS_fnc_param;
-_gang_owner = [_this,1,-1,[-1]] call BIS_fnc_param;
-_gang_id = [_this,2,-1,[-1]] call BIS_fnc_param;
+_gang_owner = [_this,1,-1] call BIS_fnc_param;
+_gang_id = [_this,2,-1] call BIS_fnc_param;
 _gang_bank = [_this,3,-1,[-1]] call BIS_fnc_param;
 _gang_members = [_this,4,[],[[]]] call BIS_fnc_param;
 

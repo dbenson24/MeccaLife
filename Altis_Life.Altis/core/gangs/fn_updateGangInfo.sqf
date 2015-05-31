@@ -10,7 +10,7 @@
 */
 private["_gang_id","_gang_owner","_gang_bank","_gang_members","_force"];
 _gang_id = [_this,0,-1,[-1]] call BIS_fnc_param;
-_gang_owner = [_this,1,-1,[-1]] call BIS_fnc_param;
+_gang_owner = [_this,1,-1] call BIS_fnc_param;
 _gang_bank = [_this,2,-1,[-1]] call BIS_fnc_param;
 _gang_members = [_this,3,[],[[]]] call BIS_fnc_param;
 _force = [_this,4,false,[false]] call BIS_fnc_param;
