@@ -64,8 +64,8 @@ _query = format["gangOwnerSelectID:%1:%2",_uid,1];
 waitUntil{!DB_Async_Active};
 _queryResult = [_query,2] call DB_fnc_asyncCall;
 
-_group SVAR ["gang_id",_queryResult,true];
+_group SVAR ["gang_id",_queryResult select 0,true];
 
-[[_gangName,_uid,_queryResult,0,[_gangMembers]],"life_fnc_gangCreated",_ownerID,false] call life_fnc_MP;
+[[_gangName,_uid,_queryResult select 0,0,[_gangMembers]],"life_fnc_gangCreated",_ownerID,false] call life_fnc_MP;
 
 
