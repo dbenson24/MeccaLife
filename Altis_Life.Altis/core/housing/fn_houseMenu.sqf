@@ -129,9 +129,9 @@ if(!(_curTarget in life_vehicles) OR isNil {_curTarget GVAR "house_owner"}) then
 		if (typeOf _curTarget == "Land_i_Shed_Ind_F") then {
 			diag_log "That house was a shed";
 			if (life_gangrank == 5) then {
-				_Btn1 ctrlEnable false;
-			} else {
 				_Btn1 ctrlEnable true;
+			} else {
+				_Btn1 ctrlEnable false;
 				_Btn2 ctrlEnable false;
 			};
 			_Btn4 ctrlSetText localize "STR_pInAct_AccessGarage";
