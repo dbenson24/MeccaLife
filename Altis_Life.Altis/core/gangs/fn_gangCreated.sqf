@@ -17,6 +17,7 @@ _gang_members = [_this,4,[],[[]]] call BIS_fnc_param;
 life_action_gangInUse = nil;
 
 if(BANK < (LIFE_SETTINGS(getNumber,"gang_price"))) exitWith {
+	[[_gang_id],"TON_fnc_removeGang",false,false] call life_fnc_MP;
 	hint format[localize "STR_GNOTF_NotEnoughMoney",[((LIFE_SETTINGS(getNumber,"gang_price"))-BANK)] call life_fnc_numberText];
 	life_in_gang = false;
 	life_gangid = -1;
@@ -24,6 +25,7 @@ if(BANK < (LIFE_SETTINGS(getNumber,"gang_price"))) exitWith {
 	life_gangname = -1;
 	life_gangbank = -1;
 	life_gangmembers = -1;
+	life_gangrank = 0;
 };
 
 SUB(BANK,(LIFE_SETTINGS(getNumber,"gang_price")));
@@ -33,5 +35,6 @@ life_gangowner = _gang_owner;
 life_gangname = _gang_name;
 life_gangbank = _gang_bank;
 life_gangmembers = _gang_members;
+life_gangrank = 5;
 
 hint format[localize "STR_GNOTF_CreateSuccess",life_gangname,[(LIFE_SETTINGS(getNumber,"gang_price"))] call life_fnc_numberText];
