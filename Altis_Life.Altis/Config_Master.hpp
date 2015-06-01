@@ -26,7 +26,7 @@
 	Master settings for various features and functionality	
 */
 class Life_Settings {
-	/* Persistent Settings */
+	/* Persistent Settings */33
 	save_civ_weapons = true; //Allow civilians to save weapons on them?
 	save_virtualItems = true; //Save Virtual items (all sides)?
 
