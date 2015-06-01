@@ -167,3 +167,6 @@ if (playerSide == civilian) then {
 
 life_invisible = false;
 life_deadGear = [];
+
+life_isGov = false;
+[[player],"TON_fnc_govLogged",false,false] spawn life_fnc_mp;

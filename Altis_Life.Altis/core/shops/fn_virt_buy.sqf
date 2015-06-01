@@ -2,8 +2,7 @@
 /*
 	File: fn_virt_buy.sqf
 	Author: Bryan "Tonic" Boardwine
-	Edited by worldtrade1101
-	
+
 	Description:
 	Buy a virtual item from the store.
 */
@@ -11,8 +10,6 @@ private["_type","_price","_amount","_diff","_name","_hideout"];
 if((lbCurSel 2401) == -1) exitWith {hint localize "STR_Shop_Virt_Nothing"};
 _type = lbData[2401,(lbCurSel 2401)];
 _price = lbValue[2401,(lbCurSel 2401)];
-
-
 _amount = ctrlText 2404;
 if(!([_amount] call TON_fnc_isnumber)) exitWith {hint localize "STR_Shop_Virt_NoNum";};
 _diff = [_type,parseNumber(_amount),life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
@@ -22,9 +19,7 @@ _amount = _diff;
 _hideout = (nearestObjects[getPosATL player,["Land_u_Barracks_V2_F","Land_i_Barracks_V2_F"],25]) select 0;
 if((_price * _amount) > life_cash && {!isNil "_hideout" && {!isNil {grpPlayer getVariable "gang_bank"}} && {(grpPlayer getVariable "gang_bank") <= _price * _amount}}) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
 
-_name = M_CONFIG(getText,"VirtualItems",_type,"displayName");
-//_name = SEL(_type,0);
-//_name = [([_type,0] call life_fnc_varHandle)] call life_fnc_varToStr;
+_name = [([_type,0] call life_fnc_varHandle)] call life_fnc_varToStr;
 
 if(([true,_type,_amount] call life_fnc_handleInv)) then
 {
@@ -39,29 +34,28 @@ if(([true,_type,_amount] call life_fnc_handleInv)) then
 			localize "STR_Shop_Virt_UI_YourCash"
 		] call BIS_fnc_guiMessage;
 		if(_action) then {
-			hint format[localize "STR_Shop_Virt_BoughtGang",_amount,(localize _name),[(_price * _amount)] call life_fnc_numberText];
+			hint format[localize "STR_Shop_Virt_BoughtGang",_amount,_name,[(_price * _amount)] call life_fnc_numberText];
 			_funds = grpPlayer getVariable "gang_bank";
 			_funds = _funds - (_price * _amount);
 			grpPlayer setVariable["gang_bank",_funds,true];
 			[[1,grpPlayer],"TON_fnc_updateGang",false,false] spawn life_fnc_MP;
 		} else {
 			if((_price * _amount) > life_cash) exitWith {[false,_type,_amount] call life_fnc_handleInv; hint localize "STR_NOTF_NotEnoughMoney";};
-			hint format[localize "STR_Shop_Virt_BoughtItem",_amount,(localize _name),[(_price * _amount)] call life_fnc_numberText];
-			SUB(life_cash,_price);
-			//[[1,player,life_shop_type,_amount,_price,_type],"TON_fnc_Ajustprices",false,false] spawn life_fnc_MP;
+			hint format[localize "STR_Shop_Virt_BoughtItem",_amount,_name,[(_price * _amount)] call life_fnc_numberText];
+			__SUB__(life_cash,_price * _amount);
+			 systemChat format ["%1 %2 %3 %4",(life_taxes/100),_price,_amount,((life_taxes/100)*(_price * _amount))];
+			 [[((life_taxes/100)*(_price * _amount))],"TON_fnc_addCash",false,false] spawn life_fnc_mp;
 		};
 	} else {
 		if((_price * _amount) > life_cash) exitWith {hint localize "STR_NOTF_NotEnoughMoney"; [false,_type,_amount] call life_fnc_handleInv;};
-		hint format[localize "STR_Shop_Virt_BoughtItem",_amount,(localize _name),[(_price * _amount)] call life_fnc_numberText];
-		SUB(life_cash,(_price * _amount));
-		//[[1,player,life_shop_type,_amount,_price,_type],"TON_fnc_Ajustprices",false,false] spawn life_fnc_MP;
+		hint format[localize "STR_Shop_Virt_BoughtItem",_amount,_name,[(_price * _amount)] call life_fnc_numberText];
+		__SUB__(life_cash,(_price * _amount));
+		 systemChat format ["%1 %2 %3 %4",(life_taxes/100),_price,_amount,((life_taxes/100)*(_price * _amount))];
+		 [[((life_taxes/100)*(_price * _amount))],"TON_fnc_addCash",false,false] spawn life_fnc_mp;
+
 	};
-	
 	[] call life_fnc_virt_update;
 };
-/* commented out for performance
+
 [0] call SOCK_fnc_updatePartial;
-if (playerSide != west) then {
-	[3] call SOCK_fnc_updatePartial;
-};
-*/
+[3] call SOCK_fnc_updatePartial;

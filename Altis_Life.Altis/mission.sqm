@@ -123,12 +123,11 @@ class Mission
 		"a3_characters_f",
 		"A3_Characters_F_Civil",
 		"A3_Characters_F_OPFOR",
-		"A3_Characters_F_EPA",
+		"A3_Characters_F_INDEP",
 		"A3_Characters_F_Gamma",
 		"A3_Characters_F_Kart",
 		"A3_Characters_F_EPC",
 		"A3_Modules_F",
-		"A3_Characters_F_INDEP",
 		"A3_Structures_F_Civ_Garbage",
 		"A3_Structures_F_Civ_Constructions",
 		"A3_Signs_F",
@@ -6573,7 +6572,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=8312;
+		items=8313;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -94852,10 +94851,20 @@ class Mission
 			skill=0.60000002;
 			init="this enableSimulation false; this allowDamage false; this setPosASL [position this select 0, position this select 1, 17.28]; this setVectorUp [0,0,1];";
 		};
+		class Item8312
+		{
+			position[]={3618.2241,9.9900742,13119.855};
+			azimut=173.95108;
+			id=8672;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V2_F";
+			skill=0.60000002;
+			init="this allowDamage false; this enableSimulation false; this addAction [""GovMenu"", {createDialog ""GovActionMenu"";}]; ";
+		};
 	};
 	class Markers
 	{
-		items=414;
+		items=417;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -98317,6 +98326,30 @@ class Mission
 			text="Air Shop";
 			type="mil_dot";
 			colorName="Color1_FD_F";
+		};
+		class Item414
+		{
+			position[]={3618.417,9.9859161,13120.265};
+			name="Vote1_1";
+			text="Vote Booth";
+			type="b_mortar";
+			angle=8.9339275;
+		};
+		class Item415
+		{
+			position[]={3618.4001,9.9853764,13120.296};
+			name="Vote1_1_1";
+			text="Vote Booth";
+			type="b_mortar";
+			angle=8.9339275;
+		};
+		class Item416
+		{
+			position[]={3618.4165,9.9859257,13120.264};
+			name="Vote1_1_2";
+			text="Vote Booth";
+			type="b_mortar";
+			angle=8.9339275;
 		};
 	};
 	class Sensors
