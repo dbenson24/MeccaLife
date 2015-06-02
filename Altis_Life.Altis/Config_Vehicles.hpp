@@ -232,6 +232,11 @@ class CfgVehicles {
 		storageFee[] = { 0, 0, 1500, 0 };
 		garageSell[] = { 0, 0, 5000, 0 };
 		chopShop = 3000;
+		textures[] = {
+		    { "EMS", "med", {
+                "textures\medic_offroad.jpg"
+            } }
+		};
 	};
 	class I_Truck_02_medical_F : Default {
 		vItemSpace = 150;
