@@ -329,7 +329,7 @@ switch (_code) do {
 					life_smartphoneTarget = cursorTarget;
 					_uid = getPlayerUID life_smartphoneTarget;
 					{
-						if(_uid = getPlayerUID _x) then{
+						if(_uid == getPlayerUID _x) then{
 							life_smartphoneTarget = _x;	
 						};
 					} foreach playableUnits;
