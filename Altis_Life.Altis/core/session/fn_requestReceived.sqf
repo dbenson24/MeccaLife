@@ -100,6 +100,9 @@ switch(playerSide) do {
 
 
 life_gear = SEL(_this,8);
+if(playerSide == independent) then {
+	life_gear = [];	
+};
 life_copgear = life_gear;
 [] call life_fnc_loadGear;
 

@@ -13,7 +13,7 @@ waitUntil {scriptDone _handle};
 
 diag_log "Made it to assigning items";
 
-player addUniform "U_I_CombatUniform_tshirt";
+player forceAddUniform "U_I_CombatUniform_tshirt";
 player addBackpack "B_Carryall_oucamo";
 player addItem "FirstAidKit";
 
