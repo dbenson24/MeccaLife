@@ -398,7 +398,7 @@ class WeaponShops {
             { "NVGoggles", "", 1000, { "", "", -1 } },
 			{ "SmokeShell", "", 1000, { "", "", -1 } },
 			{ "H_MilCap_gry", "", 50, { "", "Hat", -1 } },
-			{ "U_Rangemaster", "Uniform", 50, { "", "", -1 } },			
+			{ "U_I_CombatUniform_tshirt", "Uniform", 50, { "", "", -1 } },			
             { "B_AssaultPack_blk", "", 3000, { "", "", -1 } }
         };
     };
