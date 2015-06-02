@@ -7,6 +7,7 @@
 */
 private["_handle"];
 diag_log "Called medic Loadout";
+sleep 2;
 _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
