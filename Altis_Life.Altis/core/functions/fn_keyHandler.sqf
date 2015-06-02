@@ -328,7 +328,7 @@ switch (_code) do {
 				if(isPlayer cursorTarget) then {
 					life_smartphoneTarget = cursorTarget;
 					createDialog "Life_smartphone_schreiben";
-					ctrlSetText[88886, format["Message To Target"];
+					ctrlSetText[88886, "Message To Target"];
 					if((FETCH_CONST(life_adminlevel) < 1)) then
 					{
 						ctrlShow[888897,false];
