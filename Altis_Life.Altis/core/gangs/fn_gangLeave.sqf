@@ -36,5 +36,5 @@ life_gangname = "";
 life_gangbank = 0;
 life_gangrank = 0;
 life_in_gang = false;
-(life_ganggroup) = ObjNull;
+life_ganggroup = ObjNull;
 closeDialog 0;
