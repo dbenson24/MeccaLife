@@ -11,7 +11,7 @@ private["_queryResult","_query","_count","_query2","_queryresult2","_pos","_nogo
 _nogood = [[8439.86,12758.9,0.132305],[8972.68,15504.6,0.681137],[8946.03,15514.5,0.131012],[5231.96,11527.9,0.394684],[19028.9,14568.4,0.213081],[24660.4,23181.1,0.308233]];
 {
 	_b = nearestBuilding _x;
-	_b setVariable ["house_owner",["0","Unknown"]];
+	_b setVariable ["house_owner",["0","Unknown"],true];
 } foreach _nogood;
 
 waitUntil{!DB_Async_Active};
