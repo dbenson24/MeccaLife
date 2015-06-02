@@ -5,8 +5,10 @@
 	Description:
 	Allows Cops to enter locked Vehicles
 */
-if(playerSide != west) exitWith {};
-private ["_position","_veh"];
+if(playerSide == civilian) exitWith {};
+private ["_position","_veh","_restrained"];
+_restrained = player getVariable["restrained",false];
+if (_restrained) exitWith {hint "You can't do that while you are restrained!"};
 _position = _this select 3;
 
 switch (_position) do

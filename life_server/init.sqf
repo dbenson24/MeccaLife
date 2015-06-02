@@ -203,7 +203,7 @@ for "_i" from 1 to 3 do {_dome setVariable[format["bis_disabled_Door_%1",_i],1,t
 _rsb setVariable["bis_disabled_Door_1",1,true];
 _rsb allowDamage false;
 _dome allowDamage false;
-
+setDate [2015, 6, 25, 8, 0];
 /* Tell clients that the server is ready and is accepting queries */
 life_server_isReady = true;
 PVAR_ALL("life_server_isReady");

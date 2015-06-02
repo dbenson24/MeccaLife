@@ -62,12 +62,6 @@ if(_curTarget isKindOf "Man" && {!alive _curTarget} && {playerSide in [west,inde
 	};
 };
 
-//Check if it's a dead body.
-if(_curTarget isKindOf "Man" && {!alive _curTarget} ) exitWith {
-	// Put your friend inside the vehicle
-	hint "You are looking at a dead man";
-};
-
 //If target is a player then check if we can use the cop menu.
 if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 	if((_curTarget GVAR ["restrained",false]) && !dialog && playerSide == west) then {
@@ -118,9 +112,15 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 			} else {
 				//It wasn't a misc item so is it money?
 				if(EQUAL((typeOf _curTarget),_money) && {!(_curTarget GVAR ["inUse",false])}) then {
-					[[_curTarget,player,true],"**",false,false,true] spawn life_fnc_MP;
+					[[_curTarget,player,true],"TON_fnc_pickupAction",false,false,true] spawn life_fnc_MP;
 				};
 			};
 		};
 	};
+};
+
+//Check if it's a dead body.
+if(_curTarget isKindOf "Man" && {!alive _curTarget} ) exitWith {
+	// Put your friend inside the vehicle
+	hint "You are looking at a dead man";
 };

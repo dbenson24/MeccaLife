@@ -158,7 +158,7 @@ class CarShops {
 		side = "cop";
 		vehicles[] = {
 			{ "B_Heli_Light_01_F", pmh9cop, "", { "life_coplevel", 2 } },
-			{ "B_Heli_Transport_01_F", pghosthawkcop, "", { "life_coplevel", 4 } }
+			{ "B_Heli_Transport_01_F", pghosthawkcop, "", { "life_coplevel", 5 } }
 		};
 	};
 
@@ -220,9 +220,9 @@ class CfgVehicles {
 	    price = pmarid;
 	    textures[] = {
 	        { "Swat", "cop", {
-                "textures\swat apc.paa",
-                "textures\swat apc2.paa",
-                "textures\swat turret.paa"
+                "textures\swat apc.jpg",
+                "textures\swat apc2.jpg",
+                "textures\swat turret.jpg"
             } }
 	    };
 	};
@@ -241,8 +241,8 @@ class CfgVehicles {
 		chopShop = 3000;
 		textures[] = {
 		    { "EMS", "med", {
-                "textures\Zamak medical 1.paa",
-                "textures\Zamak medical 2.paa",
+                "textures\Zamak medical 1.jpg",
+                "textures\Zamak medical 2.jpg",
                 "textures\Zamak medical 3.paa"
             } }
 		};
@@ -506,8 +506,8 @@ class CfgVehicles {
 	                "#(ai,64,64,1)Fresnel(0.3,3)"
             } },
 			{ "Police", "cop", {
-	                "textures\policeoffroad.paa",
-					"textures\policeoffroad.paa"
+	                "textures\policeoffroad.jpg",
+					"textures\policeoffroad.jpg"
             } },
             { "Taxi", "civ", {
 	                "#(argb,8,8,3)color(0.6,0.3,0.01,1)"
@@ -556,7 +556,10 @@ class CfgVehicles {
 	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport06_co.paa"
             } },
             { "Police", "cop", {
-                "textures\policehatch.paa"
+                "textures\policehatch.jpg"
+            } },
+			{ "Medic", "med", {
+	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base06_co.paa"
             } }
         };
     };
@@ -597,7 +600,7 @@ class CfgVehicles {
                 "\a3\soft_f_gamma\Quadbike_01\data\quadbike_01_indp_hunter_co.paa"
             } },
             { "Police", "cop", {
-                "textures\policequad.paa"
+                "textures\policequad.jpg"
             } }
         };
     };
@@ -697,7 +700,7 @@ class CfgVehicles {
 	                "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa"
             } },
             { "Cop", "cop", {
-                "textures\meccapolicesuv.paa"
+                "textures\meccapolicesuv.jpg"
             } },
             { "Donut", "civ", {
                 "textures\donut_suv_textures.paa"
@@ -746,8 +749,8 @@ class CfgVehicles {
         chopShop = 5000;
         textures[] = {
         	{ "Cop", "cop", {
-                "textures\Hunter1.paa",
-                "textures\Hunter2.paa"
+                "textures\Hunter1.jpg",
+                "textures\Hunter2.jpg"
             } },
             { "Black", "fed", {
                 "#(argb,8,8,3)color(0.05,0.05,0.05,1)"
@@ -764,7 +767,7 @@ class CfgVehicles {
         chopShop = 5000;
         textures[] = {
         	{ "Cop", "cop", {
-                "textures\meccalittlebird.paa"
+                "textures\meccalittlebird.jpg"
             } },
 			{ "Black", "fed", {
 	                "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa"
@@ -806,7 +809,7 @@ class CfgVehicles {
 	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_digital_co.paa"
             } },
             { "MES", "med", {
-                "textures\mlbird.paa"
+                "textures\mlbird.jpg"
             } }
         };
     };
@@ -882,7 +885,7 @@ class CfgVehicles {
 	                "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_opfor_co.paa" 
             } },
             { "MES Orca", "med", {
-                "textures\morca.paa"
+                "textures\morca.jpg"
             } }
         };
     };
@@ -951,7 +954,7 @@ class CfgVehicles {
 	                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_wave_co.paa"
             } },
             { "MES", "med", {
-                "textures\mlbird.paa"
+                "textures\mlbird.jpg"
             } }
         };
     };

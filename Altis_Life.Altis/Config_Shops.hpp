@@ -74,6 +74,9 @@ class WeaponShops {
 			
             { "hgun_Rook40_F", "", 5000, { "", "", -1 } },
             { "30Rnd_9x21_Mag", "", 500, { "", "", -1 } },
+
+			{ "hgun_ACPC2_F", "", 6000, { "", "", -1 } },
+			{ "9Rnd_45ACP_Mag", "", 500, { "", "", -1 } },
 			
             { "hgun_PDW2000_F", "", 10000, { "", "", -1 } },
             { "30Rnd_9x21_Mag", "", 500, { "", "", -1 } },
@@ -169,7 +172,7 @@ class WeaponShops {
             { "30Rnd_9x21_Mag", "", 500, { "", "", -1 } },
 			
             { "arifle_sdar_F", "", 25000, { "", "", -1 } },
-            { "20Rnd_556x45_UW_mag", "", 25000, { "", "", -1 } },
+            { "20Rnd_556x45_UW_mag", "", 500, { "", "", -1 } },
 			
             { "hgun_Pistol_heavy_02_F", "", 25000, { "", "", -1 } },
             { "6Rnd_45ACP_Cylinder", "", 500, { "", "", -1 } },
@@ -248,7 +251,7 @@ class WeaponShops {
             { "30Rnd_9x21_Mag", "", 500, { "", "", -1 } },
 			
             { "arifle_sdar_F", "", 25000, { "", "", -1 } },
-            { "20Rnd_556x45_UW_mag", "", 25000, { "", "", -1 } },
+            { "20Rnd_556x45_UW_mag", "", 500, { "", "", -1 } },
 			
             { "hgun_Pistol_heavy_02_F", "", 25000, { "", "", -1 } },
             { "6Rnd_45ACP_Cylinder", "", 500, { "", "", -1 } },
@@ -393,7 +396,9 @@ class WeaponShops {
 			{ "Rangefinder", "",5000, { "", "", -1 } },
             { "NVGoggles_INDEP", "", 1000, { "", "", -1 } },
             { "NVGoggles", "", 1000, { "", "", -1 } },
-			{ "SmokeShell", "", 1000, { "", "", -1 } },		
+			{ "SmokeShell", "", 1000, { "", "", -1 } },
+			{ "H_MilCap_gry", "", 50, { "", "Hat", -1 } },
+			{ "U_I_CombatUniform_tshirt", "Uniform", 50, { "", "", -1 } },			
             { "B_AssaultPack_blk", "", 3000, { "", "", -1 } }
         };
     };

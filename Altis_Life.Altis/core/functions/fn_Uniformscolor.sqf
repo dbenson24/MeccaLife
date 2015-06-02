@@ -7,8 +7,8 @@
 #define FETCH_CONST(var) (call var)
 
 if(side player == independent) then {
-	if ((uniform player) == "U_B_CTRG_3") then {
-		player setObjectTextureGlobal [0, "textures\medic_uniform.paa"];
+	if ((uniform player) == "U_I_CombatUniform_tshirt") then {
+		player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"];
 	};
 };
 
@@ -19,20 +19,20 @@ if(side player == WEST) then {
     	(unitbackpack player) setObjectTextureGlobal [0, ""]; 
 	};
 	
-	if (uniform player == "U_BG_Guerilla2_2") then {
-		player setObjectTextureGlobal [0, "textures\cadettroop.paa"]; 
+	if (uniform player == "U_Rangemaster") then {
+		player setObjectTextureGlobal [0, "textures\cadettroop.jpg"]; 
 	};
 	// Cop Level 3 & 4
 	if (uniform player == "U_BG_Guerilla3_2") then {
-		player setObjectTextureGlobal [0, "textures\corptroop.paa"]; 
+		player setObjectTextureGlobal [0, "textures\corptroop.jpg"]; 
 	};
 	// Cop Level 5 & 6 & 7
 	if (uniform player == "U_O_OfficerUniform_ocamo") then {
-		player setObjectTextureGlobal [0, "textures\capttroop.paa"]; 
+		player setObjectTextureGlobal [0, "textures\capttroop.jpg"]; 
 	};
 	
 	if (uniform player == "U_O_SpecopsUniform_ocamo") then {
-		player setObjectTextureGlobal [0, "textures\swat.paa"]; 
+		player setObjectTextureGlobal [0, "textures\swat.jpg"]; 
 	};
 };
 
@@ -46,18 +46,18 @@ if(side player == civilian) then {
 	};
 	
 	if(uniform player == "U_C_Poloshirt_blue") then {
-	player setObjectTextureGlobal [0, "textures\meccashirt.paa"];
+	player setObjectTextureGlobal [0, "textures\meccashirt.jpg"];
 	};
 	
 	if (uniform player == "U_BG_Guerilla2_2") then {
-		player setObjectTextureGlobal [0, "textures\cadettroop.paa"]; 
+		player setObjectTextureGlobal [0, "textures\cadettroop.jpg"]; 
 	};
 	// Cop Level 3 & 4
 	if (uniform player == "U_BG_Guerilla3_2") then {
-		player setObjectTextureGlobal [0, "textures\corptroop.paa"]; 
+		player setObjectTextureGlobal [0, "textures\corptroop.jpg"]; 
 	};
 	// Cop Level 5 & 6 & 7
 	if (uniform player == "U_O_OfficerUniform_ocamo") then {
-		player setObjectTextureGlobal [0, "textures\capttroop.paa"]; 
+		player setObjectTextureGlobal [0, "textures\capttroop.jpg"]; 
 	};
 };

@@ -101,14 +101,34 @@ switch (_type) do
         [true, "white", [-0.8, 1.615, -0.525]] call _attach;
     };
 
-    case "I_MRAP_03_F":
+    case "B_MRAP_01_F":
     {
-        [false, "red", [-0.87, 2.2, -0.75]] call _attach;
-        [true, "blue", [0.87, 2.2, -0.75]] call _attach;
-        [false, "red", [-0.725, -3.15, 0.025]] call _attach;
-        [true, "blue", [0.725, -3.15, 0.025]] call _attach;
-        [false, "white", [1.05, 2.25, -0.3]] call _attach;
-        [true, "white", [-1.05, 2.25, -0.3]] call _attach;
+        [false, "red", [-0.82, 1.50, -0.55]] call _attach;
+        [true, "blue", [0.82, 1.50, -0.55]] call _attach;
+        [false, "red", [-1.00, -2.80, 0.530]] call _attach;
+        [true, "blue", [1.00, -2.80, 0.530]] call _attach;
+        [false, "white", [1.05, 1.50, -0.55]] call _attach;
+        [true, "white", [-1.05, 1.50, -0.55]] call _attach;
+    };
+    
+    case "B_Heli_Transport_01_F":
+    {
+        [false, "red", [0, -2.7, -1.8]] call _attach;
+        [true, "blue", [0, -2.7, -1.8]] call _attach;
+        [false, "red", [-0.40, 7.50, -0.90]] call _attach;
+        [true, "blue", [0.40, 7.50, -0.90]] call _attach;
+        [false, "white", [0.65, 7.15, -1.1]] call _attach;
+        [true, "white",  [-0.65, 7.15, -1.1]] call _attach;
+    };
+    
+    case "B_Heli_Light_01_F":
+    {
+        [false, "red", [0, -1.5, -0.1]] call _attach;
+        [true, "blue", [0, -1.5, -0.1]] call _attach;
+        [false, "red", [-0.8, 1.9, -0.2]] call _attach;
+        [true, "blue", [0.8, 1.9, -0.2]] call _attach;
+        [false, "white", [0.2, 2.5, -0.2]] call _attach;
+        [true, "white", [-0.2, 2.5, -0.2]] call _attach;
     };
 };
 
