@@ -323,6 +323,18 @@ switch (_code) do {
 					};
 				};
 			};
+		} else {
+			if (_ctrlKey) then {
+				if(isPlayer cursorTarget) then {
+					life_smartphoneTarget = cursorTarget;
+					createDialog "Life_smartphone_schreiben";
+					ctrlSetText[88886, format["Message To Target"];
+					if((FETCH_CONST(life_adminlevel) < 1)) then
+					{
+						ctrlShow[888897,false];
+					};
+				};
+			};
 		};
 	};
 	//L Key?
