@@ -5,7 +5,7 @@
 	Description:
 	32 hours...
 */
-private["_unit","_unitID","_members"];
+private["_unit","_unitID","_members","_unitRank","_isLeader"];
 disableSerialization;
 
 if((lbCurSel 2621) == -1) exitWith {hint localize "STR_GNOTF_SelectKick"};
@@ -15,7 +15,15 @@ _unit = call compile format["%1",CONTROL_DATA(2621)];
 _unitID = _unit select 0;
 
 if(_unitID == getPlayerUID player) exitWith {hint localize "STR_GNOTF_KickSelf"};
-if(_unitID == str(life_gangowner)) exitWith {hint "You cannot kick the leader!"};
+_isLeader = false;
+{
+	if(_x select 0 == _unitID) then {
+		if(_x select 2 > 3) then {
+			_isLeader = true;	
+		};
+	};
+} forEach life_gangmembers;
+if(_isLeader) exitWith {hint "You cannot kick anyone rank 4 or higher!"};
 _members = life_gangmembers;
 if(isNil "_members") exitWith {};
 if(!(EQUAL(typeName _members,"ARRAY"))) exitWith {};
