@@ -4,7 +4,16 @@
 	Description:
 	WHAT THE HELL DO YOU THINK IT DOES?!?!!??!?!!?!??!
 */
-private["_queryResult","_query","_count","_query2","_queryresult2","_pos"];
+private["_queryResult","_query","_count","_query2","_queryresult2","_pos","_nogood","_b"];
+
+/* Warehouses that should not be bought */
+/* Heroine Processing, DP 11 Chop, DP 11 Chop, DP 8 Chop, DP 19 Chop, Sofia Chop*/
+_nogood = [[8439.86,12758.9,0.132305],[8972.68,15504.6,0.681137],[8946.03,15514.5,0.131012],[5231.96,11527.9,0.394684],[19028.9,14568.4,0.213081],[24660.4,23181.1,0.308233]];
+{
+	_b = nearestBuilding _nogood;
+	_b setVariable ["house_owner",["0","Unknown"]];
+} foreach _nogood;
+
 waitUntil{!DB_Async_Active};
 _count = (["housingCount",2] call DB_fnc_asyncCall) select 0;
 
@@ -34,7 +43,7 @@ for [{_x=0},{_x<=_count},{_x=_x+10}] do {
 			if(count _queryResult2 > 0) then {
 				_house setVariable["house_owner",[_queryResult2 select 0,_queryResult2 select 1],true];
 			} else {
-				_house setVariable["house_owner",[0,"Unknown"],true];
+				_house setVariable["house_owner",["0","Unknown"],true];
 			};
 			
 			_house allowDamage false;

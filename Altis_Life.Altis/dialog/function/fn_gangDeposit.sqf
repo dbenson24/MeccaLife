@@ -15,11 +15,10 @@ if(!([str(_value)] call life_fnc_isnumeric)) exitWith {hint localize "STR_ATM_no
 if(_value > BANK) exitWith {hint localize "STR_NOTF_NotEnoughFunds"};
 
 SUB(BANK,_value);
-_gFund = GANG_FUNDS;
-ADD(_gFund,_value);
-grpPlayer setVariable ["gang_bank",_gFund,true];
+ADD(life_gangbank,_value);
 
 hint format[localize "STR_ATM_DepositGang",[_value] call life_fnc_numberText];
 [] call life_fnc_atmMenu;
 [6] call SOCK_fnc_updatePartial; //Silent Sync
-[[1,grpPlayer],"TON_fnc_updateGang",false,false] call life_fnc_MP;
+
+[[life_gangid,-1,life_gangbank,[]],"life_fnc_updateGangInfo",true,false] spawn life_fnc_MP;
