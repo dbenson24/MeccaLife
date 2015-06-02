@@ -7,7 +7,7 @@
 #define FETCH_CONST(var) (call var)
 
 if(side player == independent) then {
-	if ((uniform player) == "U_I_CombatUniform_tshirt") then {
+	if ((uniform player) == "U_Rangemaster") then {
 		player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"];
 	};
 };
