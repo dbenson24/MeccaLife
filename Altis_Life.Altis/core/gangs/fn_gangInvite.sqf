@@ -9,7 +9,7 @@ private["_name","_group"];
 _name = [_this,0,"",[""]] call BIS_fnc_param;
 _ganginfo = [_this,1,[],[[]]] call BIS_fnc_param;
 if(_name == "" OR EQUAL(_ganginfo,[])) exitWith {}; //Fail horn anyone?
-if(!isNil {(group player) GVAR "gang_name"}) exitWith {hint "You are already in a gang"};
+if(life_gangrank > 0) exitWith {hint "Someone has invited you to a gang but you are already in a gang"};
 
 _gangName = SEL(_ganginfo,4);
 _action = [

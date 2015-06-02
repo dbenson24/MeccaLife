@@ -12,7 +12,6 @@ if((lbCurSel 2632) == -1) exitWith {hint localize "STR_GNOTF_SelectPerson"};
 _unit = call compile format["%1",CONTROL_DATA(2632)];
 if(isNull _unit) exitWith {}; //Bad unit?
 if(_unit == player) exitWith {hint localize "STR_GNOTF_InviteSelf"};
-if(!isNil {(group _unit) GVAR "gang_name"}) exitWith {hint "This player is already in a gang"}; //Added
 
 _action = [
 	format[localize "STR_GNOTF_InvitePlayerMSG",_unit GVAR ["realname",name _unit]],
