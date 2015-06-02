@@ -37,7 +37,7 @@ BANK = parseNumber (SEL(_this,3));
 CONST(life_adminlevel,parseNumber (SEL(_this,4)));
 CONST(life_donator,parseNumber(SEL(_this,5)));
 
-
+life_gangbank = 0;
 //Loop through licenses
 if(count (SEL(_this,6)) > 0) then {
 	{SVAR_MNS [SEL(_x,0),SEL(_x,1)];} foreach (SEL(_this,6));
