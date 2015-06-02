@@ -8,6 +8,7 @@
 */
 private["_itemArray","_uniform","_vest","_backpack","_goggles","_headgear","_items","_prim","_seco","_uItems","_bItems","_vItems","_pItems","_hItems","_yItems","_uMags","_bMags","_vMags","_handle"];
 if (playerSide == west) then {
+    sleep 5;
     _itemArray = life_copgear;
 } else {
     _itemArray = life_gear;
