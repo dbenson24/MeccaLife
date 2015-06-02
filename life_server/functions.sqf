@@ -57,7 +57,7 @@ compileFinal "
 		life_my_gang = ObjNull;
 		[player] joinSilent (createGroup civilian);
 		hint ""You have been kicked out of the gang."";
-		life_ganggroup = ObjNull;
+		(life_ganggroup) = ObjNull;
 		life_in_gang = false;
 		life_gangid = -1;
 		life_gangowner = -1;

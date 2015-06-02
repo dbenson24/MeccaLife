@@ -5,15 +5,15 @@
 	File: fn_captureHideout.sqf
 	
 	Description:
-	Blah blah.
+	For Gang Hideouts
 */
 private["_group","_hideout","_action","_cpRate","_cP","_progressBar","_title","_titleText","_ui","_flagTexture"];
 if (!life_in_gang) exitWith{};
 _hideout = (nearestObjects[getPosATL player,["Land_u_Barracks_V2_F","Land_i_Barracks_V2_F"],25]) select 0;
 _group = _hideout getVariable ["gangOwner",grpNull];
 
-if(isNil {life_ganggroup getVariable "gang_name"}) exitWith {titleText[localize "STR_GNOTF_CreateGang","PLAIN"];};
-if(_group == life_ganggroup) exitWith {titleText[localize "STR_GNOTF_Controlled","PLAIN"]};
+if(isNil {(group player) getVariable "gang_name"}) exitWith {titleText[localize "STR_GNOTF_CreateGang","PLAIN"];};
+if(_group == (group player)) exitWith {titleText[localize "STR_GNOTF_Controlled","PLAIN"]};
 if((_hideout getVariable ["inCapture",FALSE])) exitWith {hint localize "STR_GNOTF_Captured";};
 if(!isNull _group) then {
 	_gangName = _group getVariable ["gang_name",""];
@@ -86,6 +86,6 @@ _flagTexture = [
 		"\A3\Data_F\Flags\flag_fd_orange_CO.paa"
 	] call BIS_fnc_selectRandom;
 _this select 0 setFlagTexture _flagTexture;
-[[[0,1],"STR_GNOTF_CaptureSuccess",true,[name player,(life_ganggroup) getVariable "gang_name"]],"life_fnc_broadcast",true,false] call life_fnc_MP;
+[[[0,1],"STR_GNOTF_CaptureSuccess",true,[name player,(group player) getVariable "gang_name"]],"life_fnc_broadcast",true,false] call life_fnc_MP;
 _hideout setVariable["inCapture",false,true];
-_hideout setVariable["gangOwner",life_ganggroup,true];
+_hideout setVariable["gangOwner",(group player),true];

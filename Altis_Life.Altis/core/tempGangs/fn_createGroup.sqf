@@ -12,6 +12,7 @@ if(([_value,life_gang_list] call TON_fnc_index) != -1) exitWith {hint "That grou
 
 _group = createGroup civilian;
 
+_group setVariable ["gang_name",_value,true];
 /*Set Array*/
 life_gang_list set[count life_gang_list,[_value,_group,false,str(player),getPlayerUID player]];
 publicVariable "life_gang_list";

@@ -6,7 +6,7 @@
 	32 hours later...
 */
 private["_unitID","_members"];
-if(EQUAL(steamid,(life_ganggroup GVAR "gang_owner"))) exitWith {hint localize "STR_GNOTF_LeaderLeave"};
+if(life_gangrank == 5) exitWith {hint localize "STR_GNOTF_LeaderLeave"};
 _unitID = getPlayerUID player;
 _members = life_gangmembers;
 if(isNil "_members") exitWith {};
@@ -36,5 +36,5 @@ life_gangname = "";
 life_gangbank = 0;
 life_gangrank = 0;
 life_in_gang = false;
-life_ganggroup = ObjNull;
+(life_ganggroup) = ObjNull;
 closeDialog 0;

@@ -2,8 +2,10 @@
 /*
 	Author: Bryan "Tonic" Boardwine
 	
+	File: fn_captureRebelHideout.sqf
+	
 	Description:
-	Blah blah.
+	Rebel Gang Capture Point
 */
 private["_group","_hideout","_action","_cpRate","_cP","_progressBar","_title","_titleText","_ui","_flagTexture","_markername","_gangname2"];
 _hideout = (nearestObjects[getPosATL player,["Land_u_Barracks_V2_F","Land_i_Barracks_V2_F"],25]) select 0;
