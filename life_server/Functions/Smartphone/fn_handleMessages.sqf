@@ -45,7 +45,7 @@ switch(_type) do
 	//ems request
 	case 3:
 	{	
-		[[_msg,name _player,5],"TON_fnc_clientMessage",independent,false] spawn life_fnc_MP;
+		[[_msg,name _player,5,mapGridPosition _player,_player],"TON_fnc_clientMessage",independent,false] spawn life_fnc_MP;
 	};
 	//adminToPerson
 	case 4:

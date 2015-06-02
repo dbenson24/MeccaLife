@@ -299,6 +299,17 @@ compileFinal "
 			_message = format[""!!!EMS REQUEST: %1"",_msg];
 			hint parseText format [""<t color='#FFCC00'><t size='2'><t align='center'>EMS Request<br/><br/><t color='#33CC33'><t align='left'><t size='1'>To: <t color='#ffffff'>You<br/><t color='#33CC33'>From: <t color='#ffffff'>%1<br/><br/><t color='#33CC33'>Message:<br/><t color='#ffffff'>%2"",_from,_msg];
 			
+			_marker = createMarkerLocal [format[""%1_marker"",_unit getVariable[""realname"",name _unit]],visiblePosition _unit];
+            _marker setMarkerColorLocal ""ColorGreen"";
+            _marker setMarkerTypeLocal ""hd_join"";
+            _marker setMarkerTextLocal format[""EMS Emergency from %1"", _unit getVariable[""realname"",name _unit]];
+
+            [format[""%1_marker"",_unit getVariable[""realname"",name _unit]]] spawn {
+                    _marName = [_this,0,"""",[""""]] call BIS_fnc_param;
+                    sleep 300;
+                    deleteMarkerLocal _marName;
+            };
+			
 			[""TextMessage"",[format[""EMS Request from %1"",_from]]] call bis_fnc_showNotification;
 		};
 		
