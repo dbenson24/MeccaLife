@@ -6,14 +6,14 @@
 */
 #define FETCH_CONST(var) (call var)
 
-if(side player == independent) then {
+if(playerSide == independent) then {
 	if ((uniform player) == "U_I_CombatUniform_tshirt") then {
 		player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"];
 	};
 };
 
 
-if(side player == WEST) then {
+if(playerSide == WEST) then {
 	// Cop Level 1 & 2
 	if (backpack player == "B_Carryall_oucamo") then {
     	(unitbackpack player) setObjectTextureGlobal [0, ""]; 
@@ -36,7 +36,7 @@ if(side player == WEST) then {
 	};
 };
 
-if(side player == civilian) then {
+if(playerSide == civilian) then {
 	if((uniform player == "U_I_CombatUniform") && ( (FETCH_CONST(life_donator)) == 5)) then {
 	player setObjectTextureGlobal [0, "textures\mafia.paa"];
 	};

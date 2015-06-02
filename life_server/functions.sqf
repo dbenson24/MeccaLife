@@ -238,7 +238,7 @@ compileFinal "
 		
 		case 1 :
 		{
-			if(side player != west) exitWith {};
+			if(playerSide != west) exitWith {};
 			private[""_message""];
 			_message = format[""---911 DISPATCH FROM %1: %2"",_from,_msg];
 			if(isNil ""_loc"") then {_loc = ""Unknown"";};

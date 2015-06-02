@@ -36,6 +36,7 @@ switch(playerSide) do
 		 If(BANK > 1000000) then {BANK = BANK - 3000;};
 	};
 	case independent: {
+		diag_log "Calling medic loadout from respawned";
 		_handle = [] spawn life_fnc_medicLoadout;
 		
 	};

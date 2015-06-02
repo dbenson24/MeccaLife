@@ -6,8 +6,11 @@
 	Loads the medic out with the default gear.
 */
 private["_handle"];
+diag_log "Called medic Loadout";
 _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
+
+diag_log "Made it to assigning items";
 
 player addUniform "U_I_CombatUniform_tshirt";
 player addBackpack "B_Carryall_oucamo";
