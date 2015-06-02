@@ -71,4 +71,4 @@ _lic ctrlSetStructuredText parseText format["
 ",_struct];
 
 _time = 4*60*60;
-ctrlSetText[1015, format["Minutes Remaining: %1",round((_time-time)/60)]];
+ctrlSetText[1015, format["Next Restart: %1",[(_time - time),"MM:SS"] call BIS_fnc_secondsToString];];
