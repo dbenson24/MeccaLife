@@ -327,6 +327,12 @@ switch (_code) do {
 			if (_ctrlKey) then {
 				if(isPlayer cursorTarget) then {
 					life_smartphoneTarget = cursorTarget;
+					_uid = getPlayerUID life_smartphoneTarget;
+					{
+						if(_uid = getPlayerUID _x) then{
+							life_smartphoneTarget = _x;	
+						};
+					} foreach playableUnits;
 					createDialog "Life_smartphone_schreiben";
 					ctrlSetText[88886, "Message To Target"];
 					if((FETCH_CONST(life_adminlevel) < 1)) then

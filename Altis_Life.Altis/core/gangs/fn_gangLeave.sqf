@@ -14,7 +14,7 @@ if(!(EQUAL(typeName _members,"ARRAY"))) exitWith {};
 
 {
 	_uid = _x select 0;
-	if (_uid == _unitID) then {
+	if (str(_uid) == str(_unitID)) then {
 		_members set [_forEachIndex, -1];
 	};
 } forEach _members;
