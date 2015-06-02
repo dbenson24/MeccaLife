@@ -76,5 +76,7 @@ if(count life_spawn_point == 0) then
       life_firstSpawn = false;
       //[] call life_fnc_welcomeNotification;
    };
-   [] call life_fnc_hudSetup;
+   
+	[] execVM "scripts\fn_statusBar.sqf";
+	[] call life_fnc_hudSetup;
 };
