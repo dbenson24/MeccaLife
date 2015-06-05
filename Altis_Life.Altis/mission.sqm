@@ -98204,19 +98204,15 @@ class Mission
 		};
 		class Item408
 		{
-			position[]={44437.996,0.01873219,27597.053};
+			position[]={26437.996,0.01873219,27597.053};
 			name="airshop_1";
-			text="Air Shop";
-			type="mil_dot";
-			colorName="ColorEAST";
+			type="Empty";
 		};
 		class Item409
 		{
-			position[]={44437.91,0.018476456,27597.168};
+			position[]={26437.91,0.018476456,27597.168};
 			name="airshop_1_1";
-			text="Air Shop";
-			type="mil_dot";
-			colorName="ColorEAST";
+			type="Empty";
 		};
 		class Item410
 		{
