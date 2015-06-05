@@ -6619,7 +6619,6 @@ class Mission
 				{
 					position[]={10400.734,67.584007,8736.5801};
 					azimut=130;
-					offsetY=0.71560001;
 					special="NONE";
 					id=362;
 					side="EAST";
