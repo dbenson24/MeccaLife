@@ -12,16 +12,9 @@ _houseID = _house getVariable["house_id",-1];
 _containers = _house getVariable ["containers",[]];
 
 //systemChat format["Number of containers found: %1",count _containers];
-_arr = [];
-{
-	_className = typeOf _x;
-	_weapons = getWeaponCargo _x;
-	_magazines = getMagazineCargo _x;
-	_items = getItemCargo _x;
-	_backpacks = getBackpackCargo _x;
-	
-	_arr pushBack [_className,[_weapons,_magazines,_items,_backpacks]];
-} foreach _containers;
+_content= _house getVariable ["content",[]];
+EQUAL(_content,[]) exitWith {};
+_arr = _content;
 
 
 if(EQUAL(_houseID,-1)) then {
