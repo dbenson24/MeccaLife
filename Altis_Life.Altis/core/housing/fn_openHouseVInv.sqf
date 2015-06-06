@@ -165,7 +165,7 @@ _index = -1;
 		if (_x select 0 == "B_supplyCrate_F") then {_boxslots = _boxslots + 700;};
 		if (_x select 0 == "Box_IND_AmmoVeh_F") then {_boxslots = _boxslots + 900;};
 		if (_x select 0 == "Box_IND_WpsSpecial_F") then {_boxslots = _boxslots + 100;};
-		if (_x select 0 == "Box_IND_Grenades_F") then {_boxslots = _boxslots + 80;};
+		if (_x select 0 == "Box_IND_Grenades_F") then {_boxslots = _boxslots + 250;};
 	};
 } forEach _content;
 
