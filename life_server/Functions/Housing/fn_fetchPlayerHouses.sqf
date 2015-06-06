@@ -143,8 +143,8 @@ _return = [];
 		};
 		
 		_house setVariable["containers",_containers,true];
+		_house setVariable ["content", _content,true];
 	};
-	_house setVariable ["content", _content,true];
 	_return pushBack [_x select 1,_containers];
 } foreach _houses;
 
