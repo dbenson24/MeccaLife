@@ -133,10 +133,10 @@ if(!(_curTarget in life_vehicles) OR isNil {_curTarget getVariable "house_owner"
 	};
 };
 
-if (!(_curTarget getVariable ["locked",false])&&(!isNil {_curTarget getVariable "house_owner"})) then
+if ((!(_curTarget getVariable ["locked",false])&&(!isNil {_curTarget getVariable "house_owner"})) OR (_curTarget in life_vehicles)) then
 {
 	if (isNil {cursorTarget getVariable "inUse"}) then {cursorTarget setVariable ["inUse",[false,""],true];};
-	_Btn7 ctrlSetText "Hausinventar aufrufen";
+	_Btn7 ctrlSetText "Open Gear Inventory";
 	_Btn7 buttonSetAction "[_curTarget] spawn life_fnc_openHouseVInv; closeDialog 0;";
 	if !((cursorTarget getVariable "inUse") select 0) then {
 		_Btn7 ctrlShow true;

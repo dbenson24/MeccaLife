@@ -175,7 +175,7 @@ _itemAmount = -1;
 {
 	_itemAmount = _itemAmount + (_x select 1);
 } forEach _content;
-_titleText ctrlSetText format ["Virtuelles Hausinventar [%1/%2]",_itemAmount,curHouseSpace];
+_titleText ctrlSetText format ["House Virtual Inventory [%1/%2]",_itemAmount,curHouseSpace];
 
 // Spielerliste laden
 
