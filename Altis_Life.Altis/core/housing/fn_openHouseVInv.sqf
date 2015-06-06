@@ -181,7 +181,9 @@ _titleText ctrlSetText format ["House Virtual Inventory [%1/%2]",_itemAmount,cur
 
 _magazines = magazines player;
 _items = items player;
-_weapons = currentWeapon player;
+_primary = primaryWeapon player;
+_launcher = secondaryWeapon player;
+_handgun = handGunWeapon player;
 _uniform = uniform player;
 _vest = vest player;
 _backpack = backpack player;
@@ -220,18 +222,48 @@ playerInventoryArray = [];
 	};
 } forEach _items;
 
-if (_weapons!="") then {
+if (_primary!="") then {
 	_index = -1;
 	_wasInArray = false;
 	{
 		_index = _index + 1;
-		if (_x select 0 == _weapons) then {
+		if (_x select 0 == _primary) then {
 			_wasInArray = true;
-			playerInventoryArray set [_index,[_weapons,(_x select 1)+1]];
+			playerInventoryArray set [_index,[_primary,(_x select 1)+1]];
 		};
 	} forEach playerInventoryArray;
 	if (!_wasInArray) then {
-		playerInventoryArray set [count playerInventoryArray,[_weapons,1]];
+		playerInventoryArray set [count playerInventoryArray,[_primary,1]];
+	};
+};
+
+if (_launcher!="") then {
+	_index = -1;
+	_wasInArray = false;
+	{
+		_index = _index + 1;
+		if (_x select 0 == _launcher) then {
+			_wasInArray = true;
+			playerInventoryArray set [_index,[_launcher,(_x select 1)+1]];
+		};
+	} forEach playerInventoryArray;
+	if (!_wasInArray) then {
+		playerInventoryArray set [count playerInventoryArray,[_launcher,1]];
+	};
+};
+
+if (_handgun!="") then {
+	_index = -1;
+	_wasInArray = false;
+	{
+		_index = _index + 1;
+		if (_x select 0 == _handgun) then {
+			_wasInArray = true;
+			playerInventoryArray set [_index,[_handgun,(_x select 1)+1]];
+		};
+	} forEach playerInventoryArray;
+	if (!_wasInArray) then {
+		playerInventoryArray set [count playerInventoryArray,[_handgun,1]];
 	};
 };
 

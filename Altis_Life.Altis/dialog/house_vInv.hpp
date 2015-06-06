@@ -169,7 +169,7 @@ class RscText_1015: Life_RscText
 	x = 0.282233 * safezoneW + safezoneX;
 	y = 0.136909 * safezoneH + safezoneY;
 	w = 0.435533 * safezoneW;
-	h = 0.0110028 * safezoneH;
+	h = 0.0220028 * safezoneH;
 	colorText[] = {1,0,0,1};
 };
 class RscText_1016: Life_RscText
@@ -180,7 +180,7 @@ class RscText_1016: Life_RscText
 	x = 0.282233 * safezoneW + safezoneX;
 	y = 0.156713 * safezoneH + safezoneY;
 	w = 0.435533 * safezoneW;
-	h = 0.0110028 * safezoneH;
+	h = 0.0220028 * safezoneH;
 	colorText[] = {1,0,0,1};
 };
 class RscText_1017: Life_RscText
