@@ -17,7 +17,7 @@ if(typeName _uid == "STRING") then {
 		format["UID: %1, house: %2",_uid,_house],
 		"------------------------------------------------"
 	]] call TON_fnc_logIt;
-if(isNull _house OR _uid == -1) exitWith {};
+if(isNull _house) exitWith {};
 
 ["diag_log",[
 		"------------- House Add Request -------------",
