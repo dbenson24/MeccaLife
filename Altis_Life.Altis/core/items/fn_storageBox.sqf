@@ -43,7 +43,7 @@ if (isNil {cursorTarget getVariable "content"}) then {} else {
 };
 
 if (!_full) then {
-	hint "You place a storage crate!";
+	hint "You placed a storage crate!";
 	[false,_boxType,1] call life_fnc_handleInv;
 	[[_house],"TON_fnc_updateHouseContainers",false,false] spawn life_fnc_MP;
 } else {
