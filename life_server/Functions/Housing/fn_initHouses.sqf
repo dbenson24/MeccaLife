@@ -59,10 +59,6 @@ for [{_x=0},{_x<=_count},{_x=_x+10}] do {
 			{
 				if(count _x == 0) exitWith {}; //No containers / items.
 				_className = _x select 0;
-				_weapons = (_x select 1) select 0;
-				_magazines = (_x select 1) select 1;
-				_items = (_x select 1) select 2;
-				_backpacks = (_x select 1) select 3;
 				
 				//Setup the variables
 				_positions = [_house] call life_fnc_getBuildingPositions;
@@ -73,7 +69,7 @@ for [{_x=0},{_x<=_count},{_x=_x+10}] do {
 					if(!(_forEachIndex in _slots)) exitWith {
 						_slots pushBack _forEachIndex;
 						_house setVariable["slots",_slots,true];
-						_pos = _positions select (_forEachIndex+2);
+						_pos = _x;
 					};
 				} foreach _positions;
 				
@@ -90,29 +86,6 @@ for [{_x=0},{_x<=_count},{_x=_x+10}] do {
 				clearItemCargoGlobal _container;
 				clearMagazineCargoGlobal _container;
 				clearBackpackCargoGlobal _container;
-				//Add weapons to the crate.
-				{
-					_weaponCount = (_weapons select 1) select _forEachIndex;
-					_container addWeaponCargoGlobal [_x,_weaponCount];
-				} foreach (_weapons select 0);
-				
-				//Add magazines
-				{
-					_magazineCount = (_magazines select 1) select _forEachIndex;
-					_container addMagazineCargoGlobal [_x,_magazineCount];
-				} foreach (_magazines select 0);
-					
-				//Add items
-				{
-					_itemCount = (_items select 1) select _forEachIndex;
-					_container addItemCargoGlobal [_x,_itemCount];
-				} foreach (_items select 0);
-				
-				//Add backpacks
-				{
-					_backpackCount = (_backpacks select 1) select _forEachIndex;
-					_container addBackpackCargoGlobal [_x,_backpackCount];
-				} foreach (_backpacks select 0);
 				
 			} foreach _containerData;
 			
