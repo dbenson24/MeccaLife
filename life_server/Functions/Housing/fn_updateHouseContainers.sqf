@@ -13,7 +13,6 @@ _containers = _house getVariable ["containers",[]];
 
 //systemChat format["Number of containers found: %1",count _containers];
 _content= _house getVariable ["content",[]];
-EQUAL(_content,[]) exitWith {};
 _arr = _content;
 
 
