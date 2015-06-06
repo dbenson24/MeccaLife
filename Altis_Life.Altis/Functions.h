@@ -155,6 +155,9 @@ class Life_Client_Core
 		class garageRefund {};
 		class boughtHouse{};
 		class boughtHouseFail{};
+		class openHouseVInv {};
+		class displayStats {};
+		class swapItem {};
 	};
 	
 	class Config
@@ -252,6 +255,7 @@ class Life_Client_Core
 		class prisionbreak {};
 		class progressBaren {};
 		class ryn_message {};
+		class collectArmaItems {};
 	};
 	
 	class Network
