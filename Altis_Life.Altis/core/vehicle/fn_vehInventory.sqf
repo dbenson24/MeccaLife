@@ -22,7 +22,7 @@ if(_veh isKindOf "House_F") then {
 	_content = cursorTarget getVariable ["content",[]];
 	if (count _content > 0) then {
 		{
-			if((_x select 0) in ["B_supplyCrate_F","Box_IND_Grenades_F","Box_IND_WpsSpecial_F","Box_IND_AmmoVeh_F"]) {
+			if((_x select 0) in ["B_supplyCrate_F","Box_IND_Grenades_F","Box_IND_WpsSpecial_F","Box_IND_AmmoVeh_F"]) then {
 				_mWeight = _mWeight + ([(_x select 0)] call life_fnc_vehicleWeightCfg);
 			};
 		} forEach _content;
