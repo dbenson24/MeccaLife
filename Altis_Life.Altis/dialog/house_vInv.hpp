@@ -28,7 +28,7 @@ class RscText_1001: Life_RscText
 {
 	idc = 6005;
 
-	text = "Virtuelles Hausinventar"; //--- ToDo: Localize;
+	text = "House Virtual Inventory"; //--- ToDo: Localize;
 	x = 0.276617 * safezoneW + safezoneX;
 	y = 0.235933 * safezoneH + safezoneY;
 	w = 0.446778 * safezoneW;
@@ -81,7 +81,7 @@ class RscText_1002: Life_RscText
 {
 	idc = 1002;
 
-	text = "Hausinventar"; //--- ToDo: Localize;
+	text = "House Inventory"; //--- ToDo: Localize;
 	x = 0.288079 * safezoneW + safezoneX;
 	y = 0.279945 * safezoneH + safezoneY;
 	w = 0.103103 * safezoneW;
@@ -91,7 +91,7 @@ class RscText_1003: Life_RscText
 {
 	idc = 1003;
 
-	text = "Dein Inventar"; //--- ToDo: Localize;
+	text = "Your inventory"; //--- ToDo: Localize;
 	x = 0.534384 * safezoneW + safezoneX;
 	y = 0.279945 * safezoneH + safezoneY;
 	w = 0.103103 * safezoneW;
@@ -111,7 +111,7 @@ class hausAmount: Life_RscText
 {
 	idc = 6002;
 
-	text = "<Anzahl>"; //--- ToDo: Localize;
+	text = "<Number>"; //--- ToDo: Localize;
 	x = 0.288079 * safezoneW + safezoneX;
 	y = 0.319555 * safezoneH + safezoneY;
 	w = 0.103103 * safezoneW;
@@ -131,7 +131,7 @@ class invAmount: Life_RscText
 {
 	idc = 6012;
 
-	text = "<Anzahl>"; //--- ToDo: Localize;
+	text = "<Number>"; //--- ToDo: Localize;
 	x = 0.534499 * safezoneW + safezoneX;
 	y = 0.319555 * safezoneH + safezoneY;
 	w = 0.103103 * safezoneW;
@@ -141,7 +141,7 @@ class RscButtonMenu_2402: Life_RscButtonMenu
 {
 	idc = 2402;
 
-	text = "SCHLIEßEN"; //--- ToDo: Localize;
+	text = "Close"; //--- ToDo: Localize;
 	x = 0.631743 * safezoneW + safezoneX;
 	y = 0.766309 * safezoneH + safezoneY;
 	w = 0.0916468 * safezoneW;
@@ -165,7 +165,7 @@ class RscText_1015: Life_RscText
 {
 	idc = -1;
 
-	text = "ACHTUNG: Vor dem Entnehmen einer Waffe oder eines Rucksacks, stelle sicher, dass"; //--- ToDo: Localize;
+	text = "CAUTION: Before removing a weapon or a backpack, make sure you have no weapon"; //--- ToDo: Localize;
 	x = 0.282233 * safezoneW + safezoneX;
 	y = 0.136909 * safezoneH + safezoneY;
 	w = 0.435533 * safezoneW;
@@ -176,7 +176,7 @@ class RscText_1016: Life_RscText
 {
 	idc = -1;
 
-	text = "du keine Waffe / keinen Rucksack aktuell an deinem Spieler angebracht hast."; //--- ToDo: Localize;
+	text = "and no backpack attached to your current player. If you have either a weapon or"; //--- ToDo: Localize;
 	x = 0.282233 * safezoneW + safezoneX;
 	y = 0.156713 * safezoneH + safezoneY;
 	w = 0.435533 * safezoneW;
@@ -187,7 +187,7 @@ class RscText_1017: Life_RscText
 {
 	idc = -1;
 
-	text = "Ist eine Waffe bereits in den Händen / ein Rucksack auf dem Rücken deiner Spielfigur"; //--- ToDo: Localize;
+	text = "a backpack on and you attempt to remove yours from the inventory, the one you"; //--- ToDo: Localize;
 	x = 0.282233 * safezoneW + safezoneX;
 	y = 0.172118 * safezoneH + safezoneY;
 	w = 0.439802 * safezoneW;
@@ -198,7 +198,7 @@ class RscText_1018: Life_RscText
 {
 	idc = -1;
 
-	text = "so wird diese / dieser beim Entnehmen überschrieben!"; //--- ToDo: Localize;
+	text = "have equipped will be overwritten!"; //--- ToDo: Localize;
 	x = 0.282233 * safezoneW + safezoneX;
 	y = 0.18752 * safezoneH + safezoneY;
 	w = 0.269343 * safezoneW;

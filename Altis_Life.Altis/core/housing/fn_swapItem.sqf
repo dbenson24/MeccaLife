@@ -17,7 +17,7 @@ curHouse = cursorTarget;
 
 _pid = (curHouse getVariable "inUse") select 1;
 
-if (_pid!=getplayerUID player) exitWith { hint parseText "<t color='#FF0000' size='1'>Das Inventar wurde durch den Anti-Dupeschutz geschlossen!";curHouse setVariable ["inUse",[false,""],true];closeDialog 0; };
+if (_pid!=getplayerUID player) exitWith { hint parseText "<t color='#FF0000' size='1'>The house inventory was closed by the anti dupe police!";curHouse setVariable ["inUse",[false,""],true];closeDialog 0; };
 
 _selClassname1 = _houseListbox lbData _index1;
 _selClassname2 = _ownInvListbox lbData _index2;
@@ -79,7 +79,7 @@ if (_pid==getplayerUID player) then {
 						};
 					} else {
 						_item = [_selClassname1] call VAS_fnc_fetchCfgDetails;
-						hint format ["Du hast keinen Platz in deinem Inventar fuer: %1",_item select 1];
+						hint format ["You have no room in your inventory for: %1",_item select 1];
 					};
 				};
 			} forEach _content;
