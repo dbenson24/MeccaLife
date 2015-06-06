@@ -38,14 +38,15 @@ _return = [];
 	} else {
 		_house allowDamage false;
 		_containers = [];
+		_content = [];
 		_house setVariable["slots",[],true];
 		_convert = false;
+		_containerData = _x select 3;
 		if (count _containerData > 0) then {
 			if (typeName (_containerData select 0 select 1) == "ARRAY") then { _convert = true; };
 		};
 		_trunk = _x select 2;
 		_house setVariable["Trunk",_trunk,true];
-		_containerData = _x select 3;
 		if (_convert) then
 		{
 			{
