@@ -26,15 +26,24 @@ if(_vehicle isKindOf "House_F") then {
 };
 
 if(_vehicle isKindOf "House_F") then {
-	private["_mWeight"];
+	private "_mWeight";
 	_mWeight = 0;
-	{_mWeight = _mWeight + ([(typeOf _x)] call life_fnc_vehicleWeightCfg);} foreach (_vehicle getVariable["containers",[]]);
+	_content = _vehicle getVariable ["content",[]];
+	if (count _content > 0) then {
+		{
+			if((_x select 0) in ["B_supplyCrate_F","Box_IND_Grenades_F","Box_IND_WpsSpecial_F","Box_IND_AmmoVeh_F"]) {
+				_mWeight = _mWeight + ([(_x select 0)] call life_fnc_vehicleWeightCfg);
+			};
+		} forEach _content;
+	} else {
+		_mWeight = -1;
+	}
 	_veh_data = [_mWeight,(_vehicle getVariable["Trunk",[[],0]]) select 1];
 } else {
 	_veh_data = [_vehicle] call life_fnc_vehicleWeight;
 };
 
-if(_vehicle isKindOf "House_F" && {count (_vehicle getVariable ["containers",[]]) == 0}) exitWith {hint localize "STR_MISC_NoStorageWarn"; closeDialog 0; sleep(1.5); _vehicle setVariable["trunk_in_use",false,true];};
+if(_vehicle isKindOf "House_F" && (_veh_data select 0) == -1) exitWith {hint localize "STR_MISC_NoStorageWarn"; closeDialog 0; sleep(1.5); _vehicle setVariable["trunk_in_use",false,true];};
 if(_veh_data select 0 == -1 && {!(_vehicle isKindOf "House_F")}) exitWith {hint localize "STR_MISC_NoStorageVeh"; closeDialog 0; sleep(1.5); _vehicle setVariable["trunk_in_use",false,true]; };
 
 ctrlSetText[3504,format[(localize "STR_MISC_Weight")+ " %1/%2",_veh_data select 1,_veh_data select 0]];
