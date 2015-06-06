@@ -8,7 +8,7 @@ private["_house","_uid","_houseCfg","_gangid"];
 _house = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if ((typeOf _house == "Land_i_Shed_Ind_F") && (life_gangrank != 5)) exitWith {"You can't buy houses for your gang unless you are the leader!"};
 if ((typeOf _house == "Land_i_Shed_Ind_F") && (life_gangrank == 5)) then {
-	_uid = life_gangid;
+	_uid = str(life_gangid);
 } else {
 	_uid = getPlayerUID player;
 };
@@ -31,7 +31,7 @@ if ((typeOf _house == "Land_i_Shed_Ind_F") && (life_gangid != -1)) then {
 	[[getPlayerUID player,_house],"TON_fnc_addHouse",false,false] call life_fnc_MP;
 };
 
-_house SVAR ["house_owner",[str(_uid),profileName],true];
+_house SVAR ["house_owner",[_uid,profileName],true];
 _house SVAR ["locked",true,true];
 _house SVAR ["Trunk",[[],0],true];
 _house SVAR ["containers",[],true];
