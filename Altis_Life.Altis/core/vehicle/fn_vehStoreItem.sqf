@@ -19,7 +19,16 @@ if(_num < 1) exitWith {hint "You can't enter anything below 1!";};
 
 if(life_trunk_vehicle isKindOf "House_F") then {
 	_mWeight = 0;
-	{_mWeight = _mWeight + ([(typeOf _x)] call life_fnc_vehicleWeightCfg);} foreach (life_trunk_vehicle getVariable["containers",[]]);
+	_content = cursorTarget getVariable ["content",[]];
+	if (count _content > 0) then {
+		{
+			if((_x select 0) in ["B_supplyCrate_F","Box_IND_Grenades_F","Box_IND_WpsSpecial_F","Box_IND_AmmoVeh_F"]) {
+				_mWeight = _mWeight + ([(_x select 0)] call life_fnc_vehicleWeightCfg);
+			};
+		} forEach _content;
+	} else {
+		_mWeight = -1;
+	}
 	_totalWeight = [_mWeight,(life_trunk_vehicle getVariable["Trunk",[[],0]]) select 1];
 } else {
 	_totalWeight = [life_trunk_vehicle] call life_fnc_vehicleWeight;
