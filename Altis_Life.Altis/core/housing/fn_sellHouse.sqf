@@ -12,6 +12,7 @@ _uid = getPlayerUID player;
 if(isNull _house) exitWith {};
 if(!(_house isKindOf "House_F")) exitWith {};
 if(isNil {_house getVariable "house_owner"}) exitWith {hint "There is no owner for this house."};
+if ((typeOf _house == "Land_i_Shed_Ind_F") && (life_gangrank < 5)) exitWith {hint "You need to be the gang owner to sell this house."};
 closeDialog 0;
 
 _houseCfg = [M_CONFIG(getNumber,"Houses",typeOf(_house),"price"),M_CONFIG(getNumber,"Houses",typeOf(_house),"maxStorage")];
