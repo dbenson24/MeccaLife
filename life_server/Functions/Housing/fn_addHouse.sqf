@@ -8,7 +8,8 @@ private["_house","_uid","_housePos","_query"];
 _uid = [_this,0,-1] call BIS_fnc_param;
 _house = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(typeName _uid == "STRING") then {
-	_uid = parseNumber(_uid);	
+	_uid = parseNumber(_uid);
+	_uid = [_uid] call life_fnc_numberText;
 };
 ["diag_log",[
 		"------------- House Add Request -------------",
