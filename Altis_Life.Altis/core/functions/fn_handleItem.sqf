@@ -354,7 +354,8 @@ if(_bool) then {
 					};
 					
 					
-					case (_item in ["Rangefinder","Binocular"]) : {
+					case (_item in ["Rangefinder","Binocular","Laserdesignator","Laserdesignator_02","Laserdesignator_03"]) : {
+						diag_log "Passed rangefinder check";
 						if(_ispack) then {
 							player addItemToBackpack _item;
 						} else {
@@ -494,27 +495,29 @@ if(_bool) then {
 					};
 				};
 			} else {
-				diag_log "made it to details switch";
-				switch(SEL(_details,5)) do {
-					case 0: {player unlinkItem _item;};
-					case 605: {if(EQUAL(headGear player,_item)) then {removeHeadgear player} else {player removeItem _item};};
-					case 801: {if(EQUAL(uniform player,_item)) then {removeUniform player} else {player removeItem _item};};
-					case 701: {if(EQUAL(vest player,_item)) then {removeVest player} else {player removeItem _item};};
-					case 621: {player unlinkItem _item;};
-					case 616: {player unlinkItem _item;};
-					default {
-						diag_log "default switch case in details";
-						switch (true) do {
-							case (_item in RIFLE_ITEMS) : {player removePrimaryWeaponItem _item;};
-							case (_item in PISTOL_ITEMS) : {player removeHandgunItem _item;};
-							case (_item in ["Rangefinder","Binocular"]) : {
-								if (_item in uniformItems player || _item in backpackItems player|| _item in vestItems player) then {
-									player removeItem _item;
-								} else {
-									player unlinkItem _item;
-								};
+				if(_item in ["Rangefinder","Binocular","Laserdesignator","Laserdesignator_02","Laserdesignator_03"]) then {
+					diag_log "passed rangefinder check";
+					if (_item in uniformItems player || _item in backpackItems player|| _item in vestItems player) then {
+						player removeItem _item;
+					} else {
+						player unlinkItem _item;
+					};
+				} else {
+					diag_log "made it to details switch";
+					switch(SEL(_details,5)) do {
+						case 0: {player unlinkItem _item;};
+						case 605: {if(EQUAL(headGear player,_item)) then {removeHeadgear player} else {player removeItem _item};};
+						case 801: {if(EQUAL(uniform player,_item)) then {removeUniform player} else {player removeItem _item};};
+						case 701: {if(EQUAL(vest player,_item)) then {removeVest player} else {player removeItem _item};};
+						case 621: {player unlinkItem _item;};
+						case 616: {player unlinkItem _item;};
+						default {
+							diag_log "default switch case in details";
+							switch (true) do {
+								case (_item in RIFLE_ITEMS) : {player removePrimaryWeaponItem _item;};
+								case (_item in PISTOL_ITEMS) : {player removeHandgunItem _item;};
+								default {player removeItem _item;};
 							};
-							default {player removeItem _item;};
 						};
 					};
 				};
