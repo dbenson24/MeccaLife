@@ -181,7 +181,7 @@ _titleText ctrlSetText format ["House Virtual Inventory [%1/%2]",_itemAmount,cur
 
 // Spielerliste laden
 
-_magazines = magazines player;
+_magazines = [];
 _items = backpackItems player + vestItems player + uniformItems player + assignedITems player;
 _primary = primaryWeapon player;
 _launcher = secondaryWeapon player;
