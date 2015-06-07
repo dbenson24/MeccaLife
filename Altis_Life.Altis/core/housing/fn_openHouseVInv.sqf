@@ -1,3 +1,5 @@
+#include <macro.h>
+
 life_houseInUse = true;
 
 [] spawn life_fnc_collectArmaItems;
@@ -187,6 +189,29 @@ _handgun = handGunWeapon player;
 _uniform = uniform player;
 _vest = vest player;
 _backpack = backpack player;
+
+
+if(count (primaryWeaponMagazine player) > 0) then {
+    _magazines pushback SEL((primaryWeaponMagazine player),0);
+};
+if(count (handgunMagazine player) > 0) then {
+    _magazines pushback SEL((handgunMagazine player),0);
+};
+if(count (secondaryWeaponMagazine player) > 0) then {
+    _magazines pushback SEL((secondaryWeaponMagazine player),0);
+};
+
+if(count (RIFLE_ITEMS) > 0) then {
+    {
+		_items pushback _x;
+    } forEach (primaryWeaponItems player);
+};
+
+if(count (PISTOL_ITEMS) > 0) then {
+    {
+		_items pushback _x;
+    } forEach (handGunItems player);
+};
 
 playerInventoryArray = [];
 
