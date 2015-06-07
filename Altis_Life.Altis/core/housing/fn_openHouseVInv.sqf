@@ -182,7 +182,7 @@ _titleText ctrlSetText format ["House Virtual Inventory [%1/%2]",_itemAmount,cur
 // Spielerliste laden
 
 _magazines = [];
-_items = backpackItems player + vestItems player + uniformItems player + assignedITems player;
+_items = backpackItems player + vestItems player + uniformItems player + assignedItems player;
 _primary = primaryWeapon player;
 _launcher = secondaryWeapon player;
 _handgun = handGunWeapon player;
@@ -192,7 +192,7 @@ _goggles = goggles player;
 _vest = vest player;
 _backpack = backpack player;
 
-
+/*
 if(count (primaryWeaponMagazine player) > 0) then {
     _magazines pushback SEL((primaryWeaponMagazine player),0);
 };
@@ -202,7 +202,7 @@ if(count (handgunMagazine player) > 0) then {
 if(count (secondaryWeaponMagazine player) > 0) then {
     _magazines pushback SEL((secondaryWeaponMagazine player),0);
 };
-
+*/
 if(count (RIFLE_ITEMS) > 0) then {
     {
     	if(_x != "") then {

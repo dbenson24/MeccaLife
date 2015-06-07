@@ -478,8 +478,9 @@ if(_bool) then {
 					case 616: {player unlinkItem _item;};
 					default {
 						switch (true) do {
-							case (_item in RIFLE_ITEMS) : {player removePrimaryWeaponItem _item;};
-							case (_item in PISTOL_ITEMS) : {player removeHandgunItem _item;};
+							case (_item in RIFLE_ITEMS OR _item == SEL((primaryWeaponMagazine player),0)) : {player removePrimaryWeaponItem _item;};
+							case (_item in PISTOL_ITEMS OR _item == SEL((handgunMagazine player),0)) : {player removeHandgunItem _item;};
+							case (_item == SEL((secondaryWeaponMagazine player),0)) : {player removeSecondaryWeaponItem _item;};
 							default {player removeItem _item;};
 						};
 					};
