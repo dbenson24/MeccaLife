@@ -192,7 +192,7 @@ _goggles = goggles player;
 _vest = vest player;
 _backpack = backpack player;
 
-/*
+
 if(count (primaryWeaponMagazine player) > 0) then {
     _magazines pushback SEL((primaryWeaponMagazine player),0);
 };
@@ -202,7 +202,7 @@ if(count (handgunMagazine player) > 0) then {
 if(count (secondaryWeaponMagazine player) > 0) then {
     _magazines pushback SEL((secondaryWeaponMagazine player),0);
 };
-*/
+
 if(count (RIFLE_ITEMS) > 0) then {
     {
     	if(_x != "") then {
