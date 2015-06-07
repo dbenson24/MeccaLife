@@ -254,7 +254,7 @@ if(_bool) then {
 									_wepItems = switch(_type) do {case 1:{RIFLE_ITEMS}; case 2:{secondaryWeaponItems player}; case 3:{PISTOL_ITEMS}; default {["","","",""]};};
 									_slotTaken = false;
 
-									if(!(EQUAL(SEL(_wepItems,1),""))) then {* = true;};
+									if(!(EQUAL(SEL(_wepItems,1),""))) then {_slotTaken = true;};
 
 									if(_slotTaken) then {
 										_action = [localize "STR_MISC_AttachmentMSG",localize "STR_MISC_Attachment",localize "STR_MISC_Weapon",localize "STR_MISC_Inventory"] call BIS_fnc_guiMessage;
@@ -302,7 +302,7 @@ if(_bool) then {
 									_wepItems = switch(_type) do {case 1:{RIFLE_ITEMS}; case 2:{secondaryWeaponItems player}; case 3:{PISTOL_ITEMS}; default {["","","",""]};};
 									_slotTaken = false;
 
-									if(!(EQUAL(SEL(_wepItems,1),""))) then {* = true;};
+									if(!(EQUAL(SEL(_wepItems,3),""))) then {_slotTaken = true;};
 
 									if(_slotTaken) then {
 										_action = [localize "STR_MISC_AttachmentMSG",localize "STR_MISC_Attachment",localize "STR_MISC_Weapon",localize "STR_MISC_Inventory"] call BIS_fnc_guiMessage;
