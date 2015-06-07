@@ -502,18 +502,18 @@ if(_bool) then {
 					case 701: {if(EQUAL(vest player,_item)) then {removeVest player} else {player removeItem _item};};
 					case 621: {player unlinkItem _item;};
 					case 616: {player unlinkItem _item;};
-					case (_item in ["Rangefinder","Binocular"]) : {
-						if (_item in uniformItems player || _item in backpackItems player|| _item in vestItems player) then {
-							player removeItem _item;
-						} else {
-							player unlinkItem _item;
-						};
-					};
 					default {
 						diag_log "default switch case in details";
 						switch (true) do {
 							case (_item in RIFLE_ITEMS) : {player removePrimaryWeaponItem _item;};
 							case (_item in PISTOL_ITEMS) : {player removeHandgunItem _item;};
+							case (_item in ["Rangefinder","Binocular"]) : {
+								if (_item in uniformItems player || _item in backpackItems player|| _item in vestItems player) then {
+									player removeItem _item;
+								} else {
+									player unlinkItem _item;
+								};
+							};
 							default {player removeItem _item;};
 						};
 					};
