@@ -124,7 +124,7 @@ if (_pid==getplayerUID player) then {
 				} forEach _content;
 				if (!_wasInArray) then {_content pushBack [_selClassname2,1];cursorTarget setVariable ["content",_content,true];};
 			} else {
-				if (true) exitWith {hint "Das Haus ist voll!"};
+				if (true) exitWith {hint "This house is full!"};
 			};
 		};
 	};
