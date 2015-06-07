@@ -20,6 +20,7 @@ if(EQUAL(_item,"")) exitWith {};
 _isgun = false;
 
 _details = [_item] call life_fnc_fetchCfgDetails;
+diag_log format["handleItem Details: %1 Item: %2",_details,_item];
 if(EQUAL(count _details,0)) exitWith {};
 
 if(_bool) then {
@@ -469,6 +470,7 @@ if(_bool) then {
 					};
 				};
 			} else {
+				diag_log "made it to details switch";
 				switch(SEL(_details,5)) do {
 					case 0: {player unlinkItem _item;};
 					case 605: {if(EQUAL(headGear player,_item)) then {removeHeadgear player} else {player removeItem _item};};
@@ -477,11 +479,12 @@ if(_bool) then {
 					case 621: {player unlinkItem _item;};
 					case 616: {player unlinkItem _item;};
 					default {
+						diag_log "default switch case in details";
 						switch (true) do {
-							case (_item in RIFLE_ITEMS OR _item == SEL((primaryWeaponMagazine player),0)) : {player removePrimaryWeaponItem _item;};
-							case (_item in PISTOL_ITEMS OR _item == SEL((handgunMagazine player),0)) : {player removeHandgunItem _item;};
-							case (_item == SEL((secondaryWeaponMagazine player),0)) : {player removeSecondaryWeaponItem _item;};
-							default {player removeItem _item;};
+							case (_item in RIFLE_ITEMS OR _item == SEL((primaryWeaponMagazine player),0)) : {player removePrimaryWeaponItem _item; diag_log "Removed primaryWeaponItems"};
+							case (_item in PISTOL_ITEMS OR _item == SEL((handgunMagazine player),0)) : {player removeHandgunItem _item; diag_log "Removed handGunItems"};
+							case (_item == SEL((secondaryWeaponMagazine player),0)) : {player removeSecondaryWeaponItem _item; diag_log "Removed secondaryWeaponMagazine"};
+							default {player removeItem _item; diag_log "default inside default";};
 						};
 					};
 				};
