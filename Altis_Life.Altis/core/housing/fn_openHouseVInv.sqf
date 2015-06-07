@@ -182,11 +182,13 @@ _titleText ctrlSetText format ["House Virtual Inventory [%1/%2]",_itemAmount,cur
 // Spielerliste laden
 
 _magazines = magazines player;
-_items = items player;
+_items = backpackItems player + vestItems player + uniformItems player + assignedITems player;
 _primary = primaryWeapon player;
 _launcher = secondaryWeapon player;
 _handgun = handGunWeapon player;
 _uniform = uniform player;
+_headgear = headgear player;
+_goggles = goggles player;
 _vest = vest player;
 _backpack = backpack player;
 
@@ -203,13 +205,17 @@ if(count (secondaryWeaponMagazine player) > 0) then {
 
 if(count (RIFLE_ITEMS) > 0) then {
     {
-		_items pushback _x;
+    	if(_x != "") then {
+			_items pushback _x;
+    	};
     } forEach (primaryWeaponItems player);
 };
 
 if(count (PISTOL_ITEMS) > 0) then {
     {
-		_items pushback _x;
+		if(_x != "") then {
+			_items pushback _x;
+    	};
     } forEach (handGunItems player);
 };
 
@@ -289,6 +295,36 @@ if (_handgun!="") then {
 	} forEach playerInventoryArray;
 	if (!_wasInArray) then {
 		playerInventoryArray set [count playerInventoryArray,[_handgun,1]];
+	};
+};
+
+if (_headgear!="") then {
+	_index = -1;
+	_wasInArray = false;
+	{
+		_index = _index + 1;
+		if (_x select 0 == _headgear) then {
+			_wasInArray = true;
+			playerInventoryArray set [_index,[_headgear,(_x select 1)+1]];
+		};
+	} forEach playerInventoryArray;
+	if (!_wasInArray) then {
+		playerInventoryArray set [count playerInventoryArray,[_headgear,1]];
+	};
+};
+
+if (_goggles!="") then {
+	_index = -1;
+	_wasInArray = false;
+	{
+		_index = _index + 1;
+		if (_x select 0 == _goggles) then {
+			_wasInArray = true;
+			playerInventoryArray set [_index,[_goggles,(_x select 1)+1]];
+		};
+	} forEach playerInventoryArray;
+	if (!_wasInArray) then {
+		playerInventoryArray set [count playerInventoryArray,[_goggles,1]];
 	};
 };
 
