@@ -371,7 +371,18 @@ if(_bool) then {
 		};
 
 		case CONFIG_MAGAZINES: {
-			player removeMagazine _item;
+			if (_item in uniformItems player || _item in backpackItems player|| _item in vestItems player) then {player removeMagazine _item;}
+			else {
+				if (_item == SEL((primaryWeaponMagazine player),0)) then {
+					player removePrimaryWeaponItem _item;
+				};
+				if(_item == SEL((handgunMagazine player),0)) then {
+					player removeHandgunItem _item;
+				};
+				if(_item == SEL((secondaryWeaponMagazine player),0)) then {
+					player removeSecondaryWeaponItem _item;
+				};
+			};
 		};
 
 		case CONFIG_GLASSES: {
@@ -481,10 +492,9 @@ if(_bool) then {
 					default {
 						diag_log "default switch case in details";
 						switch (true) do {
-							case (_item in RIFLE_ITEMS OR _item == SEL((primaryWeaponMagazine player),0)) : {player removePrimaryWeaponItem _item; diag_log "Removed primaryWeaponItems"};
-							case (_item in PISTOL_ITEMS OR _item == SEL((handgunMagazine player),0)) : {player removeHandgunItem _item; diag_log "Removed handGunItems"};
-							case (_item == SEL((secondaryWeaponMagazine player),0)) : {player removeSecondaryWeaponItem _item; diag_log "Removed secondaryWeaponMagazine"};
-							default {player removeItem _item; diag_log "default inside default";};
+							case (_item in RIFLE_ITEMS) : {player removePrimaryWeaponItem _item;};
+							case (_item in PISTOL_ITEMS) : {player removeHandgunItem _item;};
+							default {player removeItem _item;};
 						};
 					};
 				};
