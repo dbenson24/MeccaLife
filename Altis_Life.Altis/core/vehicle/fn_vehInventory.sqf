@@ -28,7 +28,7 @@ if(_veh isKindOf "House_F") then {
 		} forEach _content;
 	} else {
 		_mWeight = -1;
-	}
+	};
 	_veh_data = [_mWeight,(_veh getVariable["Trunk",[[],0]]) select 1];
 } else {
 	_veh_data = [_veh] call life_fnc_vehicleWeight;
