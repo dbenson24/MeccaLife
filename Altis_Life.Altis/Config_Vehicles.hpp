@@ -153,6 +153,12 @@ class CarShops {
 			{ "I_Heli_Transport_02_F", mohawk, "pilot" }
 		};
 	};
+	class civ_jet {
+		side = "civ";
+		vehicles[] = {
+			{ "B_Plane_CAS_01_F", ptarutrans, "pilot" ,{ "life_donator", "SCALAR", 3 } }
+		};
+	};
 
 	class cop_air {
 		side = "cop";
@@ -225,6 +231,10 @@ class CfgVehicles {
                 "textures\msthellcat.jpg",
             } }
 	    };
+	};
+	class B_Plane_CAS_01_F : Default {
+	    vItemSpace = 150;
+	    price = ptarutrans;
 	};
 	class O_APC_Wheeled_02_rcws_F : Default {
 	    vItemSpace = 150;

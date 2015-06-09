@@ -31,6 +31,15 @@ if(EQUAL(_veh,"O_APC_Wheeled_02_rcws_F")) then {
 	_vehicle removeMagazinesTurret ["96Rnd_40mm_G_belt",[0]];
 };
 
+if(EQUAL(_veh,"B_Plane_CAS_01_F")) then {
+	_vehicle removeMagazinesTurret ["1000Rnd_Gatling_30mm_Plane_CAS_01_F",[0]];
+	_vehicle removeMagazinesTurret ["2Rnd_Missile_AA_04_F",[0]];
+	_vehicle removeMagazinesTurret ["6Rnd_Missile_AGM_02_F",[0]];
+	_vehicle removeMagazinesTurret ["4Rnd_Bomb_04_F",[0]];
+	_vehicle removeMagazinesTurret ["7Rnd_Rocket_04_HE_F",[0]];
+	_vehicle removeMagazinesTurret ["7Rnd_Rocket_04_AP_F",[0]];
+};
+
 /*
 if(EQUAL(_veh,"B_Heli_Transport_01_F")) then 
 {
