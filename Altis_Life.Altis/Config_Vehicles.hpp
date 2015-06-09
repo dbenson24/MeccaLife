@@ -139,7 +139,7 @@ class CarShops {
 			{ "C_SUV_01_F", psuvcop, "", { "life_coplevel", 2 } },
 			{ "B_MRAP_01_F", phuntercop, "", { "life_coplevel", 4 } },
 			{ "O_APC_Wheeled_02_rcws_F", pmarid, "", { "life_swatlevel", 1 } },
-			{ "C_Hatchback_01_sport_F", phatchbacksport, "", { "life_coplevel", 2 } }
+			{ "C_Hatchback_01_sport_F", phatchbacksport, "", { "life_coplevel", 3 } }
 		};
 	};
 
@@ -157,8 +157,10 @@ class CarShops {
 	class cop_air {
 		side = "cop";
 		vehicles[] = {
-			{ "B_Heli_Light_01_F", pmh9cop, "", { "life_coplevel", 2 } },
-			{ "B_Heli_Transport_01_F", pghosthawkcop, "", { "life_coplevel", 5 } }
+			{ "B_Heli_Light_01_F", pmh9cop, "", { "life_coplevel", 3 } },
+			{ "B_Heli_Transport_01_F", pghosthawkcop, "", { "life_coplevel", 5 } },
+			{ "I_Heli_light_03_unarmed_F", pghosthawkcop, "", { "life_coplevel", 6 } },
+			{ "O_Heli_Light_02_unarmed_F", pghosthawkcop, "", { "life_coplevel", 3 } }
 		};
 	};
 
@@ -214,6 +216,15 @@ class CfgVehicles {
 		insurance = 2500;
 		chopShop = 1200;
 		textures[] = {};
+	};
+	class I_Heli_light_03_unarmed_F : Default {
+	    vItemSpace = 150;
+	    price = pghosthawkcop;
+	     textures[] = {
+	        { "Swat", "cop", {
+                "textures\msthellcat.jpg",
+            } }
+	    };
 	};
 	class O_APC_Wheeled_02_rcws_F : Default {
 	    vItemSpace = 150;
@@ -877,7 +888,7 @@ class CfgVehicles {
         insurance = 2500;
         chopShop = 5000;
         textures[] = {
-        	{ "Black", "reb", {
+        	{ "Black", "cop", {
                 "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_co.paa"
             } },
 			{ "White / Blue", "civ", {
