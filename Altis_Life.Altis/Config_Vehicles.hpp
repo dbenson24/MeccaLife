@@ -156,7 +156,7 @@ class CarShops {
 	class civ_jet {
 		side = "civ";
 		vehicles[] = {
-			{ "B_Plane_CAS_01_F", ptarutrans, "pilot" ,{ "life_donator", "SCALAR", 3 } }
+			{ "B_Plane_CAS_01_F", ptarutrans, "pilot",{ "life_donator", "SCALAR", 3 } }
 		};
 	};
 

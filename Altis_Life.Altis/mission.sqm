@@ -2482,7 +2482,7 @@ class Mission
 				};
 				class Item20
 				{
-					position[]={14629.594,17.91,16783.344};
+					position[]={14632.778,17.91,16783.133};
 					azimut=-188.16901;
 					special="NONE";
 					id=118;
@@ -6633,33 +6633,13 @@ class Mission
 			side="WEST";
 			class Vehicles
 			{
-				items=1;
-				class Item0
-				{
-					position[]={6010.8833,101.21633,12491.904};
-					offsetY=8;
-					special="NONE";
-					id=363;
-					side="WEST";
-					vehicle="B_Soldier_F";
-					player="PLAYER COMMANDER";
-					leader=1;
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item230
-		{
-			side="WEST";
-			class Vehicles
-			{
 				items=2;
 				class Item0
 				{
 					position[]={8844.2988,28.216656,11990.078};
 					azimut=285;
 					special="NONE";
-					id=364;
+					id=363;
 					side="WEST";
 					vehicle="B_RangeMaster_F";
 					leader=1;
@@ -6672,7 +6652,7 @@ class Mission
 					position[]={8845.4609,28.012846,11996.643};
 					azimut=290;
 					special="NONE";
-					id=365;
+					id=364;
 					side="WEST";
 					vehicle="B_RangeMaster_F";
 					skill=0.60000002;
@@ -6680,7 +6660,7 @@ class Mission
 				};
 			};
 		};
-		class Item231
+		class Item230
 		{
 			side="WEST";
 			class Vehicles
@@ -6691,12 +6671,32 @@ class Mission
 					position[]={8838.6445,28.394083,11979.033};
 					azimut=-188.16901;
 					special="NONE";
-					id=366;
+					id=365;
 					side="WEST";
 					vehicle="B_RangeMaster_F";
 					leader=1;
 					skill=0.60000002;
 					init="this enableSimulation false;  this allowDamage false;  this addAction[""Helicopter Shop"",life_fnc_vehicleShopMenu,[""cop_air"",west,""cop_zaros_air"",""cop"",""APD - Kavala District""]];  this addAction[""Upgrade Vehicle"",life_fnc_upgradeMenu]; this addAction[""Helicopter Garage"",  {   [[getPlayerUID player,playerSide,""Air"",player],""TON_fnc_getVehicles"",false,false] call life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""cop_zaros_air""; life_garage_type = ""Air"";  },"""",0,false,false,"""",'playerSide == west'];  this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];";
+				};
+			};
+		};
+		class Item231
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={17008.014,16.559422,12841.799};
+					azimut=215;
+					special="NONE";
+					id=366;
+					side="CIV";
+					vehicle="C_man_polo_2_F_asia";
+					leader=1;
+					skill=0.60000002;
+					init="this allowDamage false; this enableSimulation false; this addAction[""Popa's Pub"",life_fnc_virt_menu,""pub""];";
 				};
 			};
 		};
@@ -6708,15 +6708,15 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={17008.014,16.559422,12841.799};
-					azimut=215;
+					position[]={14883.653,17.91,16752.525};
+					azimut=-188.16901;
 					special="NONE";
 					id=367;
 					side="CIV";
-					vehicle="C_man_polo_2_F_asia";
+					vehicle="C_man_w_worker_F";
 					leader=1;
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Popa's Pub"",life_fnc_virt_menu,""pub""];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Helicopter Shop"",life_fnc_vehicleShopMenu,[""civ_jet"",civilian,[""civ_jet""],""civ"",""Krack's Used Jets""]]; this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];";
 				};
 			};
 		};
@@ -95178,7 +95178,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=417;
+		items=419;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -95981,7 +95981,7 @@ class Mission
 		};
 		class Item101
 		{
-			position[]={14667.869,17.91,16759.613};
+			position[]={14671.054,17.91,16759.402};
 			name="civ_air_1";
 			type="Empty";
 			angle=90;
@@ -98638,7 +98638,7 @@ class Mission
 		class Item415
 		{
 			position[]={8839.9775,28.472538,11990.598};
-			name="cop_spawn_6";
+			name="cop_spawn_5_1";
 			text="Zaros Dispatch";
 			type="mil_box";
 			colorName="ColorWEST";
@@ -98652,6 +98652,21 @@ class Mission
 			colorName="ColorUNKNOWN";
 			a=0.80000001;
 			b=0.80000001;
+		};
+		class Item417
+		{
+			position[]={14852.549,17.91,16747.898};
+			name="civ_jet";
+			type="Empty";
+			angle=90;
+		};
+		class Item418
+		{
+			position[]={14885.019,17.91,16752.438};
+			name="jetshop";
+			text="Krack's ""Used"" Jets";
+			type="hd_pickup";
+			colorName="ColorOrange";
 		};
 	};
 	class Sensors
