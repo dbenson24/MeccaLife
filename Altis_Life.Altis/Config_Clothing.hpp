@@ -92,7 +92,8 @@ class Clothing {
 			{ "B_Bergen_sgg", "", 2500, { "", "", -1 } },
 			{ "B_Kitbag_cbr", "", 2500, { "", "", -1 } },
 			{ "B_Carryall_oli", "", 4500, { "", "", -1 } },
-			{ "B_Carryall_khk", "", 4500, { "", "", -1 } }
+			{ "B_Carryall_khk", "", 4500, { "", "", -1 } },
+			{ "B_Carryall_oucamo", "UnNamed's Backpack", 1500, { "life_donator", "SCALAR", 3 } }
 		};
 	};
 

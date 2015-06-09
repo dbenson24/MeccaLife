@@ -98638,7 +98638,7 @@ class Mission
 		class Item415
 		{
 			position[]={8839.9775,28.472538,11990.598};
-			name="cop_spawn_5_1";
+			name="cop_spawn_6";
 			text="Zaros Dispatch";
 			type="mil_box";
 			colorName="ColorWEST";
