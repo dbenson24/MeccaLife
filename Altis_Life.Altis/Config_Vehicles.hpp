@@ -150,13 +150,14 @@ class CarShops {
 			{ "O_Heli_Light_02_unarmed_F", porcaciv, "pilot" },
 			{ "O_Heli_Transport_04_fuel_F", ptarufuel, "pilot" },
 			{ "O_Heli_Transport_04_box_F", ptarutrans, "pilot" },
-			{ "I_Heli_Transport_02_F", mohawk, "pilot" }
+			{ "I_Heli_Transport_02_F", mohawk, "pilot" },
+			{ "B_Plane_CAS_01_F", ptarutrans, "",{ "life_donator", "SCALAR", 3 } }
 		};
 	};
 	class civ_jet {
 		side = "civ";
 		vehicles[] = {
-			{ "B_Plane_CAS_01_F", ptarutrans, "pilot",{ "life_donator", "SCALAR", 3 } }
+			{ "B_Plane_CAS_01_F", ptarutrans, "",{ "life_donator", "SCALAR", 3 } }
 		};
 	};
 
@@ -235,6 +236,7 @@ class CfgVehicles {
 	class B_Plane_CAS_01_F : Default {
 	    vItemSpace = 150;
 	    price = ptarutrans;
+		textures[] = { };
 	};
 	class O_APC_Wheeled_02_rcws_F : Default {
 	    vItemSpace = 150;
