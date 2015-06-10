@@ -71,7 +71,7 @@ closeDialog 0;
 {
 private ["_blacklist","_vehicle"];
 _blacklist = ["O_APC_Tracked_02_AA_F","O_APC_Tracked_02_cannon_F","O_MBT_02_arty_F","O_MBT_02_cannon_F","O_Plane_CAS_02_F","I_Plane_Fighter_03_CAS_F","I_Plane_Fighter_03_AA_F","6Rnd_155mm_Mo_AT_mine","6Rnd_155mm_Mo_mine",
-"B_APC_Tracked_01_AA_F","B_APC_Tracked_01_rcws_F","B_MBT_01_arty_F","B_MBT_01_cannon_F","B_MBT_01_mlrs_F","B_Plane_CAS_01_F","ATMine_Range_Mag","APERSMine_Range_Mag","SLAMDirectionalMine_Wire_Mag"];
+"B_APC_Tracked_01_AA_F","B_APC_Tracked_01_rcws_F","B_MBT_01_arty_F","B_MBT_01_cannon_F","B_MBT_01_mlrs_F","ATMine_Range_Mag","APERSMine_Range_Mag","SLAMDirectionalMine_Wire_Mag"];
 while {true} do {
 _vehicle = typeOf (vehicle player);
 if (_vehicle in _blacklist) then {
