@@ -104,7 +104,7 @@ class Clothing {
 
 		uniforms[] = {
 			{ "NONE", "Remove Uniform", 0, { "", "", -1 } },
-			{ "U_I_CombatUniform_tshirt", "Basic Uniform", 2500, { "life_coplevel", "SCALAR", 1 } },
+			{ "U_Rangemaster", "Basic Uniform", 2500, { "life_coplevel", "SCALAR", 1 } },
 			{ "U_BG_Guerilla3_2", "Working Uniform", 2500, { "life_coplevel", "SCALAR", 3 } },
 			{ "U_O_OfficerUniform_ocamo", "HighRanking Uniform", 2500, { "life_coplevel", "SCALAR", 5 } },
 			{ "U_O_SpecopsUniform_ocamo", "Swat Uniform", 2500, { "life_swatlevel", "SCALAR", 1 } },
