@@ -92,7 +92,8 @@ class Clothing {
 			{ "B_Bergen_sgg", "", 2500, { "", "", -1 } },
 			{ "B_Kitbag_cbr", "", 2500, { "", "", -1 } },
 			{ "B_Carryall_oli", "", 4500, { "", "", -1 } },
-			{ "B_Carryall_khk", "", 4500, { "", "", -1 } }
+			{ "B_Carryall_khk", "", 4500, { "", "", -1 } },
+			{ "B_Carryall_oucamo", "UnNamed's Backpack", 20000, { "life_donator", "SCALAR", 3 } }
 		};
 	};
 
@@ -103,7 +104,7 @@ class Clothing {
 
 		uniforms[] = {
 			{ "NONE", "Remove Uniform", 0, { "", "", -1 } },
-			{ "U_I_CombatUniform_tshirt", "Basic Uniform", 2500, { "life_coplevel", "SCALAR", 1 } },
+			{ "U_Rangemaster", "Basic Uniform", 2500, { "life_coplevel", "SCALAR", 1 } },
 			{ "U_BG_Guerilla3_2", "Working Uniform", 2500, { "life_coplevel", "SCALAR", 3 } },
 			{ "U_O_OfficerUniform_ocamo", "HighRanking Uniform", 2500, { "life_coplevel", "SCALAR", 5 } },
 			{ "U_O_SpecopsUniform_ocamo", "Swat Uniform", 2500, { "life_swatlevel", "SCALAR", 1 } },
@@ -140,8 +141,8 @@ class Clothing {
 		vests[] = {
 			{ "NONE", "Remove Vest", 0, { "", "", -1 } },
 			{ "V_TacVest_blk_POLICE", "Police Vest", 5000, { "", "", -1 } },
-			{ "V_PlateCarrier1_blk", "Officer Vest", 25000, { "life_coplevel", "SCALAR", 3 } },
-			{ "V_PlateCarrierSpec_blk", "Leader Vest", 45000, { "life_coplevel", "SCALAR", 5 } },
+			{ "V_PlateCarrier1_blk", "Officer Vest", 25000, { "life_coplevel", "SCALAR", 4 } },
+			{ "V_PlateCarrierSpec_blk", "Leader Vest", 45000, { "life_coplevel", "SCALAR", 7 } },
 			{ "V_PlateCarrierGL_blk", "Swat Vest", 500, { "life_swatlevel", "SCALAR", 1} },
 			{ "V_RebreatherB", "", 5000, { "", "", -1 } }
 		};

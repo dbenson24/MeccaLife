@@ -255,6 +255,10 @@ class Licenses {
 
 
 class VirtualShops {
+	class pub {
+		name = "Papa's Pub";
+		items[] = { "waterBottle", "rabbit_grilled", "apple", "redgull", "tbacon", "pickaxe", "fuelFull", "peach", "bottledbeer", "bottledwhiskey" };
+	};
 	class market {
 		name = "STR_Shops_Market";
 		items[] = { "waterBottle", "rabbit_grilled", "apple", "redgull", "tbacon", "pickaxe", "fuelFull", "peach", "storagesmall", "storagebig" };
@@ -290,7 +294,6 @@ class VirtualShops {
 		name = "STR_Shops_DrugDealer";
 		items[] = { "cocaine_processed", "heroin_processed", "marijuana","froglsd","magicm" };
 	};
-
 	class oil {
 		name = "STR_Shops_Oil";
 		items[] = { "oil_processed", "pickaxe", "fuelFull" };

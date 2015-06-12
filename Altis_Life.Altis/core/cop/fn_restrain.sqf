@@ -17,10 +17,10 @@ if(isNull _cop) exitWith {};
 	private "_time";
 	while {true} do {
 		_time = time;
-		waitUntil {(time - _time) > (15 * 60)};
+		waitUntil {(time - _time) > (5 * 60)};
 		
 		if(!(player GVAR ["restrained",FALSE])) exitWith {};
-		if(!([west,getPos player,50] call life_fnc_nearUnits) && (player GVAR ["restrained",FALSE]) && vehicle player == player) exitWith {
+		if(!([west,getPos player,75] call life_fnc_nearUnits) && (player GVAR ["restrained",FALSE]) && vehicle player == player) exitWith {
 			player SVAR ["restrained",FALSE,TRUE];
 			player SVAR ["Escorting",FALSE,TRUE];
 			player SVAR ["transporting",false,true];
@@ -50,10 +50,10 @@ while {player GVAR  "restrained"} do {
 		detach _player;
 	};
 	
-	if(!alive _cop) exitWith {
+	/*if(!alive _cop) exitWith {
 		player SVAR ["Escorting",false,true];
 		detach player;
-	};
+	};*/
 	
 	if(vehicle player != player) then {
 		//disableUserInput true;
