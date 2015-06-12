@@ -94,24 +94,26 @@ SUB(_units,[player]);
 					
 				};
 			};
-			if(_x GVAR ["speaking",false]) then {_text = "[SPEAKING] " + _text};
 			
-			if (side _x == civilian) then {
-				_img = switch ((_x GVAR "rprank")) do {
-	                case 1: {"icons\rp\rp1.paa"};
-	                case 2: {"icons\rp\rp2.paa"};
-	                case 3: {"icons\rp\rp3.paa"};
-	                default {""};
-	           	};
-	           	if (_img != "") then {
-					_text = format["<img image='%1' size='1.5'></img> ",_img] + _text;
-	           	};
-				_name = _x GVAR ["realname",name _x];
-				if (_name find "[MGS]" >= 0) then {
-					_text = format["<img image='icons\MeccaLogo.paa' size='1.5'></img> ",_img] + _text;
+			if(_text != "") then {
+				if(_x GVAR ["speaking",false]) then {_text = "[SPEAKING] " + _text};
+				
+				if (side _x == civilian) then {
+					_img = switch ((_x GVAR "rprank")) do {
+		                case 1: {"icons\rp\rp1.paa"};
+		                case 2: {"icons\rp\rp2.paa"};
+		                case 3: {"icons\rp\rp3.paa"};
+		                default {""};
+		           	};
+		           	if (_img != "") then {
+						_text = format["<img image='%1' size='1.5'></img> ",_img] + _text;
+		           	};
+					_name = _x GVAR ["realname",name _x];
+					if (_name find "[MGS]" >= 0) then {
+						_text = format["<img image='icons\MeccaLogo.paa' size='1.5'></img> ",_img] + _text;
+					};
 				};
 			};
-			
 			_idc ctrlSetStructuredText parseText _text;
 			_idc ctrlSetPosition [_sPos select 0, _sPos select 1, 0.4, 0.65];
 			_idc ctrlSetScale scale;
