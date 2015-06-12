@@ -164,10 +164,10 @@ _index = -1;
 		_houseListbox lbSetPictureColor [_index, [1, 1, 1, 1]];
 		_houseListbox lbSetData [(lbSize _houseListbox)-1,_x select 0];
 	} else {
-		if (_x select 0 == "B_supplyCrate_F") then {_boxslots = _boxslots + 700;};
-		if (_x select 0 == "Box_IND_AmmoVeh_F") then {_boxslots = _boxslots + 900;};
+		if (_x select 0 == "B_supplyCrate_F") then {_boxslots = _boxslots + 250;};
+		if (_x select 0 == "Box_IND_AmmoVeh_F") then {_boxslots = _boxslots + 100;};
 		if (_x select 0 == "Box_IND_WpsSpecial_F") then {_boxslots = _boxslots + 100;};
-		if (_x select 0 == "Box_IND_Grenades_F") then {_boxslots = _boxslots + 250;};
+		if (_x select 0 == "Box_IND_Grenades_F") then {_boxslots = _boxslots + 100;};
 	};
 } forEach _content;
 
@@ -177,6 +177,7 @@ _itemAmount = -1;
 {
 	_itemAmount = _itemAmount + (_x select 1);
 } forEach _content;
+if(_itemAmount != -1) then {_itemAmount = _itemAmount + 1;};
 _titleText ctrlSetText format ["House Virtual Inventory [%1/%2]",_itemAmount,curHouseSpace];
 
 // Spielerliste laden
