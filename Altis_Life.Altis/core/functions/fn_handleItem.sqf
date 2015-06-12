@@ -286,7 +286,7 @@ if(_bool) then {
 							player addItemToBackpack _item;
 						} else {
 							private "_type";
-							_type = [_item,302] call life_fnc_accType;
+							_type = 1;
 
 							if(_ongun) then { 
 								switch (_type) do {

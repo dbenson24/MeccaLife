@@ -46,7 +46,7 @@ _weaponArray = [RIFLE, LAUNCHER, PISTOL];
 		
 		//Check new compatibleItems class structure
 		if(count _newItems > 0) then {
-			//This gets weird with foreach in foreach :\
+			//This gets weird with foreach in foreach :
 			{
 				if(!(EQUAL(_ret,0))) exitWith {};
 				_cfg = FETCH_CONFIG4(getNumber,CONFIG_WEAPONS,_weapon,"WeaponSlotsInfo",_x,"compatibleItems",_item);
