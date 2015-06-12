@@ -164,10 +164,10 @@ _index = -1;
 		_houseListbox lbSetPictureColor [_index, [1, 1, 1, 1]];
 		_houseListbox lbSetData [(lbSize _houseListbox)-1,_x select 0];
 	} else {
-		if (_x select 0 == "B_supplyCrate_F") then {_boxslots = _boxslots + 150;};
-		if (_x select 0 == "Box_IND_AmmoVeh_F") then {_boxslots = _boxslots + 50;};
-		if (_x select 0 == "Box_IND_WpsSpecial_F") then {_boxslots = _boxslots + 50;};
-		if (_x select 0 == "Box_IND_Grenades_F") then {_boxslots = _boxslots + 50;};
+		if (_x select 0 == "B_supplyCrate_F") then {_boxslots = _boxslots + 200;};
+		if (_x select 0 == "Box_IND_AmmoVeh_F") then {_boxslots = _boxslots + 75;};
+		if (_x select 0 == "Box_IND_WpsSpecial_F") then {_boxslots = _boxslots + 75;};
+		if (_x select 0 == "Box_IND_Grenades_F") then {_boxslots = _boxslots + 75;};
 	};
 } forEach _content;
 
