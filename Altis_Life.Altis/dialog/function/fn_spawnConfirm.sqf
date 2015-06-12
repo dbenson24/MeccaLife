@@ -65,15 +65,15 @@ if(count life_spawn_point == 0) then
 
 [] spawn
 {
-	player say2d "welcome";
-   private["_handle"];
-   cutText ["","BLACK IN"];
-   [] execVM "scripts\cameraScreen.sqf";
-   _handle = [] execVM "scripts\cameraHeight.sqf";
-   waitUntil {scriptDone _handle};
  
    if(life_firstSpawn) then {
       life_firstSpawn = false;
+	  player say2d "welcome";
+	  private["_handle"];
+	  cutText ["","BLACK IN"];
+      [] execVM "scripts\cameraScreen.sqf";
+      _handle = [] execVM "scripts\cameraHeight.sqf";
+      waitUntil {scriptDone _handle};
       //[] call life_fnc_welcomeNotification;
    };
    
