@@ -546,10 +546,9 @@ if(_bool) then {
 				if(_item in ["Rangefinder","Binocular","Laserdesignator","Laserdesignator_02","Laserdesignator_03"]) then {
 					diag_log "passed rangefinder check";
 					if (_item in uniformItems player || _item in backpackItems player|| _item in vestItems player) then {
-						hint "Was in backpack";
 						player removeItem _item;
 					} else {
-						hint "Was in equipped spot";
+						player unlinkItem _item;
 						player unassignItem _item;
 						player removeItem _item;
 					};
