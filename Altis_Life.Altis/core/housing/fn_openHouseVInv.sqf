@@ -141,6 +141,12 @@ _display = findDisplay 6000;
 _houseListbox    = _display displayCtrl 6003;
 _ownInvListbox   = _display displayCtrl 6013;
 _titleText       = _display displayCtrl 6005;
+_swapToBackpackBtn = _display displayCtrl 2401;
+_swapToHouseBtn    = _display displayCtrl 2400;
+_closeBtn    = _display displayCtrl 2402;
+_swapToBackpackBtn ctrlEnable false;
+_swapToHouseBtn ctrlEnable false;
+_closeBtn ctrlEnable false;
 _content         = _house getVariable "content";
 lbClear _houseListbox;
 lbClear _ownInvListbox;
@@ -378,6 +384,10 @@ _index = -1;
 
 _houseListbox lbSetCurSel housing_lastIndexHouse;
 _ownInvListbox lbSetCurSel housing_lastIndexOwnInv;
+
+_swapToBackpackBtn ctrlEnable true;
+_swapToHouseBtn ctrlEnable true;
+_closeBtn ctrlEnable true;
 
 [] spawn {
 	waitUntil {isNull (findDisplay 6000)};
