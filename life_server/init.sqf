@@ -195,14 +195,20 @@ execVM "\life_server\Functions\paintball\arena_paintball.sqf";
 [] spawn TON_fnc_initHouses;
 
 /* Setup the federal reserve building(s) */
-private["_dome","_rsb"];
+private["_dome","_rsb","_pdome","_prsb"];
 _dome = nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"];
+_pdome = nearestObject [[20894.5,19225.9,0],"Land_Dome_Big_F"];
 _rsb = nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"];
+_prsb = nearestObject [[20819.5,19252.9,0],"Land_Research_house_V1_F"];
 
 for "_i" from 1 to 3 do {_dome setVariable[format["bis_disabled_Door_%1",_i],1,true]; _dome animate [format["Door_%1_rot",_i],0];};
+for "_i" from 1 to 3 do {_pdome setVariable[format["bis_disabled_Door_%1",_i],1,true]; _pdome animate [format["Door_%1_rot",_i],0];};
 _rsb setVariable["bis_disabled_Door_1",1,true];
 _rsb allowDamage false;
 _dome allowDamage false;
+_prsb setVariable["bis_disabled_Door_1",1,true];
+_prsb allowDamage false;
+_pdome allowDamage false;
 setDate [2015, 6, 25, 8, 0];
 /* Tell clients that the server is ready and is accepting queries */
 life_server_isReady = true;
