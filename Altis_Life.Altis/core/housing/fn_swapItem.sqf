@@ -9,6 +9,13 @@ _hausClassname   = _display displayCtrl 6001;
 _hausAmount      = _display displayCtrl 6002;
 _ownInvClassname = _display displayCtrl 6011;
 _ownInvAmount    = _display displayCtrl 6012;
+_swapToBackpackBtn = _display displayCtrl 2401;
+_swapToHouseBtn    = _display displayCtrl 2400;
+_closeBtn    = _display displayCtrl 2402;
+
+_swapToBackpackBtn ctrlEnable false;
+_swapToHouseBtn ctrlEnable false;
+_closeBtn ctrlEnable false;
 
 _index1 = lbCurSel _houseListbox;
 _index2 = lbCurSel _ownInvListbox;
@@ -130,7 +137,9 @@ if (_pid==getplayerUID player) then {
 	};
 
 	//closeDialog 0;
-
+	_swapToBackpackBtn ctrlEnable true;
+	_swapToHouseBtn ctrlEnable true;
+	_closeBtn ctrlEnable true;
 	if (true) then {[] spawn life_fnc_openHouseVInv;};
 };
 
@@ -151,3 +160,4 @@ if (_pid==getplayerUID player) then {
 		} else {};
 	};
 };
+
