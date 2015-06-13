@@ -385,6 +385,8 @@ _index = -1;
 _houseListbox lbSetCurSel housing_lastIndexHouse;
 _ownInvListbox lbSetCurSel housing_lastIndexOwnInv;
 
+life_isSwapping = false;
+
 _swapToBackpackBtn ctrlEnable true;
 _swapToHouseBtn ctrlEnable true;
 _closeBtn ctrlEnable true;

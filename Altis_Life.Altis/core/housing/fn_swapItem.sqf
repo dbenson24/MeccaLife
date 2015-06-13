@@ -1,4 +1,6 @@
 disableSerialization;
+if(life_isSwapping) exitWith {};
+life_isSwapping = true;
 
 _mode = _this select 0;
 
@@ -137,9 +139,6 @@ if (_pid==getplayerUID player) then {
 	};
 
 	//closeDialog 0;
-	_swapToBackpackBtn ctrlEnable true;
-	_swapToHouseBtn ctrlEnable true;
-	_closeBtn ctrlEnable true;
 	if (true) then {[] spawn life_fnc_openHouseVInv;};
 };
 
