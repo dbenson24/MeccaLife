@@ -305,6 +305,11 @@ switch (_code) do {
 			};
 		};
 	};
+	//Gang Menu Open
+	case 210:
+	{
+		[] spawn life_fnc_AS_GANG_openMenu;
+	};
 	//T Key (Trunk)
 	case 20: {
 		if(!_alt && !_ctrlKey && !life_is_processing) then {

@@ -170,6 +170,7 @@ heli_safe setVariable["cargo",round(random 50),true];
 
 [] execVM "\life_server\Functions\airdrop\config.sqf";
 [] execVM "\life_server\Functions\airdrop\fn_generateAirdropAuto.sqf";
+[] execVM "\life_server\Functions\Gangwars\init.sqf";
 
 pb_spieler = [];
 pb_spielstatus = 0;
@@ -225,4 +226,3 @@ publicVariable "wantedList";
 		[] spawn life_fnc_wantedSyncList;
 	};
 };
-[] execVM "\life_server\Functions\Gangwars\init.sqf";
