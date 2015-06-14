@@ -85,7 +85,7 @@ if(_hasLicense) then {
 	
 	while{true} do {
 		sleep  1;
-		_cP = _cP + 0.01;
+		_cP = _cP + 0.01 + + AS_GANG_process;
 		_progress progressSetPosition _cP;
 		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
 		if(_cP >= 1) exitWith {};
