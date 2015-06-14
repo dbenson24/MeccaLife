@@ -37,4 +37,5 @@
 #include "group.hpp"
 #include "vehicle_upgrade.hpp"
 #include "house_vInv.hpp"
+#include "AS_GANG_menu.hpp"
 

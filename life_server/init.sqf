@@ -225,3 +225,4 @@ publicVariable "wantedList";
 		[] spawn life_fnc_wantedSyncList;
 	};
 };
+[] execVM "\life_server\Functions\Gangwars\init.sqf";

@@ -12,6 +12,9 @@ disableSerialization;
 _unit = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _killer = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
 
+//GangWarStuff
+[[group _killer,group player,_killer,player],"TON_fnc_AS_GANG_kill",false,false] spawn life_fnc_mp;
+
 //Set some vars
 _unit setVariable["Revive",FALSE,TRUE]; //Set the corpse to a revivable state.
 _unit setVariable["name",profileName,TRUE]; //Set my name so they can say my name.
