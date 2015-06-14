@@ -154,6 +154,10 @@ switch (_code) do {
 				cutText [format["Takwondo!!!"], "PLAIN DOWN"];
 				player playMove "AmovPercMstpSnonWnonDnon_exerciseKata";
 			};
+			
+			if((!_shift) && (playerSide == civilian)) then {
+				[] spawn life_fnc_AS_GANG_openMenu;	
+			};
 	};
 
 	//Kneebend Slow(Shift + 3)
@@ -368,11 +372,6 @@ switch (_code) do {
 		{
 			[] call life_fnc_radar;
 		};
-	if	(!_alt && !_ctrlKey && !playerSide == west) then
-		{
-			[] spawn life_fnc_AS_GANG_openMenu;
-		};
-		
 	};
 	
 	//Y Player Menu
