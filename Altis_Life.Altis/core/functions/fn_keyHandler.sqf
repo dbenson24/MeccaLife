@@ -305,11 +305,7 @@ switch (_code) do {
 			};
 		};
 	};
-	//Gang Menu Open
-	case 210:
-	{
-		[] spawn life_fnc_AS_GANG_openMenu;
-	};
+	
 	//T Key (Trunk)
 	case 20: {
 		if(!_alt && !_ctrlKey && !life_is_processing) then {
@@ -372,6 +368,11 @@ switch (_code) do {
 		{
 			[] call life_fnc_radar;
 		};
+	if	(!_alt && !_ctrlKey && !playerSide == west) then
+		{
+			[] spawn life_fnc_AS_GANG_openMenu;
+		};
+		
 	};
 	
 	//Y Player Menu
@@ -627,11 +628,11 @@ if (_code in (actionKeys "User11")) then {
 		life_thirst = 100;
 		player setFatigue 0;
 		life_redgull_effect = time;
-		titleText["You can now run farther for 3 minutes","PLAIN"];
+		titleText["You can now run farther for 5 minutes","PLAIN"];
 		player enableFatigue false;
 		[] spawn
 		{
-			waitUntil {!alive player OR ((time - life_redgull_effect) > (3 * 60))};
+			waitUntil {!alive player OR ((time - life_redgull_effect) > (5 * 60))};
 			player enableFatigue true;
 		};
 		[] call life_fnc_hudUpdate;
