@@ -130,22 +130,8 @@ switch (_code) do {
 			createDialog "life_my_smartphone";
 		};
 	};
-	
-	//3 Market
-	case 4:
-	{
-		if (playerSide == civilian && player getVariable["restrained",false]) then
-		{
-			hint "You cannot open the market when you're restrained! [ONLY FOR CIVILIAN USE]";
-		}
-		else
-		{
-			if(dialog) exitWith {};
-			[] call life_fnc_OpenEconomy;
-		};
-	};
 
-	//Takwondo(Traditional Martial arts in korea)(Shift + 2)
+	//Takwondo(Traditional Martial arts in korea)(Shift + 3)
 	case 4:
 	{
 		if(_shift) then {_handled = true;};
@@ -155,12 +141,21 @@ switch (_code) do {
 				player playMove "AmovPercMstpSnonWnonDnon_exerciseKata";
 			};
 			
-			if((!_shift) && (playerSide == civilian)) then {
-				[] spawn life_fnc_AS_GANG_openMenu;	
+			if((!_shift)) then 
+			{
+				if (playerSide == civilian && player getVariable["restrained",false]) then
+				{
+					hint "You cannot open the market when you're restrained! [ONLY FOR CIVILIAN USE]";
+				}
+				else
+				{
+					if(dialog) exitWith {};
+					[] call life_fnc_OpenEconomy;
+				};	
 			};
 	};
 
-	//Kneebend Slow(Shift + 3)
+	//Kneebend Slow(Shift + 4)
 	case 5:
 	{
 	if(_shift) then {_handled = true;};
@@ -169,9 +164,11 @@ switch (_code) do {
 			cutText [format["KneeBend Slow baby~"], "PLAIN DOWN"];
 			player playMove "AmovPercMstpSnonWnonDnon_exercisekneeBendA";
 		};
+		if((!_shift) && (playerSide == civilian)) then {
+				[] spawn life_fnc_AS_GANG_openMenu;	
+		};
 	};
-
-	//Kneebend Fast(Shift + 4)
+	//Kneebend Fast(Shift + 5)
 	case 6:
 	{
 	if(_shift) then {_handled = true;};
@@ -182,7 +179,7 @@ switch (_code) do {
 		};
 	};
 
-	//Pushup(Shift + 5)
+	//Pushup(Shift + 6)
 	case 7:
 	{
 	if(_shift) then {_handled = true;};
@@ -193,7 +190,7 @@ switch (_code) do {
 		};
 	};
 	
-	//Pushup(Shift + 6)
+	//Pushup(Shift + 7)
 	case 8:
 	{
 	if(_shift) then {_handled = true;};
@@ -204,7 +201,7 @@ switch (_code) do {
 		};
 	};
 	
-	//Pushup(Shift + 7)
+	//Pushup(Shift + 8)
 	case 9:
 	{
 	if(_shift) then {_handled = true;};
