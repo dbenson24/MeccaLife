@@ -12,7 +12,11 @@ class Socket_Reciever
 		class updatePartial {};
 	};
 };
-class Auktionshaus
+
+class Life_Client_Core
+{
+	tag = "life";
+	class Auktionshaus
 {
    	file = "core\pauction";
    	class CAH_Sell {};
@@ -24,10 +28,6 @@ class Auktionshaus
    	class CAH_fetchDetails {};
    	class CAH_loggedIn {};
 };
-class Life_Client_Core
-{
-	tag = "life";
-	
 	class Master_Directory
 	{
 		file = "core";
