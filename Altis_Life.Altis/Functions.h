@@ -17,7 +17,7 @@ class Life_Client_Core
 {
 	tag = "life";
 	class Auktionshaus
-{
+	{
    	file = "core\pauction";
    	class CAH_Sell {};
    	class CAH_Buy {};
@@ -27,7 +27,7 @@ class Life_Client_Core
    	class CAH_loadInventory {};
    	class CAH_fetchDetails {};
    	class CAH_loggedIn {};
-};
+	};
 	class Master_Directory
 	{
 		file = "core";
