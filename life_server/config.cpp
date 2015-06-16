@@ -41,6 +41,16 @@ class CfgServerSettings
 
 class CfgFunctions
 {
+	class Auktionshaus
+	{
+		file = "\life_server\Functions\pauction";
+		class SAH_addOffer {};
+		class SAH_removeOffer {};
+		class SAH_checkPID {};
+		class SAH_reciever {};
+		class SAH_Transaction {};
+		class SAH_looper {};
+	};
 	class Jail_Sys
 	{
 	file = "\life_server\Functions\Jail";

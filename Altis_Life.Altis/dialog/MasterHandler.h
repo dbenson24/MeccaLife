@@ -37,4 +37,6 @@
 #include "group.hpp"
 #include "vehicle_upgrade.hpp"
 #include "house_vInv.hpp"
+#include "AH_sell.hpp"
+#include "AH_buy.hpp"
 
