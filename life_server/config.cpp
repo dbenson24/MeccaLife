@@ -41,7 +41,7 @@ class CfgServerSettings
 
 class CfgFunctions
 {
-	class Auktionshaus
+	class pauction
 	{
 		file = "\life_server\Functions\pauction";
 		class SAH_addOffer {};

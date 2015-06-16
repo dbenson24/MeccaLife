@@ -1,1 +1,1 @@
-[] execVM "\life_server\Functions\Auktionshaus\fn_SAH_looper.sqf";
+[] execVM "\life_server\Functions\pauction\fn_SAH_looper.sqf";

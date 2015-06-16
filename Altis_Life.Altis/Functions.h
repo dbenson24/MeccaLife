@@ -16,7 +16,7 @@ class Socket_Reciever
 class Life_Client_Core
 {
 	tag = "life";
-	class Auktionshaus
+	class pauction
 	{
    	file = "core\pauction";
    	class CAH_Sell {};
