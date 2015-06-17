@@ -1,6 +1,6 @@
-    class Auktionshaus
+    class pauction
     {
-    	file = "core\Auktionshaus";
+    	file = "core\pauction";
     	class CAH_Sell {};
     	class CAH_Buy {};
     	class CAH_reciever {};

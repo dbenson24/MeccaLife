@@ -176,6 +176,7 @@ pb_spieler = [];
 pb_spielstatus = 0;
 pb_maxspieler = 10;
 execVM "\life_server\Functions\paintball\arena_paintball.sqf";
+[] execVM "\life_server\Functions\pauction\fn_SAH_looper.sqf";
 
 
 [] spawn

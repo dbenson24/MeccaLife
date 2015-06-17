@@ -163,8 +163,12 @@ if (playerSide == civilian) then {
 		};
 	};
 };
-
+[] spawn life_fnc_CAH_fetchDetails;
+[] spawn life_fnc_CAH_loggedIn;
 
 life_invisible = false;
 life_deadGear = [];
+<<<<<<< HEAD
 [] execVM "Gangwars\init.sqf";
+=======
+>>>>>>> origin/master
