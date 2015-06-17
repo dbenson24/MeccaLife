@@ -8,7 +8,7 @@ AS_GANG_fight = true;publicVariable "AS_GANG_fight";
 AS_GANG_killsTeam1 = 0;
 AS_GANG_killsTeam2 = 0;
 _time = 0;
-while {_time < 20} do {_time = _time + 4;AS_GANG_region setMarkerColor "ColorRed";sleep 2;AS_GANG_region setMarkerColor "ColorGrey";sleep 2};
+while {_time < 20} do {_time = _time + 4;AS_GANG_region setMarkerColor "ColorRed";sleep 2;AS_GANG_region setMarkerColor "ColorRed";sleep 2};
 AS_GANG_region setMarkerColor "ColorRed";
 // Game End
 

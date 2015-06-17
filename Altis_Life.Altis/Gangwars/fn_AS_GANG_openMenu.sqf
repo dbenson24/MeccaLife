@@ -25,12 +25,12 @@ if ((AS_GANG_curZoneArr select 8) isEqualTo (group player)) exitWith
 if (!((AS_GANG_curZoneArr select 8) isEqualTo (group player)) AND ((getPlayerUID player) isEqualTo (life_gangData select 1)) AND !((AS_GANG_curZoneArr select 8) isEqualTo grpNull)) then
 {
 	if (AS_GANG_fight) exitWith {hint "There is already a fight going on somewhere!";};
-	_ans = ["Would you like to ask the gang leader to start a gang war?","Start Gang War","Yes","No"] call BIS_fnc_guiMessage;
+	_ans = ["Would you like to ask the gang leader to start a gang war? Refusing the war will result in territory loss.","Start Gang War","Yes","No"] call BIS_fnc_guiMessage;
 	if (!_ans) exitWith {};
 	{
 		if ((AS_GANG_curZoneArr select 9)) then {
 			[[player],"life_fnc_AS_GANG_question",_x,false] spawn life_fnc_mp;
-			[] spawn {sleep 30;AS_GANG_response = false;AS_GANG_gotResponse = true;};
+			[] spawn {sleep 60;AS_GANG_response = false;AS_GANG_gotResponse = true;};
 			AS_GANG_gotResponse = false;
 		} else {AS_GANG_response = true;AS_GANG_gotResponse = true;};
 	} forEach (units (AS_GANG_curZoneArr select 8));
@@ -38,13 +38,13 @@ if (!((AS_GANG_curZoneArr select 8) isEqualTo (group player)) AND ((getPlayerUID
 	waitUntil {AS_GANG_gotResponse};
 	if (AS_GANG_response) then
 	{
-		{[[1,"ATTENTION: Your gang just joined a gang war! Get as many kills as possible within 10 minutes to win the war! Note that only kills with you and your victim inside the zone will count!"],"life_fnc_broadcast",_x,false] spawn life_fnc_mp;} forEach (units group player);
-		{[[1,"ATTENTION: Your gang just joined a gang war! Get as many kills as possible within 10 minutes to win the war! Note that only kills with you and your victim inside the zone will count!"],"life_fnc_broadcast",_x,false] spawn life_fnc_mp;} forEach (units ((AS_GANG_curZoneArr select 8)));
+		{[[1,"ATTENTION: Your gang just joined a gang war! Get as many kills as possible within 15 minutes to win the war! Note that only kills with you and your victim inside the zone will count!"],"life_fnc_broadcast",_x,false] spawn life_fnc_mp;} forEach (units group player);
+		{[[1,"ATTENTION: Your gang just joined a gang war! Get as many kills as possible within 15 minutes to win the war! Note that only kills with you and your victim inside the zone will count!"],"life_fnc_broadcast",_x,false] spawn life_fnc_mp;} forEach (units ((AS_GANG_curZoneArr select 8)));
 		[[group player,(AS_GANG_curZoneArr select 8),AS_GANG_curZoneName],"TON_fnc_AS_GANG_war",false,false] spawn life_fnc_mp;
 		AS_GANG_busy = false;
 	} else {
-		hint "Either the gang leader didn't respons within 30 seconds or he is currenty not online. The gang war has been canceled";
-		AS_GANG_busy = false;
+		hint "Either the gang leader didn't respond within 60 seconds or he is currently not online. The territory has been forfeited";
+		[[AS_GANG_curZoneName,group player],"TON_fnc_AS_GANG_takeTerr",false,false] spawn life_fnc_mp;
 	};
 
 } else
