@@ -168,7 +168,6 @@ if (playerSide == civilian) then {
 
 life_invisible = false;
 life_deadGear = [];
-<<<<<<< HEAD
+
 [] execVM "Gangwars\init.sqf";
-=======
->>>>>>> origin/master
+
