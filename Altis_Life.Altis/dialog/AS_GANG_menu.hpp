@@ -22,7 +22,7 @@ class AS_GANG_menu
 		class RscButtonMenu_2400: Life_RscButtonMenu
 		{
 			idc = -1;
-			text = "Open Market"; //--- ToDo: Localize;
+			text = "Open Rebel Market"; //--- ToDo: Localize;
 			x = 0.42714 * safezoneW + safezoneX;
 			y = 0.32397 * safezoneH + safezoneY;
 			w = 0.133577 * safezoneW;
@@ -32,7 +32,7 @@ class AS_GANG_menu
 		class RscButtonMenu_2401: Life_RscButtonMenu
 		{
 			idc = -1;
-			text = "Open Weapon Shop"; //--- ToDo: Localize;
+			text = "Rebel Weapon Shop"; //--- ToDo: Localize;
 			x = 0.42714 * safezoneW + safezoneX;
 			y = 0.356976 * safezoneH + safezoneY;
 			w = 0.133577 * safezoneW;
@@ -42,7 +42,7 @@ class AS_GANG_menu
 		class RscButtonMenu_2402: Life_RscButtonMenu
 		{
 			idc = -1;
-			text = "Open Clothing Shop"; //--- ToDo: Localize;
+			text = "Rebel Clothing"; //--- ToDo: Localize;
 			x = 0.42714 * safezoneW + safezoneX;
 			y = 0.389982 * safezoneH + safezoneY;
 			w = 0.133577 * safezoneW;
