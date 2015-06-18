@@ -3,12 +3,12 @@ AS_GANG_faction2 = _this select 1;
 AS_GANG_region   = _this select 2;
 AS_GANG_fight = true;publicVariable "AS_GANG_fight";
 {
-	if ((_x select 1) == AS_GANG_region) then {AS_GANG_region_pos = _x select 0;AS_GANG_region_x = _x select 2;AS_GANG_region_y = _x select 3;};
+	 if ((_x select 1) == AS_GANG_region) then {AS_GANG_region_pos = _x select 0;AS_GANG_region_x = _x select 2;AS_GANG_region_y = _x select 3;AS_GANG_region_time = _x select 6;};
 } forEach AS_GANG_zones;
 AS_GANG_killsTeam1 = 0;
 AS_GANG_killsTeam2 = 0;
 _time = 0;
-while {_time < 20} do {_time = _time + 4;AS_GANG_region setMarkerColor "ColorRed";sleep 2;AS_GANG_region setMarkerColor "ColorRed";sleep 2};
+while {_time < (AS_GANG_region_time*60)} do {_time = _time + 4;AS_GANG_region setMarkerColor "ColorRed";sleep 2;AS_GANG_region setMarkerColor "ColorGrey";sleep 2};
 AS_GANG_region setMarkerColor "ColorRed";
 // Game End
 
