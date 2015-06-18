@@ -47,7 +47,7 @@ class AS_GANG_menu
 			y = 0.389982 * safezoneH + safezoneY;
 			w = 0.133577 * safezoneW;
 			h = 0.0220037 * safezoneH;
-			onButtonClick = "[0,0,0,'reb'] spawn life_fnc_clothingMenu;";                  //life_fnc_clothingMenu,""reb""";
+			onButtonClick = "[0,0,0,'rebA'] spawn life_fnc_clothingMenu;";                  //life_fnc_clothingMenu,""reb""";
 		};
 		class RscButtonMenu_2403: Life_RscButtonMenu
 		{
