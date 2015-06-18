@@ -27,7 +27,7 @@ class AS_GANG_menu
 			y = 0.32397 * safezoneH + safezoneY;
 			w = 0.133577 * safezoneW;
 			h = 0.0220037 * safezoneH;
-			onButtonClick = "[0,0,0,'rebel'] spawn life_fnc_virt_menu;";// life_fnc_virt_menu,""rebel""
+			onButtonClick = "[0,0,0,'rebelA'] spawn life_fnc_virt_menu;";// life_fnc_virt_menu,""rebelA""
 		};
 		class RscButtonMenu_2401: Life_RscButtonMenu
 		{
