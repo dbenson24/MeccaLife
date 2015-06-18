@@ -25,7 +25,7 @@ if ((AS_GANG_curZoneArr select 8) isEqualTo (group player)) exitWith
 if (!((AS_GANG_curZoneArr select 8) isEqualTo (group player)) AND ((getPlayerUID player) isEqualTo (life_gangData select 1)) AND !((AS_GANG_curZoneArr select 8) isEqualTo grpNull)) then
 {
 	if (AS_GANG_fight) exitWith {hint "There is already a fight going on somewhere!";};
-	_ans = ["Would you like to ask the gang leader to start a gang war? Refusing the war will result in territory loss.","Start Gang War","Yes","No"] call BIS_fnc_guiMessage;
+	_ans = ["Would you like to ask the gang leader to start a gang war? Refusing the war will result in territory loss 30 min cooldown.","Start Gang War","Yes","No"] call BIS_fnc_guiMessage;
 	if (!_ans) exitWith {};
 	{
 		if ((AS_GANG_curZoneArr select 9)) then {
@@ -44,7 +44,6 @@ if (!((AS_GANG_curZoneArr select 8) isEqualTo (group player)) AND ((getPlayerUID
 		AS_GANG_busy = false;
 	} else {
 		hint "Either the gang leader didn't respond within 60 seconds or he is currently not online. The territory has been forfeited";
-		[[AS_GANG_curZoneName,group player],"TON_fnc_AS_GANG_takeTerr",false,false] spawn life_fnc_mp;
 	};
 
 } else
