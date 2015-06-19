@@ -13,7 +13,7 @@ player addEventHandler["onPlayerDisconnected", {_this call SOCK_fnc_updateReques
 "life_fnc_MP_packet" addPublicVariableEventHandler {[_this select 0,_this select 1] call life_fnc_MPexec;};
 if(playerSide != west) then {
      player addEventHandler ["Fired", {
-            if ({(_this select 0) distance getMarkerPos (_x select 0) < _x select 1} count __GETC__(life_safe_points) > 0) then
+            if(player distance (getMarkerPos "safezone1") < 135) then
             {
              deleteVehicle (_this select 6);
              titleText ["You Are In A Safe Zone! Live rounds disabled", "PLAIN", 3];

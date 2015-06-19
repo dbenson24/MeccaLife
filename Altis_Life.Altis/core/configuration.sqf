@@ -157,11 +157,3 @@ switch (playerSide) do {
 	SVAR_MNS [LICENSE_VARNAME(_varName,_sideFlag),false];
 } foreach ("true" configClasses (missionConfigFile >> "Licenses"));
 
-/* Safe Zones
-["markername", safe_radius] */
-life_safe_points =
-	[
-		["safezone1", 250]
-
-	];
-__CONST__(life_safe_points,life_safe_points);
