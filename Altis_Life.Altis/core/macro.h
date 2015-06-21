@@ -32,6 +32,7 @@
 	life_server_extDB_notLoaded = [true,##MESSAGE]; \
 	PVAR_ALL("life_server_extDB_notLoaded"); \
 	diag_log MESSAGE;
+#define __GETC__(var) (call var)
 
 //Display Macros
 #define CONTROL(disp,ctrl) ((findDisplay ##disp) displayCtrl ##ctrl)
