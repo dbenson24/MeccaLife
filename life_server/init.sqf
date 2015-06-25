@@ -15,6 +15,9 @@ if(isDedicated) then {
 	PVAR_ALL("life_server_isReady");
 	HEADLESS = false;
 	PVAR_ALL("HEADLESS");
+} else {
+	HEADLESS = owner "HC";
+	PVAR_ALL("HEADLESS");
 };
 
 /*
