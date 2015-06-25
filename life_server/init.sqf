@@ -223,7 +223,7 @@ if (isDedicated) then {
 	//catches not having the headless client connect
 	[] spawn {
 		diag_log format["Dedicated server sleeping at uptime %1",time];
-		sleep 3*60;
+		uisleep 3*60;
 		diag_log format["Dedicated server woke up uptime %1",time];
 		
 		if(typeName HEADLESS == "BOOL") then {
@@ -235,7 +235,7 @@ if (isDedicated) then {
 			[] spawn {
 				while {true} do {
 					life_wantedsync = time;
-					sleep (3*60);
+					uisleep (3*60);
 					[] spawn life_fnc_wantedSyncList;
 				};
 			};
@@ -253,7 +253,7 @@ if (isDedicated) then {
 	[] spawn {
 		while {true} do {
 			life_wantedsync = time;
-			sleep (3*60);
+			uisleep (3*60);
 			[] spawn life_fnc_wantedSyncList;
 		};
 	};
