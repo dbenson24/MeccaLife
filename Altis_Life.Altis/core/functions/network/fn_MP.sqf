@@ -29,6 +29,14 @@ with missionnamespace do {
 	_isPersistent =	false; //Persistent capabilities removed due to I fucking hate that option.
 	_isCall =	[_this,4,false,[false]] call bis_fnc_param;
 
+	/*
+	if((typeName _target == "BOOL")) then {
+		if(!_target) then {
+			_target = HEADLESSCLIENT;	
+		};
+	};
+	*/
+
 	//--- Send to server
 	if(isServer && isDedicated) then {
 		life_fnc_MP_packet = [0,_params,_functionName,_target,_isPersistent,_isCall,"__SERVER__","__SERVER__"];
