@@ -4,6 +4,7 @@
 private ["_pos","_area","_return"];
 _pos = _this select 0;
 _area = _this select 1;
+diag_log format ["isinellipse markername: %1"];
 _return = false;
 
 // Ellipse size
