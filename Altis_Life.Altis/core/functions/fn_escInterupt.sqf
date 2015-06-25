@@ -25,8 +25,6 @@ _escSync = {
 			_abortButton ctrlCommit 0;
 			round(_timeStamp - time) <= 0 || isNull (findDisplay 49)
 		};
-		life_last_sync = time;
-		[] call SOCK_fnc_updateRequest; //call our silent sync.
 		_abortButton ctrlSetText localize "STR_DISP_INT_ABORT";
 		_abortButton ctrlCommit 0;
 	};
