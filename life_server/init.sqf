@@ -223,7 +223,7 @@ if (isDedicated) then {
 	//catches not having the headless client connect
 	[] spawn {
 		diag_log format["Dedicated server sleeping at uptime %1",time];
-		uisleep 3*60;
+		uisleep (3*60);
 		diag_log format["Dedicated server woke up uptime %1",time];
 		
 		if(typeName HEADLESS == "BOOL") then {
