@@ -137,9 +137,9 @@ class CarShops {
 			{ "I_Quadbike_01_F", pquadbike, "" }, 
 			{ "C_Offroad_01_F", poffroadcop, "", { "life_coplevel", 2 } },
 			{ "C_SUV_01_F", psuvcop, "", { "life_coplevel", 2 } },
-			{ "B_MRAP_01_F", phuntercop, "", { "life_coplevel", 4 } },
+			{ "B_MRAP_01_F", phuntercop, "", { "life_coplevel", 5 } },
 			{ "O_APC_Wheeled_02_rcws_F", pmarid, "", { "life_swatlevel", 1 } },
-			{ "C_Hatchback_01_sport_F", phatchbacksport, "", { "life_coplevel", 3 } }
+			{ "C_Hatchback_01_sport_F", phatchbacksport, "", { "life_coplevel", 2 } }
 		};
 	};
 

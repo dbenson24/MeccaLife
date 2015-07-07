@@ -360,7 +360,6 @@ class WeaponShops {
             { "arifle_MX_SW_Black_F", "Swat MX SW", 500, { "life_swatlevel", "SCALAR", 1 } },
             { "srifle_GM6_F", "Swat Lynx", 500, { "life_swatlevel", "SCALAR", 1 } },
             { "srifle_DMR_02_F", "Swat MAR-10", 500, { "life_swatlevel", "SCALAR", 1 } },
-			{ "srifle_DMR_02_F", "Red Alert MAR-10", 120000, { "life_coplevel", "SCALAR", 6 } },
 			{ "srifle_DMR_03_F", "Swat MK1", 500, { "life_swatlevel", "SCALAR", 1 } },
 			{ "srifle_EBR_F", "Swat MK18", 500, { "life_swatlevel", "SCALAR", 1 } },
 			{ "srifle_DMR_01_F", "Swat Rahim", 500, { "life_swatlevel", "SCALAR", 1 } },
