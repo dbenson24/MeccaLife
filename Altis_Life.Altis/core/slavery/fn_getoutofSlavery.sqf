@@ -7,10 +7,10 @@
 */
 #include <macro.h>
 
-if(life_inv_cigarette != 10) exitWith {hint "Learn to count!"};
-if(life_inv_cigarette == 10) then 
+if(life_inv_cigarette !> 50) exitWith {hint "Better Roll More smokes"};
+if(life_inv_cigarette > 50) then 
 {
-	[false,"cigarette",10] call life_fnc_handleInv;
+	[false,"cigarette",50] call life_fnc_handleInv;
 	player setPos (getMarkerPos "slave_trader_marker");
 	slave_task1 setTaskState "You have won your freedom!";
 	player removeSimpleTask slave_task1;
