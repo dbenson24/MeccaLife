@@ -3561,6 +3561,12 @@
 		<Key ID="STR_Item_bottledbeer">
 			<Original>Bottled Beer</Original>
 		</Key>
+		<Key ID="STR_Item_Cigarette">
+			<Original>Bandit Brand Cig's</Original>
+		</Key>
+		<Key ID="STR_Item_Tobacco">
+			<Original>Low quality Tobacco</Original>
+		</Key>
 	</Package>
 	<Package name="Life_License">
 		<Key ID="STR_License_Driver">
