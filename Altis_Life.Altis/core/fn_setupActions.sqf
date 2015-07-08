@@ -14,6 +14,8 @@ switch (playerSide) do
 		
 		life_actions = life_actions + [player addAction["Suicide Bomb Initiate",life_fnc_suicideBomb,"",0,false,false,"",
         'vest player == "V_HarnessOGL_gry" && alive player && (vehicle player == player) && playerSide == civilian && !life_isDowned && !life_isSuicide && !(player getVariable "restrained") && !(player getVariable "Escorting") && !(player getVariable "transporting")']];
+	    life_actions = life_actions + [player addAction["Sell Hostage",life_fnc_sellHostage,"",0,false,false,"",'  !isNull cursorTarget && isPlayer cursorTarget && (side cursorTarget != independent) && (cursorTarget getVariable ["restrained",FALSE]) && alive cursorTarget && (player distance cursorTarget < 3.5) && ((player distance (getMarkerPos "slave_trader_marker") < 10)) && !(cursorTarget getVariable ["escorting",FALSE]) ']];
+
 	};
 	
 	case west:

@@ -93,7 +93,8 @@ class Life_Settings {
 		{"STR_Crime_5894","25000","5894"},
 		{"STR_Crime_4532","10000","4532"},
 		{"STR_Crime_5217","10000","5217"},
-		{"STR_Crime_5894","2000","5894"}
+		{"STR_Crime_5894","2000","5894"},
+		{"STR_Crime_236","50000","236"}
 	};
 		
 	sellArray[] = {
@@ -157,6 +158,8 @@ class VirtualItems {
 	VITEMMACRO(froglsd, "STR_Item_Froglsd", "froglsd", 1, -1, 2500, true, -1, "")
 	VITEMMACRO(frog, "STR_Item_Frog", "frog", 2, -1, 2500, true, -1, "icons\frog.paa")
 	VITEMMACRO(Magicm, "STR_Item_Magicm", "magicm", 1, -1, 1200, true, -1, "icons\magicm.paa")
+	VITEMMACRO(tobacco, "STR_Item_Tobacco", "tobacco", 1, -1, 1200, true, -1, "")
+	VITEMMACRO(cigarette, "STR_Item_Cigarette", "cigarette", 1, -1, 1200, true, -1, "")
 
 
 	//DrinkC
@@ -251,6 +254,7 @@ class Licenses {
 	LICENSEMACRO(taxi,"STR_License_Taxi","taxi",250000,false,"civ")
 	LICENSEMACRO(frog,"STR_License_Frog","frog",30000,false,"civ")
 	LICENSEMACRO(magicm,"STR_License_Magicm","magicm",15000,false,"civ")
+	LICENSEMACRO(cigarette,"STR_License_Cigarette","cigarette",5,false,"civ")
 };
 
 

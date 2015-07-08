@@ -3724,6 +3724,9 @@
 		<Key ID="STR_License_Frog">
 			<Original>Frog Lsd Technique</Original>
 		</Key>
+		<Key ID="STR_License_Cigarette">
+			<Original>Cigarette Rolling Technique</Original>
+		</Key>
 	</Package>
 	<Package name="More_Item_Strings">
 		<Key ID="STR_ISTR_Blast_VaultOnly">
@@ -4062,6 +4065,9 @@
 		</Key>
 		<Key ID="STR_Process_Magicm">
 			<Original>Drying and curing mushrooms</Original>
+		</Key>
+		<Key ID="STR_Process_Cigarette">
+			<Original>Rolling Illegal Bandit Cigarettes</Original>
 		</Key>
 		<Key ID="STR_Process_Stay">
 			<Original>You need to stay within 10m to process.</Original>
@@ -5121,6 +5127,9 @@
 			<French>Hit and run</French>
 			<Italian>Hit and run</Italian>		
 			<Portuguese>Hit and run</Portuguese>
+		</Key>
+		<Key ID="STR_Crime_236">
+			<Original>Human Trafficking</Original>
 		</Key>
 		<Key ID="STR_Crime_1018">
 			<Original>Use of Firearms in city limits</Original>

@@ -487,6 +487,14 @@ class Life_Client_Core
 	   file ="core";
 	   class IntroCam {};
 	};
+	class Foamy_Slavery
+	{
+		file = "core\slavery";
+		class getoutofSlavery {};
+		class sellHostage {};
+		class sellHostageAction {};
+	};
+
 	
 	class economy
 	{
