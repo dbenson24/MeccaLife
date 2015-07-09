@@ -6633,7 +6633,7 @@ class Mission
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.60000002;
-					init="this allowDamage false;this enableSimulation false; this addAction [""Get out of here!"", life_fnc_getoutofSlavery,"""""""",0,false,false,"""""""",' life_enslaved '];";
+					init="this allowDamage false;this enableSimulation false; this addAction [""Get out of here!"", life_fnc_getoutofSlavery,"""""""",0,false,false,"""""""",' life_enslaved '];this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
 					syncId=5;
 					synchronizations[]={0};
 				};
