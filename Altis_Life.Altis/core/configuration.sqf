@@ -163,7 +163,7 @@ switch (playerSide) do {
 ["markername", safe_radius] */
 life_safe_points =
 	[
-		["safezone1", 250]
-
+		["safezone1", 250],
+		["safezone2", 250]
 	];
 __CONST__(life_safe_points,life_safe_points);
