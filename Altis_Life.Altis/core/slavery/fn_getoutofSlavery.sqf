@@ -7,8 +7,8 @@
 */
 #include <macro.h>
 
-if(life_inv_cigarette <= 22) exitWith {hint "you need at least 23 Packs of Cigarettes"};
-if(life_inv_cigarette >= 23) then 
+if(life_inv_cigarette <= 21) exitWith {hint "you need at least 23 Packs of Cigarettes"};
+if(life_inv_cigarette >= 22) then 
 {
 	[false,"cigarette",10] call life_fnc_handleInv;
 	player setPos (getMarkerPos "slave_trader_marker");
