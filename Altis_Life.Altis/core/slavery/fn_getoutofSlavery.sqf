@@ -7,8 +7,8 @@
 */
 #include <macro.h>
 
-if(life_inv_cigarette != 10) exitWith {hint "Learn to count!"};
-if(life_inv_cigarette == 10) then 
+if(life_inv_cigarette <= 22) exitWith {hint "you need at least 23 Packs of Cigarettes"};
+if(life_inv_cigarette >= 23) then 
 {
 	[false,"cigarette",10] call life_fnc_handleInv;
 	player setPos (getMarkerPos "slave_trader_marker");
@@ -19,4 +19,4 @@ life_enslaved = false;
 player setVariable["enslaved",true,true];
 sleep (30 * 60);
 player setVariable["enslaved",false,true];
-hint "Watch out! You can be enslaved again!";
+hint "Watch out! You can be enslaved again!"; 

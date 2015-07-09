@@ -12,7 +12,7 @@ _resourceZones = ["apple_1","apple_2","apple_3","apple_4","peaches_1","peaches_2
 _zone = "";
 if(life_action_gathering) exitWith {}; //Action is in use, exit to prevent spamming.
 life_action_gathering = true;
-//Find out what zone we're near
+//Find out what zone we're near 
 {
 	if(player distance (getMarkerPos _x) < 30) exitWith {_zone = _x;};
 } foreach _resourceZones;

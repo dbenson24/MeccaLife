@@ -17,7 +17,7 @@ if(life_enslaved) exitWith {hint "This player has recently been enslaved, you mu
 //_noesckey = (findDisplay 46) displayAddEventHandler ["KeyDown", "if ((_this select 1) == 1) then { true }"];
 
 // Send player to slave pen
-player setPos (getMarkerPos "slave_trader_center");
+player setPos (getMarkerPos "slave_trader_center"); 
 
 // Release the player
 player setVariable["restrained",false,true];
@@ -29,8 +29,8 @@ player setVariable["transporting",false,true];
 player setVariable["enslaved",true,true];
 life_enslaved = true;
 
-titleText["You have been sold into slavery, time to earn your way out of this!","PLAIN"];
-hint "You have been sold into slavery, time to earn your way out!";
+titleText["You have been sold into slavery, time to earn your way out of this! Use Windows Key to pick Tobacco and Prepare cigarettes!","PLAIN"];
+hint "You have been sold into slavery, time to earn your way out of this! Use Windows Key to pick Tobacco and Prepare cigarettes!";
 sleep 15;
 slave_task1 = player createSimpleTask ["slave_task_1"];
 slave_task1 setSimpleTaskDescription ["Roll 10 Cigarettes, Pick it, roll it and turn them in to gain your freedom.","Rolling your way to freedom",""];

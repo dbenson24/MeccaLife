@@ -19,7 +19,17 @@ _esc = false;
 _bail = false;
 
 if(_time <= 0) then { _time = time + (15 * 60); hintC "Please Report to Admin: JAIL_FALLBACK_15, time is zero!"; };
-
+//Make Sure they stay there
+[] spawn 
+{
+	while {life_is_arrested && alive player} do 
+	{
+		if(player distance (getMarkerPos "jail_marker") > 40) then
+		{	
+			player setPosAsl [16682,13610,18.5];
+		};
+	};
+};
 [_bad,_time] spawn
 {
 	life_canpay_bail = false;

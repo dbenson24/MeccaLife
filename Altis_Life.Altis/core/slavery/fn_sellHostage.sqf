@@ -3,7 +3,7 @@
 	@Foamy
 	www.strainonline.com
 	Description:
-	Sells the targeted person into Slavery.
+	Sells the targeted person into Slavery. 
 */
 
 #include <macro.h>
