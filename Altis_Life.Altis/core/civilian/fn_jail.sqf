@@ -32,6 +32,17 @@ if(_bad) then {
 if(player distance (getMarkerPos "jail_marker") > 40) then {
 player setPosAsl [16682,13610,18.5];
 };
+//Make Sure they stay there
+[] spawn 
+{
+	while {life_enslaved && alive player} do 
+	{
+		if(player distance (getMarkerPos "jail_marker") > 40) then
+		{	
+			player setPosAsl [16682,13610,18.5];
+		};
+	};
+};
 
 [1] call life_fnc_removeLicenses;
 if(life_inv_heroin_unprocessed > 0) then {[false,"heroinu",life_inv_heroinu] call life_fnc_handleInv;};
