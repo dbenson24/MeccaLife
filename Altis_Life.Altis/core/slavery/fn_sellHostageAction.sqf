@@ -14,7 +14,7 @@ if(isNull _unit) exitWith {}; // There is no spoon
 if(life_enslaved) exitWith {hint "This player has recently been enslaved, you must wait until their timer is up to enslave them again!"}; // Target already Enslaved
 
 // Disable Esc key
-_noesckey = (findDisplay 46) displayAddEventHandler ["KeyDown", "if ((_this select 1) == 1) then { true }"];
+//_noesckey = (findDisplay 46) displayAddEventHandler ["KeyDown", "if ((_this select 1) == 1) then { true }"];
 
 // Send player to slave pen
 player setPos (getMarkerPos "slave_trader_center");
@@ -50,4 +50,4 @@ player setCurrentTask slave_task1;
 };
 
 waitUntil {!life_enslaved};
-(findDisplay 46) displayRemoveEventHandler ["KeyDown", _noesckey];
+//(findDisplay 46) displayRemoveEventHandler ["KeyDown", _noesckey];
