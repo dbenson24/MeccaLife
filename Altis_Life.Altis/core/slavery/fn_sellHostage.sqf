@@ -9,7 +9,7 @@
 #include <macro.h>
 
 private["_unit","_rate"];
-_rate = 150000; // change this to change payout.
+_rate = 100000; // change this to change payout.
 _unit = cursorTarget;
 if(isNull _unit) exitWith {hint "null Target"};
 if(!(_unit getVariable ["restrained",false])) exitWith {hint "Target is not restrained!"};
@@ -30,7 +30,7 @@ if((player distance (getMarkerPos "slave_trader_marker") < 20)) then
 	[[_unit,false],"life_fnc_sellHostageAction",_unit,false] spawn life_fnc_MP;
 };
 life_cash = life_cash + _rate;
-hint "You made $150000 selling that poor soul.";
+hint "You made $100000 selling that poor soul.";
 life_slaver = true;
 player setVariable["slaver",true,true];
 sleep (30 * 60);
