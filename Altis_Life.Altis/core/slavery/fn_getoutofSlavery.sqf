@@ -11,7 +11,7 @@ if(life_inv_cigarette <= 21) exitWith {hint "you need at least 23 Packs of Cigar
 if(life_inv_cigarette >= 22) then 
 {
 	[false,"cigarette",10] call life_fnc_handleInv;
-	player setPos (getMarkerPos "slave_trader_marker");
+	player setPos (getMarkerPos "civ_spawn_1");
 	slave_task1 setTaskState "You have won your freedom!";
 	player removeSimpleTask slave_task1;
 };
