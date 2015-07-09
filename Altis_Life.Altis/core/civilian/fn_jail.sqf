@@ -35,7 +35,7 @@ player setPosAsl [16682,13610,18.5];
 //Make Sure they stay there
 [] spawn 
 {
-	while {life_enslaved && alive player} do 
+	while {life_is_arrested && alive player} do 
 	{
 		if(player distance (getMarkerPos "jail_marker") > 40) then
 		{	
